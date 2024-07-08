@@ -1,0 +1,32 @@
+---
+indexpage:
+  title: ワークロード工場のセットアップと管理に関するドキュメント
+  summary: ワークロードファクトリーを利用して、Amazon FSx for NetApp ONTAPを使用してワークロードを最大限に活用できるようにしましょう。セットアップが完了したら、ワークロードに適したFSx
+    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム間の自動化、Workload
+    Factoryでのワークロードの管理を行うことができます。
+  keywords: workload factory, fsx, account, credentials, users, permissions, log in,
+    calculator, codebox
+  lead: ワークロードファクトリーを利用して、Amazon FSx for NetApp ONTAPを使用してワークロードを最大限に活用できるようにしましょう。セットアップが完了したら、ワークロードに適したFSx
+    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム間の自動化、Workload
+    Factoryでのワークロードの管理を行うことができます。
+  tiles:
+  - title: はじめに
+    links:
+    - title: Workload Factoryの詳細
+      url: workload-factory-overview.html
+    - title: サインアップ
+      url: sign-up-saas.html
+  - title: 動作モードとクレデンシャル
+    links:
+    - title: 動作モードの詳細
+      url: operational-modes.html
+    - title: AWSクレデンシャルを追加
+      url: add-credentials.html
+    - title: 認証情報を削除
+      url: manage-credentials.html
+  - title: Codeboxを使用した自動化
+    links:
+    - title: Codeboxの詳細
+      url: codebox-automation.html
+    - title: 自動化にコードボックスを使用
+      url: use-codebox.html

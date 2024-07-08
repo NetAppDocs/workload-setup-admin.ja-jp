@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: sign-up-saas.html 
+keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
+summary: Workload FactoryにはWebベースのコンソールからアクセスできます。ワークロードファクトリーの利用を開始するには、まずNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインアカウントを作成してサインアップします。 
+---
+= Workload Factoryへのサインアップ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload FactoryにはWebベースのコンソールからアクセスできます。ワークロードファクトリーの利用を開始するには、まずNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインアカウントを作成してサインアップします。
+
+.タスクの内容
+次のいずれかの方法でWorkload Factoryにサインアップできます。
+
+* 既存のNetApp Support Site （NSS）のクレデンシャルを必要に応じて変更
+* Eメールアドレスとパスワードを指定してネットアップクラウドにログインします
+
+
+.手順
+. Webブラウザを開き、 https://console.workloads.netapp.com["Workload Factoryコンソール"^]
+. NetApp Support Site アカウントをお持ちの場合は、*ログイン*ページでNSSアカウントに関連付けられているメールアドレスを直接入力してください。
++
+NSSアカウントをお持ちの場合は、サインアップページをスキップできます。Workload Factoryは、この初回ログイン時に登録します。
+
+. NSSアカウントをお持ちでなく、ネットアップクラウドログインを作成して登録する場合は、*[Sign Up]*を選択します。
++
+image:screenshot-sign-up1.png["Workload Factoryにアクセスするためのユーザ名とパスワードを追加できる[Sign Up]ページのスクリーンショット。"]
+
+. [サインアップ]ページで、NetAppクラウドログインを作成するために必要な情報を入力し、*[次へ]*を選択します。
++
+サインアップフォームでは、英語の文字のみを使用できます。
+
+. 会社の詳細情報を入力し、*サインアップ*を選択します。
+. Eメールアドレスの確認手順が記載されたNetAppからのEメールが受信トレイに届いていることを確認します。
++
+この手順はログインする前に必要です。
+
+. プロンプトが表示されたら、エンドユーザライセンス契約を確認し、条項に同意して* Continue *を選択します。
+. [アカウント]ページで、アカウントの名前を入力し、必要に応じてジョブの説明を選択します。
++
+アカウントは、ネットアップのアイデンティティプラットフォームの最上位レベルの要素であり、権限とクレデンシャルを追加および管理できます。
+
++
+image:screenshot-account-selection.png["新しいアカウントでログインしたときに表示される[Account]ページのスクリーンショット。"]
+
+. [Create]*を選択すると、Workload Factoryのホームページが表示されます。
+
+
+.結果
+これで、Workload Factoryのログインとアカウントが作成されました。お客様はアカウント管理者と見なされ、すべてのWorkload Factory機能にアクセスできます。

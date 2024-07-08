@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: log-in.html 
+keywords: logging in, log in, sign in, signing in, user account, login with netapp, log in with netapp, sign up, create account 
+summary: Workload Factoryにサインアップすると、Webベースのコンソールからいつでもログインして、ワークロードとFSx for ONTAPファイルシステムの管理を開始できます。 
+---
+= Workload Factoryへのログイン
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factoryにサインアップすると、Webベースのコンソールからいつでもログインして、ワークロードとFSx for ONTAPファイルシステムの管理を開始できます。
+
+.タスクの内容
+次のいずれかのオプションを使用して、WebベースのWorkload Factoryコンソールにログインできます。
+
+* 既存のNetApp Support Site （NSS）のクレデンシャルを必要に応じて変更
+* Eメールアドレスとパスワードを使用したネットアップクラウドへのログイン
+
+
+.手順
+. Webブラウザを開き、に移動します https://console.workloads.netapp.com["Workload Factoryコンソール"^]。
+. [ログイン*]ページで、ログインに関連付けられている電子メールアドレスを入力します。
+. ログインに関連付けられている認証方法に応じて、クレデンシャルの入力を求められます。
++
+** ネットアップクラウドクレデンシャル：パスワードを入力します
+** フェデレーテッドユーザ：フェデレーテッドアイデンティティクレデンシャルを入力します
+** NetApp Support Site アカウント：NetApp Support Site クレデンシャルを入力します
+
+
+. [ログイン]*を選択します。
++
+過去に正常にログインした場合は、Workload Factoryのホームページが表示され、デフォルトのアカウントを使用します。
+
++
+初めてログインする場合は、*アカウント*ページが表示されます。
+
++
+** 1つのアカウントのメンバーである場合は、*続行*を選択します。
+** 複数のアカウントのメンバーである場合は、アカウントを選択して*続行*を選択します。
+
+
+
+
+.結果
+これでログインし、Workload Factoryを使用してFSx for ONTAPファイルシステムとワークロードを管理できます。

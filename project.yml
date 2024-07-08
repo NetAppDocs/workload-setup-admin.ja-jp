@@ -1,0 +1,58 @@
+---
+settings:
+  name: Setup and administration
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: ja-jp,us-en,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: セットアップおよび管理に関するドキュメント
+    url: "/index.html"
+  - title: リリースノート
+    entries:
+    - title: 新機能
+      url: "/whats-new.html"
+  - title: はじめに
+    entries:
+    - title: 基本事項をご確認ください
+      entries:
+      - title: Workload Factoryの概要
+        url: "/workload-factory-overview.html"
+      - title: 動作モード
+        url: "/operational-modes.html"
+    - title: クイックスタート
+      url: "/quick-start.html"
+    - title: Workload Factoryへのサインアップ
+      url: "/sign-up-saas.html"
+    - title: AWSクレデンシャルを追加
+      url: "/add-credentials.html"
+    - title: 次は何ができるか
+      url: "/whats-next.html"
+  - title: ワークロードファクトリの管理
+    entries:
+    - title: Workload Factoryへのログイン
+      url: "/log-in.html"
+    - title: Codeboxを使用したタスクの自動化
+      entries:
+      - title: Codeboxの詳細
+        url: "/codebox-automation.html"
+      - title: コードボックスを使用してコードを生成する
+        url: "/use-codebox.html"
+    - title: 認証情報を削除
+      url: "/manage-credentials.html"
+  - title: 知識とサポート
+    entries:
+    - title: サポートに登録します
+      url: "/support-registration.html"
+    - title: ヘルプを表示します
+      url: "/get-help.html"
+  - title: 法的通知
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

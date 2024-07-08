@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: use-codebox.html 
+keywords: codebox, automation, cloudformation, rest api, aws cli, permissions 
+summary: Codeboxを使用して、Workload Factoryでサポートされている操作を実行するために必要なコードを生成できます。Workload Factory REST API、AWS CLI、およびAWS CloudFormationを使用して、使用および実行できるコードを生成できます。 
+---
+= 自動化にコードボックスを使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Codeboxを使用して、Workload Factoryでサポートされている操作を実行するために必要なコードを生成できます。Workload Factory REST API、AWS CLI、およびAWS CloudFormationを使用して、使用および実行できるコードを生成できます。
+
+Codeboxは、Workload Factoryの操作モード（Basic、Read、Automate）と連動しており、各ユーザのWorkload Factoryアカウントで提供されるAWS権限に基づいてコード内の適切なデータを入力します。コードは、コードを実行する前に不足している情報(資格情報など)を入力したり、特定のデータをカスタマイズしたりできるテンプレートのように使用できます。
+
+
+
+== Codeboxの使用方法
+
+Workload Factory UIウィザードで値を入力すると、各フィールドに入力すると、Codeboxにデータの更新が表示されます。ウィザードを完了したら、ページ下部の*作成*ボタンを選択する前に、[コードボックスにコピー]を選択して、 image:button-copy-codebox.png["コピーボタン"] 構成の構築に必要なコードを取得します。たとえば、新しいMicrosoft SQL Serverを作成した場合のスクリーンショットには、VPCゾーンとアベイラビリティゾーンのウィザードエントリと、REST API実装のCodeboxの同等のエントリが示されています。
+
+image:screenshot-codebox-example1.png["UIでMicrosoft SQL Serverを作成する方法、およびCodeboxのVPCゾーンとアベイラビリティゾーンに対応するエントリを示すスクリーンショット。"]
+
+一部のコードフォーマットでは、[ダウンロード]ボタンを選択して、別のシステムに持ち込むことができるファイルにコードを保存することもできます。必要に応じて、ダウンロード後にコードを編集して、他のAWSアカウントに適応させることができます。
+
+
+
+== CodeboxからCloudFormationコードを使用
+
+Codeboxから生成されたCloudFormationコードをコピーし、AWSアカウントでAmazon Web Services CloudFormationスタックを起動できます。CloudFormationは、Workload Factory UIで定義したアクションを実行します。
+
+CloudFormationコードを使用する手順は、FSx for ONTAPファイルシステムを導入するか、アカウントのクレデンシャルを作成するか、または他のWorkload Factoryアクションを実行するかによって異なります。
+
+CloudFormationによって生成されたYAMLファイル内のコードは、セキュリティ上の理由から7日後に期限切れになります。
+
+.開始する前に
+* AWSアカウントにログインするにはクレデンシャルが必要です。
+* CloudFormationスタックを使用するには、次のユーザー権限が必要です。
++
+[%collapsible]
+====
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:CreateStack",
+                "cloudformation:UpdateStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:DescribeChangeSet",
+                "cloudformation:ExecuteChangeSet",
+                "cloudformation:ListStacks",
+                "cloudformation:ListStackResources",
+                "cloudformation:GetTemplate",
+                "cloudformation:ValidateTemplate",
+                "lambda:InvokeFunction",
+                "iam:PassRole",
+                "iam:CreateRole",
+                "iam:UpdateAssumeRolePolicy",
+                "iam:AttachRolePolicy",
+                "iam:CreateServiceLinkedRole"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+----
+====
+
+
+.手順
+. UIを使用して実行する操作を定義したら、を選択し image:button-copy-codebox.png["コピーボタン"] てコードボックスのコードをコピーします。
+. [Redirect to CloudFormation]*を選択すると、[Redirect to CloudFormation]ページが表示されます。
+. 別のブラウザウィンドウを開き、AWS管理コンソールにログインします。
+. [Redirect to CloudFormation]ページから[Continue]*を選択します。
+. コードを実行するAWSアカウントにログインします。
+. [Quick create stack]ページの[Capabilities]で、*[I acknowledge that AWS CloudFormation may...]*を選択します。
+. [スタックの作成]*を選択します。
+. AWSまたはWorkload Factoryから進捗状況を監視します。
+
+
+
+
+== CodeboxからREST APIコードを使用する
+
+Codeboxから生成されたワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。
+
+APIは、curlをサポートし、インターネットに接続された任意のホストから実行できます。
+
+認証トークンはCodeboxでは非表示になっていますが、API呼び出しをコピーして貼り付けると入力されます。
+
+.手順
+. UIを使用して実行する処理を定義したら、を選択し image:button-copy-codebox.png["コピーボタン"] て[コードボックス]にAPIコードをコピーします。
+. コードを貼り付けて、ホストシステムで実行します。
+
+
+
+
+== CodeboxからAWS CLIコードを使用
+
+Codeboxから生成されたAmazon Web Services CLIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。
+
+.手順
+. UIを使用して実行する処理を定義したら、を選択し image:button-copy-codebox.png["コピーボタン"] てCodeboxでAWS CLIをコピーします。
+. 別のブラウザウィンドウを開き、AWS管理コンソールにログインします。
+. コードを貼り付けて実行します。
+
