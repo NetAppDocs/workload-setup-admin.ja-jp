@@ -15,6 +15,18 @@ summary: クラウドプロバイダの資格情報、Codeboxの機能拡張な�
 
 
 
+== 2024 年 8 月 4 日
+
+
+
+=== Terraformのサポート
+
+Terraformは、Amazon FSx for NetApp ONTAPファイルシステムの導入とStorage VMの作成で利用できます。セットアップガイドと管理ガイドに、CodeboxからTerraformを使用する方法が記載されました。
+
+link:use-codebox.html["コードボックスからTerraformを使用"]
+
+
+
 == 2024年7月7日
 
 

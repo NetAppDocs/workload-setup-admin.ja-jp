@@ -392,7 +392,6 @@
   <block id="6b2932e540d5f7ea082e1ac798f02299" category="paragraph">CloudFormationコードを使用する手順は、FSx for ONTAPファイルシステムを導入するか、アカウントのクレデンシャルを作成するか、または他のWorkload Factoryアクションを実行するかによって異なります。</block>
   <block id="db45cb70284a7cbad935a33a0ef0b6dc" category="paragraph">CloudFormationによって生成されたYAMLファイル内のコードは、セキュリティ上の理由から7日後に期限切れになります。</block>
   <block id="f4beed69f4c72e3f9969d0e2daa8cc67" category="list-text">CloudFormationスタックを使用するには、次のユーザー権限が必要です。</block>
-  <block id="e1e1a8055c6ecfa43b025a1584c3155f" category="list-text">UIを使用して実行する操作を定義したら、を選択し <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> てコードボックスのコードをコピーします。</block>
   <block id="99ca7c9c85fef7c6ab0e44eb58675162" category="list-text">[Redirect to CloudFormation]*を選択すると、[Redirect to CloudFormation]ページが表示されます。</block>
   <block id="7463b18d69a514063d0f320bc1d16b0d" category="list-text">別のブラウザウィンドウを開き、AWS管理コンソールにログインします。</block>
   <block id="3bc22cebdcd7af89d94afadce527cc1d" category="list-text">コードを実行するAWSアカウントにログインします。</block>
@@ -402,11 +401,9 @@
   <block id="05c017ebdfb63b85bc91ed2748f0a19f" category="paragraph">Codeboxから生成されたワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。</block>
   <block id="3c3f00270f1d36904ead2ac33f53a58f" category="paragraph">APIは、curlをサポートし、インターネットに接続された任意のホストから実行できます。</block>
   <block id="ed172ca8e9fe57859bcb8978982d2e0d" category="paragraph">認証トークンはCodeboxでは非表示になっていますが、API呼び出しをコピーして貼り付けると入力されます。</block>
-  <block id="50bea3d64c18b01d7ce7b30ec89500d8" category="list-text">UIを使用して実行する処理を定義したら、を選択し <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> て[コードボックス]にAPIコードをコピーします。</block>
   <block id="b68f0143fe964c9ac34ce1d33e961f82" category="list-text">コードを貼り付けて、ホストシステムで実行します。</block>
   <block id="b4c82b8569210de2a2777b454448b42e" category="section-title">CodeboxからAWS CLIコードを使用</block>
   <block id="8d03c4936e76f2455607364517b82e3e" category="paragraph">Codeboxから生成されたAmazon Web Services CLIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。</block>
-  <block id="4002cdda8ab65bc08a255c31321855ab" category="list-text">UIを使用して実行する処理を定義したら、を選択し <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> てCodeboxでAWS CLIをコピーします。</block>
   <block id="b28a0d67dfa6e54814b9650389eea71b" category="list-text">コードを貼り付けて実行します。</block>
   <block id="3c9ee3abb878e5099cd76beeedcb2d04" category="summary">クラウドプロバイダの資格情報、Codeboxの機能拡張など、Workload Factoryの管理機能の新機能について説明します。</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">新機能</block>
@@ -498,4 +495,16 @@
   <block id="3700c3dfbf95d68b06191b4a4cbb7592" category="sidebar">Codeboxを使用したタスクの自動化</block>
   <block id="733ae60890dc5503303e1f5780ac5c9b" category="sidebar">コードボックスを使用してコードを生成する</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
+  <block id="c419efd1c7454d477938da03ab909ff4" category="list-text">UIを使用して実行する操作を定義したら、[コードボックス]のコードをコピーします。</block>
+  <block id="ac8312e3b09c390dd9da069d9697ab8c" category="list-text">UIを使用して実行する処理を定義したら、[コードボックス]にAPIコードをコピーします。</block>
+  <block id="1b2b6bf8e053a2f8088251c3a2cc65f9" category="list-text">UIを使用して実行する処理を定義したら、[Codebox]でAWS CLIをコピーします。</block>
+  <block id="2532cd63354e6e99119077d45134b5ef" category="section-title">コードボックスからTerraformを使用</block>
+  <block id="a5a1cedd11df4667bf63eec57c1622aa" category="paragraph">Terraformを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理できます。</block>
+  <block id="372393cee3187826465089e7fa3db98e" category="list-text">からコマンドを実行するにはTerraformサーバーが必要です。</block>
+  <block id="90d8257298c061974c94790388e32bbd" category="list-text">UIを使用して実行する操作を定義したら、コードボックスでTerraformコードをコピーまたはダウンロードします。</block>
+  <block id="a2417f4d64bad3dff09f2bdbce4dc0e2" category="list-text">サーバーに接続します。</block>
+  <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
+  <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraformのサポート</block>
+  <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Terraformは、Amazon FSx for NetApp ONTAPファイルシステムの導入とStorage VMの作成で利用できます。セットアップガイドと管理ガイドに、CodeboxからTerraformを使用する方法が記載されました。</block>
+  <block id="1a83a24f33c92a88ea922a23bd6cf4e5" category="paragraph"><block ref="1a83a24f33c92a88ea922a23bd6cf4e5" category="inline-link-macro-rx"></block></block>
 </blocks>
