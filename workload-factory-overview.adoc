@@ -13,6 +13,8 @@ summary: NetAppワークロードファクトリーは、Amazon FSx for NetApp O
 [role="lead"]
 NetAppワークロードファクトリーは、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化するために設計された、強力なライフサイクル管理プラットフォームです。Workload FactoryとFSx for ONTAPを使用して合理化できるワークロードには、データベース、VMware Cloud on AWSへの移行、AIチャットボットなどがあります。
 
+ワークロードには、ビジネス目標を達成するように設計された、リソース、コード、サービスまたはアプリケーションの組み合わせが含まれます。これには、お客様向けアプリケーションからバックエンドプロセスまで、あらゆるものが含まれます。ワークロードには、1つのAWSアカウント内のリソースのサブセットが含まれる場合もあれば、複数のアカウントにまたがる場合もあります。
+
 Amazon FSx for NetApp ONTAPは、ミッションクリティカルなアプリケーション、データベース、コンテナ、VMware Cloudデータストア、ユーザファイルに、フルマネージドのAWSネイティブNFS、SMB / CIFS、iSCSIストレージボリュームを提供します。FSx for ONTAPは、ワークロードファクトリから、またはネイティブのAWS管理ツールを使用して管理できます。
 
 
@@ -106,9 +108,9 @@ link:codebox-automation.html["Codeboxの詳細"]です。
 
 
 
-=== ストレージ計算ツール
+=== 削減額計算ツール
 
-Workload Factoryにはストレージ計算ツールが用意されており、FSx for ONTAPファイルシステムのストレージコストを、Elastic Block Store（EBS）、Elastic File Systems（EFS）、FSx for Windowsファイルサーバと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムが最も対費用効果の高いオプションであることがわかります。
+Workload Factoryにはコスト削減計算ツールが用意されており、FSx for ONTAPファイルシステムのストレージコストを、Elastic Block Store（EBS）、Elastic File Systems（EFS）、FSx for Windowsファイルサーバと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムが最も対費用効果の高いオプションであることがわかります。
 
 タイプの異なるストレージシステム間で比較される基準には、必要な合計容量と、必要なIOPSとスループットを含む合計パフォーマンスが含まれます。
 
