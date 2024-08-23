@@ -504,8 +504,8 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraformのサポート</block>
   <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Terraformは、Amazon FSx for NetApp ONTAPファイルシステムの導入とStorage VMの作成で利用できます。セットアップガイドと管理ガイドに、CodeboxからTerraformを使用する方法が記載されました。</block>
-  <block id="1a83a24f33c92a88ea922a23bd6cf4e5" category="paragraph"><block ref="1a83a24f33c92a88ea922a23bd6cf4e5" category="inline-link-macro-rx"></block></block>
   <block id="462c14d3e045d4b0b69cee0781df3207" category="paragraph">ワークロードには、ビジネス目標を達成するように設計された、リソース、コード、サービスまたはアプリケーションの組み合わせが含まれます。これには、お客様向けアプリケーションからバックエンドプロセスまで、あらゆるものが含まれます。ワークロードには、1つのAWSアカウント内のリソースのサブセットが含まれる場合もあれば、複数のアカウントにまたがる場合もあります。</block>
   <block id="fb44c12e7a424c0619764b1060434a74" category="section-title">削減額計算ツール</block>
   <block id="6904c85b1af908213d1642916b521739" category="paragraph">Workload Factoryにはコスト削減計算ツールが用意されており、FSx for ONTAPファイルシステムのストレージコストを、Elastic Block Store（EBS）、Elastic File Systems（EFS）、FSx for Windowsファイルサーバと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムが最も対費用効果の高いオプションであることがわかります。</block>
+  <block id="11cb17d1b990bbf37a24337d5692efa1" category="paragraph"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
 </blocks>
