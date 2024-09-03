@@ -508,4 +508,14 @@
   <block id="fb44c12e7a424c0619764b1060434a74" category="section-title">削減額計算ツール</block>
   <block id="6904c85b1af908213d1642916b521739" category="paragraph">Workload Factoryにはコスト削減計算ツールが用意されており、FSx for ONTAPファイルシステムのストレージコストを、Elastic Block Store（EBS）、Elastic File Systems（EFS）、FSx for Windowsファイルサーバと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムが最も対費用効果の高いオプションであることがわかります。</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="paragraph"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
+  <block id="2fd1745cefcdce50d6467d96e693f6b7" category="doc">RSSサブスクリプション</block>
+  <block id="0fa776fabe30e41d70bd8d9c9e64c974" category="paragraph">RSSサブスクリプションは、から利用でき<block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block>ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変更を簡単に把握できます。</block>
+  <block id="447fb3de7bec10468f55367375163603" category="inline-image-macro">[Workload Factory]コンソールのヘルプドロップダウンメニューのスクリーンショット。RSSを購読するための新しいボタンがドロップダウンメニューにオプションとして表示されます。</block>
+  <block id="c508966f04ada556baaaa0b94e781209" category="paragraph"><block ref="c508966f04ada556baaaa0b94e781209" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80f4b5aa553e3a44455088c83954a088" category="section-title">ワークロードごとに1つの権限ポリシーをサポート</block>
+  <block id="c876ca70d1ae73b09cdc0004b328448e" category="paragraph">Workload FactoryでAWSクレデンシャルを追加する際に、ワークロードおよびストレージ管理ごとに読み取りモードまたは自動モードのいずれか1つの権限ポリシーを選択できるようになりました。</block>
+  <block id="41b3a089d4fbacfb53e9a5634cfc6647" category="inline-image-macro">[Credentials]ページの権限設定セクションのスクリーンショット。ストレージ管理、AIワークロード、データベースワークロード、VMwareワークロードの権限ポリシーの読み取りまたは自動化を選択できます。</block>
+  <block id="fa5f572610383fbc01cbba40c0f535e2" category="paragraph"><block ref="fa5f572610383fbc01cbba40c0f535e2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1db25aada4bff8233b24c1d7b39230cd" category="paragraph"><block ref="1db25aada4bff8233b24c1d7b39230cd" category="inline-link-macro-rx"></block></block>
+  <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
 </blocks>
