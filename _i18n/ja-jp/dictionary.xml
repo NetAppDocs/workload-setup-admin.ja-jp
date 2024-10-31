@@ -498,9 +498,6 @@
   <block id="1b2b6bf8e053a2f8088251c3a2cc65f9" category="list-text">UIを使用して実行する処理を定義したら、[Codebox]でAWS CLIをコピーします。</block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="section-title">コードボックスからTerraformを使用</block>
   <block id="a5a1cedd11df4667bf63eec57c1622aa" category="paragraph">Terraformを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理できます。</block>
-  <block id="372393cee3187826465089e7fa3db98e" category="list-text">からコマンドを実行するにはTerraformサーバーが必要です。</block>
-  <block id="90d8257298c061974c94790388e32bbd" category="list-text">UIを使用して実行する操作を定義したら、コードボックスでTerraformコードをコピーまたはダウンロードします。</block>
-  <block id="a2417f4d64bad3dff09f2bdbce4dc0e2" category="list-text">サーバーに接続します。</block>
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraformのサポート</block>
   <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Terraformは、Amazon FSx for NetApp ONTAPファイルシステムの導入とStorage VMの作成で利用できます。セットアップガイドと管理ガイドに、CodeboxからTerraformを使用する方法が記載されました。</block>
@@ -518,4 +515,8 @@
   <block id="fa5f572610383fbc01cbba40c0f535e2" category="paragraph"><block ref="fa5f572610383fbc01cbba40c0f535e2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1db25aada4bff8233b24c1d7b39230cd" category="paragraph"><block ref="1db25aada4bff8233b24c1d7b39230cd" category="inline-link-macro-rx"></block></block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
+  <block id="6e9e8f336be02f99477adc019bfcd183" category="list-text">Terraformがインストールされているシステム(Windows/Mac/Linux)が必要です。</block>
+  <block id="613670bc7ca8a45f31728d87474749ac" category="list-text">ユーザーインターフェイスを使用して実行する操作を定義したら、コードボックスからTerraformコードをダウンロードします。</block>
+  <block id="53e9887aa73e6bb1fcf6b5b002e7f175" category="list-text">ダウンロードしたスクリプトアーカイブをTerraformがインストールされているシステムにコピーします。</block>
+  <block id="8db9de1de3844107194be0555d5ceb7c" category="list-text">zipファイルを展開し、README.mdファイルの手順に従います。</block>
 </blocks>
