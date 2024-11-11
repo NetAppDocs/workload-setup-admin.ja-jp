@@ -8,4 +8,4 @@
 
 これで、からワークロードファクトリを使用できるようになりlink:https://console.bluexp.netapp.com["BlueXPコンソール"^]ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。
 
-link:https://docs.netapp.com/workload-setup-admin/console-experiences.html["BlueXP  コンソールからワークロードファクトリにアクセスする方法"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["BlueXP  コンソールからワークロードファクトリにアクセスする方法"]
