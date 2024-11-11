@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= 法的通知
+= BlueXP  ワークロードファクトリに関する法的通知
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

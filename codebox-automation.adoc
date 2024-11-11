@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: codebox-automation.html 
 keywords: codebox, automation 
-summary: Codeboxは、開発者とDevOpsがWorkload Factoryでサポートされているすべての操作を実行するために必要なコードを生成するのに役立つ、コードとしてのインフラ（IAC）の共同パイロットです。CodeboxはWorkload Factoryの動作モード（Basic、Read、Automate）と連携しており、実行準備のための明確なパスを設定し、将来の迅速な再利用のための自動化カタログを提供します。 
+summary: Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。Codeboxは、ワークロードファクトリのオペレーションモード（Basic、Read、Automate）と連携しており、実行準備のための明確なパスを設定し、将来の迅速な再利用のための自動化カタログを提供します。 
 ---
 = コードボックス自動化の詳細
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Codeboxは、開発者とDevOpsがWorkload Factoryでサポートされ
 
 
 [role="lead"]
-Codeboxは、開発者とDevOpsがWorkload Factoryでサポートされているすべての操作を実行するために必要なコードを生成するのに役立つ、コードとしてのインフラ（IAC）の共同パイロットです。CodeboxはWorkload Factoryの動作モード（Basic、Read、Automate）と連携しており、実行準備のための明確なパスを設定し、将来の迅速な再利用のための自動化カタログを提供します。
+Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。Codeboxは、ワークロードファクトリのオペレーションモード（Basic、Read、Automate）と連携しており、実行準備のための明確なパスを設定し、将来の迅速な再利用のための自動化カタログを提供します。
 
 
 
@@ -23,7 +23,7 @@ Codeboxには、次の2つの主要なIAC機能があります。
 * _Codebox Automation Catalog_保存されているすべてのIACジョブを表示し、将来の使用に備えて簡単に参照できるようにします。自動カタログジョブはテンプレートとして保存され、適用されるリソースのコンテキストで表示されます。
 
 
-さらに、Workload Factoryのクレデンシャルを設定すると、IAMポリシーの作成に必要なAWS権限がCodeboxに動的に表示されます。権限は、使用する予定のワークロードファクトリ機能（データベース、AI、FSx for ONTAPなど）ごとに提供され、ポリシーのユーザに読み取り専用権限とフルオペレーション権限のどちらを付与するかに基づいてカスタマイズされます。Codeboxから権限をコピーしてAWS管理コンソールに貼り付けるだけで、Workload Factoryがワークロードを管理するための適切な権限を持つようになります。
+さらに、ワークロードファクトリクレデンシャルを設定する場合、CodeboxはIAMポリシーの作成に必要なAWS権限を動的に表示します。権限は、使用する予定のワークロードファクトリ機能（データベース、AI、FSx for ONTAPなど）ごとに提供され、ポリシーのユーザに読み取り専用権限とフル運用権限のどちらを付与するかに基づいてカスタマイズされます。Codeboxから権限をコピーしてAWS管理コンソールに貼り付けるだけで、ワークロードファクトリにワークロードを管理するための適切な権限が付与されます。
 
 
 

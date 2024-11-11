@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: console-experiences.html 
+keywords: console, consoles, access, saas, workload factory, bluexp, bluexp workload factory 
+summary: BlueXP  ワークロードファクトリには、2つのWebベースのコンソールからアクセスできます。 
+---
+= コンソールエクスペリエンス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP  ワークロードファクトリには、2つのWebベースのコンソールからアクセスできます。BlueXP  Workload FactoryコンソールとBlueXP  コンソールを使用してBlueXP  Workload Factoryにアクセスする方法について説明します。
+
+2つのコンソールを使用して、BlueXP  ワークロードファクトリにアクセスできます。
+
+* * BlueXP  コンソール*：作業環境とワークロードを同じ場所で管理できるハイブリッド環境を提供します。
+* *ワークロードファクトリーコンソール*：Amazon FSx for NetApp ONTAPで実行されるワークロードに焦点を当てた、ワークロードファクトリー専用のエクスペリエンスを提供します。
+
+
+
+
+== BlueXP  コンソールからワークロードファクトリにアクセス
+
+ワークロードファクトリにはBlueXP  からアクセスできます。AWSのストレージとワークロード機能のためにBluXPワークロードファクトリーを使用することに加えて、コピーと同期、デジタルウォレットなどの他のBlueXP  プラットフォームサービスにアクセスすることもできます。
+
+.手順
+. にログインします。 link:https://console.workloads.netapp.com["ワークロードファクトリコンソール"^]
+. 使用するワークロードに移動し、作業を開始するオプションを選択します。
+
+
+
+
+== Workload Factoryコンソールでワークロードファクトリにアクセス
+
+Workload FactoryコンソールからWorkload Factoryにアクセスできます。
+
+.手順
+. にログインします。 link:https://console.bluexp.netapp.com["BlueXPコンソール"^]
+. 左側のナビゲーションから*[ワークロード]*を選択します。
+. [ホーム]*を選択してすべてのワークロードを表示するか、*[ストレージ]*や*[データベース]*などのワークロードを1つ選択します。
+. ワークロードを開始するオプションを選択します。
+

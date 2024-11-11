@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: whats-next.html 
 keywords: what you can do 
-summary: これでログインしてワークロードファクトリのセットアップが完了しました。FSx for ONTAPファイルシステムを作成して管理し、他のワークロードファクトリ機能を使用できます。 
+summary: これでログインしてワークロードファクトリのセットアップが完了しました。FSx for ONTAPファイルシステムを作成、管理したり、他のワークロードファクトリ機能を使用したりできます。 
 ---
-= 次は何ができるか
+= BlueXP  Workload Factoryで次にできること
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-これでログインしてWorkload Factoryの設定が完了しました。ここでは、Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAPファイルシステムへのデータベースの導入、 また、FSx for ONTAPファイルシステムを外部データストアとして使用して、仮想マシン構成をVMware Cloud on AWSに移行します。
+BlueXP  Workload Factoryへのログインとセットアップが完了したら、Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAPファイルシステムへのデータベースの導入、FSx for ONTAPファイルシステムを外部データストアとして使用したVMware Cloud on AWSへの仮想マシン構成の移行など、いくつかのワークロードファクトリ機能の使用を開始できます。
 
 * https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp ONTAP 対応の Amazon FSX"^]
 +

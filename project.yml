@@ -23,13 +23,15 @@ sidebar:
     entries:
     - title: 基本事項をご確認ください
       entries:
-      - title: Workload Factoryの概要
+      - title: ワークロードファクトリの概要
         url: "/workload-factory-overview.html"
       - title: 動作モード
         url: "/operational-modes.html"
+      - title: コンソールエクスペリエンス
+        url: "/console-experiences.html"
     - title: クイックスタート
       url: "/quick-start.html"
-    - title: Workload Factoryへのサインアップ
+    - title: Workload Factoryへの登録
       url: "/sign-up-saas.html"
     - title: AWSクレデンシャルを追加
       url: "/add-credentials.html"
@@ -37,7 +39,7 @@ sidebar:
       url: "/whats-next.html"
   - title: ワークロードファクトリの管理
     entries:
-    - title: Workload Factoryへのログイン
+    - title: ワークロードファクトリへのログイン
       url: "/log-in.html"
     - title: Codeboxを使用したタスクの自動化
       entries:
@@ -56,5 +58,5 @@ sidebar:
   - title: 法的通知
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory
   repo: workload-family

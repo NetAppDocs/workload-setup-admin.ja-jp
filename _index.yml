@@ -1,18 +1,16 @@
 ---
 indexpage:
-  title: ワークロード工場のセットアップと管理に関するドキュメント
-  summary: ワークロードファクトリーを利用して、Amazon FSx for NetApp ONTAPを使用してワークロードを最大限に活用できるようにしましょう。セットアップが完了したら、ワークロードに適したFSx
-    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム間の自動化、Workload
-    Factoryでのワークロードの管理を行うことができます。
+  title: BlueXP  ワークロードの工場出荷時のセットアップと管理に関するドキュメント
+  summary: Amazon FSx for NetApp ONTAPを使用して、ワークロードを最大限に活用できるように、BlueXP  ワークロードファクトリーの利用を開始しましょう。セットアップが完了したら、ワークロードに適したFSx
+    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム全体の自動化、ワークロードファクトリでのワークロードの管理を行うことができます。
   keywords: workload factory, fsx, account, credentials, users, permissions, log in,
     calculator, codebox
-  lead: ワークロードファクトリーを利用して、Amazon FSx for NetApp ONTAPを使用してワークロードを最大限に活用できるようにしましょう。セットアップが完了したら、ワークロードに適したFSx
-    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム間の自動化、Workload
-    Factoryでのワークロードの管理を行うことができます。
+  lead: Amazon FSx for NetApp ONTAPを使用して、ワークロードを最大限に活用できるように、BlueXP  ワークロードファクトリーの利用を開始しましょう。セットアップが完了したら、ワークロードに適したFSx
+    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム全体の自動化、ワークロードファクトリでのワークロードの管理を行うことができます。
   tiles:
   - title: はじめに
     links:
-    - title: Workload Factoryの詳細
+    - title: BlueXP  ワークロードファクトリの詳細
       url: workload-factory-overview.html
     - title: サインアップ
       url: sign-up-saas.html
