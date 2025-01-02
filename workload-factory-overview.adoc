@@ -25,7 +25,7 @@ Amazon FSx for NetApp ONTAPは、ミッションクリティカルなアプリ�
 
 柔軟性に優れた低コストのストレージ:: クラウドでAmazon FSx for NetApp ONTAPファイルシステムを検出、導入、管理できます。FSx for ONTAPは、ONTAPのすべての機能をAWSネイティブのマネージドサービスで利用し、一貫したハイブリッドクラウドエクスペリエンスを提供します。
 オンプレミスのvSphere環境をVMware Cloud on AWSに移行:: VMware Cloud on AWS Migration Advisorを使用すると、オンプレミスのvSphere環境で現在の仮想マシンの構成を分析し、推奨されるVMレイアウトをVMware Cloud on AWSに導入する計画を生成し、カスタマイズしたAmazon FSx for NetApp ONTAPファイルシステムを外部データストアとして使用できます。
-データベース導入の最適化:: Microsoft SQL Server、データベース、データベースクローン（AWSリソースのプロビジョニング、ストレージプロビジョニング、ネットワーク、OSの構成など）を導入し、最適化された導入構成を活用して、一貫したエラーのないセットアッププロセスを実現します。
+データベースのライフサイクル管理:: Amazon FSx for NetApp ONTAPによるデータベースワークロードの調査とコスト削減の分析、SQLサーバデータベースをFSx for ONTAPストレージに移行する際のストレージとアプリケーションのメリットの活用、ベンダーのベストプラクティスを実装したSQLサーバ、データベース、データベースクローンの導入、コードとしてのインフラの共同パイロットによる運用の自動化、SQLサーバ環境の継続的な監視と最適化によるパフォーマンス、可用性、保護、コスト効率の向上
 AIチャットボットの開発:: FSx for ONTAPファイルシステムを活用して、組織のチャットボットソースやAIエンジンデータベースを保存できます。これにより、組織の非構造化データをエンタープライズチャットボットアプリケーションに埋め込むことができます。
 コストを削減するためのコスト削減計算ツール:: Amazon Elastic Block Store（EBS）ストレージやElastic File System（EFS）ストレージ、Amazon FSx for Windowsファイルサーバを使用している現在の環境を分析し、Amazon FSx for NetApp ONTAPに移行することでどれだけのコストを削減できるかを確認できます。また、将来の導入を計画している場合に備えて、計算ツールを使用して「what if」シナリオを実行することもできます。
 
@@ -112,11 +112,11 @@ link:codebox-automation.html["Codeboxの詳細"]です。
 
 === 削減額計算ツール
 
-FSx for ONTAPファイルシステムのストレージコストをElastic Block Store（EBS）、Elastic File Systems（EFS）、FSx for Windowsファイルサーバと比較できるコスト削減試算ツールがWorkload Factoryに用意されています。ストレージ要件によっては、FSx for ONTAPファイルシステムが最も対費用効果の高いオプションであることがわかります。
+Workload Factoryにはコスト削減計算ツールが用意されているので、FSx for ONTAPファイルシステム上のストレージ環境やデータベースワークロードのコストを、Elastic Block Store（EBS）、Elastic File Systems（EFS）、FSx for Windowsファイルサーバと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムが最も対費用効果の高いオプションであることがわかります。
 
-タイプの異なるストレージシステム間で比較される基準には、必要な合計容量と、必要なIOPSとスループットを含む合計パフォーマンスが含まれます。
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["ストレージ環境のコスト削減効果を試算する方法をご紹介します"^]
+* link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["データベースワークロードの削減効果を試算する方法をご紹介します"^]
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["Storage Calculatorを使用して削減効果を確認する方法をご確認ください"^]
 
 
 
