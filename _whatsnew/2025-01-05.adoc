@@ -1,0 +1,11 @@
+= BlueXP  Workload Factoryでのサービスアカウントのサポート
+:allow-uri-read: 
+
+
+
+
+=== BlueXP  Workload Factoryでのサービスアカウントのサポート
+
+BlueXP  ワークロードファクトリでサービスアカウントがサポートされるようになりました。サービスアカウントを作成して、インフラの運用を自動化するマシンユーザとして機能させることができます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-service-accounts.html["サービスアカウントを作成および管理します"]

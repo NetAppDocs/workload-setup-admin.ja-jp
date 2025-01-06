@@ -331,7 +331,6 @@
   <block id="11cf550820ecd5e75ae1a9046f7f7f05" category="section-title">ソフトウェアサービス</block>
   <block id="22412f0c62e1935807bc2c96a82d38cd" category="inline-link">Webベースのコンソール</block>
   <block id="9b945efebb006547a94415eadaa12921" category="section-title">アカウント</block>
-  <block id="6e1351546ad06187ed26aac56cc1d573" category="paragraph">アカウントを作成すると、そのアカウントの単一のAccount Adminユーザになります。</block>
   <block id="41d28e7b29f45d4f63653993af041bc7" category="paragraph">組織で追加のアカウントまたはユーザー管理が必要な場合は、製品内のチャットを使用して当社に連絡してください。</block>
   <block id="d81fee99e7fd276bb44ecddacfeba318" category="list-text">*読み取りモード*は、ユーザーがさまざまなリソースやツールを検出するのを支援し、関連するウィザードを完了するのを支援することにより、基本モードのエクスペリエンスを向上させます。</block>
   <block id="e2cde95c1c68867f8b74113e5266c7e4" category="list-text">*自動化モード*は完全な信頼関係を表し、実行に必要な、検証済みの権限を持つ割り当てられた資格情報とともに、ユーザーに代わって実行および自動化するように設計されています。</block>
@@ -559,4 +558,49 @@
   <block id="764ffbbd234e8c610462259cf8d50b5a" category="list-text"><block ref="764ffbbd234e8c610462259cf8d50b5a" category="inline-link-macro-rx"></block></block>
   <block id="28926214529dd2082ee42d4efccc4f1e" category="inline-link-macro">データベースワークロードの削減効果を試算する方法をご紹介します</block>
   <block id="ec6c7e2795e3d76a80250e83f4a0055e" category="list-text"><block ref="ec6c7e2795e3d76a80250e83f4a0055e" category="inline-link-macro-rx"></block></block>
+  <block id="5baf4417d867f07ce7f16e7810f044d7" category="doc">BlueXP  Workload Factoryでのサービスアカウントのサポート</block>
+  <block id="369af9c9eae8f9673850f588a7ed5272" category="paragraph">BlueXP  ワークロードファクトリでサービスアカウントがサポートされるようになりました。サービスアカウントを作成して、インフラの運用を自動化するマシンユーザとして機能させることができます。</block>
+  <block id="f932d2619edea0dc69b40e9be53abdc4" category="inline-link-macro">サービスアカウントを作成および管理します</block>
+  <block id="3d6080aa10267e8c67d5c76a2bc1a9f3" category="paragraph"><block ref="3d6080aa10267e8c67d5c76a2bc1a9f3" category="inline-link-macro-rx"></block></block>
+  <block id="932645866653570a60b05477eb9d244b" category="summary">自動化のためにサービスアカウントを作成することで、ニーズに合わせてアカウントを管理できます。</block>
+  <block id="7b05bdd67cf260b16b28715ae682b5db" category="doc">サービスアカウントの管理</block>
+  <block id="7e25e6f3444627cdd0a9518ea63a557b" category="paragraph">サービスアカウントを作成して、インフラの運用を自動化するマシンユーザとして機能させます。サービスアカウントへのアクセス権は、いつでも無効にしたり変更したりできます。</block>
+  <block id="bb121f2e42609305e9a35e628d683a11" category="paragraph">サービスアカウントは、BlueXP  が提供するマルチテナンシー機能です。アカウント管理者は、サービスアカウントの作成、アクセスの制御、およびサービスアカウントの削除を行います。サービスアカウントは、BlueXP  コンソールまたはBlueXP  ワークロードファクトリコンソールで管理できます。</block>
+  <block id="e6a44c030404947ef9ee349b021fc03d" category="inline-xref">サービスアカウントの削除</block>
+  <block id="2d81d4fc8d386aa7db8bcac9b1d0b306" category="inline-xref">新規作成</block>
+  <block id="8a8feea1d87a91424b49ee757e409e8b" category="paragraph">クライアントシークレットを再作成できるBlueXP  でサービスアカウントを管理するのとは異なり、ワークロードファクトリではサービスアカウントの作成と削除のみがサポートされます。BlueXP  ワークロードファクトリコンソールで特定のサービスアカウントのクライアントシークレットを再作成する場合は<block ref="f3841cd8a6d92483cb4b2a04ae8d7e16" category="inline-xref-macro-rx"></block>、を実行する必要があります<block ref="117d146838ec9f8b2a3508452b4bae51" category="inline-xref-macro-rx"></block>。</block>
+  <block id="de3df2812a77857f11a4d58813051825" category="paragraph">サービスアカウントは、パスワードではなくクライアントIDとシークレットを認証に使用します。クライアントIDとシークレットは、アカウント管理者が変更を決定するまで修正されます。サービスアカウントを使用するには、アクセストークンを生成するためにクライアントIDとシークレットが必要です。そうしないとアクセスできません。アクセストークンは短命であり、数時間しか使用できないことに注意してください。</block>
+  <block id="4297b1c4d208bcc93d459bd6c06031df" category="paragraph">サービスアカウントをBlueXP  コンソールで作成するか、BlueXP  ワークロードファクトリコンソールで作成するかを決定します。わずかな違いがあります。次の手順では、BlueXP  ワークロードファクトリコンソールでサービスアカウントを管理する方法について説明します。</block>
+  <block id="3ae998467dc1449fb591d75901000406" category="inline-link-macro">BlueXP  のアイデンティティ管理とアクセス管理の詳細</block>
+  <block id="97a3c660b50f6bf13e2dacbc15e9c830" category="inline-link-macro">BlueXP  IAMメンバーを追加して権限を管理する方法について説明します。</block>
+  <block id="9c5579c348844cc1b850bd02a96ffe67" category="paragraph">BlueXP  でサービスアカウントを管理するには、<block ref="1d755ffa92795de859e3dba230e1f04d" category="inline-link-macro-rx"></block>および<block ref="aa435623882bd3c92d8bd95e95dc35fe" category="inline-link-macro-rx"></block>を使用します。</block>
+  <block id="41d9e1257b3e21add2e59d038938ea94" category="section-title">サービスアカウントを作成します</block>
+  <block id="3f196be1bd5cfb3c4da4e6f58d7c33ed" category="paragraph">サービスアカウントを作成する際、BlueXP  ワークロードファクトリでは、サービスアカウントのクライアントIDとクライアントシークレットをコピーまたはダウンロードできます。このキーペアは、BlueXP  ワークロードファクトリでの認証に使用されます。</block>
+  <block id="7361ae18df6957cd233a2900fa56a3a3" category="list-text">ワークロードファクトリコンソールで、*[アカウント]*アイコンを選択し、*[サービスアカウント]*を選択します。</block>
+  <block id="c3408ec590d1e3b7e7f77d145b976fb6" category="inline-image-macro">BlueXP  ワークロードの工場出荷時のユーザインターフェイスアカウントメニューオプションを示すスクリーンショット。オプションの1つはサービスアカウントです。</block>
+  <block id="2bf662d0fe68884c8c6bfbf1c7e19b28" category="paragraph"><block ref="2bf662d0fe68884c8c6bfbf1c7e19b28" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ebbfd5cf39924ef59304d3b2d03bfad0" category="list-text">[サービスアカウント]ページで、[サービスアカウントの作成]*を選択します。</block>
+  <block id="0631e752a6ccf3310e9ff6b0aba74a38" category="list-text">Create service account（サービスアカウントの作成）ダイアログで、* Service account name（サービスアカウント名）*フィールドにサービスアカウントの名前を入力します。</block>
+  <block id="c151e8d990a5b1f7552461d4a7727f4a" category="paragraph">role *は、* account admin *として事前に選択されています。</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">「 * Continue * 」を選択します。</block>
+  <block id="a708a553b3abfac9aade748b9d27bc4e" category="list-text">クライアント ID とクライアントシークレットをコピーまたはダウンロードします。</block>
+  <block id="8bfab18bdb5a0cbcfb26837e26880088" category="paragraph">クライアントシークレットは一度だけ表示され、Workload Factoryのどこにも格納されません。シークレットをコピーまたはダウンロードして安全に保管します。</block>
+  <block id="f487083f9c2db211b137935b7fc9dece" category="list-text">必要に応じて、クライアントの資格情報交換を実行することで、Auth0管理APIのアクセストークンを取得できます。curlの例は、クライアントIDとシークレットを取得し、APIを使用して時間制限のあるアクセストークンを生成する方法を示しています。このトークンを使用すると、BlueXP  ワークロードファクトリAPIに数時間アクセスできます。</block>
+  <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">[ 閉じる（ Close ） ] を選択します。</block>
+  <block id="80487d01b1c728a010d93038c1678fff" category="paragraph">新しいサービスアカウントが作成され、[サービスアカウント]ページに表示されます。</block>
+  <block id="30b299e9cb0ca616520dfdc739caa685" category="section-title">サービスアカウントを削除します</block>
+  <block id="22afe6994929c83f3a017a74a15c514d" category="paragraph">不要になったサービスアカウントを削除します。</block>
+  <block id="76eda590152f52e14b5333efced53ebe" category="list-text">Workload Factoryコンソールで、*[Account]*アイコンを選択し、*[Service accounts]*を選択します。</block>
+  <block id="14c8c293bfd0a79761df78d64a7cdc09" category="list-text">[サービスアカウント]ページで、3ドットのメニューを選択し、*[削除]*を選択します。</block>
+  <block id="897945ecf5c18d38834da2efd9b74699" category="list-text">[サービスアカウントの削除]ダイアログで、テキストボックスに「* delete *」と入力します。</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">削除*を選択して削除を確定します。</block>
+  <block id="0b296fc415fe75b2e0eb7ea5db103354" category="paragraph">サービスアカウントが削除されます。</block>
+  <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">2025年1月5日</block>
+  <block id="99b22223be957cc9c37eee0aecb2007b" category="list-text">自動化を促進するサービスアカウント</block>
+  <block id="cb62deea87371902deaeb1b0a009e387" category="list-text">サービスアカウントを使用して、BlueXP  ワークロード工場の運用を安全かつ確実に自動化します。サービスアカウントは、ユーザ管理を制限することなく、信頼性と長期にわたる自動化を実現します。また、APIアクセスのみを提供するため、セキュリティも向上します。</block>
+  <block id="13b1a844b08d2d7b8144e4c0db6b5552" category="paragraph">アカウントを作成すると、そのアカウントのsingle_account admin_userになります。</block>
+  <block id="c33f7c2cbeaca5f1462c1b3e1c276145" category="section-title">サービスアカウント</block>
+  <block id="05cf180c93dd06147c24c610cae8dd96" category="paragraph">サービスアカウントは「ユーザ」として機能し、自動化を目的として、許可されたAPI呼び出しをBlueXP  ワークロードファクトリに実行できます。これにより、自動化スクリプトを作成する必要がなくなります。自動化スクリプトは、会社を離れることができる実際のユーザアカウントに基づいて作成する必要がなくなります。Workload Factoryのすべてのアカウント所有者は、アカウント管理者と見なされます。アカウント管理者は、複数のサービスアカウントを作成および削除できます。</block>
+  <block id="25e9dc09fd109741b1c7237f825ab46e" category="inline-link-macro">サービスアカウントの管理方法</block>
+  <block id="09c9cabc1664a7683d1d411a37775b39" category="paragraph"><block ref="f09e11341fa2be3f754588bca37990f8" category="inline-link-macro-rx"></block>です。</block>
 </blocks>

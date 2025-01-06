@@ -41,6 +41,8 @@ sidebar:
     entries:
     - title: ワークロードファクトリへのログイン
       url: "/log-in.html"
+    - title: サービスアカウントの管理
+      url: "/manage-service-accounts.html"
     - title: Codeboxを使用したタスクの自動化
       entries:
       - title: Codeboxの詳細
