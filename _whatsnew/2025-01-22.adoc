@@ -1,0 +1,11 @@
+= BlueXP  ワークロードの工場出荷時の権限
+:allow-uri-read: 
+
+
+
+
+=== BlueXP  ワークロードの工場出荷時の権限
+
+ストレージ環境の検出から、ストレージ内のファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、BlueXP  ワークロードファクトリでさまざまな処理を実行するために使用される権限を確認できるようになりました。ストレージ、データベース、VMware、生成AIの各ワークロードのIAMポリシーと権限を表示できます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["BlueXP  ワークロードの工場出荷時の権限"]

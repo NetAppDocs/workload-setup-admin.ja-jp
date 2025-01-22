@@ -29,6 +29,8 @@ sidebar:
         url: "/operational-modes.html"
       - title: コンソールエクスペリエンス
         url: "/console-experiences.html"
+      - title: 権限
+        url: "/permissions-reference.html"
     - title: クイックスタート
       url: "/quick-start.html"
     - title: Workload Factoryへの登録
