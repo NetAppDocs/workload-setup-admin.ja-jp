@@ -1688,6 +1688,9 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | リージョンで使用可能な基盤モデルを表示する | Bedrock: ListFoundationModels | 導入 | 自動化 
 
 
+| 基盤モデルへのアクセスを確認 | Bedrock：GetFoundationModelAvailability | 導入 | 自動化 
+
+
 | AIエンジンウィザードでFSxとBedrockをサポートするリージョンを取得 | SSM：GetParametersByPath | 導入 | 自動化 
 
 
@@ -1782,9 +1785,6 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 
 | ログ:TagResource | 導入 | 自動化 
-
-
-| 基盤モデルへのアクセスを確認 | Bedrock：GetFoundationModelAvailability | トラブルシューティング | 自動化 
 |===
 ====
 
