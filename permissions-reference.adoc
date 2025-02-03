@@ -1373,7 +1373,11 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 | プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 | 自動化 
 
 
-| ロールで使用可能な権限を検証し、必要な権限と比較する | IAM：SimulatePrincipalPolicy | 導入 | 自動化 
+| ロールで使用可能な権限を検証し、必要な権限と比較する | IAM：SimulatePrincipalPolicy | 導入  a| 
+* 読み取り
+* 自動化
+
+
 |===
 . アクセス許可は、WLMDBで始まるリソースに制限されます。
 . IAM：AWSServiceNameによって制限される「IAM：CreateServiceLinkedRole」：ec2.amazonaws.com"*
@@ -2073,3 +2077,9 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年2月3日
+
+データベースの_read_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。

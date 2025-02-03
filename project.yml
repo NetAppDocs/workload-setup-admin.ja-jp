@@ -51,6 +51,8 @@ sidebar:
         url: "/codebox-automation.html"
       - title: コードボックスを使用してコードを生成する
         url: "/use-codebox.html"
+    - title: CloudShellを使用
+      url: "/use-cloudshell.html"
     - title: 認証情報を削除
       url: "/manage-credentials.html"
   - title: 知識とサポート

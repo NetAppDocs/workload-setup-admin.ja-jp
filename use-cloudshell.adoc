@@ -1,0 +1,189 @@
+---
+sidebar: sidebar 
+permalink: use-cloudshell.html 
+keywords: cloudshell, command line, aws cli, ontap cli, bluexp workload factory, workload factory 
+summary: BlueXP  ワークロードファクトリのユーザインターフェイスのどこからでもCloudShellを使用して、AWSまたはONTAPのCLIコマンドを発行できます。 
+---
+= BlueXP  ワークロードファクトリでCloudShellを使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+CloudShellを開き、BlueXP  ワークロードファクトリのユーザインターフェイスの任意の場所からAWSまたはONTAP CLIコマンドを実行します。
+
+
+
+== タスクの内容
+
+CloudShellを使用すると、BlueXP  ワークロードファクトリのユーザインターフェイス内から、シェルのような環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。ブラウザで端末セッションをシミュレートし、端末機能を提供し、ワークロードファクトリのバックエンドを介してメッセージをプロキシします。BlueXP  アカウントで指定したAWSクレデンシャルとONTAPクレデンシャルを使用できます。
+
+CloudShellには次の機能があります。
+
+* 複数のCloudShellセッション：複数のCloudShellセッションを一度に展開して、複数のコマンドシーケンスを並行して発行します。
+* 複数のビュー：CloudShellタブセッションを分割して、2つ以上のタブを水平または垂直に同時に表示できるようにします。
+* セッション名の変更:必要に応じてセッション名を変更
+* Last session content persistence（前回のセッションのコンテンツの永続性）：誤って閉じた場合は、最後のセッションを再度開きます。
+* 設定の環境設定:フォントサイズと出力タイプの変更
+
+
+
+
+== 開始する前に
+
+CloudShellは、AWSクレデンシャルのコンテキストで機能します。CloudShellを使用するには、AWSクレデンシャルを少なくとも1つ指定する必要があります。
+
+
+NOTE: CloudShellを使用すると、AWSまたはONTAPの任意のCLIコマンドを実行できます。ただし、FSx for ONTAPファイルシステムのコンテキスト内で作業する場合は、必ず次のコマンドを実行してください。 `using fsx <file-system-name>`
+
+
+
+== CloudShellを導入する
+
+BlueXP  ワークロードファクトリコンソールのどこからでもCloudShellを導入できます。FSx for ONTAPファイルシステム内からストレージからCloudShellを導入することもできます。
+
+[role="tabbed-block"]
+====
+.ワークロードファクトリコンソールから導入
+--
+.手順
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. 上部ナビゲーションバーからCloudShellを開きます。
++
+image:screenshot-select-cloudshell-icon.png["上部ナビゲーションバーにCloudShellアイコンを示すスクリーンショット。"]
+
+. CloudShellセッションのクレデンシャルとリージョンを選択し、矢印を選択して続行します。
++
+image:screenshot-deploy-cloudshell-session.png["新しいCloudShellセッションを示すスクリーンショット。"]
+
+. と入力し `help`て使用可能なCloudShellコマンドとその手順を表示するか、使用可能なコマンドについては次のCLIリファレンスドキュメントを参照してください。
++
+** link:https://docs.aws.amazon.com/cli/latest/reference/["AWS CLIリファレンス"^]：FSx for ONTAPに関連するコマンドについては、* FSx *を選択します。
+** link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLIリファレンス"^]
+
+
+. CloudShellセッション内でコマンドを発行します。
+
+
+--
+.ストレージからの導入
+--
+.手順
+. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. [ストレージ]*で、*[ストレージインベントリに移動]*を選択します。
+. FSx for ONTAP *タブで、ファイルシステムの3ドットメニューを選択し、*[Open CloudShell]*を選択します。
++
+選択したファイルシステムのコンテキストでCloudShellセッションが開きます。
+
+. と入力し `help`て使用可能なCloudShellコマンドとその手順を表示するか、使用可能なコマンドについては次のCLIリファレンスドキュメントを参照してください。
++
+** link:https://docs.aws.amazon.com/cli/latest/reference/["AWS CLIリファレンス"^]：FSx for ONTAPに関連するコマンドについては、* FSx *を選択します。
+** link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLIリファレンス"^]
+
+
+. CloudShellセッション内でコマンドを発行します。
+
+
+--
+====
+このスクリーンショットに示されているCloudShellタスクは、開いているCloudShellセッションタブの3ドットメニューを選択することで完了できます。これらの各タスクの手順は次のとおりです。
+
+image:screenshot-cloudshell-tab-menu.png["CloudShellタブの3ドットメニューを示すスクリーンショット。名前の変更、複製、他のタブの閉じ、すべて閉じるなどのオプションが表示されます。"]
+
+
+
+== CloudShellセッションタブの名前変更
+
+CloudShellセッションタブの名前を変更して、セッションを識別しやすくすることができます。
+
+.手順
+. CloudShellセッションタブの3ドットメニューを選択します。
+. [ 名前の変更 *] を選択します。
+. セッションタブの新しい名前を入力し、タブ名の外側をクリックして新しい名前を設定します。
+
+
+.結果
+CloudShellセッションタブに新しい名前が表示されます。
+
+
+
+== CloudShellセッションタブの複製
+
+CloudShellセッションタブを複製して、同じ名前、クレデンシャル、およびリージョンを持つ新しいセッションを作成できます。元のタブのコードは、複製されたタブでは複製されません。
+
+.手順
+. CloudShellセッションタブの3ドットメニューを選択します。
+. [複製]*を選択します。
+
+
+.結果
+新しいタブが元のタブと同じ名前で表示されます。
+
+
+
+== CloudShellセッションのタブを閉じる
+
+CloudShellタブを一度に1つずつ閉じたり、作業していない他のタブを閉じたり、すべてのタブを一度に閉じることができます。
+
+.手順
+. CloudShellセッションタブの3ドットメニューを選択します。
+. 次のいずれかを選択します。
++
+** [CloudShell]タブウィンドウで[X]を選択して、一度に1つのタブを閉じます。
+** 作業中のタブを除く、開いている他のすべてのタブを閉じるには、*[他のタブを閉じる]*を選択します。
+** すべてのタブを閉じるには、*すべてのタブを閉じる*を選択します。
+
+
+
+
+.結果
+選択したCloudShellセッションタブが閉じます。
+
+
+
+== CloudShellセッションタブの分割
+
+CloudShellセッションのタブを分割して、複数のタブを同時に表示できます。
+
+.ステップ
+CloudShellウィンドウの上部、下部、左、または右にCloudShellセッションタブをドラッグアンドドロップして、ビューを分割します。
+
+image:screenshot-cloudshell-split-view.png["2つのCloudShellタブが水平に分割されているスクリーンショット。タブが並べて表示されます。"]
+
+
+
+== 最後のCloudShellセッションを再度開く
+
+誤ってCloudShellセッションを閉じた場合は、再度開くことができます。
+
+.ステップ
+上部のナビゲーションバーで[CloudShell]アイコンを選択します。
+
+image:screenshot-select-cloudshell-icon.png["上部ナビゲーションバーにCloudShellアイコンを示すスクリーンショット。"]
+
+.結果
+最新のCloudShellセッションが開きます。
+
+
+
+== CloudShellセッションの設定の更新
+
+CloudShellセッションのフォントおよび出力タイプの設定を更新できます。
+
+.手順
+. CloudShellセッションをデプロイします。
+. [CloudShell]タブで、設定アイコンを選択します。
++
+設定ダイアログが表示されます。
+
+. 必要に応じてフォントサイズと出力タイプを更新します。
++
+
+NOTE: エンリッチ化された出力は、JSONオブジェクトとテーブルの書式設定に適用されます。その他の出力はすべてプレーンテキストで表示されます。
+
+. * 適用 * を選択します。
+
+
+.結果
+CloudShell設定が更新されます。
