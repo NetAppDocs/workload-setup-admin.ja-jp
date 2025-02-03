@@ -11,8 +11,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始する前に</block>
   <block id="36a8744ea109fc8ef18fd018d5d97aa0" category="paragraph">AWSアカウントにログインするにはクレデンシャルが必要です。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
-  <block id="dcad3915ef43cba7d550cad972fa348d" category="list-text">[クレデンシャル]*ページで*[クレデンシャルの追加]*を選択すると、[クレデンシャルの追加]ページが表示されます。</block>
-  <block id="c8df78ded4cea0598f7679f11a3c3246" category="list-text">[手動で追加]*を選択し、次の手順に従って_Permissions configuration_の3つのセクションに記入します。</block>
   <block id="ef7fe40c036b5b08d74837dcb702dc33" category="inline-image-macro">クレデンシャルのセットごとに手動で定義する必要がある項目を示すスクリーンショット。</block>
   <block id="083fb8583b0a2366ef9a94388dd9640f" category="paragraph"><block ref="083fb8583b0a2366ef9a94388dd9640f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d11861b4e2dfc9ac3d86245926aa2785" category="section-title">手順1：ワークロードの機能を選択し、IAMポリシーを作成する</block>
@@ -44,7 +42,6 @@
   <block id="47d8a5dd0796937c17e25e1cddfa4b0a" category="paragraph">クレデンシャルが作成され、[Credentials]ページに戻ります。</block>
   <block id="5512d35e832df0796cf2e9bbfc4ef8e7" category="section-title">CloudFormationを使用してアカウントにクレデンシャルを追加する</block>
   <block id="f48f7e164b0415ad7634845f95eb03e1" category="list-text">CloudFormationスタックを使用してクレデンシャルを追加する場合は、AWSアカウントで次の権限が必要です。</block>
-  <block id="7f1a76d5b7da63bea7c6b448303e146a" category="list-text">[クレデンシャル]*ページで、*[クレデンシャルの追加]*を選択します。</block>
   <block id="4454b47599abbe986fcc1d78e9d5c3d5" category="list-text">[Add via AWS CloudFormation]*を選択します。</block>
   <block id="5ad4ec01b313b6c0c149b0ecd63aca07" category="inline-image-macro">CloudFormationを起動してクレデンシャルを作成する前に定義する必要がある項目を示すスクリーンショット。</block>
   <block id="901a75a6ee535c459b098fcdbbfb42aa" category="paragraph"><block ref="901a75a6ee535c459b098fcdbbfb42aa" category="inline-image-macro-rx" type="image"></block></block>
@@ -1044,4 +1041,9 @@
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025年2月2日</block>
   <block id="3bc27c585525ff1458c1330314a77ebb" category="paragraph">含める：_whatsnew/2025-02-02.adoc[]</block>
   <block id="bd901b05034bb9be1d918012998e8f7b" category="section-title">2025年1月5日</block>
+  <block id="837dc9ced3f451b5576a53734a81f296" category="admonition">AWSクレデンシャルは、Workload FactoryコンソールまたはBlueXP  コンソールからアカウントに追加できます。</block>
+  <block id="9dcf47e156e121f56bf41ceed39f49d6" category="list-text">にログインし<block ref="16bf9e05d35ac34d34081fb843866b4b" category="inline-link-rx"></block>ます。</block>
+  <block id="53b82725deafbd8d1e3333b16f705800" category="list-text">[アカウント]*アイコンを選択し、*[クレデンシャル]*を選択します。</block>
+  <block id="5ff4c3f483396c894c51f91d47106ecf" category="list-text">[クレデンシャル]ページで、*[クレデンシャルの追加]*を選択します。</block>
+  <block id="558847a01e0a9378a8c7b99a0e6af643" category="list-text">[クレデンシャルの追加]ページで*[手動で追加]*を選択し、次の手順に従って_Permissions configuration_の各セクションを完了します。</block>
 </blocks>
