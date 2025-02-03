@@ -17,7 +17,21 @@ summary: クラウドプロバイダの資格情報、Codeboxの機能拡張な�
 
 == 2025年2月2日
 
-含める：_whatsnew/2025-02-02.adoc[]
+
+
+=== BlueXP  Workload FactoryコンソールでCloudShellを使用可能
+
+CloudShellは、BlueXP  ワークロードファクトリコンソールのどこからでも使用できます。CloudShellを使用すると、BlueXP  アカウントで提供したAWSとONTAPのクレデンシャルを使用して、シェルに似た環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["CloudShellを使用"]
+
+
+
+=== データベースの権限の更新
+
+データベースの_read_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["アクセス権参照変更ログ"]
 
 
 
