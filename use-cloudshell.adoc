@@ -49,11 +49,8 @@ BlueXP  ワークロードファクトリコンソールのどこからでもCl
 --
 .手順
 . いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. 上部ナビゲーションバーからCloudShellを開きます。
-+
-image:screenshot-select-cloudshell-icon.png["上部ナビゲーションバーにCloudShellアイコンを示すスクリーンショット。"]
-
-. CloudShellセッションのクレデンシャルとリージョンを選択し、矢印を選択して続行します。
+. 上部ナビゲーションバーからCloudShellを開きimage:cloudshell-icon.png["クラウドシェルアイコンのスクリーンショット"]ます。
+. [CloudShell]ウィンドウで、CloudShellセッションのクレデンシャルとリージョンを選択し、矢印を選択して続行します。
 +
 image:screenshot-deploy-cloudshell-session.png["新しいCloudShellセッションを示すスクリーンショット。"]
 
