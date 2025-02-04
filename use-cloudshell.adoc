@@ -155,9 +155,7 @@ image:screenshot-cloudshell-split-view.png["2つのCloudShellタブが水平に�
 誤ってCloudShellセッションを閉じた場合は、再度開くことができます。
 
 .ステップ
-上部のナビゲーションバーで[CloudShell]アイコンを選択します。
-
-image:screenshot-select-cloudshell-icon.png["上部ナビゲーションバーにCloudShellアイコンを示すスクリーンショット。"]
+から[CloudShell]アイコンを選択しimage:cloudshell-icon.png["クラウドシェルアイコンのスクリーンショット"]上部ナビゲーションバーます。
 
 .結果
 最新のCloudShellセッションが開きます。
