@@ -140,81 +140,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 | ec2：AuthorizeSecurityGroupIngress | 導入 | 自動化 
 
 
-.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | 自動化 
-
-
-| EC2: DeleteSecurityGroup | カンリシヨリ | 自動化 
-
-
-.16+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：CreateVolume * | カンリシヨリ | 自動化 
-
-
-| FSx：TagResource * | カンリシヨリ | 自動化 
-
-
-| FSx：CreateStorageVirtualMachine * | カンリシヨリ | 自動化 
-
-
-| FSx：DeleteFileSystem * | カンリシヨリ | 自動化 
-
-
-| FSx：DeleteStorageVirtualMachine * | カンリシヨリ | 自動化 
-
-
-| FSx：DescriptionFileSystems* | インベントリ  a| 
-* 読み取り
-* 自動化
-
-
-
-
-| FSx：DescriptionStorageVirtualMachines * | インベントリ  a| 
-* 読み取り
-* 自動化
-
-
-
-
-| FSx：UpdateFileSystem * | カンリシヨリ | 自動化 
-
-
-| FSx：UpdateStorageVirtualMachine * | カンリシヨリ | 自動化 
-
-
-| FSx：Description * | インベントリ  a| 
-* 読み取り
-* 自動化
-
-
-
-
-| FSx：UPDATEVOLUME * | カンリシヨリ | 自動化 
-
-
-| FSx：DeleteVolume * | カンリシヨリ | 自動化 
-
-
-| FSx：UntagResource * | カンリシヨリ | 自動化 
-
-
-| FSx：DescriptionBackups * | カンリシヨリ  a| 
-* 読み取り
-* 自動化
-
-
-
-
-| FSx：CreateBackup * | カンリシヨリ | 自動化 
-
-
-| FSx：CreateVolumeFromBackup * | カンリシヨリ | 自動化 
-
-
-| FSx for ONTAPリソース用のタグを挙げる | FSx：ListTagsForResource | インベントリ  a| 
-* 読み取り
-* 自動化
-
-
+| Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。 | IAM：CreateServiceLinkedRole | 導入 | 自動化 
 
 
 .7+| FSx for ONTAPファイルシステム導入フォームに必要事項をご記入ください | EC2: DescribeVpcs  a| 
@@ -294,6 +220,23 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 
 
+.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 自動化 
+
+
+| KMS：説明* | 導入  a| 
+* 読み取り
+* 自動化
+
+
+
+
+| KMS：リスト* | 導入  a| 
+* 読み取り
+* 自動化
+
+
+
+
 | EC2インスタンスのボリュームの詳細を取得 | EC2: DescribeVolumesの場合  a| 
 * インベントリ
 * コスト削減の詳細
@@ -312,24 +255,84 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 
 
-.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 自動化 
-
-
-| KMS：説明* | 導入  a| 
-* 読み取り
-* 自動化
-
-
-
-
-| KMS：リスト* | 導入  a| 
-* 読み取り
-* 自動化
-
-
-
-
 | コスト削減試算ツールでElastic File Systemについて説明する | elasticfilesystem: describe* | コスト削減の詳細 | 読み取り 
+
+
+| FSx for ONTAPリソース用のタグを挙げる | FSx：ListTagsForResource | インベントリ  a| 
+* 読み取り
+* 自動化
+
+
+
+
+.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | 自動化 
+
+
+| EC2: DeleteSecurityGroup | カンリシヨリ | 自動化 
+
+
+.16+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：CreateVolume * | カンリシヨリ | 自動化 
+
+
+| FSx：TagResource * | カンリシヨリ | 自動化 
+
+
+| FSx：CreateStorageVirtualMachine * | カンリシヨリ | 自動化 
+
+
+| FSx：DeleteFileSystem * | カンリシヨリ | 自動化 
+
+
+| FSx：DeleteStorageVirtualMachine * | カンリシヨリ | 自動化 
+
+
+| FSx：DescriptionFileSystems* | インベントリ  a| 
+* 読み取り
+* 自動化
+
+
+
+
+| FSx：DescriptionStorageVirtualMachines * | インベントリ  a| 
+* 読み取り
+* 自動化
+
+
+
+
+| FSx：UpdateFileSystem * | カンリシヨリ | 自動化 
+
+
+| FSx：UpdateStorageVirtualMachine * | カンリシヨリ | 自動化 
+
+
+| FSx：Description * | インベントリ  a| 
+* 読み取り
+* 自動化
+
+
+
+
+| FSx：UPDATEVOLUME * | カンリシヨリ | 自動化 
+
+
+| FSx：DeleteVolume * | カンリシヨリ | 自動化 
+
+
+| FSx：UntagResource * | カンリシヨリ | 自動化 
+
+
+| FSx：DescriptionBackups * | カンリシヨリ  a| 
+* 読み取り
+* 自動化
+
+
+
+
+| FSx：CreateBackup * | カンリシヨリ | 自動化 
+
+
+| FSx：CreateVolumeFromBackup * | カンリシヨリ | 自動化 
 
 
 | CloudWatchメトリクスのレポート | CloudWatch：PutMetricData | カンリシヨリ | 自動化 
