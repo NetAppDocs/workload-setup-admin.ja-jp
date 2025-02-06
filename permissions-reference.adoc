@@ -1652,6 +1652,15 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 導入および再構築処理中にAIエンジンスタックの作成によって作成されたリソースにタグを付ける | ec2：CreateTags | 導入 | 自動化 
 
 
+.2+| 暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする | KMS：GenerateDataKey | 導入 | 自動化 
+
+
+| KMS：復号化 | 導入 | 自動化 
+
+
+| イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュするには | SNS：公開 | 導入 | 自動化 
+
+
 | [List VPC during AI engine deployment]ウィザード | EC2: DescribeVpcs | 導入 | 自動化 
 
 
@@ -1706,6 +1715,9 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 基盤モデルへのアクセスを確認 | Bedrock：GetFoundationModelAvailability | 導入 | 自動化 
 
 
+| 導入および再構築処理中にCloudWatchロググループを作成する必要があることを確認 | ログ:DescriptionLogGroups | 導入 | 自動化 
+
+
 | AIエンジンウィザードでFSxとBedrockをサポートするリージョンを取得 | SSM：GetParametersByPath | 導入 | 自動化 
 
 
@@ -1715,13 +1727,10 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | AIエンジンに送信されたコマンドからSSM応答を取得する | SSM：GetCommandInvocation | 導入 | 自動化 
 
 
-.3+| AIエンジンへのSSM接続を確認する | SSM:sendCommand | 導入 | 自動化 
+.2+| AIエンジンへのSSM接続を確認する | SSM:sendCommand | 導入 | 自動化 
 
 
 | SSM：GetConnectionStatus | 導入 | 自動化 
-
-
-| SSM:sendCommand | 導入 | 自動化 
 
 
 .8+| 導入および再構築処理中のスタック作成時にAIエンジンインスタンスプロファイルを作成 | IAM：CREATEROLE | 導入 | 自動化 
@@ -1773,9 +1782,6 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 
 | SSM：PutParameter | 導入 | 自動化 
-
-
-| 導入および再構築処理中にCloudWatchロググループを作成する必要があることを確認 | ログ:DescriptionLogGroups | 導入 | 自動化 
 
 
 .2+| 導入と再構築の処理中にAIエンジンのログをCloudWatchロググループに送信 | ログ:CreateLogGroup | 導入 | 自動化 
@@ -1917,6 +1923,30 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 目的 | アクション | 使用先 | モード 
 
 
+| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupIngress | 導入 | 自動化 
+
+
+| EBSボリュームを作成する | EC2：CreateVolume | 導入 | 自動化 
+
+
+| VMwareワークロードによって作成されたFSx for NetApp ONTAPリソースのカスタム値にタグを付ける | FSx：TagResource | 導入 | 自動化 
+
+
+| CloudFormationテンプレートの作成と検証 | CloudFormation：CreateStack | 導入 | 自動化 
+
+
+| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateSecurityGroup | 導入 | 自動化 
+
+
+| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | 自動化 
+
+
+| EC2インスタンスの詳細を取得 | EC2: DescribeInstances | 導入 | 自動化 
+
+
+| 展開および再構築操作中のスタック作成中のイメージのリスト表示 | EC2: DescribeImages | 導入 | 自動化 
+
+
 | 選択した環境内のVPCを取得して導入フォームに記入 | EC2: DescribeVpcs  a| 
 * 導入
 * インベントリ
@@ -2021,13 +2051,16 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 自動化 
 
 
-.4+| KMSの主要な詳細情報を入手し、Amazon FSx for NetApp ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 自動化 
+.5+| KMSの主要な詳細情報を入手し、Amazon FSx for NetApp ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 自動化 
 
 
 | KMS：説明* | 導入 | 自動化 
 
 
 | KMS：リスト* | 導入 | 自動化 
+
+
+| KMS：復号化 | 導入 | 自動化 
 
 
 | KMS：GenerateDataKey | 導入 | 自動化 
