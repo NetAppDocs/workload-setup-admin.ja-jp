@@ -763,6 +763,9 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 
 
+| EC2インスタンスのパブリックネットワーク接続に関係なく、必要なサービス用にVPCエンドポイントが存在しない場合はVPCエンドポイントを作成する | EC2：CreateVpcEndpoint | 導入 | 自動化 
+
+
 | 検証ノード（t2.micro/t3.micro）のリージョンで使用可能なインスタンスタイプを取得します。 | EC2:説明InstanceTypeOfferings | 導入  a| 
 * 読み取り
 * 自動化
@@ -810,6 +813,13 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 
 | 環境で実行されているCloudFormationスタックのリストを取得してクォータ制限を確認 | CloudFormation：リストスタック | 導入  a| 
+* 読み取り
+* 自動化
+
+
+
+
+| 展開を開始する前に、リソースのアカウント制限を確認する | CloudFormation：DescriptionAccountLimits | 導入  a| 
 * 読み取り
 * 自動化
 
@@ -948,6 +958,48 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 自動化
 
 
+
+
+| アカウントがAWS Compute Optimizerに登録されているかどうかを確認 | compute-optimizer：GetEnrollmentStatus  a| 
+* コスト削減の詳細
+* 最適化
+
+| 自動化 
+
+
+| AWS Compute Optimizerで既存の推奨構成を更新して、SQL Serverワークロードの推奨構成を調整 | 計算オプティマイザ:PutRecommendationPreferences  a| 
+* コスト削減の詳細
+* 最適化
+
+| 自動化 
+
+
+| AWS Compute Optimizerから、特定のリソースに対して有効な推奨設定を取得する | compute-optimizer:GetEffectiveRecommendationPreferences  a| 
+* コスト削減の詳細
+* 最適化
+
+| 自動化 
+
+
+| Amazon Elastic Compute Cloud（Amazon EC2）インスタンス用にAWS Compute Optimizerが生成する推奨事項を取得 | コンピューティングオプティマイザ：GetEC2InstanceRecommendations  a| 
+* コスト削減の詳細
+* 最適化
+
+| 自動化 
+
+
+.2+| 自動スケーリンググループへのインスタンスの関連付けのチェック | オートスケーリング:説明AutoScalingGroups  a| 
+* コスト削減の詳細
+* 最適化
+
+| 自動化 
+
+
+| オートスケーリング:説明AutoScalingInstances  a| 
+* コスト削減の詳細
+* 最適化
+
+| 自動化 
 
 
 .4+| 導入時またはAWSアカウントで管理されるAD、FSx for ONTAP、SQLユーザクレデンシャルのSSMパラメータの取得、一覧表示、作成、削除 | SSM：getParameter ^1^  a| 
