@@ -366,7 +366,6 @@
   <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Terraformは、Amazon FSx for NetApp ONTAPファイルシステムの導入とStorage VMの作成で利用できます。セットアップガイドと管理ガイドに、CodeboxからTerraformを使用する方法が記載されました。</block>
   <block id="462c14d3e045d4b0b69cee0781df3207" category="paragraph">ワークロードには、ビジネス目標を達成するように設計された、リソース、コード、サービスまたはアプリケーションの組み合わせが含まれます。これには、お客様向けアプリケーションからバックエンドプロセスまで、あらゆるものが含まれます。ワークロードには、1つのAWSアカウント内のリソースのサブセットが含まれる場合もあれば、複数のアカウントにまたがる場合もあります。</block>
   <block id="fb44c12e7a424c0619764b1060434a74" category="section-title">削減額計算ツール</block>
-  <block id="11cb17d1b990bbf37a24337d5692efa1" category="paragraph"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="2fd1745cefcdce50d6467d96e693f6b7" category="doc">RSSサブスクリプション</block>
   <block id="80f4b5aa553e3a44455088c83954a088" category="section-title">ワークロードごとに1つの権限ポリシーをサポート</block>
   <block id="41b3a089d4fbacfb53e9a5634cfc6647" category="inline-image-macro">[Credentials]ページの権限設定セクションのスクリーンショット。ストレージ管理、AIワークロード、データベースワークロード、VMwareワークロードの権限ポリシーの読み取りまたは自動化を選択できます。</block>
@@ -379,15 +378,12 @@
   <block id="ebcd96574a726227b2c1017e8efe81c1" category="doc">BlueXP  Workload Factoryの初回リリース</block>
   <block id="d2587bb8ad424cee3050c3b7958dd388" category="paragraph">BlueXP  Workload Factoryは、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化するために設計された、強力なライフサイクル管理プラットフォームです。ワークロードファクトリとFSx for ONTAPを使用して合理化できるワークロードには、データベース、VMware Cloud on AWSへのVMwareの移行、AIチャットボットなどがあります。</block>
   <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">ワークロードファクトリコンソール</block>
-  <block id="3171014553de64cf509a3b587c8baeb3" category="paragraph">RSSサブスクリプションは、から利用でき<block ref="9d5ad87a67c1830e37fdd19a7a179db6" category="inline-link-macro-rx"></block>ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。</block>
   <block id="0796995437665af1d920169e03b4542b" category="inline-image-macro">Workload Factory Consoleの[Help]ドロップダウンメニューのスクリーンショットRSSを購読するための新しいボタンがドロップダウンメニューにオプションとして表示されます。</block>
   <block id="482a329f24c123c31a109c24729cb2cd" category="paragraph"><block ref="482a329f24c123c31a109c24729cb2cd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4e47b743d0cc8e0b8906e37286d9b43b" category="paragraph">ワークロード工場でAWSクレデンシャルを追加する際に、ワークロードとストレージ管理ごとに読み取りモードまたは自動モードのいずれか1つの権限ポリシーを選択できるようになりました。</block>
   <block id="9f46892803d8b6c63d3b7f51fd44a421" category="inline-link-macro">ワークロードファクトリへのAWSクレデンシャルの追加</block>
-  <block id="d9dd14fb1d1e7ca9c6da6770d9176783" category="paragraph"><block ref="d9dd14fb1d1e7ca9c6da6770d9176783" category="inline-link-macro-rx"></block></block>
   <block id="dfc4a97a3fe947a314ae908cf036cbfe" category="doc">BlueXP  コンソールにワークロードを工場出荷時に統合</block>
   <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">BlueXPコンソール</block>
-  <block id="d2feef96259a41a7842dc5e7af577d63" category="paragraph">これで、からワークロードファクトリを使用できるようになり<block ref="391de7a3bac2bc77fa53dffb3f53801a" category="inline-link-macro-rx"></block>ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。</block>
   <block id="717f9c6475fbb39a24ab9942c1a903c0" category="inline-link-macro">BlueXP  コンソールからワークロードファクトリにアクセスする方法</block>
   <block id="4fa2f246a664251a157926c2e11e1eb3" category="summary">AWSクレデンシャルを追加して、ワークロードファクトリにAWSアカウントのクラウドリソースの導入と管理に必要な権限を付与します。</block>
   <block id="188c7f44ffe17186c8dcbc38640d54e1" category="paragraph">AWSクレデンシャルを追加して管理し、ワークロードファクトリにAWSアカウントのクラウドリソースの導入と管理に必要な権限を付与する。</block>
@@ -1068,4 +1064,8 @@
   <block id="38b28dd168a209df2daf8eaf5b0fc216" category="cell">自動スケーリンググループへのインスタンスの関連付けのチェック</block>
   <block id="841ea3d3891ce9dc21992730680d4dac" category="cell">オートスケーリング:説明AutoScalingGroups</block>
   <block id="9d85d66bd60c64faffe2799f428cd8b3" category="cell">オートスケーリング:説明AutoScalingInstances</block>
+  <block id="7115d78353263dbb2dbe063624f9f601" category="paragraph"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
+  <block id="bf2cca138f5e3f74f2e6b73d8e8b2452" category="paragraph">RSSサブスクリプションは、から利用でき<block ref="a65cf6b405017af965199f55f7b4fce1" category="inline-link-macro-rx"></block>ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。</block>
+  <block id="1a88151efda7b7ae7945b1161fe70fdc" category="paragraph"><block ref="1a88151efda7b7ae7945b1161fe70fdc" category="inline-link-macro-rx"></block></block>
+  <block id="cf1f4a083afa7ccb1141e827deb4cdc2" category="paragraph">これで、からワークロードファクトリを使用できるようになり<block ref="4623dd80d89c29fbf0d2b04387a56c33" category="inline-link-macro-rx"></block>ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。</block>
 </blocks>

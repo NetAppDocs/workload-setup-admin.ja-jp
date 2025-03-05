@@ -65,7 +65,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/manage-service-accounts.
 
 === BlueXP  コンソールにワークロードを工場出荷時に統合
 
-これで、からワークロードファクトリを使用できるようになりlink:https://console.bluexp.netapp.com["BlueXPコンソール"^]ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。
+これで、からワークロードファクトリを使用できるようになりlink:https://console.bluexp.netapp.com["BlueXPコンソール"]ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["BlueXP  コンソールからワークロードファクトリにアクセスする方法"]
 
@@ -77,7 +77,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html
 
 === RSSサブスクリプション
 
-RSSサブスクリプションは、から利用できlink:https://console.workloads.netapp.com/["ワークロードファクトリコンソール"^]ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。
+RSSサブスクリプションは、から利用できlink:https://console.workloads.netapp.com/["ワークロードファクトリコンソール"]ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。
 
 image:screenshot-rss-subscribe-button.png["Workload Factory Consoleの[Help]ドロップダウンメニューのスクリーンショットRSSを購読するための新しいボタンがドロップダウンメニューにオプションとして表示されます。"]
 
@@ -89,7 +89,7 @@ image:screenshot-rss-subscribe-button.png["Workload Factory Consoleの[Help]ド�
 
 image:screenshot-single-permission-policy-support.png["[Credentials]ページの権限設定セクションのスクリーンショット。ストレージ管理、AIワークロード、データベースワークロード、VMwareワークロードの権限ポリシーの読み取りまたは自動化を選択できます。"]
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ワークロードファクトリへのAWSクレデンシャルの追加"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ワークロードファクトリへのAWSクレデンシャルの追加"]
 
 
 
@@ -101,7 +101,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 
 Terraformは、Amazon FSx for NetApp ONTAPファイルシステムの導入とStorage VMの作成で利用できます。セットアップガイドと管理ガイドに、CodeboxからTerraformを使用する方法が記載されました。
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["コードボックスからTerraformを使用"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["コードボックスからTerraformを使用"]
 
 
 
