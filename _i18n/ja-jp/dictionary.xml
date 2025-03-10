@@ -1071,4 +1071,5 @@
   <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock：GetFoundationModel</block>
   <block id="dec23cffbd0de1b8096bc26072eb0b7d" category="cell">導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手</block>
   <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2025年3月2日</block>
+  <block id="be728667d7e3ba95278ef62ba5d75639" category="paragraph">データベースの_read_modeで次の権限を使用できるようになりました<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>。生成AIの_automate_modeで次の権限を使用できるようになりました<block ref="1311c4cbbe5b925c15d25fe5ff7b022b" prefix=" " category="inline-code"></block>。</block>
 </blocks>
