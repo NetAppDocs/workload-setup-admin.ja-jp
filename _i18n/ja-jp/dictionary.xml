@@ -895,7 +895,6 @@
   <block id="65294ced72c6aa8f05b632194559e081" category="cell">リージョンで使用可能な基盤モデルを表示する</block>
   <block id="66613086b6208ec265a60220a21ff40a" category="cell">Bedrock: ListFoundationModels</block>
   <block id="77771f1732da043133eab422a7e43291" category="cell">AIエンジンウィザードでFSxとBedrockをサポートするリージョンを取得</block>
-  <block id="d4f0fee980f03c8a663dda4a1d3623de" category="cell">導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手</block>
   <block id="302112cb321a929a6d9830e917817acb" category="cell">SSM：GetParameters</block>
   <block id="37cc48b6baed18a8130ec18d97544390" category="cell">AIエンジンに送信されたコマンドからSSM応答を取得する</block>
   <block id="97128676550f404369a4900a6b92a6a7" category="cell">AIエンジンへのSSM接続を確認する</block>
@@ -1068,4 +1067,8 @@
   <block id="bf2cca138f5e3f74f2e6b73d8e8b2452" category="paragraph">RSSサブスクリプションは、から利用でき<block ref="a65cf6b405017af965199f55f7b4fce1" category="inline-link-macro-rx"></block>ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。</block>
   <block id="1a88151efda7b7ae7945b1161fe70fdc" category="paragraph"><block ref="1a88151efda7b7ae7945b1161fe70fdc" category="inline-link-macro-rx"></block></block>
   <block id="cf1f4a083afa7ccb1141e827deb4cdc2" category="paragraph">これで、からワークロードファクトリを使用できるようになり<block ref="4623dd80d89c29fbf0d2b04387a56c33" category="inline-link-macro-rx"></block>ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。</block>
+  <block id="fb2b74ed81679192134e9c2c07019b42" category="cell">基盤モデルに関する情報を取得する</block>
+  <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock：GetFoundationModel</block>
+  <block id="dec23cffbd0de1b8096bc26072eb0b7d" category="cell">導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手</block>
+  <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2025年3月2日</block>
 </blocks>

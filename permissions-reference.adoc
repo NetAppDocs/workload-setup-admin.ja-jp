@@ -1558,6 +1558,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
         "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModel",
         "bedrock:GetFoundationModelAvailability",
         "bedrock:GetModelInvocationLoggingConfiguration"
       ],
@@ -1762,6 +1763,9 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 
 | リージョンで使用可能な基盤モデルを表示する | Bedrock: ListFoundationModels | 導入 | 自動化 
+
+
+| 基盤モデルに関する情報を取得する | Bedrock：GetFoundationModel | 導入 | 自動化 
 
 
 | 基盤モデルへのアクセスを確認 | Bedrock：GetFoundationModelAvailability | 導入 | 自動化 
@@ -2165,6 +2169,12 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年3月2日
+
+データベースの_read_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。
 
 
 
