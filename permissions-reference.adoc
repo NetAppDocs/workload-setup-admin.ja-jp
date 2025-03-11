@@ -2174,7 +2174,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 === 2025年3月2日
 
-データベースの_read_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。生成AIの_automate_modeで次の権限を使用できるようになりました `bedrock:GetFoundationModel`。
+生成AIの_automate_modeで次の権限を使用できるようになりました `bedrock:GetFoundationModel`。
 
 
 
