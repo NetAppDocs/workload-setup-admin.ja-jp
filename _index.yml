@@ -28,3 +28,11 @@ indexpage:
       url: codebox-automation.html
     - title: 自動化にコードボックスを使用
       url: use-codebox.html
+  - title: ブログとコミュニティ
+    links:
+    - title: NetAppコミュニティ
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: BlueXPのブログ
+      url: https://bluexp.netapp.com/blog
+    - title: クラウドに関する Web セミナー
+      url: https://bluexp.netapp.com/events
