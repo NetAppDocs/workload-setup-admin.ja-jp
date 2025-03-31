@@ -16,10 +16,8 @@
   <block id="d11861b4e2dfc9ac3d86245926aa2785" category="section-title">手順1：ワークロードの機能を選択し、IAMポリシーを作成する</block>
   <block id="530d81548274a062436af51b8c3e829f" category="paragraph">このセクションでは、これらのクレデンシャルの一部として管理できるワークロード機能のタイプと、各ワークロードに対して有効にする権限を選択します。選択した各ワークロードのポリシー権限をCodeboxからコピーし、AWSアカウント内のAWS管理コンソールに追加してポリシーを作成する必要があります。</block>
   <block id="445f4ba50fbc8e7b285aedb4396412bb" category="inline-image-macro">スクリーンショットは、これらのクレデンシャルのポリシーの一部として管理できるワークロード機能のタイプを示しています。</block>
-  <block id="0edc9a25423073fcc768405f6aeda88b" category="paragraph"><block ref="0edc9a25423073fcc768405f6aeda88b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c1ab1d79c6a7c98f384377942001e718" category="list-text">[ポリシーの作成]*セクションで、これらのクレデンシャルに含めるワークロード機能をそれぞれ有効にします。</block>
   <block id="3b9b789374908017040d97f81eb4008d" category="paragraph">あとから機能を追加できるので、導入と管理が必要なワークロードを選択するだけです。</block>
-  <block id="5366a51a090d4b12810a9a8050f2fec4" category="list-text">権限レベル（Operate、Viewなど）を選択できるワークロード機能については、これらのクレデンシャルで使用できる権限のタイプを選択します。</block>
   <block id="6d45b51df5e4b4d742aed3a012be7ece" category="list-text">[コードボックス]ウィンドウで、最初のIAMポリシーの権限をコピーします。</block>
   <block id="d9951e6a22fb7f7d403d017e5b8ef9c6" category="list-text">別のブラウザウィンドウを開き、AWS管理コンソールでAWSアカウントにログインします。</block>
   <block id="0545945650ae73f856cfac5d203df5f5" category="list-text">IAMサービスを開き、* Policies *&gt;* Create Policy *を選択します。</block>
@@ -442,7 +440,6 @@
   <block id="49836a38c5243f5726abfb5a8b95ac7b" category="doc">BlueXP  ワークロードファクトリからクレデンシャルを削除</block>
   <block id="9369e772c26e2cdfaafe3b142d172bbe" category="paragraph">一連のクレデンシャルが不要になった場合は、ワークロードファクトリから削除できます。削除できるのは、FSx for ONTAPファイルシステムに関連付けられていないクレデンシャルだけです。</block>
   <block id="d7d90d1ce8174a99f1ebf77537c7d533" category="summary">Workload Factoryには、ITポリシーに基づいてワークロードファクトリとクラウド資産の間のアクセスを慎重に制御できる3つの運用モードが用意されています。使用する運用モードは、ワークロードファクトリに提供するAWS権限のレベルによって決まります。</block>
-  <block id="e02d9a51503bcf62267395364d4b1f92" category="paragraph">Workload Factoryには、ITポリシーに基づいてワークロードファクトリとクラウド資産の間のアクセスを慎重に制御できる3つの運用モードが用意されています。使用する運用モードは、ワークロードファクトリに提供するAWS権限のレベルによって決まります。</block>
   <block id="fb4bff09d4eb62ced2b03ad6ae3d8be4" category="paragraph">運用モードでは、割り当てた信頼レベルに応じて、ワークロードファクトリによって提供される機能と機能の論理的な構成が提供されます。運用モードの主な目的は、ワークロードファクトリがAWSアカウント内で実行できるタスクと実行できないタスクを明確に伝えることです。</block>
   <block id="85776f584c3633cbff79b95327a8fd11" category="list-text">ワークロードファクトリにAWS権限が割り当てられていないゼロトラスト関係を表します。ワークロードファクトリを早期に調査し、さまざまなウィザードを使用して必要なコードとしてのインフラ（IAC）を作成できるように設計されています。コードをコピーしてAWSで使用するには、AWSクレデンシャルを手動で入力します。</block>
   <block id="e2cef0f4569c69bf6900a6cb6135eb11" category="list-text">読み取り専用権限を追加して、IACテンプレートに特定の変数（VPC、セキュリティグループなど）が入力されるようにすることで、基本モードのエクスペリエンスが向上します。これにより、ワークロードファクトリに変更権限を付与することなく、AWSアカウントからIACを直接実行できます。</block>
@@ -854,7 +851,6 @@
   <block id="a6e64d0684dcf803ad58d40684383bb9" category="cell">IAM：PutRolePolicy</block>
   <block id="09ff084e5cc884cadc645fe74ab08f47" category="cell">プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す</block>
   <block id="b5a94c08b69b4b7f78637d9e9362ee11" category="cell">IAM：RemoveRoleFromInstanceProfile</block>
-  <block id="ae7064637293927badfc083eaa1afe44" category="cell">ロールで使用可能な権限を検証し、必要な権限と比較する</block>
   <block id="19f5de89e4c667692a153296018e225f" category="cell">IAM：SimulatePrincipalPolicy</block>
   <block id="291798398943ff81aecb072ccb31136f" category="list-text">アクセス許可は、WLMDBで始まるリソースに制限されます。</block>
   <block id="8871e7455cbf17c8190fb2c27de4cb92" category="list-text">IAM：AWSServiceNameによって制限される「IAM：CreateServiceLinkedRole」：ec2.amazonaws.com"*</block>
@@ -875,7 +871,6 @@
   <block id="4f6009e4cc9f9d0249a22b9e3c5ab9f0" category="cell">導入時と再構築時のAIエンジンスタックの作成時にAIエンジンセキュリティグループを作成</block>
   <block id="c44890ed155f5fc1b7589d1d6c12785a" category="cell">導入および再構築処理中にAIエンジンスタックの作成によって作成されたリソースにタグを付ける</block>
   <block id="071c42384a4bff95d3acc47d90766c9b" category="cell">[List VPC during AI engine deployment]ウィザード</block>
-  <block id="4f919096830cc8f8b86b770de27e4573" category="cell">AIエンジン導入ウィザードでサブネットを一覧表示するには</block>
   <block id="7ba2aa86177ae5f0d7e3b4e5766bad67" category="cell">AIエンジンの導入時と再構築時にルーティングテーブルを取得</block>
   <block id="7245f0c5139bb046010a68b69a264eca" category="cell">AIエンジン導入ウィザードでのキーペアの一覧表示</block>
   <block id="b28eb58d1a1db0c0afa78fe12cf5fb01" category="cell">AIエンジンスタックの作成中にセキュリティグループをリスト表示する（プライベートエンドポイントでセキュリティグループを検索する）</block>
@@ -883,30 +878,22 @@
   <block id="f8022dadecc2f9ce9937bc1108cb6290" category="cell">インスタンスを表示してAIエンジンの状態を確認する</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="cell">トラブルシューティング</block>
   <block id="66225a6c05fbef258e73728898744db8" category="cell">導入時と再構築時のAIエンジンスタック作成時のイメージをリスト表示</block>
-  <block id="51af837b20896f9dfb54da2ae0062d73" category="cell">導入時および再構築時のAIインスタンススタックの作成時に、AIインスタンスおよびプライベートエンドポイントセキュリティグループを作成および更新するため</block>
   <block id="effc62a026ed8a4a114329bdc528d625" category="cell">導入および再構築処理中にCloudFormationスタックの作成中にAIエンジンを実行</block>
   <block id="8db0f3adf91a39cebe582faf96db2426" category="cell">導入時や再構築時のスタック作成時に、セキュリティグループを追加してAIエンジンのルールを変更</block>
   <block id="70d1598e70f9b135b09469bea7b082e5" category="cell">AIエンジンの導入時にAmazon Bedrock / Amazon CloudWatchのログステータスを照会</block>
   <block id="e8a46aee8aa47b78b90b155b227afbc9" category="cell">Bedrock：GetModelInvocationLoggingConfiguration</block>
-  <block id="499f8014a8d4d99806abf03c9dd3a314" category="cell">基盤モデルの1つに対してチャットリクエストを開始するには</block>
   <block id="00fe52afa6e3b9a0d389f529a2b88242" category="cell">Bedrock：InvokeModelWithResponseStream</block>
   <block id="d3514773d1692fd740afde54cdaaa7b0" category="cell">基礎モデルのチャット/埋め込みリクエストの開始</block>
   <block id="93804e96d3f417a0088c564647dd28e9" category="cell">Bedrock：InvokeModel</block>
   <block id="65294ced72c6aa8f05b632194559e081" category="cell">リージョンで使用可能な基盤モデルを表示する</block>
   <block id="66613086b6208ec265a60220a21ff40a" category="cell">Bedrock: ListFoundationModels</block>
-  <block id="77771f1732da043133eab422a7e43291" category="cell">AIエンジンウィザードでFSxとBedrockをサポートするリージョンを取得</block>
   <block id="302112cb321a929a6d9830e917817acb" category="cell">SSM：GetParameters</block>
   <block id="37cc48b6baed18a8130ec18d97544390" category="cell">AIエンジンに送信されたコマンドからSSM応答を取得する</block>
   <block id="97128676550f404369a4900a6b92a6a7" category="cell">AIエンジンへのSSM接続を確認する</block>
   <block id="98c5cc885360f80a84c57ec1044622dc" category="cell">導入および再構築処理中のスタック作成時にAIエンジンインスタンスプロファイルを作成</block>
   <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">IAM：TagRole</block>
   <block id="f6ae0a8a1321975a6474722dcafe1322" category="cell">IAM：PassRole</block>
-  <block id="8c9e5ebe3c2f413a71e0fdc004587e34" category="cell">ロールで使用可能な権限を検証し、導入時や再構築時に必要な権限と比較する</block>
-  <block id="759ffbd9c30a98856442b965585a3d8b" category="cell">「ナレッジベースの作成」ウィザードでFSxファイルシステムを挙げる</block>
   <block id="11d11aa8dbaf1d4106e7ae01b6868bba" category="cell">ナレッジベースの作成</block>
-  <block id="004bee7d3b6c6b82f20b73d6e431ab0d" category="cell">「ナレッジベースの作成」ウィザードでFSxファイルシステムのボリュームを表示する</block>
-  <block id="8b4d32b772896acf285601d5cb629206" category="cell">再構築時にAIエンジンを基盤としたナレッジベースを管理</block>
-  <block id="80b6c276377dba072ef8005fb1d28449" category="cell">[Create Knowledgebase]ウィザードでFSxファイルシステムStorage Virtual Machineを確認する</block>
   <block id="50ed17d5232c875f8ad42bc76592a63c" category="cell">ナレッジベースを新しいインスタンスに移動</block>
   <block id="a25a265c7f4f2cde7c7a15838d3f1021" category="cell">FSx：UntagResource</block>
   <block id="9f4a3990e86e58c629dd4042743dc489" category="cell">再構築時にAIエンジンに関するナレッジベースを管理</block>
@@ -914,21 +901,14 @@
   <block id="58cce26ec46dea767f28067a2aadecbf" category="cell">SSMシークレット（ECRトークン、CIFSクレデンシャル、テナンシーサービスアカウントキー）をセキュアな方法で保存</block>
   <block id="6cdfe2c5f0e0f28290eadae29ccbb913" category="cell">SSM:getParameter</block>
   <block id="5df0bb9577b967295f5ff5c94274a01c" category="cell">SSM：PutParameter</block>
-  <block id="75b38f707a1d195e422d6e573dc005ec" category="cell">導入および再構築処理中にCloudWatchロググループを作成する必要があることを確認</block>
   <block id="99a70cb6d5b807589a0a1aa9bbcfea7d" category="cell">ログ:DescriptionLogGroups</block>
-  <block id="8e31dab0a6f4117f41c0112b93f0f77d" category="cell">導入と再構築の処理中にAIエンジンのログをCloudWatchロググループに送信</block>
   <block id="9c72603737d6e2074ae7fab048b5d3d1" category="cell">ログ:PutRetentionPolicy</block>
-  <block id="bece71a215bda1e5c99fabe57fe47c24" category="cell">AIエンジンログをCloudWatchロググループに送信する</block>
-  <block id="154706d25e6c48e7a1675266f50bca88" category="cell">CloudWatchからSSM応答を取得する（応答が長すぎる場合）</block>
   <block id="b9f69a856f0b78c0908e042e6d0fda54" category="cell">ログ:DescriptionLogStreams</block>
-  <block id="ff841e88d97bf6f5d4734b33cfac01ac" category="cell">CloudWatchからSSMの応答を入手</block>
   <block id="6d952035baa97bd601f4d280f10fcc53" category="cell">ログ:GetLogEvents</block>
-  <block id="8dbffbc5258110d76ccbf445f1d44774" category="cell">デプロイおよび再構築処理中のスタック作成中に、基盤となるログのCloudWatchロググループを作成する</block>
   <block id="8a71d22cd00a39460a071b070099b8d6" category="cell">基盤モデルへのアクセスを確認</block>
   <block id="c812f1cb829c6d16da192b12e04d78ff" category="cell">Bedrock：GetFoundationModelAvailability</block>
   <block id="3332885fc7b64062d9405bcdf57a9334" category="section-title">VMwareワークロードの権限</block>
   <block id="1d33843eea5e12818124076de04b4a65" category="example-title">VMwareワークロードのIAMポリシー</block>
-  <block id="9e7d53cad3dc8e62b48821ac33e69a99" category="open-title">操作モード</block>
   <block id="e87b88b1ae053b847cb60dcd1d96e6ee" category="paragraph">次の表に、VMwareワークロードの権限の詳細を示します。</block>
   <block id="e0df1a71ae70fb0909b9e26f9400e56e" category="example-title">VMwareワークロードの権限の一覧</block>
   <block id="f82dcfe0928b7d309053f8e9481fd1c3" category="cell">選択した環境内のVPCを取得して導入フォームに記入</block>
@@ -946,7 +926,6 @@
   <block id="f40779c61ae21b6fbb5c6964620d50db" category="cell">KMSの主要な詳細情報を入手し、Amazon FSx for NetApp ONTAPの暗号化に使用</block>
   <block id="5df883e5adda577f2fbed8edd98a6052" category="cell">カスタマーSNSのトピックを一覧表示し、WLMVMCバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。</block>
   <block id="51faf18a49599aa5875c9cc5ecd0c156" category="cell">Amazon FSx for NetApp ONTAPでサポートされるAWSリージョンの最新リストを取得するために使用</block>
-  <block id="1e40105dab96dd2107f838271dd1c482" category="cell">SimulatePrincipalPolicyは、ロールで使用可能な権限の検証を実行し、必要な権限と比較するために必要です。</block>
   <block id="22ebc59c28ff9c2a08d716ded9c8e998" category="cell">SSMパラメータストアを使用してAmazon FSx for NetApp ONTAPのクレデンシャルを保存</block>
   <block id="766060a05aed7395a628048f6e5d8152" category="cell">SSM：PutParameters</block>
   <block id="f5ad3adfdd57e7f67f8a97e4699177e7" category="cell">SSM：DeleteParameters</block>
@@ -1041,9 +1020,7 @@
   <block id="7413e05cafe498b54ab1b5640cc3ba82" category="paragraph">から[CloudShell]アイコンを選択し<block ref="22292d13795e0e4de9ba364021c92eab" category="inline-image-macro-rx" type="image"></block>上部ナビゲーションバーます。</block>
   <block id="a5fab0062142f5ef0615c361259b0b89" category="cell">Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。</block>
   <block id="8832fb7d0699d4878c8449616cd47613" category="cell">IAM：CreateServiceLinkedRole</block>
-  <block id="f018d84c71280c7c2350ecdc41af9036" category="cell">暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
   <block id="e3fee6f099023b5f4b39c1c744c6ea99" category="cell">KMS：復号化</block>
-  <block id="5407beb6c8285b66530a423f5e1a1c44" category="cell">イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュするには</block>
   <block id="85f90a8db0a64c1052007e6603c729f3" category="cell">EBSボリュームを作成する</block>
   <block id="9b72805c27ddeb5ac656bcddaa415cb8" category="cell">VMwareワークロードによって作成されたFSx for NetApp ONTAPリソースのカスタム値にタグを付ける</block>
   <block id="043622d556b2884b98fb152bcf740dcd" category="cell">CloudFormationテンプレートの作成と検証</block>
@@ -1067,8 +1044,6 @@
   <block id="bf2cca138f5e3f74f2e6b73d8e8b2452" category="paragraph">RSSサブスクリプションは、から利用でき<block ref="a65cf6b405017af965199f55f7b4fce1" category="inline-link-macro-rx"></block>ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。</block>
   <block id="1a88151efda7b7ae7945b1161fe70fdc" category="paragraph"><block ref="1a88151efda7b7ae7945b1161fe70fdc" category="inline-link-macro-rx"></block></block>
   <block id="cf1f4a083afa7ccb1141e827deb4cdc2" category="paragraph">これで、からワークロードファクトリを使用できるようになり<block ref="4623dd80d89c29fbf0d2b04387a56c33" category="inline-link-macro-rx"></block>ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。</block>
-  <block id="fb2b74ed81679192134e9c2c07019b42" category="cell">基盤モデルに関する情報を取得する</block>
-  <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock：GetFoundationModel</block>
   <block id="dec23cffbd0de1b8096bc26072eb0b7d" category="cell">導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手</block>
   <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2025年3月2日</block>
   <block id="d783298edb81a604dd8765a5040ef52e" category="paragraph">生成AIの_automate_modeで次の権限を使用できるようになりました<block ref="1311c4cbbe5b925c15d25fe5ff7b022b" prefix=" " category="inline-code"></block>。</block>
@@ -1076,4 +1051,79 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetAppコミュニティ</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXPのブログ</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
+  <block id="42bc8432872c22cf4fdbb156ae58a17e" category="doc">ONTAP CLIコマンドでAIが生成するエラーが報告される</block>
+  <block id="3450754e7ec63bd0a961376c9928752a" category="paragraph">CloudShellを使用している場合、ONTAP CLIコマンドを発行してエラーが発生するたびに、失敗の説明、失敗の原因、詳細な解決策を含むAI生成のエラー応答を取得できます。</block>
+  <block id="4ef50e373522b91f7df59d5cba69a8b7" category="section-title">IAM：SimulatePermissionPolicy権限の更新</block>
+  <block id="906699741ebd9905a07af900abcfd438" category="paragraph">AWSアカウントのクレデンシャルを追加したり、生成AIワークロードなどの新しいワークロード機能を追加したりするときに、ワークロードファクトリコンソールから権限を管理できるようになりまし<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>た。</block>
+  <block id="c1bc5d8eeb872326cb512499f02befb5" category="paragraph"><block ref="c1bc5d8eeb872326cb512499f02befb5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7b9069b6f855261dc3e63baeaa5531f" category="list-text">アクセス許可レベル（読み取りまたは自動化）を選択できるワークロード機能については、これらのクレデンシャルで使用できるアクセス許可のタイプを選択します。</block>
+  <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーにが追加され<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
+  <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーに権限が追加され<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
+  <block id="ad9001b544dade5536691ec3feee578f" category="inline-link-macro">BlueXP  ワアクロオトファクトリノケンケン</block>
+  <block id="4c1bf71f3b414847584faa395569aa99" category="paragraph">詳細については、をご覧ください <block ref="0ea8d4071df9710eb1c660a6314e7a7f" category="inline-link-macro-rx"></block>。</block>
+  <block id="2a358d687197b0311c68b4c8a7e35e1c" category="cell">ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較</block>
+  <block id="8c5e268f15aeebda6b5b234b3f7c7174" category="cell">暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
+  <block id="9b1384398d4de5545bd0dad2106d6b0d" category="cell">イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
+  <block id="359cacd98d9742aded751741e70dce82" category="cell">AIエンジン導入ウィザードでサブネットを一覧表示する</block>
+  <block id="b2009fdc9170f9b13160d7da2fbab6aa" category="cell">導入時および再構築時のAIインスタンススタックの作成時に、AIインスタンスとプライベートエンドポイントセキュリティグループを作成および更新</block>
+  <block id="f0f0a4abc20f5a5e438ac1da53b231af" category="cell">基本モデルのいずれかに対してチャットリクエストを開始する</block>
+  <block id="ffd1e194cd59f12c42768a9effd5aa2f" category="cell">導入と再構築の処理中にAmazon CloudWatchロググループを作成する必要があることを確認</block>
+  <block id="2887c4c92d65effaf012b7ca2f914958" category="cell">AIエンジンウィザードでFSxとAmazon Bedrockをサポートするリージョンを取得</block>
+  <block id="aaaceeee6185dfed5c284df5970707f3" category="cell">「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムを確認する</block>
+  <block id="a2e54834745704983c3bbc9eb41ed0a1" category="cell">「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムのボリュームを確認する</block>
+  <block id="2fac110cec869b1380662052556e21b4" category="cell">再構築処理中にAIエンジンを基盤としたナレッジベースを管理</block>
+  <block id="22262aaf9e90060dfd5872961f2d20b9" category="cell">「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムStorage Virtual Machineを確認する</block>
+  <block id="e4276513c887d1d78315c446314f306e" category="cell">導入と再構築の処理中に、AIエンジンのログをAmazon CloudWatchロググループに送信</block>
+  <block id="a89bcda1bd913f5d2c92bb3afd10848c" category="cell">AIエンジンのログをAmazon CloudWatchロググループに送信する</block>
+  <block id="1ae2d90929ed009fb7cb0c3215e704ed" category="cell">Amazon CloudWatchからSSMの応答を取得する（応答が長すぎる場合）</block>
+  <block id="58401e538d76248fba41eb3d4b00ff5b" category="cell">Amazon CloudWatchからSSMの応答を入手</block>
+  <block id="79b580d74ffecaf0e2c1b9af0ac5f882" category="cell">導入および再構築処理中のスタック作成中に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する</block>
+  <block id="4a5e33ece3615dac1032e841cde40447" category="cell">BedrockのログをAmazon CloudWatchに送信</block>
+  <block id="add4bf257ce9e3b25c497de343e52632" category="cell">Bedrock：PutModelInvocationLoggingConfiguration</block>
+  <block id="60932b6084feefeacceacd749dcdedc9" category="cell">Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する</block>
+  <block id="b76a6c7392362eeb73fd252a4af062ca" category="cell">IAM：AttachRolePolicy</block>
+  <block id="8de34002c35d0d4a13280a50047e76e4" category="cell">iam：createPolicy</block>
+  <block id="9f48be20e687484bbb74c66926ff62af" category="cell">モデルの推論プロファイルをリスト表示</block>
+  <block id="9aa5a97dfe3f7608d8ee28e7db3c4e2c" category="cell">Bedrock: ListInferenceProfiles</block>
+  <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025年3月30日</block>
+  <block id="68ef824f4316a8546891ab93ee11d77f" category="section-title">生成AIワークロード権限の更新</block>
+  <block id="f587eed9c7dc8910227d7d906f2261fd" category="paragraph">生成AIの_automate mode__では、次の権限を使用できるようになりました。</block>
+  <block id="8478b63212964b55320b9d61c0737e08" category="list-text"><block ref="add4bf257ce9e3b25c497de343e52632" prefix="" category="inline-code"></block></block>
+  <block id="d07fde30621d1890701e3ba8f6d492ad" category="list-text"><block ref="b76a6c7392362eeb73fd252a4af062ca" prefix="" category="inline-code"></block></block>
+  <block id="a39790181f1fd72ef9537ae34545ff02" category="list-text"><block ref="f6ae0a8a1321975a6474722dcafe1322" prefix="" category="inline-code"></block></block>
+  <block id="e1c6dba31ff47898c553f6707ccfbdb0" category="list-text"><block ref="8de34002c35d0d4a13280a50047e76e4" prefix="" category="inline-code"></block></block>
+  <block id="71d01806cd25e89067c25b4f03e9a607" category="list-text"><block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix="" category="inline-code"></block></block>
+  <block id="4d3f55c3707ec2803e7eaf6d7b978451" category="paragraph">生成AIの_automate mode_:から次の権限が削除されました<block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block>。</block>
+  <block id="4e1a858f8ffb4228ac62fb2a65e14e11" category="section-title">IAM：SimulatePrincipalPolicy権限の更新</block>
+  <block id="ebbd089f3b834616ea3613bf16e46cbf" category="paragraph">AWSアカウントのクレデンシャルを追加するとき、またはワークロードファクトリコンソールから新しいワークロード機能を追加するときに自動権限チェックを有効にする場合、この<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>権限はすべてのワークロード権限ポリシーに含まれます。この権限は、ワークロードの処理をシミュレートし、必要なAWSアカウントの権限があるかどうかを確認してから、ワークロードファクトリからリソースを導入します。このチェックを有効にすると、失敗した処理からリソースをクリーンアップしたり、不足している権限を追加したりするために必要な時間と労力が軽減されます。</block>
+  <block id="e81d623c1eabf7a990c647cdb9dc4de8" category="list-text">ONTAP CLIコマンドに対するAIが生成するエラー応答</block>
+  <block id="fecf8c04c92afcaa45ac22e74423f5cb" category="section-title">CloudShellコマンド</block>
+  <block id="5c9c99b1013b0e43fb1314d83cc5242b" category="paragraph">CloudShell GUIインターフェイス内で、と入力して使用可能なCloudShellコマンドを表示できます<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>。コマンドを実行すると<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>、次のリファレンスが表示されます。</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="list-text">製品説明</block>
+  <block id="5a74855c30a89f18aabcae2686c1831f" category="list-text">NetApp CloudShellは、BlueXP  ワークロードファクトリに組み込まれたGUIインターフェイスであり、シェルのような環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。ブラウザでターミナルセッションをシミュレートし、ターミナル機能を提供し、ワークロードファクトリのバックエンドを介してメッセージをプロキシします。これにより、BlueXP  アカウントで指定したAWSクレデンシャルとONTAPクレデンシャルを使用できます。</block>
+  <block id="29349e534777eb74b3582eb552f6b76d" category="list-text">使用可能なコマンド</block>
+  <block id="9408261c3775c6abe5ba6ef14faa8a1a" category="list-text"><block ref="01bc6f8efa4202821e95f4fdf6298b30" prefix="" category="inline-code"></block></block>
+  <block id="c6a354ad100a80a11b5358549fa08956" category="list-text"><block ref="657f8b8da628ef83cf69101b6817150a" prefix="" category="inline-code"></block></block>
+  <block id="e4a48e13b078ffed575db282e95cbf5d" category="list-text"><block ref="5696fba8dd789a13c2ceb24deaed74be" prefix="" category="inline-code"></block></block>
+  <block id="c4352d06a85db47c5f3caad2ce69d15e" category="list-text"><block ref="3b5b347787fd4fe1e38c522ff6637807" prefix="" category="inline-code"></block></block>
+  <block id="ad4e206408c1c59bfb8a057ba7857446" category="list-text">コンテキスト</block>
+  <block id="cb8b4c44a56d3dcbb2f832e3b29cd17d" category="list-text">各ターミナルセッションは、クレデンシャル、リージョン、およびオプションでFSx for ONTAPファイルシステムという特定のコンテキストで実行されます。</block>
+  <block id="7a702884b96a08a3907a8a471abf949b" category="paragraph">すべてのAWSコマンドは、指定されたコンテキストで実行されます。AWSコマンドは、指定したクレデンシャルに指定したリージョンの権限がある場合にのみ成功します。</block>
+  <block id="77d06b9ca965a3593dd7ce79688cc7e2" category="paragraph">オプションでONTAPコマンドを指定できます<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>。に個別のONTAPコマンドを指定した場合、<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>このIDはコンテキスト内のIDよりも優先されます。ターミナルセッションにFSx for ONTAPファイルシステムIDコンテキストがない場合は、各ONTAPコマンドを指定する必要があります<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>。</block>
+  <block id="709adb949ea5dacc37bbc5f28d0389a8" category="paragraph">異なるコンテキストの仕様を更新するには、次の手順を実行します。*クレデンシャルを変更するには："クレデンシャルの使用&lt;credentialId&gt;"*リージョンを変更するには："リージョン&lt;regionCode&gt;の使用"* FSx for ONTAPファイルシステムを変更するには：" FSx &lt;fileSystemId&gt;の使用"</block>
+  <block id="1edcef27d6d610b941bff34048672231" category="list-text">アイテムの表示</block>
+  <block id="e42980b3c0bd52fb14aaa9988655c033" category="list-text">使用可能な認証情報を表示するには："show credentials"</block>
+  <block id="78522635a5140c949c97294742094c1e" category="list-text">利用可能な地域を表示するには:"show regions"</block>
+  <block id="3136fda9c147acfdf956c914baf5e65b" category="list-text">コマンド履歴を表示するには："show history"</block>
+  <block id="03df896fc71cd516fdcf44aa699c4933" category="list-text">変数</block>
+  <block id="fcdc44920df6ae99e908733121b1ede8" category="list-text">変数の設定と使用例を次に示します。変数の値にスペースが含まれている場合は、引用符で囲んで設定してください。</block>
+  <block id="fb6529d9f860f345fe33d504077c3098" category="list-text">変数を設定するには：&lt;variable&gt;=&lt;value&gt;</block>
+  <block id="79455121e702185ae236d6d3ae86d769" category="list-text">変数を使用するには:&lt;variable&gt;</block>
+  <block id="073561292daefe5d19eb6dc57fca2623" category="list-text">変数の設定例：$svm1=svm123</block>
+  <block id="7ee0990c4bd93aa182fedd32047faca4" category="list-text">変数を使用する例：--fsx filesystem-1 volumes show --vserver $svm1</block>
+  <block id="5dd42e8c4c677f0d9d2a7dfd5965fe45" category="list-text">例：文字列値$Comment1 ="A comment with spaces"</block>
+  <block id="b3c5827f54218753bb2c3338236446c2" category="list-text">運用者</block>
+  <block id="da1654cced07f7b0be3ee4215ae83b0b" category="list-text">パイプ、バックグラウンド実行<block ref="c2249209343ab488c055da76368f04a0" prefix=" " category="inline-code"></block>、リダイレクト<block ref="58ba3bb1a1772a74392e5e86bd2be4b7" prefix=" " category="inline-code"></block>などのシェル演算子は<block ref="b99834bc19bbad24580b3adfa04fb947" prefix=" " category="inline-code"></block>サポートされていません。これらの演算子を含めると、コマンドの実行は失敗します。</block>
+  <block id="bc7864e70344eae19121f3e6408c5e04" category="list-text">と入力し<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>て使用可能なコマンドと手順を表示するか、次のCLIリファレンスマニュアルを参照して<block ref="0bdecf44265be755040a6284b4703b71" category="inline-xref-macro-rx"></block>ください。</block>
+  <block id="34b14d4981e88ee13798aea3eecf0674" category="paragraph">ONTAP CLIコマンドの実行後にエラーが発生した場合は、電球のアイコンを選択すると、AIによって生成された簡単なエラー応答と、障害の説明、障害の原因、および詳細な解決策が表示されます。詳細については、*[続きを読む]*を選択してください。</block>
 </blocks>

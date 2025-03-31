@@ -1,0 +1,19 @@
+= ONTAP CLIコマンドでAIが生成するエラーが報告される
+:allow-uri-read: 
+
+
+
+
+=== ONTAP CLIコマンドでAIが生成するエラーが報告される
+
+CloudShellを使用している場合、ONTAP CLIコマンドを発行してエラーが発生するたびに、失敗の説明、失敗の原因、詳細な解決策を含むAI生成のエラー応答を取得できます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["CloudShellを使用"]
+
+
+
+=== IAM：SimulatePermissionPolicy権限の更新
+
+AWSアカウントのクレデンシャルを追加したり、生成AIワークロードなどの新しいワークロード機能を追加したりするときに、ワークロードファクトリコンソールから権限を管理できるようになりまし `iam:SimulatePrincipalPolicy`た。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["アクセス権参照変更ログ"]

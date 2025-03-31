@@ -26,6 +26,57 @@ CloudShellには次の機能があります。
 * セッション名の変更:必要に応じてセッション名を変更
 * Last session content persistence（前回のセッションのコンテンツの永続性）：誤って閉じた場合は、最後のセッションを再度開きます。
 * 設定の環境設定:フォントサイズと出力タイプの変更
+* ONTAP CLIコマンドに対するAIが生成するエラー応答
+
+
+
+
+=== CloudShellコマンド
+
+CloudShell GUIインターフェイス内で、と入力して使用可能なCloudShellコマンドを表示できます `help`。コマンドを実行すると `help`、次のリファレンスが表示されます。
+
+製品説明:: NetApp CloudShellは、BlueXP  ワークロードファクトリに組み込まれたGUIインターフェイスであり、シェルのような環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。ブラウザでターミナルセッションをシミュレートし、ターミナル機能を提供し、ワークロードファクトリのバックエンドを介してメッセージをプロキシします。これにより、BlueXP  アカウントで指定したAWSクレデンシャルとONTAPクレデンシャルを使用できます。
+使用可能なコマンド::
++
+--
+* `clear`
+* `help`
+* `[--fsx <fsxId>] <ontap-command> [parameters]`
+* `aws <aws-command> <aws-sub-command> [parameters]`
+
+
+--
+コンテキスト:: 各ターミナルセッションは、クレデンシャル、リージョン、およびオプションでFSx for ONTAPファイルシステムという特定のコンテキストで実行されます。
++
+--
+すべてのAWSコマンドは、指定されたコンテキストで実行されます。AWSコマンドは、指定したクレデンシャルに指定したリージョンの権限がある場合にのみ成功します。
+
+オプションでONTAPコマンドを指定できます `fsxId`。に個別のONTAPコマンドを指定した場合、 `fsxId`このIDはコンテキスト内のIDよりも優先されます。ターミナルセッションにFSx for ONTAPファイルシステムIDコンテキストがない場合は、各ONTAPコマンドを指定する必要があります `fsxId`。
+
+異なるコンテキストの仕様を更新するには、次の手順を実行します。*クレデンシャルを変更するには："クレデンシャルの使用<credentialId>"*リージョンを変更するには："リージョン<regionCode>の使用"* FSx for ONTAPファイルシステムを変更するには：" FSx <fileSystemId>の使用"
+
+--
+アイテムの表示::
++
+--
+* 使用可能な認証情報を表示するには："show credentials"
+* 利用可能な地域を表示するには:"show regions"
+* コマンド履歴を表示するには："show history"
+
+
+--
+変数:: 変数の設定と使用例を次に示します。変数の値にスペースが含まれている場合は、引用符で囲んで設定してください。
++
+--
+* 変数を設定するには：<variable>=<value>
+* 変数を使用するには:<variable>
+* 変数の設定例：$svm1=svm123
+* 変数を使用する例：--fsx filesystem-1 volumes show --vserver $svm1
+* 例：文字列値$Comment1 ="A comment with spaces"
+
+
+--
+運用者:: パイプ、バックグラウンド実行 `&`、リダイレクト `>`などのシェル演算子は `|`サポートされていません。これらの演算子を含めると、コマンドの実行は失敗します。
 
 
 
@@ -54,13 +105,16 @@ BlueXP  ワークロードファクトリコンソールのどこからでもCl
 +
 image:screenshot-deploy-cloudshell-session.png["新しいCloudShellセッションを示すスクリーンショット。"]
 
-. と入力し `help`て使用可能なCloudShellコマンドとその手順を表示するか、使用可能なコマンドについては次のCLIリファレンスドキュメントを参照してください。
+. と入力し `help`て使用可能なコマンドと手順を表示するか、次のCLIリファレンスマニュアルを参照して<<CloudShellコマンド,CloudShellコマンド>>ください。
 +
 ** link:https://docs.aws.amazon.com/cli/latest/reference/["AWS CLIリファレンス"^]：FSx for ONTAPに関連するコマンドについては、* FSx *を選択します。
 ** link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLIリファレンス"^]
 
 
 . CloudShellセッション内でコマンドを発行します。
++
+ONTAP CLIコマンドの実行後にエラーが発生した場合は、電球のアイコンを選択すると、AIによって生成された簡単なエラー応答と、障害の説明、障害の原因、および詳細な解決策が表示されます。詳細については、*[続きを読む]*を選択してください。
+
 
 
 --
@@ -80,6 +134,9 @@ image:screenshot-deploy-cloudshell-session.png["新しいCloudShellセッショ�
 
 
 . CloudShellセッション内でコマンドを発行します。
++
+ONTAP CLIコマンドの実行後にエラーが発生した場合は、電球のアイコンを選択すると、AIによって生成された簡単なエラー応答と、障害の説明、障害の原因、および詳細な解決策が表示されます。詳細については、*[続きを読む]*を選択してください。
+
 
 
 --

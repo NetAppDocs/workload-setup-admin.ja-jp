@@ -63,6 +63,13 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "cloudwatch:GetMetricStatistics"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -89,6 +96,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "kms:CreateGrant",
         "cloudwatch:PutMetricData",
         "cloudwatch:GetMetricData",
+        "iam:SimulatePrincipalPolicy",
         "cloudwatch:GetMetricStatistics"
       ],
       "Resource": "*"
@@ -407,6 +415,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "ssm:GetParametersByPath",
         "ssm:GetCommandInvocation",
         "ssm:SendCommand",
+        "ssm:GetConnectionStatus",
         "ssm:DescribePatchBaselines",
         "ssm:DescribeInstancePatchStates",
         "ssm:ListCommands",
@@ -426,6 +435,14 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "ssm:DeleteParameters"
       ],
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+    },
+    {
+      "Sid": "IAMGroup",
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -1428,7 +1445,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 | プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 | 自動化 
 
 
-| ロールで使用可能な権限を検証し、必要な権限と比較する | IAM：SimulatePrincipalPolicy | 導入  a| 
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入  a| 
 * 読み取り
 * 自動化
 
@@ -1507,10 +1524,10 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
       "Effect": "Allow",
       "Action": [
         "iam:CreateRole",
+        "iam:CreatePolicy",
         "iam:CreateInstanceProfile",
         "iam:AddRoleToInstanceProfile",
         "iam:PutRolePolicy",
-        "iam:SimulatePrincipalPolicy",
         "iam:GetRolePolicy",
         "iam:GetRole",
         "iam:TagRole"
@@ -1550,19 +1567,6 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
         "arn:aws:fsx:*:*:volume/*/*",
         "arn:aws:fsx:*:*:storage-virtual-machine/*/*"
       ]
-    },
-    {
-      "Sid": "BedrockGroup",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:InvokeModelWithResponseStream",
-        "bedrock:InvokeModel",
-        "bedrock:ListFoundationModels",
-        "bedrock:GetFoundationModel",
-        "bedrock:GetFoundationModelAvailability",
-        "bedrock:GetModelInvocationLoggingConfiguration"
-      ],
-      "Resource": "*"
     },
     {
       "Sid": "SSMParameterStore",
@@ -1661,7 +1665,21 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
       "Resource": "arn:aws:logs:*:*:log-group:/netapp/wlmai*:*"
     },
     {
-      "Sid": "CloudWatch2",
+      "Sid": "BedrockGroup",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:InvokeModel",
+        "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:GetModelInvocationLoggingConfiguration",
+        "bedrock:PutModelInvocationLoggingConfiguration",
+        "bedrock:ListInferenceProfiles"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchBedrock",
       "Effect": "Allow",
       "Action": [
         "logs:CreateLogGroup",
@@ -1669,6 +1687,22 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
         "logs:TagResource"
       ],
       "Resource": "arn:aws:logs:*:*:log-group:/aws/bedrock*"
+    },
+    {
+      "Sid": "BedrockLoggingAttachRole",
+      "Effect": "Allow",
+      "Action": [
+        "iam:AttachRolePolicy",
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::*:role/NetApp_AI_Bedrock*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -1711,13 +1745,13 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | KMS：復号化 | 導入 | 自動化 
 
 
-| イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュするには | SNS：公開 | 導入 | 自動化 
+| イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする | SNS：公開 | 導入 | 自動化 
 
 
 | [List VPC during AI engine deployment]ウィザード | EC2: DescribeVpcs | 導入 | 自動化 
 
 
-| AIエンジン導入ウィザードでサブネットを一覧表示するには | EC2: DescribeSubnets | 導入 | 自動化 
+| AIエンジン導入ウィザードでサブネットを一覧表示する | EC2: DescribeSubnets | 導入 | 自動化 
 
 
 | AIエンジンの導入時と再構築時にルーティングテーブルを取得 | EC2: DescribeRouteTables | 導入 | 自動化 
@@ -1738,7 +1772,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 導入時と再構築時のAIエンジンスタック作成時のイメージをリスト表示 | EC2: DescribeImages | 導入 | 自動化 
 
 
-.2+| 導入時および再構築時のAIインスタンススタックの作成時に、AIインスタンスおよびプライベートエンドポイントセキュリティグループを作成および更新するため | EC2: RevokeSecurityGroupEgress | 導入 | 自動化 
+.2+| 導入時および再構築時のAIインスタンススタックの作成時に、AIインスタンスとプライベートエンドポイントセキュリティグループを作成および更新 | EC2: RevokeSecurityGroupEgress | 導入 | 自動化 
 
 
 | EC2: RevokeSecurityGroupIngress | 導入 | 自動化 
@@ -1756,7 +1790,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | AIエンジンの導入時にAmazon Bedrock / Amazon CloudWatchのログステータスを照会 | Bedrock：GetModelInvocationLoggingConfiguration | 導入 | 自動化 
 
 
-| 基盤モデルの1つに対してチャットリクエストを開始するには | Bedrock：InvokeModelWithResponseStream | 導入 | 自動化 
+| 基本モデルのいずれかに対してチャットリクエストを開始する | Bedrock：InvokeModelWithResponseStream | 導入 | 自動化 
 
 
 | 基礎モデルのチャット/埋め込みリクエストの開始 | Bedrock：InvokeModel | 導入 | 自動化 
@@ -1765,16 +1799,13 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | リージョンで使用可能な基盤モデルを表示する | Bedrock: ListFoundationModels | 導入 | 自動化 
 
 
-| 基盤モデルに関する情報を取得する | Bedrock：GetFoundationModel | 導入 | 自動化 
-
-
 | 基盤モデルへのアクセスを確認 | Bedrock：GetFoundationModelAvailability | 導入 | 自動化 
 
 
-| 導入および再構築処理中にCloudWatchロググループを作成する必要があることを確認 | ログ:DescriptionLogGroups | 導入 | 自動化 
+| 導入と再構築の処理中にAmazon CloudWatchロググループを作成する必要があることを確認 | ログ:DescriptionLogGroups | 導入 | 自動化 
 
 
-| AIエンジンウィザードでFSxとBedrockをサポートするリージョンを取得 | SSM：GetParametersByPath | 導入 | 自動化 
+| AIエンジンウィザードでFSxとAmazon Bedrockをサポートするリージョンを取得 | SSM：GetParametersByPath | 導入 | 自動化 
 
 
 | 導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手 | SSM：GetParameters | 導入 | 自動化 
@@ -1813,19 +1844,19 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | IAM：PassRole | 導入 | 自動化 
 
 
-| ロールで使用可能な権限を検証し、導入時や再構築時に必要な権限と比較する | IAM：SimulatePrincipalPolicy | 導入 | 自動化 
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 自動化 
 
 
-| 「ナレッジベースの作成」ウィザードでFSxファイルシステムを挙げる | FSx：Description | ナレッジベースの作成 | 自動化 
+| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムを確認する | FSx：Description | ナレッジベースの作成 | 自動化 
 
 
-| 「ナレッジベースの作成」ウィザードでFSxファイルシステムのボリュームを表示する | FSx：DescriptionFileSystems | ナレッジベースの作成 | 自動化 
+| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムのボリュームを確認する | FSx：DescriptionFileSystems | ナレッジベースの作成 | 自動化 
 
 
-| 再構築時にAIエンジンを基盤としたナレッジベースを管理 | FSx：ListTagsForResource | トラブルシューティング | 自動化 
+| 再構築処理中にAIエンジンを基盤としたナレッジベースを管理 | FSx：ListTagsForResource | トラブルシューティング | 自動化 
 
 
-| [Create Knowledgebase]ウィザードでFSxファイルシステムStorage Virtual Machineを確認する | FSx：DescriptionStorageVirtualMachines | 導入 | 自動化 
+| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムStorage Virtual Machineを確認する | FSx：DescriptionStorageVirtualMachines | 導入 | 自動化 
 
 
 | ナレッジベースを新しいインスタンスに移動 | FSx：UntagResource | トラブルシューティング | 自動化 
@@ -1840,28 +1871,43 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | SSM：PutParameter | 導入 | 自動化 
 
 
-.2+| 導入と再構築の処理中にAIエンジンのログをCloudWatchロググループに送信 | ログ:CreateLogGroup | 導入 | 自動化 
+.2+| 導入と再構築の処理中に、AIエンジンのログをAmazon CloudWatchロググループに送信 | ログ:CreateLogGroup | 導入 | 自動化 
 
 
 | ログ:PutRetentionPolicy | 導入 | 自動化 
 
 
-| AIエンジンログをCloudWatchロググループに送信する | ログ:TagResource | トラブルシューティング | 自動化 
+| AIエンジンのログをAmazon CloudWatchロググループに送信する | ログ:TagResource | トラブルシューティング | 自動化 
 
 
-| CloudWatchからSSM応答を取得する（応答が長すぎる場合） | ログ:DescriptionLogStreams | トラブルシューティング | 自動化 
+| Amazon CloudWatchからSSMの応答を取得する（応答が長すぎる場合） | ログ:DescriptionLogStreams | トラブルシューティング | 自動化 
 
 
-| CloudWatchからSSMの応答を入手 | ログ:GetLogEvents | トラブルシューティング | 自動化 
+| Amazon CloudWatchからSSMの応答を入手 | ログ:GetLogEvents | トラブルシューティング | 自動化 
 
 
-.3+| デプロイおよび再構築処理中のスタック作成中に、基盤となるログのCloudWatchロググループを作成する | ログ:CreateLogGroup | 導入 | 自動化 
+.3+| 導入および再構築処理中のスタック作成中に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する | ログ:CreateLogGroup | 導入 | 自動化 
 
 
 | ログ:PutRetentionPolicy | 導入 | 自動化 
 
 
 | ログ:TagResource | 導入 | 自動化 
+
+
+| BedrockのログをAmazon CloudWatchに送信 | Bedrock：PutModelInvocationLoggingConfiguration | トラブルシューティング | 自動化 
+
+
+| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | IAM：AttachRolePolicy | トラブルシューティング | 自動化 
+
+
+| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | IAM：PassRole | トラブルシューティング | 自動化 
+
+
+| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | iam：createPolicy | トラブルシューティング | 自動化 
+
+
+| モデルの推論プロファイルをリスト表示 | Bedrock: ListInferenceProfiles | トラブルシューティング | 自動化 
 |===
 ====
 
@@ -1882,23 +1928,35 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 [source, json]
 ----
 {
-  "Effect": "Allow",
-  "Action": [
-    "ec2:DescribeRegions",
-    "ec2:DescribeAvailabilityZones",
-    "ec2:DescribeVpcs",
-    "ec2:DescribeSecurityGroups",
-    "ec2:DescribeSubnets",
-    "ssm:GetParametersByPath",
-    "kms:DescribeKey",
-    "kms:ListKeys",
-    "kms:ListAliases"
-  ],
-  "Resource": "*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeRegions",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ssm:GetParametersByPath",
+        "kms:DescribeKey",
+        "kms:ListKeys",
+        "kms:ListAliases"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ----
 --
-.操作モード
+.自動モード
 --
 [source, json]
 ----
@@ -2132,7 +2190,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 自動化 
 
 
-| SimulatePrincipalPolicyは、ロールで使用可能な権限の検証を実行し、必要な権限と比較するために必要です。 | IAM：SimulatePrincipalPolicy | 導入 | 自動化 
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 自動化 
 
 
 .4+| SSMパラメータストアを使用してAmazon FSx for NetApp ONTAPのクレデンシャルを保存 | SSM:getParameter  a| 
@@ -2169,6 +2227,31 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年3月30日
+
+
+
+==== 生成AIワークロード権限の更新
+
+生成AIの_automate mode__では、次の権限を使用できるようになりました。
+
+* `bedrock:PutModelInvocationLoggingConfiguration`
+* `iam:AttachRolePolicy`
+* `iam:PassRole`
+* `iam:createPolicy`
+* `bedrock:ListInferenceProfiles`
+
+
+生成AIの_automate mode_:から次の権限が削除されました `Bedrock:GetFoundationModel`。
+
+
+
+==== IAM：SimulatePrincipalPolicy権限の更新
+
+AWSアカウントのクレデンシャルを追加するとき、またはワークロードファクトリコンソールから新しいワークロード機能を追加するときに自動権限チェックを有効にする場合、この `iam:SimulatePrincipalPolicy`権限はすべてのワークロード権限ポリシーに含まれます。この権限は、ワークロードの処理をシミュレートし、必要なAWSアカウントの権限があるかどうかを確認してから、ワークロードファクトリからリソースを導入します。このチェックを有効にすると、失敗した処理からリソースをクリーンアップしたり、不足している権限を追加したりするために必要な時間と労力が軽減されます。
 
 
 

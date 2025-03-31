@@ -24,6 +24,8 @@ Workload Factoryには、ITポリシーに基づいてワークロードファ�
 自動モード:: 完全な信頼関係を表し、ワークロードファクトリに完全な権限が割り当てられます。これにより、ワークロードファクトリは、実行に必要な権限を持つ割り当てられたクレデンシャルとともに、AWSでの処理をユーザに代わって実行および自動化できます。
 
 
+詳細については、をご覧ください link:https://review.docs.netapp.com/us-en/workload-setup-admin_simulation-permission-update/permissions-reference.html["BlueXP  ワアクロオトファクトリノケンケン"]。
+
 
 
 === 運用モードの機能
