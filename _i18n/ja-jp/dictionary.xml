@@ -1051,7 +1051,6 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetAppコミュニティ</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXPのブログ</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
-  <block id="42bc8432872c22cf4fdbb156ae58a17e" category="doc">ONTAP CLIコマンドでAIが生成するエラーが報告される</block>
   <block id="3450754e7ec63bd0a961376c9928752a" category="paragraph">CloudShellを使用している場合、ONTAP CLIコマンドを発行してエラーが発生するたびに、失敗の説明、失敗の原因、詳細な解決策を含むAI生成のエラー応答を取得できます。</block>
   <block id="4ef50e373522b91f7df59d5cba69a8b7" category="section-title">IAM：SimulatePermissionPolicy権限の更新</block>
   <block id="906699741ebd9905a07af900abcfd438" category="paragraph">AWSアカウントのクレデンシャルを追加したり、生成AIワークロードなどの新しいワークロード機能を追加したりするときに、ワークロードファクトリコンソールから権限を管理できるようになりまし<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>た。</block>
@@ -1126,4 +1125,5 @@
   <block id="da1654cced07f7b0be3ee4215ae83b0b" category="list-text">パイプ、バックグラウンド実行<block ref="c2249209343ab488c055da76368f04a0" prefix=" " category="inline-code"></block>、リダイレクト<block ref="58ba3bb1a1772a74392e5e86bd2be4b7" prefix=" " category="inline-code"></block>などのシェル演算子は<block ref="b99834bc19bbad24580b3adfa04fb947" prefix=" " category="inline-code"></block>サポートされていません。これらの演算子を含めると、コマンドの実行は失敗します。</block>
   <block id="bc7864e70344eae19121f3e6408c5e04" category="list-text">と入力し<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>て使用可能なコマンドと手順を表示するか、次のCLIリファレンスマニュアルを参照して<block ref="0bdecf44265be755040a6284b4703b71" category="inline-xref-macro-rx"></block>ください。</block>
   <block id="34b14d4981e88ee13798aea3eecf0674" category="paragraph">ONTAP CLIコマンドの実行後にエラーが発生した場合は、電球のアイコンを選択すると、AIによって生成された簡単なエラー応答と、障害の説明、障害の原因、および詳細な解決策が表示されます。詳細については、*[続きを読む]*を選択してください。</block>
+  <block id="ef74d01649997b60252254da8a1573fd" category="doc">ONTAP CLIコマンドについて、AIによって生成されたエラー応答がCloudShellで報告される</block>
 </blocks>

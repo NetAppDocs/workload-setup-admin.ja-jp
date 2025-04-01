@@ -1,10 +1,10 @@
-= ONTAP CLIコマンドでAIが生成するエラーが報告される
+= ONTAP CLIコマンドについて、AIによって生成されたエラー応答がCloudShellで報告される
 :allow-uri-read: 
 
 
 
 
-=== ONTAP CLIコマンドでAIが生成するエラーが報告される
+=== ONTAP CLIコマンドについて、AIによって生成されたエラー応答がCloudShellで報告される
 
 CloudShellを使用している場合、ONTAP CLIコマンドを発行してエラーが発生するたびに、失敗の説明、失敗の原因、詳細な解決策を含むAI生成のエラー応答を取得できます。
 
