@@ -419,6 +419,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "ssm:DescribePatchBaselines",
         "ssm:DescribeInstancePatchStates",
         "ssm:ListCommands",
+        "ssm:DescribeInstanceInformation",
         "fsx:ListTagsForResource"
       ],
       "Resource": [
@@ -437,7 +438,6 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
     },
     {
-      "Sid": "IAMGroup",
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -954,6 +954,9 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 自動化
 
 
+
+
+| 管理対象EC2インスタンスのグループのSSMアソシエーションステータスの取得（SQLノード） | SSM：InstanceInformationの説明 | インベントリ | 読み取り 
 
 
 | オペレーティングシステムのパッチ評価に使用できるパッチベースラインのリストを入手する | SSM：DescribePatchBaselines | 最適化  a| 
@@ -2227,6 +2230,12 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年4月2日
+
+データベースの_READ MODE_で次の権限を使用できるようになりました。'sm:DescripteInstanceInformation'
 
 
 
