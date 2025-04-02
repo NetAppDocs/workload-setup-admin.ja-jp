@@ -1129,5 +1129,5 @@
   <block id="e388026a0cea886de58a344e102aff29" category="cell">管理対象EC2インスタンスのグループのSSMアソシエーションステータスの取得（SQLノード）</block>
   <block id="3320749a6854264e1889d72d7f41a0bf" category="cell">SSM：InstanceInformationの説明</block>
   <block id="99e26a6b02df18a6d3fcaa201c832eff" category="section-title">2025年4月2日</block>
-  <block id="3721724ce177d539f2733638cda0c562" category="paragraph">データベースの_READ MODE_で次の権限を使用できるようになりました。'sm:DescripteInstanceInformation'</block>
+  <block id="ecffd7b63fa9fc5c65235a6db0f2a9b2" category="paragraph">次の権限がデータベースの_READ MODE_で使用できるようになりました<block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block>。</block>
 </blocks>
