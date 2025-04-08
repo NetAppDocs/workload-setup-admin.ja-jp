@@ -1059,7 +1059,6 @@
   <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーにが追加され<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
   <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーに権限が追加され<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
   <block id="ad9001b544dade5536691ec3feee578f" category="inline-link-macro">BlueXP  ワアクロオトファクトリノケンケン</block>
-  <block id="4c1bf71f3b414847584faa395569aa99" category="paragraph">詳細については、をご覧ください <block ref="0ea8d4071df9710eb1c660a6314e7a7f" category="inline-link-macro-rx"></block>。</block>
   <block id="2a358d687197b0311c68b4c8a7e35e1c" category="cell">ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較</block>
   <block id="8c5e268f15aeebda6b5b234b3f7c7174" category="cell">暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
   <block id="9b1384398d4de5545bd0dad2106d6b0d" category="cell">イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
@@ -1130,4 +1129,5 @@
   <block id="3320749a6854264e1889d72d7f41a0bf" category="cell">SSM：InstanceInformationの説明</block>
   <block id="99e26a6b02df18a6d3fcaa201c832eff" category="section-title">2025年4月2日</block>
   <block id="ecffd7b63fa9fc5c65235a6db0f2a9b2" category="paragraph">次の権限がデータベースの_READ MODE_で使用できるようになりました<block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block>。</block>
+  <block id="0c749cb02f361ac40b1f6fc23a0feaf9" category="paragraph">詳細については、をご覧ください <block ref="8b9a4f89ed6bf874edd6af12deea004c" category="inline-link-macro-rx"></block>。</block>
 </blocks>
