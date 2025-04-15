@@ -23,7 +23,7 @@ sidebar:
     entries:
     - title: 基本事項をご確認ください
       entries:
-      - title: ワークロードファクトリの概要
+      - title: BlueXP  ワークロードファクトリの詳細
         url: "/workload-factory-overview.html"
       - title: 動作モード
         url: "/operational-modes.html"
