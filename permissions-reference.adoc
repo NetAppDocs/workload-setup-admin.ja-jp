@@ -20,7 +20,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 == 権限を使用する理由
 
-読み取りモードまたは自動モードの権限を指定すると、Workload Factoryは、そのAWSアカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスに関連付けます。これにより、ストレージ環境の検出から、ストレージ管理におけるファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、さまざまな処理をワークロードファクトリで実行できます。
+読み取り専用モードまたは読み取り/書き込みモードの権限を指定すると、Workload Factoryは、そのAWSアカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスに関連付けます。これにより、ストレージ環境の検出から、ストレージ管理におけるファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、さまざまな処理をワークロードファクトリで実行できます。
 
 たとえば、データベースワークロードの場合、Workload Factoryに必要な権限が付与されると、特定のアカウントとリージョン内のすべてのEC2インスタンスがスキャンされ、すべてのWindowsベースのマシンがフィルタリングされます。ホストにAWS Systems Manager（SSM）エージェントがインストールされて実行されており、System Managerネットワークが適切に設定されていれば、ワークロードの工場からWindowsマシンにアクセスして、SQL Serverソフトウェアがインストールされているかどうかを確認できます。
 
@@ -43,7 +43,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 ====
 [role="tabbed-block"]
 =====
-.読み取りモード
+.読み取り専用モード
 --
 [source, json]
 ----
@@ -75,7 +75,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 }
 ----
 --
-.自動モード
+.読み取り/書き込みモード
 --
 [source, json]
 ----
@@ -133,22 +133,22 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 | 目的 | アクション | 使用先 | モード 
 
 
-| FSx for ONTAPファイルシステムの作成 | FSx：CreateFileSystem * | 導入 | 自動化 
+| FSx for ONTAPファイルシステムの作成 | FSx：CreateFileSystem * | 導入 | 読み取り / 書き込み 
 
 
-| FSx for ONTAPファイルシステムのセキュリティグループを作成する | EC2：CreateSecurityGroup | 導入 | 自動化 
+| FSx for ONTAPファイルシステムのセキュリティグループを作成する | EC2：CreateSecurityGroup | 導入 | 読み取り / 書き込み 
 
 
-| FSx for ONTAPファイルシステムのセキュリティグループにタグを追加する | ec2：CreateTags | 導入 | 自動化 
+| FSx for ONTAPファイルシステムのセキュリティグループにタグを追加する | ec2：CreateTags | 導入 | 読み取り / 書き込み 
 
 
-.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を許可する | ec2：AuthorizeSecurityGroupEgress | 導入 | 自動化 
+.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を許可する | ec2：AuthorizeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
 
 
-| ec2：AuthorizeSecurityGroupIngress | 導入 | 自動化 
+| ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
 
 
-| Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。 | IAM：CreateServiceLinkedRole | 導入 | 自動化 
+| Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。 | IAM：CreateServiceLinkedRole | 導入 | 読み取り / 書き込み 
 
 
 .7+| FSx for ONTAPファイルシステム導入フォームに必要事項をご記入ください | EC2: DescribeVpcs  a| 
@@ -156,8 +156,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -167,8 +167,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -178,8 +178,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -189,8 +189,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -200,8 +200,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -211,8 +211,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -222,25 +222,25 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 自動化 
+.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 読み取り / 書き込み 
 
 
 | KMS：説明* | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | KMS：リスト* | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -250,112 +250,112 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | EC2インスタンスの詳細を取得 | EC2: DescribeInstances | コスト削減の詳細  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-| コスト削減試算ツールでElastic File Systemについて説明する | elasticfilesystem: describe* | コスト削減の詳細 | 読み取り 
+| コスト削減試算ツールでElastic File Systemについて説明する | elasticfilesystem: describe* | コスト削減の詳細 | 読み取り専用 
 
 
 | FSx for ONTAPリソース用のタグを挙げる | FSx：ListTagsForResource | インベントリ  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | 自動化 
+.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | 読み取り / 書き込み 
 
 
-| EC2: DeleteSecurityGroup | カンリシヨリ | 自動化 
+| EC2: DeleteSecurityGroup | カンリシヨリ | 読み取り / 書き込み 
 
 
-.16+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：CreateVolume * | カンリシヨリ | 自動化 
+.16+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：CreateVolume * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：TagResource * | カンリシヨリ | 自動化 
+| FSx：TagResource * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：CreateStorageVirtualMachine * | カンリシヨリ | 自動化 
+| FSx：CreateStorageVirtualMachine * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：DeleteFileSystem * | カンリシヨリ | 自動化 
+| FSx：DeleteFileSystem * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：DeleteStorageVirtualMachine * | カンリシヨリ | 自動化 
+| FSx：DeleteStorageVirtualMachine * | カンリシヨリ | 読み取り / 書き込み 
 
 
 | FSx：DescriptionFileSystems* | インベントリ  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | FSx：DescriptionStorageVirtualMachines * | インベントリ  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-| FSx：UpdateFileSystem * | カンリシヨリ | 自動化 
+| FSx：UpdateFileSystem * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：UpdateStorageVirtualMachine * | カンリシヨリ | 自動化 
+| FSx：UpdateStorageVirtualMachine * | カンリシヨリ | 読み取り / 書き込み 
 
 
 | FSx：Description * | インベントリ  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-| FSx：UPDATEVOLUME * | カンリシヨリ | 自動化 
+| FSx：UPDATEVOLUME * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：DeleteVolume * | カンリシヨリ | 自動化 
+| FSx：DeleteVolume * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：UntagResource * | カンリシヨリ | 自動化 
+| FSx：UntagResource * | カンリシヨリ | 読み取り / 書き込み 
 
 
 | FSx：DescriptionBackups * | カンリシヨリ  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-| FSx：CreateBackup * | カンリシヨリ | 自動化 
+| FSx：CreateBackup * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| FSx：CreateVolumeFromBackup * | カンリシヨリ | 自動化 
+| FSx：CreateVolumeFromBackup * | カンリシヨリ | 読み取り / 書き込み 
 
 
-| CloudWatchメトリクスのレポート | CloudWatch：PutMetricData | カンリシヨリ | 自動化 
+| CloudWatchメトリクスのレポート | CloudWatch：PutMetricData | カンリシヨリ | 読み取り / 書き込み 
 
 
 .2+| ファイルシステムとボリュームの指標を取得 | CloudWatch：GetMetricData | カンリシヨリ  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | CloudWatch：GetMetricStatistics | カンリシヨリ  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 |===
@@ -373,7 +373,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 ====
 [role="tabbed-block"]
 =====
-.読み取りモード
+.読み取り専用モード
 --
 [source, json]
 ----
@@ -438,6 +438,15 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
     },
     {
+      "Sid": "SSMResponseCloudWatch",
+      "Effect": "Allow",
+      "Action": [
+        "logs:GetLogEvents",
+        "logs:PutRetentionPolicy"
+      ],
+      "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -448,7 +457,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 }
 ----
 --
-.自動モード
+.読み取り/書き込みモード
 --
 [source, json]
 ----
@@ -607,8 +616,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "iam:GetRolePolicy",
         "iam:GetUser",
         "iam:PutRolePolicy",
-        "iam:RemoveRoleFromInstanceProfile",
-        "iam:SimulatePrincipalPolicy"
+        "iam:RemoveRoleFromInstanceProfile"
       ],
       "Resource": "*"
     },
@@ -644,6 +652,13 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "ssm:DeleteParameters"
       ],
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -661,20 +676,31 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 | 目的 | アクション | 使用先 | モード 
 
 
+| SSM出力の切り捨てが検出されると、ワークロードファクトリはSQLインスタンスのAmazon CloudWatchログに切り替えます。 | ログ:GetLogEvents  a| 
+* ストレージアセスメント
+* インベントリ
+
+ a| 
+* 読み取り専用
+* 読み取り / 書き込み
+
+
+
+
 | FSx for ONTAP、EBS、FSx for Windowsファイルサーバのメトリック統計を取得 | CloudWatch：GetMetricStatistics  a| 
 * インベントリ
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | イベントのトリガーのリストと設定 | SNS:リストトピック | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -684,22 +710,22 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | EC2：DescribeKeyPairs | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | EC2: DescribeNetworkInterfaces | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -709,8 +735,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -720,8 +746,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -731,29 +757,29 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | EC2: DescribeSecurityGroups | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | EC2: DescribeImages | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | EC2: DescribeRegions (説明領域 | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -763,8 +789,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -774,25 +800,25 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-| EC2インスタンスのパブリックネットワーク接続に関係なく、必要なサービス用にVPCエンドポイントが存在しない場合はVPCエンドポイントを作成する | EC2：CreateVpcEndpoint | 導入 | 自動化 
+| EC2インスタンスのパブリックネットワーク接続に関係なく、必要なサービス用にVPCエンドポイントが存在しない場合はVPCエンドポイントを作成する | EC2：CreateVpcEndpoint | 導入 | 読み取り / 書き込み 
 
 
 | 検証ノード（t2.micro/t3.micro）のリージョンで使用可能なインスタンスタイプを取得します。 | EC2:説明InstanceTypeOfferings | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | 接続されている各EBSボリュームのSnapshot詳細を取得して、価格設定と削減効果を見積もる | ec2: DescribeSnapshots | コスト削減の詳細  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -802,50 +828,50 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 .3+| FSx for ONTAPのファイルシステム暗号化に関するKMSの主な詳細情報を入手 | KMS：エイリアスを確認する | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | KMS：ListKeys | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | KMS:説明キー | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | 環境で実行されているCloudFormationスタックのリストを取得してクォータ制限を確認 | CloudFormation：リストスタック | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | 展開を開始する前に、リソースのアカウント制限を確認する | CloudFormation：DescriptionAccountLimits | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | AWSが管理するリージョン内のActive Directoryのリストを取得する | ds:説明ディレクトリ | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -855,8 +881,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減額をチェック
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -866,8 +892,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減額をチェック
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -878,8 +904,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -891,29 +917,29 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | FSx：ListTagsForResource | 処理の管理  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | CloudFormationとVPCのサービスクォータ制限を取得 | サービスクォータ：ListServiceQuotas | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | SSMベースのクエリを使用して、FSx for ONTAPでサポートされるリージョンの最新リストを取得 | SSM：GetParametersByPath | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -925,8 +951,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 最適化
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -938,8 +964,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 最適化
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -950,8 +976,8 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 最適化
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -960,22 +986,22 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 
 | オペレーティングシステムのパッチ評価に使用できるパッチベースラインのリストを入手する | SSM：DescribePatchBaselines | 最適化  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | オペレーティングシステムのパッチ評価のためのWindows EC2インスタンスのパッチ状態の取得 | SSM:DescribeInstancePatchStates | 最適化  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | オペレーティングシステムのパッチ管理用にAWS Patch ManagerによってEC2インスタンスで実行されるコマンドの一覧表示 | SSM：ListCommands | 最適化  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -984,42 +1010,42 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * コスト削減の詳細
 * 最適化
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | AWS Compute Optimizerで既存の推奨構成を更新して、SQL Serverワークロードの推奨構成を調整 | 計算オプティマイザ:PutRecommendationPreferences  a| 
 * コスト削減の詳細
 * 最適化
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | AWS Compute Optimizerから、特定のリソースに対して有効な推奨設定を取得する | compute-optimizer:GetEffectiveRecommendationPreferences  a| 
 * コスト削減の詳細
 * 最適化
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | Amazon Elastic Compute Cloud（Amazon EC2）インスタンス用にAWS Compute Optimizerが生成する推奨事項を取得 | コンピューティングオプティマイザ：GetEC2InstanceRecommendations  a| 
 * コスト削減の詳細
 * 最適化
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 .2+| 自動スケーリンググループへのインスタンスの関連付けのチェック | オートスケーリング:説明AutoScalingGroups  a| 
 * コスト削減の詳細
 * 最適化
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | オートスケーリング:説明AutoScalingInstances  a| 
 * コスト削減の詳細
 * 最適化
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 .4+| 導入時またはAWSアカウントで管理されるAD、FSx for ONTAP、SQLユーザクレデンシャルのSSMパラメータの取得、一覧表示、作成、削除 | SSM：getParameter ^1^  a| 
@@ -1027,15 +1053,15 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 処理の管理
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | SSM：GetParameters ^1^ | 処理の管理  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -1045,183 +1071,183 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 処理の管理
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | SSM：削除パラメータ^1^ | 処理の管理  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-.9+| ネットワークリソースをSQLノードと検証ノードに関連付け、SQLノードにセカンダリIPを追加する | EC2：AllocateAddress ^1^ | 導入 | 自動化 
+.9+| ネットワークリソースをSQLノードと検証ノードに関連付け、SQLノードにセカンダリIPを追加する | EC2：AllocateAddress ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AllocateHosts ^1^ | 導入 | 自動化 
+| EC2：AllocateHosts ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AssignPrivateIpAddresses ^1^ | 導入 | 自動化 
+| EC2：AssignPrivateIpAddresses ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AssociateAddress ^1^ | 導入 | 自動化 
+| EC2：AssociateAddress ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AssociateRouteTable ^1^ | 導入 | 自動化 
+| EC2：AssociateRouteTable ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AssociateSubnetCidrBlock^1^ | 導入 | 自動化 
+| EC2：AssociateSubnetCidrBlock^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AssociateVpcCidrBlock^1^ | 導入 | 自動化 
+| EC2：AssociateVpcCidrBlock^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AttachInternetGateway ^1^ | 導入 | 自動化 
+| EC2：AttachInternetGateway ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| EC2：AttachNetworkInterface ^1^ | 導入 | 自動化 
+| EC2：AttachNetworkInterface ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| 導入に必要なEBSボリュームをSQLノードに接続する | EC2：AttachVolume | 導入 | 自動化 
+| 導入に必要なEBSボリュームをSQLノードに接続する | EC2：AttachVolume | 導入 | 読み取り / 書き込み 
 
 
-.2+| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupEgress | 導入 | 自動化 
+.2+| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
 
 
-| ec2：AuthorizeSecurityGroupIngress | 導入 | 自動化 
+| ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
 
 
-| 導入用にSQLノードに必要なEBSボリュームを作成する | EC2：CreateVolume | 導入 | 自動化 
+| 導入用にSQLノードに必要なEBSボリュームを作成する | EC2：CreateVolume | 導入 | 読み取り / 書き込み 
 
 
-.11+| タイプT2.microで作成された一時検証ノードを削除し、失敗したEC2 SQLノードのロールバックまたは再試行のために削除します。 | EC2：DeleteNetworkInterface | 導入 | 自動化 
+.11+| タイプT2.microで作成された一時検証ノードを削除し、失敗したEC2 SQLノードのロールバックまたは再試行のために削除します。 | EC2：DeleteNetworkInterface | 導入 | 読み取り / 書き込み 
 
 
-| EC2: DeleteSecurityGroup | 導入 | 自動化 
+| EC2: DeleteSecurityGroup | 導入 | 読み取り / 書き込み 
 
 
-| EC2:タグを削除します | 導入 | 自動化 
+| EC2:タグを削除します | 導入 | 読み取り / 書き込み 
 
 
-| EC2：DeleteVolume | 導入 | 自動化 
+| EC2：DeleteVolume | 導入 | 読み取り / 書き込み 
 
 
-| EC2：DetachNetworkInterface | 導入 | 自動化 
+| EC2：DetachNetworkInterface | 導入 | 読み取り / 書き込み 
 
 
-| EC2：DetachVolumeの場合 | 導入 | 自動化 
+| EC2：DetachVolumeの場合 | 導入 | 読み取り / 書き込み 
 
 
-| EC2：アソシエーション解除アドレス | 導入 | 自動化 
+| EC2：アソシエーション解除アドレス | 導入 | 読み取り / 書き込み 
 
 
-| EC2: DisassociateIamInstanceProfile | 導入 | 自動化 
+| EC2: DisassociateIamInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| EC2：関連付け解除ルートテーブル | 導入 | 自動化 
+| EC2：関連付け解除ルートテーブル | 導入 | 読み取り / 書き込み 
 
 
-| EC2：SubnetCidrBlockの関連付けを解除 | 導入 | 自動化 
+| EC2：SubnetCidrBlockの関連付けを解除 | 導入 | 読み取り / 書き込み 
 
 
-| EC2：VpcCidrBlockの関連付けを解除 | 導入 | 自動化 
+| EC2：VpcCidrBlockの関連付けを解除 | 導入 | 読み取り / 書き込み 
 
 
-.7+| 作成されたSQLインスタンスの属性を変更します。WLMDBで始まる名前にのみ適用されます。 | EC2：ModifyInstanceAttribute | 導入 | 自動化 
+.7+| 作成されたSQLインスタンスの属性を変更します。WLMDBで始まる名前にのみ適用されます。 | EC2：ModifyInstanceAttribute | 導入 | 読み取り / 書き込み 
 
 
-| EC2：ModifyInstancePlacement | 導入 | 自動化 
+| EC2：ModifyInstancePlacement | 導入 | 読み取り / 書き込み 
 
 
-| EC2:ModifyNetworkInterfaceAttributeのいずれかです | 導入 | 自動化 
+| EC2:ModifyNetworkInterfaceAttributeのいずれかです | 導入 | 読み取り / 書き込み 
 
 
-| EC2：ModifySubnetAttribute | 導入 | 自動化 
+| EC2：ModifySubnetAttribute | 導入 | 読み取り / 書き込み 
 
 
-| EC2：ModifyVolume | 導入 | 自動化 
+| EC2：ModifyVolume | 導入 | 読み取り / 書き込み 
 
 
-| EC2：ModifyVolumeAttributeのことです | 導入 | 自動化 
+| EC2：ModifyVolumeAttributeのことです | 導入 | 読み取り / 書き込み 
 
 
-| EC2：ModifyVpcAttribute | 導入 | 自動化 
+| EC2：ModifyVpcAttribute | 導入 | 読み取り / 書き込み 
 
 
-.5+| 検証インスタンスの関連付けを解除して破棄する | EC2：リリースアドレス | 導入 | 自動化 
+.5+| 検証インスタンスの関連付けを解除して破棄する | EC2：リリースアドレス | 導入 | 読み取り / 書き込み 
 
 
-| EC2：ReplaceRoute | 導入 | 自動化 
+| EC2：ReplaceRoute | 導入 | 読み取り / 書き込み 
 
 
-| EC2：ReplaceRouteTableAssociation | 導入 | 自動化 
+| EC2：ReplaceRouteTableAssociation | 導入 | 読み取り / 書き込み 
 
 
-| EC2: RevokeSecurityGroupEgress | 導入 | 自動化 
+| EC2: RevokeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
 
 
-| EC2: RevokeSecurityGroupIngress | 導入 | 自動化 
+| EC2: RevokeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
 
 
-| 導入されたインスタンスの開始 | EC2：StartInstances（EC2：開始インスタンス | 導入 | 自動化 
+| 導入されたインスタンスの開始 | EC2：StartInstances（EC2：開始インスタンス | 導入 | 読み取り / 書き込み 
 
 
-| 導入されたインスタンスの停止 | EC2：StopInstances | 導入 | 自動化 
+| 導入されたインスタンスの停止 | EC2：StopInstances | 導入 | 読み取り / 書き込み 
 
 
 | WLMDBによって作成されたAmazon FSx for NetApp ONTAPリソースのカスタム値にタグを付けて、リソース管理時に課金の詳細を取得 | FSx：TagResource ^1^  a| 
 * 導入
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-.5+| 導入用のCloudFormationテンプレートを作成して検証 | CloudFormation：CreateStack | 導入 | 自動化 
+.5+| 導入用のCloudFormationテンプレートを作成して検証 | CloudFormation：CreateStack | 導入 | 読み取り / 書き込み 
 
 
-| CloudFormation：DescribeStackEvents | 導入 | 自動化 
+| CloudFormation：DescribeStackEvents | 導入 | 読み取り / 書き込み 
 
 
-| CloudFormation：DescribeStack | 導入 | 自動化 
+| CloudFormation：DescribeStack | 導入 | 読み取り / 書き込み 
 
 
-| CloudFormation：リストスタック | 導入 | 自動化 
+| CloudFormation：リストスタック | 導入 | 読み取り / 書き込み 
 
 
-| CloudFormation：ValidateTemplate | 導入 | 自動化 
+| CloudFormation：ValidateTemplate | 導入 | 読み取り / 書き込み 
 
 
-| コンピューティングの最適化に関する推奨事項の指標を取得 | CloudWatch：GetMetricStatistics | コスト削減の詳細 | 自動化 
+| コンピューティングの最適化に関する推奨事項の指標を取得 | CloudWatch：GetMetricStatistics | コスト削減の詳細 | 読み取り / 書き込み 
 
 
-| リージョンで使用可能なディレクトリを取得する | ds:説明ディレクトリ | 導入 | 自動化 
+| リージョンで使用可能なディレクトリを取得する | ds:説明ディレクトリ | 導入 | 読み取り / 書き込み 
 
 
-.2+| プロビジョニングされたEC2インスタンスにアタッチされたセキュリティグループのルールを追加します。 | ec2：AuthorizeSecurityGroupEgress | 導入 | 自動化 
+.2+| プロビジョニングされたEC2インスタンスにアタッチされたセキュリティグループのルールを追加します。 | ec2：AuthorizeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
 
 
-| ec2：AuthorizeSecurityGroupIngress | 導入 | 自動化 
+| ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
 
 
-.2+| 再試行およびロールバック用にネストされたスタックテンプレートを作成する | EC2：CreateLaunchTemplate | 導入 | 自動化 
+.2+| 再試行およびロールバック用にネストされたスタックテンプレートを作成する | EC2：CreateLaunchTemplate | 導入 | 読み取り / 書き込み 
 
 
-| EC2：CreateLaunchTemplateVersion | 導入 | 自動化 
+| EC2：CreateLaunchTemplateVersion | 導入 | 読み取り / 書き込み 
 
 
-.3+| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateNetworkInterface | 導入 | 自動化 
+.3+| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateNetworkInterface | 導入 | 読み取り / 書き込み 
 
 
-| EC2：CreateSecurityGroup | 導入 | 自動化 
+| EC2：CreateSecurityGroup | 導入 | 読み取り / 書き込み 
 
 
-| ec2：CreateTags | 導入 | 自動化 
+| ec2：CreateTags | 導入 | 読み取り / 書き込み 
 
 
-| 検証ノード用に一時的に作成されたセキュリティグループを削除します。 | EC2: DeleteSecurityGroup | 導入 | 自動化 
+| 検証ノード用に一時的に作成されたセキュリティグループを削除します。 | EC2: DeleteSecurityGroup | 導入 | 読み取り / 書き込み 
 
 
 .2+| プロビジョニング用のインスタンスの詳細を取得する | EC2：説明*  a| 
@@ -1229,7 +1255,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 * コスト削減の詳細
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | EC2：GET *  a| 
@@ -1237,29 +1263,29 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 * コスト削減の詳細
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | 自動化 
+| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | 読み取り / 書き込み 
 
 
 | System ManagerはAPI処理にAWSのメッセージ配信サービスエンドポイントを使用 | ec2メッセージ：*  a| 
 * 導入*インベントリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-.3+| プロビジョニングに必要なFSx for ONTAPリソースを作成します。既存のFSx for ONTAPシステムでは、SQLボリュームをホストするための新しいSVMが作成されます。 | FSx：CreateFileSystem | 導入 | 自動化 
+.3+| プロビジョニングに必要なFSx for ONTAPリソースを作成します。既存のFSx for ONTAPシステムでは、SQLボリュームをホストするための新しいSVMが作成されます。 | FSx：CreateFileSystem | 導入 | 読み取り / 書き込み 
 
 
-| FSx：CreateStorageVirtualMachine | 導入 | 自動化 
+| FSx：CreateStorageVirtualMachine | 導入 | 読み取り / 書き込み 
 
 
 | FSx：ボリュームの作成  a| 
 * 導入
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 .2+| FSx for ONTAPの詳細 | FSx：説明*  a| 
@@ -1268,88 +1294,88 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 処理の管理
 * コスト削減の詳細
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | FSx：リスト*  a| 
 * 導入
 * インベントリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-| FSx for ONTAPファイルシステムのサイズを変更してファイルシステムのヘッドルームを修正 | FSx：ファイルシステムの更新 | 最適化 | 自動化 
+| FSx for ONTAPファイルシステムのサイズを変更してファイルシステムのヘッドルームを修正 | FSx：ファイルシステムの更新 | 最適化 | 読み取り / 書き込み 
 
 
-| ボリュームのサイズを変更してログとtempdbのドライブサイズを修正 | FSx：UPDATEVOLUME | 最適化 | 自動化 
+| ボリュームのサイズを変更してログとtempdbのドライブサイズを修正 | FSx：UPDATEVOLUME | 最適化 | 読み取り / 書き込み 
 
 
-.4+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 自動化 
+.4+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 読み取り / 書き込み 
 
 
-| KMS：説明* | 導入 | 自動化 
+| KMS：説明* | 導入 | 読み取り / 書き込み 
 
 
-| KMS：リスト* | 導入 | 自動化 
+| KMS：リスト* | 導入 | 読み取り / 書き込み 
 
 
-| KMS：GenerateDataKey | 導入 | 自動化 
+| KMS：GenerateDataKey | 導入 | 読み取り / 書き込み 
 
 
-.7+| EC2インスタンスで実行される検証スクリプトとプロビジョニングスクリプト用にCloudWatchログを作成する | ログ:CreateLogGroup | 導入 | 自動化 
+.7+| EC2インスタンスで実行される検証スクリプトとプロビジョニングスクリプト用にCloudWatchログを作成する | ログ:CreateLogGroup | 導入 | 読み取り / 書き込み 
 
 
-| ログ:CreateLogStream | 導入 | 自動化 
+| ログ:CreateLogStream | 導入 | 読み取り / 書き込み 
 
 
-| ログ：DescriptionLog* | 導入 | 自動化 
+| ログ：DescriptionLog* | 導入 | 読み取り / 書き込み 
 
 
-| ログ:getlog* | 導入 | 自動化 
+| ログ:getlog* | 導入 | 読み取り / 書き込み 
 
 
-| ログ:ListLogDeliveries | 導入 | 自動化 
+| ログ:ListLogDeliveries | 導入 | 読み取り / 書き込み 
 
 
 | ログ:PutLogEvents  a| 
 * 導入
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-| ログ:TagResource | 導入 | 自動化 
+| ログ:TagResource | 導入 | 読み取り / 書き込み 
 
 
-| ユーザアカウントに、SQL、ドメイン、FSx for ONTAPに提供されるクレデンシャルのシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 | 自動化 
+| ユーザアカウントに、SQL、ドメイン、FSx for ONTAPに提供されるクレデンシャルのシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 | 読み取り / 書き込み 
 
 
-.2+| カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS:リストトピック | 導入 | 自動化 
+.2+| カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS:リストトピック | 導入 | 読み取り / 書き込み 
 
 
-| SNS：公開 | 導入 | 自動化 
+| SNS：公開 | 導入 | 読み取り / 書き込み 
 
 
-.11+| プロビジョニングされたSQLインスタンスに対して検出スクリプトを実行し、FSx for ONTAPでサポートされるAWSリージョンの最新のリストを取得するために必要なSSM権限。 | SSM：説明* | 導入 | 自動化 
+.11+| プロビジョニングされたSQLインスタンスに対して検出スクリプトを実行し、FSx for ONTAPでサポートされるAWSリージョンの最新のリストを取得するために必要なSSM権限。 | SSM：説明* | 導入 | 読み取り / 書き込み 
 
 
 | SSM：GET *  a| 
 * 導入
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-| SSM：リスト* | 導入 | 自動化 
+| SSM：リスト* | 導入 | 読み取り / 書き込み 
 
 
-| SSM：PutComplianceItems | 導入 | 自動化 
+| SSM：PutComplianceItems | 導入 | 読み取り / 書き込み 
 
 
-| SSM：PutConfigurePackageResult | 導入 | 自動化 
+| SSM：PutConfigurePackageResult | 導入 | 読み取り / 書き込み 
 
 
-| SSM：PutInventory | 導入 | 自動化 
+| SSM：PutInventory | 導入 | 読み取り / 書き込み 
 
 
 | SSM:sendCommand  a| 
@@ -1357,16 +1383,16 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-| SSM：UpdateAssociationStatus | 導入 | 自動化 
+| SSM：UpdateAssociationStatus | 導入 | 読み取り / 書き込み 
 
 
-| SSM：UpdateInstanceAssociationStatus | 導入 | 自動化 
+| SSM：UpdateInstanceAssociationStatus | 導入 | 読み取り / 書き込み 
 
 
-| SSM：UpdateInstanceInformation | 導入 | 自動化 
+| SSM：UpdateInstanceInformation | 導入 | 読み取り / 書き込み 
 
 
 | ssmessages：*  a| 
@@ -1374,7 +1400,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * インベントリ
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 .4+| FSx for ONTAP、Active Directory、SQLユーザのクレデンシャルを保存（SQLユーザ認証のみ） | SSM：getParameter ^1^  a| 
@@ -1382,75 +1408,75 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 * 処理の管理
 * インベントリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | SSM：GetParameters ^1^  a| 
 * 導入
 * インベントリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | SSM：PutParameter ^1^  a| 
 * 導入
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | SSM：削除パラメータ^1^  a| 
 * 導入
 * 処理の管理
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-| 成功または失敗時にCloudFormationスタックに信号を送信します。 | CloudFormation：SignalResource ^1^ | 導入 | 自動化 
+| 成功または失敗時にCloudFormationスタックに信号を送信します。 | CloudFormation：SignalResource ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| テンプレートによって作成されたEC2ロールをEC2のインスタンスプロファイルに追加して、EC2上のスクリプトが展開に必要なリソースにアクセスできるようにします。 | IAM：AddRoleToInstanceProfile | 導入 | 自動化 
+| テンプレートによって作成されたEC2ロールをEC2のインスタンスプロファイルに追加して、EC2上のスクリプトが展開に必要なリソースにアクセスできるようにします。 | IAM：AddRoleToInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| EC2のインスタンスプロファイルを作成し、作成したEC2ロールを割り当てます。 | IAM：CreateInstanceProfile | 導入 | 自動化 
+| EC2のインスタンスプロファイルを作成し、作成したEC2ロールを割り当てます。 | IAM：CreateInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| 以下の権限を持つテンプレートを使用してEC2ロールを作成する | IAM：CREATEROLE | 導入 | 自動化 
+| 以下の権限を持つテンプレートを使用してEC2ロールを作成する | IAM：CREATEROLE | 導入 | 読み取り / 書き込み 
 
 
-| EC2サービスにリンクされたロールの作成 | IAM：CreateServiceLinkedRole^2^ | 導入 | 自動化 
+| EC2サービスにリンクされたロールの作成 | IAM：CreateServiceLinkedRole^2^ | 導入 | 読み取り / 書き込み 
 
 
-| 検証ノード専用に導入時に作成されたインスタンスプロファイルを削除する | IAM：DeleteInstanceProfile | 導入 | 自動化 
+| 検証ノード専用に導入時に作成されたインスタンスプロファイルを削除する | IAM：DeleteInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-.5+| ロールとポリシーの詳細を取得して権限のギャップを特定し、導入のための検証を実施 | IAM：GetPolicy | 導入 | 自動化 
+.5+| ロールとポリシーの詳細を取得して権限のギャップを特定し、導入のための検証を実施 | IAM：GetPolicy | 導入 | 読み取り / 書き込み 
 
 
-| IAM：GetPolicyVersion | 導入 | 自動化 
+| IAM：GetPolicyVersion | 導入 | 読み取り / 書き込み 
 
 
-| IAM：GetRole | 導入 | 自動化 
+| IAM：GetRole | 導入 | 読み取り / 書き込み 
 
 
-| IAM：GetRolePolicy | 導入 | 自動化 
+| IAM：GetRolePolicy | 導入 | 読み取り / 書き込み 
 
 
-| IAM：GetUser | 導入 | 自動化 
+| IAM：GetUser | 導入 | 読み取り / 書き込み 
 
 
-| 作成したロールをEC2インスタンスに渡す | IAM：PassRole^3^ | 導入 | 自動化 
+| 作成したロールをEC2インスタンスに渡す | IAM：PassRole^3^ | 導入 | 読み取り / 書き込み 
 
 
-| 作成したEC2ロールに必要な権限を含むポリシーを追加します。 | IAM：PutRolePolicy | 導入 | 自動化 
+| 作成したEC2ロールに必要な権限を含むポリシーを追加します。 | IAM：PutRolePolicy | 導入 | 読み取り / 書き込み 
 
 
-| プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 | 自動化 
+| プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
 | ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 |===
@@ -1466,7 +1492,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 VMwareワークロードのIAMポリシーは、運用モードに基づいてパブリッククラウド環境内のリソースとプロセスを管理するために、VMwareのワークロードファクトリが必要とする権限を提供します。
 
-生成AI IAMポリシーは、OPERATEモードでのみ使用できます。
+生成AI IAMポリシーは、読み取り/書き込みモードでのみ使用できます。
 
 .生成AIワークロードのIAMポリシー
 [%collapsible]
@@ -1527,7 +1553,6 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
       "Effect": "Allow",
       "Action": [
         "iam:CreateRole",
-        "iam:CreatePolicy",
         "iam:CreateInstanceProfile",
         "iam:AddRoleToInstanceProfile",
         "iam:PutRolePolicy",
@@ -1701,6 +1726,22 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
       "Resource": "arn:aws:iam::*:role/NetApp_AI_Bedrock*"
     },
     {
+      "Sid": "BedrockLoggingIamOperations",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreatePolicy"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "QBusiness",
+      "Effect": "Allow",
+      "Action": [
+        "qbusiness:ListApplications"
+      ],
+      "Resource": "*"
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -1721,196 +1762,202 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 目的 | アクション | 使用先 | モード 
 
 
-| 導入時と再構築時にAIエンジンCloudFormationスタックを作成 | CloudFormation：CreateStack | 導入 | 自動化 
+| 導入時と再構築時にAIエンジンCloudFormationスタックを作成 | CloudFormation：CreateStack | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンCloudFormationスタックを作成 | CloudFormation：DescribeStack | 導入 | 自動化 
+| AIエンジンCloudFormationスタックを作成 | CloudFormation：DescribeStack | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジン導入ウィザードのリージョンを表示する | EC2: DescribeRegions (説明領域 | 導入 | 自動化 
+| AIエンジン導入ウィザードのリージョンを表示する | EC2: DescribeRegions (説明領域 | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンタグを表示 | EC2: DescribeTags (説明タグ) | 導入 | 自動化 
+| AIエンジンタグを表示 | EC2: DescribeTags (説明タグ) | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンスタックを作成する前にVPCエンドポイントをリスト表示 | EC2：CreateVpcEndpoint | 導入 | 自動化 
+| AIエンジンスタックを作成する前にVPCエンドポイントをリスト表示 | EC2：CreateVpcEndpoint | 導入 | 読み取り / 書き込み 
 
 
-| 導入時と再構築時のAIエンジンスタックの作成時にAIエンジンセキュリティグループを作成 | EC2：CreateSecurityGroup | 導入 | 自動化 
+| 導入時と再構築時のAIエンジンスタックの作成時にAIエンジンセキュリティグループを作成 | EC2：CreateSecurityGroup | 導入 | 読み取り / 書き込み 
 
 
-| 導入および再構築処理中にAIエンジンスタックの作成によって作成されたリソースにタグを付ける | ec2：CreateTags | 導入 | 自動化 
+| 導入および再構築処理中にAIエンジンスタックの作成によって作成されたリソースにタグを付ける | ec2：CreateTags | 導入 | 読み取り / 書き込み 
 
 
-.2+| 暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする | KMS：GenerateDataKey | 導入 | 自動化 
+.2+| 暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする | KMS：GenerateDataKey | 導入 | 読み取り / 書き込み 
 
 
-| KMS：復号化 | 導入 | 自動化 
+| KMS：復号化 | 導入 | 読み取り / 書き込み 
 
 
-| イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする | SNS：公開 | 導入 | 自動化 
+| イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする | SNS：公開 | 導入 | 読み取り / 書き込み 
 
 
-| [List VPC during AI engine deployment]ウィザード | EC2: DescribeVpcs | 導入 | 自動化 
+| [List VPC during AI engine deployment]ウィザード | EC2: DescribeVpcs | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジン導入ウィザードでサブネットを一覧表示する | EC2: DescribeSubnets | 導入 | 自動化 
+| AIエンジン導入ウィザードでサブネットを一覧表示する | EC2: DescribeSubnets | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンの導入時と再構築時にルーティングテーブルを取得 | EC2: DescribeRouteTables | 導入 | 自動化 
+| AIエンジンの導入時と再構築時にルーティングテーブルを取得 | EC2: DescribeRouteTables | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジン導入ウィザードでのキーペアの一覧表示 | EC2：DescribeKeyPairs | 導入 | 自動化 
+| AIエンジン導入ウィザードでのキーペアの一覧表示 | EC2：DescribeKeyPairs | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンスタックの作成中にセキュリティグループをリスト表示する（プライベートエンドポイントでセキュリティグループを検索する） | EC2: DescribeSecurityGroups | 導入 | 自動化 
+| AIエンジンスタックの作成中にセキュリティグループをリスト表示する（プライベートエンドポイントでセキュリティグループを検索する） | EC2: DescribeSecurityGroups | 導入 | 読み取り / 書き込み 
 
 
-| VPCエンドポイントを取得して、AIエンジンの導入時に作成する必要があるかどうかを判断する | EC2: DescribeVpcEndpoints | 導入 | 自動化 
+| VPCエンドポイントを取得して、AIエンジンの導入時に作成する必要があるかどうかを判断する | EC2: DescribeVpcEndpoints | 導入 | 読み取り / 書き込み 
 
 
-| インスタンスを表示してAIエンジンの状態を確認する | EC2: DescribeInstances | トラブルシューティング | 自動化 
+| Amazon Q Businessアプリケーションを挙げる | qbusiness：ListApplications | 導入 | 読み取り / 書き込み 
 
 
-| 導入時と再構築時のAIエンジンスタック作成時のイメージをリスト表示 | EC2: DescribeImages | 導入 | 自動化 
+| インスタンスを表示してAIエンジンの状態を確認する | EC2: DescribeInstances | トラブルシューティング | 読み取り / 書き込み 
 
 
-.2+| 導入時および再構築時のAIインスタンススタックの作成時に、AIインスタンスとプライベートエンドポイントセキュリティグループを作成および更新 | EC2: RevokeSecurityGroupEgress | 導入 | 自動化 
+| 導入時と再構築時のAIエンジンスタック作成時のイメージをリスト表示 | EC2: DescribeImages | 導入 | 読み取り / 書き込み 
 
 
-| EC2: RevokeSecurityGroupIngress | 導入 | 自動化 
+.2+| 導入および再構築処理中のAIインスタンススタックの作成中に、AIインスタンスとプライベートエンドポイントセキュリティグループを作成および更新 | EC2: RevokeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
 
 
-| 導入および再構築処理中にCloudFormationスタックの作成中にAIエンジンを実行 | EC2：RunInstances | 導入 | 自動化 
+| EC2: RevokeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
 
 
-.2+| 導入時や再構築時のスタック作成時に、セキュリティグループを追加してAIエンジンのルールを変更 | ec2：AuthorizeSecurityGroupEgress | 導入 | 自動化 
+| 導入および再構築処理中にCloudFormationスタックの作成中にAIエンジンを実行 | EC2：RunInstances | 導入 | 読み取り / 書き込み 
 
 
-| ec2：AuthorizeSecurityGroupIngress | 導入 | 自動化 
+.2+| 導入時や再構築時のスタック作成時に、セキュリティグループを追加してAIエンジンのルールを変更 | ec2：AuthorizeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンの導入時にAmazon Bedrock / Amazon CloudWatchのログステータスを照会 | Bedrock：GetModelInvocationLoggingConfiguration | 導入 | 自動化 
+| ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
 
 
-| 基本モデルのいずれかに対してチャットリクエストを開始する | Bedrock：InvokeModelWithResponseStream | 導入 | 自動化 
+| AIエンジンの導入時にAmazon Bedrock / Amazon CloudWatchのログステータスを照会 | Bedrock：GetModelInvocationLoggingConfiguration | 導入 | 読み取り / 書き込み 
 
 
-| 基礎モデルのチャット/埋め込みリクエストの開始 | Bedrock：InvokeModel | 導入 | 自動化 
+| 基本モデルのいずれかに対してチャットリクエストを開始する | Bedrock：InvokeModelWithResponseStream | 導入 | 読み取り / 書き込み 
 
 
-| リージョンで使用可能な基盤モデルを表示する | Bedrock: ListFoundationModels | 導入 | 自動化 
+| 基礎モデルのチャット/埋め込みリクエストの開始 | Bedrock：InvokeModel | 導入 | 読み取り / 書き込み 
 
 
-| 基盤モデルへのアクセスを確認 | Bedrock：GetFoundationModelAvailability | 導入 | 自動化 
+| リージョンで使用可能な基盤モデルを表示する | Bedrock: ListFoundationModels | 導入 | 読み取り / 書き込み 
 
 
-| 導入と再構築の処理中にAmazon CloudWatchロググループを作成する必要があることを確認 | ログ:DescriptionLogGroups | 導入 | 自動化 
+| 基盤モデルに関する情報を取得する | Bedrock：GetFoundationModel | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンウィザードでFSxとAmazon Bedrockをサポートするリージョンを取得 | SSM：GetParametersByPath | 導入 | 自動化 
+| 基盤モデルへのアクセスを確認 | Bedrock：GetFoundationModelAvailability | 導入 | 読み取り / 書き込み 
 
 
-| 導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手 | SSM：GetParameters | 導入 | 自動化 
+| 導入と再構築の処理中にAmazon CloudWatchロググループを作成する必要があることを確認 | ログ:DescriptionLogGroups | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンに送信されたコマンドからSSM応答を取得する | SSM：GetCommandInvocation | 導入 | 自動化 
+| AIエンジンウィザードでFSxとAmazon Bedrockをサポートするリージョンを取得 | SSM：GetParametersByPath | 導入 | 読み取り / 書き込み 
 
 
-.2+| AIエンジンへのSSM接続を確認する | SSM:sendCommand | 導入 | 自動化 
+| 導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手 | SSM：GetParameters | 導入 | 読み取り / 書き込み 
 
 
-| SSM：GetConnectionStatus | 導入 | 自動化 
+| AIエンジンに送信されたコマンドからSSM応答を取得する | SSM：GetCommandInvocation | 導入 | 読み取り / 書き込み 
 
 
-.8+| 導入および再構築処理中のスタック作成時にAIエンジンインスタンスプロファイルを作成 | IAM：CREATEROLE | 導入 | 自動化 
+.2+| AIエンジンへのSSM接続を確認する | SSM:sendCommand | 導入 | 読み取り / 書き込み 
 
 
-| IAM：CreateInstanceProfile | 導入 | 自動化 
+| SSM：GetConnectionStatus | 導入 | 読み取り / 書き込み 
 
 
-| IAM：AddRoleToInstanceProfile | 導入 | 自動化 
+.8+| 導入および再構築処理中のスタック作成時にAIエンジンインスタンスプロファイルを作成 | IAM：CREATEROLE | 導入 | 読み取り / 書き込み 
 
 
-| IAM：PutRolePolicy | 導入 | 自動化 
+| IAM：CreateInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| IAM：GetRolePolicy | 導入 | 自動化 
+| IAM：AddRoleToInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| IAM：GetRole | 導入 | 自動化 
+| IAM：PutRolePolicy | 導入 | 読み取り / 書き込み 
 
 
-| IAM：TagRole | 導入 | 自動化 
+| IAM：GetRolePolicy | 導入 | 読み取り / 書き込み 
 
 
-| IAM：PassRole | 導入 | 自動化 
+| IAM：GetRole | 導入 | 読み取り / 書き込み 
 
 
-| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 自動化 
+| IAM：TagRole | 導入 | 読み取り / 書き込み 
 
 
-| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムを確認する | FSx：Description | ナレッジベースの作成 | 自動化 
+| IAM：PassRole | 導入 | 読み取り / 書き込み 
 
 
-| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムのボリュームを確認する | FSx：DescriptionFileSystems | ナレッジベースの作成 | 自動化 
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 読み取り / 書き込み 
 
 
-| 再構築処理中にAIエンジンを基盤としたナレッジベースを管理 | FSx：ListTagsForResource | トラブルシューティング | 自動化 
+| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムを確認する | FSx：Description | ナレッジベースの作成 | 読み取り / 書き込み 
 
 
-| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムStorage Virtual Machineを確認する | FSx：DescriptionStorageVirtualMachines | 導入 | 自動化 
+| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムのボリュームを確認する | FSx：DescriptionFileSystems | ナレッジベースの作成 | 読み取り / 書き込み 
 
 
-| ナレッジベースを新しいインスタンスに移動 | FSx：UntagResource | トラブルシューティング | 自動化 
+| 再構築処理中にAIエンジンを基盤としたナレッジベースを管理 | FSx：ListTagsForResource | トラブルシューティング | 読み取り / 書き込み 
 
 
-| 再構築時にAIエンジンに関するナレッジベースを管理 | FSx：TagResource | トラブルシューティング | 自動化 
+| 「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムStorage Virtual Machineを確認する | FSx：DescriptionStorageVirtualMachines | 導入 | 読み取り / 書き込み 
 
 
-.2+| SSMシークレット（ECRトークン、CIFSクレデンシャル、テナンシーサービスアカウントキー）をセキュアな方法で保存 | SSM:getParameter | 導入 | 自動化 
+| ナレッジベースを新しいインスタンスに移動 | FSx：UntagResource | トラブルシューティング | 読み取り / 書き込み 
 
 
-| SSM：PutParameter | 導入 | 自動化 
+| 再構築時にAIエンジンに関するナレッジベースを管理 | FSx：TagResource | トラブルシューティング | 読み取り / 書き込み 
 
 
-.2+| 導入と再構築の処理中に、AIエンジンのログをAmazon CloudWatchロググループに送信 | ログ:CreateLogGroup | 導入 | 自動化 
+.2+| SSMシークレット（ECRトークン、CIFSクレデンシャル、テナンシーサービスアカウントキー）をセキュアな方法で保存 | SSM:getParameter | 導入 | 読み取り / 書き込み 
 
 
-| ログ:PutRetentionPolicy | 導入 | 自動化 
+| SSM：PutParameter | 導入 | 読み取り / 書き込み 
 
 
-| AIエンジンのログをAmazon CloudWatchロググループに送信する | ログ:TagResource | トラブルシューティング | 自動化 
+.2+| 導入と再構築の処理中に、AIエンジンのログをAmazon CloudWatchロググループに送信 | ログ:CreateLogGroup | 導入 | 読み取り / 書き込み 
 
 
-| Amazon CloudWatchからSSMの応答を取得する（応答が長すぎる場合） | ログ:DescriptionLogStreams | トラブルシューティング | 自動化 
+| ログ:PutRetentionPolicy | 導入 | 読み取り / 書き込み 
 
 
-| Amazon CloudWatchからSSMの応答を入手 | ログ:GetLogEvents | トラブルシューティング | 自動化 
+| AIエンジンのログをAmazon CloudWatchロググループに送信する | ログ:TagResource | トラブルシューティング | 読み取り / 書き込み 
 
 
-.3+| 導入および再構築処理中のスタック作成中に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する | ログ:CreateLogGroup | 導入 | 自動化 
+| Amazon CloudWatchからSSMの応答を取得する（応答が長すぎる場合） | ログ:DescriptionLogStreams | トラブルシューティング | 読み取り / 書き込み 
 
 
-| ログ:PutRetentionPolicy | 導入 | 自動化 
+| Amazon CloudWatchからSSMの応答を入手 | ログ:GetLogEvents | トラブルシューティング | 読み取り / 書き込み 
 
 
-| ログ:TagResource | 導入 | 自動化 
+.3+| デプロイおよび再構築処理中のスタック作成時に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する | ログ:CreateLogGroup | 導入 | 読み取り / 書き込み 
 
 
-| BedrockのログをAmazon CloudWatchに送信 | Bedrock：PutModelInvocationLoggingConfiguration | トラブルシューティング | 自動化 
+| ログ:PutRetentionPolicy | 導入 | 読み取り / 書き込み 
 
 
-| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | IAM：AttachRolePolicy | トラブルシューティング | 自動化 
+| ログ:TagResource | 導入 | 読み取り / 書き込み 
 
 
-| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | IAM：PassRole | トラブルシューティング | 自動化 
+| BedrockのログをAmazon CloudWatchに送信 | Bedrock：PutModelInvocationLoggingConfiguration | トラブルシューティング | 読み取り / 書き込み 
 
 
-| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | iam：createPolicy | トラブルシューティング | 自動化 
+| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | IAM：AttachRolePolicy | トラブルシューティング | 読み取り / 書き込み 
 
 
-| モデルの推論プロファイルをリスト表示 | Bedrock: ListInferenceProfiles | トラブルシューティング | 自動化 
+| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | IAM：PassRole | トラブルシューティング | 読み取り / 書き込み 
+
+
+| Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する | iam：createPolicy | トラブルシューティング | 読み取り / 書き込み 
+
+
+| モデルの推論プロファイルをリスト表示 | Bedrock: ListInferenceProfiles | トラブルシューティング | 読み取り / 書き込み 
 |===
 ====
 
@@ -1926,7 +1973,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 ====
 [role="tabbed-block"]
 =====
-.読み取りモード
+.読み取り専用モード
 --
 [source, json]
 ----
@@ -1959,7 +2006,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 }
 ----
 --
-.自動モード
+.読み取り/書き込みモード
 --
 [source, json]
 ----
@@ -2040,28 +2087,28 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 | 目的 | アクション | 使用先 | モード 
 
 
-| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupIngress | 導入 | 自動化 
+| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
 
 
-| EBSボリュームを作成する | EC2：CreateVolume | 導入 | 自動化 
+| EBSボリュームを作成する | EC2：CreateVolume | 導入 | 読み取り / 書き込み 
 
 
-| VMwareワークロードによって作成されたFSx for NetApp ONTAPリソースのカスタム値にタグを付ける | FSx：TagResource | 導入 | 自動化 
+| VMwareワークロードによって作成されたFSx for NetApp ONTAPリソースのカスタム値にタグを付ける | FSx：TagResource | 導入 | 読み取り / 書き込み 
 
 
-| CloudFormationテンプレートの作成と検証 | CloudFormation：CreateStack | 導入 | 自動化 
+| CloudFormationテンプレートの作成と検証 | CloudFormation：CreateStack | 導入 | 読み取り / 書き込み 
 
 
-| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateSecurityGroup | 導入 | 自動化 
+| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateSecurityGroup | 導入 | 読み取り / 書き込み 
 
 
-| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | 自動化 
+| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | 読み取り / 書き込み 
 
 
-| EC2インスタンスの詳細を取得 | EC2: DescribeInstances | 導入 | 自動化 
+| EC2インスタンスの詳細を取得 | EC2: DescribeInstances | 導入 | 読み取り / 書き込み 
 
 
-| 展開および再構築操作中のスタック作成中のイメージのリスト表示 | EC2: DescribeImages | 導入 | 自動化 
+| 展開および再構築操作中のスタック作成中のイメージのリスト表示 | EC2: DescribeImages | 導入 | 読み取り / 書き込み 
 
 
 | 選択した環境内のVPCを取得して導入フォームに記入 | EC2: DescribeVpcs  a| 
@@ -2069,8 +2116,8 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -2080,15 +2127,15 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | 選択した環境のセキュリティグループを取得して、展開フォームに入力します。 | EC2: DescribeSecurityGroups | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
@@ -2098,58 +2145,58 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 * インベントリ
 
  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | Amazon FSx for NetApp ONTAPのサポートリージョンを取得 | EC2: DescribeRegions (説明領域 | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーのエイリアスを取得する | KMS：エイリアスを確認する | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーを入手 | KMS：ListKeys | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーの有効期限の詳細を取得 | KMS:説明キー | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
 | SSMベースのクエリを使用して、Amazon FSx for NetApp ONTAPでサポートされるリージョンの最新リストを取得 | SSM：GetParametersByPath | 導入  a| 
-* 読み取り
-* 自動化
+* 読み取り専用
+* 読み取り / 書き込み
 
 
 
 
-.3+| プロビジョニングに必要なAmazon FSx for NetApp ONTAPリソースを作成する | FSx：CreateFileSystem | 導入 | 自動化 
+.3+| プロビジョニングに必要なAmazon FSx for NetApp ONTAPリソースを作成する | FSx：CreateFileSystem | 導入 | 読み取り / 書き込み 
 
 
-| FSx：CreateStorageVirtualMachine | 導入 | 自動化 
+| FSx：CreateStorageVirtualMachine | 導入 | 読み取り / 書き込み 
 
 
 | FSx：ボリュームの作成  a| 
 * 導入
 * カンリシヨリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 .2+| Amazon FSx for NetApp ONTAPの詳細 | FSx：説明*  a| 
@@ -2158,42 +2205,42 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 * カンリシヨリ
 * コスト削減の詳細
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | FSx：リスト*  a| 
 * 導入
 * インベントリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-.5+| KMSの主要な詳細情報を入手し、Amazon FSx for NetApp ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 自動化 
+.5+| KMSの主要な詳細情報を入手し、Amazon FSx for NetApp ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 読み取り / 書き込み 
 
 
-| KMS：説明* | 導入 | 自動化 
+| KMS：説明* | 導入 | 読み取り / 書き込み 
 
 
-| KMS：リスト* | 導入 | 自動化 
+| KMS：リスト* | 導入 | 読み取り / 書き込み 
 
 
-| KMS：復号化 | 導入 | 自動化 
+| KMS：復号化 | 導入 | 読み取り / 書き込み 
 
 
-| KMS：GenerateDataKey | 導入 | 自動化 
+| KMS：GenerateDataKey | 導入 | 読み取り / 書き込み 
 
 
-| カスタマーSNSのトピックを一覧表示し、WLMVMCバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS：公開 | 導入 | 自動化 
+| カスタマーSNSのトピックを一覧表示し、WLMVMCバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS：公開 | 導入 | 読み取り / 書き込み 
 
 
 | Amazon FSx for NetApp ONTAPでサポートされるAWSリージョンの最新リストを取得するために使用 | SSM：GET *  a| 
 * 導入
 * カンリシヨリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
-| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 自動化 
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 読み取り / 書き込み 
 
 
 .4+| SSMパラメータストアを使用してAmazon FSx for NetApp ONTAPのクレデンシャルを保存 | SSM:getParameter  a| 
@@ -2201,28 +2248,28 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 * カンリシヨリ
 * インベントリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | SSM：PutParameters  a| 
 * 導入
 * インベントリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | SSM：PutParameter  a| 
 * 導入
 * カンリシヨリ
 
-| 自動化 
+| 読み取り / 書き込み 
 
 
 | SSM：DeleteParameters  a| 
 * 導入
 * カンリシヨリ
 
-| 自動化 
+| 読み取り / 書き込み 
 |===
 ====
 
@@ -2233,9 +2280,17 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 
 
+=== 2025年5月4日
+
+生成AIの_Read/Write_modeで次の権限を使用できるようになりました `qbusiness:ListApplications`。
+
+データベースの_Read-only_modeで次の権限を使用できるようになりました `logs:GetLogEvents`。
+
+
+
 === 2025年4月2日
 
-次の権限がデータベースの_READ MODE_で使用できるようになりました `ssm:DescribeInstanceInformation`。
+データベースの_Read-only_modeで次の権限を使用できるようになりました `ssm:DescribeInstanceInformation`。
 
 
 
@@ -2245,7 +2300,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 ==== 生成AIワークロード権限の更新
 
-生成AIの_automate mode__では、次の権限を使用できるようになりました。
+生成AIの_読み取り/書き込みモード_で次の権限を使用できるようになりました。
 
 * `bedrock:PutModelInvocationLoggingConfiguration`
 * `iam:AttachRolePolicy`
@@ -2254,7 +2309,7 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 * `bedrock:ListInferenceProfiles`
 
 
-生成AIの_automate mode_:から次の権限が削除されました `Bedrock:GetFoundationModel`。
+生成AIの_読み取り/書き込みモード_から次の権限が削除されました `Bedrock:GetFoundationModel`。
 
 
 
@@ -2266,10 +2321,10 @@ AWSアカウントのクレデンシャルを追加するとき、またはワ�
 
 === 2025年3月2日
 
-生成AIの_automate_modeで次の権限を使用できるようになりました `bedrock:GetFoundationModel`。
+生成AIの_Read/Write_modeで次の権限を使用できるようになりました `bedrock:GetFoundationModel`。
 
 
 
 === 2025年2月3日
 
-データベースの_read_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。
+データベースの_Read-only_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。

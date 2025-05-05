@@ -169,8 +169,6 @@
   <block id="0261a8e2837bda78e3e9784459c8d346" category="doc">運用モードとAWSクレデンシャルの詳細</block>
   <block id="3b39e22b0ceb822bf56d19eb7ec14f7f" category="section-title">動作モード</block>
   <block id="dad76b021334eb3d63f98648f701f598" category="list-text">基本モード</block>
-  <block id="1aa9d894db1bbfc4f52d99a458da7ff9" category="list-text">読み取りモード</block>
-  <block id="8d350bc547891d480d771e3f371ccf36" category="list-text">自動モード</block>
   <block id="ba15cdea72f76749ac3c4d115682e1d5" category="section-title">運用モードの機能</block>
   <block id="98065f8fb54547b003b502647ed5da13" category="paragraph">各モードを使用できる機能は、各モードに応じて拡張されます。</block>
   <block id="650be61892bf690026089544abbd9d26" category="cell">モード</block>
@@ -183,7 +181,6 @@
   <block id="7a1a5f3e79fdc91edf2f5ead9d66abb4" category="cell">読み取り</block>
   <block id="dd5bf678cc7b441324b2d76ab8b6329d" category="cell">IACテンプレートを適度に完成させる</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">はい</block>
-  <block id="9ed56d4841dbb118ee9f4fc81ea82572" category="cell">自動化</block>
   <block id="3babc847b322c661049062334b9c76b2" category="cell">フルオートメーション</block>
   <block id="78ac103234082be5f5a4ea67a4551981" category="cell">完全自動化された完全なIACテンプレート</block>
   <block id="c1ae257d71f3632f9398109243cbfd70" category="section-title">運用モードの要件</block>
@@ -197,7 +194,6 @@
   <block id="cea96a6659ee3b63722518018a5e6659" category="paragraph"><block ref="cea96a6659ee3b63722518018a5e6659" category="inline-link-rx"></block></block>
   <block id="7cc58201fa83275d07886281be81a758" category="section-title">運用モードの例</block>
   <block id="5504977cb47d642da3d1264eefb7edda" category="section-title">例1</block>
-  <block id="38356e3b8f5e0e5ad2a7ff778c4e8d82" category="paragraph">次の権限が付与されたクレデンシャルを使用するアカウントユーザは、FSx for ONTAPファイルシステムの作成、データベースの導入、アカウントで使用されているその他のタイプのAWSストレージの表示を完全に制御（自動モード）できます。</block>
   <block id="4cd751338620bbd6099bbf7dcff61879" category="inline-image-macro">2種類のワークロード権限を提供する1組のクレデンシャルを示すスクリーンショット。</block>
   <block id="9d405f908b42d501e27391e88e96690c" category="paragraph"><block ref="9d405f908b42d501e27391e88e96690c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5f3a8aa007370d00f3fd3b293a6a1118" category="section-title">例2</block>
@@ -327,8 +323,6 @@
   <block id="22412f0c62e1935807bc2c96a82d38cd" category="inline-link">Webベースのコンソール</block>
   <block id="9b945efebb006547a94415eadaa12921" category="section-title">アカウント</block>
   <block id="41d28e7b29f45d4f63653993af041bc7" category="paragraph">組織で追加のアカウントまたはユーザー管理が必要な場合は、製品内のチャットを使用して当社に連絡してください。</block>
-  <block id="d81fee99e7fd276bb44ecddacfeba318" category="list-text">*読み取りモード*は、ユーザーがさまざまなリソースやツールを検出するのを支援し、関連するウィザードを完了するのを支援することにより、基本モードのエクスペリエンスを向上させます。</block>
-  <block id="e2cde95c1c68867f8b74113e5266c7e4" category="list-text">*自動化モード*は完全な信頼関係を表し、実行に必要な、検証済みの権限を持つ割り当てられた資格情報とともに、ユーザーに代わって実行および自動化するように設計されています。</block>
   <block id="e73298b79ea9408111cb3612bf336a0e" category="section-title">接続リンク</block>
   <block id="e20e09752eeb59f7fee2ca964db1c848" category="paragraph">現在、リンクはAWS Lambdaを利用しています。</block>
   <block id="e3bdd5798efebca8061760f610d98bcc" category="inline-link">リンクの詳細</block>
@@ -385,7 +379,6 @@
   <block id="717f9c6475fbb39a24ab9942c1a903c0" category="inline-link-macro">BlueXP  コンソールからワークロードファクトリにアクセスする方法</block>
   <block id="4fa2f246a664251a157926c2e11e1eb3" category="summary">AWSクレデンシャルを追加して、ワークロードファクトリにAWSアカウントのクラウドリソースの導入と管理に必要な権限を付与します。</block>
   <block id="188c7f44ffe17186c8dcbc38640d54e1" category="paragraph">AWSクレデンシャルを追加して管理し、ワークロードファクトリにAWSアカウントのクラウドリソースの導入と管理に必要な権限を付与する。</block>
-  <block id="ef76867d2d387a61f890c38a33b72db2" category="paragraph">AWSアカウントのクレデンシャルを追加しないかぎり、Workload Factoryは_basic_modeで動作します。クレデンシャルを追加して、読み取りモードや自動化モードなどの他の操作モードを有効にすることができます。<block ref="3ecbe38d325fe0025957d871a4619a77" category="inline-link-macro-rx"></block>です。</block>
   <block id="46d8bcaa7ad323ed43d1470da9f4d8d4" category="paragraph">[Credentials]ページで、既存のワークロードファクトリアカウントにAWSクレデンシャルを追加できます。これにより、AWSクラウド環境内のリソースとプロセスの管理に必要な権限がワークロードファクトリに提供されます。</block>
   <block id="a8d22daacb593b2058549a21847e76f3" category="list-text">*手動*：AWSアカウントにIAMポリシーとIAMロールを作成し、ワークロードファクトリにクレデンシャルを追加します。</block>
   <block id="d57580b6e425a294d78d2a742a402af8" category="paragraph">ワークロードファクトリにAWSクレデンシャルを手動で追加して、ワークロードファクトリアカウントに、固有のワークロードの実行に使用するAWSリソースの管理に必要な権限を付与することができます。追加するクレデンシャルの各セットには、使用するワークロード機能に基づいて1つ以上のIAMポリシーと、アカウントに割り当てられたIAMロールが含まれます。</block>
@@ -408,8 +401,6 @@
   <block id="bd8d6e5dfffb67199ddeb1c155bc6e48" category="paragraph"><block ref="bd8d6e5dfffb67199ddeb1c155bc6e48" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3aa9d8c5e3261007f739ce4fad58363e" category="list-text">ワークロードファクトリに戻り、[Credentials]ページを監視して、新しいクレデンシャルが実行中であるか、または追加されていることを確認します。</block>
   <block id="9e45a841cd3d04ddc3431cb5c2faefdc" category="summary">Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。Codeboxは、ワークロードファクトリのオペレーションモード（Basic、Read、Automate）と連携しており、実行準備のための明確なパスを設定し、将来の迅速な再利用のための自動化カタログを提供します。</block>
-  <block id="1fa615fd351b087a76b1e2c3e58b88aa" category="paragraph">Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。Codeboxは、ワークロードファクトリのオペレーションモード（Basic、Read、Automate）と連携しており、実行準備のための明確なパスを設定し、将来の迅速な再利用のための自動化カタログを提供します。</block>
-  <block id="43121d36d9075d72f302f224d3e42ae1" category="paragraph">さらに、ワークロードファクトリクレデンシャルを設定する場合、CodeboxはIAMポリシーの作成に必要なAWS権限を動的に表示します。権限は、使用する予定のワークロードファクトリ機能（データベース、AI、FSx for ONTAPなど）ごとに提供され、ポリシーのユーザに読み取り専用権限とフル運用権限のどちらを付与するかに基づいてカスタマイズされます。Codeboxから権限をコピーしてAWS管理コンソールに貼り付けるだけで、ワークロードファクトリにワークロードを管理するための適切な権限が付与されます。</block>
   <block id="4dbdfdd6a8563d138a057f5cd3bb0f0b" category="list-text">ワークロードファクトリREST API</block>
   <block id="7f13adabeed591303c3a10ee4980d5a1" category="summary">BlueXP  ワークロードファクトリには、2つのWebベースのコンソールからアクセスできます。</block>
   <block id="c938676b28ab6dd4d5cc28ebdf8c49b9" category="doc">コンソールエクスペリエンス</block>
@@ -446,9 +437,7 @@
   <block id="9317db7f25495b088f6318d86dfd14bf" category="list-text">完全な信頼関係を表し、ワークロードファクトリに完全な権限が割り当てられます。これにより、ワークロードファクトリは、実行に必要な権限を持つ割り当てられたクレデンシャルとともに、AWSでの処理をユーザに代わって実行および自動化できます。</block>
   <block id="c733eb78f31844c1e1433a374c901d1e" category="cell">ワークロード工場からの自動化</block>
   <block id="b1ac12ec9d4b511fa08a587be1be8b4d" category="paragraph">使用するモードを特定するためにワークロードファクトリで設定する必要のあるセレクタはありません。モードは、ワークロードファクトリアカウントに割り当てたAWSのクレデンシャルと権限に基づいて決定されます。</block>
-  <block id="64c0a6c81b6c3af3765c25256dcbf047" category="paragraph">クレデンシャルを設定して、あるワークロードコンポーネントに1つのモードを設定し、別のコンポーネントに別のモードを設定できます。たとえば、FSx for ONTAPファイルシステムを導入および管理する運用については自動モードを設定できますが、ワークロードファクトリを使用してデータベースワークロードを作成および導入する場合は読み取りモードのみを設定できます。</block>
   <block id="20f75920053dcff627d860520f371b26" category="paragraph">これらの機能は、ワークロードファクトリアカウントの1つのクレデンシャルセット内で提供できます。また、各クレデンシャルが固有のワークロード導入機能を提供する場合は、複数のクレデンシャルセットを作成することもできます。</block>
-  <block id="ccff80abdf432e228d3c0d30a4a114de" category="paragraph">ただし、ワークロードファクトリからVMwareワークロード（基本モード）を作成および導入するための自動制御機能はありません。VMwareワークロードを作成する場合、この機能を使用するには、コードボックスからコードをコピーし、AWSアカウントに手動でログインし、生成されたコードに不足しているエントリを手動で入力する必要があります。</block>
   <block id="2fb909c54550b56bac338e985277eb1a" category="paragraph">最初のワークロードファクトリ機能（機能）を使用する場合は、それらのワークロード機能に必要な権限を使用してクレデンシャルを作成する必要があります。資格情報をワークロードファクトリに追加しますが、IAMロールとポリシーを作成するにはAWS管理コンソールにアクセスする必要があります。これらのクレデンシャルは、ワークロードファクトリの機能を使用している場合にアカウント内で使用できます。</block>
   <block id="929b839513dbfff16e7804628038a9a8" category="paragraph">ワークロードファクトリに複数のAWSクレデンシャルを追加すると、FSx for ONTAPファイルシステム、FSx for ONTAPでのデータベースの導入、VMwareワークロードの移行など、追加の機能を使用するために必要な権限が追加されます。</block>
   <block id="5145374f219e1c177ab5588a5344aa6e" category="inline-link-macro">ワークロードファクトリにAWSクレデンシャルを追加する方法を確認</block>
@@ -460,7 +449,6 @@
   <block id="70d0aaf5f480c6663d11cba807745150" category="paragraph">ワークロードファクトリには、Webベースのコンソールからクラウドサービスとしてアクセスできます。作業を開始する前に、とについて理解しておく必要があります <block ref="e8fd0c1fcb8ab0b007f06daaaaad1620" category="inline-link-macro-rx"></block> <block ref="232f97f76b2e1af290ebde69715d8d8f" category="inline-link-macro-rx"></block>。</block>
   <block id="5aef544885f83ccc840e539c33cb1025" category="paragraph">に移動<block ref="c88df82826d36e57e6bb9062bf07b8b2" category="inline-link-rx"></block>し、サインアップしてアカウントを作成します。</block>
   <block id="60606490df41979dfeb5466c4c9f1288" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>ワークロードファクトリへのAWSクレデンシャルの追加</block>
-  <block id="8240cb8cdbe0ba3f858b0fda1bb07bfc" category="paragraph">この手順はオプションです。AWSアカウントにアクセスするためのクレデンシャルを追加することなく、_Basic_modeでワークロードファクトリを使用できます。AWSクレデンシャルを_Read_modeまたは_automate_modeでワークロードファクトリに追加すると、FSx for ONTAPファイルシステムの作成と管理、データベースや 生成AIなどの特定のワークロードの導入と管理に必要な権限がワークロードファクトリアカウントに付与されます。</block>
   <block id="51ff16c71246f19573efec76f8f088e4" category="paragraph">サインアップしてアカウントを作成し、必要に応じてAWSクレデンシャルを追加したら、ワークロードファクトリの使用を開始して、FSx for ONTAPを使用してワークロードを最適化できます。以下のリンクを使用して、ワークロードのタイプごとのステップバイステップの手順を実行します。</block>
   <block id="9ec9485bf8174a52fd8f6a62564d8738" category="summary">ワークロードファクトリには、Webベースのコンソールからアクセスできます。ワークロードの工場出荷を開始したら、最初にNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインを作成してサインアップします。</block>
   <block id="a51339d19908e6fdb3902e2656db64d1" category="doc">BlueXP  Workload Factoryに登録</block>
@@ -475,7 +463,6 @@
   <block id="3acdefd13933ae891b18dfca314c3ae8" category="summary">Codeboxを使用して、BlueXP  ワークロードファクトリでサポートされている操作を実行するために必要なコードを生成できます。</block>
   <block id="7a722a65def6075db353b70066e35707" category="doc">BlueXP  ワークロードファクトリでの自動化にCodeboxを使用</block>
   <block id="a874d0883486fcca7aa1243ef9acc01d" category="paragraph">Codeboxを使用して、BlueXP  ワークロードファクトリでサポートされている操作を実行するために必要なコードを生成できます。ワークロードファクトリREST API、AWS CLI、およびAWS CloudFormationを使用して、使用および実行可能なコードを生成できます。</block>
-  <block id="3e529d693ad9e838d629617602ce7195" category="paragraph">Codeboxは、各ユーザーのWorkload Factoryアカウントで提供されるAWS権限に基づいてコードに適切なデータを入力することで、Workload Factoryの動作モード（Basic、Read、およびAutomate）と連携しています。コードは、コードを実行する前に不足している情報(資格情報など)を入力したり、特定のデータをカスタマイズしたりできるテンプレートのように使用できます。</block>
   <block id="5a43715fb7078b4045756abce9da826e" category="paragraph">Workload Factory UIウィザードで値を入力すると、各フィールドに入力すると、[コードボックス]にデータの更新が表示されます。ウィザードを完了したら、ページ下部の*作成*ボタンを選択する前に、[コードボックスにコピー]を選択して、 <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> 構成の構築に必要なコードを取得します。たとえば、新しいMicrosoft SQL Serverを作成した場合のスクリーンショットには、VPCゾーンとアベイラビリティゾーンのウィザードエントリと、REST API実装のCodeboxの同等のエントリが示されています。</block>
   <block id="d10cc376cc863f01ec47fab56e956119" category="paragraph">Codeboxから生成されたCloudFormationコードをコピーし、AWSアカウントでAmazon Web Services CloudFormationスタックを起動できます。CloudFormationは、ワークロードファクトリのUIで定義したアクションを実行します。</block>
   <block id="d4483cf5ec74c50b2bf5b0430ea00d3e" category="paragraph">CloudFormationコードを使用する手順は、FSx for ONTAPファイルシステムの導入、アカウントのクレデンシャルの作成、またはその他のワークロードファクトリアクションの実行によって異なる場合があります。</block>
@@ -510,13 +497,6 @@
   <block id="691199ddecf65c4783496c94612dd07f" category="paragraph">ワークロードファクトリを開始するためのリンクは必要ありませんが、場合によっては、ワークロードファクトリのすべての機能とワークロード機能をロック解除するためのリンクを作成する必要があります。</block>
   <block id="977c73c0914e897973f4ba0be879711f" category="paragraph">Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者やDevOpsエンジニアがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。コード形式には、ワークロードファクトリREST API、AWS CLI、AWS CloudFormationなどがあります。</block>
   <block id="4d062c42aef687546a9198cf40695389" category="paragraph">Codeboxは、ワークロードファクトリのオペレーションモード（Basic、Read、Automate）と整合しており、実行準備のための明確なパスと、将来の迅速な再利用のための自動化カタログを設定します。</block>
-  <block id="200e3179449390bdf5f3f8d9a199630c" category="section-title">ワークロードファクトリを使用するためのツール</block>
-  <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">BlueXP  ワークロード工場では、次のツールを使用できます。</block>
-  <block id="d5688c5bf16d0126d5b27759385bd41e" category="list-text">*ワークロードファクトリコンソール*:ワークロードファクトリコンソールは、アプリケーションとプロジェクトの全体的なビューを提供するビジュアルインターフェイスを提供します。</block>
-  <block id="38f4e563ea70a0c42a140783a152e82f" category="list-text">* BlueXP  コンソール*：BlueXP  コンソールはハイブリッドインターフェイスを提供するため、BlueXP  ワークロードファクトリを他のBlueXP  サービスと一緒に使用できます。</block>
-  <block id="a3ee2d6d4606b21bc131c4389e63413b" category="list-text">* REST API *：ワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理できます。</block>
-  <block id="35507c73673fd91f2b540f5ac22435e2" category="list-text">* CloudFormation *：AWS CloudFormationコードを使用すると、ワークロードファクトリコンソールで定義したアクションを実行して、AWSアカウントのCloudFormationスタックからAWSおよびサードパーティリソースをモデル化、プロビジョニング、管理できます。</block>
-  <block id="2b796a233d6b48fb3e49b8c71a2addb1" category="list-text">* Terraform BlueXP  ワークロードファクトリプロバイダ*：Terraformを使用すると、ワークロードファクトリコンソールで生成されたインフラワークフローを構築および管理できます。</block>
   <block id="8ced11608886f669c92a28dad366c83f" category="paragraph">Workload Factoryでは、特定のワークロード向けにFSx for ONTAPファイルシステムを最適化、自動化、運用できます。各ワークロードには関連付けられたREST APIが公開されます。これらのワークロードとAPIを組み合わせることで、柔軟性と拡張性に優れた開発プラットフォームが形成され、FSx for ONTAPファイルシステムの管理に使用できます。</block>
   <block id="0839f9866a5d09d079388954e0119ee3" category="paragraph">ワークロードの工場出荷時のREST APIを使用すると、次のようなメリットがあります。</block>
   <block id="ee784d1edaf22c0f803f2403be1903b8" category="list-text">ワークロードファクトリ認証は、OAuth2標準に基づいています。NetAppはAuth0サービス実装に依存しています。</block>
@@ -525,7 +505,6 @@
   <block id="a6e871d2d7edd183ddc76f5c82f81c51" category="paragraph"><block ref="a6e871d2d7edd183ddc76f5c82f81c51" category="inline-link-rx"></block></block>
   <block id="ad58fbedc89b687da72b83c65c94187c" category="sidebar">Amazon FSx for NetApp ONTAPを使用して、ワークロードを最大限に活用できるように、BlueXP  ワークロードファクトリーの利用を開始しましょう。セットアップが完了したら、ワークロードに適したFSx for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム全体の自動化、ワークロードファクトリでのワークロードの管理を行うことができます。</block>
   <block id="9d99dd80a147b3b1376d73b8b105b981" category="sidebar">BlueXP  ワークロードの工場出荷時のセットアップと管理に関するドキュメント</block>
-  <block id="b5be8d4327a5f5a8cb712336382b2c2c" category="sidebar">ワークロードファクトリの概要</block>
   <block id="280ab23085110ae96b1c8df197382d0b" category="sidebar">Workload Factoryへの登録</block>
   <block id="cb1411d161cdf3fea65b5b1351ffa45b" category="sidebar">ワークロードファクトリの管理</block>
   <block id="2003c10ae1eaa96c8dd0c849f3e0b79e" category="sidebar">ワークロードファクトリへのログイン</block>
@@ -598,7 +577,6 @@
   <block id="43fcd221af337ae9a32718b7ef097cf2" category="summary">BlueXP  ワークロードファクトリの機能とサービスを使用するには、ワークロードファクトリがクラウド環境で操作を実行できるように権限を設定する必要があります。</block>
   <block id="d6a57e4245c0b8a043004e7acd2a2bd9" category="doc">BlueXP  ワアクロオトファクトリノケンケン</block>
   <block id="700a021d89dc2381c64a3ed9192ee53f" category="section-title">権限を使用する理由</block>
-  <block id="65508cebd422d78a4b01b7d67145b61f" category="paragraph">読み取りモードまたは自動モードの権限を指定すると、Workload Factoryは、そのAWSアカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスに関連付けます。これにより、ストレージ環境の検出から、ストレージ管理におけるファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、さまざまな処理をワークロードファクトリで実行できます。</block>
   <block id="141fc03482c74c6707d4666e1b85c2cf" category="paragraph">たとえば、データベースワークロードの場合、Workload Factoryに必要な権限が付与されると、特定のアカウントとリージョン内のすべてのEC2インスタンスがスキャンされ、すべてのWindowsベースのマシンがフィルタリングされます。ホストにAWS Systems Manager（SSM）エージェントがインストールされて実行されており、System Managerネットワークが適切に設定されていれば、ワークロードの工場からWindowsマシンにアクセスして、SQL Serverソフトウェアがインストールされているかどうかを確認できます。</block>
   <block id="a6a12fe94711dfdea0fcf1676358e0b3" category="section-title">ワークロード別の権限</block>
   <block id="fc80f33c496e0821a5411de4d55a7eb7" category="paragraph">各ワークロードは、権限を使用してワークロードファクトリで特定のタスクを実行します。使用するワークロードまでスクロールして、権限のリスト、目的、使用場所、サポートされているモードを確認します。</block>
@@ -857,7 +835,6 @@
   <block id="a7170e00216d426ffa1b5c8b1ad8faf2" category="list-text">「IAM：PassRole」は「IAM：PassedToService」によって制限されます：ec2.amazonaws.com"*</block>
   <block id="be5d4fafcc5fc8ef08ec4bd4f076e815" category="section-title">生成AIワークロードの権限</block>
   <block id="c01e6e48c9dd3d58f56addc8ddd893e8" category="paragraph">VMwareワークロードのIAMポリシーは、運用モードに基づいてパブリッククラウド環境内のリソースとプロセスを管理するために、VMwareのワークロードファクトリが必要とする権限を提供します。</block>
-  <block id="bc3cde15ee34ad6f9b8ff7079275d49d" category="paragraph">生成AI IAMポリシーは、OPERATEモードでのみ使用できます。</block>
   <block id="fc52d9d99561c2b721d43bdd4d36b615" category="example-title">生成AIワークロードのIAMポリシー</block>
   <block id="2d8cf1aba2af04b1b4fd9bd3d7d6905f" category="paragraph">次の表に、生成AIワークロードの権限の詳細を示します。</block>
   <block id="64f5bb9f44fff01f3adc6fad9e6240f7" category="example-title">生成AIワークロードの権限の一覧</block>
@@ -1046,7 +1023,6 @@
   <block id="cf1f4a083afa7ccb1141e827deb4cdc2" category="paragraph">これで、からワークロードファクトリを使用できるようになり<block ref="4623dd80d89c29fbf0d2b04387a56c33" category="inline-link-macro-rx"></block>ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。</block>
   <block id="dec23cffbd0de1b8096bc26072eb0b7d" category="cell">導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手</block>
   <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2025年3月2日</block>
-  <block id="d783298edb81a604dd8765a5040ef52e" category="paragraph">生成AIの_automate_modeで次の権限を使用できるようになりました<block ref="1311c4cbbe5b925c15d25fe5ff7b022b" prefix=" " category="inline-code"></block>。</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログとコミュニティ</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetAppコミュニティ</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXPのブログ</block>
@@ -1055,7 +1031,6 @@
   <block id="4ef50e373522b91f7df59d5cba69a8b7" category="section-title">IAM：SimulatePermissionPolicy権限の更新</block>
   <block id="906699741ebd9905a07af900abcfd438" category="paragraph">AWSアカウントのクレデンシャルを追加したり、生成AIワークロードなどの新しいワークロード機能を追加したりするときに、ワークロードファクトリコンソールから権限を管理できるようになりまし<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>た。</block>
   <block id="c1bc5d8eeb872326cb512499f02befb5" category="paragraph"><block ref="c1bc5d8eeb872326cb512499f02befb5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f7b9069b6f855261dc3e63baeaa5531f" category="list-text">アクセス許可レベル（読み取りまたは自動化）を選択できるワークロード機能については、これらのクレデンシャルで使用できるアクセス許可のタイプを選択します。</block>
   <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーにが追加され<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
   <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーに権限が追加され<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
   <block id="ad9001b544dade5536691ec3feee578f" category="inline-link-macro">BlueXP  ワアクロオトファクトリノケンケン</block>
@@ -1063,7 +1038,6 @@
   <block id="8c5e268f15aeebda6b5b234b3f7c7174" category="cell">暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
   <block id="9b1384398d4de5545bd0dad2106d6b0d" category="cell">イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
   <block id="359cacd98d9742aded751741e70dce82" category="cell">AIエンジン導入ウィザードでサブネットを一覧表示する</block>
-  <block id="b2009fdc9170f9b13160d7da2fbab6aa" category="cell">導入時および再構築時のAIインスタンススタックの作成時に、AIインスタンスとプライベートエンドポイントセキュリティグループを作成および更新</block>
   <block id="f0f0a4abc20f5a5e438ac1da53b231af" category="cell">基本モデルのいずれかに対してチャットリクエストを開始する</block>
   <block id="ffd1e194cd59f12c42768a9effd5aa2f" category="cell">導入と再構築の処理中にAmazon CloudWatchロググループを作成する必要があることを確認</block>
   <block id="2887c4c92d65effaf012b7ca2f914958" category="cell">AIエンジンウィザードでFSxとAmazon Bedrockをサポートするリージョンを取得</block>
@@ -1075,7 +1049,6 @@
   <block id="a89bcda1bd913f5d2c92bb3afd10848c" category="cell">AIエンジンのログをAmazon CloudWatchロググループに送信する</block>
   <block id="1ae2d90929ed009fb7cb0c3215e704ed" category="cell">Amazon CloudWatchからSSMの応答を取得する（応答が長すぎる場合）</block>
   <block id="58401e538d76248fba41eb3d4b00ff5b" category="cell">Amazon CloudWatchからSSMの応答を入手</block>
-  <block id="79b580d74ffecaf0e2c1b9af0ac5f882" category="cell">導入および再構築処理中のスタック作成中に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する</block>
   <block id="4a5e33ece3615dac1032e841cde40447" category="cell">BedrockのログをAmazon CloudWatchに送信</block>
   <block id="add4bf257ce9e3b25c497de343e52632" category="cell">Bedrock：PutModelInvocationLoggingConfiguration</block>
   <block id="60932b6084feefeacceacd749dcdedc9" category="cell">Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する</block>
@@ -1085,13 +1058,11 @@
   <block id="9aa5a97dfe3f7608d8ee28e7db3c4e2c" category="cell">Bedrock: ListInferenceProfiles</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025年3月30日</block>
   <block id="68ef824f4316a8546891ab93ee11d77f" category="section-title">生成AIワークロード権限の更新</block>
-  <block id="f587eed9c7dc8910227d7d906f2261fd" category="paragraph">生成AIの_automate mode__では、次の権限を使用できるようになりました。</block>
   <block id="8478b63212964b55320b9d61c0737e08" category="list-text"><block ref="add4bf257ce9e3b25c497de343e52632" prefix="" category="inline-code"></block></block>
   <block id="d07fde30621d1890701e3ba8f6d492ad" category="list-text"><block ref="b76a6c7392362eeb73fd252a4af062ca" prefix="" category="inline-code"></block></block>
   <block id="a39790181f1fd72ef9537ae34545ff02" category="list-text"><block ref="f6ae0a8a1321975a6474722dcafe1322" prefix="" category="inline-code"></block></block>
   <block id="e1c6dba31ff47898c553f6707ccfbdb0" category="list-text"><block ref="8de34002c35d0d4a13280a50047e76e4" prefix="" category="inline-code"></block></block>
   <block id="71d01806cd25e89067c25b4f03e9a607" category="list-text"><block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix="" category="inline-code"></block></block>
-  <block id="4d3f55c3707ec2803e7eaf6d7b978451" category="paragraph">生成AIの_automate mode_:から次の権限が削除されました<block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block>。</block>
   <block id="4e1a858f8ffb4228ac62fb2a65e14e11" category="section-title">IAM：SimulatePrincipalPolicy権限の更新</block>
   <block id="ebbd089f3b834616ea3613bf16e46cbf" category="paragraph">AWSアカウントのクレデンシャルを追加するとき、またはワークロードファクトリコンソールから新しいワークロード機能を追加するときに自動権限チェックを有効にする場合、この<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>権限はすべてのワークロード権限ポリシーに含まれます。この権限は、ワークロードの処理をシミュレートし、必要なAWSアカウントの権限があるかどうかを確認してから、ワークロードファクトリからリソースを導入します。このチェックを有効にすると、失敗した処理からリソースをクリーンアップしたり、不足している権限を追加したりするために必要な時間と労力が軽減されます。</block>
   <block id="e81d623c1eabf7a990c647cdb9dc4de8" category="list-text">ONTAP CLIコマンドに対するAIが生成するエラー応答</block>
@@ -1128,6 +1099,45 @@
   <block id="e388026a0cea886de58a344e102aff29" category="cell">管理対象EC2インスタンスのグループのSSMアソシエーションステータスの取得（SQLノード）</block>
   <block id="3320749a6854264e1889d72d7f41a0bf" category="cell">SSM：InstanceInformationの説明</block>
   <block id="99e26a6b02df18a6d3fcaa201c832eff" category="section-title">2025年4月2日</block>
-  <block id="ecffd7b63fa9fc5c65235a6db0f2a9b2" category="paragraph">次の権限がデータベースの_READ MODE_で使用できるようになりました<block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block>。</block>
   <block id="0c749cb02f361ac40b1f6fc23a0feaf9" category="paragraph">詳細については、をご覧ください <block ref="8b9a4f89ed6bf874edd6af12deea004c" category="inline-link-macro-rx"></block>。</block>
+  <block id="74d516ef8dfa098bb4cd92313c403475" category="doc">CloudShellオートコンプリートのサポート</block>
+  <block id="df96b6f4ceabb5c4dbc915475fd821fe" category="paragraph">BlueXP  ワークロードファクトリCloudShellを使用している場合は、コマンドの入力を開始してTabキーを押すと、使用可能なオプションが表示されます。複数の候補が存在する場合は、CLIに候補のリストが表示されます。この機能は、エラーを最小限に抑え、コマンド実行を高速化することで、生産性を向上させます。</block>
+  <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">権限に関する用語を更新</block>
+  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">ワークロードファクトリのユーザインターフェイスとドキュメントでは、読み取り権限を「読み取り専用」に、自動権限を「読み取り/書き込み」に指定するようになりました。</block>
+  <block id="5a92867eb042f7dcff91a1de74a2aa76" category="paragraph">AWSアカウントのクレデンシャルを追加しないかぎり、Workload Factoryは_Basic_modeで動作します。クレデンシャルを追加して、_Read-only_modeや_Read/Write_modeなどの他の操作モードを有効にすることができます。<block ref="3ecbe38d325fe0025957d871a4619a77" category="inline-link-macro-rx"></block>です。</block>
+  <block id="015d402cdd34eee3e53cdd7bf1bde60e" category="list-text">権限レベル（読み取り専用、読み取り/書き込みなど）を選択できるワークロード機能については、これらのクレデンシャルで使用できる権限のタイプを選択します。</block>
+  <block id="33690931e0014f506be3c7e723737562" category="paragraph">Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。Codeboxは、ワークロードファクトリの動作モード（Basic、Read-Only、Read/Write）と連携しており、実行準備のための明確なパスを設定し、将来の迅速な再利用のための自動化カタログを提供します。</block>
+  <block id="fcb28ed33fed27ffbcd995263190fd03" category="paragraph">さらに、ワークロードファクトリクレデンシャルを設定する場合、CodeboxはIAMポリシーの作成に必要なAWS権限を動的に表示します。権限は、使用する予定のワークロードファクトリ機能（データベース、AI、FSx for ONTAPなど）ごとに提供され、ポリシーのユーザに読み取り専用権限と完全な読み取り/書き込み権限のどちらを付与するかに基づいてカスタマイズされます。Codeboxから権限をコピーしてAWS管理コンソールに貼り付けるだけで、ワークロードファクトリにワークロードを管理するための適切な権限が付与されます。</block>
+  <block id="ac811c471ef716f9c8a3865d7f14caa3" category="list-text">読み取り専用モード</block>
+  <block id="817855bb538dbbb63c56d38fc57684f5" category="list-text">読み取り/書き込みモード</block>
+  <block id="db3317ceb65be02e43db6f277e0ad94e" category="cell">読み取り / 書き込み</block>
+  <block id="27026b2887f7523ec1293c67830e4430" category="paragraph">クレデンシャルを設定して、あるワークロードコンポーネントに1つのモードを設定し、別のコンポーネントに別のモードを設定できます。たとえば、FSx for ONTAPファイルシステムを導入および管理する処理には読み取り/書き込みモードを設定できますが、ワークロードファクトリを使用してデータベースワークロードを作成および導入する処理には読み取りモードのみを設定できます。</block>
+  <block id="e6cecb421f7b5203c2daf4f545364558" category="paragraph">次の権限が付与されたクレデンシャルを使用するアカウントユーザは、FSx for ONTAPファイルシステムの作成、データベースの導入、アカウントで使用されているその他のタイプのAWSストレージの表示をフルコントロール（読み取り/書き込みモード）できます。</block>
+  <block id="c0ee691320caa89b529bc0bcaf9cc696" category="paragraph">ただし、ワークロードファクトリからVMwareワークロードを作成および導入するための自動制御機能（基本モード）はありません。VMwareワークロードを作成する場合、この機能を使用するには、コードボックスからコードをコピーし、AWSアカウントに手動でログインし、生成されたコードに不足しているエントリを手動で入力する必要があります。</block>
+  <block id="b91c58f3e94e0488074053d96cd4bbec" category="paragraph">読み取り専用モードまたは読み取り/書き込みモードの権限を指定すると、Workload Factoryは、そのAWSアカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスに関連付けます。これにより、ストレージ環境の検出から、ストレージ管理におけるファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、さまざまな処理をワークロードファクトリで実行できます。</block>
+  <block id="4d372922f30597b3e046274dbb3cecd2" category="list-text">読み取り専用</block>
+  <block id="d066bc059c61c75a41706f175a5b3f8b" category="cell">SSM出力の切り捨てが検出されると、ワークロードファクトリはSQLインスタンスのAmazon CloudWatchログに切り替えます。</block>
+  <block id="2e50818bd890a03b645105690ca2ee60" category="list-text">ストレージアセスメント</block>
+  <block id="38ef2c2517cd341233b9181c09ba8071" category="paragraph">生成AI IAMポリシーは、読み取り/書き込みモードでのみ使用できます。</block>
+  <block id="123ce9aa4e0770ecb435c005fa9b436c" category="cell">Amazon Q Businessアプリケーションを挙げる</block>
+  <block id="4f3c534c90392632c7d275f54d5b35a0" category="cell">qbusiness：ListApplications</block>
+  <block id="ff49b9449e169eb2a6d647cdd5416940" category="cell">導入および再構築処理中のAIインスタンススタックの作成中に、AIインスタンスとプライベートエンドポイントセキュリティグループを作成および更新</block>
+  <block id="fb2b74ed81679192134e9c2c07019b42" category="cell">基盤モデルに関する情報を取得する</block>
+  <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock：GetFoundationModel</block>
+  <block id="9dd35b54afccc27a1cc96eab777dbc8e" category="cell">デプロイおよび再構築処理中のスタック作成時に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する</block>
+  <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">2025年5月4日</block>
+  <block id="b1351fb22e71d3c2b886e8e0819e632f" category="paragraph">生成AIの_Read/Write_modeで次の権限を使用できるようになりました<block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block>。</block>
+  <block id="17cf827d0ea669f390d3f954ed27424d" category="paragraph">データベースの_Read-only_modeで次の権限を使用できるようになりました<block ref="6d952035baa97bd601f4d280f10fcc53" prefix=" " category="inline-code"></block>。</block>
+  <block id="83300e091c617144cede34b6c898e63b" category="paragraph">データベースの_Read-only_modeで次の権限を使用できるようになりました<block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block>。</block>
+  <block id="be999711faeee231a254e996141ed09f" category="paragraph">生成AIの_読み取り/書き込みモード_で次の権限を使用できるようになりました。</block>
+  <block id="9f4fc0ded0d1671253e5c8e38cd9464f" category="paragraph">生成AIの_読み取り/書き込みモード_から次の権限が削除されました<block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block>。</block>
+  <block id="879d4518dddfda849555dedfa0344aba" category="paragraph">生成AIの_Read/Write_modeで次の権限を使用できるようになりました<block ref="1311c4cbbe5b925c15d25fe5ff7b022b" prefix=" " category="inline-code"></block>。</block>
+  <block id="3089e2c4b3d7f4a789cb18dfd97328e5" category="paragraph">データベースの_Read-only_modeで次の権限を使用できるようになりました<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>。</block>
+  <block id="44e520fbea54c952ad648780f8fb60f3" category="paragraph">この手順はオプションです。AWSアカウントにアクセスするためのクレデンシャルを追加することなく、_Basic_modeでワークロードファクトリを使用できます。AWSクレデンシャルを_Read-only_modeまたは_Read/Write_modeでワークロードファクトリに追加すると、FSx for ONTAPファイルシステムの作成と管理、およびデータベースや 生成AIなどの特定のワークロードの導入と管理に必要な権限がワークロードファクトリアカウントに付与されます。</block>
+  <block id="bf0dcc34b100cf0ff91c26bbd98029f7" category="list-text">オートコンプリートのサポート：コマンドの入力を開始し、* Tab *キーを使用して使用可能なオプションを表示します。</block>
+  <block id="d1d81e390c1cc90777aae9880935cf73" category="paragraph">Codeboxは、各ユーザーのワークロードファクトリアカウントで提供されるAWS権限に基づいてコードに適切なデータを入力することで、ワークロードファクトリの動作モード（Basic、Read-Only、Read/Write）と連動しています。コードは、コードを実行する前に不足している情報(資格情報など)を入力したり、特定のデータをカスタマイズしたりできるテンプレートのように使用できます。</block>
+  <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
+  <block id="7a0e532396f167d85a7b425f941d0613" category="list-text">*読み取り専用モード*は、ユーザーがさまざまなリソースやツールを検出できるように支援し、関連するウィザードを完了できるようにすることで、Basicモードのエクスペリエンスを向上させます。</block>
+  <block id="4951a0172d4fd2c8116296e71073f31c" category="list-text">*読み取り/書き込みモード*は完全な信頼関係を表し、実行に必要な権限と検証済みの権限を持つ割り当てられた資格情報とともにユーザーに代わって実行および自動化するように設計されています。</block>
+  <block id="1c9640aa9075334712c6c2b922771c50" category="paragraph"><block ref="1c9640aa9075334712c6c2b922771c50" category="inline-link-rx"></block></block>
 </blocks>

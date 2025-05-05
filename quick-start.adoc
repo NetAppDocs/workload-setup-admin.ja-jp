@@ -24,7 +24,7 @@ link:sign-up-saas.html["サインアップしてアカウントを作成する�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"]ワークロードファクトリへのAWSクレデンシャルの追加
 [role="quick-margin-para"]
-この手順はオプションです。AWSアカウントにアクセスするためのクレデンシャルを追加することなく、_Basic_modeでワークロードファクトリを使用できます。AWSクレデンシャルを_Read_modeまたは_automate_modeでワークロードファクトリに追加すると、FSx for ONTAPファイルシステムの作成と管理、データベースや 生成AIなどの特定のワークロードの導入と管理に必要な権限がワークロードファクトリアカウントに付与されます。
+この手順はオプションです。AWSアカウントにアクセスするためのクレデンシャルを追加することなく、_Basic_modeでワークロードファクトリを使用できます。AWSクレデンシャルを_Read-only_modeまたは_Read/Write_modeでワークロードファクトリに追加すると、FSx for ONTAPファイルシステムの作成と管理、およびデータベースや 生成AIなどの特定のワークロードの導入と管理に必要な権限がワークロードファクトリアカウントに付与されます。
 
 [role="quick-margin-para"]
 link:add-credentials.html["アカウントにクレデンシャルを追加する方法"]です。
