@@ -421,6 +421,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "ssm:ListCommands",
         "ssm:DescribeInstanceInformation",
         "fsx:ListTagsForResource"
+        "logs:DescribeLogGroups"
       ],
       "Resource": [
         "*"
@@ -568,6 +569,7 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
         "logs:ListLogDeliveries",
         "logs:PutLogEvents",
         "logs:TagResource",
+        "logs:PutRetentionPolicy",
         "servicequotas:ListServiceQuotas",
         "sns:ListTopics",
         "sns:Publish",
@@ -674,17 +676,6 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 [cols="2, 2, 1, 1"]
 |===
 | 目的 | アクション | 使用先 | モード 
-
-
-| SSM出力の切り捨てが検出されると、ワークロードファクトリはSQLインスタンスのAmazon CloudWatchログに切り替えます。 | ログ:GetLogEvents  a| 
-* ストレージアセスメント
-* インベントリ
-
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
 
 
 | FSx for ONTAP、EBS、FSx for Windowsファイルサーバのメトリック統計を取得 | CloudWatch：GetMetricStatistics  a| 
@@ -1345,6 +1336,35 @@ BlueXP  ワークロードファクトリの機能とサービスを使用す�
 
 
 | ログ:TagResource | 導入 | 読み取り / 書き込み 
+
+
+| SSM出力の切り捨てが検出されると、ワークロードファクトリがSQLインスタンスのAmazon CloudWatchログに切り替わる | ログ:GetLogEvents  a| 
+* ストレージ評価（最適化）
+* インベントリ
+
+ a| 
+* 読み取り専用
+* 読み取り / 書き込み
+
+
+
+
+| Workload Factoryが現在のロググループを取得できるようにし、Workload Factoryによって作成されたロググループに保持期間が設定されていることを確認する | ログ:DescriptionLogGroups  a| 
+* ストレージ評価（最適化）
+* インベントリ
+
+| 読み取り専用 
+
+
+| Workload Factoryでは、SSMコマンド出力のログストリームが不要に蓄積されないように、Workload Factoryで作成されたロググループに1日の保持ポリシーを設定できます。 | ログ:PutRetentionPolicy  a| 
+* ストレージ評価（最適化）
+* インベントリ
+
+ a| 
+* 読み取り専用
+* 読み取り / 書き込み
+
+
 
 
 | ユーザアカウントに、SQL、ドメイン、FSx for ONTAPに提供されるクレデンシャルのシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 | 読み取り / 書き込み 
@@ -2284,7 +2304,14 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 生成AIの_Read/Write_modeで次の権限を使用できるようになりました `qbusiness:ListApplications`。
 
-データベースの_Read-only_modeで次の権限を使用できるようになりました `logs:GetLogEvents`。
+データベースの_Read-only_modeで次の権限を使用できるようになりました。
+
+* `logs:GetLogEvents`
+* `logs:DescribeLogGroups`
+
+
+データベースの_Read/Write_modeで次の権限を使用できるようになりました
+`logs:PutRetentionPolicy`。
 
 
 

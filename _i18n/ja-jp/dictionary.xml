@@ -1116,8 +1116,6 @@
   <block id="c0ee691320caa89b529bc0bcaf9cc696" category="paragraph">ただし、ワークロードファクトリからVMwareワークロードを作成および導入するための自動制御機能（基本モード）はありません。VMwareワークロードを作成する場合、この機能を使用するには、コードボックスからコードをコピーし、AWSアカウントに手動でログインし、生成されたコードに不足しているエントリを手動で入力する必要があります。</block>
   <block id="b91c58f3e94e0488074053d96cd4bbec" category="paragraph">読み取り専用モードまたは読み取り/書き込みモードの権限を指定すると、Workload Factoryは、そのAWSアカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスに関連付けます。これにより、ストレージ環境の検出から、ストレージ管理におけるファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、さまざまな処理をワークロードファクトリで実行できます。</block>
   <block id="4d372922f30597b3e046274dbb3cecd2" category="list-text">読み取り専用</block>
-  <block id="d066bc059c61c75a41706f175a5b3f8b" category="cell">SSM出力の切り捨てが検出されると、ワークロードファクトリはSQLインスタンスのAmazon CloudWatchログに切り替えます。</block>
-  <block id="2e50818bd890a03b645105690ca2ee60" category="list-text">ストレージアセスメント</block>
   <block id="38ef2c2517cd341233b9181c09ba8071" category="paragraph">生成AI IAMポリシーは、読み取り/書き込みモードでのみ使用できます。</block>
   <block id="123ce9aa4e0770ecb435c005fa9b436c" category="cell">Amazon Q Businessアプリケーションを挙げる</block>
   <block id="4f3c534c90392632c7d275f54d5b35a0" category="cell">qbusiness：ListApplications</block>
@@ -1127,7 +1125,6 @@
   <block id="9dd35b54afccc27a1cc96eab777dbc8e" category="cell">デプロイおよび再構築処理中のスタック作成時に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">2025年5月4日</block>
   <block id="b1351fb22e71d3c2b886e8e0819e632f" category="paragraph">生成AIの_Read/Write_modeで次の権限を使用できるようになりました<block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block>。</block>
-  <block id="17cf827d0ea669f390d3f954ed27424d" category="paragraph">データベースの_Read-only_modeで次の権限を使用できるようになりました<block ref="6d952035baa97bd601f4d280f10fcc53" prefix=" " category="inline-code"></block>。</block>
   <block id="83300e091c617144cede34b6c898e63b" category="paragraph">データベースの_Read-only_modeで次の権限を使用できるようになりました<block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block>。</block>
   <block id="be999711faeee231a254e996141ed09f" category="paragraph">生成AIの_読み取り/書き込みモード_で次の権限を使用できるようになりました。</block>
   <block id="9f4fc0ded0d1671253e5c8e38cd9464f" category="paragraph">生成AIの_読み取り/書き込みモード_から次の権限が削除されました<block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block>。</block>
@@ -1140,4 +1137,12 @@
   <block id="7a0e532396f167d85a7b425f941d0613" category="list-text">*読み取り専用モード*は、ユーザーがさまざまなリソースやツールを検出できるように支援し、関連するウィザードを完了できるようにすることで、Basicモードのエクスペリエンスを向上させます。</block>
   <block id="4951a0172d4fd2c8116296e71073f31c" category="list-text">*読み取り/書き込みモード*は完全な信頼関係を表し、実行に必要な権限と検証済みの権限を持つ割り当てられた資格情報とともにユーザーに代わって実行および自動化するように設計されています。</block>
   <block id="1c9640aa9075334712c6c2b922771c50" category="paragraph"><block ref="1c9640aa9075334712c6c2b922771c50" category="inline-link-rx"></block></block>
+  <block id="5474924c6e07cdae5b2fb3dcc561d06d" category="cell">SSM出力の切り捨てが検出されると、ワークロードファクトリがSQLインスタンスのAmazon CloudWatchログに切り替わる</block>
+  <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">ストレージ評価（最適化）</block>
+  <block id="515b5649d13529809187e8bce4dca692" category="cell">Workload Factoryが現在のロググループを取得できるようにし、Workload Factoryによって作成されたロググループに保持期間が設定されていることを確認する</block>
+  <block id="c1fe33a4a51fbfbc7672aeed10dd19b9" category="cell">Workload Factoryでは、SSMコマンド出力のログストリームが不要に蓄積されないように、Workload Factoryで作成されたロググループに1日の保持ポリシーを設定できます。</block>
+  <block id="19c89da108a378e8d938a37afe67bcab" category="paragraph">データベースの_Read-only_modeで次の権限を使用できるようになりました。</block>
+  <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
+  <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
+  <block id="555669c70b999168141bdf48d9c2de24" category="paragraph">データベースの_Read/Write_modeで次の権限を使用できるようになりました<block ref="9c72603737d6e2074ae7fab048b5d3d1" prefix=" " category="inline-code"></block>。</block>
 </blocks>
