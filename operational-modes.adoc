@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: operational-modes.html 
-keywords: modes, zero-trust, full-trust, read, basic, automate, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
-summary: Workload Factoryには、ITポリシーに基づいてワークロードファクトリとクラウド資産の間のアクセスを慎重に制御できる3つの運用モードが用意されています。使用する運用モードは、ワークロードファクトリに提供するAWS権限のレベルによって決まります。 
+keywords: modes, zero-trust, full-trust, read-only, basic, read/write, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
+summary: Workload Factoryには、ITポリシーに基づいてワークロードファクトリとクラウド資産の間のアクセスを慎重に制御できる3つの運用モードが用意されています。 
 ---
 = 運用モードとAWSクレデンシャルの詳細
 :allow-uri-read: 
@@ -62,7 +62,7 @@ Workload Factoryには、ITポリシーに基づいてワークロードファ�
 | 読み取り専用 | 読み取り専用 | 不要 
 
 
-| 読み取り / 書き込み | 読み取り/書き込みクレデンシャル | 必須 
+| 読み取り / 書き込み | 読み取り/書き込み資格情報 | 必須 
 |===
 https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["リンクの詳細"^]
 
@@ -70,7 +70,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["リンク�
 
 === 運用モードの例
 
-クレデンシャルを設定して、あるワークロードコンポーネントに1つのモードを設定し、別のコンポーネントに別のモードを設定できます。たとえば、FSx for ONTAPファイルシステムを導入および管理する処理には読み取り/書き込みモードを設定できますが、ワークロードファクトリを使用してデータベースワークロードを作成および導入する処理には読み取りモードのみを設定できます。
+クレデンシャルを設定して、あるワークロードコンポーネントに1つのモードを設定し、別のコンポーネントに別のモードを設定できます。たとえば、FSx for ONTAP ファイルシステムをデプロイおよび管理する操作に対しては読み取り/書き込みモードを設定できますが、ワークロードファクトリを使用してデータベースワークロードを作成およびデプロイする場合は読み取り専用モードのみを設定できます。
 
 これらの機能は、ワークロードファクトリアカウントの1つのクレデンシャルセット内で提供できます。また、各クレデンシャルが固有のワークロード導入機能を提供する場合は、複数のクレデンシャルセットを作成することもできます。
 
@@ -78,7 +78,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["リンク�
 
 ==== 例1
 
-次の権限が付与されたクレデンシャルを使用するアカウントユーザは、FSx for ONTAPファイルシステムの作成、データベースの導入、アカウントで使用されているその他のタイプのAWSストレージの表示をフルコントロール（読み取り/書き込みモード）できます。
+以下の権限が付与された認証情報を使用するアカウント ユーザーに、FSx for ONTAP ファイルシステムの作成、データベースのデプロイ、アカウントで使用される他の種類の AWS ストレージの表示に対するフル コントロール (読み取り/書き込みモード) が付与されます。
 
 image:screenshot-credentials1.png["2種類のワークロード権限を提供する1組のクレデンシャルを示すスクリーンショット。"]
 
@@ -90,7 +90,7 @@ image:screenshot-credentials1.png["2種類のワークロード権限を提供�
 
 ここでは、選択されたクレデンシャルのセットに応じて異なる運用機能を許可するために、ユーザは2セットのクレデンシャルを作成しました。通常、クレデンシャルの各セットは別 々 のAWSアカウントとペアリングされます。
 
-最初のクレデンシャルには、FSx for ONTAPファイルシステムの作成に関するフルコントロール（およびアカウントで使用されている他のタイプのAWSストレージを表示する機能）をユーザに付与する権限が含まれますが、VMwareワークロードを処理する場合は読み取り権限のみが付与されます。
+最初の認証情報セットには、ユーザーに FSx for ONTAP ファイルシステムの作成に対する完全な制御 (およびアカウントで使用されている他の種類の AWS ストレージを表示する機能) を与える権限が含まれていますが、VMware ワークロードを操作する場合は読み取り専用権限のみが含まれます。
 
 image:screenshot-credentials-comparison-example-1.png["2種類のワークロード権限を提供する1組のクレデンシャルを示すスクリーンショット。"]
 
