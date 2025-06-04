@@ -1152,5 +1152,9 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">* CloudShell CLI *：ワークロードファクトリには、1つのブラウザベースのCLIからアカウント間でAWSおよびNetApp環境を管理および運用するためのCloudShell CLIが含まれています。Workload FactoryコンソールのトップバーからCloudShellにアクセスします。</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">* REST API *：ワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理します。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">* CloudFormation *：AWS CloudFormationコードを使用して、ワークロードファクトリコンソールで定義したアクションを実行し、AWSアカウントのCloudFormationスタックからAWSおよびサードパーティリソースをモデル化、プロビジョニング、管理します。</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">* Terraform BlueXP  ワークロードファクトリプロバイダ*：Terraformを使用して、ワークロードファクトリコンソールで生成されるインフラワークフローを構築および管理します。</block>
+  <block id="beec07f99f03a1aa1948ba788ce7e6c1" category="cell">S3バケットの一覧</block>
+  <block id="e21c94a36c6dbf24001a64bddce9456f" category="cell">S3 ： ListAllMyBuckets</block>
+  <block id="c34c5eed5692ab9466e57060b06ae6ae" category="section-title">2025年6月3日</block>
+  <block id="c918d3e0e49fdadeab4e77e3905135bd" category="paragraph">生成AIの_Read/Write_modeで次の権限を使用できるようになりました<block ref="e21c94a36c6dbf24001a64bddce9456f" prefix=" " category="inline-code"></block>。</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  ワークロードファクトリプロバイダ*: Terraformを使用して、ワークロードファクトリコンソールで生成されるインフラワークフローを構築および管理します。</block>
 </blocks>

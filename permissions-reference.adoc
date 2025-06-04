@@ -1762,6 +1762,14 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
       "Resource": "*"
     },
     {
+      "Sid": "S3",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListAllMyBuckets"
+      ],
+      "Resource": "*"
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -1792,6 +1800,9 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 
 | AIエンジンタグを表示 | EC2: DescribeTags (説明タグ) | 導入 | 読み取り / 書き込み 
+
+
+| S3バケットの一覧 | S3 ： ListAllMyBuckets | 導入 | 読み取り / 書き込み 
 
 
 | AIエンジンスタックを作成する前にVPCエンドポイントをリスト表示 | EC2：CreateVpcEndpoint | 導入 | 読み取り / 書き込み 
@@ -2297,6 +2308,12 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年6月3日
+
+生成AIの_Read/Write_modeで次の権限を使用できるようになりました `s3:ListAllMyBuckets`。
 
 
 
