@@ -1,0 +1,11 @@
+= BlueXPワークロードファクトリー通知サービスのサポート
+:allow-uri-read: 
+
+
+
+
+=== BlueXPワークロードファクトリー通知サービスのサポート
+
+BlueXP ワークロードファクトリー通知サービスを使用すると、ワークロードファクトリーは BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。
+
+https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["BlueXPワークロードファクトリー通知を構成する"]
