@@ -45,8 +45,6 @@ sidebar:
       url: "/log-in.html"
     - title: サービスアカウントの管理
       url: "/manage-service-accounts.html"
-    - title: 通知を設定する
-      url: "/configure-notifications.html"
     - title: Codeboxを使用したタスクの自動化
       entries:
       - title: Codeboxの詳細
