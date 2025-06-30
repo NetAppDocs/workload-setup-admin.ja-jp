@@ -640,12 +640,8 @@
   <block id="9fd6274c053251e7fdd752215a510290" category="cell">ファイルシステムとボリュームの指標を取得</block>
   <block id="f63e0d20057299c9c16bd0c2c9e92a5c" category="cell">CloudWatch：GetMetricData</block>
   <block id="3a902f1e8a6db9861a0a7608e2c5f711" category="cell">CloudWatch：GetMetricStatistics</block>
-  <block id="659cdc74d03020d9c8bbdcda0749ab88" category="section-title">データベースワークロードの権限</block>
-  <block id="2ceb20f97dd8f727dfbba8dbbe9a3496" category="paragraph">データベースワークロードに使用できるIAMポリシーは、運用モードに基づいて、ワークロードファクトリがパブリッククラウド環境内のリソースとプロセスを管理するために必要な権限を提供します。</block>
-  <block id="6f652f163aedad876c63ce0e89417171" category="example-title">データベースワークロードのIAMポリシー</block>
   <block id="685902496cc1b2431527838eb3dd51f8" category="paragraph">次の表に、データベースワークロードの権限を示します。</block>
   <block id="0647b03c182e6a539e314bf5657eba2e" category="example-title">データベースワークロードの権限の一覧</block>
-  <block id="8fb4617a750c0b3b751013d02219f99b" category="cell">FSx for ONTAP、EBS、FSx for Windowsファイルサーバのメトリック統計を取得</block>
   <block id="9d0f530f355f04b5462f43ae04528fde" category="cell">イベントのトリガーのリストと設定</block>
   <block id="124f2c65b8b708241b7552a865ae2f29" category="cell">SNS:リストトピック</block>
   <block id="b561747f1044749aaeab8082f02c0c2f" category="cell">EC2：DescribeKeyPairs</block>
@@ -746,7 +742,6 @@
   <block id="da044dbe1821a39f63f98e823344b062" category="cell">CloudFormation：DescribeStackEvents</block>
   <block id="f404fc6d0850472807e4fcd86203a313" category="cell">CloudFormation：DescribeStack</block>
   <block id="6f25bb2faea408ecb06dc30a96791ac2" category="cell">CloudFormation：ValidateTemplate</block>
-  <block id="039c0d5ce3b1eaded6c4634f95b0978c" category="cell">コンピューティングの最適化に関する推奨事項の指標を取得</block>
   <block id="6ecc76cab2e7449f332b847599e62d5f" category="cell">リージョンで使用可能なディレクトリを取得する</block>
   <block id="f4e46229f95e1a17f96ebacbac65751b" category="cell">プロビジョニングされたEC2インスタンスにアタッチされたセキュリティグループのルールを追加します。</block>
   <block id="1f4dd9a69501cc464524fc5da8bcd1b7" category="cell">再試行およびロールバック用にネストされたスタックテンプレートを作成する</block>
@@ -1108,7 +1103,6 @@
   <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock：GetFoundationModel</block>
   <block id="9dd35b54afccc27a1cc96eab777dbc8e" category="cell">デプロイおよび再構築処理中のスタック作成時に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">2025年5月4日</block>
-  <block id="b1351fb22e71d3c2b886e8e0819e632f" category="paragraph">生成AIの_Read/Write_modeで次の権限を使用できるようになりました<block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block>。</block>
   <block id="bf0dcc34b100cf0ff91c26bbd98029f7" category="list-text">オートコンプリートのサポート：コマンドの入力を開始し、* Tab *キーを使用して使用可能なオプションを表示します。</block>
   <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
   <block id="7a0e532396f167d85a7b425f941d0613" category="list-text">*読み取り専用モード*は、ユーザーがさまざまなリソースやツールを検出できるように支援し、関連するウィザードを完了できるようにすることで、Basicモードのエクスペリエンスを向上させます。</block>
@@ -1116,7 +1110,6 @@
   <block id="5474924c6e07cdae5b2fb3dcc561d06d" category="cell">SSM出力の切り捨てが検出されると、ワークロードファクトリがSQLインスタンスのAmazon CloudWatchログに切り替わる</block>
   <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">ストレージ評価（最適化）</block>
   <block id="515b5649d13529809187e8bce4dca692" category="cell">Workload Factoryが現在のロググループを取得できるようにし、Workload Factoryによって作成されたロググループに保持期間が設定されていることを確認する</block>
-  <block id="19c89da108a378e8d938a37afe67bcab" category="paragraph">データベースの_Read-only_modeで次の権限を使用できるようになりました。</block>
   <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
   <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
   <block id="b29cc709bba52572eccdff0248448fed" category="cell">SSMコマンド出力のログストリームが不要に蓄積されないように、ワークロードファクトリで作成されたロググループに1日の保持ポリシーを設定できるようにする</block>
@@ -1131,7 +1124,6 @@
   <block id="beec07f99f03a1aa1948ba788ce7e6c1" category="cell">S3バケットの一覧</block>
   <block id="e21c94a36c6dbf24001a64bddce9456f" category="cell">S3 ： ListAllMyBuckets</block>
   <block id="c34c5eed5692ab9466e57060b06ae6ae" category="section-title">2025年6月3日</block>
-  <block id="c918d3e0e49fdadeab4e77e3905135bd" category="paragraph">生成AIの_Read/Write_modeで次の権限を使用できるようになりました<block ref="e21c94a36c6dbf24001a64bddce9456f" prefix=" " category="inline-code"></block>。</block>
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  ワークロードファクトリプロバイダ*: Terraformを使用して、ワークロードファクトリコンソールで生成されるインフラワークフローを構築および管理します。</block>
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">ワークロード ファクトリのユーザー インターフェースとドキュメントでは、読み取り権限を示すために「読み取り専用」を使用し、自動化権限を示すために「読み取り/書き込み」を使用するようになりました。</block>
   <block id="db17079394a3464c0d2748f3f16fbfbf" category="paragraph">AWSアカウントのクレデンシャルを追加しないかぎり、Workload Factoryは_Basic_modeで動作します。資格情報を追加して、_読み取り専用_ モードや _読み取り/書き込み_ モードなどの他の操作モードを有効にできます。<block ref="3ecbe38d325fe0025957d871a4619a77" category="inline-link-macro-rx"></block>です。</block>
@@ -1163,4 +1155,14 @@
   <block id="2e600fc81eb21acd31aa44d1697dc84f" category="list-text">にログインし <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>ます。</block>
   <block id="cec87015738d7f42431131824e107880" category="paragraph">ワークロードファクトリにはBlueXP  からアクセスできます。AWS ストレージおよびワークロード機能に BlueXP Workload Factory を使用するだけでなく、コピーと同期、デジタル ウォレットなどの他の BlueXP プラットフォーム サービスにもアクセスすることができます。</block>
   <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025年6月29日</block>
+  <block id="cb30bdb55bb8a7a0530a31a5e6cdd0bb" category="paragraph">データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。 <block ref="f63e0d20057299c9c16bd0c2c9e92a5c" prefix=" " category="inline-code"></block> 。</block>
+  <block id="e429c7230e4b94caf26e6020e5ea6f7a" category="paragraph"><block ref="e429c7230e4b94caf26e6020e5ea6f7a" category="inline-link-rx"></block></block>
+  <block id="4da84f2c396b854d2e6828b8992fe2a6" category="section-title">データベースワークロードの権限</block>
+  <block id="a1de7ac981533bac2ba982c9a691d511" category="paragraph">データベース ワークロードに使用できる IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するためにワークロード ファクトリーに必要な権限を提供します。</block>
+  <block id="b09fc7726cc5650dddd20718f2586995" category="example-title">データベースワークロードのIAMポリシー</block>
+  <block id="3399757d7ea2a9e2fd7770bc1e6f5aa1" category="cell">FSx for ONTAP、EBS、FSx for Windows File Server のメトリック統計とコンピューティング最適化の推奨事項を取得します。</block>
+  <block id="c79482c3221294b91b9c5eeecca327a6" category="cell">登録済みのSQLノードからAmazon CloudWatchに保存されたパフォーマンスメトリクスを収集します。登録済みのSQLインスタンスのインスタンス管理画面に、パフォーマンストレンドチャートにデータが生成されます。</block>
+  <block id="bf8eef80d28e69579638cd56629c94fb" category="paragraph">GenAI の _読み取り/書き込み_ モードで次の権限が利用できるようになりました。 <block ref="e21c94a36c6dbf24001a64bddce9456f" prefix=" " category="inline-code"></block> 。</block>
+  <block id="b8be7a72d02de0cfb42fb93375981cdb" category="paragraph">GenAI の _読み取り/書き込み_ モードで次の権限が利用できるようになりました。 <block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block> 。</block>
+  <block id="bebb3c7ec8a634b68ad1060e27e7dc42" category="paragraph">データベースの _読み取り専用_ モードで、次の権限が使用できるようになりました。</block>
 </blocks>

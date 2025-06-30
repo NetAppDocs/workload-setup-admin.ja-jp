@@ -19,6 +19,14 @@ summary: クラウドプロバイダの資格情報、Codeboxの機能拡張な�
 
 
 
+=== データベースの権限の更新
+
+データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。  `cloudwatch:GetMetricData` 。
+
+https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["アクセス権参照変更ログ"]
+
+
+
 === BlueXPワークロードファクトリー通知サービスのサポート
 
 BlueXP ワークロードファクトリー通知サービスを使用すると、ワークロードファクトリーは BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。

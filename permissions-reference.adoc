@@ -364,7 +364,7 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 
 === データベースワークロードの権限
 
-データベースワークロードに使用できるIAMポリシーは、運用モードに基づいて、ワークロードファクトリがパブリッククラウド環境内のリソースとプロセスを管理するために必要な権限を提供します。
+データベース ワークロードに使用できる IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するためにワークロード ファクトリーに必要な権限を提供します。
 
 運用モードを選択して、必要なIAMポリシーを表示します。
 
@@ -385,6 +385,7 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
       "Effect": "Allow",
       "Action": [
         "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
         "sns:ListTopics",
         "ec2:DescribeInstances",
         "ec2:DescribeVpcs",
@@ -678,7 +679,7 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 | 目的 | アクション | 使用先 | モード 
 
 
-| FSx for ONTAP、EBS、FSx for Windowsファイルサーバのメトリック統計を取得 | CloudWatch：GetMetricStatistics  a| 
+| FSx for ONTAP、EBS、FSx for Windows File Server のメトリック統計とコンピューティング最適化の推奨事項を取得します。 | CloudWatch：GetMetricStatistics  a| 
 * インベントリ
 * コスト削減の詳細
 
@@ -687,6 +688,9 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 * 読み取り / 書き込み
 
 
+
+
+| 登録済みのSQLノードからAmazon CloudWatchに保存されたパフォーマンスメトリクスを収集します。登録済みのSQLインスタンスのインスタンス管理画面に、パフォーマンストレンドチャートにデータが生成されます。 | CloudWatch：GetMetricData | インベントリ | 読み取り専用 
 
 
 | イベントのトリガーのリストと設定 | SNS:リストトピック | 導入  a| 
@@ -1209,9 +1213,6 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 
 
 | CloudFormation：ValidateTemplate | 導入 | 読み取り / 書き込み 
-
-
-| コンピューティングの最適化に関する推奨事項の指標を取得 | CloudWatch：GetMetricStatistics | コスト削減の詳細 | 読み取り / 書き込み 
 
 
 | リージョンで使用可能なディレクトリを取得する | ds:説明ディレクトリ | 導入 | 読み取り / 書き込み 
@@ -2311,17 +2312,23 @@ VMwareワークロードのIAMポリシーは、運用モードに基づいて�
 
 
 
+=== 2025年6月29日
+
+データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。  `cloudwatch:GetMetricData` 。
+
+
+
 === 2025年6月3日
 
-生成AIの_Read/Write_modeで次の権限を使用できるようになりました `s3:ListAllMyBuckets`。
+GenAI の _読み取り/書き込み_ モードで次の権限が利用できるようになりました。  `s3:ListAllMyBuckets` 。
 
 
 
 === 2025年5月4日
 
-生成AIの_Read/Write_modeで次の権限を使用できるようになりました `qbusiness:ListApplications`。
+GenAI の _読み取り/書き込み_ モードで次の権限が利用できるようになりました。  `qbusiness:ListApplications` 。
 
-データベースの_Read-only_modeで次の権限を使用できるようになりました。
+データベースの _読み取り専用_ モードで、次の権限が使用できるようになりました。
 
 * `logs:GetLogEvents`
 * `logs:DescribeLogGroups`

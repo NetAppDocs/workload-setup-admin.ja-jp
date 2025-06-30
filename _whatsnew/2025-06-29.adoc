@@ -1,6 +1,14 @@
-= BlueXPワークロードファクトリー通知サービスのサポート
+= データベースの権限の更新
 :allow-uri-read: 
 
+
+
+
+=== データベースの権限の更新
+
+データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。  `cloudwatch:GetMetricData` 。
+
+https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["アクセス権参照変更ログ"]
 
 
 
