@@ -1159,62 +1159,8 @@
   <block id="c0ae6f0ec7cb1322a1c6b72f77e783f2" category="paragraph">BlueXP ワークロードファクトリー通知サービスを使用すると、ワークロードファクトリーは BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。</block>
   <block id="76490568879e4523bb6bd6d8263472a9" category="inline-link">BlueXPワークロードファクトリー通知を構成する</block>
   <block id="533a43c23a4d81612b2392465e022a51" category="paragraph"><block ref="533a43c23a4d81612b2392465e022a51" category="inline-link-rx"></block></block>
-  <block id="2dda35be60147096ab6dcce42dede6b8" category="summary">特定の種類のイベントが発生したときに、ユーザーまたは別のアプリケーションに通知を送信するように BlueXP ワークロード ファクトリーを構成できます。</block>
-  <block id="72d9710675d7970263ff88acdf0fcb66" category="paragraph">BlueXP ワークロードファクトリー通知サービスを設定して、BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。</block>
-  <block id="0a7323d1562ccdc63a56a3101b1dfc69" category="section-title">通知の種類とメッセージ</block>
-  <block id="5a7513075d19cc4be93d3cf73f88603e" category="paragraph">ワークロード ファクトリーは、次のイベントの通知を送信します。</block>
-  <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">イベント</block>
-  <block id="9e89e978c220a2a733d027866cb12907" category="cell">通知のタイプ</block>
-  <block id="007cc9547ae8884ad597cd92ba505422" category="cell">重大度</block>
-  <block id="68eaabb91b0d1c52be44217a24f27b91" category="cell">ワークロード</block>
-  <block id="53a002434dc37d0a5f8e2aac58da6296" category="cell">リソースタイプ</block>
-  <block id="05c77d02041a1213dcefbe713f2f79fc" category="cell">アカウント内の一部のデータベースインスタンスは適切に設計されていません</block>
-  <block id="11091ad57516013f76674cb4ef3a9a6a" category="cell">アカウント内のすべてのMicrosoft SQL Serverインスタンスについて、Well-Architectedの問題が分析されました。このイベントの説明には、Well-Architectedインスタンスと最適化されていないインスタンスの数が表示されます。ワークロードファクトリーコンソールのデータベースインベントリで、Well-Architectedステータスの調査結果と推奨事項を確認してください。</block>
-  <block id="64096d5dd63fb80716eda8d7d149213d" category="cell">優れた設計</block>
-  <block id="c76e3867213cff8946148c6510af0736" category="cell">推奨事項</block>
-  <block id="ea2ef9b0d095bf991f4973633b485340" category="cell">データベース</block>
-  <block id="49e4c802abd20d6ed77d1f0421411716" category="cell">Microsoft SQL Serverインスタンス</block>
-  <block id="434aae113a8df34dcafb760acae04817" category="cell">Microsoft SQL Server/PostgreSQL サーバーの展開に成功しました</block>
-  <block id="9f65a8622771b19d6c80a1fea621d39f" category="cell">Microsoft SQL Server または PostgreSQL ホストのデプロイに成功しました。詳細については、ジョブ監視を参照してください。</block>
-  <block id="505a83f220c02df2f85c3810cd9ceb38" category="cell">成功</block>
-  <block id="a2e86ce39492ca1b92893ce168dc6fbb" category="cell">FSx for ONTAP、DBホスト</block>
-  <block id="1ec0c15b651e4cd44325912e997a204c" category="cell">Microsoft SQL Server/PostgreSQL サーバーの展開に失敗しました</block>
-  <block id="3a966eb1052bbc81baf1db313011eddf" category="cell">Microsoft SQL Server または PostgreSQL ホストのデプロイに失敗しました。詳細については、ジョブ監視を参照してください。</block>
-  <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">エラー</block>
-  <block id="237aaa83425818925b08506a76908e10" category="section-title">ワークロードファクトリー通知を構成する</block>
-  <block id="cd052ec21a26111d70b96d3c1780fed2" category="paragraph">BlueXPコンソールまたはワークロードファクトリーコンソールを使用して、ワークロードファクトリーの通知を設定します。BlueXPコンソールを使用する場合は、BlueXPアラートまたはAmazon SNSトピックに通知を送信するようにワークロードファクトリーを設定できます。BlueXPアラートは、BlueXPの*アラートと通知設定*領域から設定できます。</block>
-  <block id="9ccebe6954a81c5c1f9a57ddc658596a" category="list-text">Amazon SNS コンソールまたは AWS CLI を使用して、Amazon SNS を設定し、Amazon SNS トピックを作成する必要があります。</block>
-  <block id="b5dff08e1a7f13984de22b0326ba3d57" category="list-text">ワークロードファクトリーは*標準*トピックタイプをサポートしています。このタイプのトピックでは、通知が受信順にサブスクライバーに送信されるとは限りません。そのため、重要な通知や緊急の通知がある場合は、このタイプを検討してください。</block>
-  <block id="5d146607ad7e1a4c8178f137a935e71b" category="open-title">BlueXPコンソールから通知を設定する</block>
   <block id="413b76e8d3566fbbd4af2e2a84ed79cb" category="list-text">にログインし <block ref="391de7a3bac2bc77fa53dffb3f53801a" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="7330391de12fa6f64dbbe05f2bf2943a" category="list-text">ワークロード ファクトリーのメニュー バーから、構成メニューを選択します。</block>
-  <block id="ebb0c20a2883844bf338eec0442bd3d9" category="list-text">メニューで、*Workload Factory 通知設定*を選択します。</block>
-  <block id="c1f26547e61b3cf682eb671f8d31e7ea" category="list-text">オプション: *BlueXP 通知を有効にする* を選択して、ワークロード ファクトリーが BlueXP アラートに通知を送信するように構成します。</block>
-  <block id="9bc635b321d7a10ffec6283dfaa84aa0" category="list-text">*SNS通知を有効にする*を選択します。</block>
-  <block id="677c7dc689b0afdcb0633b635edd3a87" category="list-text">Amazon SNS コンソールから Amazon SNS を設定するには、指示に従います。</block>
-  <block id="5fda11ac3857aaeb1a1a9e3bb6aedef5" category="paragraph">トピックを作成したら、トピック ARN をコピーして、*通知設定*ダイアログの*SNS トピック ARN* フィールドに入力します。</block>
-  <block id="2339afaee28d73e91f81e490b67a4b5c" category="list-text">テスト通知を送信して構成を確認した後、[適用] を選択します。</block>
-  <block id="a596c719a1239c601cd009ed03cda388" category="paragraph">ワークロードファクトリーは、指定した Amazon SNS トピックに通知を送信するように設定されています。</block>
-  <block id="99405553b799dda5850e27264cbad120" category="open-title">ワークロードファクトリーコンソールから通知を構成する</block>
   <block id="2e600fc81eb21acd31aa44d1697dc84f" category="list-text">にログインし <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="bbb5c9d7fd1535e42e50af70cae99495" category="list-text">上部のナビゲーション バーからアカウント メニューを開きます。</block>
-  <block id="5bbc9d3e1cf8f1e46acf248093877f06" category="list-text">メニューで*通知設定*を選択します。</block>
-  <block id="5e5392f4dcdf5502f0937be76da274d0" category="section-title">Amazon SNSトピックを購読する</block>
-  <block id="cbde2df6a7c89370edc449dc5705d30c" category="inline-link">説明書</block>
-  <block id="f796ddcb3cbbbd6b219cbc54c800ab86" category="paragraph">トピックに通知を送信するようにワークロードファクトリーを構成したら、 <block ref="88c7b6108316e02c36e39863bedc2019" category="inline-link-rx"></block> Amazon SNS ドキュメントの手順に従ってトピックをサブスクライブし、ワークロードファクトリーから通知を受信できるようにします。</block>
-  <block id="e457faf451b04c78c6b2c6bc25491ad1" category="section-title">通知をフィルタリングします</block>
-  <block id="3180a00483bf6ffa5db8c6178c4eb67a" category="paragraph">通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに特定の通知タイプを絞り込むことができます。これは、SNS通知にはAmazon SNSポリシーを使用し、BlueXP通知にはBlueXP通知設定を使用することで実現できます。</block>
-  <block id="4ccc3070ee3f76f6afb040d5f99b3bdd" category="section-title">Amazon SNS通知をフィルタリングする</block>
-  <block id="103130451f8943db9cb57de31a66dc79" category="paragraph">Amazon SNS トピックをサブスクライブすると、デフォルトでそのトピックに発行されたすべての通知を受信します。トピックから特定の通知のみを受信したい場合は、フィルターポリシーを使用して受信する通知を制御できます。</block>
-  <block id="3f6971d458153040675cf8e95795f3b0" category="inline-link">Amazon SNSのドキュメント</block>
-  <block id="c7fbd94f814dfe1f2c13e1ea015a39d7" category="paragraph">フィルタポリシーの作成の詳細については、 <block ref="c589c7fc86bb393dc58d099c6c8ea47e" category="inline-link-rx"></block> 。</block>
-  <block id="aacb2329b4899fc1a4b8f0f2f67b0398" category="inline-link">Amazon SNS のフィルターポリシーの例</block>
-  <block id="0ef8ad02e6dcecafa6e5e696fe553279" category="paragraph">フィルタポリシーの例については、 <block ref="7c3f3bfbc0dabec1aca15cb9aeb0e326" category="inline-link-rx"></block> 。</block>
-  <block id="92bb95ca7ce65dc7bedcbf84528f75fd" category="section-title">BlueXP通知をフィルタリングする</block>
-  <block id="ac6e44b462d88f56828f381faa7907ca" category="paragraph">BlueXP のアラートおよび通知設定を使用すると、BlueXP で受信するアラートと通知を重大度レベル (重大、情報、警告など) でフィルタリングできます。</block>
-  <block id="eeb8e055593f1709925a03e2ebb13265" category="inline-link">BlueXPのマニュアル</block>
-  <block id="7572b4e37ed025014a17bc1ae86c60a9" category="paragraph">BlueXPでの通知フィルタリングの詳細については、 <block ref="f8c744992c7f60894906e0753601fc52" category="inline-link-rx"></block> 。</block>
   <block id="cec87015738d7f42431131824e107880" category="paragraph">ワークロードファクトリにはBlueXP  からアクセスできます。AWS ストレージおよびワークロード機能に BlueXP Workload Factory を使用するだけでなく、コピーと同期、デジタル ウォレットなどの他の BlueXP プラットフォーム サービスにもアクセスすることができます。</block>
-  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025年6月3日</block>
-  <block id="19a5158f1235c29843008925adb7baf8" category="sidebar">通知を設定する</block>
+  <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025年6月29日</block>
 </blocks>
