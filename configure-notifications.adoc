@@ -98,11 +98,79 @@ BlueXPコンソールまたはワークロードファクトリーコンソー�
 
 === Amazon SNS通知をフィルタリングする
 
-Amazon SNS トピックをサブスクライブすると、デフォルトでそのトピックに発行されたすべての通知を受信します。トピックから特定の通知のみを受信したい場合は、フィルターポリシーを使用して受信する通知を制御できます。
+Amazon SNS トピックをサブスクライブすると、デフォルトでそのトピックに公開されたすべての通知を受信します。トピックから特定の通知のみを受信する場合は、フィルター ポリシーを使用して、受信する通知を制御できます。フィルタポリシーにより、Amazon SNS はフィルタポリシーに一致する通知のみをサブスクライバーに配信します。
 
-フィルタポリシーの作成の詳細については、  https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html["Amazon SNSのドキュメント"^] 。
+Amazon SNS 通知は、次の基準でフィルタリングできます。
 
-フィルタポリシーの例については、  https://docs.aws.amazon.com/sns/latest/dg/example-filter-policies.html["Amazon SNS のフィルターポリシーの例"^] 。
+[cols="3*"]
+|===
+| 製品説明 | フィルターポリシーフィールド名 | 可能な値 
+
+
+| リソースタイプ | `resourceType`  a| 
+* `DB`
+* `Microsoft SQL Server host`
+* `PostgreSQL Server host`
+
+
+
+
+| ワークロード | `workload` | `WLMDB` 
+
+
+| 優先度 | `priority`  a| 
+* `Success`
+* `Info`
+* `Recommendation`
+* `Warning`
+* `Error`
+* `Critical`
+
+
+
+
+| 通知のタイプ | `notificationType`  a| 
+* `Deployment`
+* `Well-architected`
+
+
+|===
+.手順
+. Amazon SNS コンソールで、SNS トピックのサブスクリプションの詳細を編集します。
+. *サブスクリプション フィルター ポリシー* 領域で、*メッセージ属性* でフィルターすることを選択します。
+. *サブスクリプション フィルター ポリシー* オプションを有効にします。
+. *JSON エディター* ボックスに JSON フィルター ポリシーを入力します。
++
+たとえば、次の JSON フィルター ポリシーは、WLMDB ワークロードに関連し、優先度が成功またはエラーであり、Well-architected ステータスの詳細を提供する Microsoft SQL Server リソースからの通知を受け入れます。
+
++
+[source, json]
+----
+{
+  "accountId": [
+    "account-a"
+  ],
+  "resourceType": [
+    "Microsoft SQL Server host"
+  ],
+  "workload": [
+    "WLMDB"
+  ],
+  "priority": [
+    "Success",
+    "Error"
+  ],
+  "notificationType": [
+    "Well-architected"
+  ]
+}
+----
+. *変更を保存*を選択します。
+
+
+その他のフィルタポリシーの例については、以下を参照してください。 https://docs.aws.amazon.com/sns/latest/dg/example-filter-policies.html["Amazon SNS のフィルターポリシーの例"^] 。
+
+フィルタポリシーの作成の詳細については、 https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html["Amazon SNSのドキュメント"^] 。
 
 
 
