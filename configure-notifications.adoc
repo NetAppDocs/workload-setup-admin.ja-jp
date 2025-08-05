@@ -31,6 +31,12 @@ BlueXP ワークロードファクトリー通知サービスを設定して、B
 
 
 | Microsoft SQL Server/PostgreSQL サーバーの展開に失敗しました | Microsoft SQL Server または PostgreSQL ホストのデプロイに失敗しました。詳細については、ジョブ監視を参照してください。 | 導入 | エラー | データベース | FSx for ONTAP、DBホスト 
+
+
+| レプリケーション関係の作成に失敗しました | SnapMirrorレプリケーション関係の作成に失敗しました。詳細については、Tracker をご覧ください。 | レプリケーション | 致命的 | 一般的な保管 | ONTAP向け FSx 
+
+
+| FSx for ONTAP の作成失敗 | FSx for ONTAPファイル システムの作成プロセスが失敗しました。詳細については、Tracker をご覧ください。 | FSx for ONTAPファイルシステムアクション | 致命的 | 一般的な保管 | ONTAP向け FSx 
 |===
 
 
