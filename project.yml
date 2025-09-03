@@ -36,7 +36,7 @@ sidebar:
       url: "/sign-up-saas.html"
     - title: AWSクレデンシャルを追加
       url: "/add-credentials.html"
-    - title: 次は何ができるか
+    - title: ワークロードファクトリーでワークロードを最適化
       url: "/whats-next.html"
   - title: ワークロードファクトリの管理
     entries:

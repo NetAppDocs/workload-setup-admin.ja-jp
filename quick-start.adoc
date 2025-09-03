@@ -31,23 +31,7 @@ link:add-credentials.html["アカウントにクレデンシャルを追加す�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] FSx for ONTAPでワークロードを最適化
 [role="quick-margin-para"]
-サインアップしてアカウントを作成し、必要に応じてAWSクレデンシャルを追加したら、ワークロードファクトリの使用を開始して、FSx for ONTAPを使用してワークロードを最適化できます。以下のリンクを使用して、ワークロードのタイプごとのステップバイステップの手順を実行します。
+サインアップしてアカウントを作成し、オプションで AWS 認証情報を追加したら、ワークロードファクトリーを使用して FSx for ONTAPでワークロードを最適化できるようになります。
 
-[role="quick-margin-list"]
-* https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp ONTAP 対応の Amazon FSX"^]
-+
-FSx for ONTAPをストレージインフラとして使用することで、現在のデータ資産を評価して分析し、コスト削減の可能性を探ります。また、ベストプラクティスに基づいてFSx for ONTAP環境をプロビジョニングしてテンプレート化し、高度な管理機能を利用できます。
-
-* https://docs.netapp.com/us-en/workload-genai/index.html["玄愛"^]
-+
-Retrieval-Augmented Generation（RAG）インフラを導入、管理して、AIアプリケーションの精度と独自性を向上させます。データのセキュリティとコンプライアンスが組み込まれたFSx for ONTAPに関するRAGナレッジベースを作成できます。
-
-* https://docs.netapp.com/us-en/workload-databases/index.html["データベースワークロード"^]
-+
-AWS上の既存のデータベース資産の検出、FSx for ONTAPによるコスト削減の可能性の評価、最適化のためのベストプラクティスが組み込まれたデータベースのエンドツーエンドの導入、CI / CDパイプライン向けのシンクローニングの自動化が可能です。
-
-* https://docs.netapp.com/us-en/workload-vmware/index.html["VMwareワークロード"^]
-+
-スマートな推奨事項と自動修正により、移行と運用を合理化できます。効率的なバックアップと堅牢なディザスタリカバリを導入VMの監視とトラブルシューティング
-
-
+[role="quick-margin-para"]
+link:whats-next.html["FSx for ONTAPでワークロードを最適化"] 。

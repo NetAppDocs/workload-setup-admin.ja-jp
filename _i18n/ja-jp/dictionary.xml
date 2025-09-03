@@ -227,7 +227,6 @@
   <block id="1ab964190acf4217fadb080cfcbe361f" category="paragraph">Retrieval-Augmented Generation（RAG）インフラを導入、管理して、AIアプリケーションの精度と独自性を向上させます。データのセキュリティとコンプライアンスが組み込まれたFSx for ONTAPに関するRAGナレッジベースを作成できます。</block>
   <block id="38bd169945a371832b0b65c9086b1792" category="inline-link">データベースワークロード</block>
   <block id="7c05124c7bff1277e0dd98967825f03a" category="list-text"><block ref="7c05124c7bff1277e0dd98967825f03a" category="inline-link-rx"></block></block>
-  <block id="0b65135cac08d591d73cff9785b28f30" category="paragraph">AWS上の既存のデータベース資産の検出、FSx for ONTAPによるコスト削減の可能性の評価、最適化のためのベストプラクティスが組み込まれたデータベースのエンドツーエンドの導入、CI / CDパイプライン向けのシンクローニングの自動化が可能です。</block>
   <block id="a76e64a0fbf98a083080351e4cb67566" category="inline-link">VMwareワークロード</block>
   <block id="e555278247527c688d390729e5f7e123" category="list-text"><block ref="e555278247527c688d390729e5f7e123" category="inline-link-rx"></block></block>
   <block id="bc9eaabfc00230f2aa0ab1f9dfcfb994" category="paragraph">スマートな推奨事項と自動修正により、移行と運用を合理化できます。効率的なバックアップと堅牢なディザスタリカバリを導入VMの監視とトラブルシューティング</block>
@@ -305,7 +304,6 @@
   <block id="8d03c4936e76f2455607364517b82e3e" category="paragraph">Codeboxから生成されたAmazon Web Services CLIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。</block>
   <block id="b28a0d67dfa6e54814b9650389eea71b" category="list-text">コードを貼り付けて実行します。</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024年7月7日</block>
-  <block id="d0a7edff5cd82c23f3d1c18e0779ccbc" category="doc">次は何ができるか</block>
   <block id="452c8a300642b831148cf770baf1cd2f" category="paragraph">AWS上の既存のデータベース資産の検出、FSx for ONTAPへの移行によるコスト削減の可能性の評価、最適化のためのベストプラクティスが組み込まれたエンドツーエンドのデータベース導入、CI / CDパイプライン向けのシンクローニングの自動化が可能です。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">特徴</block>
   <block id="6cfad4df5416db8db29bda4f011d3211" category="list-text">柔軟性に優れた低コストのストレージ</block>
@@ -443,7 +441,6 @@
   <block id="70d0aaf5f480c6663d11cba807745150" category="paragraph">ワークロードファクトリには、Webベースのコンソールからクラウドサービスとしてアクセスできます。作業を開始する前に、とについて理解しておく必要があります <block ref="e8fd0c1fcb8ab0b007f06daaaaad1620" category="inline-link-macro-rx"></block> <block ref="232f97f76b2e1af290ebde69715d8d8f" category="inline-link-macro-rx"></block>。</block>
   <block id="5aef544885f83ccc840e539c33cb1025" category="paragraph">に移動<block ref="c88df82826d36e57e6bb9062bf07b8b2" category="inline-link-rx"></block>し、サインアップしてアカウントを作成します。</block>
   <block id="60606490df41979dfeb5466c4c9f1288" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>ワークロードファクトリへのAWSクレデンシャルの追加</block>
-  <block id="51ff16c71246f19573efec76f8f088e4" category="paragraph">サインアップしてアカウントを作成し、必要に応じてAWSクレデンシャルを追加したら、ワークロードファクトリの使用を開始して、FSx for ONTAPを使用してワークロードを最適化できます。以下のリンクを使用して、ワークロードのタイプごとのステップバイステップの手順を実行します。</block>
   <block id="9ec9485bf8174a52fd8f6a62564d8738" category="summary">ワークロードファクトリには、Webベースのコンソールからアクセスできます。ワークロードの工場出荷を開始したら、最初にNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインを作成してサインアップします。</block>
   <block id="a51339d19908e6fdb3902e2656db64d1" category="doc">BlueXP  Workload Factoryに登録</block>
   <block id="b63dadbd087bac2ed3df3e51784c2a44" category="paragraph">BlueXP  ワークロードファクトリには、Webベースのコンソールからアクセスできます。ワークロードの工場出荷を開始したら、最初にNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインを作成してサインアップします。</block>
@@ -465,9 +462,6 @@
   <block id="2613fa59d7805a53043306264e81ba1a" category="summary">クラウドプロバイダの資格情報、Codeboxの機能拡張など、ワークロードファクトリ管理機能の新機能について説明します。</block>
   <block id="15653101633b93b4e086ba27efda4eae" category="doc">BlueXP  ワークロード工場管理機能の新機能</block>
   <block id="ecbeaffbfe15c72e3bf702b0d0bf9694" category="section-title">2024年11月11日</block>
-  <block id="442602a2c8f7770016d621549f7964c6" category="summary">これでログインしてワークロードファクトリのセットアップが完了しました。FSx for ONTAPファイルシステムを作成、管理したり、他のワークロードファクトリ機能を使用したりできます。</block>
-  <block id="a2f53a8457ed9acfd2f72c4ae30c45de" category="doc">BlueXP  Workload Factoryで次にできること</block>
-  <block id="d6753fe2bb46e06b1aa2e353e485eca7" category="paragraph">BlueXP  Workload Factoryへのログインとセットアップが完了したら、Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAPファイルシステムへのデータベースの導入、FSx for ONTAPファイルシステムを外部データストアとして使用したVMware Cloud on AWSへの仮想マシン構成の移行など、いくつかのワークロードファクトリ機能の使用を開始できます。</block>
   <block id="008afcec5c1c0f2fb38f3e66b5aa4738" category="summary">BlueXP  Workload Factoryは、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化するために設計された、強力なライフサイクル管理プラットフォームです。</block>
   <block id="023c9a2badb62edd0fd5c78e596a5be9" category="doc">BlueXP  ワークロードファクトリの詳細</block>
   <block id="81b33a2e792e396aa73e06306a69815c" category="paragraph">Amazon FSx for NetApp ONTAPは、ミッションクリティカルなアプリケーション、データベース、コンテナ、VMware Cloudデータストア、ユーザファイルに、フルマネージドのAWSネイティブNFS、SMB / CIFS、iSCSIストレージボリュームを提供します。FSx for ONTAPは、ワークロードファクトリやAWSネイティブの管理ツールを使用して管理できます。</block>
@@ -1260,4 +1254,10 @@
   <block id="521987edc4d9059fc32abee2d3f5d6ae" category="cell">FSx for ONTAP の作成失敗</block>
   <block id="dd34477f0a88e199c56ea0813db3e18d" category="cell">FSx for ONTAPファイル システムの作成プロセスが失敗しました。詳細については、Tracker をご覧ください。</block>
   <block id="dfe4f4248d3875aa3b31ac02e60b0e87" category="cell">FSx for ONTAPファイルシステムアクション</block>
+  <block id="a819fc88b2635577c915933ee456de25" category="paragraph">サインアップしてアカウントを作成し、オプションで AWS 認証情報を追加したら、ワークロードファクトリーを使用して FSx for ONTAPでワークロードを最適化できるようになります。</block>
+  <block id="6a636f3ce643c351748a032eeaaa11b0" category="inline-link-macro">FSx for ONTAPでワークロードを最適化</block>
+  <block id="9f2ac12605258d5b9c839500e3fc7770" category="paragraph"><block ref="efcfd21ad3a99d834cf77c9ab08b5664" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d579c4b11db5f291683e63ef986a0f5e" category="summary">ログインしてワークロード ファクトリーを設定すると、FSx for ONTAPファイル システムを作成および管理したり、その他のワークロード ファクトリー機能を使用したりできます。</block>
+  <block id="0a5d504d75a20cbec4103187ecd3e699" category="doc">ワークロードファクトリーでワークロードを最適化</block>
+  <block id="cc851373181948e2ac9056f188882266" category="paragraph">ログインしてワークロードファクトリーをセットアップしたら、 Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAP ファイルシステムへのデータベースのデプロイ、FSx for ONTAPファイルシステムを外部データストアとして使用して仮想マシン構成を VMware Cloud on AWS に移行するなど、ONTAPファクトリーのさまざまな機能を使い始めることができます。</block>
 </blocks>
