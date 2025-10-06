@@ -2,26 +2,26 @@
 sidebar: sidebar 
 permalink: log-in.html 
 keywords: logging in, log in, sign in, signing in, user account, login with netapp, log in with netapp, sign up, create account 
-summary: ワークロードファクトリにサインアップすると、Webベースのコンソールからいつでもログインして、ワークロードとFSx for ONTAPファイルシステムの管理を開始できます。 
+summary: Workload Factory にサインアップすると、Web ベースのコンソールからいつでもログインして、ワークロードと FSx for ONTAPファイル システムの管理を開始できます。 
 ---
-= BlueXP  ワークロードファクトリにログイン
+= NetAppワークロードファクトリーにログイン
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  ワークロードファクトリにサインアップすると、Webベースのコンソールからいつでもログインして、ワークロードとFSx for ONTAPファイルシステムの管理を開始できます。
+NetApp Workload Factory にサインアップすると、Web ベースのコンソールからいつでもログインして、ワークロードと FSx for ONTAPファイル システムの管理を開始できます。
 
 .タスクの内容
-次のいずれかのオプションを使用して、Workload FactoryのWebベースコンソールにログインできます。
+次のいずれかのオプションを使用して、Workload Factory の Web ベース コンソールにログインできます。
 
 * 既存のNetApp Support Site （NSS）のクレデンシャルを必要に応じて変更
 * Eメールアドレスとパスワードを使用したネットアップクラウドへのログイン
 
 
 .手順
-. Webブラウザを開き、に移動します https://console.workloads.netapp.com["ワークロードファクトリコンソール"^]。
+. ウェブブラウザを開いて、 https://console.workloads.netapp.com["ワークロードファクトリーコンソール"^] 。
 . [ログイン*]ページで、ログインに関連付けられている電子メールアドレスを入力します。
 . ログインに関連付けられている認証方法に応じて、クレデンシャルの入力を求められます。
 +
@@ -32,7 +32,7 @@ BlueXP  ワークロードファクトリにサインアップすると、Web�
 
 . [ログイン]*を選択します。
 +
-過去に正常にログインした場合は、ワークロードファクトリのホームページが表示され、デフォルトのアカウントを使用します。
+過去に正常にログインしたことがある場合は、Workload Factory のホームページが表示され、デフォルトのアカウントを使用することになります。
 
 +
 初めてログインする場合は、*アカウント*ページが表示されます。
@@ -45,4 +45,4 @@ BlueXP  ワークロードファクトリにサインアップすると、Web�
 
 
 .結果
-これでログインが完了し、ワークロードファクトリを使用してFSx for ONTAPファイルシステムとワークロードを管理できるようになります。
+これでログインし、Workload Factory を使用して FSx for ONTAPファイルシステムとワークロードを管理できるようになりました。

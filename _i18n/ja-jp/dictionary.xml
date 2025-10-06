@@ -15,7 +15,6 @@
   <block id="083fb8583b0a2366ef9a94388dd9640f" category="paragraph"><block ref="083fb8583b0a2366ef9a94388dd9640f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d11861b4e2dfc9ac3d86245926aa2785" category="section-title">手順1：ワークロードの機能を選択し、IAMポリシーを作成する</block>
   <block id="530d81548274a062436af51b8c3e829f" category="paragraph">このセクションでは、これらのクレデンシャルの一部として管理できるワークロード機能のタイプと、各ワークロードに対して有効にする権限を選択します。選択した各ワークロードのポリシー権限をCodeboxからコピーし、AWSアカウント内のAWS管理コンソールに追加してポリシーを作成する必要があります。</block>
-  <block id="445f4ba50fbc8e7b285aedb4396412bb" category="inline-image-macro">スクリーンショットは、これらのクレデンシャルのポリシーの一部として管理できるワークロード機能のタイプを示しています。</block>
   <block id="c1ab1d79c6a7c98f384377942001e718" category="list-text">[ポリシーの作成]*セクションで、これらのクレデンシャルに含めるワークロード機能をそれぞれ有効にします。</block>
   <block id="3b9b789374908017040d97f81eb4008d" category="paragraph">あとから機能を追加できるので、導入と管理が必要なワークロードを選択するだけです。</block>
   <block id="6d45b51df5e4b4d742aed3a012be7ece" category="list-text">[コードボックス]ウィンドウで、最初のIAMポリシーの権限をコピーします。</block>
@@ -66,7 +65,6 @@
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">ヘルプを表示します</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">FSx for ONTAPのサポートを利用する</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSx for ONTAP</block>
-  <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Workload Factoryおよびそのストレージソリューションおよびサービスに固有のテクニカルサポートを受けるには、以下に説明するサポートオプションを使用してください。</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">セルフサポートオプションを使用します</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">次のオプションは、 1 日 24 時間、週 7 日間無料でご利用いただけます。</block>
@@ -79,7 +77,6 @@
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">上記のセルフサポートオプションに加え、サポートを有効にしたあとで問題が発生した場合は、ネットアップサポートの担当者と相談して解決できます。</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">始める前に</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">サポートに登録する方法について説明します</block>
-  <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">このオプションを選択すると、BlueXPコンソールの新しいブラウザタブが開き、サポートダッシュボードがロードされます。</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">[*Resources*]ページで、[Technical Support]で次のいずれかのオプションを選択します。</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">電話で誰かと話をしたい場合は、*[電話]*を選択します。netapp.comのページに移動し、電話番号が表示されます。</block>
   <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">[ケースの作成]*を選択して、NetAppサポートスペシャリストとのチケットをオープンします。</block>
@@ -97,12 +94,10 @@
   <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">サポートケースの履歴を確認するには、*[設定]&gt;[タイムライン]*を選択し、「サポートケースの作成」というアクションを検索します。右端のボタンをクリックすると、アクションを展開して詳細を表示できます。</block>
   <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">ケースを作成しようとすると、次のエラーメッセージが表示される場合があります。</block>
   <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">"選択したサービスに対してケースを作成する権限がありません"</block>
-  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">このエラーは、NSSアカウントとそれに関連付けられているレコードの会社が、BlueXPアカウントのシリアル番号(例960xxxx）または動作環境のシリアル番号。次のいずれかのオプションを使用して、サポートを受けることができます。</block>
   <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">製品内のチャットを使用します</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
   <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">テクニカル以外のケースを<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
   <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">サポートケースの管理（プレビュー）</block>
-  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">アクティブなサポートケースと解決済みのサポートケースは、BlueXPから直接表示および管理できます。NSSアカウントと会社に関連付けられたケースを管理できます。</block>
   <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">ケース管理はプレビューとして使用できます。今後のリリースでは、この点をさらに改良し、機能を強化する予定です。製品内のチャットでご意見をお寄せください。</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">次の点に注意してください。</block>
   <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">ページ上部のケース管理ダッシュボードには、次の2つのビューがあります。</block>
@@ -112,8 +107,6 @@
   <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">目的の列を追加または削除したり、[優先度]や[ステータス]などの列の内容をフィルタリングしたりできます。他の列には、並べ替え機能だけがあります。</block>
   <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">詳細については、以下の手順を参照してください。</block>
   <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">ケースごとに、ケースノートを更新したり、ステータスが「Closed」または「Pending Closed」でないケースをクローズしたりすることができます。</block>
-  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">[ケース管理]*を選択し、プロンプトが表示されたらNSSアカウントをBlueXPに追加します。</block>
-  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">ケース管理*ページには、BlueXPユーザアカウントに関連付けられたNSSアカウントに関連するオープンケースが表示されます。これは、* NSS管理*ページの上部に表示されるNSSアカウントと同じです。</block>
   <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">必要に応じて、テーブルに表示される情報を変更します。</block>
   <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">[Organization's Cases]*で[View]*を選択すると、会社に関連付けられているすべてのケースが表示されます。</block>
   <block id="059e856250b59be3069246887b74a23c" category="list-text">正確な日付範囲を選択するか、別の期間を選択して、日付範囲を変更します。</block>
@@ -164,8 +157,6 @@
   <block id="3b05fd0eeb02280c9e89c847477bc0fc" category="list-text">1つのアカウントのメンバーである場合は、*続行*を選択します。</block>
   <block id="9dd8932847709b0a76c3786f584e1272" category="list-text">複数のアカウントのメンバーである場合は、アカウントを選択して*続行*を選択します。</block>
   <block id="25f033e226552b2f5ae002edb8e5fd2f" category="doc">認証情報を削除</block>
-  <block id="58eed24ee19ccccfe9a117084c2d03a6" category="list-text">[クレデンシャル]*ページで、一連のクレデンシャルのアクションメニューを選択し、*[削除]*を選択します。</block>
-  <block id="b7dd0331ad4ede9488c2fd01dda69e83" category="list-text">[削除]*を選択して確定します。</block>
   <block id="0261a8e2837bda78e3e9784459c8d346" category="doc">運用モードとAWSクレデンシャルの詳細</block>
   <block id="3b39e22b0ceb822bf56d19eb7ec14f7f" category="section-title">動作モード</block>
   <block id="dad76b021334eb3d63f98648f701f598" category="list-text">基本モード</block>
@@ -243,30 +234,20 @@
   <block id="f54bc40f2305bb493aa6597d8c67d892" category="paragraph">アカウントは、ネットアップのアイデンティティプラットフォームの最上位レベルの要素であり、権限とクレデンシャルを追加および管理できます。</block>
   <block id="2b7293baeca5711138792716543c991a" category="inline-image-macro">新しいアカウントでログインしたときに表示される[Account]ページのスクリーンショット。</block>
   <block id="28fc544db57c6f54a41eaa5c6ebc4a57" category="paragraph"><block ref="28fc544db57c6f54a41eaa5c6ebc4a57" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="243263104c829e77835d632f591230d5" category="summary">ネットアップテクニカルサポートでサポートケースをオープンするには、まずNetApp Support Site アカウントをBlueXPに追加し、サポートに登録する必要があります。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">サポートに登録します</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">サポート登録の概要</block>
-  <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">アカウントIDサポートサブスクリプション（BlueXPの[Support Resources]ページに記載されている20桁の960xxxxxxxxxシリアル番号）を登録すると、単一のサポートサブスクリプションIDとして機能します。各BlueXPアカウントレベルのサポート契約が登録されている必要があります。</block>
-  <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">登録すると、サポートチケットのオープンやケースの自動生成などの機能が有効になります。登録を完了するには、以下の手順でNetApp Support Site（NSS）アカウントをBlueXPに追加してください。</block>
   <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">NetAppサポートのアカウントを登録する</block>
-  <block id="2d6573b6ae4c51dc24e58109473f2490" category="paragraph">サポートに登録してサポート利用資格をアクティブ化するには、アカウントの1人のユーザがNetAppサポートサイトのアカウントをBlueXPログインに関連付ける必要があります。ネットアップサポートへの登録方法は、NetApp Support Site （NSS）アカウントがあるかどうかによって異なります。</block>
   <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">NSSアカウントをお持ちの既存のお客様</block>
-  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">NSSアカウントをお持ちのネットアップのお客様は、BlueXPからサポートに登録するだけで済みます。</block>
-  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">BlueXPコンソールの右上で、[設定]アイコンを選択し、*[クレデンシャル]*を選択します。</block>
   <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">[ユーザクレデンシャル]*を選択します。</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">[NSSクレデンシャルの追加]*を選択し、NetApp Support Site（NSS）認証プロンプトに従います。</block>
   <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">登録プロセスが正常に完了したことを確認するには、[ヘルプ]アイコンを選択し、*[サポート]*を選択します。</block>
   <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">[リソース]ページに、アカウントがサポートに登録されていることが表示されます。</block>
   <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">アカウントのシリアル番号、緑のチェックボックス、サポート登録済みのテキストを示すスクリーンショット。</block>
   <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">他のBlueXPユーザにNetApp Support Siteアカウントが関連付けられていない場合、このサポート登録ステータスは表示されません。ただし、BlueXPアカウントがサポートに登録されていないわけではありません。アカウント内の1人のユーザーがこれらの手順を実行している限り、アカウントは登録されています。</block>
   <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">NSSアカウントを持たない既存のお客様</block>
-  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">NetAppの既存のお客様で、ライセンスとシリアル番号は_NO_NSSアカウントしかお持ちでない場合は、NSSアカウントを作成してBlueXPログインに関連付ける必要があります。</block>
   <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp Support Site ユーザー登録フォーム</block>
   <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">NetAppサポートサイトのアカウントを作成するには、<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
   <block id="d61c9f72493817776f392db42ac446a2" category="list-text">適切なユーザレベルを選択してください。通常は*ネットアップのお客様/エンドユーザ*がこれに該当します。</block>
-  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">必ず、上記のシリアル番号フィールドに使用されているBlueXPアカウントのシリアル番号(960xxxx)をコピーしてください。これにより、アカウント処理が高速化されます。</block>
-  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">の手順を実行して、新しいNSSアカウントをBlueXPログインに関連付けます <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">ネットアップのソリューションを初めて導入する場合は</block>
   <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">ネットアップ製品を初めてご利用になり、NSSアカウントをお持ちでない場合は、以下の手順に従ってください。</block>
   <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">[Support Resources]ページでアカウントIDのシリアル番号を確認します。</block>
@@ -282,13 +263,11 @@
   <block id="201080500e946070a2e4873042507c77" category="paragraph">確認ではネットアップにリクエストが送信され、NetApp Support Site アカウントを作成することを推奨します。</block>
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">シリアル番号フィールドには、上記のアカウントのシリアル番号（960xxxx）を必ずコピーしてください。これにより、アカウント処理が高速化されます。</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">このプロセスについては、ネットアップからご連絡ください。これは、新規ユーザ向けの1回限りのオンボーディング演習です。</block>
-  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">NetAppサポートサイトのアカウントを取得したら、の手順を実行してアカウントをBlueXPログインに関連付けます。 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block></block>
   <block id="74e50aedf700596c6a3592a6d25fec74" category="doc">自動化にコードボックスを使用</block>
   <block id="3d60b94b36b55e7dd31bca9ed2ce46f8" category="section-title">Codeboxの使用方法</block>
   <block id="a064715cfe4e3e4a214bc84cf0551160" category="inline-image-macro">コピーボタン</block>
   <block id="502f1d03f24f8a0cfa430dc69e3b0a81" category="inline-image-macro">UIでMicrosoft SQL Serverを作成する方法、およびCodeboxのVPCゾーンとアベイラビリティゾーンに対応するエントリを示すスクリーンショット。</block>
   <block id="5f52d0f5bc329ec0f8b2cfd9d5a45307" category="paragraph"><block ref="5f52d0f5bc329ec0f8b2cfd9d5a45307" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e1e4d5313e88ce840e8cca3e7f84f01c" category="paragraph">一部のコードフォーマットでは、[ダウンロード]ボタンを選択して、別のシステムに持ち込むことができるファイルにコードを保存することもできます。必要に応じて、ダウンロード後にコードを編集して、他のAWSアカウントに適応させることができます。</block>
   <block id="309209712bce6112df6ef830b062c685" category="section-title">CodeboxからCloudFormationコードを使用</block>
   <block id="db45cb70284a7cbad935a33a0ef0b6dc" category="paragraph">CloudFormationによって生成されたYAMLファイル内のコードは、セキュリティ上の理由から7日後に期限切れになります。</block>
   <block id="f4beed69f4c72e3f9969d0e2daa8cc67" category="list-text">CloudFormationスタックを使用するには、次のユーザー権限が必要です。</block>
@@ -316,7 +295,6 @@
   <block id="902e65d33784bd8924eb05e622aa2dda" category="section-title">サポートされているクラウドプロバイダ</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">コスト</block>
   <block id="11cf550820ecd5e75ae1a9046f7f7f05" category="section-title">ソフトウェアサービス</block>
-  <block id="22412f0c62e1935807bc2c96a82d38cd" category="inline-link">Webベースのコンソール</block>
   <block id="9b945efebb006547a94415eadaa12921" category="section-title">アカウント</block>
   <block id="41d28e7b29f45d4f63653993af041bc7" category="paragraph">組織で追加のアカウントまたはユーザー管理が必要な場合は、製品内のチャットを使用して当社に連絡してください。</block>
   <block id="e73298b79ea9408111cb3612bf336a0e" category="section-title">接続リンク</block>
@@ -344,9 +322,6 @@
   <block id="3700c3dfbf95d68b06191b4a4cbb7592" category="sidebar">Codeboxを使用したタスクの自動化</block>
   <block id="733ae60890dc5503303e1f5780ac5c9b" category="sidebar">コードボックスを使用してコードを生成する</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識とサポート</block>
-  <block id="c419efd1c7454d477938da03ab909ff4" category="list-text">UIを使用して実行する操作を定義したら、[コードボックス]のコードをコピーします。</block>
-  <block id="ac8312e3b09c390dd9da069d9697ab8c" category="list-text">UIを使用して実行する処理を定義したら、[コードボックス]にAPIコードをコピーします。</block>
-  <block id="1b2b6bf8e053a2f8088251c3a2cc65f9" category="list-text">UIを使用して実行する処理を定義したら、[Codebox]でAWS CLIをコピーします。</block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="section-title">コードボックスからTerraformを使用</block>
   <block id="a5a1cedd11df4667bf63eec57c1622aa" category="paragraph">Terraformを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理できます。</block>
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
@@ -360,7 +335,6 @@
   <block id="fa5f572610383fbc01cbba40c0f535e2" category="paragraph"><block ref="fa5f572610383fbc01cbba40c0f535e2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024年9月1日</block>
   <block id="6e9e8f336be02f99477adc019bfcd183" category="list-text">Terraformがインストールされているシステム(Windows/Mac/Linux)が必要です。</block>
-  <block id="613670bc7ca8a45f31728d87474749ac" category="list-text">ユーザーインターフェイスを使用して実行する操作を定義したら、コードボックスからTerraformコードをダウンロードします。</block>
   <block id="53e9887aa73e6bb1fcf6b5b002e7f175" category="list-text">ダウンロードしたスクリプトアーカイブをTerraformがインストールされているシステムにコピーします。</block>
   <block id="8db9de1de3844107194be0555d5ceb7c" category="list-text">zipファイルを展開し、README.mdファイルの手順に従います。</block>
   <block id="ebcd96574a726227b2c1017e8efe81c1" category="doc">BlueXP  Workload Factoryの初回リリース</block>
@@ -373,143 +347,15 @@
   <block id="dfc4a97a3fe947a314ae908cf036cbfe" category="doc">BlueXP  コンソールにワークロードを工場出荷時に統合</block>
   <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">BlueXPコンソール</block>
   <block id="717f9c6475fbb39a24ab9942c1a903c0" category="inline-link-macro">BlueXP  コンソールからワークロードファクトリにアクセスする方法</block>
-  <block id="4fa2f246a664251a157926c2e11e1eb3" category="summary">AWSクレデンシャルを追加して、ワークロードファクトリにAWSアカウントのクラウドリソースの導入と管理に必要な権限を付与します。</block>
-  <block id="188c7f44ffe17186c8dcbc38640d54e1" category="paragraph">AWSクレデンシャルを追加して管理し、ワークロードファクトリにAWSアカウントのクラウドリソースの導入と管理に必要な権限を付与する。</block>
-  <block id="46d8bcaa7ad323ed43d1470da9f4d8d4" category="paragraph">[Credentials]ページで、既存のワークロードファクトリアカウントにAWSクレデンシャルを追加できます。これにより、AWSクラウド環境内のリソースとプロセスの管理に必要な権限がワークロードファクトリに提供されます。</block>
-  <block id="a8d22daacb593b2058549a21847e76f3" category="list-text">*手動*：AWSアカウントにIAMポリシーとIAMロールを作成し、ワークロードファクトリにクレデンシャルを追加します。</block>
-  <block id="d57580b6e425a294d78d2a742a402af8" category="paragraph">ワークロードファクトリにAWSクレデンシャルを手動で追加して、ワークロードファクトリアカウントに、固有のワークロードの実行に使用するAWSリソースの管理に必要な権限を付与することができます。追加するクレデンシャルの各セットには、使用するワークロード機能に基づいて1つ以上のIAMポリシーと、アカウントに割り当てられたIAMロールが含まれます。</block>
-  <block id="625ec9c719b27728c84599153e887088" category="list-text">ワークロードファクトリで、名前を入力してクレデンシャルを追加します。</block>
   <block id="dcafe9cce796ce855e87b270f0a5af59" category="inline-link-macro">コンソールエクスペリエンス</block>
   <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">いずれかを使用してログインし<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="8a0db8d4581d73dd589a7214626fbc3c" category="list-text">[クレデンシャル]*ページに移動します。</block>
-  <block id="a86b019ae57f55a24eebb5f7f3df128e" category="list-text">ワークロードファクトリコンソールで、*[アカウント]*アイコンを選択し、*[クレデンシャル]*を選択します。</block>
-  <block id="76fef5e5c15c0ed8d42e23d725c9d527" category="inline-image-macro">ワークロードファクトリコンソールの[Account Settings]アイコンを示すスクリーンショット。</block>
-  <block id="37df5d7e77818c56eadc8cbec8d0d401" category="paragraph"><block ref="37df5d7e77818c56eadc8cbec8d0d401" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a652e7f4d6556652c66fcd6fb384a25f" category="list-text">BlueXP  コンソールで、*[設定]*アイコンを選択し、*[クレデンシャル]*を選択します。</block>
-  <block id="ee546f7b67f0aaf7b58aa8e33d340884" category="paragraph">このセクションでは、作成した権限とポリシーが含まれているとワークロードファクトリが想定するIAMロールを設定します。</block>
-  <block id="e800fe1fd4497defb18a46cf4f4adc41" category="list-text">[Another AWS account]*を選択し、ワークロード工場出荷時のUIからFSx for ONTAPワークロード管理用のアカウントIDをコピーして貼り付けます。</block>
-  <block id="8cbe2466650b45ed0a6d3de87fc44528" category="list-text">[Required external ID]*を選択し、ワークロードファクトリのUIから外部IDをコピーして貼り付けます。</block>
-  <block id="f81801c8f6fb0e4ef7e5de57374b3f51" category="list-text">ワークロードファクトリの* Credentials *ページに戻り、* Create role *セクションを展開し、_Role ARN_フィールドにARNを貼り付けます。</block>
-  <block id="29e269691f5691e61e5293add93c09af" category="paragraph">最後に、ワークロードファクトリでクレデンシャルの名前を入力します。</block>
-  <block id="0107111c1a465e38cc0e3d2185b0968f" category="list-text">Workload Factoryの*[クレデンシャル]ページ*で、*[クレデンシャル名]*を展開します。</block>
-  <block id="a052e771d91628ded48f631957c81288" category="paragraph">AWS CloudFormationスタックを使用してAWSクレデンシャルをワークロードファクトリに追加するには、使用するワークロードファクトリ機能を選択し、AWSアカウントでAWS CloudFormationスタックを起動します。CloudFormationは、選択したワークロード機能に基づいて、IAMポリシーとIAMロールを作成します。</block>
-  <block id="766ad2b42f55a1ab17ded3bfa19c1b1c" category="inline-image-macro">ポリシーを追加するためのCloudFormationスタックの作成方法と、ワークロードファクトリのクレデンシャルのロールを示すスクリーンショット。</block>
-  <block id="bd8d6e5dfffb67199ddeb1c155bc6e48" category="paragraph"><block ref="bd8d6e5dfffb67199ddeb1c155bc6e48" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3aa9d8c5e3261007f739ce4fad58363e" category="list-text">ワークロードファクトリに戻り、[Credentials]ページを監視して、新しいクレデンシャルが実行中であるか、または追加されていることを確認します。</block>
-  <block id="4dbdfdd6a8563d138a057f5cd3bb0f0b" category="list-text">ワークロードファクトリREST API</block>
-  <block id="7f13adabeed591303c3a10ee4980d5a1" category="summary">BlueXP  ワークロードファクトリには、2つのWebベースのコンソールからアクセスできます。</block>
   <block id="c938676b28ab6dd4d5cc28ebdf8c49b9" category="doc">コンソールエクスペリエンス</block>
-  <block id="d7be74faf3c0cd165206ec127f25dbfc" category="paragraph">BlueXP  ワークロードファクトリには、2つのWebベースのコンソールからアクセスできます。BlueXP  Workload FactoryコンソールとBlueXP  コンソールを使用してBlueXP  Workload Factoryにアクセスする方法について説明します。</block>
-  <block id="48d2f36502eda7eb132ad321750c1d49" category="paragraph">2つのコンソールを使用して、BlueXP  ワークロードファクトリにアクセスできます。</block>
-  <block id="7c885f0d7689b3eaa27baf9e745bd117" category="list-text">* BlueXP  コンソール*：作業環境とワークロードを同じ場所で管理できるハイブリッド環境を提供します。</block>
-  <block id="d6cbd5ec207032cc9ad715f4df3e1ee7" category="list-text">*ワークロードファクトリーコンソール*：Amazon FSx for NetApp ONTAPで実行されるワークロードに焦点を当てた、ワークロードファクトリー専用のエクスペリエンスを提供します。</block>
-  <block id="bf8cfad5e1358abe0fd4e5fef21dd9f4" category="section-title">BlueXP  コンソールからワークロードファクトリにアクセス</block>
-  <block id="e9b538368b121a44c13005613e75a0bc" category="list-text">使用するワークロードに移動し、作業を開始するオプションを選択します。</block>
-  <block id="61a543bd3a5368f0882b3ec3b11123da" category="section-title">Workload Factoryコンソールでワークロードファクトリにアクセス</block>
-  <block id="3e17b2b248f83510c2368a4d20dddc41" category="paragraph">Workload FactoryコンソールからWorkload Factoryにアクセスできます。</block>
-  <block id="8f4910cf6ea086594183ea8e5bb4539b" category="list-text">左側のナビゲーションから*[ワークロード]*を選択します。</block>
-  <block id="08b9f59ea9ae19318566e44120b9fb3f" category="list-text">[ホーム]*を選択してすべてのワークロードを表示するか、*[ストレージ]*や*[データベース]*などのワークロードを1つ選択します。</block>
-  <block id="cc8da163faea82ccff66b041eb816fa5" category="list-text">ワークロードを開始するオプションを選択します。</block>
-  <block id="894106a56db6962222de989043e29e02" category="summary">NetAppは、さまざまな方法でワークロードファクトリをサポートします。ナレッジベース（ KB ）記事やコミュニティフォーラムなど、 24 時間 365 日利用可能な幅広いセルフサポートオプションをご用意しています。サポート登録には、 Web チケット処理によるリモートテクニカルサポートが含まれます。</block>
-  <block id="1dde4a08beb94964c3432a2fc7fdc3fc" category="doc">BlueXP  ワークロードファクトリに関する法的通知</block>
-  <block id="4cbbe0271dc27a292b5994c461d21ac9" category="summary">ワークロードファクトリにサインアップすると、Webベースのコンソールからいつでもログインして、ワークロードとFSx for ONTAPファイルシステムの管理を開始できます。</block>
-  <block id="86543024cef60b4c1a6134d3ade2b23f" category="doc">BlueXP  ワークロードファクトリにログイン</block>
-  <block id="d3cdbbc7912f47cd795095a81b99d26e" category="paragraph">BlueXP  ワークロードファクトリにサインアップすると、Webベースのコンソールからいつでもログインして、ワークロードとFSx for ONTAPファイルシステムの管理を開始できます。</block>
-  <block id="cbce38c9dbd03b5dbc65d7a7564a78cd" category="paragraph">次のいずれかのオプションを使用して、Workload FactoryのWebベースコンソールにログインできます。</block>
-  <block id="b4d6601e48f8fc19ee57934be8644d7f" category="list-text">Webブラウザを開き、に移動します<block ref="c88df82826d36e57e6bb9062bf07b8b2" category="inline-link-rx"></block>。</block>
-  <block id="5812b8aba14d804b938a8882380a3539" category="paragraph">過去に正常にログインした場合は、ワークロードファクトリのホームページが表示され、デフォルトのアカウントを使用します。</block>
-  <block id="b0569829e7ad8e56c8ec82077fb2d070" category="paragraph">これでログインが完了し、ワークロードファクトリを使用してFSx for ONTAPファイルシステムとワークロードを管理できるようになります。</block>
-  <block id="c10ea4936b78c58d10ad52d651ab1b81" category="summary">一連のクレデンシャルが不要になった場合は、BlueXP  ワークロードファクトリから削除できます。削除できるのは、FSx for ONTAPファイルシステムに関連付けられていないクレデンシャルだけです。</block>
-  <block id="49836a38c5243f5726abfb5a8b95ac7b" category="doc">BlueXP  ワークロードファクトリからクレデンシャルを削除</block>
-  <block id="9369e772c26e2cdfaafe3b142d172bbe" category="paragraph">一連のクレデンシャルが不要になった場合は、ワークロードファクトリから削除できます。削除できるのは、FSx for ONTAPファイルシステムに関連付けられていないクレデンシャルだけです。</block>
-  <block id="d7d90d1ce8174a99f1ebf77537c7d533" category="summary">Workload Factoryには、ITポリシーに基づいてワークロードファクトリとクラウド資産の間のアクセスを慎重に制御できる3つの運用モードが用意されています。使用する運用モードは、ワークロードファクトリに提供するAWS権限のレベルによって決まります。</block>
-  <block id="fb4bff09d4eb62ced2b03ad6ae3d8be4" category="paragraph">運用モードでは、割り当てた信頼レベルに応じて、ワークロードファクトリによって提供される機能と機能の論理的な構成が提供されます。運用モードの主な目的は、ワークロードファクトリがAWSアカウント内で実行できるタスクと実行できないタスクを明確に伝えることです。</block>
-  <block id="85776f584c3633cbff79b95327a8fd11" category="list-text">ワークロードファクトリにAWS権限が割り当てられていないゼロトラスト関係を表します。ワークロードファクトリを早期に調査し、さまざまなウィザードを使用して必要なコードとしてのインフラ（IAC）を作成できるように設計されています。コードをコピーしてAWSで使用するには、AWSクレデンシャルを手動で入力します。</block>
-  <block id="e2cef0f4569c69bf6900a6cb6135eb11" category="list-text">読み取り専用権限を追加して、IACテンプレートに特定の変数（VPC、セキュリティグループなど）が入力されるようにすることで、基本モードのエクスペリエンスが向上します。これにより、ワークロードファクトリに変更権限を付与することなく、AWSアカウントからIACを直接実行できます。</block>
-  <block id="9317db7f25495b088f6318d86dfd14bf" category="list-text">完全な信頼関係を表し、ワークロードファクトリに完全な権限が割り当てられます。これにより、ワークロードファクトリは、実行に必要な権限を持つ割り当てられたクレデンシャルとともに、AWSでの処理をユーザに代わって実行および自動化できます。</block>
-  <block id="c733eb78f31844c1e1433a374c901d1e" category="cell">ワークロード工場からの自動化</block>
-  <block id="b1ac12ec9d4b511fa08a587be1be8b4d" category="paragraph">使用するモードを特定するためにワークロードファクトリで設定する必要のあるセレクタはありません。モードは、ワークロードファクトリアカウントに割り当てたAWSのクレデンシャルと権限に基づいて決定されます。</block>
-  <block id="20f75920053dcff627d860520f371b26" category="paragraph">これらの機能は、ワークロードファクトリアカウントの1つのクレデンシャルセット内で提供できます。また、各クレデンシャルが固有のワークロード導入機能を提供する場合は、複数のクレデンシャルセットを作成することもできます。</block>
-  <block id="2fb909c54550b56bac338e985277eb1a" category="paragraph">最初のワークロードファクトリ機能（機能）を使用する場合は、それらのワークロード機能に必要な権限を使用してクレデンシャルを作成する必要があります。資格情報をワークロードファクトリに追加しますが、IAMロールとポリシーを作成するにはAWS管理コンソールにアクセスする必要があります。これらのクレデンシャルは、ワークロードファクトリの機能を使用している場合にアカウント内で使用できます。</block>
-  <block id="929b839513dbfff16e7804628038a9a8" category="paragraph">ワークロードファクトリに複数のAWSクレデンシャルを追加すると、FSx for ONTAPファイルシステム、FSx for ONTAPでのデータベースの導入、VMwareワークロードの移行など、追加の機能を使用するために必要な権限が追加されます。</block>
-  <block id="5145374f219e1c177ab5588a5344aa6e" category="inline-link-macro">ワークロードファクトリにAWSクレデンシャルを追加する方法を確認</block>
-  <block id="167d2e15f93d569365f0bf0ae85dd1ba" category="paragraph"><block ref="9e6c8cfa4c662b280d116964e6bc555f" category="inline-link-macro-rx"></block>です。</block>
-  <block id="ba880f09fd4b768ff6cbb97cba693444" category="summary">Workload Factoryの使用を開始するには、Workload Factoryコンソールのネットワークを準備し、サインアップしてアカウントを作成し、クレデンシャルを追加して、Workload FactoryがAWSリソースを直接管理できるようにします。</block>
-  <block id="5cf175aca70279859c2019fd1da4c1d0" category="doc">BlueXP  ワークロードファクトリのクイックスタート</block>
-  <block id="042ff6eaa1559f4f4284f9b26edf9094" category="paragraph">ワークロードファクトリでは、アカウントを登録して作成し、クレデンシャルを追加してワークロードファクトリがAWSリソースを直接管理できるようにし、Amazon FSx for NetApp ONTAPを使用してワークロードを最適化します。</block>
-  <block id="4cfef3f1fa65f93ca910bf258e895f08" category="inline-link-macro">ワークロードファクトリ</block>
-  <block id="70d0aaf5f480c6663d11cba807745150" category="paragraph">ワークロードファクトリには、Webベースのコンソールからクラウドサービスとしてアクセスできます。作業を開始する前に、とについて理解しておく必要があります <block ref="e8fd0c1fcb8ab0b007f06daaaaad1620" category="inline-link-macro-rx"></block> <block ref="232f97f76b2e1af290ebde69715d8d8f" category="inline-link-macro-rx"></block>。</block>
-  <block id="5aef544885f83ccc840e539c33cb1025" category="paragraph">に移動<block ref="c88df82826d36e57e6bb9062bf07b8b2" category="inline-link-rx"></block>し、サインアップしてアカウントを作成します。</block>
-  <block id="60606490df41979dfeb5466c4c9f1288" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>ワークロードファクトリへのAWSクレデンシャルの追加</block>
-  <block id="9ec9485bf8174a52fd8f6a62564d8738" category="summary">ワークロードファクトリには、Webベースのコンソールからアクセスできます。ワークロードの工場出荷を開始したら、最初にNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインを作成してサインアップします。</block>
-  <block id="a51339d19908e6fdb3902e2656db64d1" category="doc">BlueXP  Workload Factoryに登録</block>
-  <block id="b63dadbd087bac2ed3df3e51784c2a44" category="paragraph">BlueXP  ワークロードファクトリには、Webベースのコンソールからアクセスできます。ワークロードの工場出荷を開始したら、最初にNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインを作成してサインアップします。</block>
-  <block id="680e6430abd003e8b2da8b7092ae4265" category="paragraph">次のいずれかのオプションを使用してWorkload Factoryにサインアップできます。</block>
-  <block id="fd32f1bc8d0d6304d97ecd3dc72ee72d" category="list-text">Webブラウザを開き、<block ref="c88df82826d36e57e6bb9062bf07b8b2" category="inline-link-rx"></block></block>
-  <block id="55ff5fce32ee35f8ae4ba7e758c5ad99" category="paragraph">NSSアカウントをお持ちの場合は、サインアップページをスキップできます。Workload Factoryは、この初回ログイン時に登録されます。</block>
-  <block id="00bfab4fdca97d5d5a36bdd219209a74" category="inline-image-macro">[Sign Up]ページのスクリーンショット。ワークロードファクトリにアクセスするためのユーザ名とパスワードを追加できます。</block>
-  <block id="acdf31ddaab7e18a06f077634f3c4f61" category="paragraph"><block ref="acdf31ddaab7e18a06f077634f3c4f61" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="699238a25cf0a1729ca7351e991db651" category="list-text">[作成]*を選択すると、ワークロードファクトリのホームページが表示されます。</block>
-  <block id="e0810985364d469baf5bb2ea0561bbeb" category="paragraph">これで、ワークロードファクトリログインとアカウントが作成されました。お客様はアカウント管理者と見なされ、すべてのワークロードファクトリ機能にアクセスできます。</block>
-  <block id="3acdefd13933ae891b18dfca314c3ae8" category="summary">Codeboxを使用して、BlueXP  ワークロードファクトリでサポートされている操作を実行するために必要なコードを生成できます。</block>
-  <block id="7a722a65def6075db353b70066e35707" category="doc">BlueXP  ワークロードファクトリでの自動化にCodeboxを使用</block>
-  <block id="a874d0883486fcca7aa1243ef9acc01d" category="paragraph">Codeboxを使用して、BlueXP  ワークロードファクトリでサポートされている操作を実行するために必要なコードを生成できます。ワークロードファクトリREST API、AWS CLI、およびAWS CloudFormationを使用して、使用および実行可能なコードを生成できます。</block>
-  <block id="5a43715fb7078b4045756abce9da826e" category="paragraph">Workload Factory UIウィザードで値を入力すると、各フィールドに入力すると、[コードボックス]にデータの更新が表示されます。ウィザードを完了したら、ページ下部の*作成*ボタンを選択する前に、[コードボックスにコピー]を選択して、 <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> 構成の構築に必要なコードを取得します。たとえば、新しいMicrosoft SQL Serverを作成した場合のスクリーンショットには、VPCゾーンとアベイラビリティゾーンのウィザードエントリと、REST API実装のCodeboxの同等のエントリが示されています。</block>
-  <block id="d10cc376cc863f01ec47fab56e956119" category="paragraph">Codeboxから生成されたCloudFormationコードをコピーし、AWSアカウントでAmazon Web Services CloudFormationスタックを起動できます。CloudFormationは、ワークロードファクトリのUIで定義したアクションを実行します。</block>
-  <block id="d4483cf5ec74c50b2bf5b0430ea00d3e" category="paragraph">CloudFormationコードを使用する手順は、FSx for ONTAPファイルシステムの導入、アカウントのクレデンシャルの作成、またはその他のワークロードファクトリアクションの実行によって異なる場合があります。</block>
-  <block id="e06383ee7ff4262601146f70998142f1" category="list-text">AWSまたはワークロード工場から進捗状況を監視</block>
-  <block id="34e5df6ac4c984fcfbc110aa4053257e" category="paragraph">Codeboxから生成されたワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。</block>
-  <block id="2613fa59d7805a53043306264e81ba1a" category="summary">クラウドプロバイダの資格情報、Codeboxの機能拡張など、ワークロードファクトリ管理機能の新機能について説明します。</block>
-  <block id="15653101633b93b4e086ba27efda4eae" category="doc">BlueXP  ワークロード工場管理機能の新機能</block>
   <block id="ecbeaffbfe15c72e3bf702b0d0bf9694" category="section-title">2024年11月11日</block>
-  <block id="008afcec5c1c0f2fb38f3e66b5aa4738" category="summary">BlueXP  Workload Factoryは、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化するために設計された、強力なライフサイクル管理プラットフォームです。</block>
-  <block id="023c9a2badb62edd0fd5c78e596a5be9" category="doc">BlueXP  ワークロードファクトリの詳細</block>
-  <block id="81b33a2e792e396aa73e06306a69815c" category="paragraph">Amazon FSx for NetApp ONTAPは、ミッションクリティカルなアプリケーション、データベース、コンテナ、VMware Cloudデータストア、ユーザファイルに、フルマネージドのAWSネイティブNFS、SMB / CIFS、iSCSIストレージボリュームを提供します。FSx for ONTAPは、ワークロードファクトリやAWSネイティブの管理ツールを使用して管理できます。</block>
-  <block id="d6c922494e4fda342b91bf56c2cb3f4c" category="paragraph">ワークロードファクトリプラットフォームは、次の主な機能を提供します。</block>
   <block id="7b2ab109a7f028a1314cfd59fab7b820" category="list-text">コストを削減するためのコスト削減計算ツール</block>
-  <block id="85ba2adf75a5f35ad76fc25ad4d5dee4" category="paragraph">ワークロードファクトリでは、クラウドストレージを管理し、Amazon Web Servicesのワークロード機能を使用できます。</block>
-  <block id="b0298cdc4bf45bc83e4aa78b2a7bede9" category="paragraph">Workload Factoryは無料で使用できます。Amazon Web Services（AWS）に支払うコストは、導入予定のストレージサービスとワークロードサービスによって異なります。これには、Amazon FSx for NetApp ONTAPファイルシステム、VMware Cloud on AWSインフラ、AWSサービスなどのコストが含まれます。</block>
-  <block id="e28b1e5abaac14c973e4f4c752f93526" category="section-title">ワークロードファクトリの仕組み</block>
-  <block id="e25f70250be12c534210f7c683cfba6a" category="paragraph">Workload Factoryには、SaaSレイヤーで提供されるWebベースのコンソール、アカウント、クラウド環境へのアクセスを制御する運用モード、ワークロードファクトリとAWSアカウント間の分離された接続を提供するリンクなどが含まれています。</block>
-  <block id="65e1ffc3c4a678670f98730a93dfe313" category="paragraph">ワークロードファクトリには、BlueXP  ワークロードファクトリとBlueXP  からアクセスできます<block ref="7c75ef957f9c2706e82e5fc687e49689" category="inline-link-rx"></block><block ref="bb8e527b785e47b1a58f91dd9248bc28" category="inline-link-macro-rx"></block>。これらのSaaSエクスペリエンスにより、リリースされた最新の機能に自動的にアクセスし、Workload Factoryのアカウントとリンクを簡単に切り替えることができます。</block>
   <block id="02161797e05b29a1a7b7b7f28b9e274a" category="paragraph">詳細については、こちらをご覧<block ref="307484147c616be6cc5c203f4bb58b5b" category="inline-link-macro-rx"></block>ください。</block>
-  <block id="18eab519da5d984a633937e313df3bb6" category="paragraph">ワークロードファクトリに初めてログインすると、アカウントを作成するように求められます。このアカウントでは、クレデンシャルを使用して、組織のリソース、ワークロード、ワークロードアクセスを整理できます。</block>
-  <block id="64445bd3e8f4458b8baf885112994e06" category="inline-image-macro">ワークロード工場出荷時のセットアップウィザードのスクリーンショット。ワークロード工場出荷時のアカウントの入力を求められます。</block>
-  <block id="bb0668c85c572b015fbc6555a4d780ab" category="paragraph"><block ref="bb0668c85c572b015fbc6555a4d780ab" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e97a2df025d5cd174e425be3d2371c69" category="admonition">NetApp BlueXP  を使用している場合は、ワークロードファクトリでBlueXP  アカウントが利用されるため、すでにアカウントに属していることになります。</block>
-  <block id="46d7bda8cb4dc1914a8a3ef0605ade4d" category="paragraph">Workload Factoryには3つの運用モードが用意されており、クラウド環境へのアクセスを慎重に制御し、ITポリシーに基づいてワークロードファクトリに増分信頼を割り当てることができます。</block>
-  <block id="cbd9eefa0ff8e57033b7a0acb96c4d47" category="list-text">*基本モード*はゼロトラスト関係を表し、ワークロードファクトリを早期に調査し、さまざまなウィザードを使用して必要なInfrastructure as Codeを作成するために設計されています。このコードは、ユーザが関連するAWSクレデンシャルとともにコピーして手動で使用できます。</block>
-  <block id="c29b98058b41ec5ee4cb5ab18b099061" category="inline-link-macro">ワークロード工場の動作モードの詳細</block>
-  <block id="854b3b91b9c4885598a38b66c543a2f1" category="paragraph"><block ref="f5f0c4b0bca5778af6406dec21dafbb4" category="inline-link-macro-rx"></block>です。</block>
-  <block id="911f732fbf8786513e6e1431f0370d61" category="paragraph">ワークロードファクトリリンクは、ワークロードファクトリと1つ以上のFSx for ONTAPファイルシステム間の信頼関係と接続を作成します。これにより、Amazon FSx for ONTAP APIでは使用できないONTAP REST API呼び出しから、特定のファイルシステム機能を直接監視および管理できます。</block>
-  <block id="691199ddecf65c4783496c94612dd07f" category="paragraph">ワークロードファクトリを開始するためのリンクは必要ありませんが、場合によっては、ワークロードファクトリのすべての機能とワークロード機能をロック解除するためのリンクを作成する必要があります。</block>
-  <block id="977c73c0914e897973f4ba0be879711f" category="paragraph">Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者やDevOpsエンジニアがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。コード形式には、ワークロードファクトリREST API、AWS CLI、AWS CloudFormationなどがあります。</block>
-  <block id="8ced11608886f669c92a28dad366c83f" category="paragraph">Workload Factoryでは、特定のワークロード向けにFSx for ONTAPファイルシステムを最適化、自動化、運用できます。各ワークロードには関連付けられたREST APIが公開されます。これらのワークロードとAPIを組み合わせることで、柔軟性と拡張性に優れた開発プラットフォームが形成され、FSx for ONTAPファイルシステムの管理に使用できます。</block>
-  <block id="0839f9866a5d09d079388954e0119ee3" category="paragraph">ワークロードの工場出荷時のREST APIを使用すると、次のようなメリットがあります。</block>
-  <block id="ee784d1edaf22c0f803f2403be1903b8" category="list-text">ワークロードファクトリ認証は、OAuth2標準に基づいています。NetAppはAuth0サービス実装に依存しています。</block>
-  <block id="ef280f644b37c73b7caff67b60044604" category="list-text">ワークロードファクトリのWebベースのコンソールでは、同じコアREST APIが使用されるため、2つのアクセスパス間で一貫性が確保されます。</block>
-  <block id="896ad7a0684caeaae269c9ea1c3430cc" category="inline-link">ワークロード工場出荷時のREST APIドキュメントを表示する</block>
-  <block id="a6e871d2d7edd183ddc76f5c82f81c51" category="paragraph"><block ref="a6e871d2d7edd183ddc76f5c82f81c51" category="inline-link-rx"></block></block>
-  <block id="ad58fbedc89b687da72b83c65c94187c" category="sidebar">Amazon FSx for NetApp ONTAPを使用して、ワークロードを最大限に活用できるように、BlueXP  ワークロードファクトリーの利用を開始しましょう。セットアップが完了したら、ワークロードに適したFSx for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム全体の自動化、ワークロードファクトリでのワークロードの管理を行うことができます。</block>
-  <block id="9d99dd80a147b3b1376d73b8b105b981" category="sidebar">BlueXP  ワークロードの工場出荷時のセットアップと管理に関するドキュメント</block>
-  <block id="280ab23085110ae96b1c8df197382d0b" category="sidebar">Workload Factoryへの登録</block>
-  <block id="cb1411d161cdf3fea65b5b1351ffa45b" category="sidebar">ワークロードファクトリの管理</block>
-  <block id="2003c10ae1eaa96c8dd0c849f3e0b79e" category="sidebar">ワークロードファクトリへのログイン</block>
   <block id="1a34f743bd98b1658401ce2f8206ff9a" category="paragraph"><block ref="1a34f743bd98b1658401ce2f8206ff9a" category="inline-link-macro-rx"></block></block>
-  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  ワークロードファクトリ</block>
-  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
-  <block id="b6a4501cc05e54e2e5a513c3b552183a" category="paragraph">NetAppは、BlueXP  ワークロードファクトリとそのクラウドサービスをさまざまな方法でサポートしています。ナレッジベース（ KB ）記事やコミュニティフォーラムなど、 24 時間 365 日利用可能な幅広いセルフサポートオプションをご用意しています。サポート登録には、 Web チケット処理によるリモートテクニカルサポートが含まれます。</block>
-  <block id="261966eaf033c38f6934f2c8fc36d79c" category="paragraph">FSx for ONTAP、そのインフラ、またはサービスを使用するソリューションに関連するテクニカルサポートについては、その製品のワークロード工場のドキュメントで「困ったときは」を参照してください。</block>
-  <block id="5b49df4e58e2a4750acd8bfa8687ccd6" category="paragraph">現在表示しているワークロードファクトリのドキュメント。</block>
-  <block id="ba51332e265e54eb4295d6e7d057bad8" category="paragraph">ワークロードファクトリのナレッジベースを検索して、問題のトラブルシューティングに役立つ記事を見つけてください。</block>
-  <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Workload Factoryコミュニティに参加して、進行中のディスカッションをフォローしたり、新しいディスカッションを作成したりできます。</block>
-  <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">[Create a Case]*機能を使用するには、最初にサポートに登録する必要があります。NetAppサポートサイトのクレデンシャルをワークロードファクトリログインに関連付けます。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>です。</block>
-  <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Workload Factory Consoleの右上で、*[ヘルプ]&gt;[サポート]*を選択します。</block>
-  <block id="ce638fcfafd4d79a49524062225d7fbc" category="paragraph">BlueXP  ワークロードファクトリおよびそのストレージソリューションとサービスに固有のテクニカルサポートを受けるには、サポート登録が必要です。BlueXP  コンソールからサポートに登録する必要があります。このコンソールは、ワークロードファクトリとは別のWebベースのコンソールです。</block>
-  <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">サポートに登録しても、クラウドプロバイダのファイルサービスでNetAppのサポートは有効になりません。クラウドプロバイダのファイルサービス、そのインフラ、またはサービスを使用するソリューションに関連するテクニカルサポートについては、その製品のワークロードファクトリドキュメントの「困ったときは」を参照してください。</block>
   <block id="fd1a283b46f9e16faf592b1eb5138a94" category="list-text">データベースのライフサイクル管理</block>
   <block id="47b4ea23585c5454c4427e68acf95fc4" category="list-text">Amazon FSx for NetApp ONTAPによるデータベースワークロードの調査とコスト削減の分析、SQLサーバデータベースをFSx for ONTAPストレージに移行する際のストレージとアプリケーションのメリットの活用、ベンダーのベストプラクティスを実装したSQLサーバ、データベース、データベースクローンの導入、コードとしてのインフラの共同パイロットによる運用の自動化、SQLサーバ環境の継続的な監視と最適化によるパフォーマンス、可用性、保護、コスト効率の向上</block>
-  <block id="9c38730e32d53f3eda487d3abd1ce6e9" category="paragraph">Workload Factoryにはコスト削減計算ツールが用意されているので、FSx for ONTAPファイルシステム上のストレージ環境やデータベースワークロードのコストを、Elastic Block Store（EBS）、Elastic File Systems（EFS）、FSx for Windowsファイルサーバと比較できます。ストレージ要件によっては、FSx for ONTAPファイルシステムが最も対費用効果の高いオプションであることがわかります。</block>
   <block id="9f346a017efd92b537be153b5fc3b7d1" category="inline-link-macro">ストレージ環境のコスト削減効果を試算する方法をご紹介します</block>
   <block id="764ffbbd234e8c610462259cf8d50b5a" category="list-text"><block ref="764ffbbd234e8c610462259cf8d50b5a" category="inline-link-macro-rx"></block></block>
   <block id="28926214529dd2082ee42d4efccc4f1e" category="inline-link-macro">データベースワークロードの削減効果を試算する方法をご紹介します</block>
@@ -521,54 +367,33 @@
   <block id="932645866653570a60b05477eb9d244b" category="summary">自動化のためにサービスアカウントを作成することで、ニーズに合わせてアカウントを管理できます。</block>
   <block id="7b05bdd67cf260b16b28715ae682b5db" category="doc">サービスアカウントの管理</block>
   <block id="7e25e6f3444627cdd0a9518ea63a557b" category="paragraph">サービスアカウントを作成して、インフラの運用を自動化するマシンユーザとして機能させます。サービスアカウントへのアクセス権は、いつでも無効にしたり変更したりできます。</block>
-  <block id="bb121f2e42609305e9a35e628d683a11" category="paragraph">サービスアカウントは、BlueXP  が提供するマルチテナンシー機能です。アカウント管理者は、サービスアカウントの作成、アクセスの制御、およびサービスアカウントの削除を行います。サービスアカウントは、BlueXP  コンソールまたはBlueXP  ワークロードファクトリコンソールで管理できます。</block>
   <block id="e6a44c030404947ef9ee349b021fc03d" category="inline-xref">サービスアカウントの削除</block>
   <block id="2d81d4fc8d386aa7db8bcac9b1d0b306" category="inline-xref">新規作成</block>
-  <block id="8a8feea1d87a91424b49ee757e409e8b" category="paragraph">クライアントシークレットを再作成できるBlueXP  でサービスアカウントを管理するのとは異なり、ワークロードファクトリではサービスアカウントの作成と削除のみがサポートされます。BlueXP  ワークロードファクトリコンソールで特定のサービスアカウントのクライアントシークレットを再作成する場合は<block ref="f3841cd8a6d92483cb4b2a04ae8d7e16" category="inline-xref-macro-rx"></block>、を実行する必要があります<block ref="117d146838ec9f8b2a3508452b4bae51" category="inline-xref-macro-rx"></block>。</block>
   <block id="de3df2812a77857f11a4d58813051825" category="paragraph">サービスアカウントは、パスワードではなくクライアントIDとシークレットを認証に使用します。クライアントIDとシークレットは、アカウント管理者が変更を決定するまで修正されます。サービスアカウントを使用するには、アクセストークンを生成するためにクライアントIDとシークレットが必要です。そうしないとアクセスできません。アクセストークンは短命であり、数時間しか使用できないことに注意してください。</block>
-  <block id="4297b1c4d208bcc93d459bd6c06031df" category="paragraph">サービスアカウントをBlueXP  コンソールで作成するか、BlueXP  ワークロードファクトリコンソールで作成するかを決定します。わずかな違いがあります。次の手順では、BlueXP  ワークロードファクトリコンソールでサービスアカウントを管理する方法について説明します。</block>
-  <block id="3ae998467dc1449fb591d75901000406" category="inline-link-macro">BlueXP  のアイデンティティ管理とアクセス管理の詳細</block>
-  <block id="97a3c660b50f6bf13e2dacbc15e9c830" category="inline-link-macro">BlueXP  IAMメンバーを追加して権限を管理する方法について説明します。</block>
-  <block id="9c5579c348844cc1b850bd02a96ffe67" category="paragraph">BlueXP  でサービスアカウントを管理するには、<block ref="1d755ffa92795de859e3dba230e1f04d" category="inline-link-macro-rx"></block>および<block ref="aa435623882bd3c92d8bd95e95dc35fe" category="inline-link-macro-rx"></block>を使用します。</block>
   <block id="41d9e1257b3e21add2e59d038938ea94" category="section-title">サービスアカウントを作成します</block>
-  <block id="3f196be1bd5cfb3c4da4e6f58d7c33ed" category="paragraph">サービスアカウントを作成する際、BlueXP  ワークロードファクトリでは、サービスアカウントのクライアントIDとクライアントシークレットをコピーまたはダウンロードできます。このキーペアは、BlueXP  ワークロードファクトリでの認証に使用されます。</block>
-  <block id="7361ae18df6957cd233a2900fa56a3a3" category="list-text">ワークロードファクトリコンソールで、*[アカウント]*アイコンを選択し、*[サービスアカウント]*を選択します。</block>
-  <block id="c3408ec590d1e3b7e7f77d145b976fb6" category="inline-image-macro">BlueXP  ワークロードの工場出荷時のユーザインターフェイスアカウントメニューオプションを示すスクリーンショット。オプションの1つはサービスアカウントです。</block>
-  <block id="2bf662d0fe68884c8c6bfbf1c7e19b28" category="paragraph"><block ref="2bf662d0fe68884c8c6bfbf1c7e19b28" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ebbfd5cf39924ef59304d3b2d03bfad0" category="list-text">[サービスアカウント]ページで、[サービスアカウントの作成]*を選択します。</block>
   <block id="0631e752a6ccf3310e9ff6b0aba74a38" category="list-text">Create service account（サービスアカウントの作成）ダイアログで、* Service account name（サービスアカウント名）*フィールドにサービスアカウントの名前を入力します。</block>
   <block id="c151e8d990a5b1f7552461d4a7727f4a" category="paragraph">role *は、* account admin *として事前に選択されています。</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">「 * Continue * 」を選択します。</block>
   <block id="a708a553b3abfac9aade748b9d27bc4e" category="list-text">クライアント ID とクライアントシークレットをコピーまたはダウンロードします。</block>
-  <block id="8bfab18bdb5a0cbcfb26837e26880088" category="paragraph">クライアントシークレットは一度だけ表示され、Workload Factoryのどこにも格納されません。シークレットをコピーまたはダウンロードして安全に保管します。</block>
-  <block id="f487083f9c2db211b137935b7fc9dece" category="list-text">必要に応じて、クライアントの資格情報交換を実行することで、Auth0管理APIのアクセストークンを取得できます。curlの例は、クライアントIDとシークレットを取得し、APIを使用して時間制限のあるアクセストークンを生成する方法を示しています。このトークンを使用すると、BlueXP  ワークロードファクトリAPIに数時間アクセスできます。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">[ 閉じる（ Close ） ] を選択します。</block>
   <block id="80487d01b1c728a010d93038c1678fff" category="paragraph">新しいサービスアカウントが作成され、[サービスアカウント]ページに表示されます。</block>
   <block id="30b299e9cb0ca616520dfdc739caa685" category="section-title">サービスアカウントを削除します</block>
   <block id="22afe6994929c83f3a017a74a15c514d" category="paragraph">不要になったサービスアカウントを削除します。</block>
   <block id="76eda590152f52e14b5333efced53ebe" category="list-text">Workload Factoryコンソールで、*[Account]*アイコンを選択し、*[Service accounts]*を選択します。</block>
-  <block id="14c8c293bfd0a79761df78d64a7cdc09" category="list-text">[サービスアカウント]ページで、3ドットのメニューを選択し、*[削除]*を選択します。</block>
   <block id="897945ecf5c18d38834da2efd9b74699" category="list-text">[サービスアカウントの削除]ダイアログで、テキストボックスに「* delete *」と入力します。</block>
   <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">削除*を選択して削除を確定します。</block>
-  <block id="0b296fc415fe75b2e0eb7ea5db103354" category="paragraph">サービスアカウントが削除されます。</block>
   <block id="99b22223be957cc9c37eee0aecb2007b" category="list-text">自動化を促進するサービスアカウント</block>
-  <block id="cb62deea87371902deaeb1b0a009e387" category="list-text">サービスアカウントを使用して、BlueXP  ワークロード工場の運用を安全かつ確実に自動化します。サービスアカウントは、ユーザ管理を制限することなく、信頼性と長期にわたる自動化を実現します。また、APIアクセスのみを提供するため、セキュリティも向上します。</block>
   <block id="13b1a844b08d2d7b8144e4c0db6b5552" category="paragraph">アカウントを作成すると、そのアカウントのsingle_account admin_userになります。</block>
   <block id="c33f7c2cbeaca5f1462c1b3e1c276145" category="section-title">サービスアカウント</block>
-  <block id="05cf180c93dd06147c24c610cae8dd96" category="paragraph">サービスアカウントは「ユーザ」として機能し、自動化を目的として、許可されたAPI呼び出しをBlueXP  ワークロードファクトリに実行できます。これにより、自動化スクリプトを作成する必要がなくなります。自動化スクリプトは、会社を離れることができる実際のユーザアカウントに基づいて作成する必要がなくなります。Workload Factoryのすべてのアカウント所有者は、アカウント管理者と見なされます。アカウント管理者は、複数のサービスアカウントを作成および削除できます。</block>
   <block id="25e9dc09fd109741b1c7237f825ab46e" category="inline-link-macro">サービスアカウントの管理方法</block>
   <block id="09c9cabc1664a7683d1d411a37775b39" category="paragraph"><block ref="f09e11341fa2be3f754588bca37990f8" category="inline-link-macro-rx"></block>です。</block>
   <block id="ca475a2b63c70fedcf8f6650024d480b" category="doc">BlueXP  ワークロードの工場出荷時の権限</block>
   <block id="5291909ce92037a20a37f7a0c86dd921" category="paragraph">ストレージ環境の検出から、ストレージ内のファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、BlueXP  ワークロードファクトリでさまざまな処理を実行するために使用される権限を確認できるようになりました。ストレージ、データベース、VMware、生成AIの各ワークロードのIAMポリシーと権限を表示できます。</block>
   <block id="f157db6a1ae10e7a29a28440d21f5cb8" category="paragraph"><block ref="f157db6a1ae10e7a29a28440d21f5cb8" category="inline-link-macro-rx"></block></block>
-  <block id="43fcd221af337ae9a32718b7ef097cf2" category="summary">BlueXP  ワークロードファクトリの機能とサービスを使用するには、ワークロードファクトリがクラウド環境で操作を実行できるように権限を設定する必要があります。</block>
-  <block id="d6a57e4245c0b8a043004e7acd2a2bd9" category="doc">BlueXP  ワアクロオトファクトリノケンケン</block>
   <block id="700a021d89dc2381c64a3ed9192ee53f" category="section-title">権限を使用する理由</block>
-  <block id="141fc03482c74c6707d4666e1b85c2cf" category="paragraph">たとえば、データベースワークロードの場合、Workload Factoryに必要な権限が付与されると、特定のアカウントとリージョン内のすべてのEC2インスタンスがスキャンされ、すべてのWindowsベースのマシンがフィルタリングされます。ホストにAWS Systems Manager（SSM）エージェントがインストールされて実行されており、System Managerネットワークが適切に設定されていれば、ワークロードの工場からWindowsマシンにアクセスして、SQL Serverソフトウェアがインストールされているかどうかを確認できます。</block>
   <block id="a6a12fe94711dfdea0fcf1676358e0b3" category="section-title">ワークロード別の権限</block>
-  <block id="fc80f33c496e0821a5411de4d55a7eb7" category="paragraph">各ワークロードは、権限を使用してワークロードファクトリで特定のタスクを実行します。使用するワークロードまでスクロールして、権限のリスト、目的、使用場所、サポートされているモードを確認します。</block>
   <block id="c5e2d495fdb3c7efa71b3594d9c5e8bf" category="section-title">ストレージの権限</block>
-  <block id="f7eb6493af2813019f9f502b72b049f3" category="paragraph">ストレージで使用可能なIAMポリシーは、ワークロードファクトリがパブリッククラウド環境内のリソースとプロセスを管理するために必要な権限を、運用モードに基づいて提供します。</block>
   <block id="ec62b38395e2480894e3e2f0bb55529d" category="paragraph">運用モードを選択して、必要なIAMポリシーを表示します。</block>
   <block id="4cb074a723eb3f4f31373c399c0f9a89" category="example-title">ストレージのIAMポリシー</block>
   <block id="2d7990698dcab7d7e2e7e63856e57c8b" category="paragraph">次の表に、ストレージの権限を示します。</block>
@@ -745,13 +570,8 @@
   <block id="6d284e37c36390a37443cf46fd082a1b" category="cell">EC2：CreateNetworkInterface</block>
   <block id="d94d61de08721d1da00b1d5006f35977" category="cell">検証ノード用に一時的に作成されたセキュリティグループを削除します。</block>
   <block id="7f9122ce0935681e0e135088ba86059c" category="cell">プロビジョニング用のインスタンスの詳細を取得する</block>
-  <block id="8e4c74245e24cdd4dade7298ed548b64" category="cell">EC2：説明*</block>
-  <block id="5f145d52954bd10262d984880ba32ae7" category="cell">EC2：GET *</block>
   <block id="c1e2ff64a681f515f3bae376c9a2850d" category="cell">作成したインスタンスの開始</block>
   <block id="392b3d4b5b32ec7fec96c348ecef2c2a" category="cell">EC2：RunInstances</block>
-  <block id="267c89392dc5a1252f4802ac098be7b2" category="cell">System ManagerはAPI処理にAWSのメッセージ配信サービスエンドポイントを使用</block>
-  <block id="c7d63774f211e9040ac15f807966ac19" category="cell">ec2メッセージ：*</block>
-  <block id="d63690da8c50c3f90d863aef3bb9fdf2" category="list-text">導入*インベントリ</block>
   <block id="b5c1b2fb67ad44bad7c65c2b1539f3ac" category="cell">プロビジョニングに必要なFSx for ONTAPリソースを作成します。既存のFSx for ONTAPシステムでは、SQLボリュームをホストするための新しいSVMが作成されます。</block>
   <block id="ac49e7eb83cca55da7651e3f6374a031" category="cell">FSx：CreateFileSystem</block>
   <block id="d5df17014c12ec1054b41925d934d6c2" category="cell">FSx：CreateStorageVirtualMachine</block>
@@ -767,8 +587,6 @@
   <block id="46d371d3b43dbd883691541a05f3109a" category="cell">EC2インスタンスで実行される検証スクリプトとプロビジョニングスクリプト用にCloudWatchログを作成する</block>
   <block id="4011ea392d4bd2f3136eea1bbb00683d" category="cell">ログ:CreateLogGroup</block>
   <block id="9294f7e303ba3ddc420e24b7e47eab2c" category="cell">ログ:CreateLogStream</block>
-  <block id="2a7da4b7c2c1489f2df06bf5dc418bb0" category="cell">ログ：DescriptionLog*</block>
-  <block id="8bbdc24b096b09dbeb2728b9faf4bd02" category="cell">ログ:getlog*</block>
   <block id="e471f866d2e101796e014fff06474675" category="cell">ログ:ListLogDeliveries</block>
   <block id="3ba3376e55a3bdd26ed9c2519b4b9e6a" category="cell">ログ:PutLogEvents</block>
   <block id="dc344e1b51ae9e5aff7a5efaf286df5a" category="cell">ログ:TagResource</block>
@@ -776,16 +594,13 @@
   <block id="ed9cb1f5c288bc89df419f89bcf3242b" category="cell">カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。</block>
   <block id="79b450f031f5478d5e79ee9957707c72" category="cell">SNS：公開</block>
   <block id="8d9eb93100874b1ad35f7c114e99b237" category="cell">プロビジョニングされたSQLインスタンスに対して検出スクリプトを実行し、FSx for ONTAPでサポートされるAWSリージョンの最新のリストを取得するために必要なSSM権限。</block>
-  <block id="bf01418252185a7db1a4af263ef6e9ff" category="cell">SSM：説明*</block>
   <block id="13be5cbb4abfbddc54737b7623c133ff" category="cell">SSM：GET *</block>
-  <block id="367e0b4d64ee773708e8dcf8290b1b8b" category="cell">SSM：リスト*</block>
   <block id="c7c7e420402662bb51829df1e0943c12" category="cell">SSM：PutComplianceItems</block>
   <block id="89fbad9b36c97bf54eb493988a0f0123" category="cell">SSM：PutConfigurePackageResult</block>
   <block id="9fd52b354e3e9f908281162e612f8481" category="cell">SSM：PutInventory</block>
   <block id="ee12464a75d4bfd31f45d23a41eb32f4" category="cell">SSM：UpdateAssociationStatus</block>
   <block id="3a0d45848bef93e542aab0d32de3c7fa" category="cell">SSM：UpdateInstanceAssociationStatus</block>
   <block id="12490ad4c4c5d81ea6938b26360309d6" category="cell">SSM：UpdateInstanceInformation</block>
-  <block id="4eb98430eee7e3043517e6b44aae507d" category="cell">ssmessages：*</block>
   <block id="56588fd23388c72518cf101c6fd03860" category="cell">FSx for ONTAP、Active Directory、SQLユーザのクレデンシャルを保存（SQLユーザ認証のみ）</block>
   <block id="a2fd11b449a7d2e5203810fdaa498c7a" category="cell">成功または失敗時にCloudFormationスタックに信号を送信します。</block>
   <block id="1416cbe9db91fd81dc63c1829887b539" category="cell">CloudFormation：SignalResource ^1^</block>
@@ -816,7 +631,6 @@
   <block id="8871e7455cbf17c8190fb2c27de4cb92" category="list-text">IAM：AWSServiceNameによって制限される「IAM：CreateServiceLinkedRole」：ec2.amazonaws.com"*</block>
   <block id="a7170e00216d426ffa1b5c8b1ad8faf2" category="list-text">「IAM：PassRole」は「IAM：PassedToService」によって制限されます：ec2.amazonaws.com"*</block>
   <block id="be5d4fafcc5fc8ef08ec4bd4f076e815" category="section-title">生成AIワークロードの権限</block>
-  <block id="c01e6e48c9dd3d58f56addc8ddd893e8" category="paragraph">VMwareワークロードのIAMポリシーは、運用モードに基づいてパブリッククラウド環境内のリソースとプロセスを管理するために、VMwareのワークロードファクトリが必要とする権限を提供します。</block>
   <block id="fc52d9d99561c2b721d43bdd4d36b615" category="example-title">生成AIワークロードのIAMポリシー</block>
   <block id="2d8cf1aba2af04b1b4fd9bd3d7d6905f" category="paragraph">次の表に、生成AIワークロードの権限の詳細を示します。</block>
   <block id="64f5bb9f44fff01f3adc6fad9e6240f7" category="example-title">生成AIワークロードの権限の一覧</block>
@@ -839,8 +653,6 @@
   <block id="66225a6c05fbef258e73728898744db8" category="cell">導入時と再構築時のAIエンジンスタック作成時のイメージをリスト表示</block>
   <block id="effc62a026ed8a4a114329bdc528d625" category="cell">導入および再構築処理中にCloudFormationスタックの作成中にAIエンジンを実行</block>
   <block id="8db0f3adf91a39cebe582faf96db2426" category="cell">導入時や再構築時のスタック作成時に、セキュリティグループを追加してAIエンジンのルールを変更</block>
-  <block id="70d1598e70f9b135b09469bea7b082e5" category="cell">AIエンジンの導入時にAmazon Bedrock / Amazon CloudWatchのログステータスを照会</block>
-  <block id="e8a46aee8aa47b78b90b155b227afbc9" category="cell">Bedrock：GetModelInvocationLoggingConfiguration</block>
   <block id="00fe52afa6e3b9a0d389f529a2b88242" category="cell">Bedrock：InvokeModelWithResponseStream</block>
   <block id="d3514773d1692fd740afde54cdaaa7b0" category="cell">基礎モデルのチャット/埋め込みリクエストの開始</block>
   <block id="93804e96d3f417a0088c564647dd28e9" category="cell">Bedrock：InvokeModel</block>
@@ -901,10 +713,6 @@
   <block id="6cff628e35cc5d429a57e4a125a0bf6b" category="inline-link-macro">アクセス権参照変更ログ</block>
   <block id="86fbb6c90e401f3291e15bdc1398509c" category="paragraph"><block ref="86fbb6c90e401f3291e15bdc1398509c" category="inline-link-macro-rx"></block></block>
   <block id="3528b115bbe0e91f700d310d0ea17581" category="section-title">2025年2月3日</block>
-  <block id="f178e0fd9fcc4b5a6fc2d338458b6cd3" category="summary">BlueXP  ワークロードファクトリのユーザインターフェイスのどこからでもCloudShellを使用して、AWSまたはONTAPのCLIコマンドを発行できます。</block>
-  <block id="922fc3bba93bebc201e0899daa104cdf" category="doc">BlueXP  ワークロードファクトリでCloudShellを使用</block>
-  <block id="d59a89cea13e89eca14a0cc511502b8f" category="paragraph">CloudShellを開き、BlueXP  ワークロードファクトリのユーザインターフェイスの任意の場所からAWSまたはONTAP CLIコマンドを実行します。</block>
-  <block id="04c6abdf6dfbe761a16c8603f6d0f6f2" category="paragraph">CloudShellを使用すると、BlueXP  ワークロードファクトリのユーザインターフェイス内から、シェルのような環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。ブラウザで端末セッションをシミュレートし、端末機能を提供し、ワークロードファクトリのバックエンドを介してメッセージをプロキシします。BlueXP  アカウントで指定したAWSクレデンシャルとONTAPクレデンシャルを使用できます。</block>
   <block id="65b336958c485c86a0de553a015bdd0d" category="paragraph">CloudShellには次の機能があります。</block>
   <block id="a7a0775c1947243b3a6c24c48bdea382" category="list-text">複数のCloudShellセッション：複数のCloudShellセッションを一度に展開して、複数のコマンドシーケンスを並行して発行します。</block>
   <block id="d62fc5a6d3868c32bb1ab00a844b9d65" category="list-text">複数のビュー：CloudShellタブセッションを分割して、2つ以上のタブを水平または垂直に同時に表示できるようにします。</block>
@@ -914,8 +722,6 @@
   <block id="7ecafb2a126ddd20e4af39475aaaa9e2" category="paragraph">CloudShellは、AWSクレデンシャルのコンテキストで機能します。CloudShellを使用するには、AWSクレデンシャルを少なくとも1つ指定する必要があります。</block>
   <block id="3fd37cbd3ed011cecdd18aadab5eafb3" category="admonition">CloudShellを使用すると、AWSまたはONTAPの任意のCLIコマンドを実行できます。ただし、FSx for ONTAPファイルシステムのコンテキスト内で作業する場合は、必ず次のコマンドを実行してください。<block ref="c984027e1f41d301c7393346780a9c16" prefix=" " category="inline-code"></block></block>
   <block id="29c424808b1ff1c13d6bb81e6a7b5b05" category="section-title">CloudShellを導入する</block>
-  <block id="0fdd6dc99919df7360b4ae27d37e8f3e" category="paragraph">BlueXP  ワークロードファクトリコンソールのどこからでもCloudShellを導入できます。FSx for ONTAPファイルシステム内からストレージからCloudShellを導入することもできます。</block>
-  <block id="323c6e4cf955d16e1bbc9adae1670cc3" category="open-title">ワークロードファクトリコンソールから導入</block>
   <block id="646a59dbe0b61f54c34bfd556c65da3b" category="inline-image-macro">新しいCloudShellセッションを示すスクリーンショット。</block>
   <block id="700a03c5329ddd167df74b66d20ca912" category="paragraph"><block ref="700a03c5329ddd167df74b66d20ca912" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3435647271a6f955b1a9177ac9e55baf" category="list-text">と入力し<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>て使用可能なCloudShellコマンドとその手順を表示するか、使用可能なコマンドについては次のCLIリファレンスドキュメントを参照してください。</block>
@@ -924,16 +730,8 @@
   <block id="37888f4436a67135b7af33cedc29e2a9" category="inline-link-macro">ONTAP CLIリファレンス</block>
   <block id="007f7ecbc75b3fc0bafefe8712e42e55" category="list-text"><block ref="007f7ecbc75b3fc0bafefe8712e42e55" category="inline-link-macro-rx"></block></block>
   <block id="c344cbcae2dab0cb8147a60d8f43f903" category="list-text">CloudShellセッション内でコマンドを発行します。</block>
-  <block id="2103942a2c420bdeb15390d88e350838" category="open-title">ストレージからの導入</block>
-  <block id="b8613e46a68d4b177aeb2fe1cdab9b07" category="list-text">[ストレージ]*で、*[ストレージインベントリに移動]*を選択します。</block>
-  <block id="a1c8ad0ac4339ad1c44f047ff8456c56" category="list-text">FSx for ONTAP *タブで、ファイルシステムの3ドットメニューを選択し、*[Open CloudShell]*を選択します。</block>
-  <block id="b15f76b63a4ca4ca1577f8fc396e80d3" category="paragraph">選択したファイルシステムのコンテキストでCloudShellセッションが開きます。</block>
-  <block id="207a95a0a302452a35a77c4fbbf38905" category="paragraph">このスクリーンショットに示されているCloudShellタスクは、開いているCloudShellセッションタブの3ドットメニューを選択することで完了できます。これらの各タスクの手順は次のとおりです。</block>
-  <block id="54fb61e4e09baa57bff32158fe5c05cb" category="inline-image-macro">CloudShellタブの3ドットメニューを示すスクリーンショット。名前の変更、複製、他のタブの閉じ、すべて閉じるなどのオプションが表示されます。</block>
-  <block id="81a9e8038945d6142798001db5770332" category="paragraph"><block ref="81a9e8038945d6142798001db5770332" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3efc66df7492b3ffcca7a9721a7b5bcc" category="section-title">CloudShellセッションタブの名前変更</block>
   <block id="633842af0eac9ec747edc78eddad128c" category="paragraph">CloudShellセッションタブの名前を変更して、セッションを識別しやすくすることができます。</block>
-  <block id="cfd31b2e21a02f206d5c236d2b9cddf2" category="list-text">CloudShellセッションタブの3ドットメニューを選択します。</block>
   <block id="6f8614f1580cf2c6afb8b45a067936bf" category="list-text">[ 名前の変更 *] を選択します。</block>
   <block id="9cf2d3245c37df3eca3de9544c3be83f" category="list-text">セッションタブの新しい名前を入力し、タブ名の外側をクリックして新しい名前を設定します。</block>
   <block id="85a4b155e3f69dff8dc321d64a863777" category="paragraph">CloudShellセッションタブに新しい名前が表示されます。</block>
@@ -954,9 +752,6 @@
   <block id="f70a8087804334c46314b7b22718eba7" category="paragraph">CloudShellウィンドウの上部、下部、左、または右にCloudShellセッションタブをドラッグアンドドロップして、ビューを分割します。</block>
   <block id="b4473fd670e2ec43e4f656fe655a4c35" category="inline-image-macro">2つのCloudShellタブが水平に分割されているスクリーンショット。タブが並べて表示されます。</block>
   <block id="541a26908a416cf0911d9e5231d0ef74" category="paragraph"><block ref="541a26908a416cf0911d9e5231d0ef74" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="15bbc14ab214ce8d22cbbdfdf319d828" category="section-title">最後のCloudShellセッションを再度開く</block>
-  <block id="240c3daa75057ab498529c248f565139" category="paragraph">誤ってCloudShellセッションを閉じた場合は、再度開くことができます。</block>
-  <block id="d6bae394f1010742fdae7b1244f45c40" category="paragraph">最新のCloudShellセッションが開きます。</block>
   <block id="dfaeb18551197bed5eec6a2801accd3b" category="section-title">CloudShellセッションの設定の更新</block>
   <block id="433acad846fd0b916086af8f4f657288" category="paragraph">CloudShellセッションのフォントおよび出力タイプの設定を更新できます。</block>
   <block id="7e043e4b9a91037ca7facea7bf7d8146" category="list-text">CloudShellセッションをデプロイします。</block>
@@ -968,15 +763,9 @@
   <block id="e266fd38895bd2f3c549295f4bc59641" category="paragraph">CloudShell設定が更新されます。</block>
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025年2月2日</block>
   <block id="bd901b05034bb9be1d918012998e8f7b" category="section-title">2025年1月5日</block>
-  <block id="837dc9ced3f451b5576a53734a81f296" category="admonition">AWSクレデンシャルは、Workload FactoryコンソールまたはBlueXP  コンソールからアカウントに追加できます。</block>
-  <block id="9dcf47e156e121f56bf41ceed39f49d6" category="list-text">にログインし<block ref="16bf9e05d35ac34d34081fb843866b4b" category="inline-link-rx"></block>ます。</block>
-  <block id="53b82725deafbd8d1e3333b16f705800" category="list-text">[アカウント]*アイコンを選択し、*[クレデンシャル]*を選択します。</block>
   <block id="5ff4c3f483396c894c51f91d47106ecf" category="list-text">[クレデンシャル]ページで、*[クレデンシャルの追加]*を選択します。</block>
   <block id="558847a01e0a9378a8c7b99a0e6af643" category="list-text">[クレデンシャルの追加]ページで*[手動で追加]*を選択し、次の手順に従って_Permissions configuration_の各セクションを完了します。</block>
-  <block id="e2a4b0fd7ab7976168ed787ae67353e6" category="inline-image-macro">クラウドシェルアイコンのスクリーンショット</block>
-  <block id="4feffbc31d63b39c2011fe3b05c6175b" category="list-text">上部ナビゲーションバーからCloudShellを開き<block ref="22292d13795e0e4de9ba364021c92eab" category="inline-image-macro-rx" type="image"></block>ます。</block>
   <block id="4b44bad00f91b8450a836bfa54b0306e" category="list-text">[CloudShell]ウィンドウで、CloudShellセッションのクレデンシャルとリージョンを選択し、矢印を選択して続行します。</block>
-  <block id="7413e05cafe498b54ab1b5640cc3ba82" category="paragraph">から[CloudShell]アイコンを選択し<block ref="22292d13795e0e4de9ba364021c92eab" category="inline-image-macro-rx" type="image"></block>上部ナビゲーションバーます。</block>
   <block id="a5fab0062142f5ef0615c361259b0b89" category="cell">Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。</block>
   <block id="8832fb7d0699d4878c8449616cd47613" category="cell">IAM：CreateServiceLinkedRole</block>
   <block id="e3fee6f099023b5f4b39c1c744c6ea99" category="cell">KMS：復号化</block>
@@ -1007,15 +796,11 @@
   <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2025年3月2日</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログとコミュニティ</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetAppコミュニティ</block>
-  <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXPのブログ</block>
-  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">クラウドに関する Web セミナー</block>
   <block id="3450754e7ec63bd0a961376c9928752a" category="paragraph">CloudShellを使用している場合、ONTAP CLIコマンドを発行してエラーが発生するたびに、失敗の説明、失敗の原因、詳細な解決策を含むAI生成のエラー応答を取得できます。</block>
   <block id="4ef50e373522b91f7df59d5cba69a8b7" category="section-title">IAM：SimulatePermissionPolicy権限の更新</block>
   <block id="906699741ebd9905a07af900abcfd438" category="paragraph">AWSアカウントのクレデンシャルを追加したり、生成AIワークロードなどの新しいワークロード機能を追加したりするときに、ワークロードファクトリコンソールから権限を管理できるようになりまし<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>た。</block>
-  <block id="c1bc5d8eeb872326cb512499f02befb5" category="paragraph"><block ref="c1bc5d8eeb872326cb512499f02befb5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーにが追加され<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
   <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーに権限が追加され<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
-  <block id="ad9001b544dade5536691ec3feee578f" category="inline-link-macro">BlueXP  ワアクロオトファクトリノケンケン</block>
   <block id="2a358d687197b0311c68b4c8a7e35e1c" category="cell">ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較</block>
   <block id="8c5e268f15aeebda6b5b234b3f7c7174" category="cell">暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
   <block id="9b1384398d4de5545bd0dad2106d6b0d" category="cell">イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
@@ -1031,11 +816,6 @@
   <block id="a89bcda1bd913f5d2c92bb3afd10848c" category="cell">AIエンジンのログをAmazon CloudWatchロググループに送信する</block>
   <block id="1ae2d90929ed009fb7cb0c3215e704ed" category="cell">Amazon CloudWatchからSSMの応答を取得する（応答が長すぎる場合）</block>
   <block id="58401e538d76248fba41eb3d4b00ff5b" category="cell">Amazon CloudWatchからSSMの応答を入手</block>
-  <block id="4a5e33ece3615dac1032e841cde40447" category="cell">BedrockのログをAmazon CloudWatchに送信</block>
-  <block id="add4bf257ce9e3b25c497de343e52632" category="cell">Bedrock：PutModelInvocationLoggingConfiguration</block>
-  <block id="60932b6084feefeacceacd749dcdedc9" category="cell">Amazon BedrockログをAmazon CloudWatchに送信できるようにするロールを作成する</block>
-  <block id="b76a6c7392362eeb73fd252a4af062ca" category="cell">IAM：AttachRolePolicy</block>
-  <block id="8de34002c35d0d4a13280a50047e76e4" category="cell">iam：createPolicy</block>
   <block id="9f48be20e687484bbb74c66926ff62af" category="cell">モデルの推論プロファイルをリスト表示</block>
   <block id="9aa5a97dfe3f7608d8ee28e7db3c4e2c" category="cell">Bedrock: ListInferenceProfiles</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025年3月30日</block>
@@ -1046,12 +826,10 @@
   <block id="e1c6dba31ff47898c553f6707ccfbdb0" category="list-text"><block ref="8de34002c35d0d4a13280a50047e76e4" prefix="" category="inline-code"></block></block>
   <block id="71d01806cd25e89067c25b4f03e9a607" category="list-text"><block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix="" category="inline-code"></block></block>
   <block id="4e1a858f8ffb4228ac62fb2a65e14e11" category="section-title">IAM：SimulatePrincipalPolicy権限の更新</block>
-  <block id="ebbd089f3b834616ea3613bf16e46cbf" category="paragraph">AWSアカウントのクレデンシャルを追加するとき、またはワークロードファクトリコンソールから新しいワークロード機能を追加するときに自動権限チェックを有効にする場合、この<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>権限はすべてのワークロード権限ポリシーに含まれます。この権限は、ワークロードの処理をシミュレートし、必要なAWSアカウントの権限があるかどうかを確認してから、ワークロードファクトリからリソースを導入します。このチェックを有効にすると、失敗した処理からリソースをクリーンアップしたり、不足している権限を追加したりするために必要な時間と労力が軽減されます。</block>
   <block id="e81d623c1eabf7a990c647cdb9dc4de8" category="list-text">ONTAP CLIコマンドに対するAIが生成するエラー応答</block>
   <block id="fecf8c04c92afcaa45ac22e74423f5cb" category="section-title">CloudShellコマンド</block>
   <block id="5c9c99b1013b0e43fb1314d83cc5242b" category="paragraph">CloudShell GUIインターフェイス内で、と入力して使用可能なCloudShellコマンドを表示できます<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>。コマンドを実行すると<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>、次のリファレンスが表示されます。</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="list-text">製品説明</block>
-  <block id="5a74855c30a89f18aabcae2686c1831f" category="list-text">NetApp CloudShellは、BlueXP  ワークロードファクトリに組み込まれたGUIインターフェイスであり、シェルのような環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。ブラウザでターミナルセッションをシミュレートし、ターミナル機能を提供し、ワークロードファクトリのバックエンドを介してメッセージをプロキシします。これにより、BlueXP  アカウントで指定したAWSクレデンシャルとONTAPクレデンシャルを使用できます。</block>
   <block id="29349e534777eb74b3582eb552f6b76d" category="list-text">使用可能なコマンド</block>
   <block id="9408261c3775c6abe5ba6ef14faa8a1a" category="list-text"><block ref="01bc6f8efa4202821e95f4fdf6298b30" prefix="" category="inline-code"></block></block>
   <block id="c6a354ad100a80a11b5358549fa08956" category="list-text"><block ref="657f8b8da628ef83cf69101b6817150a" prefix="" category="inline-code"></block></block>
@@ -1059,20 +837,12 @@
   <block id="c4352d06a85db47c5f3caad2ce69d15e" category="list-text"><block ref="3b5b347787fd4fe1e38c522ff6637807" prefix="" category="inline-code"></block></block>
   <block id="ad4e206408c1c59bfb8a057ba7857446" category="list-text">コンテキスト</block>
   <block id="cb8b4c44a56d3dcbb2f832e3b29cd17d" category="list-text">各ターミナルセッションは、クレデンシャル、リージョン、およびオプションでFSx for ONTAPファイルシステムという特定のコンテキストで実行されます。</block>
-  <block id="7a702884b96a08a3907a8a471abf949b" category="paragraph">すべてのAWSコマンドは、指定されたコンテキストで実行されます。AWSコマンドは、指定したクレデンシャルに指定したリージョンの権限がある場合にのみ成功します。</block>
-  <block id="77d06b9ca965a3593dd7ce79688cc7e2" category="paragraph">オプションでONTAPコマンドを指定できます<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>。に個別のONTAPコマンドを指定した場合、<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>このIDはコンテキスト内のIDよりも優先されます。ターミナルセッションにFSx for ONTAPファイルシステムIDコンテキストがない場合は、各ONTAPコマンドを指定する必要があります<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>。</block>
-  <block id="709adb949ea5dacc37bbc5f28d0389a8" category="paragraph">異なるコンテキストの仕様を更新するには、次の手順を実行します。*クレデンシャルを変更するには："クレデンシャルの使用&lt;credentialId&gt;"*リージョンを変更するには："リージョン&lt;regionCode&gt;の使用"* FSx for ONTAPファイルシステムを変更するには：" FSx &lt;fileSystemId&gt;の使用"</block>
   <block id="1edcef27d6d610b941bff34048672231" category="list-text">アイテムの表示</block>
   <block id="e42980b3c0bd52fb14aaa9988655c033" category="list-text">使用可能な認証情報を表示するには："show credentials"</block>
   <block id="78522635a5140c949c97294742094c1e" category="list-text">利用可能な地域を表示するには:"show regions"</block>
   <block id="3136fda9c147acfdf956c914baf5e65b" category="list-text">コマンド履歴を表示するには："show history"</block>
   <block id="03df896fc71cd516fdcf44aa699c4933" category="list-text">変数</block>
   <block id="fcdc44920df6ae99e908733121b1ede8" category="list-text">変数の設定と使用例を次に示します。変数の値にスペースが含まれている場合は、引用符で囲んで設定してください。</block>
-  <block id="fb6529d9f860f345fe33d504077c3098" category="list-text">変数を設定するには：&lt;variable&gt;=&lt;value&gt;</block>
-  <block id="79455121e702185ae236d6d3ae86d769" category="list-text">変数を使用するには:&lt;variable&gt;</block>
-  <block id="073561292daefe5d19eb6dc57fca2623" category="list-text">変数の設定例：$svm1=svm123</block>
-  <block id="7ee0990c4bd93aa182fedd32047faca4" category="list-text">変数を使用する例：--fsx filesystem-1 volumes show --vserver $svm1</block>
-  <block id="5dd42e8c4c677f0d9d2a7dfd5965fe45" category="list-text">例：文字列値$Comment1 ="A comment with spaces"</block>
   <block id="b3c5827f54218753bb2c3338236446c2" category="list-text">運用者</block>
   <block id="da1654cced07f7b0be3ee4215ae83b0b" category="list-text">パイプ、バックグラウンド実行<block ref="c2249209343ab488c055da76368f04a0" prefix=" " category="inline-code"></block>、リダイレクト<block ref="58ba3bb1a1772a74392e5e86bd2be4b7" prefix=" " category="inline-code"></block>などのシェル演算子は<block ref="b99834bc19bbad24580b3adfa04fb947" prefix=" " category="inline-code"></block>サポートされていません。これらの演算子を含めると、コマンドの実行は失敗します。</block>
   <block id="bc7864e70344eae19121f3e6408c5e04" category="list-text">と入力し<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>て使用可能なコマンドと手順を表示するか、次のCLIリファレンスマニュアルを参照して<block ref="0bdecf44265be755040a6284b4703b71" category="inline-xref-macro-rx"></block>ください。</block>
@@ -1081,14 +851,12 @@
   <block id="e388026a0cea886de58a344e102aff29" category="cell">管理対象EC2インスタンスのグループのSSMアソシエーションステータスの取得（SQLノード）</block>
   <block id="3320749a6854264e1889d72d7f41a0bf" category="cell">SSM：InstanceInformationの説明</block>
   <block id="99e26a6b02df18a6d3fcaa201c832eff" category="section-title">2025年4月2日</block>
-  <block id="0c749cb02f361ac40b1f6fc23a0feaf9" category="paragraph">詳細については、をご覧ください <block ref="8b9a4f89ed6bf874edd6af12deea004c" category="inline-link-macro-rx"></block>。</block>
   <block id="74d516ef8dfa098bb4cd92313c403475" category="doc">CloudShellオートコンプリートのサポート</block>
   <block id="df96b6f4ceabb5c4dbc915475fd821fe" category="paragraph">BlueXP  ワークロードファクトリCloudShellを使用している場合は、コマンドの入力を開始してTabキーを押すと、使用可能なオプションが表示されます。複数の候補が存在する場合は、CLIに候補のリストが表示されます。この機能は、エラーを最小限に抑え、コマンド実行を高速化することで、生産性を向上させます。</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">権限に関する用語を更新</block>
   <block id="ac811c471ef716f9c8a3865d7f14caa3" category="list-text">読み取り専用モード</block>
   <block id="817855bb538dbbb63c56d38fc57684f5" category="list-text">読み取り/書き込みモード</block>
   <block id="db3317ceb65be02e43db6f277e0ad94e" category="cell">読み取り / 書き込み</block>
-  <block id="c0ee691320caa89b529bc0bcaf9cc696" category="paragraph">ただし、ワークロードファクトリからVMwareワークロードを作成および導入するための自動制御機能（基本モード）はありません。VMwareワークロードを作成する場合、この機能を使用するには、コードボックスからコードをコピーし、AWSアカウントに手動でログインし、生成されたコードに不足しているエントリを手動で入力する必要があります。</block>
   <block id="4d372922f30597b3e046274dbb3cecd2" category="list-text">読み取り専用</block>
   <block id="123ce9aa4e0770ecb435c005fa9b436c" category="cell">Amazon Q Businessアプリケーションを挙げる</block>
   <block id="4f3c534c90392632c7d275f54d5b35a0" category="cell">qbusiness：ListApplications</block>
@@ -1101,36 +869,17 @@
   <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
   <block id="7a0e532396f167d85a7b425f941d0613" category="list-text">*読み取り専用モード*は、ユーザーがさまざまなリソースやツールを検出できるように支援し、関連するウィザードを完了できるようにすることで、Basicモードのエクスペリエンスを向上させます。</block>
   <block id="4951a0172d4fd2c8116296e71073f31c" category="list-text">*読み取り/書き込みモード*は完全な信頼関係を表し、実行に必要な権限と検証済みの権限を持つ割り当てられた資格情報とともにユーザーに代わって実行および自動化するように設計されています。</block>
-  <block id="5474924c6e07cdae5b2fb3dcc561d06d" category="cell">SSM出力の切り捨てが検出されると、ワークロードファクトリがSQLインスタンスのAmazon CloudWatchログに切り替わる</block>
   <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">ストレージ評価（最適化）</block>
-  <block id="515b5649d13529809187e8bce4dca692" category="cell">Workload Factoryが現在のロググループを取得できるようにし、Workload Factoryによって作成されたロググループに保持期間が設定されていることを確認する</block>
   <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
   <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
-  <block id="b29cc709bba52572eccdff0248448fed" category="cell">SSMコマンド出力のログストリームが不要に蓄積されないように、ワークロードファクトリで作成されたロググループに1日の保持ポリシーを設定できるようにする</block>
-  <block id="200e3179449390bdf5f3f8d9a199630c" category="section-title">ワークロードファクトリを使用するためのツール</block>
-  <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">BlueXP  ワークロード工場では、次のツールを使用できます。</block>
-  <block id="4b50901597179fa075617d96ccf51901" category="list-text">*ワークロードファクトリコンソール*:ワークロードファクトリコンソールは、アプリケーションとプロジェクトの視覚的で包括的なビューを提供します。</block>
-  <block id="590410b3a112ba2f531f9aae44e29ed1" category="list-text">* BlueXP  コンソール*：BlueXP  コンソールはハイブリッドインターフェイスを提供するため、BlueXP  ワークロードファクトリを他のBlueXP  サービスと一緒に使用できます。</block>
-  <block id="62c5120220d244bd5e611d7c4459b5c5" category="list-text">*確認*：AIアシスタント「Ask me」を使用すると、Workload FactoryのWeb UIから離れることなく、Workload Factoryについて質問したり、詳細を確認したりできます。[Workload Factory Help]メニューから[Ask me]にアクセスします。</block>
-  <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">* CloudShell CLI *：ワークロードファクトリには、1つのブラウザベースのCLIからアカウント間でAWSおよびNetApp環境を管理および運用するためのCloudShell CLIが含まれています。Workload FactoryコンソールのトップバーからCloudShellにアクセスします。</block>
-  <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">* REST API *：ワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理します。</block>
-  <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">* CloudFormation *：AWS CloudFormationコードを使用して、ワークロードファクトリコンソールで定義したアクションを実行し、AWSアカウントのCloudFormationスタックからAWSおよびサードパーティリソースをモデル化、プロビジョニング、管理します。</block>
   <block id="beec07f99f03a1aa1948ba788ce7e6c1" category="cell">S3バケットの一覧</block>
   <block id="e21c94a36c6dbf24001a64bddce9456f" category="cell">S3 ： ListAllMyBuckets</block>
   <block id="c34c5eed5692ab9466e57060b06ae6ae" category="section-title">2025年6月3日</block>
-  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">*Terraform BlueXP  ワークロードファクトリプロバイダ*: Terraformを使用して、ワークロードファクトリコンソールで生成されるインフラワークフローを構築および管理します。</block>
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">ワークロード ファクトリのユーザー インターフェースとドキュメントでは、読み取り権限を示すために「読み取り専用」を使用し、自動化権限を示すために「読み取り/書き込み」を使用するようになりました。</block>
-  <block id="db17079394a3464c0d2748f3f16fbfbf" category="paragraph">AWSアカウントのクレデンシャルを追加しないかぎり、Workload Factoryは_Basic_modeで動作します。資格情報を追加して、_読み取り専用_ モードや _読み取り/書き込み_ モードなどの他の操作モードを有効にできます。<block ref="3ecbe38d325fe0025957d871a4619a77" category="inline-link-macro-rx"></block>です。</block>
   <block id="6af87751c26792b59acdfae604197d5b" category="list-text">権限レベル (読み取り専用または読み取り/書き込み) を選択できるワークロード機能の場合は、これらの資格情報で使用できる権限の種類を選択します。</block>
-  <block id="3e522eb18afcabf6694944d0013d791d" category="summary">Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。</block>
-  <block id="5d2ea69409d5652078ad62cd083de765" category="paragraph">Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。Codebox は、ワークロード ファクトリーの動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) に合わせて調整されており、実行準備のための明確なパスを設定するとともに、将来の迅速な再利用のための自動化カタログを提供します。</block>
-  <block id="425eddee678f339c2838abfb16727ad6" category="paragraph">さらに、ワークロードファクトリクレデンシャルを設定する場合、CodeboxはIAMポリシーの作成に必要なAWS権限を動的に表示します。権限は、使用する予定のワークロード ファクトリ機能 (データベース、AI、FSx for ONTAP など) ごとに提供され、ポリシーのユーザーが _読み取り専用_ 権限を取得するか、完全な _読み取り/書き込み_ 権限を取得するかに基づいてカスタマイズされます。Codeboxから権限をコピーしてAWS管理コンソールに貼り付けるだけで、ワークロードファクトリにワークロードを管理するための適切な権限が付与されます。</block>
-  <block id="afad1a52546f002e75fd48681bea7cdc" category="summary">Workload Factoryには、ITポリシーに基づいてワークロードファクトリとクラウド資産の間のアクセスを慎重に制御できる3つの運用モードが用意されています。</block>
   <block id="ce40030804ebf174cb97440fb6da4d13" category="cell">読み取り/書き込み資格情報</block>
-  <block id="4425a60f6bf766fb4d053cfcede7695b" category="paragraph">クレデンシャルを設定して、あるワークロードコンポーネントに1つのモードを設定し、別のコンポーネントに別のモードを設定できます。たとえば、FSx for ONTAP ファイルシステムをデプロイおよび管理する操作に対しては読み取り/書き込みモードを設定できますが、ワークロードファクトリを使用してデータベースワークロードを作成およびデプロイする場合は読み取り専用モードのみを設定できます。</block>
   <block id="f5744b5c42cd92a298e78407d6b63d99" category="paragraph">以下の権限が付与された認証情報を使用するアカウント ユーザーに、FSx for ONTAP ファイルシステムの作成、データベースのデプロイ、アカウントで使用される他の種類の AWS ストレージの表示に対するフル コントロール (読み取り/書き込みモード) が付与されます。</block>
   <block id="7e5ac274e4d71869c0e636c8c2f07dd0" category="paragraph">最初の認証情報セットには、ユーザーに FSx for ONTAP ファイルシステムの作成に対する完全な制御 (およびアカウントで使用されている他の種類の AWS ストレージを表示する機能) を与える権限が含まれていますが、VMware ワークロードを操作する場合は読み取り専用権限のみが含まれます。</block>
-  <block id="f49e2f57f6ad13c6331b2d925776566c" category="paragraph">_読み取り専用_ または _読み取り/書き込み_ モードの権限を付与すると、ワークロードファクトリーは、その AWS アカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスにアタッチします。これにより、ストレージ環境の検出から、ストレージ管理におけるファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、さまざまな処理をワークロードファクトリで実行できます。</block>
   <block id="4924cab5d4a9a9111b0738ddbae7a866" category="paragraph">GenAI IAM ポリシーは、_読み取り/書き込み_ モードでのみ使用できます。</block>
   <block id="3d040f48a98c22a0f4789c2496c06383" category="paragraph">データベースの _読み取り/書き込み_ モードで次の権限が利用できるようになりました。 <block ref="9c72603737d6e2074ae7fab048b5d3d1" prefix=" " category="inline-code"></block> 。</block>
   <block id="a7bc7760b493d79ff53da3b2c0991f0a" category="paragraph">データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。 <block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block> 。</block>
@@ -1138,38 +887,27 @@
   <block id="75722ccf42cf2a6642522a17d35b1b54" category="paragraph">GenAI の _読み取り/書き込みモード_ から次の権限が削除されました: <block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block> 。</block>
   <block id="f97022d7ca53b8dcdb1b68120dd06d77" category="paragraph">GenAI の _読み取り/書き込み_ モードで次の権限が利用できるようになりました。 <block ref="1311c4cbbe5b925c15d25fe5ff7b022b" prefix=" " category="inline-code"></block> 。</block>
   <block id="220219d2486f54c880f6a7fd6007f5a8" category="paragraph">データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。 <block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block> 。</block>
-  <block id="55f22225cc1ccda19b672a8426d01c4f" category="paragraph">この手順はオプションです。AWSアカウントにアクセスするためのクレデンシャルを追加することなく、_Basic_modeでワークロードファクトリを使用できます。_読み取り専用_モードまたは_読み取り/書き込み_モードのいずれかでワークロードファクトリーに AWS 認証情報を追加すると、ワークロードファクトリーのアカウントに、FSx for ONTAP ファイルシステムの作成と管理、およびデータベースや GenAI などの特定のワークロードのデプロイと管理に必要な権限が付与されます。</block>
-  <block id="645b29e11b1f5ed9b9e706422adfcc73" category="paragraph">Codebox は、各ユーザーのワークロードファクトリーアカウントに提供された AWS 権限に基づいてコードに適切なデータを入力することで、ワークロードファクトリーの操作モード (_基本_、_読み取り専用_、および _読み取り/書き込み_) と連携します。コードは、コードを実行する前に不足している情報(資格情報など)を入力したり、特定のデータをカスタマイズしたりできるテンプレートのように使用できます。</block>
-  <block id="81e8b2bcfbc370ff332013804c18a385" category="paragraph">Codebox は、ワークロード ファクトリーの動作モード (_基本_、_読み取り専用_、および _読み取り/書き込み_) に合わせて調整されており、実行の準備のための明確なパスと、将来の迅速な再利用のための自動化カタログを設定します。</block>
   <block id="64c17706e0528a5c44c7beee628cc101" category="doc">BlueXPワークロードファクトリー通知サービスのサポート</block>
   <block id="c0ae6f0ec7cb1322a1c6b72f77e783f2" category="paragraph">BlueXP ワークロードファクトリー通知サービスを使用すると、ワークロードファクトリーは BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。</block>
   <block id="76490568879e4523bb6bd6d8263472a9" category="inline-link">BlueXPワークロードファクトリー通知を構成する</block>
   <block id="533a43c23a4d81612b2392465e022a51" category="paragraph"><block ref="533a43c23a4d81612b2392465e022a51" category="inline-link-rx"></block></block>
-  <block id="413b76e8d3566fbbd4af2e2a84ed79cb" category="list-text">にログインし <block ref="391de7a3bac2bc77fa53dffb3f53801a" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="2e600fc81eb21acd31aa44d1697dc84f" category="list-text">にログインし <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="cec87015738d7f42431131824e107880" category="paragraph">ワークロードファクトリにはBlueXP  からアクセスできます。AWS ストレージおよびワークロード機能に BlueXP Workload Factory を使用するだけでなく、コピーと同期、デジタル ウォレットなどの他の BlueXP プラットフォーム サービスにもアクセスすることができます。</block>
   <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025年6月29日</block>
   <block id="cb30bdb55bb8a7a0530a31a5e6cdd0bb" category="paragraph">データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。 <block ref="f63e0d20057299c9c16bd0c2c9e92a5c" prefix=" " category="inline-code"></block> 。</block>
   <block id="e429c7230e4b94caf26e6020e5ea6f7a" category="paragraph"><block ref="e429c7230e4b94caf26e6020e5ea6f7a" category="inline-link-rx"></block></block>
   <block id="4da84f2c396b854d2e6828b8992fe2a6" category="section-title">データベースワークロードの権限</block>
-  <block id="a1de7ac981533bac2ba982c9a691d511" category="paragraph">データベース ワークロードに使用できる IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するためにワークロード ファクトリーに必要な権限を提供します。</block>
   <block id="b09fc7726cc5650dddd20718f2586995" category="example-title">データベースワークロードのIAMポリシー</block>
   <block id="3399757d7ea2a9e2fd7770bc1e6f5aa1" category="cell">FSx for ONTAP、EBS、FSx for Windows File Server のメトリック統計とコンピューティング最適化の推奨事項を取得します。</block>
   <block id="c79482c3221294b91b9c5eeecca327a6" category="cell">登録済みのSQLノードからAmazon CloudWatchに保存されたパフォーマンスメトリクスを収集します。登録済みのSQLインスタンスのインスタンス管理画面に、パフォーマンストレンドチャートにデータが生成されます。</block>
   <block id="bf8eef80d28e69579638cd56629c94fb" category="paragraph">GenAI の _読み取り/書き込み_ モードで次の権限が利用できるようになりました。 <block ref="e21c94a36c6dbf24001a64bddce9456f" prefix=" " category="inline-code"></block> 。</block>
   <block id="b8be7a72d02de0cfb42fb93375981cdb" category="paragraph">GenAI の _読み取り/書き込み_ モードで次の権限が利用できるようになりました。 <block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block> 。</block>
   <block id="bebb3c7ec8a634b68ad1060e27e7dc42" category="paragraph">データベースの _読み取り専用_ モードで、次の権限が使用できるようになりました。</block>
-  <block id="2dda35be60147096ab6dcce42dede6b8" category="summary">特定の種類のイベントが発生したときに、ユーザーまたは別のアプリケーションに通知を送信するように BlueXP ワークロード ファクトリーを構成できます。</block>
-  <block id="72d9710675d7970263ff88acdf0fcb66" category="paragraph">BlueXP ワークロードファクトリー通知サービスを設定して、BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。</block>
   <block id="0a7323d1562ccdc63a56a3101b1dfc69" category="section-title">通知の種類とメッセージ</block>
-  <block id="5a7513075d19cc4be93d3cf73f88603e" category="paragraph">ワークロード ファクトリーは、次のイベントの通知を送信します。</block>
   <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">イベント</block>
   <block id="9e89e978c220a2a733d027866cb12907" category="cell">通知のタイプ</block>
   <block id="007cc9547ae8884ad597cd92ba505422" category="cell">重大度</block>
   <block id="68eaabb91b0d1c52be44217a24f27b91" category="cell">ワークロード</block>
   <block id="53a002434dc37d0a5f8e2aac58da6296" category="cell">リソースタイプ</block>
   <block id="05c77d02041a1213dcefbe713f2f79fc" category="cell">アカウント内の一部のデータベースインスタンスは適切に設計されていません</block>
-  <block id="11091ad57516013f76674cb4ef3a9a6a" category="cell">アカウント内のすべてのMicrosoft SQL Serverインスタンスについて、Well-Architectedの問題が分析されました。このイベントの説明には、Well-Architectedインスタンスと最適化されていないインスタンスの数が表示されます。ワークロードファクトリーコンソールのデータベースインベントリで、Well-Architectedステータスの調査結果と推奨事項を確認してください。</block>
   <block id="64096d5dd63fb80716eda8d7d149213d" category="cell">優れた設計</block>
   <block id="c76e3867213cff8946148c6510af0736" category="cell">推奨事項</block>
   <block id="ea2ef9b0d095bf991f4973633b485340" category="cell">データベース</block>
@@ -1181,41 +919,21 @@
   <block id="1ec0c15b651e4cd44325912e997a204c" category="cell">Microsoft SQL Server/PostgreSQL サーバーの展開に失敗しました</block>
   <block id="3a966eb1052bbc81baf1db313011eddf" category="cell">Microsoft SQL Server または PostgreSQL ホストのデプロイに失敗しました。詳細については、ジョブ監視を参照してください。</block>
   <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">エラー</block>
-  <block id="237aaa83425818925b08506a76908e10" category="section-title">ワークロードファクトリー通知を構成する</block>
-  <block id="cd052ec21a26111d70b96d3c1780fed2" category="paragraph">BlueXPコンソールまたはワークロードファクトリーコンソールを使用して、ワークロードファクトリーの通知を設定します。BlueXPコンソールを使用する場合は、BlueXPアラートまたはAmazon SNSトピックに通知を送信するようにワークロードファクトリーを設定できます。BlueXPアラートは、BlueXPの*アラートと通知設定*領域から設定できます。</block>
   <block id="9ccebe6954a81c5c1f9a57ddc658596a" category="list-text">Amazon SNS コンソールまたは AWS CLI を使用して、Amazon SNS を設定し、Amazon SNS トピックを作成する必要があります。</block>
-  <block id="b5dff08e1a7f13984de22b0326ba3d57" category="list-text">ワークロードファクトリーは*標準*トピックタイプをサポートしています。このタイプのトピックでは、通知が受信順にサブスクライバーに送信されるとは限りません。そのため、重要な通知や緊急の通知がある場合は、このタイプを検討してください。</block>
-  <block id="5d146607ad7e1a4c8178f137a935e71b" category="open-title">BlueXPコンソールから通知を設定する</block>
-  <block id="7330391de12fa6f64dbbe05f2bf2943a" category="list-text">ワークロード ファクトリーのメニュー バーから、構成メニューを選択します。</block>
-  <block id="ebb0c20a2883844bf338eec0442bd3d9" category="list-text">メニューで、*Workload Factory 通知設定*を選択します。</block>
-  <block id="c1f26547e61b3cf682eb671f8d31e7ea" category="list-text">オプション: *BlueXP 通知を有効にする* を選択して、ワークロード ファクトリーが BlueXP アラートに通知を送信するように構成します。</block>
   <block id="9bc635b321d7a10ffec6283dfaa84aa0" category="list-text">*SNS通知を有効にする*を選択します。</block>
   <block id="677c7dc689b0afdcb0633b635edd3a87" category="list-text">Amazon SNS コンソールから Amazon SNS を設定するには、指示に従います。</block>
-  <block id="5fda11ac3857aaeb1a1a9e3bb6aedef5" category="paragraph">トピックを作成したら、トピック ARN をコピーして、*通知設定*ダイアログの*SNS トピック ARN* フィールドに入力します。</block>
   <block id="2339afaee28d73e91f81e490b67a4b5c" category="list-text">テスト通知を送信して構成を確認した後、[適用] を選択します。</block>
-  <block id="a596c719a1239c601cd009ed03cda388" category="paragraph">ワークロードファクトリーは、指定した Amazon SNS トピックに通知を送信するように設定されています。</block>
-  <block id="99405553b799dda5850e27264cbad120" category="open-title">ワークロードファクトリーコンソールから通知を構成する</block>
-  <block id="bbb5c9d7fd1535e42e50af70cae99495" category="list-text">上部のナビゲーション バーからアカウント メニューを開きます。</block>
-  <block id="5bbc9d3e1cf8f1e46acf248093877f06" category="list-text">メニューで*通知設定*を選択します。</block>
   <block id="5e5392f4dcdf5502f0937be76da274d0" category="section-title">Amazon SNSトピックを購読する</block>
   <block id="cbde2df6a7c89370edc449dc5705d30c" category="inline-link">説明書</block>
-  <block id="f796ddcb3cbbbd6b219cbc54c800ab86" category="paragraph">トピックに通知を送信するようにワークロードファクトリーを構成したら、 <block ref="88c7b6108316e02c36e39863bedc2019" category="inline-link-rx"></block> Amazon SNS ドキュメントの手順に従ってトピックをサブスクライブし、ワークロードファクトリーから通知を受信できるようにします。</block>
   <block id="e457faf451b04c78c6b2c6bc25491ad1" category="section-title">通知をフィルタリングします</block>
-  <block id="3180a00483bf6ffa5db8c6178c4eb67a" category="paragraph">通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに特定の通知タイプを絞り込むことができます。これは、SNS通知にはAmazon SNSポリシーを使用し、BlueXP通知にはBlueXP通知設定を使用することで実現できます。</block>
   <block id="4ccc3070ee3f76f6afb040d5f99b3bdd" category="section-title">Amazon SNS通知をフィルタリングする</block>
   <block id="3f6971d458153040675cf8e95795f3b0" category="inline-link">Amazon SNSのドキュメント</block>
   <block id="aacb2329b4899fc1a4b8f0f2f67b0398" category="inline-link">Amazon SNS のフィルターポリシーの例</block>
-  <block id="92bb95ca7ce65dc7bedcbf84528f75fd" category="section-title">BlueXP通知をフィルタリングする</block>
-  <block id="ac6e44b462d88f56828f381faa7907ca" category="paragraph">BlueXP のアラートおよび通知設定を使用すると、BlueXP で受信するアラートと通知を重大度レベル (重大、情報、警告など) でフィルタリングできます。</block>
-  <block id="eeb8e055593f1709925a03e2ebb13265" category="inline-link">BlueXPのマニュアル</block>
-  <block id="7572b4e37ed025014a17bc1ae86c60a9" category="paragraph">BlueXPでの通知フィルタリングの詳細については、 <block ref="f8c744992c7f60894906e0753601fc52" category="inline-link-rx"></block> 。</block>
   <block id="19a5158f1235c29843008925adb7baf8" category="sidebar">通知を設定する</block>
   <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">セキュリティ</block>
   <block id="de7642ec23585171e85481d37460d1b2" category="inline-link-macro">AWS セキュリティ機能</block>
   <block id="6ff7732866355a577fee1c91a01a3561" category="inline-link-macro">SOC2 タイプ1準拠</block>
-  <block id="eece9c219f85d9ffb785cea21dafab78" category="paragraph">BlueXP workload factoryのセキュリティはNetAppの最優先事項です。のワークロードはAmazon FSx for NetApp ONTAP上で実行されます。<block ref="ccc35ad3502dffbee7f06fd01d3728f9" category="inline-link-macro-rx"></block> BlueXP workload factoryは<block ref="87b5f9f30f065d1ad679fca208226814" category="inline-link-macro-rx"></block> 。</block>
   <block id="5bc45c9bf327952786de480d68cc107d" category="inline-link-macro">エンタープライズアプリを展開するためのAWSソリューション</block>
-  <block id="8097660ab0d3d7b21c8c1e1937f57a7a" category="paragraph">Amazon FSx for NetApp ONTAP for BlueXP workload factoryは<block ref="eada645bedd6ca3d760173ba22baf6b0" category="inline-link-macro-rx"></block>適切に設計されたベストプラクティスを念頭に置いて作成されました。</block>
   <block id="29281e8d047885f5a1eb2289174ea81b" category="paragraph">Amazon SNS トピックをサブスクライブすると、デフォルトでそのトピックに公開されたすべての通知を受信します。トピックから特定の通知のみを受信する場合は、フィルター ポリシーを使用して、受信する通知を制御できます。フィルタポリシーにより、Amazon SNS はフィルタポリシーに一致する通知のみをサブスクライバーに配信します。</block>
   <block id="3cf5ea90b43a94f968c221cb35825fc3" category="paragraph">Amazon SNS 通知は、次の基準でフィルタリングできます。</block>
   <block id="f371924f658239435c3c02b060070903" category="cell">フィルターポリシーフィールド名</block>
@@ -1254,10 +972,293 @@
   <block id="521987edc4d9059fc32abee2d3f5d6ae" category="cell">FSx for ONTAP の作成失敗</block>
   <block id="dd34477f0a88e199c56ea0813db3e18d" category="cell">FSx for ONTAPファイル システムの作成プロセスが失敗しました。詳細については、Tracker をご覧ください。</block>
   <block id="dfe4f4248d3875aa3b31ac02e60b0e87" category="cell">FSx for ONTAPファイルシステムアクション</block>
-  <block id="a819fc88b2635577c915933ee456de25" category="paragraph">サインアップしてアカウントを作成し、オプションで AWS 認証情報を追加したら、ワークロードファクトリーを使用して FSx for ONTAPでワークロードを最適化できるようになります。</block>
   <block id="6a636f3ce643c351748a032eeaaa11b0" category="inline-link-macro">FSx for ONTAPでワークロードを最適化</block>
   <block id="9f2ac12605258d5b9c839500e3fc7770" category="paragraph"><block ref="efcfd21ad3a99d834cf77c9ab08b5664" category="inline-link-macro-rx"></block> 。</block>
-  <block id="d579c4b11db5f291683e63ef986a0f5e" category="summary">ログインしてワークロード ファクトリーを設定すると、FSx for ONTAPファイル システムを作成および管理したり、その他のワークロード ファクトリー機能を使用したりできます。</block>
-  <block id="0a5d504d75a20cbec4103187ecd3e699" category="doc">ワークロードファクトリーでワークロードを最適化</block>
-  <block id="cc851373181948e2ac9056f188882266" category="paragraph">ログインしてワークロードファクトリーをセットアップしたら、 Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAP ファイルシステムへのデータベースのデプロイ、FSx for ONTAPファイルシステムを外部データストアとして使用して仮想マシン構成を VMware Cloud on AWS に移行するなど、ONTAPファクトリーのさまざまな機能を使い始めることができます。</block>
+  <block id="ea7d4002457b002b29ca2cb9a498c0bc" category="doc">ストレージの新しい通知</block>
+  <block id="09ef633d09a9d5e5cf3ab27b167cac1b" category="paragraph">NetApp Workload Factory 通知サービスには、ストレージの Well-Architected の問題に関する通知が含まれています。</block>
+  <block id="a640a35e23fdb53d8114aafcadb8064c" category="inline-link-macro">NetApp Workload Factory の通知</block>
+  <block id="cf1b0a0504b0d60ecb883c780228a1eb" category="paragraph"><block ref="cf1b0a0504b0d60ecb883c780228a1eb" category="inline-link-macro-rx"></block></block>
+  <block id="2bbead322f2dd5c4a40fbd66537e304f" category="doc">BlueXP workload factoryがNetAppワークロードファクトリーに</block>
+  <block id="9c80606adc6065bc48c6d99fbb8c3f1d" category="paragraph">BlueXP は、データ インフラストラクチャの管理における役割をより適切に反映するために、名前が変更され、再設計されました。その結果、 BlueXP workload factoryの名前がNetAppワークロード ファクトリーに変更されました。</block>
+  <block id="8d1adece5e8b196b0a88b0589326fdf6" category="section-title">MCP との Ask Me 統合</block>
+  <block id="979df5bd82476afb53055b0675f703a3" category="paragraph">Workload Factory の AI アシスタントである Ask Me は、Model Context Protocol (MCP) と統合されています。  MCP を使用することで、Ask Me は外部環境と安全にインターフェイスし、API ツールにクエリを実行して、特定のストレージ環境に合わせた応答を提供します。</block>
+  <block id="0204047d2332c588e7eb7d928e84f94a" category="summary">AWS 認証情報を追加して、Workload Factory が AWS アカウントでクラウドリソースをデプロイおよび管理するために必要な権限を持つようにします。</block>
+  <block id="287ae8bc216279a75c04344894e04b7f" category="doc">Workload FactoryにAWS認証情報を追加する</block>
+  <block id="5adad9ce28422d9fe7825511e24aa601" category="paragraph">AWS 認証情報を追加および管理して、 NetApp Workload Factory が AWS アカウントでクラウド リソースを展開および管理するために必要な権限を持つようにします。</block>
+  <block id="07c821fcc60a79f2d88585dbdf4c202a" category="paragraph">AWS アカウント認証情報を追加しない限り、Workload Factory は _Basic_ モードで動作します。資格情報を追加して、_読み取り専用_ モードや _読み取り/書き込み_ モードなどの他の操作モードを有効にできます。<block ref="3ecbe38d325fe0025957d871a4619a77" category="inline-link-macro-rx"></block> 。</block>
+  <block id="7f76e91e5513affc227459b415e2e1cf" category="paragraph">認証情報ページから、既存の Workload Factory アカウントに AWS 認証情報を追加できます。これにより、AWS クラウド環境内のリソースとプロセスを管理するために必要な権限が Workload Factory に付与されます。</block>
+  <block id="ebb29cdb5a9f5368e3f445c808c91552" category="list-text">*手動*: Workload Factory で認証情報を追加しながら、AWS アカウントに IAM ポリシーと IAM ロールを作成します。</block>
+  <block id="c3ba6c13344137feef1d3795c8b29466" category="paragraph">Workload Factory に AWS 認証情報を手動で追加して、独自のワークロードを実行するために使用する AWS リソースを管理するために必要な権限を Workload Factory アカウントに付与できます。追加する認証情報の各セットには、使用するワークロード機能に基づく 1 つ以上の IAM ポリシーと、アカウントに割り当てられた IAM ロールが含まれます。</block>
+  <block id="9b311c0df60f3fcb1498372665b63e61" category="admonition">Workload Factory コンソールまたはNetAppコンソールから、アカウントに AWS 認証情報を追加できます。</block>
+  <block id="875b761ddc794776aadfc56fc5a6fc34" category="list-text">Workload Factory から名前を入力し、資格情報を追加します。</block>
+  <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link">ワークロードファクトリーコンソール</block>
+  <block id="6c8ca72a28d9651706405d888093910e" category="list-text">ログイン<block ref="04c72ef1cb137ba02eafcfdeb6fc7765" category="inline-link-rx"></block>。</block>
+  <block id="6191b3848b93c4178f95391680ab2108" category="list-text">メニューから*管理*を選択し、次に*資格情報*を選択します。</block>
+  <block id="30551002ceb8abd5af0ee8907423b553" category="paragraph">このセクションでは、作成した権限とポリシーを含む、Workload Factory が引き受ける IAM ロールを設定します。</block>
+  <block id="f0497660975536e414a629b7d4f9f276" category="list-text">*別の AWS アカウント* を選択し、Workload Factory UI から FSx for ONTAPワークロード管理のアカウント ID をコピーして貼り付けます。</block>
+  <block id="f97e7ca54bb60a402c14107162345b08" category="list-text">*必須の外部 ID* を選択し、Workload Factory UI から外部 ID をコピーして貼り付けます。</block>
+  <block id="fcf4437915eed569a9fd7691faf38a66" category="list-text">Workload Factory の [認証情報の追加] ページに戻り、[*権限の設定*] の下の [*ロールの作成*] セクションを展開して、[_ロール ARN_] フィールドに ARN を貼り付けます。</block>
+  <block id="a9c4ed0c041add98b3c1c27e6191e29e" category="paragraph">最後のステップは、Workload Factory で資格情報の名前を入力することです。</block>
+  <block id="5976d02d7cdfb004e841934d0a6bf1b5" category="list-text">Workload Factory の [資格情報の追加] ページで、[*権限の構成*] の下の [*資格情報の名前*] を展開します。</block>
+  <block id="21f73823dc240b09e9b0a0896496f95d" category="paragraph">使用する Workload Factory 機能を選択し、AWS アカウントで AWS CloudFormation スタックを起動することで、AWS CloudFormation スタックを使用して Workload Factory に AWS 認証情報を追加できます。  CloudFormation は、選択したワークロード機能に基づいて IAM ポリシーと IAM ロールを作成します。</block>
+  <block id="7b8b5df6726a1112cf43c1440a2b4def" category="inline-image-macro">Workload Factory 認証情報のポリシーとロールを追加するための CloudFormation スタックを作成する方法を示すスクリーンショット。</block>
+  <block id="b0f8c37516e3eee761656df941264fa2" category="paragraph"><block ref="b0f8c37516e3eee761656df941264fa2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="67a2aece01328bf00637fcc5391ba3ec" category="list-text">ワークロード ファクトリーに戻り、資格情報ページを監視して、新しい資格情報が進行中であること、または追加されたことを確認します。</block>
+  <block id="32573b007d05a07e2a98478d5ce9f017" category="summary">Codebox は、開発者と DevOps がNetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。</block>
+  <block id="eef2f38ca3db1d82d50eebe72f4aaf3f" category="paragraph">Codebox は、開発者と DevOps がNetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。  Codebox は、Workload Factory の動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) と連携しており、実行準備のための明確なパスを設定するとともに、将来の迅速な再利用のための自動化カタログを提供します。</block>
+  <block id="814125fab2859fbd5a6d52cbd369b0fc" category="paragraph">さらに、Workload Factory の認証情報を設定すると、Codebox は IAM ポリシーの作成に必要な AWS 権限を動的に表示します。権限は、使用する予定の Workload Factory 機能 (データベース、AI、FSx for ONTAPなど) ごとに提供され、ポリシーのユーザーが _読み取り専用_ 権限を取得するか、完全な _読み取り/書き込み_ 権限を取得するかに基づいてカスタマイズされます。  Codebox から権限をコピーし、AWS マネジメントコンソールに貼り付けるだけで、Workload Factory にワークロードを管理するための適切な権限が付与されます。</block>
+  <block id="2a877c6ff8f47bb17f9e4d12f8a693bc" category="list-text">ワークロードファクトリー REST API</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="section-title">関連情報</block>
+  <block id="4386b64a64b0b63736692fad5b38e6e1" category="inline-link-macro">ワークロードファクトリー REST API ドキュメント</block>
+  <block id="67c0397212edda6d32cfd64e83e5f8dc" category="paragraph"><block ref="2171d3ebe49d6b87e35ddf53dd80032d" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a59c5f15e65baf8d84c9f0e2d778cfc9" category="summary">特定の種類のイベントが発生したときに、ユーザーまたは別のアプリケーションに通知を送信するようにNetApp Workload Factory を構成できます。</block>
+  <block id="5ba8acf00a9c87f3087344b902777a6e" category="doc">NetApp Workload Factory 通知を構成する</block>
+  <block id="f476688085fcfdcff7daf09d94971782" category="paragraph">NetApp Workload Factory 通知サービスを設定して、 NetAppコンソールまたは Amazon SNS トピックにアラートとして通知を送信できます。コンソール エージェントまたはリンクが展開されている場合、アラートとして送信された通知はNetAppコンソールに表示されます。  Workload Factory が Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー (ユーザーや他のアプリケーションなど) は、トピックに設定されたエンドポイント (電子メールや SMS メッセージなど) で通知を受信します。</block>
+  <block id="ac41ca3061dfdb48a516c0388098eccd" category="paragraph">Workload Factory は次のイベントの通知を送信します。</block>
+  <block id="e57a1a49b9af455c41d31e251929ebe5" category="cell">アカウント内のすべての Microsoft SQL Server インスタンスは、well-architected の問題について分析されています。このイベントの説明には、適切に設計されたインスタンスと最適化されていないインスタンスの数が表示されます。  Workload Factory コンソールから、データベース インベントリ内の well-architected ステータスの調査結果と推奨事項を確認します。</block>
+  <block id="8a139d1f9e892c3827baf8993b22e06f" category="cell">FSx for ONTAP の問題が検出されました</block>
+  <block id="d3b43f2108f9094222c26084bc384ead" category="cell">すべての FSx for ONTAPファイル システムについて、well-architected の問題について分析されています。スキャンにより 1 つ以上の問題が検出されました。詳細については、Workload Factory コンソールのストレージ ダッシュボードの well-architected 分析を確認してください。</block>
+  <block id="2eff23d45d9eb3d8a7c0149407c6dcf8" category="cell">適切に設計された分析</block>
+  <block id="8da726c31c391e624ecc54fd7ed145d6" category="cell">ONTAPファイルシステム用の FSx</block>
+  <block id="7c1a1feb7968ed15d338ae3e7284dd4e" category="section-title">ワークロードファクトリーの通知を構成する</block>
+  <block id="014e444433a1c7cbbdd9c8c1f4fefa4b" category="paragraph">NetAppコンソールまたは Workload Factory コンソールを使用して、Workload Factory 通知を構成します。  NetAppコンソールを使用する場合は、 NetAppコンソールまたは Amazon SNS トピックにアラートとして通知を送信するように Workload Factory を設定できます。  NetAppコンソールの *通知設定* から通知を設定できます。</block>
+  <block id="1a7d7414c3da7bd3d69c29c1c9dc74ad" category="list-text">Workload Factory は *Standard* トピック タイプをサポートしていることに注意してください。このタイプのトピックでは、通知が受信順にサブスクライバーに送信されるとは限りません。そのため、重要な通知や緊急の通知がある場合は、この点を考慮してください。</block>
+  <block id="4be7ff4e16147ce765eb61308f73beda" category="open-title">NetAppコンソールからの通知を構成する</block>
+  <block id="3c031b939f6ec312ee601d021e7a6644" category="inline-link-macro">NetAppコンソール</block>
+  <block id="fe3e3ad90678611fd3fe6b4348fba6dc" category="list-text">ログイン<block ref="7532dfde8c533672ea63a5b546224a97" category="inline-link-macro-rx"></block>。</block>
+  <block id="0a4d4130dbebdc7083cd7435e388797d" category="list-text">NetAppコンソール メニューから、*ワークロード*、*管理*、*通知設定*の順に選択します。</block>
+  <block id="df93da47c0462e1ca9969b57c5b59331" category="list-text">通知設定ページで、次の操作を行います。</block>
+  <block id="d993cd32e8e4b3f49b00361542cc4c2e" category="list-text">オプション: NetAppコンソールで通知を送信するように Workload Factory を構成するには、* NetAppコンソール通知を有効にする* を選択します。</block>
+  <block id="a4caa02a925f9e2b61439b42ecfebb6f" category="paragraph">トピックを作成したら、トピック ARN をコピーして、*通知設定*ページの *SNS トピック ARN* フィールドに入力します。</block>
+  <block id="d055c503023d741dbaa19c65690c1ebd" category="paragraph">Workload Factory は、指定した Amazon SNS トピックに通知を送信するように設定されています。</block>
+  <block id="4bc45d22028e53a00f4de2c50839c911" category="open-title">Workload Factory コンソールから通知を構成する</block>
+  <block id="219bd6a410f8c490dbc0ffbcf504910f" category="list-text">ログイン<block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>。</block>
+  <block id="99a1b22d5c08e1ea6e260730064a78c1" category="list-text">Workload Factory コンソール メニューから、*ワークロード*、*管理*、*通知設定*の順に選択します。</block>
+  <block id="48069e5c28c259c5ae7ab58ad98f2b42" category="paragraph">トピックに通知を送信するようにWorkload Factoryを設定したら、<block ref="88c7b6108316e02c36e39863bedc2019" category="inline-link-rx"></block> Amazon SNS ドキュメントの手順に従ってトピックをサブスクライブし、Workload Factory から通知を受信できるようにします。</block>
+  <block id="c5fd377ea2f0481283c28906ff7fda82" category="paragraph">通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに対して特定の通知タイプをターゲットにすることができます。これは、SNS 通知用の Amazon SNS ポリシーと、 NetAppコンソールの通知設定を使用して実行できます。</block>
+  <block id="163b273913190cc19572b1888b07e784" category="section-title">NetAppコンソールで通知をフィルタリングする</block>
+  <block id="05efbe0ae6892f06551778677d8a7b08" category="paragraph">NetAppコンソールの通知設定を使用すると、コンソールで受信する通知を重大度レベル (重大、情報、警告など) でフィルタリングできます。</block>
+  <block id="454bb1110d6093b9ef29fd01d063b03f" category="inline-link">NetAppコンソールのドキュメント</block>
+  <block id="53dc504e1574e48bdd8e3e0657d1ae00" category="paragraph">コンソールでの通知のフィルタリングの詳細については、<block ref="46a34f1df7f0cbab6b8d9cd707e12b7f" category="inline-link-rx"></block> 。</block>
+  <block id="6370c01a33f220ec64c0532b1236e695" category="summary">NetApp Workload Factory には、2 つの Web ベースのコンソールからアクセスできます。</block>
+  <block id="4581d68e50f4c5a7cb7293aae2ae7809" category="paragraph">NetApp Workload Factory には、2 つの Web ベースのコンソールからアクセスできます。  Workload Factory コンソールとNetAppコンソールを使用して Workload Factory にアクセスする方法を学習します。</block>
+  <block id="3b06bcb45233697647a5a550960f8d05" category="list-text">* NetAppコンソール*: FSx for ONTAPファイルシステムとAmazon FSx for NetApp ONTAPで実行されているワークロードを同じ場所で管理できるハイブリッドエクスペリエンスを提供します。</block>
+  <block id="3b94caaa5f175aae2e16887d7ce147da" category="list-text">*Workload Factory コンソール*: Amazon FSx for NetApp ONTAPで実行されるワークロードに重点を置いた専用の Workload Factory エクスペリエンスを提供します。</block>
+  <block id="0fe6cec212fb1ba5af4d190a28fa03ba" category="section-title">NetAppコンソールでワークロードファクトリーにアクセスする</block>
+  <block id="4aebb3c6d2632b0a47717c897adea664" category="paragraph">NetAppコンソールから Workload Factory にアクセスできます。  AWS ストレージおよびワークロード機能に Workload Factory を使用するだけでなく、 NetApp Copy and Sync、 NetApp Digital Wallet などの他のデータ サービスにもアクセスすることができます。</block>
+  <block id="e0cfef909774dee6f2988d39c62d2aa4" category="list-text">NetAppコンソール メニューから、*ワークロード* を選択し、次に *概要* を選択します。</block>
+  <block id="39d4b213cdbfaee4bf8255d21e45d7b3" category="section-title">Workload FactoryコンソールでWorkload Factoryにアクセスします</block>
+  <block id="a30f0e49926a18e020f6f949bd717e28" category="paragraph">Workload Factory コンソールから Workload Factory にアクセスできます。</block>
+  <block id="243f4102d24e538f61072e19e53b373f" category="summary">NetApp は、さまざまな方法で Workload Factory のサポートを提供します。ナレッジベース (KB) 記事やコミュニティ フォーラムなど、広範な無料のセルフサポート オプションが 24 時間 365 日ご利用いただけます。サポート登録には、Webチケットによるリモートテクニカルサポートも含まれます。</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="paragraph">NetApp は、Workload Factory とそのクラウド サービスをさまざまな方法でサポートします。ナレッジベース (KB) 記事やコミュニティ フォーラムなど、広範な無料のセルフサポート オプションが 24 時間 365 日ご利用いただけます。サポート登録には、Webチケットによるリモートテクニカルサポートも含まれます。</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">FSx for ONTAP、そのインフラストラクチャ、またはサービスを使用するソリューションに関連するテクニカル サポートについては、その製品の Workload Factory ドキュメントの「ヘルプの取得」を参照してください。</block>
+  <block id="359d8b16e442ffaa72e03c95fcd60448" category="paragraph"><block ref="359d8b16e442ffaa72e03c95fcd60448" category="inline-link-macro-rx"></block></block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">現在表示している Workload Factory のドキュメント。</block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Workload Factory ナレッジベースを検索して、問題のトラブルシューティングに役立つ記事を見つけます。</block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Workload Factory コミュニティに参加して、進行中のディスカッションをフォローしたり、新しいディスカッションを作成したりしてください。</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">*ケースの作成*機能を使用するには、まずサポートに登録する必要があります。NetAppNetAppサイトの資格情報を Workload Factory ログインに関連付けます。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block> 。</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Workload Factory コンソールの右上で、[ヘルプ] &gt; [サポート] を選択します。</block>
+  <block id="6e74b203173a9994c366c7e7a3cf4748" category="paragraph">このオプションを選択すると、新しいブラウザ タブでNetAppコンソールが開き、サポート ダッシュボードが読み込まれます。</block>
+  <block id="3f13dd54818447375c92bf35e0a35f00" category="paragraph">このエラーは、NSS アカウントとそれに関連付けられているレコード会社が、 NetAppコンソール アカウントのシリアル番号のレコード会社と同じではないことを意味している可能性があります (つまり、960xxxx) またはシステムのシリアル番号。次のいずれかのオプションを使用してサポートを求めることができます。</block>
+  <block id="289d2ab2d9b0e116790d035921c12b56" category="paragraph">アクティブなサポート ケースと解決済みのサポート ケースをNetAppコンソールから直接表示および管理できます。NSS アカウントおよび会社に関連付けられたケースを管理できます。</block>
+  <block id="f9a63cd3a07378e169c58addd5fdce8d" category="paragraph">このオプションを選択すると、 NetAppコンソールの新しいブラウザ タブが開き、サポート ダッシュボードが読み込まれます。</block>
+  <block id="785b440c0be1d853c5e2f4fb1f1ee2ab" category="list-text">*ケース管理*を選択し、プロンプトが表示されたら、NSS アカウントをNetAppコンソールに追加します。</block>
+  <block id="c80d8addb8aa8e8872bbc44894b077f3" category="paragraph">*ケース管理* ページには、 NetAppコンソール ユーザー アカウントに関連付けられている NSS アカウントに関連するオープン ケースが表示されます。これは、*NSS 管理* ページの上部に表示される NSS アカウントと同じです。</block>
+  <block id="3a84cef0233ac32a841f51da8d052f65" category="doc">NetApp Workload Factory に関する法的通知</block>
+  <block id="aeb31c9f8c311597856b129ab948b4e6" category="inline-link">NetAppワークロード ファクトリー</block>
+  <block id="55f7843f27571db97da76bdf68a76d22" category="paragraph"><block ref="55f7843f27571db97da76bdf68a76d22" category="inline-link-rx"></block></block>
+  <block id="dfccab35bc7005d989cb4561e9255ada" category="summary">Workload Factory にサインアップすると、Web ベースのコンソールからいつでもログインして、ワークロードと FSx for ONTAPファイル システムの管理を開始できます。</block>
+  <block id="ba1fcb67650ba2e0b43e050dbcc394d9" category="doc">NetAppワークロードファクトリーにログイン</block>
+  <block id="4fe5d59744edf8c4d87efa01a440d271" category="paragraph">NetApp Workload Factory にサインアップすると、Web ベースのコンソールからいつでもログインして、ワークロードと FSx for ONTAPファイル システムの管理を開始できます。</block>
+  <block id="4a82c28eaf9e486d9116434f89bacba7" category="paragraph">次のいずれかのオプションを使用して、Workload Factory の Web ベース コンソールにログインできます。</block>
+  <block id="ba66ed28174cebd60e2e5bb8650d4aa1" category="list-text">ウェブブラウザを開いて、<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block> 。</block>
+  <block id="1c883b8b402bae840152eb96ee53c8bf" category="paragraph">過去に正常にログインしたことがある場合は、Workload Factory のホームページが表示され、デフォルトのアカウントを使用することになります。</block>
+  <block id="a67ab1c62f2a6164c719be422f163c0c" category="paragraph">これでログインし、Workload Factory を使用して FSx for ONTAPファイルシステムとワークロードを管理できるようになりました。</block>
+  <block id="adf67e3c15ea92cdb089cbb8d3dced6b" category="summary">資格情報セットが不要になった場合は、 NetApp Workload Factory から削除できます。  FSx for ONTAPファイル システムに関連付けられていない認証情報のみを削除できます。</block>
+  <block id="b088f0038dd9646dd61cd1cf0cae1489" category="doc">NetApp Workload Factory から資格情報を削除する</block>
+  <block id="2f13edc244ce3aa63a739bc5418cd67f" category="paragraph">資格情報セットが不要になった場合は、Workload Factory から削除できます。  FSx for ONTAPファイル システムに関連付けられていない認証情報のみを削除できます。</block>
+  <block id="7bb0c07ee010fa0e2163d74b0639bfc8" category="list-text">*資格情報*ページで、次の操作を行います。</block>
+  <block id="e528904ec331dc3055ad0bf44d930c2f" category="list-text">Workload Factory コンソールで、資格情報セットのアクション メニューを選択し、[削除] を選択します。*削除*を選択して確認します。</block>
+  <block id="f75c55dc663ab8103cadf39160dd8873" category="list-text">NetAppコンソールで、資格情報セットのアクション メニューを選択し、[削除] を選択します。*削除*を選択して確認します。</block>
+  <block id="c4eeab827addadb53f84d3b950e2e06c" category="paragraph">サービス アカウントは、 NetAppが提供するマルチテナント機能です。アカウント管理者は、サービス アカウントの作成、アクセスの制御、サービス アカウントの削除を行います。サービス アカウントは、 NetAppコンソールまたはNetApp Workload Factory コンソールで管理できます。</block>
+  <block id="c52f59a8cfa6f7dbcd694706f2c0eb1f" category="paragraph">クライアント シークレットを再作成できるNetAppコンソールでのサービス アカウントの管理とは異なり、Workload Factory ではサービス アカウントの作成と削除のみがサポートされます。  NetApp Workload Factoryコンソールで特定のサービスアカウントのクライアントシークレットを再作成する場合は、<block ref="f3841cd8a6d92483cb4b2a04ae8d7e16" category="inline-xref-macro-rx"></block> 、 その後<block ref="117d146838ec9f8b2a3508452b4bae51" category="inline-xref-macro-rx"></block>。</block>
+  <block id="6f8b2fff116ed950070ae406887683ed" category="paragraph">NetAppコンソールでサービス アカウントを作成するか、Workload Factory コンソールでサービス アカウントを作成するかを決定します。若干の違いはございます。次の手順では、Workload Factory コンソールでサービス アカウントを管理する方法について説明します。</block>
+  <block id="513aa0b71fd71cb807d8356c1c1930b2" category="inline-link-macro">アイデンティティとアクセス管理の仕組みを学ぶ</block>
+  <block id="39d03cbe2c60f5778de27d1702ac443b" category="inline-link-macro">IAM メンバーを追加して権限を管理する方法を学びます</block>
+  <block id="18e2adeb0ceeacbc4bb453bf6fd5d660" category="paragraph">NetAppコンソールでサービスアカウントを管理するには、<block ref="418d0bf28404f8619c7c9a9fb4830d75" category="inline-link-macro-rx"></block>そして<block ref="00fecbbb5f69cd2c6e992406f2d7445a" category="inline-link-macro-rx"></block>。</block>
+  <block id="5ab42189f944fdc53caadf1df5abe650" category="paragraph">サービス アカウントを作成すると、Workload Factory を使用すると、サービス アカウントのクライアント ID とクライアント シークレットをコピーまたはダウンロードできます。このキー ペアは、Workload Factory による認証に使用されます。</block>
+  <block id="29ff7127ee20a064050f18e60ebefb52" category="inline-image-macro">NetApp Workload Factory ユーザー インターフェイスのアカウント メニュー オプションを示すスクリーンショット。オプションの 1 つはサービス アカウントです。</block>
+  <block id="a9e0a4cc2ab34b88741d440069a23306" category="paragraph"><block ref="a9e0a4cc2ab34b88741d440069a23306" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="49f5ed0a90981c28c41567afa9022439" category="paragraph">クライアント シークレットは 1 回だけ表示され、Workload Factory によってどこにも保存されません。秘密をコピーまたはダウンロードして安全に保管してください。</block>
+  <block id="cde2339a39bfe4d657d43be10594e1d0" category="list-text">オプションで、クライアント資格情報交換を実行して、Auth0 管理 API のアクセス トークンを取得できます。 curl の例は、クライアント ID とシークレットを取得し、API を使用して時間制限のあるアクセス トークンを生成する方法を示しています。トークンにより、 NetApp Workload Factory API への数時間のアクセスが提供されます。</block>
+  <block id="6088e1e1d002a4c07aec5cec2ca41900" category="list-text">*サービス アカウント* ページで、アクション メニューを選択し、*削除* を選択します。</block>
+  <block id="b94b05a8d3b2fffca3c57aea1db9ffdb" category="summary">NetApp Workload Factory には、IT ポリシーに基づいて Workload Factory とクラウド資産間のアクセスを慎重に制御できる 3 つの動作モードが用意されています。</block>
+  <block id="8ab364b3c7368520184de39baa7327e3" category="paragraph">NetApp Workload Factory には、IT ポリシーに基づいて Workload Factory とクラウド資産間のアクセスを慎重に制御できる 3 つの動作モードが用意されています。使用する動作モードは、Workload Factory に提供する AWS 権限のレベルによって決まります。</block>
+  <block id="bc63252869898532ad7c844d8447e358" category="paragraph">運用モードは、割り当てた信頼レベルに応じて、Workload Factory によって提供される機能と機能を論理的に構成します。運用モードの主な目的は、Workload Factory が AWS アカウント内で実行できるタスクと実行できないタスクを明確に伝えることです。</block>
+  <block id="4d34e6e6a767b4ce93680aa48cb370d0" category="list-text">Workload Factory に AWS 権限が割り当てられていないゼロ トラスト関係を表します。これは、ワークロード ファクトリーを早期に調査し、さまざまなウィザードを使用して必要な Infrastructure as Code (IaC) を作成するために設計されています。コードをコピーし、AWS 認証情報を手動で入力して AWS で使用できます。</block>
+  <block id="5198d3d3b16bbd8165878b42f177a30b" category="list-text">読み取り専用権限を追加して基本モードのエクスペリエンスを強化し、IaC テンプレートに特定の変数 (VPC、セキュリティ グループなど) が入力されるようにします。これにより、Workload Factory に変更権限を与えることなく、AWS アカウントから直接 IaC を実行できるようになります。</block>
+  <block id="90e0e635e22e69ee097729d5734a7d9d" category="list-text">完全な信頼関係を表し、Workload Factory に完全な権限が割り当てられるようにします。これにより、Workload Factory は、実行に必要な権限を持つ割り当てられた認証情報とともに、お客様に代わって AWS での操作を実行および自動化できるようになります。</block>
+  <block id="546393155194873f3731142e84a340fd" category="inline-link-macro">NetApp Workload Factoryの権限</block>
+  <block id="81c2957350a12620540cd26890390b33" category="paragraph">詳細はこちら<block ref="cabd746a8854284ee02379d38c8096f7" category="inline-link-macro-rx"></block> 。</block>
+  <block id="b68bbc990631af9eef3fe553c0db51c2" category="cell">ワークロードファクトリーからの自動化</block>
+  <block id="97ad164404d252aefcb10ad97a940250" category="paragraph">使用する予定のモードを識別するために Workload Factory で設定する必要があるセレクターはありません。モードは、Workload Factory アカウントに割り当てた AWS 認証情報とアクセス許可に基づいて決定されます。</block>
+  <block id="c45e625ca22c6cf82bdbab201e8b7505" category="paragraph">資格情報を設定すると、1 つのワークロード コンポーネントに 1 つのモードを提供し、別のコンポーネントに別のモードを提供できます。たとえば、FSx for ONTAPファイルシステムをデプロイおよび管理する操作に対しては読み取り/書き込みモードを設定できますが、Workload Factory を使用してデータベースワークロードを作成およびデプロイする操作に対しては読み取り専用モードのみを設定できます。</block>
+  <block id="1e82623c909c729fd392237767a08bbd" category="paragraph">これらの機能は、Workload Factory アカウントの単一の資格情報セット内で提供することも、資格情報ごとに固有のワークロード展開機能を提供する場合は複数の資格情報セットを作成することもできます。</block>
+  <block id="b7539f1df600ed5d69ea48b7db1c268a" category="paragraph">ただし、Workload Factory から VMware ワークロード (基本モード) を作成および展開するための自動化コントロールはありません。  VMware ワークロードを作成する場合は、Codebox からコードをコピーし、AWS アカウントに手動でログインし、生成されたコードに不足しているエントリを手動で入力して、この機能を使用する必要があります。</block>
+  <block id="9e4d021b600a18ca2bdc19e316e61a90" category="paragraph">最初の Workload Factory 機能を使用する場合は、それらのワークロード機能に必要な権限を使用して資格情報を作成する必要があります。認証情報は Workload Factory に追加しますが、IAM ロールとポリシーを作成するには AWS マネジメントコンソールにアクセスする必要があります。これらの資格情報は、Workload Factory のあらゆる機能を使用するときにアカウント内で利用できるようになります。</block>
+  <block id="b6cd757220290782ab371e620582ddcd" category="paragraph">Workload Factory に複数の AWS 認証情報セットを追加すると、FSx for ONTAPファイルシステム、FSx for ONTAPへのデータベースのデプロイ、VMware ワークロードの移行など、追加機能を使用するために必要な追加の権限が提供されます。</block>
+  <block id="b6358992bb0152c2af9f3e2e315ef468" category="inline-link-macro">Workload FactoryにAWS認証情報を追加する方法を学ぶ</block>
+  <block id="1350027224712371708c0a642ae2b919" category="paragraph"><block ref="bc58254869896d67e8e31b026259707a" category="inline-link-macro-rx"></block> 。</block>
+  <block id="afa8d8f6ad8b4dcb54715108a87420e8" category="summary">NetApp Workload Factory の機能とサービスを使用するには、Workload Factory がクラウド環境で操作を実行できるように権限を付与する必要があります。</block>
+  <block id="32acdb91b398fe68c473d385b28af9c3" category="doc">NetApp Workload Factory の権限</block>
+  <block id="e75bcec41d02f72a4cc9d477ba804144" category="paragraph">_読み取り専用_ または _読み取り/書き込み_ モードの権限を付与すると、Workload Factory は、その AWS アカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスにアタッチします。これにより、Workload Factory は、ストレージ環境の検出から、ストレージ管理のファイルシステムや GenAI ワークロードのナレッジベースなどの AWS リソースのデプロイまで、さまざまな操作を実行できるようになります。</block>
+  <block id="d0ade4355c8ec6ed37983eb14916328c" category="paragraph">たとえば、データベース ワークロードの場合、Workload Factory に必要な権限が付与されると、指定されたアカウントとリージョン内のすべての EC2 インスタンスがスキャンされ、すべての Windows ベースのマシンがフィルタリングされます。  AWS Systems Manager (SSM) エージェントがホストにインストールされ実行されており、System Manager ネットワークが適切に設定されている場合、Workload Factory は Windows マシンにアクセスし、SQL Server ソフトウェアがインストールされているかどうかを確認できます。</block>
+  <block id="bec1f669d4b71b3094f80260331993ac" category="paragraph">各ワークロードは、権限を使用して、Workload Factory で特定のタスクを実行します。使用するワークロードまでスクロールして、権限のリスト、権限の目的、使用場所、権限をサポートするモードを表示します。</block>
+  <block id="b99e184e3a2f6b2370d5380b1371796b" category="paragraph">ストレージに使用できる IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory に必要な権限を提供します。</block>
+  <block id="90d438e965d4924a5cc9d21b0a11235d" category="paragraph">データベース ワークロードに使用できる IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory に必要な権限を提供します。</block>
+  <block id="77b951d8af5d2903fd338a5594bc2984" category="cell">ec2:アドレスの説明</block>
+  <block id="3dacbeba47b9f6346efabbbcba3e8f99" category="cell">ec2:起動テンプレートの説明</block>
+  <block id="a7832ac7716e329cbfb8be2af7718d13" category="cell">fsx:ファイルシステムエイリアスの説明</block>
+  <block id="fc1339e69103622aaebd0a2344228761" category="cell">kms:カスタムキーストアの説明</block>
+  <block id="29a99298952ddee2d199430a92076edd" category="list-text">評価</block>
+  <block id="6196a6b6fbc92f775ff062249cbb6356" category="cell">ログ:GetLogGroupFields</block>
+  <block id="db54752ff2c01d44c157e10dfa9f6950" category="cell">ログ:GetLogRecord</block>
+  <block id="2c052f83f4bc2f8c87925e18b83a9421" category="cell">Workload Factory は、SSM 出力の切り捨てが発生すると、SQL インスタンスの Amazon CloudWatch ログに切り替えます。</block>
+  <block id="56998f09312293941ad87f918fca7616" category="cell">Workload Factory が現在のログ グループを取得し、Workload Factory によって作成されたログ グループの保持が設定されていることを確認することを許可します。</block>
+  <block id="181c9a1e0d3c2fb405fed4979e4fa910" category="cell">Workload Factory が作成したログ グループに 1 日間の保持ポリシーを設定できるようにして、SSM コマンド出力のログ ストリームの不要な蓄積を回避します。</block>
+  <block id="55252e0c1a280bbc72334c0d670ddff5" category="cell">ssmmessages:CreateControlChannel</block>
+  <block id="17815da2601655e53a5a946ca4e0eedd" category="cell">ssmmessages:データチャネルの作成</block>
+  <block id="2c9dbd0f531b26987ee04e63abe52bea" category="cell">ssmmessages:OpenControlChannel</block>
+  <block id="2e2fcc3da644ea24aae8e587a62c0490" category="cell">ssmmessages:OpenDataChannel</block>
+  <block id="f2a75afa5110fc06c2a6ef3f1e0c324c" category="paragraph">VMware ワークロードの IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory for VMware に必要な権限を提供します。</block>
+  <block id="992efefab3dd15099f5eff3f904d8df4" category="section-title">2025年10月5日</block>
+  <block id="655af276f5fd16503f094c10143b02d9" category="paragraph">以下の権限は GenAI から削除され、現在は GenAI エンジンによって処理されます。</block>
+  <block id="1084543e1d03924aed54511730a18768" category="list-text"><block ref="e8a46aee8aa47b78b90b155b227afbc9" prefix="" category="inline-code"></block></block>
+  <block id="03a679ce6a7f06c1be5f1f7aca0a9881" category="list-text"><block ref="93ec13283fb9f4d01324596ea5bfe764" prefix="" category="inline-code"></block></block>
+  <block id="f0323cf37d3ddf6228bd3210fc2fd2fe" category="paragraph">その<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>追加の AWS アカウント認証情報を追加するとき、または Workload Factory コンソールから新しいワークロード機能を追加するときに自動アクセス許可チェックを有効にすると、アクセス許可はすべてのワークロードアクセス許可ポリシーの一部になります。この権限は、ワークロード操作をシミュレートし、Workload Factory からリソースをデプロイする前に、必要な AWS アカウント権限があるかどうかを確認します。このチェックを有効にすると、失敗した操作からリソースをクリーンアップしたり、不足している権限を追加したりするために必要な時間と労力が削減されます。</block>
+  <block id="e322079c316096bc16e777a93da0a332" category="summary">Workload Factory コンソールのネットワークを準備し、サインアップしてアカウントを作成し、認証情報を追加して、Workload Factory が AWS リソースを直接管理できるようにすることで、Workload Factory の使用を開始します。</block>
+  <block id="efaef01a8d4ed991197fd08168fbfd81" category="doc">NetApp Workload Factory のクイックスタート</block>
+  <block id="43942595c7cf22990bdac7d19d61280a" category="paragraph">NetApp Workload Factory の使用を開始するには、サインアップしてアカウントを作成し、Workload Factory が AWS リソースを直接管理できるように認証情報を追加し、 Amazon FSx for NetApp ONTAPを使用してワークロードを最適化します。</block>
+  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link-macro">ワークロードファクトリー</block>
+  <block id="8badb47ae4efde6548fd67d3204a1d4c" category="paragraph">NetApp Workload Factory は、Web ベースのコンソールからクラウド サービスとしてユーザーがアクセスできます。始める前に、以下のことを理解しておく必要があります。<block ref="fc500664a3cbaaa3aa46a84367805795" category="inline-link-macro-rx"></block>そして<block ref="232f97f76b2e1af290ebde69715d8d8f" category="inline-link-macro-rx"></block>。</block>
+  <block id="58902cbb0adcf45cfe72ced7fa9d043a" category="paragraph">に行く<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block>サインアップしてアカウントを作成してください。</block>
+  <block id="81fe43671919388bf418561882652f2a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Workload FactoryにAWS認証情報を追加する</block>
+  <block id="22829868ca33c0e8792bcdc315b4a329" category="paragraph">この手順はオプションです。AWS アカウントにアクセスするための認証情報を追加せずに、Workload Factory を _Basic_ モードで使用できます。_読み取り専用_モードまたは_読み取り/書き込み_モードのいずれかで AWS 認証情報を Workload Factory に追加すると、FSx for ONTAPファイルシステムの作成と管理、およびデータベースや GenAI などの特定のワークロードの導入と管理に必要な権限が Workload Factory アカウントに付与されます。</block>
+  <block id="cfce110bce240e5d147991ff7290a456" category="paragraph">サインアップしてアカウントを作成し、オプションで AWS 認証情報を追加したら、Workload Factory を使用して FSx for ONTAPでワークロードを最適化できるようになります。</block>
+  <block id="023c464fc92ec044e83176c4e57027c4" category="summary">Workload Factory には、Web ベースのコンソールからアクセスできます。  Workload Factory を使い始めるときの最初のステップは、既存のNetAppサポート サイトの認証情報を使用してサインアップするか、 NetAppクラウド ログインを作成することです。</block>
+  <block id="68502871f1dfe8846e132f5a8eb8bf26" category="doc">NetApp Workload Factory にサインアップ</block>
+  <block id="060bb32e7b5d621e11afd0c831a87d3e" category="paragraph">NetApp Workload Factory には、Web ベースのコンソールからアクセスできます。  Workload Factory を使い始めるときの最初のステップは、既存のNetAppサポート サイトの認証情報を使用してサインアップするか、 NetAppクラウド ログインを作成することです。</block>
+  <block id="9e9a0202d2a4a6551faca1e042e523e5" category="paragraph">次のいずれかのオプションを使用して Workload Factory にサインアップできます。</block>
+  <block id="dd8dfb2c954c59328d486f61112b7dc6" category="list-text">ウェブブラウザを開いて、<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block></block>
+  <block id="9afbcf749bbbaca180b483af3042470e" category="paragraph">NSS アカウントをお持ちの場合は、サインアップ ページをスキップできます。  Workload Factory では、この初期ログインの一環としてサインアップが行われます。</block>
+  <block id="d3ec3db6c6205c0b2c9d4904d509b3ca" category="inline-image-macro">Workload Factory にアクセスするためのユーザー名とパスワードを追加できるサインアップ ページのスクリーンショット。</block>
+  <block id="f469d8f6e1958f36faad490b72b0ed6c" category="paragraph"><block ref="f469d8f6e1958f36faad490b72b0ed6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3ca580d5cb98bdcfa7834616d19d2eda" category="list-text">*作成*を選択すると、ワークロード ファクトリーのホームページが表示されます。</block>
+  <block id="0fa2d9e93d2ebe5dc084c22e852d5e0e" category="paragraph">これで、Workload Factory のログインとアカウントが作成されました。あなたはアカウント管理者とみなされ、すべての Workload Factory 機能にアクセスできます。</block>
+  <block id="df3d826b639dd614f0fae940d9ebee78" category="summary">NetAppテクニカル サポートでサポート ケースを開く前に、 NetAppサポート サイト アカウントをNetAppコンソールに追加し、サポートに登録する必要があります。</block>
+  <block id="3d9b602ae77ac6a4951ca31b05b6b54f" category="paragraph">NetApp Workload Factory とそのストレージ ソリューションおよびサービスに固有のテクニカル サポートを受けるには、サポート登録が必要です。Workload Factory とは別の Web ベースのコンソールであるNetAppコンソールからサポートに登録する必要があります。</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">サポートに登録しても、クラウド プロバイダー ファイル サービスに対するNetAppサポートは有効になりません。クラウド プロバイダーのファイル サービス、そのインフラストラクチャ、またはサービスを使用するソリューションに関連するテクニカル サポートについては、その製品の Workload Factory ドキュメントの「ヘルプの取得」を参照してください。</block>
+  <block id="eb803e55617f13b716b5e56642cce2b0" category="paragraph">アカウント ID サポート サブスクリプション ( NetAppコンソールの [サポート リソース] ページにある 20 桁の 960xxxxxxxxx シリアル番号) を登録すると、単一のサポート サブスクリプション ID として機能します。各NetAppアカウント レベルのサポート サブスクリプションを登録する必要があります。</block>
+  <block id="4cffd3c1dbf2f1038c01d18e7a860305" category="paragraph">登録すると、サポート チケットの開設やケースの自動生成などの機能が有効になります。登録は、以下の説明に従ってNetAppコンソールにNetAppサポート サイト (NSS) アカウントを追加することで完了します。</block>
+  <block id="f6c4a3ae75d6616126e6da8310ae7384" category="paragraph">サポートに登録し、サポート資格を有効にするには、アカウント内の 1 人のユーザーがNetAppサポート サイト アカウントをNetAppコンソール ログインに関連付ける必要があります。NetAppサポートに登録する方法は、 NetAppサポート サイト (NSS) アカウントをすでにお持ちかどうかによって異なります。</block>
+  <block id="f732375b4bc27328f202e3b10a957017" category="paragraph">NSS アカウントをお持ちのNetApp のお客様の場合は、 NetAppコンソールからサポートに登録するだけです。</block>
+  <block id="f65aaf10469eac2932fc53c6a37afb71" category="list-text">NetAppコンソール メニューから、*管理* を選択し、*資格情報* を選択します。</block>
+  <block id="9094354ffd09e4644caa0010edc66d24" category="paragraph">NetAppコンソール ログインにNetAppサポート サイト アカウントを関連づけていない場合、他のNetAppコンソール ユーザーには同じサポート登録ステータスが表示されません。ただし、これはNetAppアカウントがサポートに登録されていないことを意味するものではありません。アカウント内の 1 人のユーザーがこれらの手順を実行していれば、アカウントは登録済みになります。</block>
+  <block id="a8f62b208e5177a219f0b0d4ce88e0a9" category="paragraph">既存のNetApp顧客であり、既存のライセンスとシリアル番号を持っているものの、NSS アカウントを持っていない場合は、NSS アカウントを作成し、それをNetAppコンソール ログインに関連付ける必要があります。</block>
+  <block id="fb9b6bbcab5fb396a13f67594a0ba1ee" category="list-text">上記で使用したNetAppアカウントのシリアル番号 (960xxxx) を必ずシリアル番号フィールドにコピーしてください。これにより、アカウント処理が高速化されます。</block>
+  <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">以下の手順を実行して、新しいNSSアカウントをNetAppコンソールログインに関連付けます。<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="f335678326583cea28377216c5515221" category="paragraph">NetAppサポートサイトのアカウントを取得したら、以下の手順を実行して、アカウントをNetAppコンソールのログインに関連付けます。<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="c61544abe563251eb7477b6292b382e4" category="summary">NetApp Workload Factory ユーザー インターフェイスのどこからでも CloudShell を使用して、AWS またはONTAP CLI コマンドを発行できます。</block>
+  <block id="2cc12a89b9145b8d67b684667bcb6e3e" category="doc">NetApp Workload Factory で CloudShell を使用する</block>
+  <block id="bdd3829c4c5d30727b854efad6656ed4" category="paragraph">CloudShell を開いて、 NetApp Workload Factory コンソールのどこからでも AWS またはONTAP CLI コマンドを実行します。</block>
+  <block id="a385a99dbaa2e74c192964f9e69a483b" category="paragraph">CloudShell を使用すると、Workload Factory コンソール内からシェルのような環境で AWS CLI コマンドまたはONTAP CLI コマンドを実行できます。ブラウザでターミナル セッションをシミュレートし、ターミナル機能を提供し、Workload Factory のバックエンドを通じてメッセージをプロキシします。これにより、 NetAppアカウントで提供した AWS 認証情報とONTAP認証情報を使用できるようになります。</block>
+  <block id="48df9e69dd1778b8ac1c985ed6755c11" category="paragraph">NetApp CloudShell は、 NetApp Workload Factory に組み込まれた GUI インターフェイスであり、シェルのような環境で AWS CLI コマンドまたはONTAP CLI コマンドを実行できます。ブラウザでターミナル セッションをシミュレートし、ターミナル機能を提供し、Workload Factory のバックエンドを通じてメッセージをプロキシします。これにより、 NetAppアカウントで提供した AWS 認証情報とONTAP認証情報を使用できるようになります。</block>
+  <block id="1ee8317de8286df9285d782d8f8e0421" category="paragraph">+ すべての AWS コマンドは、提供されたコンテキストで実行されます。  AWS コマンドは、提供された認証情報に指定されたリージョンでの権限がある場合にのみ成功します。</block>
+  <block id="c2aae6479356f5b29d5c0d072758e15b" category="paragraph">+ ONTAPコマンドをオプションで指定できます<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>。あなたが<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>個別のONTAPコマンドを使用する場合、この ID はコンテキスト内の ID をオーバーライドします。ターミナルセッションにFSx for ONTAPファイルシステムIDコンテキストがない場合は、以下を提供する必要があります。<block ref="44e80d43b9615befaf6b19e40990e329" prefix=" " category="inline-code"></block>各ONTAPコマンドとともに。</block>
+  <block id="72cee02152b2f11b5f6460917b1aacbc" category="paragraph">+ 異なるコンテキストの詳細を更新するには、次の操作を行います。 * 資格情報を変更するには：「using credentials &lt;credentialId&gt;」 * リージョンを変更するには：「using region &lt;regionCode&gt;」 * ONTAPファイルシステムの FSx を変更するには：「using fsx &lt;fileSystemId&gt;」</block>
+  <block id="8020ce226c7fc212d2852effc0a54748" category="paragraph">+ * 変数を設定するには: $&lt;variable&gt; = &lt;value&gt; * 変数を使用するには: $&lt;variable&gt; * 変数を設定する例: $svm1 = svm123 * 変数を使用する例: --fsx FileSystem-1 volumes show --vserver $svm1 * 文字列値で変数を設定する例 $comment1 = "スペースを含むコメント"</block>
+  <block id="40f26325aff41524a737e27cfcf04bfd" category="paragraph">CloudShell は、 NetApp Workload Factory コンソールのどこからでもデプロイできます。  NetAppコンソールから CloudShell をデプロイすることもできます。</block>
+  <block id="af6f31c7d5b320a69b6bffcdc31e5976" category="open-title">Workload Factory コンソールからデプロイする</block>
+  <block id="174d5d41de2c237aec98824d3c17cba7" category="list-text">ログイン<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block>。</block>
+  <block id="ca3627c81a89fed96b8ccdcdf8d3c626" category="list-text">メニューから、[管理]、[CloudShell] の順に選択します。</block>
+  <block id="775737d382907fd41e70093d7ab88b9f" category="open-title">NetAppコンソールから導入</block>
+  <block id="ea00e950b16eade5658212bfa4840e3e" category="list-text">メニューから、*ワークロード*を選択し、次に*管理*を選択します。</block>
+  <block id="5a54bff1acce03e73faae1c2883bbc74" category="list-text">管理メニューから*CloudShell*を選択します。</block>
+  <block id="1067b147ec35fba3324887b7a56470a3" category="paragraph">このスクリーンショットに表示されている CloudShell タスクは、開いている CloudShell セッション タブのアクション メニューを選択することで完了できます。各タスクの手順は次のとおりです。</block>
+  <block id="d51e5e489befef19eaea975ccadf113f" category="inline-image-macro">名前の変更、複製、他のタブを閉じる、すべて閉じるなどのオプションを含む CloudShell タブのアクション メニューを示すスクリーンショット。</block>
+  <block id="aca076782c1d820131f5d73df3da2f80" category="paragraph"><block ref="aca076782c1d820131f5d73df3da2f80" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0fb636cd8000b62ebb268ced5c0fd671" category="list-text">CloudShell セッション タブのアクション メニューを選択します。</block>
+  <block id="44da402ec36da01d015159883a9bf0a7" category="summary">Codebox を使用すると、 NetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成できます。</block>
+  <block id="1963e3c64fa43d78481e707973437ff9" category="doc">NetApp Workload Factory の自動化に Codebox を使用する</block>
+  <block id="a1886a788bd9ff50317839f01fa99d12" category="paragraph">Codebox を使用すると、 NetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成できます。  Workload Factory REST API、AWS CLI、AWS CloudFormation を使用して使用および実行できるコードを生成できます。</block>
+  <block id="cafb7ecf8a10df6df67b4c871c3b6eb0" category="paragraph">Codebox は、各ユーザーの Workload Factory アカウントに提供されている AWS 権限に基づいてコードに適切なデータを入力することで、Workload Factory の操作モード (_基本_、_読み取り専用_、および _読み取り/書き込み_) と連携します。コードはテンプレートのように使用でき、不足している情報 (資格情報など) を入力したり、コードを実行する前に特定のデータをカスタマイズしたりできます。</block>
+  <block id="62835b251ca7e00f685a007f7c8b4941" category="paragraph">Workload Factory UI ウィザードに値を入力すると、各フィールドの入力が完了すると Codebox でデータの更新を確認できます。ウィザードを完了した後、ページの下部にある*作成*ボタンを選択する前に、<block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block>構成を構築するために必要なコードをキャプチャするために、Codebox にコピーします。たとえば、新しい Microsoft SQL Server を作成するときのこのスクリーンショットには、VPC とアベイラビリティーゾーンのウィザード エントリと、REST API 実装の Codebox 内の同等のエントリが表示されています。</block>
+  <block id="e42247774bdce04c64e854945cc45288" category="paragraph">一部のコード形式では、ダウンロード ボタンを選択して、コードをファイルに保存し、別のシステムに持ち込むこともできます。必要に応じて、ダウンロード後にコードを編集して、他の AWS アカウントに適合させることができます。</block>
+  <block id="ea91e366c1caa6817dd5fd6381bdcf91" category="paragraph">Codebox から生成された CloudFormation コードをコピーし、AWS アカウントで Amazon Web Services CloudFormation スタックを起動できます。  CloudFormation は、Workload Factory UI で定義したアクションを実行します。</block>
+  <block id="b167c25880e4273b3aa267fd82e15459" category="paragraph">CloudFormation コードを使用する手順は、FSx for ONTAPファイルシステムをデプロイするのか、アカウント認証情報を作成するのか、それとも他の Workload Factory アクションを実行するのかによって異なる場合があります。</block>
+  <block id="10c471a29dca5e5a73f066c7da517509" category="list-text">Workload Factory コンソールを使用して実行する操作を定義したら、コードボックス内のコードをコピーします。</block>
+  <block id="d097667109af7665e3dae788e8f5d9c6" category="list-text">AWS または Workload Factory から進行状況を監視します。</block>
+  <block id="05c017ebdfb63b85bc91ed2748f0a19f" category="paragraph">Codebox から生成された Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理できます。</block>
+  <block id="23f4fbebbe0125e9fa4a06e2e7e8b9fc" category="list-text">Workload Factory コンソールを使用して実行する操作を定義したら、Codebox に API コードをコピーします。</block>
+  <block id="8c308624c961296988a91695046fff26" category="list-text">Workload Factory コンソールを使用して実行する操作を定義したら、Codebox に AWS CLI をコピーします。</block>
+  <block id="6e9cd110581bdd8427e1caca1ab0a668" category="list-text">Workload Factory コンソールを使用して実行する操作を定義したら、Codebox から Terraform コードをダウンロードします。</block>
+  <block id="3c9ee3abb878e5099cd76beeedcb2d04" category="summary">Workload Factory 管理機能の新機能（クラウド プロバイダーの資格情報、Codebox の機能強化など）について説明します。</block>
+  <block id="8e11dbed1edcb7cf815a9454ba0f0315" category="doc">NetApp Workload Factory 管理機能の新機能</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
+  <block id="7fe837fc0a93acdad81da1d440ee3fd2" category="section-title">2025年10月5日</block>
+  <block id="516a4939962d11e39f0fbf438b454931" category="summary">ログインしてNetApp Workload Factory を設定すると、FSx for ONTAPファイルシステムを作成および管理し、その他の Workload Factory 機能を使用できるようになります。</block>
+  <block id="f00613c02d17c0a20b6a513d63b31e84" category="doc">NetApp Workload Factoryでワークロードを最適化</block>
+  <block id="889f832ffc4f3999f71856d95725363c" category="paragraph">ログインしてNetApp Workload Factory をセットアップしたら、 Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAP ファイルシステムへのデータベースのデプロイ、FSx for ONTAPファイルシステムを外部データストアとして使用して仮想マシン構成を VMware Cloud on AWS に移行するなど、いくつかのONTAP Factory 機能を使い始めることができます。</block>
+  <block id="db7932d3f55d0312c05f023910160589" category="summary">NetApp Workload Factory は、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化できるように設計された強力なライフサイクル管理プラットフォームです。</block>
+  <block id="9a01a95fb1dafcab4b74af822b939ea9" category="doc">NetAppワークロードファクトリーについて学ぶ</block>
+  <block id="71c665ac24c583a0a9ad96a67210bac2" category="paragraph">NetApp Workload Factory は、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化できるように設計された強力なライフサイクル管理プラットフォームです。  Workload Factory と FSx for ONTAPを使用して合理化できるワークロードには、データベース、VMware Cloud on AWS への VMware の移行、AI チャットボットなどがあります。</block>
+  <block id="96298fa6d94ac6f49aa36e586e268f0f" category="paragraph">Amazon FSx for NetApp ONTAP は、ミッションクリティカルなアプリケーション、データベース、コンテナ、VMware Cloud データストア、およびユーザーファイル向けに、完全に管理された AWS ネイティブの NFS、SMB/CIFS、および iSCSI ストレージボリュームを提供します。  FSx for ONTAPは、Workload Factory およびネイティブ AWS 管理ツールを使用して管理できます。</block>
+  <block id="a0f53b5544ae2841af96b6a2c93a0849" category="paragraph">Workload Factory プラットフォームは、次の主要な機能を提供します。</block>
+  <block id="5999715bf3ed9ba4ec9a80b7687fe818" category="list-text">サービス アカウントを使用して、 NetApp Workload Factory の操作を安全かつ確実に自動化します。サービス アカウントは、ユーザー管理の制限なしに信頼性が高く長期的な自動化を提供し、API アクセスのみを提供するためより安全です。</block>
+  <block id="e89477f461ecef2d895595553cc0cfbf" category="list-text">質問するAIアシスタント</block>
+  <block id="c0eadc4e4502d909eddd3b5b2d48b232" category="list-text">FSx for ONTAPファイルシステムの管理と操作について AI アシスタントに質問します。  Ask Me は、モデル コンテキスト プロトコル (MCP) を使用して、外部環境と安全にインターフェイスし、API ツールにクエリを実行して、特定のストレージ環境に合わせた応答を提供します。</block>
+  <block id="f23d73684a524dc65f1c2ab55054ed6c" category="paragraph">Workload Factory を使用すると、クラウド ストレージを管理し、Amazon Web Services のワークロード機能を使用できます。</block>
+  <block id="59357af7cb9129e8c2be60c63512c221" category="paragraph">NetApp Workload Factory のセキュリティは、 NetAppにとって最優先事項です。 Workload Factory のすべてのワークロードは、Amazon FSx for NetApp ONTAP上で実行されます。すべてに加えて<block ref="ccc35ad3502dffbee7f06fd01d3728f9" category="inline-link-macro-rx"></block>NetApp Workload Factoryは<block ref="87b5f9f30f065d1ad679fca208226814" category="inline-link-macro-rx"></block>。</block>
+  <block id="cc3487971ff751f7d4df80cbca84205b" category="paragraph">Amazon FSx for NetApp ONTAP for NetApp Workload Factoryは<block ref="eada645bedd6ca3d760173ba22baf6b0" category="inline-link-macro-rx"></block>適切に設計されたベストプラクティスを念頭に置いて作成されました。</block>
+  <block id="6396fbe69c05e9a323cf53a0fbf0983d" category="paragraph">Workload Factory は無料でご利用いただけます。 Amazon Web Services (AWS) に支払うコストは、展開する予定のストレージおよびワークロード サービスによって異なります。これには、Amazon FSx for NetApp ONTAPファイルシステム、VMware Cloud on AWS インフラストラクチャ、AWS サービスなどのコストが含まれます。</block>
+  <block id="d866a7eda949420ef136789c93a23ee9" category="section-title">ワークロードファクトリーの仕組み</block>
+  <block id="20977d337d4e7d1aa80c7ebdb962f859" category="paragraph">Workload Factory には、SaaS レイヤーを通じて提供される Web ベースのコンソール、アカウント、クラウド資産へのアクセスを制御する操作モード、Workload Factory と AWS アカウント間の分離された接続を提供するリンクなどが含まれます。</block>
+  <block id="fd07b6b80e367744f7d2064aa6e1a4c5" category="inline-link-macro">NetAppワークロード ファクトリー コンソール</block>
+  <block id="a4a5dd1bc02494069caf90f924a50a90" category="paragraph">ワークロードファクトリーは、<block ref="e112a781fd54a0aac7e793eea3eebe8a" category="inline-link-macro-rx"></block>そして<block ref="7532dfde8c533672ea63a5b546224a97" category="inline-link-macro-rx"></block>。これらの SaaS エクスペリエンスにより、最新機能がリリースされると自動的にアクセスでき、Workload Factory アカウントとリンクを簡単に切り替えることができます。</block>
+  <block id="0c600280e89b5a618e533108344236d5" category="paragraph">Workload Factory に初めてログインすると、アカウントを作成するように求められます。このアカウントを使用すると、資格情報を使用して組織のリソース、ワークロード、ワークロード アクセスを整理できます。</block>
+  <block id="2edc1f0f1478d883c0d423d0d8ce8ba6" category="inline-image-macro">Workload Factory アカウントの入力を求める Workload Factory セットアップ ウィザードのスクリーンショット。</block>
+  <block id="912befb3eaba2908b9f951f6483b77fd" category="paragraph"><block ref="912befb3eaba2908b9f951f6483b77fd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c5187db3b0ac1f92f3bcbfc83450784f" category="admonition">NetAppコンソールを使用する場合、Workload Factory はNetAppアカウントを活用するため、すでにアカウントに属していることになります。</block>
+  <block id="12870a8b67ab987daca48b855ab4ceda" category="paragraph">サービス アカウントは、自動化の目的でNetApp Workload Factory への承認済み API 呼び出しを行うことができる「ユーザー」として機能します。これにより、いつでも退職する可能性のある実際の人物のユーザー アカウントに基づいて自動化スクリプトを作成する必要がなくなるため、自動化の管理が容易になります。 Workload Factory のすべてのアカウント所有者は、アカウント管理者とみなされます。アカウント管理者は複数のサービス アカウントを作成および削除できます。</block>
+  <block id="aa9b9cc18c16d4ea10f38b25b835c5aa" category="paragraph">Workload Factory には、クラウド資産へのアクセスを慎重に制御し、IT ポリシーに基づいて Workload Factory に段階的な信頼を割り当てることができる 3 つの動作モードが用意されています。</block>
+  <block id="d41adf884cb045d0ebe1b066d2b95a2b" category="list-text">*基本モード* はゼロ トラスト関係を表し、ワークロード ファクトリーの早期調査と、さまざまなウィザードの使用によって必要なインフラストラクチャをコードとして作成できるように設計されています。このコードは、ユーザーが関連する AWS 認証情報とともに手動でコピーして使用できます。</block>
+  <block id="cc85ceb9ec5c575a9f6e41669887b58d" category="inline-link-macro">ワークロードファクトリーの運用モードの詳細</block>
+  <block id="bc8c94f9b7d24148c98db964dcfdf4f4" category="paragraph"><block ref="122264b4ce030632c8f10e1e484f4776" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a74fb96e1eef90ea865f1878f02b4e15" category="paragraph">Workload Factory リンクは、Workload Factory と 1 つ以上の FSx for ONTAPファイル システム間の信頼関係と接続を作成します。これにより、Amazon FSx for ONTAP API では利用できない特定のファイルシステム機能を、 ONTAP REST API 呼び出しから直接監視および管理できるようになります。</block>
+  <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">Workload Factory の使用を開始するためにリンクは必要ありませんが、場合によっては、Workload Factory のすべての機能とワークロード機能のロックを解除するためにリンクを作成する必要があります。</block>
+  <block id="528a4ef2f9c8bc3b67d3efa2374a45d4" category="paragraph">Codebox は、開発者や DevOps エンジニアが Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。コード形式には、Workload Factory REST API、AWS CLI、AWS CloudFormation が含まれます。</block>
+  <block id="7feb10c40d9ece4ba2534f19d82a64da" category="paragraph">Codebox は、Workload Factory の動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) と連携しており、実行準備のための明確なパスと、将来の迅速な再利用のための自動化カタログを設定します。</block>
+  <block id="ef4d1c07f18f4d56e44fa520425903f8" category="paragraph">Workload Factory はコスト削減計算ツールを提供しており、FSx for ONTAPファイル システム上のストレージ環境またはデータベース ワークロードのコストを Elastic Block Store (EBS)、Elastic File Systems (EFS)、および FSx for Windows File Server と比較できます。ストレージ要件によっては、FSx for ONTAPファイル システムが最もコスト効率の高いオプションとなる場合があります。</block>
+  <block id="4bbb8d481021011f9afb73ca196bfecd" category="section-title">NetApp Workload Factory を使用するためのツール</block>
+  <block id="227f846d45d01d0f9fb62a784d506d51" category="paragraph">NetApp Workload Factory は次のツールで使用できます。</block>
+  <block id="36445dd6e44838348239a5d874596e0d" category="list-text">*Workload Factory コンソール*: Workload Factory コンソールは、アプリケーションとプロジェクトの視覚的かつ全体的なビューを提供します。</block>
+  <block id="e71fd0837014d1987a939c9af71a3353" category="list-text">* NetAppコンソール*: NetAppコンソールはハイブリッド インターフェイス エクスペリエンスを提供するため、Workload Factory を他のNetAppデータ サービスと一緒に使用できます。</block>
+  <block id="38c157d73ba6e13febe98e5199b858c8" category="list-text">*質問する*: Ask me AI アシスタントを使用すると、Workload Factory コンソールを離れることなく、質問したり、Workload Factory について詳しく知ることができます。Workload Factory のヘルプ メニューから「Ask me」にアクセスします。</block>
+  <block id="65c95ed5c9f895be6dfa81e8583c86af" category="list-text">*CloudShell CLI*: Workload Factory には、単一のブラウザベースの CLI からアカウント全体の AWS およびNetApp環境を管理および操作するための CloudShell CLI が含まれています。Workload Factory コンソールの上部バーから CloudShell にアクセスします。</block>
+  <block id="34904d30d825a389b588efb76a1ceb16" category="list-text">*REST API*: Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理します。</block>
+  <block id="3995165ba76339d9d4d08edf5a17c07c" category="list-text">*CloudFormation*: AWS CloudFormation コードを使用して、Workload Factory コンソールで定義したアクションを実行し、AWS アカウントの CloudFormation スタックから AWS およびサードパーティのリソースをモデル化、プロビジョニング、管理します。</block>
+  <block id="a1b1209dad1b58c4e66fd68ee5bc0148" category="list-text">*Terraform NetApp Workload Factory プロバイダー*: Terraform を使用して、Workload Factory コンソールで生成されたインフラストラクチャ ワークフローを構築および管理します。</block>
+  <block id="cfcd02bc3ad349605f667b1db0164fe0" category="paragraph">Workload Factory を使用すると、特定のワークロードに合わせて FSx for ONTAPファイル システムを最適化、自動化、および操作できます。各ワークロードは関連する REST API を公開します。これらのワークロードと API を組み合わせることで、FSx for ONTAPファイルシステムの管理に使用できる柔軟で拡張可能な開発プラットフォームが構成されます。</block>
+  <block id="49dac47ef61c863ab22404394b6c84e7" category="paragraph">Workload Factory REST API を使用すると、いくつかの利点があります。</block>
+  <block id="b5b61948785c8f81b44871382cf798d9" category="list-text">Workload Factory の認証は OAuth2 標準に基づいています。  NetApp はAuth0 サービスの実装に依存しています。</block>
+  <block id="cbc4c63269886120ca8da87d6017c0ca" category="list-text">Workload Factory の Web ベース コンソールは同じコア REST API を使用するため、2 つのアクセス パス間に一貫性が保たれます。</block>
+  <block id="7d4c208fb5531fb6f56eb2444364de9a" category="inline-link">Workload Factory REST API ドキュメントを見る</block>
+  <block id="855730139927264118c576e496933287" category="paragraph"><block ref="855730139927264118c576e496933287" category="inline-link-rx"></block></block>
+  <block id="1a3ccf4dcdcef55881a91fd9c1f74d8c" category="sidebar">NetApp Workload Factory を使い始めると、 Amazon FSx for NetApp ONTAPを使用する際にワークロードを最大限に活用できるようになります。セットアップが完了したら、ワークロード用に FSx for ONTAPファイルシステムを作成、最適化、管理し、FSx for ONTAPによるコスト削減を検討し、プラットフォーム間の自動化のために組み込みの Infrastructure-as-Code コパイロットを使用し、Workload Factory でワークロードを管理できます。</block>
+  <block id="066d5a643966a0d6019a02e7a963a4f3" category="sidebar">NetAppワークロード ファクトリーのセットアップおよび管理ドキュメント</block>
+  <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetAppデータサービス</block>
+  <block id="86dd1f2c1da07102d586b3d680ed37a3" category="sidebar">ワークロードファクトリーにサインアップ</block>
+  <block id="a77641000b55773f3d4f4abfc8eaa6ac" category="sidebar">Workload Factoryでワークロードを最適化</block>
+  <block id="bec1e3daee54f5a9410751eb03bd867e" category="sidebar">ワークロードファクトリーの管理</block>
+  <block id="7ffef60a0bb1e63a8505f9e4285dab5f" category="sidebar">ワークロードファクトリーにログイン</block>
 </blocks>

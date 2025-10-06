@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: console-experiences.html 
-keywords: console, consoles, access, saas, workload factory, bluexp, bluexp workload factory 
-summary: BlueXP  ワークロードファクトリには、2つのWebベースのコンソールからアクセスできます。 
+keywords: console, consoles, access, saas, Workload Factory, bluexp, NetApp Workload Factory, NetApp Console 
+summary: NetApp Workload Factory には、2 つの Web ベースのコンソールからアクセスできます。 
 ---
 = コンソールエクスペリエンス
 :allow-uri-read: 
@@ -11,34 +11,29 @@ summary: BlueXP  ワークロードファクトリには、2つのWebベース�
 
 
 [role="lead"]
-BlueXP  ワークロードファクトリには、2つのWebベースのコンソールからアクセスできます。BlueXP  Workload FactoryコンソールとBlueXP  コンソールを使用してBlueXP  Workload Factoryにアクセスする方法について説明します。
+NetApp Workload Factory には、2 つの Web ベースのコンソールからアクセスできます。  Workload Factory コンソールとNetAppコンソールを使用して Workload Factory にアクセスする方法を学習します。
 
-2つのコンソールを使用して、BlueXP  ワークロードファクトリにアクセスできます。
-
-* * BlueXP  コンソール*：作業環境とワークロードを同じ場所で管理できるハイブリッド環境を提供します。
-* *ワークロードファクトリーコンソール*：Amazon FSx for NetApp ONTAPで実行されるワークロードに焦点を当てた、ワークロードファクトリー専用のエクスペリエンスを提供します。
+* * NetAppコンソール*: FSx for ONTAPファイルシステムとAmazon FSx for NetApp ONTAPで実行されているワークロードを同じ場所で管理できるハイブリッドエクスペリエンスを提供します。
+* *Workload Factory コンソール*: Amazon FSx for NetApp ONTAPで実行されるワークロードに重点を置いた専用の Workload Factory エクスペリエンスを提供します。
 
 
 
 
-== BlueXP  コンソールからワークロードファクトリにアクセス
+== NetAppコンソールでワークロードファクトリーにアクセスする
 
-ワークロードファクトリにはBlueXP  からアクセスできます。AWS ストレージおよびワークロード機能に BlueXP Workload Factory を使用するだけでなく、コピーと同期、デジタル ウォレットなどの他の BlueXP プラットフォーム サービスにもアクセスすることができます。
+NetAppコンソールから Workload Factory にアクセスできます。  AWS ストレージおよびワークロード機能に Workload Factory を使用するだけでなく、 NetApp Copy and Sync、 NetApp Digital Wallet などの他のデータ サービスにもアクセスすることができます。
 
 .手順
-. にログインし link:https://console.bluexp.netapp.com["BlueXPコンソール"^]ます。
-. 左側のナビゲーションから*[ワークロード]*を選択します。
-. [ホーム]*を選択してすべてのワークロードを表示するか、*[ストレージ]*や*[データベース]*などのワークロードを1つ選択します。
-. ワークロードを開始するオプションを選択します。
+. ログインlink:https://console.netapp.com["NetAppコンソール"^]。
+. NetAppコンソール メニューから、*ワークロード* を選択し、次に *概要* を選択します。
 
 
 
 
-== Workload Factoryコンソールでワークロードファクトリにアクセス
+== Workload FactoryコンソールでWorkload Factoryにアクセスします
 
-Workload FactoryコンソールからWorkload Factoryにアクセスできます。
+Workload Factory コンソールから Workload Factory にアクセスできます。
 
-.手順
-. にログインし link:https://console.workloads.netapp.com["ワークロードファクトリコンソール"^]ます。
-. 使用するワークロードに移動し、作業を開始するオプションを選択します。
+.ステップ
+. ログインlink:https://console.workloads.netapp.com["ワークロードファクトリーコンソール"^]。
 

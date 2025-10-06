@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: codebox-automation.html 
 keywords: codebox, automation 
-summary: Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。 
+summary: 'Codebox は、開発者と DevOps がNetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。' 
 ---
 = コードボックス自動化の詳細
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Codeboxは、Infrastructure as Code（IAC）の共同パイロットで
 
 
 [role="lead"]
-Codeboxは、Infrastructure as Code（IAC）の共同パイロットであり、開発者とDevOpsがワークロードファクトリでサポートされているすべての処理を実行するために必要なコードを生成するのに役立ちます。Codebox は、ワークロード ファクトリーの動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) に合わせて調整されており、実行準備のための明確なパスを設定するとともに、将来の迅速な再利用のための自動化カタログを提供します。
+Codebox は、開発者と DevOps がNetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。  Codebox は、Workload Factory の動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) と連携しており、実行準備のための明確なパスを設定するとともに、将来の迅速な再利用のための自動化カタログを提供します。
 
 
 
@@ -23,7 +23,7 @@ Codeboxには、次の2つの主要なIAC機能があります。
 * _Codebox Automation Catalog_保存されているすべてのIACジョブを表示し、将来の使用に備えて簡単に参照できるようにします。自動カタログジョブはテンプレートとして保存され、適用されるリソースのコンテキストで表示されます。
 
 
-さらに、ワークロードファクトリクレデンシャルを設定する場合、CodeboxはIAMポリシーの作成に必要なAWS権限を動的に表示します。権限は、使用する予定のワークロード ファクトリ機能 (データベース、AI、FSx for ONTAP など) ごとに提供され、ポリシーのユーザーが _読み取り専用_ 権限を取得するか、完全な _読み取り/書き込み_ 権限を取得するかに基づいてカスタマイズされます。Codeboxから権限をコピーしてAWS管理コンソールに貼り付けるだけで、ワークロードファクトリにワークロードを管理するための適切な権限が付与されます。
+さらに、Workload Factory の認証情報を設定すると、Codebox は IAM ポリシーの作成に必要な AWS 権限を動的に表示します。権限は、使用する予定の Workload Factory 機能 (データベース、AI、FSx for ONTAPなど) ごとに提供され、ポリシーのユーザーが _読み取り専用_ 権限を取得するか、完全な _読み取り/書き込み_ 権限を取得するかに基づいてカスタマイズされます。  Codebox から権限をコピーし、AWS マネジメントコンソールに貼り付けるだけで、Workload Factory にワークロードを管理するための適切な権限が付与されます。
 
 
 
@@ -31,9 +31,15 @@ Codeboxには、次の2つの主要なIAC機能があります。
 
 サポートされているコード形式は次のとおりです。
 
-* ワークロードファクトリREST API
+* ワークロードファクトリー REST API
 * AWS CLI
 * AWS CloudFormation
 
 
+
+
+== 関連情報
+
 link:use-codebox.html["Codeboxの使用方法"]です。
+
+link:https://console.workloads.netapp.com/api-doc["ワークロードファクトリー REST API ドキュメント"^] 。

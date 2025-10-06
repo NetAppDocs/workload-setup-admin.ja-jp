@@ -1,23 +1,23 @@
 ---
 sidebar: sidebar 
 permalink: use-cloudshell.html 
-keywords: cloudshell, command line, aws cli, ontap cli, bluexp workload factory, workload factory 
-summary: BlueXP  ワークロードファクトリのユーザインターフェイスのどこからでもCloudShellを使用して、AWSまたはONTAPのCLIコマンドを発行できます。 
+keywords: cloudshell, command line, aws cli, ontap cli, NetApp Workload Factory, Workload Factory 
+summary: NetApp Workload Factory ユーザー インターフェイスのどこからでも CloudShell を使用して、AWS またはONTAP CLI コマンドを発行できます。 
 ---
-= BlueXP  ワークロードファクトリでCloudShellを使用
+= NetApp Workload Factory で CloudShell を使用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-CloudShellを開き、BlueXP  ワークロードファクトリのユーザインターフェイスの任意の場所からAWSまたはONTAP CLIコマンドを実行します。
+CloudShell を開いて、 NetApp Workload Factory コンソールのどこからでも AWS またはONTAP CLI コマンドを実行します。
 
 
 
 == タスクの内容
 
-CloudShellを使用すると、BlueXP  ワークロードファクトリのユーザインターフェイス内から、シェルのような環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。ブラウザで端末セッションをシミュレートし、端末機能を提供し、ワークロードファクトリのバックエンドを介してメッセージをプロキシします。BlueXP  アカウントで指定したAWSクレデンシャルとONTAPクレデンシャルを使用できます。
+CloudShell を使用すると、Workload Factory コンソール内からシェルのような環境で AWS CLI コマンドまたはONTAP CLI コマンドを実行できます。ブラウザでターミナル セッションをシミュレートし、ターミナル機能を提供し、Workload Factory のバックエンドを通じてメッセージをプロキシします。これにより、 NetAppアカウントで提供した AWS 認証情報とONTAP認証情報を使用できるようになります。
 
 CloudShellには次の機能があります。
 
@@ -32,53 +32,42 @@ CloudShellには次の機能があります。
 
 
 
-=== CloudShellコマンド
+== CloudShellコマンド
 
 CloudShell GUIインターフェイス内で、と入力して使用可能なCloudShellコマンドを表示できます `help`。コマンドを実行すると `help`、次のリファレンスが表示されます。
 
-製品説明:: NetApp CloudShellは、BlueXP  ワークロードファクトリに組み込まれたGUIインターフェイスであり、シェルのような環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。ブラウザでターミナルセッションをシミュレートし、ターミナル機能を提供し、ワークロードファクトリのバックエンドを介してメッセージをプロキシします。これにより、BlueXP  アカウントで指定したAWSクレデンシャルとONTAPクレデンシャルを使用できます。
-使用可能なコマンド::
-+
---
+.製品説明
+NetApp CloudShell は、 NetApp Workload Factory に組み込まれた GUI インターフェイスであり、シェルのような環境で AWS CLI コマンドまたはONTAP CLI コマンドを実行できます。ブラウザでターミナル セッションをシミュレートし、ターミナル機能を提供し、Workload Factory のバックエンドを通じてメッセージをプロキシします。これにより、 NetAppアカウントで提供した AWS 認証情報とONTAP認証情報を使用できるようになります。
+
+.使用可能なコマンド
 * `clear`
 * `help`
 * `[--fsx <fsxId>] <ontap-command> [parameters]`
 * `aws <aws-command> <aws-sub-command> [parameters]`
 
 
---
-コンテキスト:: 各ターミナルセッションは、クレデンシャル、リージョン、およびオプションでFSx for ONTAPファイルシステムという特定のコンテキストで実行されます。
-+
---
-すべてのAWSコマンドは、指定されたコンテキストで実行されます。AWSコマンドは、指定したクレデンシャルに指定したリージョンの権限がある場合にのみ成功します。
+.コンテキスト
+各ターミナルセッションは、クレデンシャル、リージョン、およびオプションでFSx for ONTAPファイルシステムという特定のコンテキストで実行されます。
 
-オプションでONTAPコマンドを指定できます `fsxId`。に個別のONTAPコマンドを指定した場合、 `fsxId`このIDはコンテキスト内のIDよりも優先されます。ターミナルセッションにFSx for ONTAPファイルシステムIDコンテキストがない場合は、各ONTAPコマンドを指定する必要があります `fsxId`。
++ すべての AWS コマンドは、提供されたコンテキストで実行されます。  AWS コマンドは、提供された認証情報に指定されたリージョンでの権限がある場合にのみ成功します。
 
-異なるコンテキストの仕様を更新するには、次の手順を実行します。*クレデンシャルを変更するには："クレデンシャルの使用<credentialId>"*リージョンを変更するには："リージョン<regionCode>の使用"* FSx for ONTAPファイルシステムを変更するには：" FSx <fileSystemId>の使用"
++ ONTAPコマンドをオプションで指定できます `fsxId`。あなたが `fsxId`個別のONTAPコマンドを使用する場合、この ID はコンテキスト内の ID をオーバーライドします。ターミナルセッションにFSx for ONTAPファイルシステムIDコンテキストがない場合は、以下を提供する必要があります。 `fsxId`各ONTAPコマンドとともに。
 
---
-アイテムの表示::
-+
---
++ 異なるコンテキストの詳細を更新するには、次の操作を行います。 * 資格情報を変更するには：「using credentials <credentialId>」 * リージョンを変更するには：「using region <regionCode>」 * ONTAPファイルシステムの FSx を変更するには：「using fsx <fileSystemId>」
+
+.アイテムの表示
 * 使用可能な認証情報を表示するには："show credentials"
 * 利用可能な地域を表示するには:"show regions"
 * コマンド履歴を表示するには："show history"
 
 
---
-変数:: 変数の設定と使用例を次に示します。変数の値にスペースが含まれている場合は、引用符で囲んで設定してください。
-+
---
-* 変数を設定するには：<variable>=<value>
-* 変数を使用するには:<variable>
-* 変数の設定例：$svm1=svm123
-* 変数を使用する例：--fsx filesystem-1 volumes show --vserver $svm1
-* 例：文字列値$Comment1 ="A comment with spaces"
+.変数
+変数の設定と使用例を次に示します。変数の値にスペースが含まれている場合は、引用符で囲んで設定してください。
 
++ * 変数を設定するには: $<variable> = <value> * 変数を使用するには: $<variable> * 変数を設定する例: $svm1 = svm123 * 変数を使用する例: --fsx FileSystem-1 volumes show --vserver $svm1 * 文字列値で変数を設定する例 $comment1 = "スペースを含むコメント"
 
---
-運用者:: パイプ、バックグラウンド実行 `&`、リダイレクト `>`などのシェル演算子は `|`サポートされていません。これらの演算子を含めると、コマンドの実行は失敗します。
-
+.運用者
+パイプ、バックグラウンド実行 `&`、リダイレクト `>`などのシェル演算子は `|`サポートされていません。これらの演算子を含めると、コマンドの実行は失敗します。
 
 
 
@@ -93,15 +82,15 @@ NOTE: CloudShellを使用すると、AWSまたはONTAPの任意のCLIコマン�
 
 == CloudShellを導入する
 
-BlueXP  ワークロードファクトリコンソールのどこからでもCloudShellを導入できます。FSx for ONTAPファイルシステム内からストレージからCloudShellを導入することもできます。
+CloudShell は、 NetApp Workload Factory コンソールのどこからでもデプロイできます。  NetAppコンソールから CloudShell をデプロイすることもできます。
 
 [role="tabbed-block"]
 ====
-.ワークロードファクトリコンソールから導入
+.Workload Factory コンソールからデプロイする
 --
 .手順
-. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. 上部ナビゲーションバーからCloudShellを開きimage:cloudshell-icon.png["クラウドシェルアイコンのスクリーンショット"]ます。
+. ログイン https://console.workloads.netapp.com["ワークロードファクトリーコンソール"^]。
+. メニューから、[管理]、[CloudShell] の順に選択します。
 . [CloudShell]ウィンドウで、CloudShellセッションのクレデンシャルとリージョンを選択し、矢印を選択して続行します。
 +
 image:screenshot-deploy-cloudshell-session.png["新しいCloudShellセッションを示すスクリーンショット。"]
@@ -119,14 +108,15 @@ ONTAP CLIコマンドの実行後にエラーが発生した場合は、電球�
 
 
 --
-.ストレージからの導入
+.NetAppコンソールから導入
 --
 .手順
-. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
-. [ストレージ]*で、*[ストレージインベントリに移動]*を選択します。
-. FSx for ONTAP *タブで、ファイルシステムの3ドットメニューを選択し、*[Open CloudShell]*を選択します。
+. ログインlink:https://console.netapp.com["NetAppコンソール"^]。
+. メニューから、*ワークロード*を選択し、次に*管理*を選択します。
+. 管理メニューから*CloudShell*を選択します。
+. [CloudShell]ウィンドウで、CloudShellセッションのクレデンシャルとリージョンを選択し、矢印を選択して続行します。
 +
-選択したファイルシステムのコンテキストでCloudShellセッションが開きます。
+image:screenshot-deploy-cloudshell-session.png["新しいCloudShellセッションを示すスクリーンショット。"]
 
 . と入力し `help`て使用可能なCloudShellコマンドとその手順を表示するか、使用可能なコマンドについては次のCLIリファレンスドキュメントを参照してください。
 +
@@ -142,9 +132,9 @@ ONTAP CLIコマンドの実行後にエラーが発生した場合は、電球�
 
 --
 ====
-このスクリーンショットに示されているCloudShellタスクは、開いているCloudShellセッションタブの3ドットメニューを選択することで完了できます。これらの各タスクの手順は次のとおりです。
+このスクリーンショットに表示されている CloudShell タスクは、開いている CloudShell セッション タブのアクション メニューを選択することで完了できます。各タスクの手順は次のとおりです。
 
-image:screenshot-cloudshell-tab-menu.png["CloudShellタブの3ドットメニューを示すスクリーンショット。名前の変更、複製、他のタブの閉じ、すべて閉じるなどのオプションが表示されます。"]
+image:screenshot-cloudshell-tab-menu.png["名前の変更、複製、他のタブを閉じる、すべて閉じるなどのオプションを含む CloudShell タブのアクション メニューを示すスクリーンショット。"]
 
 
 
@@ -153,7 +143,7 @@ image:screenshot-cloudshell-tab-menu.png["CloudShellタブの3ドットメニュ
 CloudShellセッションタブの名前を変更して、セッションを識別しやすくすることができます。
 
 .手順
-. CloudShellセッションタブの3ドットメニューを選択します。
+. CloudShell セッション タブのアクション メニューを選択します。
 . [ 名前の変更 *] を選択します。
 . セッションタブの新しい名前を入力し、タブ名の外側をクリックして新しい名前を設定します。
 
@@ -168,7 +158,7 @@ CloudShellセッションタブに新しい名前が表示されます。
 CloudShellセッションタブを複製して、同じ名前、クレデンシャル、およびリージョンを持つ新しいセッションを作成できます。元のタブのコードは、複製されたタブでは複製されません。
 
 .手順
-. CloudShellセッションタブの3ドットメニューを選択します。
+. CloudShell セッション タブのアクション メニューを選択します。
 . [複製]*を選択します。
 
 
@@ -182,7 +172,7 @@ CloudShellセッションタブを複製して、同じ名前、クレデンシ�
 CloudShellタブを一度に1つずつ閉じたり、作業していない他のタブを閉じたり、すべてのタブを一度に閉じることができます。
 
 .手順
-. CloudShellセッションタブの3ドットメニューを選択します。
+. CloudShell セッション タブのアクション メニューを選択します。
 . 次のいずれかを選択します。
 +
 ** [CloudShell]タブウィンドウで[X]を選択して、一度に1つのタブを閉じます。
@@ -205,18 +195,6 @@ CloudShellセッションのタブを分割して、複数のタブを同時に�
 CloudShellウィンドウの上部、下部、左、または右にCloudShellセッションタブをドラッグアンドドロップして、ビューを分割します。
 
 image:screenshot-cloudshell-split-view.png["2つのCloudShellタブが水平に分割されているスクリーンショット。タブが並べて表示されます。"]
-
-
-
-== 最後のCloudShellセッションを再度開く
-
-誤ってCloudShellセッションを閉じた場合は、再度開くことができます。
-
-.ステップ
-から[CloudShell]アイコンを選択しimage:cloudshell-icon.png["クラウドシェルアイコンのスクリーンショット"]上部ナビゲーションバーます。
-
-.結果
-最新のCloudShellセッションが開きます。
 
 
 

@@ -2,16 +2,44 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: クラウドプロバイダの資格情報、Codeboxの機能拡張など、ワークロードファクトリ管理機能の新機能について説明します。 
+summary: Workload Factory 管理機能の新機能（クラウド プロバイダーの資格情報、Codebox の機能強化など）について説明します。 
 ---
-= BlueXP  ワークロード工場管理機能の新機能
+= NetApp Workload Factory 管理機能の新機能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-クラウドプロバイダの資格情報、Codeboxの機能拡張など、ワークロードファクトリ管理機能の新機能について説明します。
+Workload Factory 管理機能の新機能（クラウド プロバイダーの資格情報、Codebox の機能強化など）について説明します。
+
+
+
+== 2025年10月6日
+
+
+
+=== BlueXP workload factoryがNetAppワークロードファクトリーに
+
+BlueXP は、データ インフラストラクチャの管理における役割をより適切に反映するために、名前が変更され、再設計されました。その結果、 BlueXP workload factoryの名前がNetAppワークロード ファクトリーに変更されました。
+
+
+
+=== MCP との Ask Me 統合
+
+Workload Factory の AI アシスタントである Ask Me は、Model Context Protocol (MCP) と統合されています。  MCP を使用することで、Ask Me は外部環境と安全にインターフェイスし、API ツールにクエリを実行して、特定のストレージ環境に合わせた応答を提供します。
+
+
+
+== 2025年10月5日
+
+
+
+=== ストレージの新しい通知
+
+NetApp Workload Factory 通知サービスには、ストレージの Well-Architected の問題に関する通知が含まれています。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory の通知"]
 
 
 

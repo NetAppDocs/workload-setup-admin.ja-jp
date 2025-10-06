@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: whats-next.html 
 keywords: what you can do 
-summary: ログインしてワークロード ファクトリーを設定すると、FSx for ONTAPファイル システムを作成および管理したり、その他のワークロード ファクトリー機能を使用したりできます。 
+summary: ログインしてNetApp Workload Factory を設定すると、FSx for ONTAPファイルシステムを作成および管理し、その他の Workload Factory 機能を使用できるようになります。 
 ---
-= ワークロードファクトリーでワークロードを最適化
+= NetApp Workload Factoryでワークロードを最適化
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-ログインしてワークロードファクトリーをセットアップしたら、 Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAP ファイルシステムへのデータベースのデプロイ、FSx for ONTAPファイルシステムを外部データストアとして使用して仮想マシン構成を VMware Cloud on AWS に移行するなど、ONTAPファクトリーのさまざまな機能を使い始めることができます。
+ログインしてNetApp Workload Factory をセットアップしたら、 Amazon FSx for ONTAPファイルシステムの作成、FSx for ONTAP ファイルシステムへのデータベースのデプロイ、FSx for ONTAPファイルシステムを外部データストアとして使用して仮想マシン構成を VMware Cloud on AWS に移行するなど、いくつかのONTAP Factory 機能を使い始めることができます。
 
 * https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["NetApp ONTAP 対応の Amazon FSX"^]
 +

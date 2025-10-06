@@ -2,29 +2,29 @@
 sidebar: sidebar 
 permalink: configure-notifications.html 
 keywords: amazon, sns, notification, topic, notifications, notifications service, alerts 
-summary: 特定の種類のイベントが発生したときに、ユーザーまたは別のアプリケーションに通知を送信するように BlueXP ワークロード ファクトリーを構成できます。 
+summary: 特定の種類のイベントが発生したときに、ユーザーまたは別のアプリケーションに通知を送信するようにNetApp Workload Factory を構成できます。 
 ---
-= BlueXPワークロードファクトリー通知を構成する
+= NetApp Workload Factory 通知を構成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP ワークロードファクトリー通知サービスを設定して、BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。
+NetApp Workload Factory 通知サービスを設定して、 NetAppコンソールまたは Amazon SNS トピックにアラートとして通知を送信できます。コンソール エージェントまたはリンクが展開されている場合、アラートとして送信された通知はNetAppコンソールに表示されます。  Workload Factory が Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー (ユーザーや他のアプリケーションなど) は、トピックに設定されたエンドポイント (電子メールや SMS メッセージなど) で通知を受信します。
 
 
 
 == 通知の種類とメッセージ
 
-ワークロード ファクトリーは、次のイベントの通知を送信します。
+Workload Factory は次のイベントの通知を送信します。
 
 [cols="6*"]
 |===
 | イベント | 製品説明 | 通知のタイプ | 重大度 | ワークロード | リソースタイプ 
 
 
-| アカウント内の一部のデータベースインスタンスは適切に設計されていません | アカウント内のすべてのMicrosoft SQL Serverインスタンスについて、Well-Architectedの問題が分析されました。このイベントの説明には、Well-Architectedインスタンスと最適化されていないインスタンスの数が表示されます。ワークロードファクトリーコンソールのデータベースインベントリで、Well-Architectedステータスの調査結果と推奨事項を確認してください。 | 優れた設計 | 推奨事項 | データベース | Microsoft SQL Serverインスタンス 
+| アカウント内の一部のデータベースインスタンスは適切に設計されていません | アカウント内のすべての Microsoft SQL Server インスタンスは、well-architected の問題について分析されています。このイベントの説明には、適切に設計されたインスタンスと最適化されていないインスタンスの数が表示されます。  Workload Factory コンソールから、データベース インベントリ内の well-architected ステータスの調査結果と推奨事項を確認します。 | 優れた設計 | 推奨事項 | データベース | Microsoft SQL Serverインスタンス 
 
 
 | Microsoft SQL Server/PostgreSQL サーバーの展開に成功しました | Microsoft SQL Server または PostgreSQL ホストのデプロイに成功しました。詳細については、ジョブ監視を参照してください。 | 導入 | 成功 | データベース | FSx for ONTAP、DBホスト 
@@ -37,54 +37,57 @@ BlueXP ワークロードファクトリー通知サービスを設定して、B
 
 
 | FSx for ONTAP の作成失敗 | FSx for ONTAPファイル システムの作成プロセスが失敗しました。詳細については、Tracker をご覧ください。 | FSx for ONTAPファイルシステムアクション | 致命的 | 一般的な保管 | ONTAP向け FSx 
+
+
+| FSx for ONTAP の問題が検出されました | すべての FSx for ONTAPファイル システムについて、well-architected の問題について分析されています。スキャンにより 1 つ以上の問題が検出されました。詳細については、Workload Factory コンソールのストレージ ダッシュボードの well-architected 分析を確認してください。 | 適切に設計された分析 | 推奨事項 | 一般的な保管 | ONTAPファイルシステム用の FSx 
 |===
 
 
-== ワークロードファクトリー通知を構成する
+== ワークロードファクトリーの通知を構成する
 
-BlueXPコンソールまたはワークロードファクトリーコンソールを使用して、ワークロードファクトリーの通知を設定します。BlueXPコンソールを使用する場合は、BlueXPアラートまたはAmazon SNSトピックに通知を送信するようにワークロードファクトリーを設定できます。BlueXPアラートは、BlueXPの*アラートと通知設定*領域から設定できます。
+NetAppコンソールまたは Workload Factory コンソールを使用して、Workload Factory 通知を構成します。  NetAppコンソールを使用する場合は、 NetAppコンソールまたは Amazon SNS トピックにアラートとして通知を送信するように Workload Factory を設定できます。  NetAppコンソールの *通知設定* から通知を設定できます。
 
 .開始する前に
 * Amazon SNS コンソールまたは AWS CLI を使用して、Amazon SNS を設定し、Amazon SNS トピックを作成する必要があります。
-* ワークロードファクトリーは*標準*トピックタイプをサポートしています。このタイプのトピックでは、通知が受信順にサブスクライバーに送信されるとは限りません。そのため、重要な通知や緊急の通知がある場合は、このタイプを検討してください。
+* Workload Factory は *Standard* トピック タイプをサポートしていることに注意してください。このタイプのトピックでは、通知が受信順にサブスクライバーに送信されるとは限りません。そのため、重要な通知や緊急の通知がある場合は、この点を考慮してください。
 
 
 [role="tabbed-block"]
 ====
-.BlueXPコンソールから通知を設定する
+.NetAppコンソールからの通知を構成する
 --
 .手順
-. にログインし link:https://console.bluexp.netapp.com["BlueXPコンソール"^]ます。
-. 左側のナビゲーションから*[ワークロード]*を選択します。
-. [ホーム]*を選択してすべてのワークロードを表示するか、*[ストレージ]*や*[データベース]*などのワークロードを1つ選択します。
-. ワークロード ファクトリーのメニュー バーから、構成メニューを選択します。
-. メニューで、*Workload Factory 通知設定*を選択します。
-. オプション: *BlueXP 通知を有効にする* を選択して、ワークロード ファクトリーが BlueXP アラートに通知を送信するように構成します。
-. *SNS通知を有効にする*を選択します。
-. Amazon SNS コンソールから Amazon SNS を設定するには、指示に従います。
+. ログインlink:https://console.netapp.com["NetAppコンソール"^]。
+. NetAppコンソール メニューから、*ワークロード*、*管理*、*通知設定*の順に選択します。
+. 通知設定ページで、次の操作を行います。
 +
-トピックを作成したら、トピック ARN をコピーして、*通知設定*ダイアログの*SNS トピック ARN* フィールドに入力します。
+.. オプション: NetAppコンソールで通知を送信するように Workload Factory を構成するには、* NetAppコンソール通知を有効にする* を選択します。
+.. *SNS通知を有効にする*を選択します。
+.. Amazon SNS コンソールから Amazon SNS を設定するには、指示に従います。
++
+トピックを作成したら、トピック ARN をコピーして、*通知設定*ページの *SNS トピック ARN* フィールドに入力します。
+
+
 
 . テスト通知を送信して構成を確認した後、[適用] を選択します。
 
 
 .結果
-ワークロードファクトリーは、指定した Amazon SNS トピックに通知を送信するように設定されています。
+Workload Factory は、指定した Amazon SNS トピックに通知を送信するように設定されています。
 
 --
-.ワークロードファクトリーコンソールから通知を構成する
+.Workload Factory コンソールから通知を構成する
 --
 .手順
-. にログインし link:https://console.workloads.netapp.com["ワークロードファクトリコンソール"^]ます。
-. 上部のナビゲーション バーからアカウント メニューを開きます。
-. メニューで*通知設定*を選択します。
+. ログインlink:https://console.workloads.netapp.com["ワークロードファクトリーコンソール"^]。
+. Workload Factory コンソール メニューから、*ワークロード*、*管理*、*通知設定*の順に選択します。
 . *SNS通知を有効にする*を選択します。
 . Amazon SNS コンソールから Amazon SNS を設定するには、指示に従います。
 . テスト通知を送信して構成を確認した後、[適用] を選択します。
 
 
 .結果
-ワークロードファクトリーは、指定した Amazon SNS トピックに通知を送信するように設定されています。
+Workload Factory は、指定した Amazon SNS トピックに通知を送信するように設定されています。
 
 --
 ====
@@ -92,13 +95,13 @@ BlueXPコンソールまたはワークロードファクトリーコンソー�
 
 == Amazon SNSトピックを購読する
 
-トピックに通知を送信するようにワークロードファクトリーを構成したら、  https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html["説明書"] Amazon SNS ドキュメントの手順に従ってトピックをサブスクライブし、ワークロードファクトリーから通知を受信できるようにします。
+トピックに通知を送信するようにWorkload Factoryを設定したら、 https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html["説明書"] Amazon SNS ドキュメントの手順に従ってトピックをサブスクライブし、Workload Factory から通知を受信できるようにします。
 
 
 
 == 通知をフィルタリングします
 
-通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに特定の通知タイプを絞り込むことができます。これは、SNS通知にはAmazon SNSポリシーを使用し、BlueXP通知にはBlueXP通知設定を使用することで実現できます。
+通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに対して特定の通知タイプをターゲットにすることができます。これは、SNS 通知用の Amazon SNS ポリシーと、 NetAppコンソールの通知設定を使用して実行できます。
 
 
 
@@ -180,8 +183,8 @@ Amazon SNS 通知は、次の基準でフィルタリングできます。
 
 
 
-=== BlueXP通知をフィルタリングする
+=== NetAppコンソールで通知をフィルタリングする
 
-BlueXP のアラートおよび通知設定を使用すると、BlueXP で受信するアラートと通知を重大度レベル (重大、情報、警告など) でフィルタリングできます。
+NetAppコンソールの通知設定を使用すると、コンソールで受信する通知を重大度レベル (重大、情報、警告など) でフィルタリングできます。
 
-BlueXPでの通知フィルタリングの詳細については、  https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#filter-notifications["BlueXPのマニュアル"^] 。
+コンソールでの通知のフィルタリングの詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#filter-notifications["NetAppコンソールのドキュメント"^] 。

@@ -22,7 +22,7 @@ sidebar:
     entries:
     - title: 基本事項をご確認ください
       entries:
-      - title: BlueXP  ワークロードファクトリの詳細
+      - title: NetAppワークロードファクトリーについて学ぶ
         url: "/workload-factory-overview.html"
       - title: 動作モード
         url: "/operational-modes.html"
@@ -32,15 +32,15 @@ sidebar:
         url: "/permissions-reference.html"
     - title: クイックスタート
       url: "/quick-start.html"
-    - title: Workload Factoryへの登録
+    - title: ワークロードファクトリーにサインアップ
       url: "/sign-up-saas.html"
     - title: AWSクレデンシャルを追加
       url: "/add-credentials.html"
-    - title: ワークロードファクトリーでワークロードを最適化
+    - title: Workload Factoryでワークロードを最適化
       url: "/whats-next.html"
-  - title: ワークロードファクトリの管理
+  - title: ワークロードファクトリーの管理
     entries:
-    - title: ワークロードファクトリへのログイン
+    - title: ワークロードファクトリーにログイン
       url: "/log-in.html"
     - title: サービスアカウントの管理
       url: "/manage-service-accounts.html"
@@ -65,5 +65,5 @@ sidebar:
   - title: 法的通知
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP workload factory
+  name: NetApp Workload Factory
   repo: workload-family

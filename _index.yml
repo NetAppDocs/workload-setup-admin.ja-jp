@@ -1,16 +1,18 @@
 ---
 indexpage:
-  title: BlueXP  ワークロードの工場出荷時のセットアップと管理に関するドキュメント
-  summary: Amazon FSx for NetApp ONTAPを使用して、ワークロードを最大限に活用できるように、BlueXP  ワークロードファクトリーの利用を開始しましょう。セットアップが完了したら、ワークロードに適したFSx
-    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム全体の自動化、ワークロードファクトリでのワークロードの管理を行うことができます。
-  keywords: workload factory, fsx, account, credentials, users, permissions, log in,
+  title: NetAppワークロード ファクトリーのセットアップおよび管理ドキュメント
+  summary: NetApp Workload Factory を使い始めると、 Amazon FSx for NetApp ONTAPを使用する際にワークロードを最大限に活用できるようになります。セットアップが完了したら、ワークロード用に
+    FSx for ONTAPファイルシステムを作成、最適化、管理し、FSx for ONTAPによるコスト削減を検討し、プラットフォーム間の自動化のために組み込みの
+    Infrastructure-as-Code コパイロットを使用し、Workload Factory でワークロードを管理できます。
+  keywords: Workload Factory, fsx, account, credentials, users, permissions, log in,
     calculator, codebox
-  lead: Amazon FSx for NetApp ONTAPを使用して、ワークロードを最大限に活用できるように、BlueXP  ワークロードファクトリーの利用を開始しましょう。セットアップが完了したら、ワークロードに適したFSx
-    for ONTAPファイルシステムの作成、最適化、管理、FSx for ONTAPによるコスト削減の検討、組み込みのInfrastructure as Code（コードとしてのインフラ）コパイロットによるプラットフォーム全体の自動化、ワークロードファクトリでのワークロードの管理を行うことができます。
+  lead: NetApp Workload Factory を使い始めると、 Amazon FSx for NetApp ONTAPを使用する際にワークロードを最大限に活用できるようになります。セットアップが完了したら、ワークロード用に
+    FSx for ONTAPファイルシステムを作成、最適化、管理し、FSx for ONTAPによるコスト削減を検討し、プラットフォーム間の自動化のために組み込みの
+    Infrastructure-as-Code コパイロットを使用し、Workload Factory でワークロードを管理できます。
   tiles:
   - title: はじめに
     links:
-    - title: BlueXP  ワークロードファクトリの詳細
+    - title: NetAppワークロードファクトリーについて学ぶ
       url: workload-factory-overview.html
     - title: サインアップ
       url: sign-up-saas.html
@@ -30,9 +32,9 @@ indexpage:
       url: use-codebox.html
   - title: ブログとコミュニティ
     links:
+    - title: NetAppコンソール
+      url: https://www.netapp.com/console
+    - title: NetAppデータサービス
+      url: https://www.netapp.com/data-services/
     - title: NetAppコミュニティ
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: BlueXPのブログ
-      url: https://bluexp.netapp.com/blog
-    - title: クラウドに関する Web セミナー
-      url: https://bluexp.netapp.com/events
+      url: https://community.netapp.com/

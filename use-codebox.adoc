@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: use-codebox.html 
 keywords: codebox, automation, cloudformation, rest api, aws cli, permissions 
-summary: Codeboxを使用して、BlueXP  ワークロードファクトリでサポートされている操作を実行するために必要なコードを生成できます。 
+summary: Codebox を使用すると、 NetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成できます。 
 ---
-= BlueXP  ワークロードファクトリでの自動化にCodeboxを使用
+= NetApp Workload Factory の自動化に Codebox を使用する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Codeboxを使用して、BlueXP  ワークロードファクトリでサポートされている操作を実行するために必要なコードを生成できます。ワークロードファクトリREST API、AWS CLI、およびAWS CloudFormationを使用して、使用および実行可能なコードを生成できます。
+Codebox を使用すると、 NetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成できます。  Workload Factory REST API、AWS CLI、AWS CloudFormation を使用して使用および実行できるコードを生成できます。
 
-Codebox は、各ユーザーのワークロードファクトリーアカウントに提供された AWS 権限に基づいてコードに適切なデータを入力することで、ワークロードファクトリーの操作モード (_基本_、_読み取り専用_、および _読み取り/書き込み_) と連携します。コードは、コードを実行する前に不足している情報(資格情報など)を入力したり、特定のデータをカスタマイズしたりできるテンプレートのように使用できます。
+Codebox は、各ユーザーの Workload Factory アカウントに提供されている AWS 権限に基づいてコードに適切なデータを入力することで、Workload Factory の操作モード (_基本_、_読み取り専用_、および _読み取り/書き込み_) と連携します。コードはテンプレートのように使用でき、不足している情報 (資格情報など) を入力したり、コードを実行する前に特定のデータをカスタマイズしたりできます。
 
 
 
 == Codeboxの使用方法
 
-Workload Factory UIウィザードで値を入力すると、各フィールドに入力すると、[コードボックス]にデータの更新が表示されます。ウィザードを完了したら、ページ下部の*作成*ボタンを選択する前に、[コードボックスにコピー]を選択して、 image:button-copy-codebox.png["コピーボタン"] 構成の構築に必要なコードを取得します。たとえば、新しいMicrosoft SQL Serverを作成した場合のスクリーンショットには、VPCゾーンとアベイラビリティゾーンのウィザードエントリと、REST API実装のCodeboxの同等のエントリが示されています。
+Workload Factory UI ウィザードに値を入力すると、各フィールドの入力が完了すると Codebox でデータの更新を確認できます。ウィザードを完了した後、ページの下部にある*作成*ボタンを選択する前に、image:button-copy-codebox.png["コピーボタン"]構成を構築するために必要なコードをキャプチャするために、Codebox にコピーします。たとえば、新しい Microsoft SQL Server を作成するときのこのスクリーンショットには、VPC とアベイラビリティーゾーンのウィザード エントリと、REST API 実装の Codebox 内の同等のエントリが表示されています。
 
 image:screenshot-codebox-example1.png["UIでMicrosoft SQL Serverを作成する方法、およびCodeboxのVPCゾーンとアベイラビリティゾーンに対応するエントリを示すスクリーンショット。"]
 
-一部のコードフォーマットでは、[ダウンロード]ボタンを選択して、別のシステムに持ち込むことができるファイルにコードを保存することもできます。必要に応じて、ダウンロード後にコードを編集して、他のAWSアカウントに適応させることができます。
+一部のコード形式では、ダウンロード ボタンを選択して、コードをファイルに保存し、別のシステムに持ち込むこともできます。必要に応じて、ダウンロード後にコードを編集して、他の AWS アカウントに適合させることができます。
 
 
 
 == CodeboxからCloudFormationコードを使用
 
-Codeboxから生成されたCloudFormationコードをコピーし、AWSアカウントでAmazon Web Services CloudFormationスタックを起動できます。CloudFormationは、ワークロードファクトリのUIで定義したアクションを実行します。
+Codebox から生成された CloudFormation コードをコピーし、AWS アカウントで Amazon Web Services CloudFormation スタックを起動できます。  CloudFormation は、Workload Factory UI で定義したアクションを実行します。
 
-CloudFormationコードを使用する手順は、FSx for ONTAPファイルシステムの導入、アカウントのクレデンシャルの作成、またはその他のワークロードファクトリアクションの実行によって異なる場合があります。
+CloudFormation コードを使用する手順は、FSx for ONTAPファイルシステムをデプロイするのか、アカウント認証情報を作成するのか、それとも他の Workload Factory アクションを実行するのかによって異なる場合があります。
 
 CloudFormationによって生成されたYAMLファイル内のコードは、セキュリティ上の理由から7日後に期限切れになります。
 
@@ -76,28 +76,28 @@ CloudFormationによって生成されたYAMLファイル内のコードは、�
 
 
 .手順
-. UIを使用して実行する操作を定義したら、[コードボックス]のコードをコピーします。
+. Workload Factory コンソールを使用して実行する操作を定義したら、コードボックス内のコードをコピーします。
 . [Redirect to CloudFormation]*を選択すると、[Redirect to CloudFormation]ページが表示されます。
 . 別のブラウザウィンドウを開き、AWS管理コンソールにログインします。
 . [Redirect to CloudFormation]ページから[Continue]*を選択します。
 . コードを実行するAWSアカウントにログインします。
 . [Quick create stack]ページの[Capabilities]で、*[I acknowledge that AWS CloudFormation may...]*を選択します。
 . [スタックの作成]*を選択します。
-. AWSまたはワークロード工場から進捗状況を監視
+. AWS または Workload Factory から進行状況を監視します。
 
 
 
 
 == CodeboxからREST APIコードを使用する
 
-Codeboxから生成されたワークロードファクトリREST APIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。
+Codebox から生成された Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理できます。
 
 APIは、curlをサポートし、インターネットに接続された任意のホストから実行できます。
 
 認証トークンはCodeboxでは非表示になっていますが、API呼び出しをコピーして貼り付けると入力されます。
 
 .手順
-. UIを使用して実行する処理を定義したら、[コードボックス]にAPIコードをコピーします。
+. Workload Factory コンソールを使用して実行する操作を定義したら、Codebox に API コードをコピーします。
 . コードを貼り付けて、ホストシステムで実行します。
 
 
@@ -108,7 +108,7 @@ APIは、curlをサポートし、インターネットに接続された任意�
 Codeboxから生成されたAmazon Web Services CLIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。
 
 .手順
-. UIを使用して実行する処理を定義したら、[Codebox]でAWS CLIをコピーします。
+. Workload Factory コンソールを使用して実行する操作を定義したら、Codebox に AWS CLI をコピーします。
 . 別のブラウザウィンドウを開き、AWS管理コンソールにログインします。
 . コードを貼り付けて実行します。
 
@@ -125,7 +125,7 @@ Terraformを使用して、FSx for ONTAPファイルシステムやその他のA
 
 
 .手順
-. ユーザーインターフェイスを使用して実行する操作を定義したら、コードボックスからTerraformコードをダウンロードします。
+. Workload Factory コンソールを使用して実行する操作を定義したら、Codebox から Terraform コードをダウンロードします。
 . ダウンロードしたスクリプトアーカイブをTerraformがインストールされているシステムにコピーします。
 . zipファイルを展開し、README.mdファイルの手順に従います。
 

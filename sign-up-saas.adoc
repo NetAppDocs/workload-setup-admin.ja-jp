@@ -2,33 +2,33 @@
 sidebar: sidebar 
 permalink: sign-up-saas.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
-summary: ワークロードファクトリには、Webベースのコンソールからアクセスできます。ワークロードの工場出荷を開始したら、最初にNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインを作成してサインアップします。 
+summary: Workload Factory には、Web ベースのコンソールからアクセスできます。  Workload Factory を使い始めるときの最初のステップは、既存のNetAppサポート サイトの認証情報を使用してサインアップするか、 NetAppクラウド ログインを作成することです。 
 ---
-= BlueXP  Workload Factoryに登録
+= NetApp Workload Factory にサインアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  ワークロードファクトリには、Webベースのコンソールからアクセスできます。ワークロードの工場出荷を開始したら、最初にNetAppサポートサイトの既存のクレデンシャルを使用するか、NetAppクラウドログインを作成してサインアップします。
+NetApp Workload Factory には、Web ベースのコンソールからアクセスできます。  Workload Factory を使い始めるときの最初のステップは、既存のNetAppサポート サイトの認証情報を使用してサインアップするか、 NetAppクラウド ログインを作成することです。
 
 .タスクの内容
-次のいずれかのオプションを使用してWorkload Factoryにサインアップできます。
+次のいずれかのオプションを使用して Workload Factory にサインアップできます。
 
 * 既存のNetApp Support Site （NSS）のクレデンシャルを必要に応じて変更
 * Eメールアドレスとパスワードを指定してネットアップクラウドにログインします
 
 
 .手順
-. Webブラウザを開き、 https://console.workloads.netapp.com["ワークロードファクトリコンソール"^]
+. ウェブブラウザを開いて、 https://console.workloads.netapp.com["ワークロードファクトリーコンソール"^]
 . NetApp Support Site アカウントをお持ちの場合は、*ログイン*ページでNSSアカウントに関連付けられているメールアドレスを直接入力してください。
 +
-NSSアカウントをお持ちの場合は、サインアップページをスキップできます。Workload Factoryは、この初回ログイン時に登録されます。
+NSS アカウントをお持ちの場合は、サインアップ ページをスキップできます。  Workload Factory では、この初期ログインの一環としてサインアップが行われます。
 
 . NSSアカウントをお持ちでなく、ネットアップクラウドログインを作成して登録する場合は、*[Sign Up]*を選択します。
 +
-image:screenshot-sign-up1.png["[Sign Up]ページのスクリーンショット。ワークロードファクトリにアクセスするためのユーザ名とパスワードを追加できます。"]
+image:screenshot-sign-up1.png["Workload Factory にアクセスするためのユーザー名とパスワードを追加できるサインアップ ページのスクリーンショット。"]
 
 . [サインアップ]ページで、NetAppクラウドログインを作成するために必要な情報を入力し、*[次へ]*を選択します。
 +
@@ -47,8 +47,8 @@ image:screenshot-sign-up1.png["[Sign Up]ページのスクリーンショット�
 +
 image:screenshot-account-selection.png["新しいアカウントでログインしたときに表示される[Account]ページのスクリーンショット。"]
 
-. [作成]*を選択すると、ワークロードファクトリのホームページが表示されます。
+. *作成*を選択すると、ワークロード ファクトリーのホームページが表示されます。
 
 
 .結果
-これで、ワークロードファクトリログインとアカウントが作成されました。お客様はアカウント管理者と見なされ、すべてのワークロードファクトリ機能にアクセスできます。
+これで、Workload Factory のログインとアカウントが作成されました。あなたはアカウント管理者とみなされ、すべての Workload Factory 機能にアクセスできます。
