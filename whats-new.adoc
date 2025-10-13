@@ -43,6 +43,18 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+== 2025年9月9日
+
+
+
+=== ストレージの新しい通知
+
+NetApp Workload Factory通知サービスには、ストレージの自動容量管理に関する通知が含まれています。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory の通知"]
+
+
+
 == 2025年6月29日
 
 
