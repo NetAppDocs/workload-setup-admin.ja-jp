@@ -6,6 +6,6 @@
 
 === ストレージの新しい通知
 
-NetApp Workload Factory通知サービスには、ストレージの自動容量管理に関する通知が含まれています。
+BlueXP workload factory通知サービスには、ストレージの自動容量管理に関する通知が含まれています。
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory の通知"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["BlueXP workload factoryの通知"]
