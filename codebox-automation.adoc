@@ -34,6 +34,7 @@ Codeboxには、次の2つの主要なIAC機能があります。
 * ワークロードファクトリー REST API
 * AWS CLI
 * AWS CloudFormation
+* テラフォーム
 
 
 
