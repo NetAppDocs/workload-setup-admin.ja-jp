@@ -1315,206 +1315,208 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 | 読み取り / 書き込み 
 
 
-.2+| FSx for ONTAPの詳細 | fsx:ファイルシステムエイリアスの説明  a| 
-導入
-| 読み取り / 書き込み 
+| FSx for ONTAPの詳細 | fsx:ファイルシステムエイリアスの説明 | 導入 | 読み取り / 書き込み 
 
 
-| FSx for ONTAPファイルシステムのサイズを変更してファイルシステムのヘッドルームを修正 | FSx：ファイルシステムの更新 | 最適化 
+| FSx for ONTAPファイルシステムのサイズを変更してファイルシステムのヘッドルームを修正 | FSx：ファイルシステムの更新 | 最適化 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ボリュームのサイズを変更してログとtempdbのドライブサイズを修正 | FSx：UPDATEVOLUME | 最適化 
+| ボリュームのサイズを変更してログとtempdbのドライブサイズを修正 | FSx：UPDATEVOLUME | 最適化 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み .3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 
+.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | kms:カスタムキーストアの説明 | 導入 
+| kms:カスタムキーストアの説明 | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | KMS：GenerateDataKey | 導入 
+| KMS：GenerateDataKey | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み .8+| EC2インスタンスで実行される検証スクリプトとプロビジョニングスクリプト用にCloudWatchログを作成する | ログ:CreateLogGroup | 導入 
+.8+| EC2インスタンスで実行される検証スクリプトとプロビジョニングスクリプト用にCloudWatchログを作成する | ログ:CreateLogGroup | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ログ:CreateLogStream | 導入 
+| ログ:CreateLogStream | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ログ:DescriptionLogStreams  a| 
+| ログ:DescriptionLogStreams  a| 
 * 導入
 * 評価
 
+| 読み取り / 書き込み 
 
 
-
-| 読み取り / 書き込み | ログ:GetLogGroupFields | 導入 
-
-
-| 読み取り / 書き込み | ログ:GetLogRecord | 導入 
+| ログ:GetLogGroupFields | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ログ:ListLogDeliveries | 導入 
+| ログ:GetLogRecord | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ログ:PutLogEvents  a| 
+| ログ:ListLogDeliveries | 導入 | 読み取り / 書き込み 
+
+
+| ログ:PutLogEvents  a| 
 * 導入
 * 処理の管理
 
+| 読み取り / 書き込み 
 
 
+| ログ:TagResource | 導入 | 読み取り / 書き込み 
 
-| 読み取り / 書き込み | ログ:TagResource | 導入 
 
-
-| 読み取り / 書き込み | Workload Factory は、SSM 出力の切り捨てが発生すると、SQL インスタンスの Amazon CloudWatch ログに切り替えます。 | ログ:GetLogEvents  a| 
+| Workload Factory は、SSM 出力の切り捨てが発生すると、SQL インスタンスの Amazon CloudWatch ログに切り替えます。 | ログ:GetLogEvents  a| 
 * ストレージ評価（最適化）
 * インベントリ
-
-
-
 
  a| 
 * 読み取り専用
 * 読み取り / 書き込み
+
+
+
 
 | Workload Factory が現在のログ グループを取得し、Workload Factory によって作成されたログ グループの保持が設定されていることを確認することを許可します。 | ログ:DescriptionLogGroups  a| 
 * ストレージ評価（最適化）
 * インベントリ
 
+| 読み取り専用 
 
 
-
-| 読み取り専用 | Workload Factory が作成したログ グループに 1 日間の保持ポリシーを設定できるようにして、SSM コマンド出力のログ ストリームの不要な蓄積を回避します。 | ログ:PutRetentionPolicy  a| 
+| Workload Factory が作成したログ グループに 1 日間の保持ポリシーを設定できるようにして、SSM コマンド出力のログ ストリームの不要な蓄積を回避します。 | ログ:PutRetentionPolicy  a| 
 * ストレージ評価（最適化）
 * インベントリ
-
-
-
 
  a| 
 * 読み取り専用
 * 読み取り / 書き込み
 
-| ユーザアカウントに、SQL、ドメイン、FSx for ONTAPに提供されるクレデンシャルのシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 
 
 
-| 読み取り / 書き込み .2+| カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS:リストトピック | 導入 
+
+| ユーザアカウントに、SQL、ドメイン、FSx for ONTAPに提供されるクレデンシャルのシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | SNS：公開 | 導入 
+.2+| カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS:リストトピック | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み .11+| プロビジョニングされたSQLインスタンスに対して検出スクリプトを実行し、FSx for ONTAPでサポートされるAWSリージョンの最新のリストを取得するために必要なSSM権限。 | SSM：PutComplianceItems | 導入 
+| SNS：公開 | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | SSM：PutConfigurePackageResult | 導入 
+.11+| プロビジョニングされたSQLインスタンスに対して検出スクリプトを実行し、FSx for ONTAPでサポートされるAWSリージョンの最新のリストを取得するために必要なSSM権限。 | SSM：PutComplianceItems | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | SSM：PutInventory | 導入 
+| SSM：PutConfigurePackageResult | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | SSM:sendCommand  a| 
+| SSM：PutInventory | 導入 | 読み取り / 書き込み 
+
+
+| SSM:sendCommand  a| 
 * 導入
 * インベントリ
 * 処理の管理
 
+| 読み取り / 書き込み 
 
 
-
-| 読み取り / 書き込み | SSM：UpdateAssociationStatus | 導入 
-
-
-| 読み取り / 書き込み | SSM：UpdateInstanceAssociationStatus | 導入 
+| SSM：UpdateAssociationStatus | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | SSM：UpdateInstanceInformation | 導入 
+| SSM：UpdateInstanceAssociationStatus | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ssmmessages:CreateControlChannel | 導入 
+| SSM：UpdateInstanceInformation | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ssmmessages:データチャネルの作成 | 導入 
+| ssmmessages:CreateControlChannel | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ssmmessages:OpenControlChannel | 導入 
+| ssmmessages:データチャネルの作成 | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ssmmessages:OpenDataChannel | 導入 
+| ssmmessages:OpenControlChannel | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み .4+| FSx for ONTAP、Active Directory、SQLユーザのクレデンシャルを保存（SQLユーザ認証のみ） | SSM：getParameter ^1^  a| 
+| ssmmessages:OpenDataChannel | 導入 | 読み取り / 書き込み 
+
+
+.4+| FSx for ONTAP、Active Directory、SQLユーザのクレデンシャルを保存（SQLユーザ認証のみ） | SSM：getParameter ^1^  a| 
 * 導入
 * 処理の管理
 * インベントリ
 
+| 読み取り / 書き込み 
 
 
-
-| 読み取り / 書き込み | SSM：GetParameters ^1^  a| 
+| SSM：GetParameters ^1^  a| 
 * 導入
 * インベントリ
 
+| 読み取り / 書き込み 
 
 
-
-| 読み取り / 書き込み | SSM：PutParameter ^1^  a| 
+| SSM：PutParameter ^1^  a| 
 * 導入
 * 処理の管理
 
+| 読み取り / 書き込み 
 
 
-
-| 読み取り / 書き込み | SSM：削除パラメータ^1^  a| 
+| SSM：削除パラメータ^1^  a| 
 * 導入
 * 処理の管理
 
+| 読み取り / 書き込み 
 
 
-
-| 読み取り / 書き込み | 成功または失敗時にCloudFormationスタックに信号を送信します。 | CloudFormation：SignalResource ^1^ | 導入 
-
-
-| 読み取り / 書き込み | テンプレートによって作成されたEC2ロールをEC2のインスタンスプロファイルに追加して、EC2上のスクリプトが展開に必要なリソースにアクセスできるようにします。 | IAM：AddRoleToInstanceProfile | 導入 
+| 成功または失敗時にCloudFormationスタックに信号を送信します。 | CloudFormation：SignalResource ^1^ | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | EC2のインスタンスプロファイルを作成し、作成したEC2ロールを割り当てます。 | IAM：CreateInstanceProfile | 導入 
+| テンプレートによって作成されたEC2ロールをEC2のインスタンスプロファイルに追加して、EC2上のスクリプトが展開に必要なリソースにアクセスできるようにします。 | IAM：AddRoleToInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | 以下の権限を持つテンプレートを使用してEC2ロールを作成する | IAM：CREATEROLE | 導入 
+| EC2のインスタンスプロファイルを作成し、作成したEC2ロールを割り当てます。 | IAM：CreateInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | EC2サービスにリンクされたロールの作成 | IAM：CreateServiceLinkedRole^2^ | 導入 
+| 以下の権限を持つテンプレートを使用してEC2ロールを作成する | IAM：CREATEROLE | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | 検証ノード専用に導入時に作成されたインスタンスプロファイルを削除する | IAM：DeleteInstanceProfile | 導入 
+| EC2サービスにリンクされたロールの作成 | IAM：CreateServiceLinkedRole^2^ | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み .5+| ロールとポリシーの詳細を取得して権限のギャップを特定し、導入のための検証を実施 | IAM：GetPolicy | 導入 
+| 検証ノード専用に導入時に作成されたインスタンスプロファイルを削除する | IAM：DeleteInstanceProfile | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | IAM：GetPolicyVersion | 導入 
+.5+| ロールとポリシーの詳細を取得して権限のギャップを特定し、導入のための検証を実施 | IAM：GetPolicy | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | IAM：GetRole | 導入 
+| IAM：GetPolicyVersion | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | IAM：GetRolePolicy | 導入 
+| IAM：GetRole | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | IAM：GetUser | 導入 
+| IAM：GetRolePolicy | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | 作成したロールをEC2インスタンスに渡す | IAM：PassRole^3^ | 導入 
+| IAM：GetUser | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | 作成したEC2ロールに必要な権限を含むポリシーを追加します。 | IAM：PutRolePolicy | 導入 
+| 作成したロールをEC2インスタンスに渡す | IAM：PassRole^3^ | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 
+| 作成したEC2ロールに必要な権限を含むポリシーを追加します。 | IAM：PutRolePolicy | 導入 | 読み取り / 書き込み 
 
 
-| 読み取り / 書き込み | ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 
+| プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 | 読み取り / 書き込み 
+
+
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入  a| 
+* 読み取り専用
+* 読み取り / 書き込み
+
+
 |===
 . アクセス許可は、WLMDBで始まるリソースに制限されます。
 . IAM：AWSServiceNameによって制限される「IAM：CreateServiceLinkedRole」：ec2.amazonaws.com"*
