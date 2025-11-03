@@ -46,6 +46,12 @@ Workload Factory は次のイベントの通知を送信します。
 
 
 | FSx for ONTAP の問題が検出されました | すべての FSx for ONTAPファイル システムについて、well-architected の問題について分析されています。スキャンにより 1 つ以上の問題が検出されました。詳細については、Workload Factory コンソールのストレージ ダッシュボードの well-architected 分析を確認してください。 | 適切に設計された分析 | 推奨事項 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| FSx for ONTAPの自動容量管理イベント | FSx for ONTAPファイル システムの SSD パフォーマンス層が、警告しきい値の容量/パーセンテージ合計に達しました。 | 容量管理 | 警告 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| FSx for ONTAPの自動 inode 管理イベント | FSx for ONTAPボリュームの inode 数が、警告しきい値の数/パーセンテージの合計に達しました。 | 容量管理 | 警告 | 一般的な保管 | ONTAPファイルシステム用の FSx 
 |===
 
 

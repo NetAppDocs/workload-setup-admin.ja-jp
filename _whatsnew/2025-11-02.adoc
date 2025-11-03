@@ -1,0 +1,27 @@
+= 権限の更新
+:allow-uri-read: 
+
+
+
+
+=== 権限の更新
+
+このリリースでは、セキュリティとユーザー制御を強化するために、ストレージ、データベース、VMware ワークロードの権限ポリシーに大幅な更新を加えました。権限設定をより細かくカスタマイズして、必要に応じて権限を追加または解除できます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Workload Factory の権限リファレンス"]
+
+
+
+=== ストレージの新しい通知
+
+NetApp Workload Factory通知サービスには、ストレージの自動 inode 管理に関する通知が含まれています。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory の通知"]
+
+
+
+=== 自動容量および inode 管理のしきい値警告
+
+ストレージの自動容量および inode 管理は、Workload Factory 通知サービスからの通知をトリガーする警告しきい値を使用して設定できます。この機能を使用するには、まず Workload Factory 通知サービスを有効にする必要があります。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factoryの通知を構成する"]

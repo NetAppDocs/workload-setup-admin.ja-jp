@@ -13,7 +13,7 @@ summary: Workload Factory コンソールのネットワークを準備し、サ
 [role="lead"]
 NetApp Workload Factory の使用を開始するには、サインアップしてアカウントを作成し、Workload Factory が AWS リソースを直接管理できるように認証情報を追加し、 Amazon FSx for NetApp ONTAPを使用してワークロードを最適化します。
 
-NetApp Workload Factory は、Web ベースのコンソールからクラウド サービスとしてユーザーがアクセスできます。始める前に、以下のことを理解しておく必要があります。link:workload-factory-overview.html["ワークロードファクトリー"]そしてlink:operational-modes.html["動作モード"]。
+NetApp Workload Factory は、Web ベースのコンソールからクラウド サービスとしてユーザーがアクセスできます。始める前に、以下のことを理解しておく必要があります。link:workload-factory-overview.html["ワークロードファクトリー"] 。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"] サインアップしてアカウントを作成する
 [role="quick-margin-para"]
@@ -24,7 +24,7 @@ link:sign-up-saas.html["サインアップしてアカウントを作成する�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"]Workload FactoryにAWS認証情報を追加する
 [role="quick-margin-para"]
-この手順はオプションです。AWS アカウントにアクセスするための認証情報を追加せずに、Workload Factory を _Basic_ モードで使用できます。_読み取り専用_モードまたは_読み取り/書き込み_モードのいずれかで AWS 認証情報を Workload Factory に追加すると、FSx for ONTAPファイルシステムの作成と管理、およびデータベースや GenAI などの特定のワークロードの導入と管理に必要な権限が Workload Factory アカウントに付与されます。
+この手順はオプションです。AWS アカウントにアクセスするための認証情報を追加しなくても、Workload Factory を使用できます。  Workload Factory に AWS 認証情報を追加すると、FSx for ONTAPファイルシステムの作成と管理、およびデータベースや GenAI などの特定のワークロードの導入と管理に必要な権限が Workload Factory アカウントに付与されます。
 
 [role="quick-margin-para"]
 link:add-credentials.html["アカウントにクレデンシャルを追加する方法"]です。

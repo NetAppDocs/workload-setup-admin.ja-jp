@@ -24,8 +24,6 @@ sidebar:
       entries:
       - title: NetAppワークロードファクトリーについて学ぶ
         url: "/workload-factory-overview.html"
-      - title: 動作モード
-        url: "/operational-modes.html"
       - title: コンソールエクスペリエンス
         url: "/console-experiences.html"
       - title: 権限

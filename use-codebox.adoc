@@ -13,7 +13,7 @@ summary: Codebox を使用すると、 NetApp Workload Factory でサポート�
 [role="lead"]
 Codebox を使用すると、 NetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成できます。  Workload Factory REST API、AWS CLI、AWS CloudFormation を使用して使用および実行できるコードを生成できます。
 
-Codebox は、各ユーザーの Workload Factory アカウントに提供されている AWS 権限に基づいてコードに適切なデータを入力することで、Workload Factory の操作モード (_基本_、_読み取り専用_、および _読み取り/書き込み_) と連携します。コードはテンプレートのように使用でき、不足している情報 (資格情報など) を入力したり、コードを実行する前に特定のデータをカスタマイズしたりできます。
+Codebox は、各ユーザーの Workload Factory アカウントに提供される AWS 権限に基づいてコードに適切なデータを入力することで、Workload Factory の権限ポリシーに準拠しています。コードはテンプレートのように使用でき、不足している情報 (資格情報など) を入力したり、コードを実行する前に特定のデータをカスタマイズしたりできます。
 
 
 

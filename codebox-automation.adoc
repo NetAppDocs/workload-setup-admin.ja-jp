@@ -11,7 +11,7 @@ summary: 'Codebox は、開発者と DevOps がNetApp Workload Factory でサポ
 
 
 [role="lead"]
-Codebox は、開発者と DevOps がNetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。  Codebox は、Workload Factory の動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) と連携しており、実行準備のための明確なパスを設定するとともに、将来の迅速な再利用のための自動化カタログを提供します。
+Codebox は、開発者と DevOps がNetApp Workload Factoryでサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。  Codebox は Workload Factory の権限ポリシーに準拠しており、実行準備のための明確なパスを設定するとともに、将来の迅速な再利用のための自動化カタログを提供します。
 
 
 
@@ -23,7 +23,7 @@ Codeboxには、次の2つの主要なIAC機能があります。
 * _Codebox Automation Catalog_保存されているすべてのIACジョブを表示し、将来の使用に備えて簡単に参照できるようにします。自動カタログジョブはテンプレートとして保存され、適用されるリソースのコンテキストで表示されます。
 
 
-さらに、Workload Factory の認証情報を設定すると、Codebox は IAM ポリシーの作成に必要な AWS 権限を動的に表示します。権限は、使用する予定の Workload Factory 機能 (データベース、AI、FSx for ONTAPなど) ごとに提供され、ポリシーのユーザーが _読み取り専用_ 権限を取得するか、完全な _読み取り/書き込み_ 権限を取得するかに基づいてカスタマイズされます。  Codebox から権限をコピーし、AWS マネジメントコンソールに貼り付けるだけで、Workload Factory にワークロードを管理するための適切な権限が付与されます。
+さらに、Workload Factory の認証情報を設定すると、Codebox は IAM ポリシーの作成に必要な AWS 権限を動的に表示します。使用する予定の Workload Factory 機能 (データベース、AI、FSx for ONTAPなど) ごとに権限が提供され、カスタマイズ可能です。  Codebox から権限をコピーし、AWS マネジメントコンソールに貼り付けるだけで、Workload Factory にワークロードを管理するための適切な権限が付与されます。
 
 
 

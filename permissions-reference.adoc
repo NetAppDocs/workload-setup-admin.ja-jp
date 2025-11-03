@@ -20,7 +20,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 == 権限を使用する理由
 
-_読み取り専用_ または _読み取り/書き込み_ モードの権限を付与すると、Workload Factory は、その AWS アカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスにアタッチします。これにより、Workload Factory は、ストレージ環境の検出から、ストレージ管理のファイルシステムや GenAI ワークロードのナレッジベースなどの AWS リソースのデプロイまで、さまざまな操作を実行できるようになります。
+権限を付与すると、Workload Factory は、その AWS アカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスにアタッチします。これにより、Workload Factory は、ストレージ環境の検出から、ストレージ管理のファイルシステムや GenAI ワークロードのナレッジベースなどの AWS リソースのデプロイまで、さまざまな操作を実行できるようになります。
 
 たとえば、データベース ワークロードの場合、Workload Factory に必要な権限が付与されると、指定されたアカウントとリージョン内のすべての EC2 インスタンスがスキャンされ、すべての Windows ベースのマシンがフィルタリングされます。  AWS Systems Manager (SSM) エージェントがホストにインストールされ実行されており、System Manager ネットワークが適切に設定されている場合、Workload Factory は Windows マシンにアクセスし、SQL Server ソフトウェアがインストールされているかどうかを確認できます。
 
@@ -28,22 +28,29 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 
 == ワークロード別の権限
 
-各ワークロードは、権限を使用して、Workload Factory で特定のタスクを実行します。使用するワークロードまでスクロールして、権限のリスト、権限の目的、使用場所、権限をサポートするモードを表示します。
+各ワークロードは、権限を使用して、Workload Factory で特定のタスクを実行します。権限は、設定された権限ポリシーにまとめられます。使用するワークロードまでスクロールして、アクセス許可ポリシー、アクセス許可ポリシーのコピー可能な JSON、およびすべてのアクセス許可、その目的、使用場所、およびそれらをサポートするアクセス許可ポリシーをリストした表について学習します。
 
 
 
 === ストレージの権限
 
-ストレージに使用できる IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory に必要な権限を提供します。
+ストレージに使用できる IAM ポリシーは、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory に必要な権限を提供します。
 
-運用モードを選択して、必要なIAMポリシーを表示します。
+ストレージには、次の権限ポリシーから選択できます。
+
+* *表示、計画、分析*: FSx for ONTAPファイル システムを表示し、システムの健全性を把握し、システムの Well-Architected 分析を取得して、コスト削減を検討します。
+* *操作と修復*: ファイル システム容量の調整やファイル システム構成の問題の修正などの運用タスクを実行します。
+* *ファイルシステムの作成と削除*: FSx for ONTAPファイルシステムとストレージ VM を作成および削除します。
+
+
+必要な IAM ポリシーを表示します。
 
 .ストレージのIAMポリシー
 [%collapsible]
 ====
 [role="tabbed-block"]
 =====
-.読み取り専用モード
+.表示、計画、分析
 --
 [source, json]
 ----
@@ -53,14 +60,22 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
     {
       "Effect": "Allow",
       "Action": [
-        "fsx:Describe*",
+        "fsx:DescribeFileSystems",
+        "fsx:DescribeStorageVirtualMachines",
+        "fsx:DescribeVolumes",
         "fsx:ListTagsForResource",
-        "ec2:Describe*",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
+        "fsx:DescribeBackups",
+        "fsx:DescribeSharedVpcConfiguration",
         "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics"
+        "cloudwatch:GetMetricStatistics",
+        "ec2:DescribeInstances",
+        "ec2:DescribeVolumes",
+        "elasticfilesystem:DescribeFileSystems",
+        "ce:GetCostAndUsage",
+        "ce:GetTags",
+        "ce:GetCostAndUsageWithResources",
+        "ce:GetCostForecast",
+        "ce:GetUsageForecast"
       ],
       "Resource": "*"
     },
@@ -75,7 +90,7 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 }
 ----
 --
-.読み取り/書き込みモード
+.運用と修復
 --
 [source, json]
 ----
@@ -85,19 +100,62 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
     {
       "Effect": "Allow",
       "Action": [
-        "fsx:*",
-        "ec2:Describe*",
-        "ec2:CreateTags",
-        "ec2:CreateSecurityGroup",
-        "iam:CreateServiceLinkedRole",
-        "kms:Describe*",
-        "elasticfilesystem:Describe*",
-        "kms:List*",
+        "fsx:CreateVolume",
+        "fsx:DeleteVolume",
+        "fsx:UpdateFileSystem",
+        "fsx:UpdateStorageVirtualMachine",
+        "fsx:UpdateVolume",
+        "fsx:CreateBackup",
+        "fsx:CreateVolumeFromBackup",
+        "fsx:DeleteBackup",
+        "fsx:TagResource",
+        "fsx:UntagResource",
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:ListInferenceProfiles",
+        "bedrock:GetInferenceProfile"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+--
+.ファイルシステムの作成と削除
+--
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:CreateFileSystem",
+        "fsx:CreateStorageVirtualMachine",
+        "fsx:DeleteFileSystem",
+        "fsx:DeleteStorageVirtualMachine",
+        "fsx:TagResource",
+        "fsx:UntagResource",
         "kms:CreateGrant",
-        "cloudwatch:PutMetricData",
-        "cloudwatch:GetMetricData",
-        "iam:SimulatePrincipalPolicy",
-        "cloudwatch:GetMetricStatistics"
+        "iam:CreateServiceLinkedRole",
+        "ec2:CreateSecurityGroup",
+        "ec2:CreateTags",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeVolumeStatus",
+        "kms:DescribeKey",
+        "kms:ListKeys",
+        "kms:ListAliases"
       ],
       "Resource": "*"
     },
@@ -116,6 +174,13 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
           "ec2:ResourceTag/AppCreator": "NetappFSxWF"
         }
       }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -130,241 +195,175 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 ====
 [cols="2, 2, 1, 1"]
 |===
-| 目的 | アクション | 使用先 | モード 
+| 目的 | アクション | 使用先 | 許可ポリシー 
 
 
-| FSx for ONTAPファイルシステムの作成 | FSx：CreateFileSystem * | 導入 | 読み取り / 書き込み 
+| FSx for ONTAPファイルシステムの作成 | FSx：CreateFileSystem | 導入 | ファイルシステムの作成と削除 
 
 
-| FSx for ONTAPファイルシステムのセキュリティグループを作成する | EC2：CreateSecurityGroup | 導入 | 読み取り / 書き込み 
+| FSx for ONTAPファイルシステムのセキュリティグループを作成する | EC2：CreateSecurityGroup | 導入 | ファイルシステムの作成と削除 
 
 
-| FSx for ONTAPファイルシステムのセキュリティグループにタグを追加する | ec2：CreateTags | 導入 | 読み取り / 書き込み 
+| FSx for ONTAPファイルシステムのセキュリティグループにタグを追加する | ec2：CreateTags | 導入 | ファイルシステムの作成と削除 
 
 
-.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を許可する | ec2：AuthorizeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
+.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を許可する | ec2：AuthorizeSecurityGroupEgress | 導入 | ファイルシステムの作成と削除 
 
 
-| ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
+| ec2：AuthorizeSecurityGroupIngress | 導入 | ファイルシステムの作成と削除 
 
 
-| Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。 | IAM：CreateServiceLinkedRole | 導入 | 読み取り / 書き込み 
+| Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。 | IAM：CreateServiceLinkedRole | 導入 | ファイルシステムの作成と削除 
 
 
-.7+| FSx for ONTAPファイルシステム導入フォームに必要事項をご記入ください | EC2: DescribeVpcs  a| 
+.6+| FSx for ONTAPファイルシステム導入フォームに必要事項をご記入ください | EC2: DescribeVpcs  a| 
 * 導入
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| ファイルシステムの作成と削除 
 
 
 | EC2: DescribeSubnets  a| 
 * 導入
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| EC2: DescribeRegions (説明領域  a| 
-* 導入
-* コスト削減の詳細
-
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| ファイルシステムの作成と削除 
 
 
 | EC2: DescribeSecurityGroups  a| 
 * 導入
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| ファイルシステムの作成と削除 
 
 
 | EC2: DescribeRouteTables  a| 
 * 導入
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| ファイルシステムの作成と削除 
 
 
 | EC2: DescribeNetworkInterfaces  a| 
 * 導入
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| ファイルシステムの作成と削除 
 
 
 | EC2：DescripteVolumeStatus  a| 
 * 導入
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| ファイルシステムの作成と削除 
 
 
+.4+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | ファイルシステムの作成と削除 
 
 
-.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 読み取り / 書き込み 
+| KMS:説明キー | 導入 | ファイルシステムの作成と削除 
 
 
-| KMS：説明* | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| KMS：ListKeys | 導入 | ファイルシステムの作成と削除 
 
 
-
-
-| KMS：リスト* | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| KMS：エイリアスを確認する | 導入 | ファイルシステムの作成と削除 
 
 
 | EC2インスタンスのボリュームの詳細を取得 | EC2: DescribeVolumesの場合  a| 
 * インベントリ
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+| EC2インスタンスの詳細を取得 | EC2: DescribeInstances | コスト削減の詳細 | 表示、計画、分析 
 
 
-| EC2インスタンスの詳細を取得 | EC2: DescribeInstances | コスト削減の詳細  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| コスト削減試算ツールでElastic File Systemについて説明する | Elasticfilesystem:ファイルシステムの説明 | コスト削減の詳細 | 表示、計画、分析 
 
 
+| FSx for ONTAPリソース用のタグを挙げる | FSx：ListTagsForResource | インベントリ | 表示、計画、分析 
 
 
-| コスト削減試算ツールでElastic File Systemについて説明する | elasticfilesystem: describe* | コスト削減の詳細 | 読み取り専用 
+.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | ファイルシステムの作成と削除 
 
 
-| FSx for ONTAPリソース用のタグを挙げる | FSx：ListTagsForResource | インベントリ  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| EC2: DeleteSecurityGroup | カンリシヨリ | ファイルシステムの作成と削除 
 
 
+.17+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：ボリュームの作成 | カンリシヨリ | 運用と修復 
 
 
-.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | 読み取り / 書き込み 
+| FSx：TagResource | カンリシヨリ | 運用と修復 
 
 
-| EC2: DeleteSecurityGroup | カンリシヨリ | 読み取り / 書き込み 
+| FSx：CreateStorageVirtualMachine | カンリシヨリ | ファイルシステムの作成と削除 
 
 
-.16+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：CreateVolume * | カンリシヨリ | 読み取り / 書き込み 
+| fsx:ファイルシステムの削除 | カンリシヨリ | ファイルシステムの作成と削除 
 
 
-| FSx：TagResource * | カンリシヨリ | 読み取り / 書き込み 
+| fsx:ストレージ仮想マシンの削除 | カンリシヨリ | 表示、計画、分析 
 
 
-| FSx：CreateStorageVirtualMachine * | カンリシヨリ | 読み取り / 書き込み 
+| FSx：DescriptionFileSystems | インベントリ | 表示、計画、分析 
 
 
-| FSx：DeleteFileSystem * | カンリシヨリ | 読み取り / 書き込み 
+| FSx：DescriptionStorageVirtualMachines | インベントリ | 表示、計画、分析 
 
 
-| FSx：DeleteStorageVirtualMachine * | カンリシヨリ | 読み取り / 書き込み 
+| fsx:共有Vpc構成の説明 | インベントリ | 表示、計画、分析 
 
 
-| FSx：DescriptionFileSystems* | インベントリ  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| fsx:ファイルシステムの更新 | カンリシヨリ | 運用と修復 
 
 
+| fsx:ストレージ仮想マシンの更新 | カンリシヨリ | 運用と修復 
 
 
-| FSx：DescriptionStorageVirtualMachines * | インベントリ  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| FSx：Description | インベントリ | 表示、計画、分析 
 
 
+| FSx：UPDATEVOLUME | カンリシヨリ | 運用と修復 
 
 
-| FSx：UpdateFileSystem * | カンリシヨリ | 読み取り / 書き込み 
+| fsx:ボリュームの削除 | カンリシヨリ | 運用と修復 
 
 
-| FSx：UpdateStorageVirtualMachine * | カンリシヨリ | 読み取り / 書き込み 
+| FSx：UntagResource | カンリシヨリ | 運用と修復 
 
 
-| FSx：Description * | インベントリ  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| FSx：バックアップの説明 | カンリシヨリ | 表示、計画、分析 
 
 
+| fsx:バックアップの作成 | カンリシヨリ | 運用と修復 
 
 
-| FSx：UPDATEVOLUME * | カンリシヨリ | 読み取り / 書き込み 
+| fsx:バックアップからボリュームを作成 | カンリシヨリ | 運用と修復 
 
 
-| FSx：DeleteVolume * | カンリシヨリ | 読み取り / 書き込み 
+.2+| ファイルシステムとボリュームの指標を取得 | CloudWatch：GetMetricData | カンリシヨリ | 表示、計画、分析 
 
 
-| FSx：UntagResource * | カンリシヨリ | 読み取り / 書き込み 
+| CloudWatch：GetMetricStatistics | カンリシヨリ | 表示、計画、分析 
 
 
-| FSx：DescriptionBackups * | カンリシヨリ  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| FSx：CreateBackup * | カンリシヨリ | 読み取り / 書き込み 
-
-
-| FSx：CreateVolumeFromBackup * | カンリシヨリ | 読み取り / 書き込み 
-
-
-| CloudWatchメトリクスのレポート | CloudWatch：PutMetricData | カンリシヨリ | 読み取り / 書き込み 
-
-
-.2+| ファイルシステムとボリュームの指標を取得 | CloudWatch：GetMetricData | カンリシヨリ  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| CloudWatch：GetMetricStatistics | カンリシヨリ  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 全て 
 |===
 ====
 
 
 === データベースワークロードの権限
 
-データベース ワークロードに使用できる IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory に必要な権限を提供します。
+データベース ワークロードに使用できる IAM ポリシーは、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory に必要な権限を提供します。
+
+データベースでは、次の権限ポリシーから選択できます。
+
+* *表示、計画、および分析*: データベース リソースのインベントリを表示し、リソースの健全性を把握し、データベース構成の Well-Architected 分析を確認し、節約を検討し、エラー ログ分析を取得し、節約を検討します。
+* *操作と修復*: データベース リソースの運用タスクを実行し、データベース構成と基盤となる FSx for ONTAPファイル システム ストレージの問題を修正します。
+* *データベース ホストの作成*: ベスト プラクティスに従って、データベース ホストと、その基盤となる FSx for ONTAPファイル システム ストレージをデプロイします。
+
 
 運用モードを選択して、必要なIAMポリシーを表示します。
 
@@ -373,344 +372,304 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 ====
 [role="tabbed-block"]
 =====
-.読み取り専用モード
+.表示、計画、分析
 --
 [source, json]
 ----
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "CommonGroup",
-      "Effect": "Allow",
-      "Action": [
-        "cloudwatch:GetMetricStatistics",
-        "cloudwatch:GetMetricData",
-        "sns:ListTopics",
-        "ec2:DescribeInstances",
-        "ec2:DescribeVpcs",
-        "ec2:DescribeSubnets",
-        "ec2:DescribeSecurityGroups",
-        "ec2:DescribeImages",
-        "ec2:DescribeRegions",
-        "ec2:DescribeRouteTables",
-        "ec2:DescribeKeyPairs",
-        "ec2:DescribeNetworkInterfaces",
-        "ec2:DescribeInstanceTypes",
-        "ec2:DescribeVpcEndpoints",
-        "ec2:DescribeInstanceTypeOfferings",
-        "ec2:DescribeSnapshots",
-        "ec2:DescribeVolumes",
-        "ec2:DescribeAddresses",
-        "kms:ListAliases",
-        "kms:ListKeys",
-        "kms:DescribeKey",
-        "cloudformation:ListStacks",
-        "cloudformation:DescribeAccountLimits",
-        "ds:DescribeDirectories",
-        "fsx:DescribeVolumes",
-        "fsx:DescribeBackups",
-        "fsx:DescribeStorageVirtualMachines",
-        "fsx:DescribeFileSystems",
-        "servicequotas:ListServiceQuotas",
-        "ssm:GetParametersByPath",
-        "ssm:GetCommandInvocation",
-        "ssm:SendCommand",
-        "ssm:GetConnectionStatus",
-        "ssm:DescribePatchBaselines",
-        "ssm:DescribeInstancePatchStates",
-        "ssm:ListCommands",
-        "ssm:DescribeInstanceInformation",
-        "fsx:ListTagsForResource"
-        "logs:DescribeLogGroups"
-      ],
-      "Resource": [
-        "*"
-      ]
-    },
-    {
-      "Sid": "SSMParameterStore",
-      "Effect": "Allow",
-      "Action": [
-        "ssm:GetParameter",
-        "ssm:GetParameters",
-        "ssm:PutParameter",
-        "ssm:DeleteParameters"
-      ],
-      "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
-    },
-    {
-      "Sid": "SSMResponseCloudWatch",
-      "Effect": "Allow",
-      "Action": [
-        "logs:GetLogEvents",
-        "logs:PutRetentionPolicy"
-      ],
-      "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CommonGroup",
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:GetMetricData",
+                "sns:ListTopics",
+                "ec2:DescribeInstances",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeImages",
+                "ec2:DescribeRegions",
+                "ec2:DescribeRouteTables",
+                "ec2:DescribeKeyPairs",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DescribeInstanceTypes",
+                "ec2:DescribeVpcEndpoints",
+                "ec2:DescribeInstanceTypeOfferings",
+                "ec2:DescribeSnapshots",
+                "ec2:DescribeVolumes",
+                "ec2:DescribeAddresses",
+                "kms:ListAliases",
+                "kms:ListKeys",
+                "kms:DescribeKey",
+                "cloudformation:ListStacks",
+                "cloudformation:DescribeAccountLimits",
+                "ds:DescribeDirectories",
+                "fsx:DescribeVolumes",
+                "fsx:DescribeBackups",
+                "fsx:DescribeStorageVirtualMachines",
+                "fsx:DescribeFileSystems",
+                "servicequotas:ListServiceQuotas",
+                "ssm:GetParametersByPath",
+                "ssm:GetCommandInvocation",
+                "ssm:SendCommand",
+                "ssm:GetConnectionStatus",
+                "ssm:DescribePatchBaselines",
+                "ssm:DescribeInstancePatchStates",
+                "ssm:ListCommands",
+                "ssm:DescribeInstanceInformation",
+                "fsx:ListTagsForResource",
+                "logs:DescribeLogGroups",
+                "bedrock:GetFoundationModelAvailability",
+                "bedrock:ListInferenceProfiles"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "SSMParameterStore",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameter",
+                "ssm:GetParameters",
+                "ssm:PutParameter",
+                "ssm:DeleteParameters"
+            ],
+            "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+        },
+        {
+            "Sid": "SSMResponseCloudWatch",
+            "Effect": "Allow",
+            "Action": [
+                "logs:GetLogEvents",
+                "logs:PutRetentionPolicy"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
+        }
+    ]
 }
 ----
 --
-.読み取り/書き込みモード
+.運用と修復
+--
+[source, json]
+----
+[
+    {
+        "Sid": "FSxRemediation",
+        "Effect": "Allow",
+        "Action": [
+            "fsx:UpdateFileSystem",
+            "fsx:UpdateVolume"
+        ],
+        "Resource": "*"
+    },
+    {
+        "Sid": "EC2Remediation",
+        "Effect": "Allow",
+        "Action": [
+            "ec2:StartInstances",
+            "ec2:ModifyInstanceAttribute",
+            "ec2:StopInstances"
+        ],
+        "Resource": "*",
+        "Condition": {
+            "StringLike": {
+                "ec2:ResourceTag/aws:cloudformation:stack-name": "WLMDB*"
+            }
+        }
+    }
+]
+----
+--
+.データベースホストの作成
 --
 [source, json]
 ----
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "EC2TagGroup",
-      "Effect": "Allow",
-      "Action": [
-        "ec2:AllocateAddress",
-        "ec2:AllocateHosts",
-        "ec2:AssignPrivateIpAddresses",
-        "ec2:AssociateAddress",
-        "ec2:AssociateRouteTable",
-        "ec2:AssociateSubnetCidrBlock",
-        "ec2:AssociateVpcCidrBlock",
-        "ec2:AttachInternetGateway",
-        "ec2:AttachNetworkInterface",
-        "ec2:AttachVolume",
-        "ec2:AuthorizeSecurityGroupEgress",
-        "ec2:AuthorizeSecurityGroupIngress",
-        "ec2:CreateVolume",
-        "ec2:DeleteNetworkInterface",
-        "ec2:DeleteSecurityGroup",
-        "ec2:DeleteTags",
-        "ec2:DeleteVolume",
-        "ec2:DetachNetworkInterface",
-        "ec2:DetachVolume",
-        "ec2:DisassociateAddress",
-        "ec2:DisassociateIamInstanceProfile",
-        "ec2:DisassociateRouteTable",
-        "ec2:DisassociateSubnetCidrBlock",
-        "ec2:DisassociateVpcCidrBlock",
-        "ec2:ModifyInstanceAttribute",
-        "ec2:ModifyInstancePlacement",
-        "ec2:ModifyNetworkInterfaceAttribute",
-        "ec2:ModifySubnetAttribute",
-        "ec2:ModifyVolume",
-        "ec2:ModifyVolumeAttribute",
-        "ec2:ReleaseAddress",
-        "ec2:ReplaceRoute",
-        "ec2:ReplaceRouteTableAssociation",
-        "ec2:RevokeSecurityGroupEgress",
-        "ec2:RevokeSecurityGroupIngress",
-        "ec2:StartInstances",
-        "ec2:StopInstances"
-      ],
-      "Resource": "*",
-      "Condition": {
-        "StringLike": {
-          "ec2:ResourceTag/aws:cloudformation:stack-name": "WLMDB*"
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2TagGroup",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AllocateAddress",
+                "ec2:AllocateHosts",
+                "ec2:AssignPrivateIpAddresses",
+                "ec2:AssociateAddress",
+                "ec2:AssociateRouteTable",
+                "ec2:AssociateSubnetCidrBlock",
+                "ec2:AssociateVpcCidrBlock",
+                "ec2:AttachInternetGateway",
+                "ec2:AttachNetworkInterface",
+                "ec2:AttachVolume",
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:CreateVolume",
+                "ec2:DeleteNetworkInterface",
+                "ec2:DeleteSecurityGroup",
+                "ec2:DeleteTags",
+                "ec2:DeleteVolume",
+                "ec2:DetachNetworkInterface",
+                "ec2:DetachVolume",
+                "ec2:DisassociateAddress",
+                "ec2:DisassociateIamInstanceProfile",
+                "ec2:DisassociateRouteTable",
+                "ec2:DisassociateSubnetCidrBlock",
+                "ec2:DisassociateVpcCidrBlock",
+                "ec2:ModifyInstancePlacement",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:ModifySubnetAttribute",
+                "ec2:ModifyVolume",
+                "ec2:ModifyVolumeAttribute",
+                "ec2:ReleaseAddress",
+                "ec2:ReplaceRoute",
+                "ec2:ReplaceRouteTableAssociation",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/aws:cloudformation:stack-name": "WLMDB*"
+                }
+            }
+        },
+        {
+            "Sid": "FSxNGroup",
+            "Effect": "Allow",
+            "Action": [
+                "fsx:TagResource"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:ResourceTag/aws:cloudformation:stack-name": "WLMDB*"
+                }
+            }
+        },
+        {
+            "Sid": "CreationGroup",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:CreateStack",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:DescribeStacks",
+                "cloudformation:ValidateTemplate",
+                "ec2:CreateLaunchTemplate",
+                "ec2:CreateLaunchTemplateVersion",
+                "ec2:CreateNetworkInterface",
+                "ec2:CreateSecurityGroup",
+                "ec2:CreateTags",
+                "ec2:CreateVpcEndpoint",
+                "ec2:RunInstances",
+                "ec2:DescribeTags",
+                "ec2:DescribeLaunchTemplates",
+                "ec2:ModifyVpcAttribute",
+                "fsx:CreateFileSystem",
+                "fsx:CreateStorageVirtualMachine",
+                "fsx:CreateVolume",
+                "fsx:DescribeFileSystemAliases",
+                "kms:CreateGrant",
+                "kms:DescribeCustomKeyStores",
+                "kms:GenerateDataKey",
+                "kms:Decrypt",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:GetLogGroupFields",
+                "logs:GetLogRecord",
+                "logs:ListLogDeliveries",
+                "logs:PutLogEvents",
+                "logs:TagResource",
+                "sns:Publish",
+                "ssm:PutComplianceItems",
+                "ssm:PutConfigurePackageResult",
+                "ssm:PutInventory",
+                "ssm:UpdateAssociationStatus",
+                "ssm:UpdateInstanceAssociationStatus",
+                "ssm:UpdateInstanceInformation",
+                "ssmmessages:CreateControlChannel",
+                "ssmmessages:CreateDataChannel",
+                "ssmmessages:OpenControlChannel",
+                "ssmmessages:OpenDataChannel",
+                "compute-optimizer:GetEnrollmentStatus",
+                "compute-optimizer:PutRecommendationPreferences",
+                "compute-optimizer:GetEffectiveRecommendationPreferences",
+                "compute-optimizer:GetEC2InstanceRecommendations",
+                "autoscaling:DescribeAutoScalingGroups",
+                "autoscaling:DescribeAutoScalingInstances",
+                "iam:GetPolicy",
+                "iam:GetPolicyVersion",
+                "iam:GetRole",
+                "iam:GetRolePolicy",
+                "iam:GetUser"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "ArnGroup",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:SignalResource"
+            ],
+            "Resource": [
+                "arn:aws:cloudformation:*:*:stack/WLMDB*",
+                "arn:aws:logs:*:*:log-group:WLMDB*"
+            ]
+        },
+        {
+            "Sid": "IAMGroup1",
+            "Effect": "Allow",
+            "Action": [
+                "iam:AddRoleToInstanceProfile",
+                "iam:CreateInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "iam:PutRolePolicy",
+                "iam:RemoveRoleFromInstanceProfile"
+            ],
+            "Resource": [
+                "arn:aws:iam::*:instance-profile/*",
+                "arn:aws:iam::*:role/WLMDB*"
+            ]
+        },
+        {
+            "Sid": "IAMGroup2",
+            "Effect": "Allow",
+            "Action": "iam:CreateServiceLinkedRole",
+            "Resource": [
+                "arn:aws:iam::*:instance-profile/*",
+                "arn:aws:iam::*:role/WLMDB*"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "iam:AWSServiceName": "ec2.amazonaws.com"
+                }
+            }
+        },
+        {
+            "Sid": "IAMGroup3",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": [
+                "arn:aws:iam::*:instance-profile/*",
+                "arn:aws:iam::*:role/WLMDB*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": "ec2.amazonaws.com"
+                }
+            }
+        },
+        {
+            "Sid": "IAMGroup4",
+            "Effect": "Allow",
+            "Action": "iam:CreateRole",
+            "Resource": "arn:aws:iam::*:role/WLMDB*"
         }
-      }
-    },
-    {
-      "Sid": "FSxNGroup",
-      "Effect": "Allow",
-      "Action": [
-        "fsx:TagResource"
-      ],
-      "Resource": "*",
-      "Condition": {
-        "StringLike": {
-          "aws:ResourceTag/aws:cloudformation:stack-name": "WLMDB*"
-        }
-      }
-    },
-    {
-      "Sid": "CommonGroup",
-      "Effect": "Allow",
-      "Action": [
-        "cloudformation:CreateStack",
-        "cloudformation:DescribeStackEvents",
-        "cloudformation:DescribeStacks",
-        "cloudformation:ListStacks",
-        "cloudformation:ValidateTemplate",
-        "cloudformation:DescribeAccountLimits",
-        "cloudwatch:GetMetricStatistics",
-        "cloudwatch:GetMetricData",
-        "ds:DescribeDirectories",
-        "ec2:CreateLaunchTemplate",
-        "ec2:CreateLaunchTemplateVersion",
-        "ec2:CreateNetworkInterface",
-        "ec2:CreateSecurityGroup",
-        "ec2:CreateTags",
-        "ec2:CreateVpcEndpoint",
-        "ec2:DescribeInstances",
-        "ec2:DescribeVolumes",
-        "ec2:DescribeSecurityGroups",
-        "ec2:DescribeImages",
-        "ec2:DescribeKeyPairs",
-        "ec2:DescribeVpcs",
-        "ec2:DescribeSubnets",
-        "ec2:DescribeTags",
-        "ec2:DescribeAddresses",
-        "ec2:DescribeNetworkInterfaces",
-        "ec2:DescribeRegions",
-        "ec2:DescribeRouteTables",
-        "ec2:DescribeInstanceTypes",
-        "ec2:DescribeVpcEndpoints",
-        "ec2:DescribeInstanceTypeOfferings",
-        "ec2:DescribeSnapshots",
-        "ec2:DescribeLaunchTemplates",
-        "ec2:RunInstances",
-        "ec2:ModifyVpcAttribute",
-        "fsx:CreateFileSystem",
-        "fsx:UpdateFileSystem",
-        "fsx:CreateStorageVirtualMachine",
-        "fsx:CreateVolume",
-        "fsx:UpdateVolume",
-        "fsx:DescribeFileSystems",
-        "fsx:DescribeStorageVirtualMachines",
-        "fsx:DescribeVolumes",
-        "fsx:DescribeFileSystemAliases",
-        "fsx:DescribeBackups",
-        "fsx:ListTagsForResource",
-        "kms:CreateGrant",
-        "kms:DescribeKey",
-        "kms:DescribeCustomKeyStores",
-        "kms:ListAliases",
-        "kms:ListKeys",
-        "kms:GenerateDataKey",
-        "kms:Decrypt",
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:DescribeLogGroups",
-        "logs:DescribeLogStreams",
-        "logs:GetLogEvents",
-        "logs:GetLogGroupFields",
-        "logs:GetLogRecord",
-        "logs:ListLogDeliveries",
-        "logs:PutLogEvents",
-        "logs:TagResource",
-        "logs:PutRetentionPolicy",
-        "servicequotas:ListServiceQuotas",
-        "sns:ListTopics",
-        "sns:Publish",
-        "ssm:DescribeInstanceInformation",
-        "ssm:DescribeInstancePatchStates",
-        "ssm:DescribePatchBaselines",
-        "ssm:GetParametersByPath",
-        "ssm:GetCommandInvocation",
-        "ssm:GetConnectionStatus",
-        "ssm:ListCommands",
-        "ssm:PutComplianceItems",
-        "ssm:PutConfigurePackageResult",
-        "ssm:PutInventory",
-        "ssm:SendCommand",
-        "ssm:UpdateAssociationStatus",
-        "ssm:UpdateInstanceAssociationStatus",
-        "ssm:UpdateInstanceInformation",
-        "ssmmessages:CreateControlChannel",
-        "ssmmessages:CreateDataChannel",
-        "ssmmessages:OpenControlChannel",
-        "ssmmessages:OpenDataChannel",
-        "compute-optimizer:GetEnrollmentStatus",
-        "compute-optimizer:PutRecommendationPreferences",
-        "compute-optimizer:GetEffectiveRecommendationPreferences",
-        "compute-optimizer:GetEC2InstanceRecommendations",
-        "autoscaling:DescribeAutoScalingGroups",
-        "autoscaling:DescribeAutoScalingInstances",
-        "bedrock:GetFoundationModelAvailability",
-        "bedrock:ListInferenceProfiles",
-        "iam:GetPolicy",
-        "iam:GetPolicyVersion",
-        "iam:GetRole",
-        "iam:GetRolePolicy",
-        "iam:GetUser"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Sid": "ArnGroup",
-      "Effect": "Allow",
-      "Action": [
-        "cloudformation:SignalResource"
-      ],
-      "Resource": [
-        "arn:aws:cloudformation:*:*:stack/WLMDB*",
-        "arn:aws:logs:*:*:log-group:WLMDB*"
-      ]
-    },
-    {
-      "Sid": "IAMGroup1",
-      "Effect": "Allow",
-      "Action": [
-        "iam:AddRoleToInstanceProfile",
-        "iam:CreateInstanceProfile",
-        "iam:DeleteInstanceProfile",
-        "iam:PutRolePolicy",
-        "iam:RemoveRoleFromInstanceProfile"
-      ],
-      "Resource": [
-        "arn:aws:iam::*:instance-profile/*",
-        "arn:aws:iam::*:role/WLMDB*"
-      ]
-    },
-    {
-      "Sid": "IAMGroup2",
-      "Effect": "Allow",
-      "Action": "iam:CreateServiceLinkedRole",
-      "Resource": [
-        "arn:aws:iam::*:instance-profile/*",
-        "arn:aws:iam::*:role/WLMDB*"
-      ],
-      "Condition": {
-        "StringLike": {
-          "iam:AWSServiceName": "ec2.amazonaws.com"
-        }
-      }
-    },
-    {
-      "Sid": "IAMGroup3",
-      "Effect": "Allow",
-      "Action": "iam:PassRole",
-      "Resource": [
-        "arn:aws:iam::*:instance-profile/*",
-        "arn:aws:iam::*:role/WLMDB*"
-      ],
-      "Condition": {
-        "StringEquals": {
-          "iam:PassedToService": "ec2.amazonaws.com"
-        }
-      }
-    },
-    {
-      "Sid": "IAMGroup4",
-      "Effect": "Allow",
-      "Action": "iam:CreateRole",
-      "Resource": "arn:aws:iam::*:role/WLMDB*"
-    },
-    {
-      "Sid": "SSMParameterStore",
-      "Effect": "Allow",
-      "Action": [
-        "ssm:GetParameter",
-        "ssm:GetParameters",
-        "ssm:PutParameter",
-        "ssm:DeleteParameters"
-      ],
-      "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:SimulatePrincipalPolicy"
-      ],
-      "Resource": "*"
-    }
-  ]
+    ]
 }
 ----
 --
@@ -723,221 +682,122 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 ====
 [cols="2, 2, 1, 1"]
 |===
-| 目的 | アクション | 使用先 | モード 
+| 目的 | アクション | 使用先 | 許可ポリシー 
 
 
 | FSx for ONTAP、EBS、FSx for Windows File Server のメトリック統計とコンピューティング最適化の推奨事項を取得します。 | CloudWatch：GetMetricStatistics  a| 
 * インベントリ
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
-
-
-| 登録済みのSQLノードからAmazon CloudWatchに保存されたパフォーマンスメトリクスを収集します。登録済みのSQLインスタンスのインスタンス管理画面に、パフォーマンストレンドチャートにデータが生成されます。 | CloudWatch：GetMetricData | インベントリ | 読み取り専用 
-
-
-| イベントのトリガーのリストと設定 | SNS:リストトピック | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 登録済みのSQLノードからAmazon CloudWatchに保存されたパフォーマンスメトリクスを収集します。登録済みのSQLインスタンスのインスタンス管理画面に、パフォーマンストレンドチャートにデータが生成されます。 | CloudWatch：GetMetricData | インベントリ | 表示、計画、分析 
 
 
 .4+| EC2インスタンスの詳細を取得 | EC2: DescribeInstances  a| 
 * インベントリ
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+| EC2：DescribeKeyPairs | 導入 | 表示、計画、分析 
 
 
-| EC2：DescribeKeyPairs | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| EC2: DescribeNetworkInterfaces | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| EC2: DescribeNetworkInterfaces | 導入 | 表示、計画、分析 
 
 
 | EC2:説明InstanceTypes  a| 
 * 導入
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 .6+| FSx for ONTAPの導入フォームに必要事項をご記入ください | EC2: DescribeVpcs  a| 
 * 導入
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 | EC2: DescribeSubnets  a| 
 * 導入
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+| EC2: DescribeSecurityGroups | 導入 | 表示、計画、分析 
 
 
-| EC2: DescribeSecurityGroups | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| EC2: DescribeImages | 導入 | 表示、計画、分析 
 
 
-
-
-| EC2: DescribeImages | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| EC2: DescribeRegions (説明領域 | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| EC2: DescribeRegions (説明領域 | 導入 | 表示、計画、分析 
 
 
 | EC2: DescribeRouteTables  a| 
 * 導入
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 | 既存のVPCエンドポイントを取得して、導入前に新しいエンドポイントを作成する必要があるかどうかを判断 | EC2: DescribeVpcEndpoints  a| 
 * 導入
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+| EC2インスタンスのパブリックネットワーク接続に関係なく、必要なサービス用にVPCエンドポイントが存在しない場合はVPCエンドポイントを作成する | EC2：CreateVpcEndpoint | 導入 | データベースホストの作成 
 
 
-| EC2インスタンスのパブリックネットワーク接続に関係なく、必要なサービス用にVPCエンドポイントが存在しない場合はVPCエンドポイントを作成する | EC2：CreateVpcEndpoint | 導入 | 読み取り / 書き込み 
+| 検証ノード（t2.micro/t3.micro）のリージョンで使用可能なインスタンスタイプを取得します。 | EC2:説明InstanceTypeOfferings | 導入 | 表示、計画、分析 
 
 
-| 検証ノード（t2.micro/t3.micro）のリージョンで使用可能なインスタンスタイプを取得します。 | EC2:説明InstanceTypeOfferings | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| 接続されている各EBSボリュームのSnapshot詳細を取得して、価格設定と削減効果を見積もる | ec2: DescribeSnapshots | コスト削減の詳細  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 接続されている各EBSボリュームのSnapshot詳細を取得して、価格設定と削減効果を見積もる | ec2: DescribeSnapshots | コスト削減の詳細 | 表示、計画、分析 
 
 
 | 添付されている各EBSボリュームの詳細を確認して、価格設定と削減効果を見積もる | EC2: DescribeVolumesの場合  a| 
 * インベントリ
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+.3+| FSx for ONTAPのファイルシステム暗号化に関するKMSの主な詳細情報を入手 | KMS：エイリアスを確認する | 導入 | 表示、計画、分析 
 
 
-.3+| FSx for ONTAPのファイルシステム暗号化に関するKMSの主な詳細情報を入手 | KMS：エイリアスを確認する | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| KMS：ListKeys | 導入 | 表示、計画、分析 
 
 
+| KMS:説明キー | 導入 | 表示、計画、分析 
 
 
-| KMS：ListKeys | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 環境で実行されているCloudFormationスタックのリストを取得してクォータ制限を確認 | CloudFormation：リストスタック | 導入 | 表示、計画、分析 
 
 
+| 展開を開始する前に、リソースのアカウント制限を確認する | CloudFormation：DescriptionAccountLimits | 導入 | 表示、計画、分析 
 
 
-| KMS:説明キー | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| 環境で実行されているCloudFormationスタックのリストを取得してクォータ制限を確認 | CloudFormation：リストスタック | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| 展開を開始する前に、リソースのアカウント制限を確認する | CloudFormation：DescriptionAccountLimits | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| AWSが管理するリージョン内のActive Directoryのリストを取得する | ds:説明ディレクトリ | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| AWSが管理するリージョン内のActive Directoryのリストを取得する | ds:説明ディレクトリ | 導入 | 表示、計画、分析 
 
 
 .5+| ボリューム、バックアップ、SVM、AZ内のファイルシステム、FSx for ONTAPファイルシステムのタグの一覧と詳細を取得できます | FSx：Description  a| 
 * インベントリ
 * コスト削減額をチェック
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 | FSx：バックアップの説明  a| 
 * インベントリ
 * コスト削減額をチェック
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 | FSx：DescriptionStorageVirtualMachines  a| 
@@ -945,11 +805,7 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 * 処理の管理
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 | FSx：DescriptionFileSystems  a| 
@@ -958,32 +814,16 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 * インベントリ
 * コスト削減の詳細
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+| FSx：ListTagsForResource | 処理の管理 | 表示、計画、分析 
 
 
-| FSx：ListTagsForResource | 処理の管理  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| CloudFormation と VPC のサービスクォータ制限を取得する / SQL、ドメイン、FSx for ONTAPに提供された認証情報のユーザーアカウントにシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 | 表示、計画、分析 
 
 
-
-
-| CloudFormationとVPCのサービスクォータ制限を取得 | サービスクォータ：ListServiceQuotas | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| SSMベースのクエリを使用して、FSx for ONTAPでサポートされるリージョンの最新リストを取得 | SSM：GetParametersByPath | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| SSMベースのクエリを使用して、FSx for ONTAPでサポートされるリージョンの最新リストを取得 | SSM：GetParametersByPath | 導入 | 表示、計画、分析 
 
 
 | 導入後の管理操作のコマンド送信後にSSM応答をポーリング | SSM：GetCommandInvocation  a| 
@@ -992,24 +832,16 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 * コスト削減の詳細
 * 最適化
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
-
-
-| SSM経由でEC2インスタンスにコマンドを送信 | SSM:sendCommand  a| 
+| 検出と管理のために SSM 経由で EC2 インスタンスにコマンドを送信します | SSM:sendCommand  a| 
 * 処理の管理
 * インベントリ
 * コスト削減の詳細
 * 最適化
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 | 導入後にインスタンスのSSM接続ステータスを取得 | SSM：GetConnectionStatus  a| 
@@ -1017,506 +849,415 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 * インベントリ
 * 最適化
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+| 管理対象EC2インスタンスのグループのSSMアソシエーションステータスの取得（SQLノード） | SSM：InstanceInformationの説明 | インベントリ | 表示、計画、分析 
 
 
-| 管理対象EC2インスタンスのグループのSSMアソシエーションステータスの取得（SQLノード） | SSM：InstanceInformationの説明 | インベントリ | 読み取り 
+| オペレーティングシステムのパッチ評価に使用できるパッチベースラインのリストを入手する | SSM：DescribePatchBaselines | 最適化 | 表示、計画、分析 
 
 
-| オペレーティングシステムのパッチ評価に使用できるパッチベースラインのリストを入手する | SSM：DescribePatchBaselines | 最適化  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| オペレーティングシステムのパッチ評価のためのWindows EC2インスタンスのパッチ状態の取得 | SSM:DescribeInstancePatchStates | 最適化 | 表示、計画、分析 
 
 
-
-
-| オペレーティングシステムのパッチ評価のためのWindows EC2インスタンスのパッチ状態の取得 | SSM:DescribeInstancePatchStates | 最適化  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| オペレーティングシステムのパッチ管理用にAWS Patch ManagerによってEC2インスタンスで実行されるコマンドの一覧表示 | SSM：ListCommands | 最適化  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| オペレーティングシステムのパッチ管理用にAWS Patch ManagerによってEC2インスタンスで実行されるコマンドの一覧表示 | SSM：ListCommands | 最適化 | 表示、計画、分析 
 
 
 | アカウントがAWS Compute Optimizerに登録されているかどうかを確認 | compute-optimizer：GetEnrollmentStatus  a| 
 * コスト削減の詳細
 * 最適化
 
-| 読み取り / 書き込み 
+| データベースホストの作成 
 
 
 | AWS Compute Optimizerで既存の推奨構成を更新して、SQL Serverワークロードの推奨構成を調整 | 計算オプティマイザ:PutRecommendationPreferences  a| 
 * コスト削減の詳細
 * 最適化
 
-| 読み取り / 書き込み 
+| データベースホストの作成 
 
 
 | AWS Compute Optimizerから、特定のリソースに対して有効な推奨設定を取得する | compute-optimizer:GetEffectiveRecommendationPreferences  a| 
 * コスト削減の詳細
 * 最適化
 
-| 読み取り / 書き込み 
+| データベースホストの作成 
 
 
 | Amazon Elastic Compute Cloud（Amazon EC2）インスタンス用にAWS Compute Optimizerが生成する推奨事項を取得 | コンピューティングオプティマイザ：GetEC2InstanceRecommendations  a| 
 * コスト削減の詳細
 * 最適化
 
-| 読み取り / 書き込み 
+| データベースホストの作成 
 
 
 .2+| 自動スケーリンググループへのインスタンスの関連付けのチェック | オートスケーリング:説明AutoScalingGroups  a| 
 * コスト削減の詳細
 * 最適化
 
-| 読み取り / 書き込み 
+| データベースホストの作成 
 
 
 | オートスケーリング:説明AutoScalingInstances  a| 
 * コスト削減の詳細
 * 最適化
 
-| 読み取り / 書き込み 
+| データベースホストの作成 
 
 
 .4+| 導入時またはAWSアカウントで管理されるAD、FSx for ONTAP、SQLユーザクレデンシャルのSSMパラメータの取得、一覧表示、作成、削除 | SSM：getParameter ^1^  a| 
 * 導入
 * 処理の管理
-
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| SSM：GetParameters ^1^ | 処理の管理  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| SSM：PutParameter ^1^  a| 
-* 導入
-* 処理の管理
-
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| SSM：削除パラメータ^1^ | 処理の管理  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-.9+| ネットワークリソースをSQLノードと検証ノードに関連付け、SQLノードにセカンダリIPを追加する | EC2：AllocateAddress ^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AllocateHosts ^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AssignPrivateIpAddresses ^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AssociateAddress ^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AssociateRouteTable ^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AssociateSubnetCidrBlock^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AssociateVpcCidrBlock^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AttachInternetGateway ^1^ | 導入 | 読み取り / 書き込み 
-
-
-| EC2：AttachNetworkInterface ^1^ | 導入 | 読み取り / 書き込み 
-
-
-| 導入に必要なEBSボリュームをSQLノードに接続する | EC2：AttachVolume | 導入 | 読み取り / 書き込み 
-
-
-.2+| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
-
-
-| ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
-
-
-| 導入用にSQLノードに必要なEBSボリュームを作成する | EC2：CreateVolume | 導入 | 読み取り / 書き込み 
-
-
-.11+| タイプT2.microで作成された一時検証ノードを削除し、失敗したEC2 SQLノードのロールバックまたは再試行のために削除します。 | EC2：DeleteNetworkInterface | 導入 | 読み取り / 書き込み 
-
-
-| EC2: DeleteSecurityGroup | 導入 | 読み取り / 書き込み 
-
-
-| EC2:タグを削除します | 導入 | 読み取り / 書き込み 
-
-
-| EC2：DeleteVolume | 導入 | 読み取り / 書き込み 
-
-
-| EC2：DetachNetworkInterface | 導入 | 読み取り / 書き込み 
-
-
-| EC2：DetachVolumeの場合 | 導入 | 読み取り / 書き込み 
-
-
-| EC2：アソシエーション解除アドレス | 導入 | 読み取り / 書き込み 
-
-
-| EC2: DisassociateIamInstanceProfile | 導入 | 読み取り / 書き込み 
-
-
-| EC2：関連付け解除ルートテーブル | 導入 | 読み取り / 書き込み 
-
-
-| EC2：SubnetCidrBlockの関連付けを解除 | 導入 | 読み取り / 書き込み 
-
-
-| EC2：VpcCidrBlockの関連付けを解除 | 導入 | 読み取り / 書き込み 
-
-
-.7+| 作成されたSQLインスタンスの属性を変更します。WLMDBで始まる名前にのみ適用されます。 | EC2：ModifyInstanceAttribute | 導入 | 読み取り / 書き込み 
-
-
-| EC2：ModifyInstancePlacement | 導入 | 読み取り / 書き込み 
-
-
-| EC2:ModifyNetworkInterfaceAttributeのいずれかです | 導入 | 読み取り / 書き込み 
-
-
-| EC2：ModifySubnetAttribute | 導入 | 読み取り / 書き込み 
-
-
-| EC2：ModifyVolume | 導入 | 読み取り / 書き込み 
-
-
-| EC2：ModifyVolumeAttributeのことです | 導入 | 読み取り / 書き込み 
-
-
-| EC2：ModifyVpcAttribute | 導入 | 読み取り / 書き込み 
-
-
-.5+| 検証インスタンスの関連付けを解除して破棄する | EC2：リリースアドレス | 導入 | 読み取り / 書き込み 
-
-
-| EC2：ReplaceRoute | 導入 | 読み取り / 書き込み 
-
-
-| EC2：ReplaceRouteTableAssociation | 導入 | 読み取り / 書き込み 
-
-
-| EC2: RevokeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
-
-
-| EC2: RevokeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
-
-
-| 導入されたインスタンスの開始 | EC2：StartInstances（EC2：開始インスタンス | 導入 | 読み取り / 書き込み 
-
-
-| 導入されたインスタンスの停止 | EC2：StopInstances | 導入 | 読み取り / 書き込み 
-
-
-| WLMDBによって作成されたAmazon FSx for NetApp ONTAPリソースのカスタム値にタグを付けて、リソース管理時に課金の詳細を取得 | FSx：TagResource ^1^  a| 
-* 導入
-* 処理の管理
-
-| 読み取り / 書き込み 
-
-
-.5+| 導入用のCloudFormationテンプレートを作成して検証 | CloudFormation：CreateStack | 導入 | 読み取り / 書き込み 
-
-
-| CloudFormation：DescribeStackEvents | 導入 | 読み取り / 書き込み 
-
-
-| CloudFormation：DescribeStack | 導入 | 読み取り / 書き込み 
-
-
-| CloudFormation：リストスタック | 導入 | 読み取り / 書き込み 
-
-
-| CloudFormation：ValidateTemplate | 導入 | 読み取り / 書き込み 
-
-
-| リージョンで使用可能なディレクトリを取得する | ds:説明ディレクトリ | 導入 | 読み取り / 書き込み 
-
-
-.2+| プロビジョニングされたEC2インスタンスにアタッチされたセキュリティグループのルールを追加します。 | ec2：AuthorizeSecurityGroupEgress | 導入 | 読み取り / 書き込み 
-
-
-| ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
-
-
-.2+| 再試行およびロールバック用にネストされたスタックテンプレートを作成する | EC2：CreateLaunchTemplate | 導入 | 読み取り / 書き込み 
-
-
-| EC2：CreateLaunchTemplateVersion | 導入 | 読み取り / 書き込み 
-
-
-.3+| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateNetworkInterface | 導入 | 読み取り / 書き込み 
-
-
-| EC2：CreateSecurityGroup | 導入 | 読み取り / 書き込み 
-
-
-| ec2：CreateTags | 導入 | 読み取り / 書き込み 
-
-
-| 検証ノード用に一時的に作成されたセキュリティグループを削除します。 | EC2: DeleteSecurityGroup | 導入 | 読み取り / 書き込み 
-
-
-.2+| プロビジョニング用のインスタンスの詳細を取得する | ec2:アドレスの説明  a| 
-導入
-| 読み取り / 書き込み 
-
-
-| ec2:起動テンプレートの説明  a| 
-導入
-| 読み取り / 書き込み 
-
-
-| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | 読み取り / 書き込み 
-
-
-.3+| プロビジョニングに必要なFSx for ONTAPリソースを作成します。既存のFSx for ONTAPシステムでは、SQLボリュームをホストするための新しいSVMが作成されます。 | FSx：CreateFileSystem | 導入 | 読み取り / 書き込み 
-
-
-| FSx：CreateStorageVirtualMachine | 導入 | 読み取り / 書き込み 
-
-
-| FSx：ボリュームの作成  a| 
-* 導入
-* 処理の管理
-
-| 読み取り / 書き込み 
-
-
-| FSx for ONTAPの詳細 | fsx:ファイルシステムエイリアスの説明 | 導入 | 読み取り / 書き込み 
-
-
-| FSx for ONTAPファイルシステムのサイズを変更してファイルシステムのヘッドルームを修正 | FSx：ファイルシステムの更新 | 最適化 | 読み取り / 書き込み 
-
-
-| ボリュームのサイズを変更してログとtempdbのドライブサイズを修正 | FSx：UPDATEVOLUME | 最適化 | 読み取り / 書き込み 
-
-
-.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 読み取り / 書き込み 
-
-
-| kms:カスタムキーストアの説明 | 導入 | 読み取り / 書き込み 
-
-
-| KMS：GenerateDataKey | 導入 | 読み取り / 書き込み 
-
-
-.8+| EC2インスタンスで実行される検証スクリプトとプロビジョニングスクリプト用にCloudWatchログを作成する | ログ:CreateLogGroup | 導入 | 読み取り / 書き込み 
-
-
-| ログ:CreateLogStream | 導入 | 読み取り / 書き込み 
-
-
-| ログ:DescriptionLogStreams  a| 
-* 導入
-* 評価
-
-| 読み取り / 書き込み 
-
-
-| ログ:GetLogGroupFields | 導入 | 読み取り / 書き込み 
-
-
-| ログ:GetLogRecord | 導入 | 読み取り / 書き込み 
-
-
-| ログ:ListLogDeliveries | 導入 | 読み取り / 書き込み 
-
-
-| ログ:PutLogEvents  a| 
-* 導入
-* 処理の管理
-
-| 読み取り / 書き込み 
-
-
-| ログ:TagResource | 導入 | 読み取り / 書き込み 
-
-
-| Workload Factory は、SSM 出力の切り捨てが発生すると、SQL インスタンスの Amazon CloudWatch ログに切り替えます。 | ログ:GetLogEvents  a| 
-* ストレージ評価（最適化）
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| Workload Factory が現在のログ グループを取得し、Workload Factory によって作成されたログ グループの保持が設定されていることを確認することを許可します。 | ログ:DescriptionLogGroups  a| 
-* ストレージ評価（最適化）
-* インベントリ
-
-| 読み取り専用 
-
-
-| Workload Factory が作成したログ グループに 1 日間の保持ポリシーを設定できるようにして、SSM コマンド出力のログ ストリームの不要な蓄積を回避します。 | ログ:PutRetentionPolicy  a| 
-* ストレージ評価（最適化）
-* インベントリ
-
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-| ユーザアカウントに、SQL、ドメイン、FSx for ONTAPに提供されるクレデンシャルのシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 | 読み取り / 書き込み 
-
-
-.2+| カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS:リストトピック | 導入 | 読み取り / 書き込み 
-
-
-| SNS：公開 | 導入 | 読み取り / 書き込み 
-
-
-.11+| プロビジョニングされたSQLインスタンスに対して検出スクリプトを実行し、FSx for ONTAPでサポートされるAWSリージョンの最新のリストを取得するために必要なSSM権限。 | SSM：PutComplianceItems | 導入 | 読み取り / 書き込み 
-
-
-| SSM：PutConfigurePackageResult | 導入 | 読み取り / 書き込み 
-
-
-| SSM：PutInventory | 導入 | 読み取り / 書き込み 
-
-
-| SSM:sendCommand  a| 
-* 導入
-* インベントリ
-* 処理の管理
-
-| 読み取り / 書き込み 
-
-
-| SSM：UpdateAssociationStatus | 導入 | 読み取り / 書き込み 
-
-
-| SSM：UpdateInstanceAssociationStatus | 導入 | 読み取り / 書き込み 
-
-
-| SSM：UpdateInstanceInformation | 導入 | 読み取り / 書き込み 
-
-
-| ssmmessages:CreateControlChannel | 導入 | 読み取り / 書き込み 
-
-
-| ssmmessages:データチャネルの作成 | 導入 | 読み取り / 書き込み 
-
-
-| ssmmessages:OpenControlChannel | 導入 | 読み取り / 書き込み 
-
-
-| ssmmessages:OpenDataChannel | 導入 | 読み取り / 書き込み 
-
-
-.4+| FSx for ONTAP、Active Directory、SQLユーザのクレデンシャルを保存（SQLユーザ認証のみ） | SSM：getParameter ^1^  a| 
-* 導入
-* 処理の管理
-* インベントリ
-
-| 読み取り / 書き込み 
+| 表示、計画、分析 
 
 
 | SSM：GetParameters ^1^  a| 
 * 導入
+* 処理の管理
 * インベントリ
 
-| 読み取り / 書き込み 
+| 表示、計画、分析 
 
 
 | SSM：PutParameter ^1^  a| 
 * 導入
 * 処理の管理
 
-| 読み取り / 書き込み 
+| 表示、計画、分析 
 
 
 | SSM：削除パラメータ^1^  a| 
 * 導入
 * 処理の管理
 
-| 読み取り / 書き込み 
+| 表示、計画、分析 
 
 
-| 成功または失敗時にCloudFormationスタックに信号を送信します。 | CloudFormation：SignalResource ^1^ | 導入 | 読み取り / 書き込み 
+.9+| ネットワークリソースをSQLノードと検証ノードに関連付け、SQLノードにセカンダリIPを追加する | EC2：AllocateAddress ^1^ | 導入 | データベースホストの作成 
 
 
-| テンプレートによって作成されたEC2ロールをEC2のインスタンスプロファイルに追加して、EC2上のスクリプトが展開に必要なリソースにアクセスできるようにします。 | IAM：AddRoleToInstanceProfile | 導入 | 読み取り / 書き込み 
+| EC2：AllocateHosts ^1^ | 導入 | データベースホストの作成 
 
 
-| EC2のインスタンスプロファイルを作成し、作成したEC2ロールを割り当てます。 | IAM：CreateInstanceProfile | 導入 | 読み取り / 書き込み 
+| EC2：AssignPrivateIpAddresses ^1^ | 導入 | データベースホストの作成 
 
 
-| 以下の権限を持つテンプレートを使用してEC2ロールを作成する | IAM：CREATEROLE | 導入 | 読み取り / 書き込み 
+| EC2：AssociateAddress ^1^ | 導入 | データベースホストの作成 
 
 
-| EC2サービスにリンクされたロールの作成 | IAM：CreateServiceLinkedRole^2^ | 導入 | 読み取り / 書き込み 
+| EC2：AssociateRouteTable ^1^ | 導入 | データベースホストの作成 
 
 
-| 検証ノード専用に導入時に作成されたインスタンスプロファイルを削除する | IAM：DeleteInstanceProfile | 導入 | 読み取り / 書き込み 
+| EC2：AssociateSubnetCidrBlock^1^ | 導入 | データベースホストの作成 
 
 
-.5+| ロールとポリシーの詳細を取得して権限のギャップを特定し、導入のための検証を実施 | IAM：GetPolicy | 導入 | 読み取り / 書き込み 
+| EC2：AssociateVpcCidrBlock^1^ | 導入 | データベースホストの作成 
 
 
-| IAM：GetPolicyVersion | 導入 | 読み取り / 書き込み 
+| EC2：AttachInternetGateway ^1^ | 導入 | データベースホストの作成 
 
 
-| IAM：GetRole | 導入 | 読み取り / 書き込み 
+| EC2：AttachNetworkInterface ^1^ | 導入 | データベースホストの作成 
 
 
-| IAM：GetRolePolicy | 導入 | 読み取り / 書き込み 
+| 導入に必要なEBSボリュームをSQLノードに接続する | EC2：AttachVolume | 導入 | データベースホストの作成 
 
 
-| IAM：GetUser | 導入 | 読み取り / 書き込み 
+.2+| プロビジョニングされた EC2 インスタンスにセキュリティ グループをアタッチし、ルールを変更する | ec2：AuthorizeSecurityGroupEgress | 導入 | データベースホストの作成 
 
 
-| 作成したロールをEC2インスタンスに渡す | IAM：PassRole^3^ | 導入 | 読み取り / 書き込み 
+| ec2：AuthorizeSecurityGroupIngress | 導入 | データベースホストの作成 
 
 
-| 作成したEC2ロールに必要な権限を含むポリシーを追加します。 | IAM：PutRolePolicy | 導入 | 読み取り / 書き込み 
+| 導入用にSQLノードに必要なEBSボリュームを作成する | EC2：CreateVolume | 導入 | データベースホストの作成 
 
 
-| プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 | 読み取り / 書き込み 
+.11+| タイプT2.microで作成された一時検証ノードを削除し、失敗したEC2 SQLノードのロールバックまたは再試行のために削除します。 | EC2：DeleteNetworkInterface | 導入 | データベースホストの作成 
 
 
-| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| EC2: DeleteSecurityGroup | 導入 | データベースホストの作成 
 
 
+| EC2:タグを削除します | 導入 | データベースホストの作成 
+
+
+| EC2：DeleteVolume | 導入 | データベースホストの作成 
+
+
+| EC2：DetachNetworkInterface | 導入 | データベースホストの作成 
+
+
+| EC2：DetachVolumeの場合 | 導入 | データベースホストの作成 
+
+
+| EC2：アソシエーション解除アドレス | 導入 | データベースホストの作成 
+
+
+| EC2: DisassociateIamInstanceProfile | 導入 | データベースホストの作成 
+
+
+| EC2：関連付け解除ルートテーブル | 導入 | データベースホストの作成 
+
+
+| EC2：SubnetCidrBlockの関連付けを解除 | 導入 | データベースホストの作成 
+
+
+| EC2：VpcCidrBlockの関連付けを解除 | 導入 | データベースホストの作成 
+
+
+.7+| 作成されたSQLインスタンスの属性を変更します。WLMDBで始まる名前にのみ適用されます。 | EC2：ModifyInstanceAttribute | 導入 | 運用と修復 
+
+
+| EC2：ModifyInstancePlacement | 導入 | データベースホストの作成 
+
+
+| EC2:ModifyNetworkInterfaceAttributeのいずれかです | 導入 | データベースホストの作成 
+
+
+| EC2：ModifySubnetAttribute | 導入 | データベースホストの作成 
+
+
+| EC2：ModifyVolume | 導入 | データベースホストの作成 
+
+
+| EC2：ModifyVolumeAttributeのことです | 導入 | データベースホストの作成 
+
+
+| EC2：ModifyVpcAttribute | 導入 | データベースホストの作成 
+
+
+.5+| 検証インスタンスの関連付けを解除して破棄する | EC2：リリースアドレス | 導入 | データベースホストの作成 
+
+
+| EC2：ReplaceRoute | 導入 | データベースホストの作成 
+
+
+| EC2：ReplaceRouteTableAssociation | 導入 | データベースホストの作成 
+
+
+| EC2: RevokeSecurityGroupEgress | 導入 | データベースホストの作成 
+
+
+| EC2: RevokeSecurityGroupIngress | 導入 | データベースホストの作成 
+
+
+| 導入されたインスタンスの開始 | EC2：StartInstances（EC2：開始インスタンス | 導入 | 運用と修復 
+
+
+| 導入されたインスタンスの停止 | EC2：StopInstances | 導入 | 運用と修復 
+
+
+| WLMDBによって作成されたAmazon FSx for NetApp ONTAPリソースのカスタム値にタグを付けて、リソース管理時に課金の詳細を取得 | FSx：TagResource ^1^  a| 
+* 導入
+* 処理の管理
+
+| データベースホストの作成 
+
+
+.5+| 導入用のCloudFormationテンプレートを作成して検証 | CloudFormation：CreateStack | 導入 | データベースホストの作成 
+
+
+| CloudFormation：DescribeStackEvents | 導入 | データベースホストの作成 
+
+
+| CloudFormation：DescribeStack | 導入 | データベースホストの作成 
+
+
+| CloudFormation：リストスタック | 導入 | 表示、計画、分析 
+
+
+| CloudFormation：ValidateTemplate | 導入 | データベースホストの作成 
+
+
+.2+| 再試行およびロールバック用にネストされたスタックテンプレートを作成する | EC2：CreateLaunchTemplate | 導入 | データベースホストの作成 
+
+
+| EC2：CreateLaunchTemplateVersion | 導入 | データベースホストの作成 
+
+
+.3+| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateNetworkInterface | 導入 | データベースホストの作成 
+
+
+| EC2：CreateSecurityGroup | 導入 | データベースホストの作成 
+
+
+| ec2：CreateTags | 導入 | データベースホストの作成 
+
+
+.2+| プロビジョニング用のインスタンスの詳細を取得する | ec2:アドレスの説明 | 導入 | 表示、計画、分析 
+
+
+| ec2:起動テンプレートの説明 | 導入 | 表示、計画、分析 
+
+
+| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | データベースホストの作成 
+
+
+.3+| プロビジョニングに必要なFSx for ONTAPリソースを作成します。既存のFSx for ONTAPシステムでは、SQLボリュームをホストするための新しいSVMが作成されます。 | FSx：CreateFileSystem | 導入 | データベースホストの作成 
+
+
+| FSx：CreateStorageVirtualMachine | 導入 | データベースホストの作成 
+
+
+| FSx：ボリュームの作成  a| 
+* 導入
+* 処理の管理
+
+| データベースホストの作成 
+
+
+| FSx for ONTAPの詳細 | fsx:ファイルシステムエイリアスの説明 | 導入 | データベースホストの作成 
+
+
+| FSx for ONTAPファイルシステムのサイズを変更してファイルシステムのヘッドルームを修正 | FSx：ファイルシステムの更新 | 最適化 | 運用と修復 
+
+
+| ボリュームのサイズを変更してログとtempdbのドライブサイズを修正 | FSx：UPDATEVOLUME | 最適化 | 運用と修復 
+
+
+.3+| KMSの主要な詳細情報を入手し、FSx for ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | データベースホストの作成 
+
+
+| kms:カスタムキーストアの説明 | 導入 | データベースホストの作成 
+
+
+| KMS：GenerateDataKey | 導入 | データベースホストの作成 
+
+
+.7+| EC2インスタンスで実行される検証スクリプトとプロビジョニングスクリプト用にCloudWatchログを作成する | ログ:CreateLogGroup | 導入 | データベースホストの作成 
+
+
+| ログ:CreateLogStream | 導入 | データベースホストの作成 
+
+
+| ログ:GetLogGroupFields | 導入 | データベースホストの作成 
+
+
+| ログ:GetLogRecord | 導入 | データベースホストの作成 
+
+
+| ログ:ListLogDeliveries | 導入 | データベースホストの作成 
+
+
+| ログ:PutLogEvents  a| 
+* 導入
+* 処理の管理
+
+| データベースホストの作成 
+
+
+| ログ:TagResource | 導入 | データベースホストの作成 
+
+
+| Workload Factory は、SSM 出力の切り捨てが発生すると、SQL インスタンスの Amazon CloudWatch ログに切り替えます。 | ログ:GetLogEvents  a| 
+* ストレージ評価（最適化）
+* インベントリ
+
+| 表示、計画、分析 
+
+
+| Workload Factory が現在のログ グループを取得し、Workload Factory によって作成されたログ グループの保持が設定されていることを確認することを許可します。 | ログ:DescriptionLogGroups  a| 
+* ストレージ評価（最適化）
+* インベントリ
+
+| 表示、計画、分析 
+
+
+| Workload Factory が作成したログ グループに 1 日間の保持ポリシーを設定できるようにして、SSM コマンド出力のログ ストリームの不要な蓄積を回避します。 | ログ:PutRetentionPolicy  a| 
+* ストレージ評価（最適化）
+* インベントリ
+
+| 表示、計画、分析 
+
+
+.2+| カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS:リストトピック | 導入 | 表示、計画、分析 
+
+
+| SNS：公開 | 導入 | データベースホストの作成 
+
+
+.10+| プロビジョニングされたSQLインスタンスに対して検出スクリプトを実行し、FSx for ONTAPでサポートされるAWSリージョンの最新のリストを取得するために必要なSSM権限。 | SSM：PutComplianceItems | 導入 | データベースホストの作成 
+
+
+| SSM：PutConfigurePackageResult | 導入 | データベースホストの作成 
+
+
+| SSM：PutInventory | 導入 | データベースホストの作成 
+
+
+| SSM：UpdateAssociationStatus | 導入 | データベースホストの作成 
+
+
+| SSM：UpdateInstanceAssociationStatus | 導入 | データベースホストの作成 
+
+
+| SSM：UpdateInstanceInformation | 導入 | データベースホストの作成 
+
+
+| ssmmessages:CreateControlChannel | 導入 | データベースホストの作成 
+
+
+| ssmmessages:データチャネルの作成 | 導入 | データベースホストの作成 
+
+
+| ssmmessages:OpenControlChannel | 導入 | データベースホストの作成 
+
+
+| ssmmessages:OpenDataChannel | 導入 | データベースホストの作成 
+
+
+| 成功または失敗時にCloudFormationスタックに信号を送信します。 | CloudFormation：SignalResource ^1^ | 導入 | データベースホストの作成 
+
+
+| テンプレートによって作成されたEC2ロールをEC2のインスタンスプロファイルに追加して、EC2上のスクリプトが展開に必要なリソースにアクセスできるようにします。 | IAM：AddRoleToInstanceProfile | 導入 | データベースホストの作成 
+
+
+| EC2のインスタンスプロファイルを作成し、作成したEC2ロールを割り当てます。 | IAM：CreateInstanceProfile | 導入 | データベースホストの作成 
+
+
+| 以下の権限を持つテンプレートを使用してEC2ロールを作成する | IAM：CREATEROLE | 導入 | データベースホストの作成 
+
+
+| EC2サービスにリンクされたロールの作成 | IAM：CreateServiceLinkedRole^2^ | 導入 | データベースホストの作成 
+
+
+| 検証ノード専用に導入時に作成されたインスタンスプロファイルを削除する | IAM：DeleteInstanceProfile | 導入 | データベースホストの作成 
+
+
+.5+| ロールとポリシーの詳細を取得して権限のギャップを特定し、導入のための検証を実施 | IAM：GetPolicy | 導入 | データベースホストの作成 
+
+
+| IAM：GetPolicyVersion | 導入 | データベースホストの作成 
+
+
+| IAM：GetRole | 導入 | データベースホストの作成 
+
+
+| IAM：GetRolePolicy | 導入 | データベースホストの作成 
+
+
+| IAM：GetUser | 導入 | データベースホストの作成 
+
+
+| 作成したロールをEC2インスタンスに渡す | IAM：PassRole^3^ | 導入 | データベースホストの作成 
+
+
+| 作成したEC2ロールに必要な権限を含むポリシーを追加します。 | IAM：PutRolePolicy | 導入 | データベースホストの作成 
+
+
+| プロビジョニングされたEC2インスタンスプロファイルからロールを切り離す | IAM：RemoveRoleFromInstanceProfile | 導入 | データベースホストの作成 
+
+
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 全て 
+
+
+| エラーログ分析に使用できる基礎モデルを取得する | Bedrock：GetFoundationModelAvailability | エラーログ分析 | 表示、計画、分析 
+
+
+| エラーログ分析のために Amazon Bedrock で利用可能なインターフェースプロファイルを一覧表示する | Bedrock: ListInferenceProfiles | エラーログ分析 | 表示、計画、分析 
 |===
 . アクセス許可は、WLMDBで始まるリソースに制限されます。
 . IAM：AWSServiceNameによって制限される「IAM：CreateServiceLinkedRole」：ec2.amazonaws.com"*
@@ -1530,7 +1271,10 @@ _読み取り専用_ または _読み取り/書き込み_ モードの権限を
 
 VMware ワークロードの IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory for VMware に必要な権限を提供します。
 
-GenAI IAM ポリシーは、_読み取り/書き込み_ モードでのみ使用できます。
+GenAI IAM ポリシーは、_読み取り/書き込み_ 権限でのみ使用できます。
+
+* *読み取り/書き込み*: 実行に必要な検証済みの権限を持つ割り当てられた認証情報を使用して、お客様に代わって AWS で操作を実行し、自動化します。
+
 
 .生成AIワークロードのIAMポリシー
 [%collapsible]
@@ -1805,7 +1549,7 @@ GenAI IAM ポリシーは、_読み取り/書き込み_ モードでのみ使用
 ====
 [cols="2, 2, 1, 1"]
 |===
-| 目的 | アクション | 使用先 | モード 
+| 目的 | アクション | 使用先 | 許可ポリシー 
 
 
 | 導入時と再構築時にAIエンジンCloudFormationスタックを作成 | CloudFormation：CreateStack | 導入 | 読み取り / 書き込み 
@@ -1998,16 +1742,20 @@ GenAI IAM ポリシーは、_読み取り/書き込み_ モードでのみ使用
 
 === VMwareワークロードの権限
 
-VMware ワークロードの IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory for VMware に必要な権限を提供します。
+VMware ワークロードでは、次の権限ポリシーから選択できます。
 
-運用モードを選択して、必要なIAMポリシーを表示します。
+* *表示、計画、分析*: EVS 仮想化環境のインベントリを表示し、システムの Well-Architected 分析を取得して、コスト削減を検討します。
+* *データストアのデプロイと接続*: 推奨される VM レイアウトを Amazon EVS、Amazon EC2、または VMware Cloud on AWS vSphere クラスターにデプロイし、カスタマイズされたAmazon FSx for NetApp ONTAPファイルシステムを外部データストアとして使用します。
+
+
+必要な IAM ポリシーを表示するには、権限ポリシーを選択します。
 
 .VMwareワークロードのIAMポリシー
 [%collapsible]
 ====
 [role="tabbed-block"]
 =====
-.読み取り専用モード
+.表示、計画、分析
 --
 [source, json]
 ----
@@ -2022,10 +1770,14 @@ VMware ワークロードの IAM ポリシーは、運用モードに基づい�
         "ec2:DescribeVpcs",
         "ec2:DescribeSecurityGroups",
         "ec2:DescribeSubnets",
-        "ssm:GetParametersByPath",
+        "ec2:DescribeDhcpOptions",
         "kms:DescribeKey",
         "kms:ListKeys",
-        "kms:ListAliases"
+        "kms:ListAliases",
+        "secretsmanager:ListSecrets",
+        "evs:ListEnvironments",
+        "evs:GetEnvironment",
+        "evs:ListEnvironmentVlans"
       ],
       "Resource": "*"
     },
@@ -2040,7 +1792,7 @@ VMware ワークロードの IAM ポリシーは、運用モードに基づい�
 }
 ----
 --
-.読み取り/書き込みモード
+.データストアの展開と接続
 --
 [source, json]
 ----
@@ -2065,9 +1817,6 @@ VMware ワークロードの IAM ポリシーは、運用モードに基づい�
         "fsx:DescribeVolumes",
         "fsx:TagResource",
         "sns:Publish",
-        "kms:DescribeKey",
-        "kms:ListKeys",
-        "kms:ListAliases",
         "kms:GenerateDataKey",
         "kms:Decrypt",
         "kms:CreateGrant"
@@ -2077,24 +1826,11 @@ VMware ワークロードの IAM ポリシーは、運用モードに基づい�
     {
       "Effect": "Allow",
       "Action": [
-        "ec2:DescribeSubnets",
-        "ec2:DescribeSecurityGroups",
         "ec2:RunInstances",
         "ec2:DescribeInstances",
-        "ec2:DescribeRegions",
-        "ec2:DescribeAvailabilityZones",
-        "ec2:DescribeVpcs",
         "ec2:CreateSecurityGroup",
         "ec2:AuthorizeSecurityGroupIngress",
         "ec2:DescribeImages"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "ssm:GetParametersByPath",
-        "ssm:GetParameters"
       ],
       "Resource": "*"
     },
@@ -2118,192 +1854,129 @@ VMware ワークロードの IAM ポリシーは、運用モードに基づい�
 ====
 [cols="2, 2, 1, 1"]
 |===
-| 目的 | アクション | 使用先 | モード 
+| 目的 | アクション | 使用先 | 許可ポリシー 
 
 
-| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupIngress | 導入 | 読み取り / 書き込み 
+| プロビジョニングされたノードのセキュリティグループを接続してルールを変更する | ec2：AuthorizeSecurityGroupIngress | 導入 | データストアの展開と接続 
 
 
-| EBSボリュームを作成する | EC2：CreateVolume | 導入 | 読み取り / 書き込み 
+| EBSボリュームを作成する | FSx：ボリュームの作成 | 導入 | データストアの展開と接続 
 
 
-| VMwareワークロードによって作成されたFSx for NetApp ONTAPリソースのカスタム値にタグを付ける | FSx：TagResource | 導入 | 読み取り / 書き込み 
+| VMwareワークロードによって作成されたFSx for NetApp ONTAPリソースのカスタム値にタグを付ける | FSx：TagResource | 導入 | データストアの展開と接続 
 
 
-| CloudFormationテンプレートの作成と検証 | CloudFormation：CreateStack | 導入 | 読み取り / 書き込み 
+| CloudFormationテンプレートの作成と検証 | CloudFormation：CreateStack | 導入 | データストアの展開と接続 
 
 
-| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateSecurityGroup | 導入 | 読み取り / 書き込み 
+| 作成したインスタンスのタグとネットワークセキュリティを管理します。 | EC2：CreateSecurityGroup | 導入 | データストアの展開と接続 
 
 
-| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | 読み取り / 書き込み 
+| 作成したインスタンスの開始 | EC2：RunInstances | 導入 | データストアの展開と接続 
 
 
-| EC2インスタンスの詳細を取得 | EC2: DescribeInstances | 導入 | 読み取り / 書き込み 
+| EC2インスタンスの詳細を取得 | EC2: DescribeInstances | インベントリ | データストアの展開と接続 
 
 
-| 展開および再構築操作中のスタック作成中のイメージのリスト表示 | EC2: DescribeImages | 導入 | 読み取り / 書き込み 
+| 展開および再構築操作中のスタック作成中のイメージのリスト表示 | EC2: DescribeImages | インベントリ | データストアの展開と接続 
+
+
+| VPC に関連付けられた DHCP オプション セットの構成の詳細を表示します | ec2:Dhcpオプションの説明 | インベントリ | 表示、計画、分析 
 
 
 | 選択した環境内のVPCを取得して導入フォームに記入 | EC2: DescribeVpcs  a| 
 * 導入
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 表示、計画、分析 
 
 
 | 選択した環境のサブネットを取得して導入フォームに記入 | EC2: DescribeSubnets  a| 
 * 導入
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
-
-
-| 選択した環境のセキュリティグループを取得して、展開フォームに入力します。 | EC2: DescribeSecurityGroups | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
+| 選択した環境のセキュリティグループを取得して、展開フォームに入力します。 | EC2: DescribeSecurityGroups | 導入 | 表示、計画、分析 
 
 
 | 選択した環境のアベイラビリティゾーンを取得する | EC2：説明AvailabilityZones  a| 
 * 導入
 * インベントリ
 
- a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| 表示、計画、分析 
 
 
+| Amazon FSx for NetApp ONTAPのサポートリージョンを取得 | EC2: DescribeRegions (説明領域 | 導入 | 表示、計画、分析 
 
 
-| Amazon FSx for NetApp ONTAPのサポートリージョンを取得 | EC2: DescribeRegions (説明領域 | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーのエイリアスを取得する | KMS：エイリアスを確認する | 導入 | 表示、計画、分析 
 
 
+| Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーを入手 | KMS：ListKeys | 導入 | 表示、計画、分析 
 
 
-| Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーのエイリアスを取得する | KMS：エイリアスを確認する | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーの有効期限の詳細を取得 | KMS:説明キー | 導入 | 表示、計画、分析 
 
 
+| AWS Secrets Manager でシークレットを一覧表示する | secretsmanager:ListSecrets | インベントリ | 表示、計画、分析 
 
 
-| Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーを入手 | KMS：ListKeys | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| Amazon EVSから環境のリストを取得する | evs:ListEnvironments | インベントリ | 表示、計画、分析 
 
 
+| 特定の Amazon EVS 環境に関する詳細情報を取得する | evs:環境を取得する | インベントリ | 表示、計画、分析 
 
 
-| Amazon FSx for NetApp ONTAPの暗号化に使用するKMSキーの有効期限の詳細を取得 | KMS:説明キー | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
+| Amazon EVS 環境に関連付けられた VLAN を一覧表示する | evs:環境Vlansのリスト | インベントリ | 表示、計画、分析 
 
 
+.3+| プロビジョニングに必要なAmazon FSx for NetApp ONTAPリソースを作成する | FSx：CreateFileSystem | 導入 | データストアの展開と接続 
 
 
-| SSMベースのクエリを使用して、Amazon FSx for NetApp ONTAPでサポートされるリージョンの最新リストを取得 | SSM：GetParametersByPath | 導入  a| 
-* 読み取り専用
-* 読み取り / 書き込み
-
-
-
-
-.3+| プロビジョニングに必要なAmazon FSx for NetApp ONTAPリソースを作成する | FSx：CreateFileSystem | 導入 | 読み取り / 書き込み 
-
-
-| FSx：CreateStorageVirtualMachine | 導入 | 読み取り / 書き込み 
+| FSx：CreateStorageVirtualMachine | 導入 | データストアの展開と接続 
 
 
 | FSx：ボリュームの作成  a| 
 * 導入
 * カンリシヨリ
 
-| 読み取り / 書き込み 
+| データストアの展開と接続 
 
 
-.2+| Amazon FSx for NetApp ONTAPの詳細 | FSx：説明*  a| 
+| Amazon FSx for NetApp ONTAPの詳細 | FSx：説明*  a| 
 * 導入
 * インベントリ
 * カンリシヨリ
 * コスト削減の詳細
 
-| 読み取り / 書き込み 
+| データストアの展開と接続 
 
 
-| FSx：リスト*  a| 
-* 導入
-* インベントリ
-
-| 読み取り / 書き込み 
+.5+| KMSの主要な詳細情報を入手し、Amazon FSx for NetApp ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | データストアの展開と接続 
 
 
-.5+| KMSの主要な詳細情報を入手し、Amazon FSx for NetApp ONTAPの暗号化に使用 | KMS：CreateGrant | 導入 | 読み取り / 書き込み 
+| KMS：説明* | 導入 | 表示、計画、分析 
 
 
-| KMS：説明* | 導入 | 読み取り / 書き込み 
+| KMS：リスト* | 導入 | 表示、計画、分析 
 
 
-| KMS：リスト* | 導入 | 読み取り / 書き込み 
+| KMS：復号化 | 導入 | データストアの展開と接続 
 
 
-| KMS：復号化 | 導入 | 読み取り / 書き込み 
+| KMS：GenerateDataKey | 導入 | データストアの展開と接続 
 
 
-| KMS：GenerateDataKey | 導入 | 読み取り / 書き込み 
+| カスタマーSNSのトピックを一覧表示し、WLMVMCバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS：公開 | 導入 | データストアの展開と接続 
 
 
-| カスタマーSNSのトピックを一覧表示し、WLMVMCバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS：公開 | 導入 | 読み取り / 書き込み 
+| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入  a| 
+* データストアの展開と接続
+* 表示、計画、分析
 
 
-| Amazon FSx for NetApp ONTAPでサポートされるAWSリージョンの最新リストを取得するために使用 | SSM：GET *  a| 
-* 導入
-* カンリシヨリ
-
-| 読み取り / 書き込み 
-
-
-| ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 読み取り / 書き込み 
-
-
-.4+| SSMパラメータストアを使用してAmazon FSx for NetApp ONTAPのクレデンシャルを保存 | SSM:getParameter  a| 
-* 導入
-* カンリシヨリ
-* インベントリ
-
-| 読み取り / 書き込み 
-
-
-| SSM：PutParameters  a| 
-* 導入
-* インベントリ
-
-| 読み取り / 書き込み 
-
-
-| SSM：PutParameter  a| 
-* 導入
-* カンリシヨリ
-
-| 読み取り / 書き込み 
-
-
-| SSM：DeleteParameters  a| 
-* 導入
-* カンリシヨリ
-
-| 読み取り / 書き込み 
 |===
 ====
 
@@ -2311,6 +1984,12 @@ VMware ワークロードの IAM ポリシーは、運用モードに基づい�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年11月2日
+
+ストレージ、データベース ワークロード、および VMware ワークロードの権限ポリシー「読み取り専用」および「読み取り/書き込み」が置き換えられ、権限の割り当てにおける細分性と柔軟性が向上しました。
 
 
 

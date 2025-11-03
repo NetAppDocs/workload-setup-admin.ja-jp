@@ -16,14 +16,10 @@ indexpage:
       url: workload-factory-overview.html
     - title: サインアップ
       url: sign-up-saas.html
-  - title: 動作モードとクレデンシャル
-    links:
-    - title: 動作モードの詳細
-      url: operational-modes.html
     - title: AWSクレデンシャルを追加
       url: add-credentials.html
-    - title: 認証情報を削除
-      url: manage-credentials.html
+    - title: ワークロードファクトリーの権限
+      url: permissions-reference.html
   - title: Codeboxを使用した自動化
     links:
     - title: Codeboxの詳細
