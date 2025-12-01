@@ -64,7 +64,7 @@ Workload Factory には、SaaS レイヤーを通じて提供される Web ベ�
 
 ワークロードファクトリーは、link:https://console.workloads.netapp.com["NetAppワークロード ファクトリー コンソール"^]そしてlink:https://console.netapp.com["NetAppコンソール"^]。これらの SaaS エクスペリエンスにより、最新機能がリリースされると自動的にアクセスでき、Workload Factory アカウントとリンクを簡単に切り替えることができます。
 
-詳細については、こちらをご覧link:console-experiences.html["コンソールエクスペリエンス"]ください。
+link:console-experiences.html["さまざまなコンソールのエクスペリエンスについて詳しく知る"]
 
 
 
@@ -87,7 +87,7 @@ TIP: NetAppコンソールを使用する場合、Workload Factory はNetAppア�
 
 サービス アカウントは、自動化の目的でNetApp Workload Factory への承認済み API 呼び出しを行うことができる「ユーザー」として機能します。これにより、いつでも退職する可能性のある実際の人物のユーザー アカウントに基づいて自動化スクリプトを作成する必要がなくなるため、自動化の管理が容易になります。 Workload Factory のすべてのアカウント所有者は、アカウント管理者とみなされます。アカウント管理者は複数のサービス アカウントを作成および削除できます。
 
-link:manage-service-accounts.html["サービスアカウントの管理方法"]です。
+link:manage-service-accounts.html["サービスアカウントの管理方法"]
 
 
 
@@ -95,7 +95,7 @@ link:manage-service-accounts.html["サービスアカウントの管理方法"]�
 
 Workload Factory は柔軟な権限ポリシーを提供し、クラウド資産へのアクセスを慎重に制御し、IT ポリシーに基づいて Workload Factory に段階的な信頼を割り当てることを可能にします。
 
-link:permissions-reference.html["Workload Factory の権限ポリシーの詳細"]。
+link:permissions-reference.html["Workload Factory の権限ポリシーの詳細"]
 
 
 
@@ -119,7 +119,7 @@ Codebox は、Workload Factory の動作モード (_基本_、_読み取り専�
 
 [コードボックス]ペインには、特定のジョブフロー操作によって生成されたIACが表示され、グラフィカルウィザードまたは会話型チャットインターフェイスによって照合されます。Codeboxは、簡単なナビゲーションと分析のためにカラーコーディングと検索をサポートしていますが、編集はできません。自動化カタログにのみコピーまたは保存できます。
 
-link:codebox-automation.html["Codeboxの詳細"]です。
+link:codebox-automation.html["Codeboxの詳細"]
 
 
 

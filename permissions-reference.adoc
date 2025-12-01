@@ -111,6 +111,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
         "fsx:TagResource",
         "fsx:UntagResource",
         "bedrock:InvokeModelWithResponseStream",
+        "bedrock:InvokeModel",
         "bedrock:ListInferenceProfiles",
         "bedrock:GetInferenceProfile"
       ],
@@ -286,13 +287,16 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 | FSx for ONTAPリソース用のタグを挙げる | FSx：ListTagsForResource | インベントリ | 表示、計画、分析 
 
 
-.2+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | ファイルシステムの作成と削除 
+.3+| FSx for ONTAPファイルシステムのセキュリティグループの出力と入力を管理 | EC2: RevokeSecurityGroupIngress | カンリシヨリ | ファイルシステムの作成と削除 
+
+
+| ec2: セキュリティグループの出力を取り消す | カンリシヨリ | ファイルシステムの作成と削除 
 
 
 | EC2: DeleteSecurityGroup | カンリシヨリ | ファイルシステムの作成と削除 
 
 
-.17+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：ボリュームの作成 | カンリシヨリ | 運用と修復 
+.18+| FSx for ONTAPファイルシステムリソースの作成、表示、管理 | FSx：ボリュームの作成 | カンリシヨリ | 運用と修復 
 
 
 | FSx：TagResource | カンリシヨリ | 運用と修復 
@@ -343,6 +347,9 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 | fsx:バックアップからボリュームを作成 | カンリシヨリ | 運用と修復 
 
 
+| fsx:バックアップの削除 | カンリシヨリ | 運用と修復 
+
+
 .2+| ファイルシステムとボリュームの指標を取得 | CloudWatch：GetMetricData | カンリシヨリ | 表示、計画、分析 
 
 
@@ -350,6 +357,24 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 
 | ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 全て 
+
+
+.4+| FSx for ONTAP EMS イベントを取得する | Bedrock: ListInferenceProfiles | FSx for ONTAP EMS分析 | 運用と修復 
+
+
+| bedrock:GetInferenceProfile | FSx for ONTAP EMS分析 | 運用と修復 
+
+
+| bedrock:InvokeModelWihResponseStream | FSx for ONTAP EMS分析 | 運用と修復 
+
+
+| Bedrock：InvokeModel | FSx for ONTAP EMS分析 | 運用と修復 
+
+
+.2+| AWS Cost Explorer から FSx for ONTAPファイルシステムのコストと使用状況データを取得する | ce:コストと使用量の取得 | コストと使用状況の分析 | 表示、計画、分析 
+
+
+| ce:タグを取得 | コストと使用状況の分析 | 表示、計画、分析 
 |===
 ====
 
@@ -1984,6 +2009,18 @@ VMware ワークロードでは、次の権限ポリシーから選択できま�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年11月27日
+
+ストレージ ワークロードに次の権限が追加されました。
+
+* `bedrock:ListInferenceProfiles`
+* `bedrock:GetInferenceProfile`
+* `bedrock:InvokeModelWithResponseStream`
+* `bedrock:InvokeModel`
+
 
 
 
