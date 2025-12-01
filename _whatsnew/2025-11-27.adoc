@@ -1,0 +1,17 @@
+= ストレージの権限の更新
+:allow-uri-read: 
+
+
+
+
+=== ストレージの権限の更新
+
+FSx for ONTAP EMS イベント アナライザーは、_operations and remediation_ 権限ポリシーの次の Amazon Bedrock 権限を使用して、ストレージ ワークロードのイベント データを取得します。
+
+* `bedrock:ListInferenceProfiles`
+* `bedrock:GetInferenceProfile`
+* `bedrock:InvokeModelWithResponseStream`
+* `bedrock:InvokeModel`
+
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["アクセス権参照変更ログ"]
