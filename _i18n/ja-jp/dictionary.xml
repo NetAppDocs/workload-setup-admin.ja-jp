@@ -1257,4 +1257,10 @@
   <block id="491e45ff3f847be901c7d8962829a3f8" category="paragraph"><block ref="491e45ff3f847be901c7d8962829a3f8" category="inline-link-macro-rx"></block></block>
   <block id="6fe4c05a9bf5207dceacd4fcc6fc1064" category="doc">ストレージの権限の更新</block>
   <block id="7d3f4d33aca7af4519cb87a63113caf9" category="paragraph">FSx for ONTAP EMS イベント アナライザーは、_operations and remediation_ 権限ポリシーの次の Amazon Bedrock 権限を使用して、ストレージ ワークロードのイベント データを取得します。</block>
+  <block id="499a631b37689fc0831d508e7df713ac" category="paragraph">他のユーザーを Workload Factory アカウントに招待して、Workload Factory にアクセスして使用できるようにすることもできます。</block>
+  <block id="74c47b5a5003eaa998a2ddfd60579fcd" category="section-title">Workload Factoryのアカウントに他のユーザーを招待する</block>
+  <block id="cfe62ca3b745b1e1ba1704c2d481b1a0" category="paragraph">アカウント管理者は、他のユーザーを Workload Factory アカウントに招待して、Workload Factory にアクセスして使用できるようにすることができます。アカウント管理はNetApp Consoleからのみ可能です。</block>
+  <block id="4271c82b5b3d2551c37fdf5569e1bdf4" category="inline-link-macro">メンバー（ユーザーアカウント）を追加する方法を学ぶ</block>
+  <block id="c128860bea2b6fa591ace59f9f82d9e2" category="paragraph">NetApp Consoleのドキュメントを参照してください。 <block ref="d39c43ee8c7f0d03870545e14a548b70" category="inline-link-macro-rx"></block>、Workload Factory アカウントに追加します。</block>
+  <block id="51a52248cd0718b8835bd272badd5424" category="paragraph">招待されたユーザーには、Workload Factory アカウントに参加するための手順が記載されたメールが届きます。</block>
 </blocks>

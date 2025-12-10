@@ -13,7 +13,12 @@ summary: Workload Factory には、Web ベースのコンソールからアク�
 [role="lead"]
 NetApp Workload Factory には、Web ベースのコンソールからアクセスできます。  Workload Factory を使い始めるときの最初のステップは、既存のNetAppサポート サイトの認証情報を使用してサインアップするか、 NetAppクラウド ログインを作成することです。
 
-.タスクの内容
+他のユーザーを Workload Factory アカウントに招待して、Workload Factory にアクセスして使用できるようにすることもできます。
+
+
+
+== ワークロードファクトリーにサインアップ
+
 次のいずれかのオプションを使用して Workload Factory にサインアップできます。
 
 * 既存のNetApp Support Site （NSS）のクレデンシャルを必要に応じて変更
@@ -52,3 +57,14 @@ image:screenshot-account-selection.png["新しいアカウントでログイン�
 
 .結果
 これで、Workload Factory のログインとアカウントが作成されました。あなたはアカウント管理者とみなされ、すべての Workload Factory 機能にアクセスできます。
+
+
+
+== Workload Factoryのアカウントに他のユーザーを招待する
+
+アカウント管理者は、他のユーザーを Workload Factory アカウントに招待して、Workload Factory にアクセスして使用できるようにすることができます。アカウント管理はNetApp Consoleからのみ可能です。
+
+NetApp Consoleのドキュメントを参照してください。 link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html["メンバー（ユーザーアカウント）を追加する方法を学ぶ"^]、Workload Factory アカウントに追加します。
+
+.結果
+招待されたユーザーには、Workload Factory アカウントに参加するための手順が記載されたメールが届きます。
