@@ -1263,4 +1263,7 @@
   <block id="4271c82b5b3d2551c37fdf5569e1bdf4" category="inline-link-macro">メンバー（ユーザーアカウント）を追加する方法を学ぶ</block>
   <block id="c128860bea2b6fa591ace59f9f82d9e2" category="paragraph">NetApp Consoleのドキュメントを参照してください。 <block ref="d39c43ee8c7f0d03870545e14a548b70" category="inline-link-macro-rx"></block>、Workload Factory アカウントに追加します。</block>
   <block id="51a52248cd0718b8835bd272badd5424" category="paragraph">招待されたユーザーには、Workload Factory アカウントに参加するための手順が記載されたメールが届きます。</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Ask me AIアシスタントのホームページ統合</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Workload Factory コンソールのホームページには Ask me AI アシスタントが組み込まれており、独自のストレージ資産について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。コンソールを離れることなく、「Ask me」と対話してワークロードを理解し、問題をトラブルシューティングし、Workload Factory について詳しく知ることができます。</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
 </blocks>
