@@ -1231,9 +1231,6 @@
   <block id="fd7910c842c61985f2e90af78f1b304f" category="paragraph">Workload Factory は柔軟な権限ポリシーを提供し、クラウド資産へのアクセスを慎重に制御し、IT ポリシーに基づいて Workload Factory に段階的な信頼を割り当てることを可能にします。</block>
   <block id="1b512d78c8df2f0c24a19da35f804ca3" category="inline-link-macro">Workload Factory の権限ポリシーの詳細</block>
   <block id="c51a57db8914c4d0002701f58f6f3d36" category="sidebar">ワークロードファクトリーの権限</block>
-  <block id="67cc1fa9f1a93753f08cfa64d81c9661" category="inline-link">ビルダーのワークロード</block>
-  <block id="fadf0a6a0fc7dcefddc336cf580be28f" category="list-text"><block ref="fadf0a6a0fc7dcefddc336cf580be28f" category="inline-link-rx"></block></block>
-  <block id="4dbca6300d097acc1ed4450a1e0d70d7" category="paragraph">バージョン管理システムおよび CI/CD フローとのインスタント クローン統合を有効にすることで、ソフトウェア バージョンの使用とアクセスを簡素化し、時間とリソースを節約します。</block>
   <block id="97364a76409afb35bcf8e78ca91dd72d" category="paragraph">NetApp Consoleから Workload Factory にアクセスできます。Workload Factory を AWS ストレージおよびワークロード機能に使用することに加えて、 NetApp Copy and Syncなどの他のデータ サービスにもアクセスすることができます。</block>
   <block id="01984b12c408bdab681895b084bd6c06" category="cell">ec2: セキュリティグループの出力を取り消す</block>
   <block id="c8f3ab0d5795ea54c17a7c0f85e22fbd" category="cell">fsx:バックアップの削除</block>
@@ -1266,4 +1263,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Ask me AIアシスタントのホームページ統合</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Workload Factory コンソールのホームページには Ask me AI アシスタントが組み込まれており、独自のストレージ資産について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。コンソールを離れることなく、「Ask me」と対話してワークロードを理解し、問題をトラブルシューティングし、Workload Factory について詳しく知ることができます。</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
+  <block id="2bc4b4a88d694b207aacb90573eb4b7f" category="inline-link">EDAワークロード</block>
+  <block id="f5051781c2f560348461adb9d928d406" category="list-text"><block ref="f5051781c2f560348461adb9d928d406" category="inline-link-rx"></block></block>
+  <block id="ce9f0edfab2350bf4aa1961cdca492ac" category="paragraph">複数のファイルシステムにわたって FSx for ONTAPを最適化し、自動化されたストレージ パラメータ管理を通じてパフォーマンスを向上させ、運用コストを削減します。</block>
 </blocks>

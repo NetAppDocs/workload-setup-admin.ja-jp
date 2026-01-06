@@ -29,8 +29,8 @@ Retrieval-Augmented Generation（RAG）インフラを導入、管理して、AI
 +
 スマートな推奨事項と自動修正により、移行と運用を合理化できます。効率的なバックアップと堅牢なディザスタリカバリを導入VMの監視とトラブルシューティング
 
-* https://docs.netapp.com/us-en/workload-builders/index.html["ビルダーのワークロード"^]
+* https://docs.netapp.com/us-en/workload-eda/index.html["EDAワークロード"^]
 +
-バージョン管理システムおよび CI/CD フローとのインスタント クローン統合を有効にすることで、ソフトウェア バージョンの使用とアクセスを簡素化し、時間とリソースを節約します。
+複数のファイルシステムにわたって FSx for ONTAPを最適化し、自動化されたストレージ パラメータ管理を通じてパフォーマンスを向上させ、運用コストを削減します。
 
 
