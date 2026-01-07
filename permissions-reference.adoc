@@ -359,7 +359,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 | ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 全て 
 
 
-.4+| FSx for ONTAP EMS イベントを取得する | Bedrock: ListInferenceProfiles | FSx for ONTAP EMS分析 | 運用と修復 
+.4+| FSx for ONTAP EMS イベントに AI ベースの洞察を提供する | Bedrock: ListInferenceProfiles | FSx for ONTAP EMS分析 | 運用と修復 
 
 
 | bedrock:GetInferenceProfile | FSx for ONTAP EMS分析 | 運用と修復 
