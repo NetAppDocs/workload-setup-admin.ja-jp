@@ -1120,7 +1120,6 @@
   <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">Workload Factory の使用を開始するためにリンクは必要ありませんが、場合によっては、Workload Factory のすべての機能とワークロード機能のロックを解除するためにリンクを作成する必要があります。</block>
   <block id="528a4ef2f9c8bc3b67d3efa2374a45d4" category="paragraph">Codebox は、開発者や DevOps エンジニアが Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。コード形式には、Workload Factory REST API、AWS CLI、AWS CloudFormation が含まれます。</block>
   <block id="7feb10c40d9ece4ba2534f19d82a64da" category="paragraph">Codebox は、Workload Factory の動作モード (_基本_、_読み取り専用_、_読み取り/書き込み_) と連携しており、実行準備のための明確なパスと、将来の迅速な再利用のための自動化カタログを設定します。</block>
-  <block id="ef4d1c07f18f4d56e44fa520425903f8" category="paragraph">Workload Factory はコスト削減計算ツールを提供しており、FSx for ONTAPファイル システム上のストレージ環境またはデータベース ワークロードのコストを Elastic Block Store (EBS)、Elastic File Systems (EFS)、および FSx for Windows File Server と比較できます。ストレージ要件によっては、FSx for ONTAPファイル システムが最もコスト効率の高いオプションとなる場合があります。</block>
   <block id="4bbb8d481021011f9afb73ca196bfecd" category="section-title">NetApp Workload Factory を使用するためのツール</block>
   <block id="227f846d45d01d0f9fb62a784d506d51" category="paragraph">NetApp Workload Factory は次のツールで使用できます。</block>
   <block id="36445dd6e44838348239a5d874596e0d" category="list-text">*Workload Factory コンソール*: Workload Factory コンソールは、アプリケーションとプロジェクトの視覚的かつ全体的なビューを提供します。</block>
@@ -1266,4 +1265,7 @@
   <block id="f5051781c2f560348461adb9d928d406" category="list-text"><block ref="f5051781c2f560348461adb9d928d406" category="inline-link-rx"></block></block>
   <block id="ce9f0edfab2350bf4aa1961cdca492ac" category="paragraph">複数のファイルシステムにわたって FSx for ONTAPを最適化し、自動化されたストレージ パラメータ管理を通じてパフォーマンスを向上させ、運用コストを削減します。</block>
   <block id="27dd4ab95b0517b4bda67fc48ed886e9" category="cell">FSx for ONTAP EMS イベントに AI ベースの洞察を提供する</block>
+  <block id="2ae1b7a674baff982eb8eb9dc66927ee" category="paragraph">Workload Factory では、FSx for ONTAPファイルシステム上のストレージ環境、データベース、または VMware ワークロードのコストを他の Amazon サービスと比較できるコスト削減計算ツールを提供しています。ストレージ要件によっては、FSx for ONTAPファイル システムが最もコスト効率の高いオプションとなる場合があります。</block>
+  <block id="90c1b5a7280b55877e1905122cd1721a" category="inline-link-macro">VMware ワークロードのコスト削減方法を学ぶ</block>
+  <block id="c3529158a61861198ed03e3bb9e49b49" category="list-text"><block ref="c3529158a61861198ed03e3bb9e49b49" category="inline-link-macro-rx"></block></block>
 </blocks>
