@@ -13,7 +13,7 @@ summary: NetApp Workload Factory は、Amazon FSx for NetApp ONTAPファイル�
 [role="lead"]
 NetApp Workload Factory は、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化できるように設計された強力なライフサイクル管理プラットフォームです。  Workload Factory と FSx for ONTAPを使用して合理化できるワークロードには、データベース、VMware Cloud on AWS への VMware の移行、AI チャットボットなどがあります。
 
-ワークロードには、ビジネス目標を達成するように設計された、リソース、コード、サービスまたはアプリケーションの組み合わせが含まれます。これには、お客様向けアプリケーションからバックエンドプロセスまで、あらゆるものが含まれます。ワークロードには、1つのAWSアカウント内のリソースのサブセットが含まれる場合もあれば、複数のアカウントにまたがる場合もあります。
+_ワークロード_ には、ビジネス目標を達成するために設計されたリソース、コード、サービス、またはアプリケーションの組み合わせが含まれます。これは、顧客向けのアプリケーションからバックエンドのプロセスまで、あらゆるものが対象となります。ワークロードには、単一の AWS アカウント内のリソースのサブセットが含まれる場合もあれば、複数のアカウントにまたがる場合もあります。
 
 Amazon FSx for NetApp ONTAP は、ミッションクリティカルなアプリケーション、データベース、コンテナ、VMware Cloud データストア、およびユーザーファイル向けに、完全に管理された AWS ネイティブの NFS、SMB/CIFS、および iSCSI ストレージボリュームを提供します。  FSx for ONTAPは、Workload Factory およびネイティブ AWS 管理ツールを使用して管理できます。
 
@@ -42,7 +42,7 @@ Workload Factory を使用すると、クラウド ストレージを管理し�
 
 == セキュリティ
 
-NetApp Workload Factory のセキュリティは、 NetAppにとって最優先事項です。 Workload Factory のすべてのワークロードは、Amazon FSx for NetApp ONTAP上で実行されます。すべてに加えてlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security.html["AWS セキュリティ機能"^]NetApp Workload Factoryはlink:https://netapp-security.trustshare.com/certifications/soc2type_1?documentId=84d4110a-3fc7-4d0c-9c65-b9f0d034c058["SOC2 タイプ1準拠"^]。
+NetApp Workload Factoryのセキュリティは、 NetAppにとって最優先事項です。Workload Factory のすべてのワークロードは、Amazon FSx for NetApp ONTAP上で実行されます。すべてに加えて link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security.html["AWS セキュリティ機能"^]NetApp Workload Factoryは link:https://trust.netapp.com/["SOC2 タイプ 1 コンプライアンス、SOC2 タイプ 2 コンプライアンス、および HIPAA コンプライアンス"^]。
 
 Amazon FSx for NetApp ONTAP for NetApp Workload Factoryはlink:https://aws.amazon.com/solutions/guidance/deploying-enterprise-apps-with-netapp-bluexp-workload-factory-for-aws-and-amazon-fsx-for-netapp-ontap/["エンタープライズアプリを展開するためのAWSソリューション"^]適切に設計されたベストプラクティスを念頭に置いて作成されました。
 
@@ -146,6 +146,14 @@ NetApp Workload Factory は次のツールで使用できます。
 * *CloudFormation*: AWS CloudFormation コードを使用して、Workload Factory コンソールで定義したアクションを実行し、AWS アカウントの CloudFormation スタックから AWS およびサードパーティのリソースをモデル化、プロビジョニング、管理します。
 * *Terraform NetApp Workload Factory プロバイダー*: Terraform を使用して、Workload Factory コンソールで生成されたインフラストラクチャ ワークフローを構築および管理します。
 
+
+
+
+=== 適切に設計されたワークロード
+
+Workload Factory は、AWS Well-Architected フレームワークに準拠した、信頼性が高く、安全で、効率的で、対費用効果の高いストレージとデータベース構成の維持と運用に役立ちます。Workload Factory は、FSx のONTAPファイル システム、SQL Server、および Oracle データベースのデプロイメントを毎日スキャンして、潜在的な構成ミスに関する分析情報を提供し、問題を修正するための手動または自動のアクションを推奨します。
+
+link:well-architected-workloads.html["Well-Architected ワークロードの詳細"]
 
 
 

@@ -13,19 +13,35 @@ indexpage:
   - title: はじめに
     links:
     - title: NetAppワークロードファクトリーについて学ぶ
-      url: workload-factory-overview.html
+      url: "/workload-factory-overview.html"
     - title: サインアップ
       url: sign-up-saas.html
+  - title: 資格情報と権限
+    links:
     - title: AWSクレデンシャルを追加
-      url: add-credentials.html
+      url: "/add-credentials.html"
     - title: ワークロードファクトリーの権限
-      url: permissions-reference.html
+      url: "/permissions-reference.html"
   - title: Codeboxを使用した自動化
     links:
     - title: Codeboxの詳細
-      url: codebox-automation.html
+      url: "/codebox-automation.html"
     - title: 自動化にコードボックスを使用
-      url: use-codebox.html
+      url: "/use-codebox.html"
+  - title: 適切に設計されたワークロード
+    links:
+    - title: 適切に設計されたワークロードを構築および運用する
+      url: "/well-architected-workloads.html"
+    - title: ONTAPファイルシステム向けに適切に設計された FSx を実装する
+      url: https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html
+    - title: 適切に設計されたデータベースワークロードを実装する
+      url: https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html
+  - title: ワークロードを分析する
+    links:
+    - title: データベースワークロードのエラーログを分析する
+      url: https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html
+    - title: ストレージワークロードのEMSイベントを表示および分析する
+      url: https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html
   - title: ブログとコミュニティ
     links:
     - title: NetAppコンソール
