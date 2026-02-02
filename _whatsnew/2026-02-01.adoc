@@ -1,0 +1,44 @@
+= 適切に設計されたアップデート
+:allow-uri-read: 
+
+
+
+
+=== 適切に設計されたアップデート
+
+NetApp Workload Factory には、Elastic VMware Service（EVS）ワークロード向けの Well-Architected 評価が含まれており、ストレージおよびデータベース ワークロードの新しい構成が追加されています。
+
+* *VMware ワークロード* NetApp Workload Factory は、適切に設計された Amazon Elastic VMware Service （EVS） ワークロードを運用するためのベストプラクティスと推奨事項を提供します。
++
+link:https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html["適切に設計されたEVS構成を実装する"^]
+
+* *ストレージワークロード* ストレージワークロードのWell-Architected機能にいくつかの新しい構成が追加され、ストレージのパフォーマンスとコストをより深く理解できるようになりました。
++
+** Storage VM論理レポート
+** キャッシュボリュームのサイズを最適化する
+** 孤立したブロックデバイス
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html["Storage ワークロードに適したファイルシステム構成を実装する"^]
+
+
+
+* *データベース ワークロード* Workload Factory for Databases には、Direct NFS（dNFS）を有効にして設定し、I/O パフォーマンスを向上させ、ホストとストレージ システムの負荷を軽減するための、Oracle の新しいストレージ構成が含まれています。
++
+** dNFSの有効化
+** dNFS 一貫性のある IP 解決
+** dNFS設定ファイル
+** dNFS `nosharecache`
++
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["適切に設計されたデータベースワークロードを実装する"^]
+
+
+
+
+
+
+
+=== Storage の新しい権限
+
+S3 アクセスポイントの管理を強化するために、Storage ワークロードに新しい権限が追加されました。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["アクセス権参照変更ログ"]

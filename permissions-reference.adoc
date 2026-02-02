@@ -73,9 +73,6 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
         "elasticfilesystem:DescribeFileSystems",
         "ce:GetCostAndUsage",
         "ce:GetTags",
-        "ce:GetCostAndUsageWithResources",
-        "ce:GetCostForecast",
-        "ce:GetUsageForecast"
       ],
       "Resource": "*"
     },
@@ -110,10 +107,32 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
         "fsx:DeleteBackup",
         "fsx:TagResource",
         "fsx:UntagResource",
+        "fsx:CreateAndAttachS3AccessPoint",
+        "fsx:DetachAndDeleteS3AccessPoint",
+        "s3:CreateAccessPoint",
+        "s3:DeleteAccessPoint",
+        "s3:GetObjectTagging",
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
         "bedrock:ListInferenceProfiles",
-        "bedrock:GetInferenceProfile"
+        "bedrock:GetInferenceProfile",
+        "s3tables:CreateTableBucket",
+        "s3tables:ListTables",
+        "s3tables:GetTable",
+        "s3tables:GetTableMetadataLocation",
+        "s3tables:CreateTable",
+        "s3tables:GetNamespace",
+        "s3tables:PutTableData",
+        "s3tables:CreateNamespace",
+        "s3tables:GetTableData",
+        "s3tables:ListNamespaces",
+        "s3tables:ListTableBuckets",
+        "s3tables:GetTableBucket",
+        "s3tables:UpdateTableMetadataLocation",
+        "s3tables:ListTagsForResource",
+        "s3tables:TagResource",
+        "s3:GetObjectTagging",
+        "s3:ListBucket"
       ],
       "Resource": "*"
     },
@@ -375,6 +394,60 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 
 | ce:タグを取得 | コストと使用状況の分析 | 表示、計画、分析 
+
+
+| S3アクセスポイントを作成し、FSx for ONTAPファイルシステムに接続します | fsx:CreateAndAttachS3AccessPoint | S3 アクセスポイント管理 | 運用と修復 
+
+
+| S3アクセスポイントをFSx for ONTAPファイルシステムから切り離して削除する | fsx：DetachAndDeleteS3AccessPoint | S3 アクセスポイント管理 | 運用と修復 
+
+
+| 簡素化されたバケットアクセス管理用の S3 アクセスポイントを作成する | s3：CreateAccessPoint | S3 アクセスポイント管理 | 運用と修復 
+
+
+| S3 アクセスポイントを削除する | s3：DeleteAccessPoint | S3 アクセスポイント管理 | 運用と修復 
+
+
+| S3 アクセスポイントにタグを追加する | s3：TagResource | S3 アクセスポイント管理 | 運用と修復 
+
+
+| S3 アクセスポイントのタグを一覧表示および表示する | s3：ListTagsForResource | S3 アクセスポイント管理 | 運用と修復 
+
+
+| S3 アクセスポイントからタグを削除する | s3：UntagResource | S3 アクセスポイント管理 | 運用と修復 
+
+
+| S3 アクセスポイントバケット内のオブジェクトを検出する | s3：ListBucket | S3 バケット操作 | 運用と修復 
+
+
+| S3 テーブルバケットの一覧表示、作成、説明 | s3tables：ListTableBuckets s3tables：CreateTableBucket s3tables：GetTableBucket | S3 table bucket管理 | 運用と修復 
+
+
+| S3 テーブルの一覧表示、作成、取得 | s3tables：ListTables s3tables：CreateTable s3tables：GetTable | S3 テーブル操作 | 運用と修復 
+
+
+| テーブルメタデータの場所を読み取る | s3tables：GetTableMetadataLocation | S3 テーブルメタデータ操作 | 運用と修復 
+
+
+| テーブルメタデータの場所を更新する | s3tables：UpdateTableMetadataLocation | S3 テーブルメタデータ操作 | 運用と修復 
+
+
+| テーブルの名前空間の一覧表示、作成、取得 | s3tables：ListNamespaces s3tables：CreateNamespace s3tables：GetNamespace | S3 namespace操作 | 運用と修復 
+
+
+| テーブルデータの読み取り（select、scan） | s3tables：GetTableData | S3 テーブルデータ操作 | 運用と修復 
+
+
+| テーブルデータの書き込み（挿入） | s3tables：PutTableData | S3 テーブルデータ操作 | 運用と修復 
+
+
+| 在庫テーブル上のタグを一覧表示する（FSx for ONTAP、ストレージVM、ボリュームIDを取得） | s3tables：ListTagsForResource | S3 テーブルタグ操作 | 運用と修復 
+
+
+| Workload Factory検索用のインベントリテーブルにタグを付ける | s3tables：TagResource | S3 テーブルタグ操作 | 運用と修復 
+
+
+| アクセスポイント経由でオブジェクトのタグ付けを取得 | s3：GetObjectTagging | S3 オブジェクト操作 | 運用と修復 
 |===
 ====
 
@@ -827,7 +900,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 | FSx：DescriptionStorageVirtualMachines  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 * インベントリ
 
 | 表示、計画、分析 
@@ -835,14 +908,14 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 | FSx：DescriptionFileSystems  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 * インベントリ
 * コスト削減の詳細
 
 | 表示、計画、分析 
 
 
-| FSx：ListTagsForResource | 処理の管理 | 表示、計画、分析 
+| FSx：ListTagsForResource | カンリシヨリ | 表示、計画、分析 
 
 
 | CloudFormation と VPC のサービスクォータ制限を取得する / SQL、ドメイン、FSx for ONTAPに提供された認証情報のユーザーアカウントにシークレットを作成する | サービスクォータ：ListServiceQuotas | 導入 | 表示、計画、分析 
@@ -851,8 +924,8 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 | SSMベースのクエリを使用して、FSx for ONTAPでサポートされるリージョンの最新リストを取得 | SSM：GetParametersByPath | 導入 | 表示、計画、分析 
 
 
-| 導入後の管理操作のコマンド送信後にSSM応答をポーリング | SSM：GetCommandInvocation  a| 
-* 処理の管理
+| 導入後の管理操作のコマンドを送信した後、SSM 応答をポーリングします | SSM：GetCommandInvocation  a| 
+* カンリシヨリ
 * インベントリ
 * コスト削減の詳細
 * 最適化
@@ -861,7 +934,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 
 | 検出と管理のために SSM 経由で EC2 インスタンスにコマンドを送信します | SSM:sendCommand  a| 
-* 処理の管理
+* カンリシヨリ
 * インベントリ
 * コスト削減の詳細
 * 最適化
@@ -870,7 +943,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 
 | 導入後にインスタンスのSSM接続ステータスを取得 | SSM：GetConnectionStatus  a| 
-* 処理の管理
+* カンリシヨリ
 * インベントリ
 * 最適化
 
@@ -933,7 +1006,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 .4+| 導入時またはAWSアカウントで管理されるAD、FSx for ONTAP、SQLユーザクレデンシャルのSSMパラメータの取得、一覧表示、作成、削除 | SSM：getParameter ^1^  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 * インベントリ
 
 | 表示、計画、分析 
@@ -941,7 +1014,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 | SSM：GetParameters ^1^  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 * インベントリ
 
 | 表示、計画、分析 
@@ -949,14 +1022,14 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 | SSM：PutParameter ^1^  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 
 | 表示、計画、分析 
 
 
 | SSM：削除パラメータ^1^  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 
 | 表示、計画、分析 
 
@@ -1077,7 +1150,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 | WLMDBによって作成されたAmazon FSx for NetApp ONTAPリソースのカスタム値にタグを付けて、リソース管理時に課金の詳細を取得 | FSx：TagResource ^1^  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 
 | データベースホストの作成 
 
@@ -1129,7 +1202,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 | FSx：ボリュームの作成  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 
 | データベースホストの作成 
 
@@ -1169,7 +1242,7 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 
 | ログ:PutLogEvents  a| 
 * 導入
-* 処理の管理
+* カンリシヨリ
 
 | データベースホストの作成 
 
@@ -2009,6 +2082,46 @@ VMware ワークロードでは、次の権限ポリシーから選択できま�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+=== 2025年2月1日
+
+ストレージ ワークロードに次の権限が追加されました。
+
+* `s3:TagResource`
+* `s3:ListTagsForResource`
+* `s3:UntagResource`
+* `s3tables:CreateTableBucket`
+* `s3tables:ListTables`
+* `s3tables:GetTable`
+* `s3tables:GetTableMetadataLocation`
+* `s3tables:CreateTable`
+* `s3tables:GetNamespace`
+* `s3tables:PutTableData`
+* `s3tables:CreateNamespace`
+* `s3tables:GetTableData`
+* `s3tables:ListNamespaces`
+* `s3tables:ListTableBuckets`
+* `s3tables:GetTableBucket`
+* `s3tables:UpdateTableMetadataLocation`
+* `s3tables:ListTagsForResource`
+* `s3tables:TagResource`
+* `s3:GetObjectTagging`
+* `s3:ListBucket`
+
+
+
+
+=== 2025年12月4日
+
+ストレージ ワークロードに次の権限が追加されました。
+
+* `fsx:CreateAndAttachS3AccessPoint`
+* `fsx:DetachAndDeleteS3AccessPoint`
+* `s3:CreateAccessPoint`
+* `s3:DeleteAccessPoint`
+
 
 
 
