@@ -1501,7 +1501,6 @@
   <block id="a49bf929860657a29ec7b321ff7a63ba" category="list-text">*Storage VM論理レポート*</block>
   <block id="7edda8ec9be79d47927f4aa7e27bd776" category="paragraph">Workload Factory では、ボリュームレベルでのストレージ使用状況をより適切に把握できるように、ストレージ VM のデフォルトのレポート設定を論理に設定することをお勧めします。</block>
   <block id="394c926099d3d2cf7e0d7477f17faf38" category="paragraph">コストの最適化により、コストを低く抑えながらビジネスの価値を最大限に高めることができます。</block>
-  <block id="6d281baa5967f3e1be000f071dda6d92" category="list-text">*孤立したブロックデバイス*</block>
   <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">ブロックデバイスが7日間使用されなかった場合、Workload Factoryはブロックデバイスデータをアーカイブするか、未使用のブロックデバイスを削除してコストを削減することを推奨します。</block>
   <block id="08e31d66d631ac235f15db15294a1bed" category="paragraph">最高のストレージパフォーマンスを得るには、プライマリSSD階層にFSx for ONTAPボリュームを作成します。容量プール階層を使用すると、パフォーマンスが低下し、レイテンシが増加する可能性があります。</block>
   <block id="c882de88255b448709010276c1779e90" category="paragraph">ストレージパフォーマンスを最適化するには、ファイルシステム容量をボリュームの合計サイズの1.35倍に設定します。</block>
@@ -1518,4 +1517,5 @@
   <block id="9bcd13fbdffcddd84a7b637f7ec4e9b8" category="list-text">*クラスタノード管理*</block>
   <block id="240380a5970626d74754b96038898f5e" category="paragraph">EVS クラスタノードに適切な EC2 停止および終了保護が設定されていることを確認します。EVS ESXi ノードは、vCenter またはその他の VMware レベルの管理ツールを使用してのみ管理する必要があります。適切な EC2 レベルの保護がないと、EC2 コンソールからノードが誤って停止または終了される可能性があり、仮想マシンのデータが使用できなくなったり、データが失われたりする可能性があります。</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">2026年2月1日</block>
+  <block id="c359614024935abd3712075452782fa3" category="list-text">*非アクティブなブロックデバイス*</block>
 </blocks>
