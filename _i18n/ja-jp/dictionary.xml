@@ -1521,4 +1521,10 @@
   <block id="a245d89706ebe16fde36591a5e609a33" category="list-text">オプションで、クライアント資格情報交換を実行して、Auth0 管理 API のアクセストークンを取得できます。リフレッシュトークンの生成に関する情報については、<block ref="3b56da8d0a374b6655d8f6eed0786ff9" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="c24f8da0f82882bea0b6a996bf370a07" category="paragraph">curl の例は、クライアント ID とシークレットを取得し、API を使用して時間制限のあるアクセストークンを生成する方法を示しています。トークンは、NetApp Workload Factory API への数時間のアクセスを提供します。</block>
   <block id="63c9444676abbb5883eb0d8ae98bc87a" category="paragraph">出力をhttps://netapp-cloud-account.auth0.com/oauth/tokenに投稿してアクセストークンを取得します。</block>
+  <block id="129560e32411be4dc94c9cfeada8ea67" category="doc">Workload Factory で新しい Ask Me ブックマークが利用可能になりました</block>
+  <block id="4ea89e975474ebd5bba8d32ced2e95cc" category="paragraph">Workload Factory コンソールのすべての画面に新しい Ask Me ブックマークを追加しました。この改善により、ヘルプが必要なときにいつでも Ask Me に簡単かつ迅速にアクセスできるようになります。Ask Me は AI アシスタントであり、独自のワークロード環境について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。</block>
+  <block id="38dc719ee518af5f799c19331bfd5f19" category="paragraph">新しいブックマークをクリックすると、どのページからでも Ask Me を開くことができます。現在の作業を中断することなく、サイドパネルで Ask me を起動し、現在行っている作業に関連する簡単な説明と推奨事項を提供します。</block>
+  <block id="80dcbdee31e7f18a301f863f8b73dc64" category="inline-link-macro">Ask Meの詳細</block>
+  <block id="ca844fa02d938fb3d0329bf797d0a633" category="paragraph"><block ref="ca844fa02d938fb3d0329bf797d0a633" category="inline-link-macro-rx"></block></block>
+  <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">2026年3月1日</block>
 </blocks>
