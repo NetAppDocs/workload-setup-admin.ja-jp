@@ -995,7 +995,6 @@
   <block id="29ff7127ee20a064050f18e60ebefb52" category="inline-image-macro">NetApp Workload Factory ユーザー インターフェイスのアカウント メニュー オプションを示すスクリーンショット。オプションの 1 つはサービス アカウントです。</block>
   <block id="a9e0a4cc2ab34b88741d440069a23306" category="paragraph"><block ref="a9e0a4cc2ab34b88741d440069a23306" category="inline-image-macro-rx" type="image"></block></block>
   <block id="49f5ed0a90981c28c41567afa9022439" category="paragraph">クライアント シークレットは 1 回だけ表示され、Workload Factory によってどこにも保存されません。秘密をコピーまたはダウンロードして安全に保管してください。</block>
-  <block id="cde2339a39bfe4d657d43be10594e1d0" category="list-text">オプションで、クライアント資格情報交換を実行して、Auth0 管理 API のアクセス トークンを取得できます。 curl の例は、クライアント ID とシークレットを取得し、API を使用して時間制限のあるアクセス トークンを生成する方法を示しています。トークンにより、 NetApp Workload Factory API への数時間のアクセスが提供されます。</block>
   <block id="6088e1e1d002a4c07aec5cec2ca41900" category="list-text">*サービス アカウント* ページで、アクション メニューを選択し、*削除* を選択します。</block>
   <block id="9e4d021b600a18ca2bdc19e316e61a90" category="paragraph">最初の Workload Factory 機能を使用する場合は、それらのワークロード機能に必要な権限を使用して資格情報を作成する必要があります。認証情報は Workload Factory に追加しますが、IAM ロールとポリシーを作成するには AWS マネジメントコンソールにアクセスする必要があります。これらの資格情報は、Workload Factory のあらゆる機能を使用するときにアカウント内で利用できるようになります。</block>
   <block id="b6cd757220290782ab371e620582ddcd" category="paragraph">Workload Factory に複数の AWS 認証情報セットを追加すると、FSx for ONTAPファイルシステム、FSx for ONTAPへのデータベースのデプロイ、VMware ワークロードの移行など、追加機能を使用するために必要な追加の権限が提供されます。</block>
@@ -1518,4 +1517,8 @@
   <block id="240380a5970626d74754b96038898f5e" category="paragraph">EVS クラスタノードに適切な EC2 停止および終了保護が設定されていることを確認します。EVS ESXi ノードは、vCenter またはその他の VMware レベルの管理ツールを使用してのみ管理する必要があります。適切な EC2 レベルの保護がないと、EC2 コンソールからノードが誤って停止または終了される可能性があり、仮想マシンのデータが使用できなくなったり、データが失われたりする可能性があります。</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">2026年2月1日</block>
   <block id="c359614024935abd3712075452782fa3" category="list-text">*非アクティブなブロックデバイス*</block>
+  <block id="7be2086f13a4f10a02431f16800fa81d" category="inline-link-macro">NetApp Console APIドキュメント</block>
+  <block id="a245d89706ebe16fde36591a5e609a33" category="list-text">オプションで、クライアント資格情報交換を実行して、Auth0 管理 API のアクセストークンを取得できます。リフレッシュトークンの生成に関する情報については、<block ref="3b56da8d0a374b6655d8f6eed0786ff9" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="c24f8da0f82882bea0b6a996bf370a07" category="paragraph">curl の例は、クライアント ID とシークレットを取得し、API を使用して時間制限のあるアクセストークンを生成する方法を示しています。トークンは、NetApp Workload Factory API への数時間のアクセスを提供します。</block>
+  <block id="63c9444676abbb5883eb0d8ae98bc87a" category="paragraph">出力をhttps://netapp-cloud-account.auth0.com/oauth/tokenに投稿してアクセストークンを取得します。</block>
 </blocks>
