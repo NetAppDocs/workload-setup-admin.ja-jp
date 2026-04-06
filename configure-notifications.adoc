@@ -52,6 +52,9 @@ Workload Factory は次のイベントの通知を送信します。
 
 
 | FSx for ONTAPの自動 inode 管理イベント | FSx for ONTAPボリュームの inode 数が、警告しきい値の数/パーセンテージの合計に達しました。 | 容量管理 | 警告 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| FSx for ONTAPファイルシステムで疑わしいボリュームアクティビティが検出されました | NetApp Autonomous Ransomware Protection with AI（ARP/AI）が、不審なボリュームアクティビティを検出しました。 | ランサムウェア対策 | 致命的 | 一般的な保管 | ONTAPファイルシステム用の FSx 
 |===
 
 

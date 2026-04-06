@@ -1,0 +1,11 @@
+= ストレージの新しい通知
+:allow-uri-read: 
+
+
+
+
+=== ストレージの新しい通知
+
+NetApp Workload Factory通知サービスには、Storage向けNetApp Autonomous Ransomware Protection with AI（ARP/AI）の通知が含まれます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory の通知"]
