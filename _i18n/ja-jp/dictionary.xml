@@ -830,8 +830,6 @@
   <block id="3a966eb1052bbc81baf1db313011eddf" category="cell">Microsoft SQL Server または PostgreSQL ホストのデプロイに失敗しました。詳細については、ジョブ監視を参照してください。</block>
   <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">エラー</block>
   <block id="9ccebe6954a81c5c1f9a57ddc658596a" category="list-text">Amazon SNS コンソールまたは AWS CLI を使用して、Amazon SNS を設定し、Amazon SNS トピックを作成する必要があります。</block>
-  <block id="9bc635b321d7a10ffec6283dfaa84aa0" category="list-text">*SNS通知を有効にする*を選択します。</block>
-  <block id="677c7dc689b0afdcb0633b635edd3a87" category="list-text">Amazon SNS コンソールから Amazon SNS を設定するには、指示に従います。</block>
   <block id="2339afaee28d73e91f81e490b67a4b5c" category="list-text">テスト通知を送信して構成を確認した後、[適用] を選択します。</block>
   <block id="5e5392f4dcdf5502f0937be76da274d0" category="section-title">Amazon SNSトピックを購読する</block>
   <block id="cbde2df6a7c89370edc449dc5705d30c" category="inline-link">説明書</block>
@@ -919,7 +917,6 @@
   <block id="67c0397212edda6d32cfd64e83e5f8dc" category="paragraph"><block ref="2171d3ebe49d6b87e35ddf53dd80032d" category="inline-link-macro-rx"></block> 。</block>
   <block id="a59c5f15e65baf8d84c9f0e2d778cfc9" category="summary">特定の種類のイベントが発生したときに、ユーザーまたは別のアプリケーションに通知を送信するようにNetApp Workload Factory を構成できます。</block>
   <block id="5ba8acf00a9c87f3087344b902777a6e" category="doc">NetApp Workload Factory 通知を構成する</block>
-  <block id="f476688085fcfdcff7daf09d94971782" category="paragraph">NetApp Workload Factory 通知サービスを設定して、 NetAppコンソールまたは Amazon SNS トピックにアラートとして通知を送信できます。コンソール エージェントまたはリンクが展開されている場合、アラートとして送信された通知はNetAppコンソールに表示されます。  Workload Factory が Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー (ユーザーや他のアプリケーションなど) は、トピックに設定されたエンドポイント (電子メールや SMS メッセージなど) で通知を受信します。</block>
   <block id="ac41ca3061dfdb48a516c0388098eccd" category="paragraph">Workload Factory は次のイベントの通知を送信します。</block>
   <block id="e57a1a49b9af455c41d31e251929ebe5" category="cell">アカウント内のすべての Microsoft SQL Server インスタンスは、well-architected の問題について分析されています。このイベントの説明には、適切に設計されたインスタンスと最適化されていないインスタンスの数が表示されます。  Workload Factory コンソールから、データベース インベントリ内の well-architected ステータスの調査結果と推奨事項を確認します。</block>
   <block id="8a139d1f9e892c3827baf8993b22e06f" category="cell">FSx for ONTAP の問題が検出されました</block>
@@ -927,23 +924,16 @@
   <block id="2eff23d45d9eb3d8a7c0149407c6dcf8" category="cell">適切に設計された分析</block>
   <block id="8da726c31c391e624ecc54fd7ed145d6" category="cell">ONTAPファイルシステム用の FSx</block>
   <block id="7c1a1feb7968ed15d338ae3e7284dd4e" category="section-title">ワークロードファクトリーの通知を構成する</block>
-  <block id="014e444433a1c7cbbdd9c8c1f4fefa4b" category="paragraph">NetAppコンソールまたは Workload Factory コンソールを使用して、Workload Factory 通知を構成します。  NetAppコンソールを使用する場合は、 NetAppコンソールまたは Amazon SNS トピックにアラートとして通知を送信するように Workload Factory を設定できます。  NetAppコンソールの *通知設定* から通知を設定できます。</block>
   <block id="1a7d7414c3da7bd3d69c29c1c9dc74ad" category="list-text">Workload Factory は *Standard* トピック タイプをサポートしていることに注意してください。このタイプのトピックでは、通知が受信順にサブスクライバーに送信されるとは限りません。そのため、重要な通知や緊急の通知がある場合は、この点を考慮してください。</block>
   <block id="4be7ff4e16147ce765eb61308f73beda" category="open-title">NetAppコンソールからの通知を構成する</block>
   <block id="3c031b939f6ec312ee601d021e7a6644" category="inline-link-macro">NetAppコンソール</block>
   <block id="fe3e3ad90678611fd3fe6b4348fba6dc" category="list-text">ログイン<block ref="7532dfde8c533672ea63a5b546224a97" category="inline-link-macro-rx"></block>。</block>
   <block id="0a4d4130dbebdc7083cd7435e388797d" category="list-text">NetAppコンソール メニューから、*ワークロード*、*管理*、*通知設定*の順に選択します。</block>
-  <block id="df93da47c0462e1ca9969b57c5b59331" category="list-text">通知設定ページで、次の操作を行います。</block>
-  <block id="d993cd32e8e4b3f49b00361542cc4c2e" category="list-text">オプション: NetAppコンソールで通知を送信するように Workload Factory を構成するには、* NetAppコンソール通知を有効にする* を選択します。</block>
   <block id="a4caa02a925f9e2b61439b42ecfebb6f" category="paragraph">トピックを作成したら、トピック ARN をコピーして、*通知設定*ページの *SNS トピック ARN* フィールドに入力します。</block>
-  <block id="d055c503023d741dbaa19c65690c1ebd" category="paragraph">Workload Factory は、指定した Amazon SNS トピックに通知を送信するように設定されています。</block>
   <block id="4bc45d22028e53a00f4de2c50839c911" category="open-title">Workload Factory コンソールから通知を構成する</block>
   <block id="219bd6a410f8c490dbc0ffbcf504910f" category="list-text">ログイン<block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>。</block>
   <block id="99a1b22d5c08e1ea6e260730064a78c1" category="list-text">Workload Factory コンソール メニューから、*ワークロード*、*管理*、*通知設定*の順に選択します。</block>
   <block id="48069e5c28c259c5ae7ab58ad98f2b42" category="paragraph">トピックに通知を送信するようにWorkload Factoryを設定したら、<block ref="88c7b6108316e02c36e39863bedc2019" category="inline-link-rx"></block> Amazon SNS ドキュメントの手順に従ってトピックをサブスクライブし、Workload Factory から通知を受信できるようにします。</block>
-  <block id="c5fd377ea2f0481283c28906ff7fda82" category="paragraph">通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに対して特定の通知タイプをターゲットにすることができます。これは、SNS 通知用の Amazon SNS ポリシーと、 NetAppコンソールの通知設定を使用して実行できます。</block>
-  <block id="163b273913190cc19572b1888b07e784" category="section-title">NetAppコンソールで通知をフィルタリングする</block>
-  <block id="05efbe0ae6892f06551778677d8a7b08" category="paragraph">NetAppコンソールの通知設定を使用すると、コンソールで受信する通知を重大度レベル (重大、情報、警告など) でフィルタリングできます。</block>
   <block id="454bb1110d6093b9ef29fd01d063b03f" category="inline-link">NetAppコンソールのドキュメント</block>
   <block id="53dc504e1574e48bdd8e3e0657d1ae00" category="paragraph">コンソールでの通知のフィルタリングの詳細については、<block ref="46a34f1df7f0cbab6b8d9cd707e12b7f" category="inline-link-rx"></block> 。</block>
   <block id="6370c01a33f220ec64c0532b1236e695" category="summary">NetApp Workload Factory には、2 つの Web ベースのコンソールからアクセスできます。</block>
@@ -1397,4 +1387,35 @@
   <block id="3577aeab8c1da0cce8c18c1a2ea9394e" category="cell">NetApp Autonomous Ransomware Protection with AI（ARP/AI）が、不審なボリュームアクティビティを検出しました。</block>
   <block id="7478f8f98c41fc2f5747e6f31892fe6f" category="cell">ランサムウェア対策</block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026年4月6日</block>
+  <block id="15407be309823d0bd0fd1f09d53ccd89" category="doc">Workload Factory のメール通知</block>
+  <block id="a1ed0466beff73a72b5d95ef2b956e83" category="paragraph">Amazon SNSトピックを設定しなくても、Workload Factoryの通知をメールで受信できるようになりました。アカウントに関連付けられているすべてのメールアドレスに通知を送信するには、メール通知を有効にしてください。</block>
+  <block id="1c6cc010b2ec0805e327534ebbfb3973" category="paragraph">Workload Factory コンソールまたはNetApp Console のいずれかから E メール通知を設定できます。NetApp Console では、ベルアイコンの下に表示されるNetApp Console 通知を設定するオプションも提供されています。</block>
+  <block id="f76fbee6bb24fc9289f051c59b4058b2" category="paragraph">NetApp Console で通知を設定すると、NetApp Console が通知配信の所有権を取得します。重複通知を防ぐため、Workload Factory コンソールの通知設定は読み取り専用になります。</block>
+  <block id="b2dfd446bf724d5a49ad6d34fffa8cd5" category="section-title">EDAレイテンシに関する新しい通知</block>
+  <block id="72139a3373d3afc6254af7e39dc3cd2a" category="paragraph">NetApp Workload Factoryの通知サービスには、EDA操作のレイテンシが一定のしきい値を超えた場合に通知するEDAレイテンシに関する通知が含まれています。</block>
+  <block id="06c8d6de7277fbcb62791ed118b9bc96" category="paragraph"><block ref="06c8d6de7277fbcb62791ed118b9bc96" category="inline-link-macro-rx"></block></block>
+  <block id="ecfa38cbb07762f651b2d55730a9503d" category="paragraph">NetApp Workload Factory通知サービスを設定して、NetApp Consoleでアラートとして通知を送信したり、アカウントに関連付けられている任意のメールアドレスやAmazon SNSトピックに送信したりできます。アラートとして送信される通知は、Consoleエージェントまたはリンクがデプロイされている場合にNetApp Consoleに表示されます。Workload FactoryがAmazon SNSトピックに通知を発行すると、そのトピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、そのトピック用に設定されたエンドポイント（電子メールやSMSメッセージなど）で通知を受信します。</block>
+  <block id="6a3ad7ac445ce4c1e599c439dfbb0b26" category="cell">レイテンシしきい値超過が検出されました</block>
+  <block id="1bb95b7c12022ee051b8199049811a71" category="cell">FSx for ONTAP クラスターの 1 つ以上のボリュームがレイテンシしきい値を超えました。</block>
+  <block id="d8be01b779b72fb7ad353d45426e7fe3" category="cell">パフォーマンス監視</block>
+  <block id="81f1b99be9951f3725aa3dd62766099e" category="cell">EDA</block>
+  <block id="4bd55d131f0ae81cc60c9fe282068a64" category="paragraph">Workload Factory の通知は、NetApp Console または Workload Factory コンソールを使用して設定できます。</block>
+  <block id="d7dcef6f1d8c5c823f847fd4c7fa8fe9" category="paragraph">通知を受け取るためのオプションは次のとおりです：</block>
+  <block id="cce7bd3a3721067273866ec7f3ec7b7c" category="list-text">*通知*：Workload Factory を設定して、NetApp Console のベルアイコンの下に表示される通知を送信します。</block>
+  <block id="a58c54927d168d58046b4ad29f5254fa" category="list-text">*メール*：NetApp Consoleでメール通知を有効にすると、Amazon SNSの設定を必要とせずに、アカウントに関連付けられた任意のメールアドレスに通知を受信できます。</block>
+  <block id="d7b2e59eb21ae19aa7b493f93fbcb35f" category="list-text">*Amazon SNS*：Amazon SNS トピックに通知を送信するように Workload Factory を設定します。</block>
+  <block id="e174fa0e05fb5c229301ef978773782d" category="list-text">*メール*：Amazon SNSの設定を必要とせずに、アカウントに関連付けられている任意のメールアドレスに通知を受信するには、Workload Factoryコンソールでメール通知を有効にします。</block>
+  <block id="7184b61f2058f394c7d6b104dc166242" category="list-text">*Amazon SNS*：Workload Factory コンソールを使用して、Amazon SNS トピックに通知を送信するように Workload Factory を設定します。</block>
+  <block id="150b7425bee731f53d950cb07997d3a9" category="admonition">NetApp Consoleで通知を設定すると、通知配信の所有権が移管され、Workload Factoryコンソールの通知オプションは無効になり、読み取り専用モードで表示されます。ツールチップには、通知はNetApp Consoleから管理されると記載されています。その後、通知はNetApp Consoleからのみ管理できます。</block>
+  <block id="719c05c1c99e00fa5e0edb33bb8190f6" category="paragraph">以下の前提条件は、Amazon SNS通知を設定する場合にのみ適用されます。</block>
+  <block id="62ebe1005c43ca37dff7ddb9684484ac" category="list-text">通知設定ページで、以下の通知タイプのうち1つ以上を有効にします：</block>
+  <block id="3cffbdfd446e6b3ca39fc52d1b2a87ab" category="list-text">*NetApp Console通知*：*NetApp Console通知を有効にする*を選択して、Workload FactoryがNetApp Consoleで通知を送信するように設定します。</block>
+  <block id="4941b94ab67ffcf8b95fddca7b5ce770" category="list-text">*Eメール通知*：*Eメール通知を有効にする*を選択すると、Workload Factoryがアカウントに関連付けられている任意のEメールアドレスに通知を送信するように設定されます。</block>
+  <block id="0d7adbc19c316fab18fa015b723496bd" category="list-text">*Amazon SNS通知*：*SNS通知を有効にする*を選択し、Amazon SNSコンソールからAmazon SNSを設定するための手順に従ってください。</block>
+  <block id="458f208085c8b6ec69e163ddf2378427" category="list-text">以下の通知タイプのうち、1つ以上を有効にしてください：</block>
+  <block id="622901cf56fa55473d2f9550e6422faf" category="list-text">*メール通知*：*メール通知を有効にする*を選択してください。アカウントに関連付けられているメールアドレスはすべて読み取り専用モードで表示されます。</block>
+  <block id="3bf17ee9de6360f01456d2fe35c8ff4c" category="paragraph">通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに特定の種類の通知を配信することができます。Amazon SNS ポリシーを使用して SNS 通知を設定し、NetApp Console の通知設定を使用することでこれを実現できます。</block>
+  <block id="8749fce6a42b5cc208c97e090bbdf52e" category="section-title">NetApp Console で通知をフィルタリング</block>
+  <block id="067205dc8475e129dc9d47a407ae631d" category="paragraph">NetApp Consoleの通知設定を使用して、コンソールで受信する通知を重大度レベル（Critical、Info、Warningなど）でフィルタリングできます。</block>
+  <block id="3be044b694628f6e958377c22febfacd" category="section-title">2026年5月3日</block>
 </blocks>

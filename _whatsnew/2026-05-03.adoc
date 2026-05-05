@@ -1,0 +1,21 @@
+= Workload Factory のメール通知
+:allow-uri-read: 
+
+
+
+
+=== Workload Factory のメール通知
+
+Amazon SNSトピックを設定しなくても、Workload Factoryの通知をメールで受信できるようになりました。アカウントに関連付けられているすべてのメールアドレスに通知を送信するには、メール通知を有効にしてください。
+
+Workload Factory コンソールまたはNetApp Console のいずれかから E メール通知を設定できます。NetApp Console では、ベルアイコンの下に表示されるNetApp Console 通知を設定するオプションも提供されています。
+
+NetApp Console で通知を設定すると、NetApp Console が通知配信の所有権を取得します。重複通知を防ぐため、Workload Factory コンソールの通知設定は読み取り専用になります。
+
+
+
+=== EDAレイテンシに関する新しい通知
+
+NetApp Workload Factoryの通知サービスには、EDA操作のレイテンシが一定のしきい値を超えた場合に通知するEDAレイテンシに関する通知が含まれています。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["ワークロードファクトリーの通知を構成する"]
