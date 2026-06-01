@@ -5,8 +5,6 @@
   <block id="1a04b786edc8b8251d22307b11cb2a8d" category="list-text">*自動的に*:権限に関する最小限の情報を取得し、CloudFormationスタックを使用して資格情報のIAMポリシーと役割を作成します。</block>
   <block id="3e704746794b6c6da13402ca9df54660" category="section-title">アカウントへのクレデンシャルの手動追加</block>
   <block id="ea106b6fa0504ddb53d4506dcd8e7755" category="paragraph">クレデンシャルの作成には、次の3つの要素があります。</block>
-  <block id="b4968210d824a9808cbfac903e6a2461" category="list-text">使用するサービスと権限レベルを選択し、AWS管理コンソールからIAMポリシーを作成します。</block>
-  <block id="3b022a10e2c2436d37f59e86b18713f7" category="list-text">AWS管理コンソールからIAMロールを作成します。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始する前に</block>
   <block id="36a8744ea109fc8ef18fd018d5d97aa0" category="paragraph">AWSアカウントにログインするにはクレデンシャルが必要です。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">手順</block>
@@ -193,10 +191,7 @@
   <block id="422588021a93cfdaa26ce8d7d46dfeda" category="list-text">Eメールアドレスの確認手順が記載されたNetAppからのEメールが受信トレイに届いていることを確認します。</block>
   <block id="94f38e991501c8594d502e52dd265abd" category="paragraph">この手順はログインする前に必要です。</block>
   <block id="94d337ef5b62bd31ee54e5111cfec45f" category="list-text">プロンプトが表示されたら、エンドユーザライセンス契約を確認し、条項に同意して* Continue *を選択します。</block>
-  <block id="b789a2d1c7228d0b2d7174302e2c6996" category="list-text">[アカウント]ページで、アカウントの名前を入力し、必要に応じてジョブの説明を選択します。</block>
-  <block id="f54bc40f2305bb493aa6597d8c67d892" category="paragraph">アカウントは、ネットアップのアイデンティティプラットフォームの最上位レベルの要素であり、権限とクレデンシャルを追加および管理できます。</block>
   <block id="2b7293baeca5711138792716543c991a" category="inline-image-macro">新しいアカウントでログインしたときに表示される[Account]ページのスクリーンショット。</block>
-  <block id="28fc544db57c6f54a41eaa5c6ebc4a57" category="paragraph"><block ref="28fc544db57c6f54a41eaa5c6ebc4a57" category="inline-image-macro-rx" type="image"></block></block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">サポートに登録します</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">サポート登録の概要</block>
   <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">NetAppサポートのアカウントを登録する</block>
@@ -893,10 +888,8 @@
   <block id="287ae8bc216279a75c04344894e04b7f" category="doc">Workload FactoryにAWS認証情報を追加する</block>
   <block id="5adad9ce28422d9fe7825511e24aa601" category="paragraph">AWS 認証情報を追加および管理して、 NetApp Workload Factory が AWS アカウントでクラウド リソースを展開および管理するために必要な権限を持つようにします。</block>
   <block id="7f76e91e5513affc227459b415e2e1cf" category="paragraph">認証情報ページから、既存の Workload Factory アカウントに AWS 認証情報を追加できます。これにより、AWS クラウド環境内のリソースとプロセスを管理するために必要な権限が Workload Factory に付与されます。</block>
-  <block id="ebb29cdb5a9f5368e3f445c808c91552" category="list-text">*手動*: Workload Factory で認証情報を追加しながら、AWS アカウントに IAM ポリシーと IAM ロールを作成します。</block>
   <block id="c3ba6c13344137feef1d3795c8b29466" category="paragraph">Workload Factory に AWS 認証情報を手動で追加して、独自のワークロードを実行するために使用する AWS リソースを管理するために必要な権限を Workload Factory アカウントに付与できます。追加する認証情報の各セットには、使用するワークロード機能に基づく 1 つ以上の IAM ポリシーと、アカウントに割り当てられた IAM ロールが含まれます。</block>
   <block id="9b311c0df60f3fcb1498372665b63e61" category="admonition">Workload Factory コンソールまたはNetAppコンソールから、アカウントに AWS 認証情報を追加できます。</block>
-  <block id="875b761ddc794776aadfc56fc5a6fc34" category="list-text">Workload Factory から名前を入力し、資格情報を追加します。</block>
   <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link">ワークロードファクトリーコンソール</block>
   <block id="6c8ca72a28d9651706405d888093910e" category="list-text">ログイン<block ref="04c72ef1cb137ba02eafcfdeb6fc7765" category="inline-link-rx"></block>。</block>
   <block id="6191b3848b93c4178f95391680ab2108" category="list-text">メニューから*管理*を選択し、次に*資格情報*を選択します。</block>
@@ -1423,4 +1416,24 @@
   <block id="e3e28d348f2fd8f74a410b0565f54037" category="cell">お客様のアカウントの月間コスト概要。支出傾向、異常な変動、FSx for ONTAP ファイルシステムの最適な節約機会が表示されます。</block>
   <block id="e298f728c751f07eb265d52e8b508cc2" category="cell">コストレポート</block>
   <block id="f983e68b5fe658be13decdbe22777f19" category="summary">クラウド プロバイダのクレデンシャル、Codeboxの機能強化など、Workload Factory管理機能の新機能について説明します。</block>
+  <block id="3bb5ae684d139ecc39b584ffe9e6033b" category="paragraph">NetApp Workload Factoryの通知サービスには、レプリケーション遅延に関する通知が含まれています。</block>
+  <block id="bdd14b3b036670ed34f9ec4d3b52c70c" category="section-title">AWS GovCloud（US）アカウントのサポート</block>
+  <block id="bc2438830b45cc61abad63e0b037a228" category="paragraph">Workload FactoryでAWS GovCloud（US）アカウントを作成できるようになりました。このアカウントタイプは、セットアップと操作にAWS US GovCloudエンドポイントとリージョンのみを使用します。認証情報とシークレットはGovCloudに保持されます。GovCloud（US）リージョンがサポートされています。</block>
+  <block id="b6d9ef2d00d295b73db4c150b66667c7" category="inline-link-macro">Workload Factory で AWS GovCloud (US) アカウントを作成する</block>
+  <block id="02235c7f58acbfe62b6b373b8f8ef557" category="paragraph"><block ref="02235c7f58acbfe62b6b373b8f8ef557" category="inline-link-macro-rx"></block></block>
+  <block id="79031a3594e961554e9c04f8abe20efa" category="list-text">*手動*：Workload Factoryで認証情報を追加する際に、AWSアカウントでIAMポリシーとIAMロールを作成します。AWS GovCloud（US）の認証情報は手動で追加する必要があります。</block>
+  <block id="792c9140da9b146f94c73ec223b6fc51" category="paragraph">Workload Factory はGovCloudアカウントでの自動化をサポートしていません。</block>
+  <block id="60071fa639c31fcd4a70e99949388fc9" category="paragraph">AWS GovCloud（US）のクレデンシャルは手動で追加する必要があります。</block>
+  <block id="45bf4c80f61944fd3fcaad58870d0db3" category="list-text">ステップ1：使用するサービスと権限レベルを選択し、AWS Management Consoleから IAM ポリシーを作成します。</block>
+  <block id="5fe86d852cf356c78e39b05d0e9745e8" category="list-text">ステップ2：AWSマネジメントコンソールからIAMロールを作成します。</block>
+  <block id="e4d64fd268d05c9bc7e7e0c0300d69ba" category="list-text">ステップ3：Workload Factoryから名前を入力し、認証情報を追加します。</block>
+  <block id="64faf5c72ad7f70350cc60a29e7ec76e" category="admonition">CloudFormationを使用してAWS GovCloud（US）アカウントにクレデンシャルを追加することはサポートされていません。</block>
+  <block id="5038f398ec0b8521dc65bd49c565199c" category="cell">レプリケーション遅延</block>
+  <block id="7e3ba9b3dfe6a66c23b3a8d2e106e2dc" category="cell">レプリケーションに予想以上に時間がかかっています。</block>
+  <block id="6a34595811c59ce6c3f72924ac92f741" category="list-text">*Account*ページでアカウントを作成します。アカウントはNetAppのIDプラットフォームの最上位要素であり、権限と認証情報を追加および管理できます。</block>
+  <block id="91cf9192d8e3e7c1c5d93a04ee02a619" category="paragraph"><block ref="91cf9192d8e3e7c1c5d93a04ee02a619" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c983ef2dda673a36e8455e61f88625fc" category="list-text">アカウント名を入力してください。</block>
+  <block id="d097d681103ac768d9ca87aa43096db9" category="list-text">必要に応じて、アカウントをAWS GovCloud（US）アカウントにします。このアカウントタイプは、セットアップと運用にAWS GovCloud（US）のエンドポイントとリージョンのみを使用します。クレデンシャルとシークレットはGovCloud内に保持されます。この選択は永続的です。</block>
+  <block id="5aa69fed46341f59b5dc6e550c082135" category="list-text">必要に応じて、アカウントのジョブ概要を入力します。</block>
+  <block id="92ee6e4d72d15689a675017ce0db2fa1" category="section-title">2026年5月31日</block>
 </blocks>
