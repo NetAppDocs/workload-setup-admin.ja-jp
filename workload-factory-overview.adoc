@@ -169,3 +169,14 @@ Workload Factory REST API を使用すると、いくつかの利点がありま
 
 
 https://console.workloads.netapp.com/api-doc["Workload Factory REST API ドキュメントを見る"^]
+
+
+
+== 地域サポート
+
+以下の AWS リージョンはサポートされていません：
+
+* 中国地域
+* シークレットクラウド
+* Top Secret Cloud
+

@@ -39,6 +39,10 @@ NetApp Workload Factory の機能とサービスを使用するには、Workload
 ストレージには、次の権限ポリシーから選択できます。
 
 * *表示、計画、分析*: FSx for ONTAPファイル システムを表示し、システムの健全性を把握し、システムの Well-Architected 分析を取得して、コスト削減を検討します。
++
+
+NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、以下の権限は必要ありません： `ce:GetCostAndUsage` および `ce:GetTags`。これらを含めた場合でも、ポリシーは引き続き有効です。
+
 * *操作と修復*: ファイル システム容量の調整やファイル システム構成の問題の修正などの運用タスクを実行します。
 * *ファイルシステムの作成と削除*: FSx for ONTAPファイルシステムとストレージ VM を作成および削除します。
 

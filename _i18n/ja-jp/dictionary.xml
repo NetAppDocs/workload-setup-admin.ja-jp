@@ -1436,4 +1436,13 @@
   <block id="d097d681103ac768d9ca87aa43096db9" category="list-text">必要に応じて、アカウントをAWS GovCloud（US）アカウントにします。このアカウントタイプは、セットアップと運用にAWS GovCloud（US）のエンドポイントとリージョンのみを使用します。クレデンシャルとシークレットはGovCloud内に保持されます。この選択は永続的です。</block>
   <block id="5aa69fed46341f59b5dc6e550c082135" category="list-text">必要に応じて、アカウントのジョブ概要を入力します。</block>
   <block id="92ee6e4d72d15689a675017ce0db2fa1" category="section-title">2026年5月31日</block>
+  <block id="b8646f09ea34b75c077cfea12f75617b" category="inline-link-macro">権限リファレンス</block>
+  <block id="cd96cf7ebfb9b4a10268be38c383fa2e" category="paragraph">各ワークロード機能に必要な権限の詳細については、<block ref="a5f4ae61e232cd6bd835f3c22c2ae14c" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="d19d35e43d16db0ea1d21d81cb1ac01d" category="admonition">GovCloudアカウントをお持ちの場合、ストレージの**表示、計画、および分析**ポリシーにおいて、Cost Explorer の権限<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block>または<block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>は必要ありません。コードボックスからスクリプトをコピーしたら、これらの権限を削除し、前の行の末尾のカンマを削除してください。</block>
+  <block id="cd9aa9a92963bccf53a18059deb4f182" category="admonition">AWS GovCloud は AWS Cost Explorer をサポートしていないため、以下の権限は必要ありません：<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block> および<block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>。これらを含めた場合でも、ポリシーは引き続き有効です。</block>
+  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">地域サポート</block>
+  <block id="468469fded9ecf5cf0e132a6daa62d32" category="paragraph">以下の AWS リージョンはサポートされていません：</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">中国地域</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">シークレットクラウド</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">Top Secret Cloud</block>
 </blocks>
