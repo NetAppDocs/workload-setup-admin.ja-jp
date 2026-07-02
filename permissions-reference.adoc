@@ -115,6 +115,9 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
         "fsx:DetachAndDeleteS3AccessPoint",
         "s3:CreateAccessPoint",
         "s3:DeleteAccessPoint",
+        "s3:TagResource",
+        "s3:UntagResource",
+        "s3:ListTagsForResource",
         "s3:GetObjectTagging",
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
@@ -139,6 +142,19 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
         "s3:ListBucket"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudtrail:PutEventSelectors",
+        "cloudtrail:GetEventSelectors"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/netapp-fsx-s3-metadata": "journal"
+        }
+      }
     },
     {
       "Effect": "Allow",
@@ -452,6 +468,12 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 
 
 | アクセスポイント経由でオブジェクトのタグ付けを取得 | s3：GetObjectTagging | S3 オブジェクト操作 | 運用と修復 
+
+
+| AWS CloudTrail トレイルの現在のイベントセレクター構成を取得します | cloudtrail:GetEventSelectors | S3アクセスポイントのジャーナル操作 | 運用と修復 
+
+
+| FSx for ONTAP S3 アクセスポイントと CloudTrail トレイル間の関連付けを有効または無効にすることで、AWS CloudTrail イベントセレクターを設定または更新します | cloudtrail：PutEventSelectors | S3アクセスポイントのジャーナル操作 | 運用と修復 
 |===
 ====
 
