@@ -30,7 +30,7 @@ summary: AIガイドプロンプトを使用してカスタムダッシュボー
 == ダッシュボードを作成する
 
 .手順
-. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. いずれかの方法でログインしてくださいlink:console-experiences.html["コンソールエクスペリエンス"^]。
 . メニュー image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。"] を選択し、*ワークロードの概要* > *カスタムダッシュボード* を選択します。
 +
 これが初めてのダッシュボードの場合は、開始に役立つサンプルプロンプトが表示された空白の画面が表示されます。*プロンプトをコピー*を選択すると、サンプルプロンプトがAIダイアログのテキストボックスにコピーされます。

@@ -26,7 +26,7 @@ Workload Factoryアカウントには、少なくとも1つのカスタムダッ
 == ダッシュボードカタログにアクセスする
 
 .手順
-. いずれかを使用してログインしlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]ます。
+. いずれかの方法でログインしてくださいlink:console-experiences.html["コンソールエクスペリエンス"^]。
 . メニューから「Workloads Overview」を選択し、次に「Custom dashboards」を選択します。
 +
 ダッシュボードカタログには、Workload Factoryアカウント内のすべてのカスタムダッシュボードが表示されます。
