@@ -46,6 +46,16 @@ sidebar:
       url: "/well-architected-workloads.html"
     - title: 通知を設定する
       url: "/configure-notifications.html"
+    - title: カスタムダッシュボード
+      entries:
+      - title: カスタムダッシュボードについて
+        url: "/learn-custom-dashboards.html"
+      - title: カスタムダッシュボードを作成する
+        url: "/create-custom-dashboard.html"
+      - title: カスタムダッシュボードを管理する
+        url: "/manage-custom-dashboards.html"
+      - title: カスタムダッシュボードのトラブルシューティング
+        url: "/troubleshoot-custom-dashboards.html"
     - title: Codeboxを使用したタスクの自動化
       entries:
       - title: Codeboxの詳細

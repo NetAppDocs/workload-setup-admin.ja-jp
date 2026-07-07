@@ -42,6 +42,14 @@ indexpage:
       url: https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html
     - title: ストレージワークロードのEMSイベントを表示および分析する
       url: https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html
+  - title: カスタムダッシュボード
+    links:
+    - title: カスタムダッシュボードについて
+      url: "/learn-custom-dashboards.html"
+    - title: カスタムダッシュボードを作成する
+      url: "/create-custom-dashboard.html"
+    - title: カスタムダッシュボードを管理する
+      url: "/manage-custom-dashboards.html"
   - title: ブログとコミュニティ
     links:
     - title: NetAppコンソール
