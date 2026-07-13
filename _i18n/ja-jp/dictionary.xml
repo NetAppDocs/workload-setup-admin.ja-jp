@@ -1461,8 +1461,6 @@
   <block id="463a1f1058198f82800c115a2a913de5" category="paragraph">カスタムダッシュボードは、AIによる対話を通じて、ユーザーが視覚化したい内容を理解します。監視ニーズを自然言語で説明すると、システムが確認のための質問を投げかけ、ダッシュボードが要件を満たしていることを確認します。</block>
   <block id="5af1607522ddad534f7fc3e5976684e5" category="paragraph">作成後、ダッシュボードを更新すると最新のデータが表示されます。</block>
   <block id="a8f8e9b8eb3f376a4b560c169094087e" category="paragraph">カスタムダッシュボードは設計上読み取り専用であり、ストレージやワークロードの設定を変更することはできませんのでご注意ください。</block>
-  <block id="7f2caa1403d5a00e4abbc779c525c170" category="list-text">ダッシュボードで監視したいリソースにアクセスするには、権限が必要です。</block>
-  <block id="aae9aa18bcac1ee780a470bdbbc81875" category="list-text">ワークロードを監視するためのダッシュボードを作成する前に、Workload Factory でワークロードを設定してください。</block>
   <block id="1490f3908001d2cdf7587ba480973340" category="section-title">ダッシュボードを作成する</block>
   <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。</block>
   <block id="2e73b76e7b232c5b1f77e0a5880d5ad5" category="list-text">メニュー <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> を選択し、*ワークロードの概要* &gt; *カスタムダッシュボード* を選択します。</block>
@@ -1479,7 +1477,6 @@
   <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">次の手順</block>
   <block id="fb3b6f147b0a44a08f4c961dc053571e" category="paragraph">作成後、以下のことが可能です：</block>
   <block id="a5c04615d2baa4c3104d2afbb5b85c59" category="list-text">最新の情報を確認するには、ダッシュボードのデータを更新してください。</block>
-  <block id="caace49efbd64662add845d2ed5e7042" category="list-text">ダッシュボードを編集して表示内容を変更する</block>
   <block id="7bff2130a08698224667671d85a34ed4" category="list-text">不要になったダッシュボードを削除する</block>
   <block id="ed5184af3d39b3e314759db5b95ba675" category="list-text">ダッシュボードの詳細（作成者や最終更新日時など）を表示します</block>
   <block id="d10995cac5dfc264a5da7f4abec9025d" category="inline-link-macro">カスタムダッシュボードを管理する</block>
@@ -1513,8 +1510,6 @@
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">制限事項</block>
   <block id="9b7e15be2b250373f1f4204c0d8a313a" category="paragraph">カスタムダッシュボードには、現在以下の制限事項が適用されます。</block>
   <block id="af58cbb6f48e75ca1858deb5b23d424e" category="list-text">Workload Factoryアカウント以外でダッシュボードを共有することはできません。</block>
-  <block id="8842d5599593f1c220f6f9c200222fdc" category="list-text">ダッシュボードは一度に1人のユーザーのみが編集できます</block>
-  <block id="8031af406fb376c22555c37f323588ea" category="list-text">同時編集はサポートされていません</block>
   <block id="8fbadf27f5b9fe2779015430fdb5baac" category="section-title">デモ環境</block>
   <block id="372d2f979722e867e21cf5dc86365106" category="paragraph">Workload Factory のデモアカウントをご利用の場合は、あらかじめ構築されたダッシュボードがいくつか利用可能です。これらのダッシュボードは、カスタムダッシュボードで何ができるかを理解するのに役立ちます。各ダッシュボードには、ディザスタリカバリのステータス、リージョンをまたいだ容量とコスト、ストレージ保護ルールが遵守されているかどうかなど、一般的な監視ニーズが表示されます。</block>
   <block id="79092ffcd78270a38b45ed11da4ef893" category="section-title">サンプルプロンプト</block>
@@ -1529,10 +1524,6 @@
   <block id="817e038e8ee419f03c8a12275438f8d7" category="list-text"><block ref="817e038e8ee419f03c8a12275438f8d7" category="inline-link-macro-rx"></block></block>
   <block id="62403e3fa28afe128e2c0e15bf0333f7" category="inline-link-macro">カスタムダッシュボードを管理する</block>
   <block id="09327b0cff12718fff46be13c240b39f" category="list-text"><block ref="09327b0cff12718fff46be13c240b39f" category="inline-link-macro-rx"></block></block>
-  <block id="c9d9548c92d24e0dc83c6a1818848b58" category="summary">Workload Factory のダッシュボードカタログにアクセスして、カスタムダッシュボードの表示、編集、更新、削除を行います。</block>
-  <block id="48f5d174a835c1fb6c38af1c4800bcdb" category="paragraph">ダッシュボードカタログからカスタムダッシュボードを管理できます。そこから、詳細の表示、データの更新、ダッシュボード設定の編集、不要になったダッシュボードの削除を行うことができます。</block>
-  <block id="426dd2be6d0917b0febd591b1f25bc0a" category="paragraph">Workload Factoryアカウントのすべてのユーザーは、すべてのカスタムダッシュボードにアクセスできます。各ダッシュボードには、作成者名、作成日、現在誰かが編集しているかどうかといった基本的な詳細情報が表示されます。</block>
-  <block id="8a57aae4a94bc002578416ca2a1f301a" category="paragraph">カスタムダッシュボードは読み取り専用です。ストレージやワークロードの設定を変更することはできません。ダッシュボード自体は編集できますが、監視対象のリソースは編集できません。</block>
   <block id="76fc0fde7a5041f5e2df3b114841202c" category="paragraph">Workload Factoryアカウントには、少なくとも1つのカスタムダッシュボードが必要です。</block>
   <block id="19f40b5f5943ee4953075403d9783061" category="section-title">ダッシュボードカタログにアクセスする</block>
   <block id="94ab7238c8d6eb39314e6dc172cba073" category="list-text">メニューから「Workloads Overview」を選択し、次に「Custom dashboards」を選択します。</block>
@@ -1541,15 +1532,6 @@
   <block id="9e3f16aef1d22400bdae48c5cb77b00f" category="section-title">ダッシュボードのデータを更新する</block>
   <block id="4e424a1ad37782627141d4d50f79b586" category="paragraph">ダッシュボードを開くと、ダッシュボードのデータが読み込まれます。最新の情報を確認するには、更新してください。</block>
   <block id="6835e72df37e141c78401ea8d4bfcf90" category="paragraph">ダッシュボードはワークロードからデータを再読み込みします。最終更新時刻は、データが更新された日時を示すように変更されます。</block>
-  <block id="ad322a64b7af5e88132bf6cb538fccd0" category="section-title">ダッシュボードを編集する</block>
-  <block id="ce7194dc740d6f8db1edf5435d1a57b4" category="paragraph">ダッシュボードを編集することで、表示する指標やグラフなど、内容を変更できます。</block>
-  <block id="b13bad0dcb6df4e403e8e2af9058dfe5" category="list-text">「カスタムダッシュボード」ページで、編集するダッシュボードを見つけます。</block>
-  <block id="d431f68c965a7131bbc2f48128983c25" category="list-text">そのダッシュボードの *Actions* メニューから *Edit dashboard* を選択します。</block>
-  <block id="212f24e309c20769800e812e5d15c2e3" category="paragraph">他のユーザーがダッシュボードを編集している場合は、「現在、[ユーザー名]によって編集中です」などのメッセージが表示されます。相手が作業を終えるまでお待ちいただくか、相手と調整してください。</block>
-  <block id="63f40ecf20824ff6d561a306d3a25fd1" category="list-text">AIとの対話の中で、変更したい内容を説明してください。</block>
-  <block id="3184c7e78934ef4b37ea845f1d56789a" category="paragraph">このプロセスは、新しいダッシュボードを作成するのと似ています。ダッシュボードが追跡するワークロード、指標、または期間を変更できます。</block>
-  <block id="f66306510aaf399aef8bdf649739a15e" category="list-text">変更内容を確認し、**保存**を選択してください。</block>
-  <block id="89806ea6a9ed9b0bb6cb322f912aff65" category="paragraph">ダッシュボードは変更内容に合わせて更新されます。最終更新日も更新されます。</block>
   <block id="74ee9feffcb1603b7eeb47c099c0e5a5" category="section-title">ダッシュボードを削除する</block>
   <block id="e54360b7371199d6607f76cd1ae6ad17" category="paragraph">不要になったダッシュボードは削除してください。この操作は永続的なものであり、元に戻すことはできません。</block>
   <block id="3325f3a5c13a73bb87ed2dabebb0b6a3" category="list-text">「カスタムダッシュボード」ページで、削除するダッシュボードを見つけます。</block>
@@ -1572,9 +1554,7 @@
   <block id="6cf9da3bc18ab877793e971ea5fdf80d" category="paragraph">**問題：** ダッシュボードは作成されましたが、データの読み込み時にエラーが表示されます。</block>
   <block id="423c766e8a7076c3dd890fe7460b5785" category="paragraph">**原因：**これは通常、権限の問題またはデータソースが利用できないために発生します。</block>
   <block id="6342c16a39a9eb2f31fa733eb76963b7" category="paragraph">**解決策：**</block>
-  <block id="fb7bac53b48882cef2221ea2bff55443" category="list-text">**権限を確認してください：** ワークロードファクトリーアカウントに、ダッシュボードで使用されるワークロードとリソースへの読み取りアクセス権があることを確認してください。権限要件については、<block ref="79e11e6e61bebfcf73bb53d91696114e" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="a92d27a2e307df461574cc29f2358257" category="list-text">**認証情報の確認：** AWS認証情報が有効であり、有効期限が切れていないことを確認してください。詳細については、<block ref="b2fa8f8bcb70f53fbee747df0674d6ae" category="inline-link-macro-rx"></block>を参照してください。</block>
-  <block id="fee56bf45b6270228ee20fa9d1d5d88a" category="list-text">**ワークロード構成の確認：** 監視対象のワークロードがWorkload Factoryで正しく構成され、現在実行中であることを確認してください。</block>
   <block id="a82708a710bdc7f66cc4d1b5721a359c" category="section-title">ダッシュボードが読み込まれない、または読み込みが遅い</block>
   <block id="7b8a6ade8ac0e93d1993c6d3ee222a27" category="paragraph">**問題：** ダッシュボードの読み込みが遅い、または一部のウィジェットが表示されない。</block>
   <block id="c66f626cb62bfd00b1514c2f1a4ec699" category="paragraph">**原因：** 読み込みが遅い原因としては、ネットワークの問題、大量のデータ、または一時的なサービス遅延などが考えられます。</block>
@@ -1582,12 +1562,6 @@
   <block id="e39625dee78ba95654668e1fce54e45f" category="list-text">**ブラウザを更新してください：** ページを更新して、ダッシュボードが正しく読み込まれるかどうか確認してください。</block>
   <block id="f86d0248af765f101ea3563fcc677a18" category="list-text">**ブラウザのキャッシュとCookieをクリアしてください：** これにより、古いデータや破損したデータが原因で発生する読み込みの問題を解決できる場合があります。</block>
   <block id="e7347594ee6cffce40f1598054f4f163" category="list-text">**しばらく待ってからもう一度試してください：** 問題が解決しない場合は、数分待ってからもう一度試してください。</block>
-  <block id="7a2ffa8b9064d2842f2e8203776a80e0" category="section-title">ダッシュボードを編集できません</block>
-  <block id="83e74e6ee1cf72780d556b5b56524b07" category="paragraph">**問題：** ダッシュボードを編集しようとすると、「現在、[ユーザー名]によって編集中です」というメッセージが表示されます。</block>
-  <block id="89bb98bf1c9d56355ec74ce488a3f9f8" category="paragraph">**原因：** Workload Factoryアカウントの別のユーザーがダッシュボードを編集しています。ダッシュボードを編集できるのは、一度に1人のユーザーのみです。</block>
-  <block id="21aa7960bf24b27392547adc57724345" category="list-text">他のユーザーが変更を終えて保存するまで待ってください。</block>
-  <block id="3e99de69e606821e37746a29904f9fc6" category="list-text">編集作業の調整については、メッセージに記載されている担当者にご連絡ください。</block>
-  <block id="0fced5615d0fc04d9397c731329e549e" category="list-text">ユーザーが編集作業を終了したにもかかわらずロックが解除されない場合は、編集ウィンドウを閉じてロックを解除するようにユーザーに促してください。</block>
   <block id="318369ae5a2f25e9c7cb0b7b846d1775" category="section-title">ダッシュボードが見つかりません</block>
   <block id="732976f9f9cc4b9938c0a1a9c2569828" category="paragraph">**問題：** 作成したダッシュボードがダッシュボードカタログに表示されなくなりました。</block>
   <block id="d0a35413e8843c3f263cb1fad4f4cb3e" category="paragraph">**原因：** Workload Factory アカウントの別のユーザーが削除した可能性があります。</block>
@@ -1598,4 +1572,14 @@
   <block id="e2a43aebbf3f114c3e1dfc54b469c13e" category="section-title">追加ヘルプ</block>
   <block id="a56bacdffec3c1404856b40a1b27f955" category="paragraph">カスタムダッシュボードで引き続き問題が発生する場合は、NetAppサポートへの連絡方法については<block ref="c470f3409940cee13ddda9c09bf54b60" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="708d52dc7d2f1cb4787bfd74e41bfab5" category="list-text">いずれかの方法でログインしてください<block ref="730226d90433792895dc2ec640283d2d" category="inline-link-macro-rx"></block>。</block>
+  <block id="97911b3c54a4e826b34c1f79026316c5" category="section-title">AWS認証情報と権限</block>
+  <block id="d65de0ffa05b31f0beebf22d3e28dbde" category="section-title">FSx for ONTAP へのリンク</block>
+  <block id="575660b25d9cb74a47a89172d359da91" category="paragraph">Workload Factory は、FSx for ONTAP ファイルシステムに接続するためにリンクが必要です。リンクは、Workload Factory と 1 つ以上の FSx for ONTAP ファイルシステムとの間に信頼関係と接続性を確立します。これにより、Amazon FSx for ONTAP API では利用できない ONTAP REST API 呼び出しを通じて、特定のファイルシステム機能を直接監視および管理できます。</block>
+  <block id="68cd2ca9724f378c0a2815415eeecfbd" category="inline-link">リンクの作成方法を学ぶ</block>
+  <block id="11a7b8f6e5b40124f50c5d30e3fedda3" category="paragraph"><block ref="35d312ad6c576252ccfa87842dc6e767" category="inline-link-rx"></block>。</block>
+  <block id="90b29202abc7a1c38c887ae166296c46" category="summary">Workload Factory のダッシュボードカタログにアクセスして、カスタムダッシュボードの表示、更新、削除を行います。</block>
+  <block id="b0929267f27be355fe20aa6662a8ff91" category="paragraph">ダッシュボードカタログからカスタムダッシュボードを管理できます。そこから、詳細を表示したり、データを更新したり、不要になったダッシュボードを削除したりできます。</block>
+  <block id="21984c4de187dab774a2262572d5c108" category="paragraph">Workload Factoryアカウントのすべてのユーザーは、すべてのカスタムダッシュボードにアクセスできます。各ダッシュボードには、作成者名や作成日などの基本的な詳細情報が表示されます。</block>
+  <block id="a83695a886882e5b4baf753ee607f66f" category="paragraph">カスタムダッシュボードは読み取り専用です。ストレージやワークロードの設定を変更することはできません。</block>
+  <block id="dc3bd384dcb2bc2324eb0b2de08dda55" category="list-text">**権限を確認してください：** ワークロードファクトリーアカウントに、ダッシュボードで使用されるワークロードとリソースへの読み取りアクセス権があることを確認してください。権限要件については、<block ref="7630a8b182c80d5ddb5d9ce1be672fef" category="inline-link-macro-rx"></block>を参照してください。</block>
 </blocks>

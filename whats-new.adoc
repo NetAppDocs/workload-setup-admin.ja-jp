@@ -15,10 +15,12 @@ summary: クラウド プロバイダのクレデンシャル、Codeboxの機能
 
 
 
+[[31-may-2026]]
 == 2026年5月31日
 
 
 
+[[new-notification-for-fsx-for-ontap-file-systems]]
 === FSx for ONTAP ファイルシステムの新しい通知
 
 NetApp Workload Factoryの通知サービスには、レプリケーション遅延に関する通知が含まれています。
@@ -27,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[support-for-aws-govcloud-us-accounts]]
 === AWS GovCloud（US）アカウントのサポート
 
 Workload FactoryでAWS GovCloud（US）アカウントを作成できるようになりました。このアカウントタイプは、セットアップと操作にAWS US GovCloudエンドポイントとリージョンのみを使用します。認証情報とシークレットはGovCloudに保持されます。GovCloud（US）リージョンがサポートされています。
@@ -35,10 +38,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Workl
 
 
 
+[[03-may-2026]]
 == 2026年5月3日
 
 
 
+[[email-notifications-for-workload-factory]]
 === Workload Factory のメール通知
 
 Amazon SNSトピックを設定しなくても、Workload Factoryの通知をメールで受信できるようになりました。アカウントに関連付けられているすべてのメールアドレスに通知を送信するには、メール通知を有効にしてください。
@@ -49,6 +54,7 @@ NetApp Console で通知を設定すると、NetApp Console が通知配信の�
 
 
 
+[[new-notification-for-eda-latency]]
 === EDAレイテンシに関する新しい通知
 
 NetApp Workload Factoryの通知サービスには、EDA操作のレイテンシが一定のしきい値を超えた場合に通知するEDAレイテンシに関する通知が含まれています。
@@ -57,6 +63,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[new-notification-for-fsx-for-ontap-file-systems]]
 === FSx for ONTAP ファイルシステムの新しい通知
 
 NetApp Workload Factory 通知サービスには、アカウントの月次コスト概要を含む通知が含まれており、支出傾向、異常な変更、FSx for ONTAP ファイルシステムの最適な節約機会が表示されます。
@@ -65,10 +72,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[06-april-2026]]
 == 2026年4月6日
 
 
 
+[[new-notification-for-storage]]
 === ストレージの新しい通知
 
 NetApp Workload Factory通知サービスには、Storage向けNetApp Autonomous Ransomware Protection with AI（ARP/AI）の通知が含まれます。
@@ -77,10 +86,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[01-march-2026]]
 == 2026年3月1日
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Workload Factory で新しい Ask Me ブックマークが利用可能になりました
 
 Workload Factory コンソールのすべての画面に新しい Ask Me ブックマークを追加しました。この改善により、ヘルプが必要なときにいつでも Ask Me に簡単かつ迅速にアクセスできるようになります。Ask Me は AI アシスタントであり、独自のワークロード環境について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。
@@ -91,10 +102,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overvie
 
 
 
+[[01-february-2026]]
 == 2026年2月1日
 
 
 
+[[well-architected-updates]]
 === 適切に設計されたアップデート
 
 NetApp Workload Factory には、Elastic VMware Service（EVS）ワークロード向けの Well-Architected 評価が含まれており、ストレージおよびデータベース ワークロードの新しい構成が追加されています。
@@ -128,6 +141,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[new-permissions-for-storage]]
 === Storage の新しい権限
 
 S3 アクセスポイントの管理を強化するために、Storage ワークロードに新しい権限が追加されました。
@@ -136,20 +150,24 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[04-january-2026]]
 == 2026年1月4日
 
 
 
+[[ask-me-ai-assistant-home-page-integration]]
 === Ask me AIアシスタントのホームページ統合
 
 Workload Factory コンソールのホームページには Ask me AI アシスタントが組み込まれており、独自のストレージ資産について質問したり、環境から直接パーソナライズされた分析情報を取得したり、以前の会話を参照したりすることができます。コンソールを離れることなく、「Ask me」と対話してワークロードを理解し、問題をトラブルシューティングし、Workload Factory について詳しく知ることができます。
 
 
 
+[[27-november-2025]]
 == 2025年11月27日
 
 
 
+[[permissions-update-for-storage]]
 === ストレージの権限の更新
 
 FSx for ONTAP EMS イベント アナライザーは、_operations and remediation_ 権限ポリシーの次の Amazon Bedrock 権限を使用して、ストレージ ワークロードのイベント データを取得します。
@@ -164,26 +182,31 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[06-october-2025]]
 == 2025年10月6日
 
 
 
+[[bluexp-workload-factory-now-netapp-workload-factory]]
 === BlueXP workload factoryがNetAppワークロードファクトリーに
 
 BlueXP は、データ インフラストラクチャの管理における役割をより適切に反映するために、名前が変更され、再設計されました。その結果、 BlueXP workload factoryの名前がNetAppワークロード ファクトリーに変更されました。
 
 
 
+[[ask-me-integration-with-mcp]]
 === MCP との Ask Me 統合
 
 Workload Factory の AI アシスタントである Ask Me は、Model Context Protocol (MCP) と統合されています。  MCP を使用することで、Ask Me は外部環境と安全にインターフェイスし、API ツールにクエリを実行して、特定のストレージ環境に合わせた応答を提供します。
 
 
 
+[[05-october-2025]]
 == 2025年10月5日
 
 
 
+[[new-notification-for-storage]]
 === ストレージの新しい通知
 
 NetApp Workload Factory 通知サービスには、ストレージの Well-Architected の問題に関する通知が含まれています。
@@ -192,10 +215,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[09-september-2025]]
 == 2025年9月9日
 
 
 
+[[new-notification-for-storage]]
 === ストレージの新しい通知
 
 BlueXP workload factory通知サービスには、ストレージの自動容量管理に関する通知が含まれています。
@@ -204,10 +229,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[29-june-2025]]
 == 2025年6月29日
 
 
 
+[[permissions-update-for-databases]]
 === データベースの権限の更新
 
 データベースの _読み取り専用_ モードで次の権限が利用できるようになりました。  `cloudwatch:GetMetricData` 。
@@ -216,6 +243,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#ch
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === BlueXPワークロードファクトリー通知サービスのサポート
 
 BlueXP ワークロードファクトリー通知サービスを使用すると、ワークロードファクトリーは BlueXP アラートサービスまたは Amazon SNS トピックに通知を送信できます。BlueXPアラートに送信された通知は、BlueXP アラートパネルに表示されます。ワークロードファクトリーが Amazon SNS トピックに通知を発行すると、トピックのサブスクライバー（ユーザーや他のアプリケーションなど）は、トピックに設定されたエンドポイント（E メールや SMS メッセージなど）で通知を受け取ります。
@@ -224,26 +252,31 @@ https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[
 
 
 
+[[04-may-2025]]
 == 2025年5月4日
 
 
 
+[[cloudshell-autocomplete-support]]
 === CloudShellオートコンプリートのサポート
 
 BlueXP  ワークロードファクトリCloudShellを使用している場合は、コマンドの入力を開始してTabキーを押すと、使用可能なオプションが表示されます。複数の候補が存在する場合は、CLIに候補のリストが表示されます。この機能は、エラーを最小限に抑え、コマンド実行を高速化することで、生産性を向上させます。
 
 
 
+[[updated-permissions-terminology]]
 === 権限に関する用語を更新
 
 ワークロード ファクトリのユーザー インターフェースとドキュメントでは、読み取り権限を示すために「読み取り専用」を使用し、自動化権限を示すために「読み取り/書き込み」を使用するようになりました。
 
 
 
+[[30-march-2025]]
 == 2025年3月30日
 
 
 
+[[cloudshell-reports-ai-generated-error-responses-for-ontap-cli-commands]]
 === ONTAP CLIコマンドについて、AIによって生成されたエラー応答がCloudShellで報告される
 
 CloudShellを使用している場合、ONTAP CLIコマンドを発行してエラーが発生するたびに、失敗の説明、失敗の原因、詳細な解決策を含むAI生成のエラー応答を取得できます。
@@ -252,6 +285,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Clo
 
 
 
+[[iamsimulatepermissionpolicy-permission-update]]
 === IAM：SimulatePermissionPolicy権限の更新
 
 AWSアカウントのクレデンシャルを追加したり、生成AIワークロードなどの新しいワークロード機能を追加したりするときに、ワークロードファクトリコンソールから権限を管理できるようになりまし `iam:SimulatePrincipalPolicy`た。
@@ -260,10 +294,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[02-february-2025]]
 == 2025年2月2日
 
 
 
+[[cloudshell-available-in-bluexp-workload-factory-console]]
 === BlueXP  Workload FactoryコンソールでCloudShellを使用可能
 
 CloudShellは、BlueXP  ワークロードファクトリコンソールのどこからでも使用できます。CloudShellを使用すると、BlueXP  アカウントで提供したAWSとONTAPのクレデンシャルを使用して、シェルに似た環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。
@@ -272,6 +308,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Clo
 
 
 
+[[permissions-update-for-databases]]
 === データベースの権限の更新
 
 データベースの_read_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。
@@ -280,10 +317,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[22-january-2025]]
 == 2025年1月22日
 
 
 
+[[bluexp-workload-factory-permissions]]
 === BlueXP  ワークロードの工場出荷時の権限
 
 ストレージ環境の検出から、ストレージ内のファイルシステムや 生成AIワークロードのナレッジベースなどのAWSリソースの導入まで、BlueXP  ワークロードファクトリでさまざまな処理を実行するために使用される権限を確認できるようになりました。ストレージ、データベース、VMware、生成AIの各ワークロードのIAMポリシーと権限を表示できます。
@@ -292,10 +331,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[5-january-2025]]
 == 2025年1月5日
 
 
 
+[[support-for-service-accounts-in-bluexp-workload-factory]]
 === BlueXP  Workload Factoryでのサービスアカウントのサポート
 
 BlueXP  ワークロードファクトリでサービスアカウントがサポートされるようになりました。サービスアカウントを作成して、インフラの運用を自動化するマシンユーザとして機能させることができます。
@@ -304,10 +345,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/manage-service-accounts.
 
 
 
+[[11-november-2024]]
 == 2024年11月11日
 
 
 
+[[workload-factory-integration-in-the-bluexp-console]]
 === BlueXP  コンソールにワークロードを工場出荷時に統合
 
 これで、からワークロードファクトリを使用できるようになりlink:https://console.bluexp.netapp.com["BlueXPコンソール"]ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。
@@ -316,10 +359,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html
 
 
 
+[[1-september-2024]]
 == 2024年9月1日
 
 
 
+[[rss-subscription]]
 === RSSサブスクリプション
 
 RSSサブスクリプションは、から利用できlink:https://console.workloads.netapp.com/["ワークロードファクトリコンソール"]ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。
@@ -328,6 +373,7 @@ image:screenshot-rss-subscribe-button.png["Workload Factory Consoleの[Help]ド�
 
 
 
+[[support-for-a-single-permission-policy-per-workload]]
 === ワークロードごとに1つの権限ポリシーをサポート
 
 ワークロード工場でAWSクレデンシャルを追加する際に、ワークロードとストレージ管理ごとに読み取りモードまたは自動モードのいずれか1つの権限ポリシーを選択できるようになりました。
@@ -338,10 +384,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 
 
 
+[[4-august-2024]]
 == 2024 年 8 月 4 日
 
 
 
+[[terraform-support]]
 === Terraformのサポート
 
 Terraformは、Amazon FSx for NetApp ONTAPファイルシステムの導入とStorage VMの作成で利用できます。セットアップガイドと管理ガイドに、CodeboxからTerraformを使用する方法が記載されました。
@@ -350,10 +398,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["コー
 
 
 
+[[7-july-2024]]
 == 2024年7月7日
 
 
 
+[[initial-release-of-bluexp-workload-factory]]
 === BlueXP  Workload Factoryの初回リリース
 
 BlueXP  Workload Factoryは、Amazon FSx for NetApp ONTAPファイルシステムを使用してワークロードを最適化するために設計された、強力なライフサイクル管理プラットフォームです。ワークロードファクトリとFSx for ONTAPを使用して合理化できるワークロードには、データベース、VMware Cloud on AWSへのVMwareの移行、AIチャットボットなどがあります。

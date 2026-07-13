@@ -4,6 +4,7 @@
 
 
 
+[[new-notification-for-fsx-for-ontap-file-systems]]
 === FSx for ONTAP ファイルシステムの新しい通知
 
 NetApp Workload Factoryの通知サービスには、レプリケーション遅延に関する通知が含まれています。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[support-for-aws-govcloud-us-accounts]]
 === AWS GovCloud（US）アカウントのサポート
 
 Workload FactoryでAWS GovCloud（US）アカウントを作成できるようになりました。このアカウントタイプは、セットアップと操作にAWS US GovCloudエンドポイントとリージョンのみを使用します。認証情報とシークレットはGovCloudに保持されます。GovCloud（US）リージョンがサポートされています。

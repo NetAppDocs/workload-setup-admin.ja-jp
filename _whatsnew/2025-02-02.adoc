@@ -4,6 +4,7 @@
 
 
 
+[[cloudshell-available-in-bluexp-workload-factory-console]]
 === BlueXP  Workload FactoryコンソールでCloudShellを使用可能
 
 CloudShellは、BlueXP  ワークロードファクトリコンソールのどこからでも使用できます。CloudShellを使用すると、BlueXP  アカウントで提供したAWSとONTAPのクレデンシャルを使用して、シェルに似た環境でAWS CLIコマンドまたはONTAP CLIコマンドを実行できます。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Clo
 
 
 
+[[permissions-update-for-databases]]
 === データベースの権限の更新
 
 データベースの_read_modeで次の権限を使用できるようになりました `iam:SimulatePrincipalPolicy`。

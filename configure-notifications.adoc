@@ -15,6 +15,7 @@ NetApp Workload Factory通知サービスを設定して、NetApp Consoleでア�
 
 
 
+[[notification-types-and-messages]]
 == 通知の種類とメッセージ
 
 Workload Factory は次のイベントの通知を送信します。
@@ -67,6 +68,7 @@ Workload Factory は次のイベントの通知を送信します。
 |===
 
 
+[[configure-workload-factory-notifications]]
 == ワークロードファクトリーの通知を構成する
 
 Workload Factory の通知は、NetApp Console または Workload Factory コンソールを使用して設定できます。
@@ -75,6 +77,7 @@ Workload Factory の通知は、NetApp Console または Workload Factory コン
 
 
 
+[[netapp-console]]
 === NetAppコンソール
 
 * *通知*：Workload Factory を設定して、NetApp Console のベルアイコンの下に表示される通知を送信します。
@@ -84,6 +87,7 @@ Workload Factory の通知は、NetApp Console または Workload Factory コン
 
 
 
+[[workload-factory-console]]
 === ワークロードファクトリーコンソール
 
 * *メール*：Amazon SNSの設定を必要とせずに、アカウントに関連付けられている任意のメールアドレスに通知を受信するには、Workload Factoryコンソールでメール通知を有効にします。
@@ -121,6 +125,7 @@ IMPORTANT: NetApp Consoleで通知を設定すると、通知配信の所有権�
 
 
 --
+[[wf-console-email-notifications]]
 .Workload Factory コンソールから通知を構成する
 --
 .手順
@@ -141,18 +146,21 @@ IMPORTANT: NetApp Consoleで通知を設定すると、通知配信の所有権�
 ====
 
 
+[[subscribe-to-the-amazon-sns-topic]]
 == Amazon SNSトピックを購読する
 
 トピックに通知を送信するようにWorkload Factoryを設定したら、 https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html["説明書"] Amazon SNS ドキュメントの手順に従ってトピックをサブスクライブし、Workload Factory から通知を受信できるようにします。
 
 
 
+[[filter-notifications]]
 == 通知をフィルタリングします
 
 通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに特定の種類の通知を配信することができます。Amazon SNS ポリシーを使用して SNS 通知を設定し、NetApp Console の通知設定を使用することでこれを実現できます。
 
 
 
+[[filter-amazon-sns-notifications]]
 === Amazon SNS通知をフィルタリングする
 
 Amazon SNS トピックをサブスクライブすると、デフォルトでそのトピックに公開されたすべての通知を受信します。トピックから特定の通知のみを受信する場合は、フィルター ポリシーを使用して、受信する通知を制御できます。フィルタポリシーにより、Amazon SNS はフィルタポリシーに一致する通知のみをサブスクライバーに配信します。
@@ -231,6 +239,7 @@ Amazon SNS 通知は、次の基準でフィルタリングできます。
 
 
 
+[[filter-notifications-in-netapp-console]]
 === NetApp Console で通知をフィルタリング
 
 NetApp Consoleの通知設定を使用して、コンソールで受信する通知を重大度レベル（Critical、Info、Warningなど）でフィルタリングできます。

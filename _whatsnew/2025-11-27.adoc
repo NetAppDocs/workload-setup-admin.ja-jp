@@ -4,6 +4,7 @@
 
 
 
+[[permissions-update-for-storage]]
 === ストレージの権限の更新
 
 FSx for ONTAP EMS イベント アナライザーは、_operations and remediation_ 権限ポリシーの次の Amazon Bedrock 権限を使用して、ストレージ ワークロードのイベント データを取得します。

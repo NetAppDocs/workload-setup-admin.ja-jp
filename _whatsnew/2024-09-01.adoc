@@ -4,6 +4,7 @@
 
 
 
+[[rss-subscription]]
 === RSSサブスクリプション
 
 RSSサブスクリプションは、から利用できlink:https://console.workloads.netapp.com/["ワークロードファクトリコンソール"]ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。
@@ -12,6 +13,7 @@ image:screenshot-rss-subscribe-button.png["Workload Factory Consoleの[Help]ド�
 
 
 
+[[support-for-a-single-permission-policy-per-workload]]
 === ワークロードごとに1つの権限ポリシーをサポート
 
 ワークロード工場でAWSクレデンシャルを追加する際に、ワークロードとストレージ管理ごとに読み取りモードまたは自動モードのいずれか1つの権限ポリシーを選択できるようになりました。

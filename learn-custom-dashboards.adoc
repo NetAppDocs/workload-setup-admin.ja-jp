@@ -19,6 +19,7 @@ Workload Factoryアカウントのすべてのユーザーは、すべてのカ�
 
 
 
+[[why-use-custom-dashboards]]
 == カスタムダッシュボードを使用する理由
 
 Workload Factoryのユーザーは、多くのワークロード、環境、および優先順位を管理しますが、標準ダッシュボードにはあらかじめ設定されたビューしか表示されません。カスタムダッシュボードは、いくつかの運用上の課題を解決するのに役立ちます：
@@ -31,6 +32,7 @@ Workload Factoryのユーザーは、多くのワークロード、環境、お�
 
 
 
+[[what-you-can-do-with-custom-dashboards]]
 == カスタムダッシュボードでできること
 
 セットアップ中、AIガイドダイアログでは以下の項目を定義できます：
@@ -44,11 +46,13 @@ Workload Factoryのユーザーは、多くのワークロード、環境、お�
 
 
 
+[[considerations-and-limitations]]
 == 考慮事項と制限事項
 
 
 
-=== 権限
+[[aws-credentials-and-permissions]]
+=== AWS認証情報と権限
 
 カスタムダッシュボードを作成または表示するには、監視対象のリソースに対する適切なAWS IAM権限が必要です。Workload Factoryアカウントが、ダッシュボードで使用されるデータソースへの読み取りアクセス権を持っていることを確認してください。
 
@@ -56,29 +60,40 @@ link:add-credentials.html["AWS認証情報を追加し、IAM権限を設定す�
 
 
 
+[[link-to-fsx-for-ontap]]
+=== FSx for ONTAP へのリンク
+
+Workload Factory は、FSx for ONTAP ファイルシステムに接続するためにリンクが必要です。リンクは、Workload Factory と 1 つ以上の FSx for ONTAP ファイルシステムとの間に信頼関係と接続性を確立します。これにより、Amazon FSx for ONTAP API では利用できない ONTAP REST API 呼び出しを通じて、特定のファイルシステム機能を直接監視および管理できます。
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["リンクの作成方法を学ぶ"^]。
+
+
+
+[[read-only-design]]
 === 読み取り専用設計
 
 カスタムダッシュボードは読み取り専用です。ストレージ設定やワークロード設定を変更することはできません。これにより、誤って設定を変更することなく、システムを監視できます。
 
 
 
+[[limitations]]
 === 制限事項
 
 カスタムダッシュボードには、現在以下の制限事項が適用されます。
 
 * Workload Factoryアカウント以外でダッシュボードを共有することはできません。
-* ダッシュボードは一度に1人のユーザーのみが編集できます
-* 同時編集はサポートされていません
 
 
 
 
+[[demo-environment]]
 === デモ環境
 
 Workload Factory のデモアカウントをご利用の場合は、あらかじめ構築されたダッシュボードがいくつか利用可能です。これらのダッシュボードは、カスタムダッシュボードで何ができるかを理解するのに役立ちます。各ダッシュボードには、ディザスタリカバリのステータス、リージョンをまたいだ容量とコスト、ストレージ保護ルールが遵守されているかどうかなど、一般的な監視ニーズが表示されます。
 
 
 
+[[sample-prompts]]
 === サンプルプロンプト
 
 以下の例は、監視ニーズを平易な言葉で説明する方法を示しています。
@@ -96,6 +111,7 @@ Workload Factory のデモアカウントをご利用の場合は、あらかじ
 
 
 
+[[next-steps]]
 == 次の手順
 
 * link:create-custom-dashboard.html["カスタムダッシュボードを作成する"]

@@ -17,6 +17,7 @@ NetApp Workload Factory には、Web ベースのコンソールからアクセ�
 
 
 
+[[sign-up-to-workload-factory]]
 == ワークロードファクトリーにサインアップ
 
 次のいずれかのオプションを使用して Workload Factory にサインアップできます。
@@ -63,6 +64,7 @@ image:screenshot-account-selection-govcloud.png["新しいアカウントでロ�
 
 
 
+[[invite-others-to-join-an-account-in-workload-factory]]
 == Workload Factoryのアカウントに他のユーザーを招待する
 
 アカウント管理者は、他のユーザーを Workload Factory アカウントに招待して、Workload Factory にアクセスして使用できるようにすることができます。アカウント管理はNetApp Consoleからのみ可能です。

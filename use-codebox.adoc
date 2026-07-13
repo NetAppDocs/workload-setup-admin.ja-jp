@@ -17,6 +17,7 @@ Codebox は、各ユーザーの Workload Factory アカウントに提供され
 
 
 
+[[how-to-use-codebox]]
 == Codeboxの使用方法
 
 Workload Factory UI ウィザードに値を入力すると、各フィールドの入力が完了すると Codebox でデータの更新を確認できます。ウィザードを完了した後、ページの下部にある*作成*ボタンを選択する前に、image:button-copy-codebox.png["コピーボタン"]構成を構築するために必要なコードをキャプチャするために、Codebox にコピーします。たとえば、新しい Microsoft SQL Server を作成するときのこのスクリーンショットには、VPC とアベイラビリティーゾーンのウィザード エントリと、REST API 実装の Codebox 内の同等のエントリが表示されています。
@@ -27,6 +28,7 @@ image:screenshot-codebox-example1.png["UIでMicrosoft SQL Serverを作成する�
 
 
 
+[[use-cloudformation-code-from-codebox]]
 == CodeboxからCloudFormationコードを使用
 
 Codebox から生成された CloudFormation コードをコピーし、AWS アカウントで Amazon Web Services CloudFormation スタックを起動できます。  CloudFormation は、Workload Factory UI で定義したアクションを実行します。
@@ -88,6 +90,7 @@ CloudFormationによって生成されたYAMLファイル内のコードは、�
 
 
 
+[[use-rest-api-code-from-codebox]]
 == CodeboxからREST APIコードを使用する
 
 Codebox から生成された Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理できます。
@@ -103,6 +106,7 @@ APIは、curlをサポートし、インターネットに接続された任意�
 
 
 
+[[use-aws-cli-code-from-codebox]]
 == CodeboxからAWS CLIコードを使用
 
 Codeboxから生成されたAmazon Web Services CLIを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入および管理できます。
@@ -115,6 +119,7 @@ Codeboxから生成されたAmazon Web Services CLIを使用して、FSx for ONT
 
 
 
+[[use-terraform-from-codebox]]
 == コードボックスからTerraformを使用
 
 Terraformを使用して、FSx for ONTAPファイルシステムやその他のAWSリソースを導入、管理できます。

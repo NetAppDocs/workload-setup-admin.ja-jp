@@ -15,6 +15,7 @@ Codebox は、開発者と DevOps がNetApp Workload Factoryでサポートさ�
 
 
 
+[[codebox-capabilities]]
 == Codeboxの機能
 
 Codeboxには、次の2つの主要なIAC機能があります。
@@ -27,6 +28,7 @@ Codeboxには、次の2つの主要なIAC機能があります。
 
 
 
+[[supported-code-formats]]
 == サポートされるコード形式
 
 サポートされているコード形式は次のとおりです。
@@ -39,6 +41,7 @@ Codeboxには、次の2つの主要なIAC機能があります。
 
 
 
+[[related-information]]
 == 関連情報
 
 link:use-codebox.html["Codeboxの使用方法"]です。

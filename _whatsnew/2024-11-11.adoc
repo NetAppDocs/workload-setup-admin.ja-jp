@@ -4,6 +4,7 @@
 
 
 
+[[workload-factory-integration-in-the-bluexp-console]]
 === BlueXP  コンソールにワークロードを工場出荷時に統合
 
 これで、からワークロードファクトリを使用できるようになりlink:https://console.bluexp.netapp.com["BlueXPコンソール"]ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。

@@ -15,6 +15,7 @@ CloudShell を開いて、 NetApp Workload Factory コンソールのどこか�
 
 
 
+[[about-this-task]]
 == タスクの内容
 
 CloudShell を使用すると、Workload Factory コンソール内からシェルのような環境で AWS CLI コマンドまたはONTAP CLI コマンドを実行できます。ブラウザでターミナル セッションをシミュレートし、ターミナル機能を提供し、Workload Factory のバックエンドを通じてメッセージをプロキシします。これにより、 NetAppアカウントで提供した AWS 認証情報とONTAP認証情報を使用できるようになります。
@@ -32,6 +33,7 @@ CloudShellには次の機能があります。
 
 
 
+[[cloudshell-commands]]
 == CloudShellコマンド
 
 CloudShell GUIインターフェイス内で、と入力して使用可能なCloudShellコマンドを表示できます `help`。コマンドを実行すると `help`、次のリファレンスが表示されます。
@@ -71,6 +73,7 @@ NetApp CloudShell は、 NetApp Workload Factory に組み込まれた GUI イ�
 
 
 
+[[before-you-begin]]
 == 開始する前に
 
 CloudShellは、AWSクレデンシャルのコンテキストで機能します。CloudShellを使用するには、AWSクレデンシャルを少なくとも1つ指定する必要があります。
@@ -80,6 +83,7 @@ NOTE: CloudShellを使用すると、AWSまたはONTAPの任意のCLIコマン�
 
 
 
+[[deploy-cloudshell]]
 == CloudShellを導入する
 
 CloudShell は、 NetApp Workload Factory コンソールのどこからでもデプロイできます。  NetAppコンソールから CloudShell をデプロイすることもできます。
@@ -138,6 +142,7 @@ image:screenshot-cloudshell-tab-menu.png["名前の変更、複製、他のタ�
 
 
 
+[[rename-a-cloudshell-session-tab]]
 == CloudShellセッションタブの名前変更
 
 CloudShellセッションタブの名前を変更して、セッションを識別しやすくすることができます。
@@ -153,6 +158,7 @@ CloudShellセッションタブに新しい名前が表示されます。
 
 
 
+[[duplicate-cloudshell-session-tab]]
 == CloudShellセッションタブの複製
 
 CloudShellセッションタブを複製して、同じ名前、クレデンシャル、およびリージョンを持つ新しいセッションを作成できます。元のタブのコードは、複製されたタブでは複製されません。
@@ -167,6 +173,7 @@ CloudShellセッションタブを複製して、同じ名前、クレデンシ�
 
 
 
+[[close-cloudshell-session-tabs]]
 == CloudShellセッションのタブを閉じる
 
 CloudShellタブを一度に1つずつ閉じたり、作業していない他のタブを閉じたり、すべてのタブを一度に閉じることができます。
@@ -187,6 +194,7 @@ CloudShellタブを一度に1つずつ閉じたり、作業していない他の
 
 
 
+[[split-cloudshell-session-tabs]]
 == CloudShellセッションタブの分割
 
 CloudShellセッションのタブを分割して、複数のタブを同時に表示できます。
@@ -198,6 +206,7 @@ image:screenshot-cloudshell-split-view.png["2つのCloudShellタブが水平に�
 
 
 
+[[update-settings-for-a-cloudshell-session]]
 == CloudShellセッションの設定の更新
 
 CloudShellセッションのフォントおよび出力タイプの設定を更新できます。

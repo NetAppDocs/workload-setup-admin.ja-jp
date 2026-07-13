@@ -19,6 +19,7 @@ NetApp Workload Factory には、2 つの Web ベースのコンソールから�
 
 
 
+[[access-workload-factory-in-the-netapp-console]]
 == NetAppコンソールでワークロードファクトリーにアクセスする
 
 NetApp Consoleから Workload Factory にアクセスできます。Workload Factory を AWS ストレージおよびワークロード機能に使用することに加えて、 NetApp Copy and Syncなどの他のデータ サービスにもアクセスすることができます。
@@ -30,6 +31,7 @@ NetApp Consoleから Workload Factory にアクセスできます。Workload Fac
 
 
 
+[[access-workload-factory-in-the-workload-factory-console]]
 == Workload FactoryコンソールでWorkload Factoryにアクセスします
 
 Workload Factory コンソールから Workload Factory にアクセスできます。

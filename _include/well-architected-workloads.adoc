@@ -4,6 +4,7 @@
 
 
 
+[[how-it-works]]
 == 仕組み
 
 Workload Factory は、Amazon FSx for NetApp ONTAP ファイルシステムの導入環境で実行されているワークロードを毎日分析します。この分析により、適切に設計された状態、インサイト、および推奨事項が提供されます。
@@ -14,6 +15,7 @@ Workload Factory は、Amazon FSx for NetApp ONTAP ファイルシステムの�
 
 
 
+[[why-it-matters]]
 == なぜそれが重要なのか
 
 Workload Factoryは、継続的な評価と推奨事項、および修復策を組み合わせることで、大規模なストレージ、データベース、およびVMware環境にベストプラクティスを適用します。Workload Factoryコンソールで適用される自動修正により、人的ミスが削減され、統一された管理が確保され、ワークロードインフラストラクチャ全体でパフォーマンスと信頼性が維持されます。

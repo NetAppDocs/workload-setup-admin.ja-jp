@@ -4,6 +4,7 @@
 
 
 
+[[new-notification-for-storage]]
 === ストレージの新しい通知
 
 NetApp Workload Factory 通知サービスには、ストレージの Well-Architected の問題に関する通知が含まれています。

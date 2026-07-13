@@ -4,6 +4,7 @@
 
 
 
+[[support-for-service-accounts-in-bluexp-workload-factory]]
 === BlueXP  Workload Factoryでのサービスアカウントのサポート
 
 BlueXP  ワークロードファクトリでサービスアカウントがサポートされるようになりました。サービスアカウントを作成して、インフラの運用を自動化するマシンユーザとして機能させることができます。
