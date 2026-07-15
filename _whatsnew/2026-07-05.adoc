@@ -14,3 +14,10 @@
 カスタムダッシュボードは読み取り専用なので、ストレージやワークロードの設定を変更することはできません。Workload Factoryアカウントのユーザーであれば誰でもこれらのダッシュボードを表示および管理できるため、チーム間で情報を共有し、連携を維持することが容易になります。
 
 link:learn-custom-dashboards.html["カスタムダッシュボードの詳細"]
+
+
+
+[[genai-workload-removal-from-workload-factory]]
+=== ワークロードファクトリーからのGenAIワークロードの削除
+
+GenAIワークロードはWorkload Factoryコンソールから削除されました。
