@@ -21,10 +21,6 @@ FSx for ONTAPをストレージインフラとして使用することで、現�
 +
 AWS上の既存のデータベース資産の検出、FSx for ONTAPへの移行によるコスト削減の可能性の評価、最適化のためのベストプラクティスが組み込まれたエンドツーエンドのデータベース導入、CI / CDパイプライン向けのシンクローニングの自動化が可能です。
 
-* https://docs.netapp.com/us-en/workload-genai/index.html["玄愛"^]
-+
-Retrieval-Augmented Generation（RAG）インフラを導入、管理して、AIアプリケーションの精度と独自性を向上させます。データのセキュリティとコンプライアンスが組み込まれたFSx for ONTAPに関するRAGナレッジベースを作成できます。
-
 * https://docs.netapp.com/us-en/workload-vmware/index.html["VMwareワークロード"^]
 +
 スマートな推奨事項と自動修正により、移行と運用を合理化できます。効率的なバックアップと堅牢なディザスタリカバリを導入VMの監視とトラブルシューティング

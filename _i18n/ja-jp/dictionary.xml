@@ -174,9 +174,6 @@
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="inline-link">NetApp ONTAP 対応の Amazon FSX</block>
   <block id="4d8d6f286ec4089532b442b9e29bdd84" category="list-text"><block ref="4d8d6f286ec4089532b442b9e29bdd84" category="inline-link-rx"></block></block>
   <block id="ad5615f8474eab297b35d0cbf8020dfc" category="paragraph">FSx for ONTAPをストレージインフラとして使用することで、現在のデータ資産を評価して分析し、コスト削減の可能性を探ります。また、ベストプラクティスに基づいてFSx for ONTAP環境をプロビジョニングしてテンプレート化し、高度な管理機能を利用できます。</block>
-  <block id="cccae24691c5ff7191f1ffebe4352285" category="inline-link">玄愛</block>
-  <block id="88575fa076e31705fdc0a050f3c46540" category="list-text"><block ref="88575fa076e31705fdc0a050f3c46540" category="inline-link-rx"></block></block>
-  <block id="1ab964190acf4217fadb080cfcbe361f" category="paragraph">Retrieval-Augmented Generation（RAG）インフラを導入、管理して、AIアプリケーションの精度と独自性を向上させます。データのセキュリティとコンプライアンスが組み込まれたFSx for ONTAPに関するRAGナレッジベースを作成できます。</block>
   <block id="38bd169945a371832b0b65c9086b1792" category="inline-link">データベースワークロード</block>
   <block id="7c05124c7bff1277e0dd98967825f03a" category="list-text"><block ref="7c05124c7bff1277e0dd98967825f03a" category="inline-link-rx"></block></block>
   <block id="a76e64a0fbf98a083080351e4cb67566" category="inline-link">VMwareワークロード</block>
@@ -549,53 +546,13 @@
   <block id="291798398943ff81aecb072ccb31136f" category="list-text">アクセス許可は、WLMDBで始まるリソースに制限されます。</block>
   <block id="8871e7455cbf17c8190fb2c27de4cb92" category="list-text">IAM：AWSServiceNameによって制限される「IAM：CreateServiceLinkedRole」：ec2.amazonaws.com"*</block>
   <block id="a7170e00216d426ffa1b5c8b1ad8faf2" category="list-text">「IAM：PassRole」は「IAM：PassedToService」によって制限されます：ec2.amazonaws.com"*</block>
-  <block id="be5d4fafcc5fc8ef08ec4bd4f076e815" category="section-title">生成AIワークロードの権限</block>
-  <block id="fc52d9d99561c2b721d43bdd4d36b615" category="example-title">生成AIワークロードのIAMポリシー</block>
-  <block id="2d8cf1aba2af04b1b4fd9bd3d7d6905f" category="paragraph">次の表に、生成AIワークロードの権限の詳細を示します。</block>
-  <block id="64f5bb9f44fff01f3adc6fad9e6240f7" category="example-title">生成AIワークロードの権限の一覧</block>
-  <block id="2da64493d99b5866c2a1571539ca109c" category="cell">導入時と再構築時にAIエンジンCloudFormationスタックを作成</block>
-  <block id="97abe2026f8952be2f4f064f2d5ed867" category="cell">AIエンジンCloudFormationスタックを作成</block>
-  <block id="d8ebc3cad3265793548294b79abf1ac6" category="cell">AIエンジン導入ウィザードのリージョンを表示する</block>
-  <block id="6f82cd163096069b261bdc23e2bfec17" category="cell">AIエンジンタグを表示</block>
-  <block id="684a1bfe5fbc91f18d96de978a7df58a" category="cell">EC2: DescribeTags (説明タグ)</block>
-  <block id="35fed029b904597b41d06fba8d15299d" category="cell">AIエンジンスタックを作成する前にVPCエンドポイントをリスト表示</block>
   <block id="d26a873905a02242e94cfda68db0c843" category="cell">EC2：CreateVpcEndpoint</block>
-  <block id="4f6009e4cc9f9d0249a22b9e3c5ab9f0" category="cell">導入時と再構築時のAIエンジンスタックの作成時にAIエンジンセキュリティグループを作成</block>
-  <block id="c44890ed155f5fc1b7589d1d6c12785a" category="cell">導入および再構築処理中にAIエンジンスタックの作成によって作成されたリソースにタグを付ける</block>
-  <block id="071c42384a4bff95d3acc47d90766c9b" category="cell">[List VPC during AI engine deployment]ウィザード</block>
-  <block id="7ba2aa86177ae5f0d7e3b4e5766bad67" category="cell">AIエンジンの導入時と再構築時にルーティングテーブルを取得</block>
-  <block id="7245f0c5139bb046010a68b69a264eca" category="cell">AIエンジン導入ウィザードでのキーペアの一覧表示</block>
-  <block id="b28eb58d1a1db0c0afa78fe12cf5fb01" category="cell">AIエンジンスタックの作成中にセキュリティグループをリスト表示する（プライベートエンドポイントでセキュリティグループを検索する）</block>
-  <block id="cadead4b7ef1e118402cbe1b8d9567ab" category="cell">VPCエンドポイントを取得して、AIエンジンの導入時に作成する必要があるかどうかを判断する</block>
-  <block id="f8022dadecc2f9ce9937bc1108cb6290" category="cell">インスタンスを表示してAIエンジンの状態を確認する</block>
-  <block id="231cf4c70d866b616c21baddaeed0696" category="cell">トラブルシューティング</block>
-  <block id="66225a6c05fbef258e73728898744db8" category="cell">導入時と再構築時のAIエンジンスタック作成時のイメージをリスト表示</block>
-  <block id="effc62a026ed8a4a114329bdc528d625" category="cell">導入および再構築処理中にCloudFormationスタックの作成中にAIエンジンを実行</block>
-  <block id="8db0f3adf91a39cebe582faf96db2426" category="cell">導入時や再構築時のスタック作成時に、セキュリティグループを追加してAIエンジンのルールを変更</block>
-  <block id="00fe52afa6e3b9a0d389f529a2b88242" category="cell">Bedrock：InvokeModelWithResponseStream</block>
-  <block id="d3514773d1692fd740afde54cdaaa7b0" category="cell">基礎モデルのチャット/埋め込みリクエストの開始</block>
   <block id="93804e96d3f417a0088c564647dd28e9" category="cell">Bedrock：InvokeModel</block>
-  <block id="65294ced72c6aa8f05b632194559e081" category="cell">リージョンで使用可能な基盤モデルを表示する</block>
-  <block id="66613086b6208ec265a60220a21ff40a" category="cell">Bedrock: ListFoundationModels</block>
-  <block id="302112cb321a929a6d9830e917817acb" category="cell">SSM：GetParameters</block>
-  <block id="37cc48b6baed18a8130ec18d97544390" category="cell">AIエンジンに送信されたコマンドからSSM応答を取得する</block>
-  <block id="97128676550f404369a4900a6b92a6a7" category="cell">AIエンジンへのSSM接続を確認する</block>
-  <block id="98c5cc885360f80a84c57ec1044622dc" category="cell">導入および再構築処理中のスタック作成時にAIエンジンインスタンスプロファイルを作成</block>
-  <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">IAM：TagRole</block>
-  <block id="f6ae0a8a1321975a6474722dcafe1322" category="cell">IAM：PassRole</block>
-  <block id="11d11aa8dbaf1d4106e7ae01b6868bba" category="cell">ナレッジベースの作成</block>
-  <block id="50ed17d5232c875f8ad42bc76592a63c" category="cell">ナレッジベースを新しいインスタンスに移動</block>
   <block id="a25a265c7f4f2cde7c7a15838d3f1021" category="cell">FSx：UntagResource</block>
-  <block id="9f4a3990e86e58c629dd4042743dc489" category="cell">再構築時にAIエンジンに関するナレッジベースを管理</block>
   <block id="2df687d3aa85502af55f4a9cf17b5b8d" category="cell">FSx：TagResource</block>
-  <block id="58cce26ec46dea767f28067a2aadecbf" category="cell">SSMシークレット（ECRトークン、CIFSクレデンシャル、テナンシーサービスアカウントキー）をセキュアな方法で保存</block>
-  <block id="6cdfe2c5f0e0f28290eadae29ccbb913" category="cell">SSM:getParameter</block>
-  <block id="5df0bb9577b967295f5ff5c94274a01c" category="cell">SSM：PutParameter</block>
   <block id="99a70cb6d5b807589a0a1aa9bbcfea7d" category="cell">ログ:DescriptionLogGroups</block>
   <block id="9c72603737d6e2074ae7fab048b5d3d1" category="cell">ログ:PutRetentionPolicy</block>
-  <block id="b9f69a856f0b78c0908e042e6d0fda54" category="cell">ログ:DescriptionLogStreams</block>
   <block id="6d952035baa97bd601f4d280f10fcc53" category="cell">ログ:GetLogEvents</block>
-  <block id="8a71d22cd00a39460a071b070099b8d6" category="cell">基盤モデルへのアクセスを確認</block>
   <block id="c812f1cb829c6d16da192b12e04d78ff" category="cell">Bedrock：GetFoundationModelAvailability</block>
   <block id="3332885fc7b64062d9405bcdf57a9334" category="section-title">VMwareワークロードの権限</block>
   <block id="1d33843eea5e12818124076de04b4a65" category="example-title">VMwareワークロードのIAMポリシー</block>
@@ -706,7 +663,6 @@
   <block id="bf2cca138f5e3f74f2e6b73d8e8b2452" category="paragraph">RSSサブスクリプションは、から利用でき<block ref="a65cf6b405017af965199f55f7b4fce1" category="inline-link-macro-rx"></block>ます。RSSフィードを使用すると、BlueXP  ワークロードファクトリの変化を簡単に把握して把握できます。</block>
   <block id="1a88151efda7b7ae7945b1161fe70fdc" category="paragraph"><block ref="1a88151efda7b7ae7945b1161fe70fdc" category="inline-link-macro-rx"></block></block>
   <block id="cf1f4a083afa7ccb1141e827deb4cdc2" category="paragraph">これで、からワークロードファクトリを使用できるようになり<block ref="4623dd80d89c29fbf0d2b04387a56c33" category="inline-link-macro-rx"></block>ます。BlueXP  コンソールエクスペリエンスは、ワークロードファクトリコンソールと同じ機能を提供します。</block>
-  <block id="dec23cffbd0de1b8096bc26072eb0b7d" category="cell">導入時と再構築時にAIエンジンを導入するための最新のAmazon Linuxイメージを入手</block>
   <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2025年3月2日</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">ブログとコミュニティ</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetAppコミュニティ</block>
@@ -716,21 +672,6 @@
   <block id="04c38dfa84592feebab3e30dfe4a019a" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーにが追加され<block ref="23bd3e826a13b6d94db9e07f105dfed2" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
   <block id="c3c7c9c146408a0ee564eedba4821f52" category="list-text">オプション：[自動権限チェックを有効にする]*を選択して、ワークロードの処理を完了するために必要なAWSアカウントの権限があるかどうかを確認します。チェックを有効にすると、権限ポリシーに権限が追加され<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>ます。この権限の目的は、権限のみを確認することです。クレデンシャルを追加したあとにこの権限を削除することもできますが、処理が一部しか成功しないようにリソースが作成されないようにしたり、必要なリソースの手動クリーンアップを行わないようにするために、</block>
   <block id="2a358d687197b0311c68b4c8a7e35e1c" category="cell">ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較</block>
-  <block id="8c5e268f15aeebda6b5b234b3f7c7174" category="cell">暗号化されたイベントをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
-  <block id="9b1384398d4de5545bd0dad2106d6b0d" category="cell">イベントとカスタムリソースをAIエンジンスタックからWLMAIバックエンドにパブリッシュする</block>
-  <block id="359cacd98d9742aded751741e70dce82" category="cell">AIエンジン導入ウィザードでサブネットを一覧表示する</block>
-  <block id="f0f0a4abc20f5a5e438ac1da53b231af" category="cell">基本モデルのいずれかに対してチャットリクエストを開始する</block>
-  <block id="ffd1e194cd59f12c42768a9effd5aa2f" category="cell">導入と再構築の処理中にAmazon CloudWatchロググループを作成する必要があることを確認</block>
-  <block id="2887c4c92d65effaf012b7ca2f914958" category="cell">AIエンジンウィザードでFSxとAmazon Bedrockをサポートするリージョンを取得</block>
-  <block id="aaaceeee6185dfed5c284df5970707f3" category="cell">「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムを確認する</block>
-  <block id="a2e54834745704983c3bbc9eb41ed0a1" category="cell">「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムのボリュームを確認する</block>
-  <block id="2fac110cec869b1380662052556e21b4" category="cell">再構築処理中にAIエンジンを基盤としたナレッジベースを管理</block>
-  <block id="22262aaf9e90060dfd5872961f2d20b9" category="cell">「ナレッジベースの作成」ウィザードでFSx for ONTAPファイルシステムStorage Virtual Machineを確認する</block>
-  <block id="e4276513c887d1d78315c446314f306e" category="cell">導入と再構築の処理中に、AIエンジンのログをAmazon CloudWatchロググループに送信</block>
-  <block id="a89bcda1bd913f5d2c92bb3afd10848c" category="cell">AIエンジンのログをAmazon CloudWatchロググループに送信する</block>
-  <block id="1ae2d90929ed009fb7cb0c3215e704ed" category="cell">Amazon CloudWatchからSSMの応答を取得する（応答が長すぎる場合）</block>
-  <block id="58401e538d76248fba41eb3d4b00ff5b" category="cell">Amazon CloudWatchからSSMの応答を入手</block>
-  <block id="9f48be20e687484bbb74c66926ff62af" category="cell">モデルの推論プロファイルをリスト表示</block>
   <block id="9aa5a97dfe3f7608d8ee28e7db3c4e2c" category="cell">Bedrock: ListInferenceProfiles</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025年3月30日</block>
   <block id="68ef824f4316a8546891ab93ee11d77f" category="section-title">生成AIワークロード権限の更新</block>
@@ -768,21 +709,12 @@
   <block id="74d516ef8dfa098bb4cd92313c403475" category="doc">CloudShellオートコンプリートのサポート</block>
   <block id="df96b6f4ceabb5c4dbc915475fd821fe" category="paragraph">BlueXP  ワークロードファクトリCloudShellを使用している場合は、コマンドの入力を開始してTabキーを押すと、使用可能なオプションが表示されます。複数の候補が存在する場合は、CLIに候補のリストが表示されます。この機能は、エラーを最小限に抑え、コマンド実行を高速化することで、生産性を向上させます。</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">権限に関する用語を更新</block>
-  <block id="db3317ceb65be02e43db6f277e0ad94e" category="cell">読み取り / 書き込み</block>
-  <block id="123ce9aa4e0770ecb435c005fa9b436c" category="cell">Amazon Q Businessアプリケーションを挙げる</block>
-  <block id="4f3c534c90392632c7d275f54d5b35a0" category="cell">qbusiness：ListApplications</block>
-  <block id="ff49b9449e169eb2a6d647cdd5416940" category="cell">導入および再構築処理中のAIインスタンススタックの作成中に、AIインスタンスとプライベートエンドポイントセキュリティグループを作成および更新</block>
-  <block id="fb2b74ed81679192134e9c2c07019b42" category="cell">基盤モデルに関する情報を取得する</block>
-  <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock：GetFoundationModel</block>
-  <block id="9dd35b54afccc27a1cc96eab777dbc8e" category="cell">デプロイおよび再構築処理中のスタック作成時に、Amazon Bedrockログ用のAmazon CloudWatchロググループを作成する</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">2025年5月4日</block>
   <block id="bf0dcc34b100cf0ff91c26bbd98029f7" category="list-text">オートコンプリートのサポート：コマンドの入力を開始し、* Tab *キーを使用して使用可能なオプションを表示します。</block>
   <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">2025年5月4日</block>
   <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">ストレージ評価（最適化）</block>
   <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
   <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
-  <block id="beec07f99f03a1aa1948ba788ce7e6c1" category="cell">S3バケットの一覧</block>
-  <block id="e21c94a36c6dbf24001a64bddce9456f" category="cell">S3 ： ListAllMyBuckets</block>
   <block id="c34c5eed5692ab9466e57060b06ae6ae" category="section-title">2025年6月3日</block>
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">ワークロード ファクトリのユーザー インターフェースとドキュメントでは、読み取り権限を示すために「読み取り専用」を使用し、自動化権限を示すために「読み取り/書き込み」を使用するようになりました。</block>
   <block id="3d040f48a98c22a0f4789c2496c06383" category="paragraph">データベースの _読み取り/書き込み_ モードで次の権限が利用できるようになりました。 <block ref="9c72603737d6e2074ae7fab048b5d3d1" prefix=" " category="inline-code"></block> 。</block>
@@ -996,7 +928,6 @@
   <block id="17815da2601655e53a5a946ca4e0eedd" category="cell">ssmmessages:データチャネルの作成</block>
   <block id="2c9dbd0f531b26987ee04e63abe52bea" category="cell">ssmmessages:OpenControlChannel</block>
   <block id="2e2fcc3da644ea24aae8e587a62c0490" category="cell">ssmmessages:OpenDataChannel</block>
-  <block id="f2a75afa5110fc06c2a6ef3f1e0c324c" category="paragraph">VMware ワークロードの IAM ポリシーは、運用モードに基づいて、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory for VMware に必要な権限を提供します。</block>
   <block id="992efefab3dd15099f5eff3f904d8df4" category="section-title">2025年10月5日</block>
   <block id="655af276f5fd16503f094c10143b02d9" category="paragraph">以下の権限は GenAI から削除され、現在は GenAI エンジンによって処理されます。</block>
   <block id="1084543e1d03924aed54511730a18768" category="list-text"><block ref="e8a46aee8aa47b78b90b155b227afbc9" prefix="" category="inline-code"></block></block>
@@ -1146,7 +1077,6 @@
   <block id="0eaadb4fcb48a0a0ed7bc9868be9fbaa" category="cell">警告</block>
   <block id="cc1f56cb5cd6bdb7f1796048269b0097" category="cell">FSx for ONTAPの自動 inode 管理イベント</block>
   <block id="e4ddc61f041a4a950895b04a98fff07b" category="cell">FSx for ONTAPボリュームの inode 数が、警告しきい値の数/パーセンテージの合計に達しました。</block>
-  <block id="4614f0f919f6357dc680afd47d32ad2b" category="paragraph">権限を付与すると、Workload Factory は、その AWS アカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスにアタッチします。これにより、Workload Factory は、ストレージ環境の検出から、ストレージ管理のファイルシステムや GenAI ワークロードのナレッジベースなどの AWS リソースのデプロイまで、さまざまな操作を実行できるようになります。</block>
   <block id="09fbd7ce5485b032855da27056744715" category="paragraph">各ワークロードは、権限を使用して、Workload Factory で特定のタスクを実行します。権限は、設定された権限ポリシーにまとめられます。使用するワークロードまでスクロールして、アクセス許可ポリシー、アクセス許可ポリシーのコピー可能な JSON、およびすべてのアクセス許可、その目的、使用場所、およびそれらをサポートするアクセス許可ポリシーをリストした表について学習します。</block>
   <block id="3c0158ae150bbe2d52d55d8a4897e28a" category="paragraph">ストレージに使用できる IAM ポリシーは、パブリック クラウド環境内のリソースとプロセスを管理するために Workload Factory に必要な権限を提供します。</block>
   <block id="d542facb88a1cb92fe741c179c25d51a" category="paragraph">ストレージには、次の権限ポリシーから選択できます。</block>
@@ -1180,8 +1110,6 @@
   <block id="e6770209133e1a365baaabf29682707a" category="cell">エラーログ分析に使用できる基礎モデルを取得する</block>
   <block id="9b5a66520940453b03f844cb38d72d2f" category="cell">エラーログ分析</block>
   <block id="2b09ddddcb00f772b0397ca4fa2471b0" category="cell">エラーログ分析のために Amazon Bedrock で利用可能なインターフェースプロファイルを一覧表示する</block>
-  <block id="120558563578966d6e3e3204fb944fe8" category="paragraph">GenAI IAM ポリシーは、_読み取り/書き込み_ 権限でのみ使用できます。</block>
-  <block id="cced0416108aa0eed2d9fc1a929f501e" category="list-text">*読み取り/書き込み*: 実行に必要な検証済みの権限を持つ割り当てられた認証情報を使用して、お客様に代わって AWS で操作を実行し、自動化します。</block>
   <block id="6d1d444e31ba2e1e32454781c718d8bd" category="paragraph">VMware ワークロードでは、次の権限ポリシーから選択できます。</block>
   <block id="808b4a9b1106ed0f5257e607f992d39d" category="list-text">*表示、計画、分析*: EVS 仮想化環境のインベントリを表示し、システムの Well-Architected 分析を取得して、コスト削減を検討します。</block>
   <block id="db73d2d162f2b29ff8535b7ce22cf484" category="list-text">*データストアのデプロイと接続*: 推奨される VM レイアウトを Amazon EVS、Amazon EC2、または VMware Cloud on AWS vSphere クラスターにデプロイし、カスタマイズされたAmazon FSx for NetApp ONTAPファイルシステムを外部データストアとして使用します。</block>
@@ -1200,7 +1128,6 @@
   <block id="78a1fd3770ad9cba75be7a432485a77e" category="section-title">2025年11月2日</block>
   <block id="8759d474306b7075634b38abde2a85cb" category="paragraph">ストレージ、データベース ワークロード、および VMware ワークロードの権限ポリシー「読み取り専用」および「読み取り/書き込み」が置き換えられ、権限の割り当てにおける細分性と柔軟性が向上しました。</block>
   <block id="3adf0593d3d2d43754514ef0d597458d" category="paragraph">NetApp Workload Factory は、Web ベースのコンソールからクラウド サービスとしてユーザーがアクセスできます。始める前に、以下のことを理解しておく必要があります。<block ref="fc500664a3cbaaa3aa46a84367805795" category="inline-link-macro-rx"></block> 。</block>
-  <block id="de8efeea4e5e2680a5800f121d271ee6" category="paragraph">この手順はオプションです。AWS アカウントにアクセスするための認証情報を追加しなくても、Workload Factory を使用できます。  Workload Factory に AWS 認証情報を追加すると、FSx for ONTAPファイルシステムの作成と管理、およびデータベースや GenAI などの特定のワークロードの導入と管理に必要な権限が Workload Factory アカウントに付与されます。</block>
   <block id="bf7bed6002efd423b3f090dfda4fb38c" category="paragraph">Codebox は、各ユーザーの Workload Factory アカウントに提供される AWS 権限に基づいてコードに適切なデータを入力することで、Workload Factory の権限ポリシーに準拠しています。コードはテンプレートのように使用でき、不足している情報 (資格情報など) を入力したり、コードを実行する前に特定のデータをカスタマイズしたりできます。</block>
   <block id="fd7910c842c61985f2e90af78f1b304f" category="paragraph">Workload Factory は柔軟な権限ポリシーを提供し、クラウド資産へのアクセスを慎重に制御し、IT ポリシーに基づいて Workload Factory に段階的な信頼を割り当てることを可能にします。</block>
   <block id="1b512d78c8df2f0c24a19da35f804ca3" category="inline-link-macro">Workload Factory の権限ポリシーの詳細</block>
@@ -1584,4 +1511,6 @@
   <block id="dc3bd384dcb2bc2324eb0b2de08dda55" category="list-text">**権限を確認してください：** ワークロードファクトリーアカウントに、ダッシュボードで使用されるワークロードとリソースへの読み取りアクセス権があることを確認してください。権限要件については、<block ref="7630a8b182c80d5ddb5d9ce1be672fef" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="cc661418365d138458bf55f936b73a47" category="section-title">ワークロードファクトリーからのGenAIワークロードの削除</block>
   <block id="ef18329e66f7a0f5b022b9a400dd74ed" category="paragraph">GenAIワークロードはWorkload Factoryコンソールから削除されました。</block>
+  <block id="7548d07d123f53ef8a847c6be983f3e5" category="paragraph">権限を付与すると、Workload Factory は、その AWS アカウント内のリソースとプロセスを管理するための権限を持つポリシーをインスタンスにアタッチします。これにより、Workload Factory は、ストレージ環境の検出から、ストレージ管理におけるファイルシステムなどの AWS リソースのデプロイまで、さまざまな操作を実行できるようになります。</block>
+  <block id="b0e0fd1b2977dcfd6e5719ca7a3a6e37" category="paragraph">この手順は任意です。Workload Factoryは、AWSアカウントにアクセスするための認証情報を追加しなくても使用できます。Workload FactoryにAWS認証情報を追加すると、Workload FactoryアカウントにFSx for ONTAPファイルシステムの作成と管理、およびデータベースなどの特定のワークロードのデプロイと管理に必要な権限が付与されます。</block>
 </blocks>
