@@ -56,6 +56,8 @@ Workload Factoryのユーザーは、多くのワークロード、環境、お�
 
 カスタムダッシュボードを作成または表示するには、監視対象のリソースに対する適切なAWS IAM権限が必要です。Workload Factoryアカウントが、ダッシュボードで使用されるデータソースへの読み取りアクセス権を持っていることを確認してください。
 
+ダッシュボードを構築するために、Workload Factory は読み取り専用の AWS 認証情報を使用します。これらの認証情報では、次のサービスに対して `fsx:DescribeVolumes`や `fsx:DescribeFileSystems`などの読み取り操作のみが許可されます：EC2、FSx、CloudWatch、Resource Groups Tagging API、バックアップ、CloudWatch Logs、KMS、およびEFS。
+
 link:add-credentials.html["AWS認証情報を追加し、IAM権限を設定する方法を説明します。"^]。
 
 
