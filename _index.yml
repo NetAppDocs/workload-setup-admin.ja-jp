@@ -16,6 +16,8 @@ indexpage:
       url: "/workload-factory-overview.html"
     - title: サインアップ
       url: sign-up-saas.html
+    - title: AI機能の管理
+      url: "/manage-genai-features.html"
   - title: 資格情報と権限
     links:
     - title: AWSクレデンシャルを追加

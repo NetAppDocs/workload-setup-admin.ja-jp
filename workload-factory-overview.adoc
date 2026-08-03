@@ -34,6 +34,9 @@ AIチャットボットの開発:: FSx for ONTAPファイルシステムを活�
 
 
 
+NOTE: アカウント管理者は、AI機能をオンまたはオフに切り替えることができます。管理者がこれらの機能を無効にした場合、Ask Me AIアシスタントは利用できなくなります。link:manage-genai-features.html["AI機能の管理について"]。
+
+
 
 [[supported-cloud-providers]]
 == サポートされているクラウドプロバイダ
@@ -116,7 +119,7 @@ Workload Factory の使用を開始するためにリンクは必要ありませ
 
 現在、リンクはAWS Lambdaを利用しています。
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["リンクの詳細"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["リンクの詳細"^]
 
 
 

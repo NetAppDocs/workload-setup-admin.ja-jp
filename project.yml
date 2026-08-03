@@ -46,6 +46,8 @@ sidebar:
       url: "/well-architected-workloads.html"
     - title: 通知を設定する
       url: "/configure-notifications.html"
+    - title: AI機能の管理
+      url: "/manage-genai-features.html"
     - title: カスタムダッシュボード
       entries:
       - title: カスタムダッシュボードについて

@@ -488,8 +488,8 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 
 データベースでは、次の権限ポリシーから選択できます。
 
-* *表示、計画、および分析*: データベース リソースのインベントリを表示し、リソースの健全性を把握し、データベース構成の Well-Architected 分析を確認し、節約を検討し、エラー ログ分析を取得し、節約を検討します。
-* *操作と修復*: データベース リソースの運用タスクを実行し、データベース構成と基盤となる FSx for ONTAPファイル システム ストレージの問題を修正します。
+* *表示、計画、分析*：データベースリソースのインベントリを表示し、リソースの状態を把握し、データベース構成のウェルアーキテクテッド分析を確認します。
+* *操作と修復*：データベースリソースの操作タスクを実行し、エラーログ分析を取得し、節約の可能性を探り、データベース構成と基盤となる FSx for ONTAP ファイルシステムストレージの問題を修正します。
 * *データベース ホストの作成*: ベスト プラクティスに従って、データベース ホストと、その基盤となる FSx for ONTAPファイル システム ストレージをデプロイします。
 
 
@@ -505,79 +505,82 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 [source, json]
 ----
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "CommonGroup",
-            "Effect": "Allow",
-            "Action": [
-                "cloudwatch:GetMetricStatistics",
-                "cloudwatch:GetMetricData",
-                "sns:ListTopics",
-                "ec2:DescribeInstances",
-                "ec2:DescribeVpcs",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeImages",
-                "ec2:DescribeRegions",
-                "ec2:DescribeRouteTables",
-                "ec2:DescribeKeyPairs",
-                "ec2:DescribeNetworkInterfaces",
-                "ec2:DescribeInstanceTypes",
-                "ec2:DescribeVpcEndpoints",
-                "ec2:DescribeInstanceTypeOfferings",
-                "ec2:DescribeSnapshots",
-                "ec2:DescribeVolumes",
-                "ec2:DescribeAddresses",
-                "kms:ListAliases",
-                "kms:ListKeys",
-                "kms:DescribeKey",
-                "cloudformation:ListStacks",
-                "cloudformation:DescribeAccountLimits",
-                "ds:DescribeDirectories",
-                "fsx:DescribeVolumes",
-                "fsx:DescribeBackups",
-                "fsx:DescribeStorageVirtualMachines",
-                "fsx:DescribeFileSystems",
-                "servicequotas:ListServiceQuotas",
-                "ssm:GetParametersByPath",
-                "ssm:GetCommandInvocation",
-                "ssm:SendCommand",
-                "ssm:GetConnectionStatus",
-                "ssm:DescribePatchBaselines",
-                "ssm:DescribeInstancePatchStates",
-                "ssm:ListCommands",
-                "ssm:DescribeInstanceInformation",
-                "fsx:ListTagsForResource",
-                "logs:DescribeLogGroups",
-                "bedrock:GetFoundationModelAvailability",
-                "bedrock:ListInferenceProfiles"
-            ],
-            "Resource": [
-                "*"
-            ]
-        },
-        {
-            "Sid": "SSMParameterStore",
-            "Effect": "Allow",
-            "Action": [
-                "ssm:GetParameter",
-                "ssm:GetParameters",
-                "ssm:PutParameter",
-                "ssm:DeleteParameters"
-            ],
-            "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
-        },
-        {
-            "Sid": "SSMResponseCloudWatch",
-            "Effect": "Allow",
-            "Action": [
-                "logs:GetLogEvents",
-                "logs:PutRetentionPolicy"
-            ],
-            "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CommonGroup",
+      "Effect": "Allow",
+      "Action": [
+        "sns:ListTopics",
+        "ec2:DescribeInstances",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeImages",
+        "ec2:DescribeRegions",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeInstanceTypes",
+        "ec2:DescribeVpcEndpoints",
+        "ec2:DescribeInstanceTypeOfferings",
+        "ec2:DescribeSnapshots",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeAddresses",
+        "kms:ListAliases",
+        "kms:ListKeys",
+        "kms:DescribeKey",
+        "cloudformation:ListStacks",
+        "cloudformation:DescribeAccountLimits",
+        "ds:DescribeDirectories",
+        "fsx:DescribeVolumes",
+        "fsx:DescribeBackups",
+        "fsx:DescribeStorageVirtualMachines",
+        "fsx:DescribeFileSystems",
+        "servicequotas:ListServiceQuotas",
+        "ssm:GetParametersByPath",
+        "ssm:GetCommandInvocation",
+        "ssm:GetConnectionStatus",
+        "ssm:DescribeInstancePatches",
+        "ssm:DescribePatchBaselines",
+        "ssm:DescribeInstancePatchStates",
+        "ssm:DescribeAvailablePatches",
+        "ssm:ListCommands",
+        "ssm:GetInventory",
+        "ssm:ListInventoryEntries",
+        "ssm:DescribeInstanceInformation",
+        "fsx:ListTagsForResource",
+        "logs:DescribeLogGroups"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "AllowSpecificSSMDocuments",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": [
+        "arn:aws:ssm:*::document/AWSFleetManager-GetWindowsRegistryContent",
+        "arn:aws:ssm:*::document/AWSFleetManager-GetFileSystemContent"
+      ]
+    },
+    {
+      "Sid": "AllowAllEC2InstancesForSendCommand",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ----
 --
@@ -588,6 +591,49 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 {
   "Version": "2012-10-17",
   "Statement": [
+    {
+      "Sid": "ExtendedCommonGroup",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:ListInferenceProfiles"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "AllowPSSSMDocuments",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": [
+        "arn:aws:ssm:*::document/AWS-RunPowerShellScript",
+        "arn:aws:ssm:*::document/AWS-RunShellScript",
+        "arn:aws:ssm:*::document/AWS-RunPatchBaseline"
+      ]
+    },
+    {
+      "Sid": "SSMParameterStore",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:PutParameter",
+        "ssm:DeleteParameters"
+      ],
+      "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+    },
+    {
+      "Sid": "SSMResponseCloudWatch",
+      "Effect": "Allow",
+      "Action": [
+        "logs:GetLogEvents",
+        "logs:PutRetentionPolicy"
+      ],
+      "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
+    },
     {
       "Sid": "FSxRemediation",
       "Effect": "Allow",
@@ -827,10 +873,10 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 * インベントリ
 * コスト削減の詳細
 
-| 表示、計画、分析 
+| 運用と修復 
 
 
-| 登録済みのSQLノードからAmazon CloudWatchに保存されたパフォーマンスメトリクスを収集します。登録済みのSQLインスタンスのインスタンス管理画面に、パフォーマンストレンドチャートにデータが生成されます。 | CloudWatch：GetMetricData | インベントリ | 表示、計画、分析 
+| 登録済みのSQLノードからAmazon CloudWatchに保存されたパフォーマンスメトリクスを収集します。登録済みのSQLインスタンスのインスタンス管理画面に、パフォーマンストレンドチャートにデータが生成されます。 | CloudWatch：GetMetricData | インベントリ | 運用と修復 
 
 
 .4+| EC2インスタンスの詳細を取得 | EC2: DescribeInstances  a| 
@@ -979,7 +1025,7 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 * コスト削減の詳細
 * 最適化
 
-| 表示、計画、分析 
+| 状況把握、計画立案、分析；運用および是正措置 
 
 
 | 導入後にインスタンスのSSM接続ステータスを取得 | SSM：GetConnectionStatus  a| 
@@ -994,6 +1040,18 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 
 
 | オペレーティングシステムのパッチ評価に使用できるパッチベースラインのリストを入手する | SSM：DescribePatchBaselines | 最適化 | 表示、計画、分析 
+
+
+| Windows EC2インスタンスのパッチ適用インベントリの詳細を取得し、評価および修復ワークフローに活用します。 | ssm:DescribeInstancePatches | 最適化 | 表示、計画、分析 
+
+
+| オペレーティングシステムのパッチ評価に利用可能なパッチのリストを取得します | ssm:DescribeAvailablePatches | 最適化 | 表示、計画、分析 
+
+
+| 管理対象の SQL ノードから収集されたインベントリメタデータを取得する | ssm:GetInventory | インベントリ | 表示、計画、分析 
+
+
+| 管理対象SQLノードから収集されたインベントリエントリの一覧表示 | ssm:ListInventoryEntries | インベントリ | 表示、計画、分析 
 
 
 | オペレーティングシステムのパッチ評価のためのWindows EC2インスタンスのパッチ状態の取得 | SSM:DescribeInstancePatchStates | 最適化 | 表示、計画、分析 
@@ -1049,7 +1107,7 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 * カンリシヨリ
 * インベントリ
 
-| 表示、計画、分析 
+| 運用と修復 
 
 
 | SSM：GetParameters ^1^  a| 
@@ -1057,21 +1115,21 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 * カンリシヨリ
 * インベントリ
 
-| 表示、計画、分析 
+| 運用と修復 
 
 
 | SSM：PutParameter ^1^  a| 
 * 導入
 * カンリシヨリ
 
-| 表示、計画、分析 
+| 運用と修復 
 
 
 | SSM：削除パラメータ^1^  a| 
 * 導入
 * カンリシヨリ
 
-| 表示、計画、分析 
+| 運用と修復 
 
 
 .9+| ネットワークリソースをSQLノードと検証ノードに関連付け、SQLノードにセカンダリIPを追加する | EC2：AllocateAddress ^1^ | 導入 | データベースホストの作成 
@@ -1294,7 +1352,7 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 * ストレージ評価（最適化）
 * インベントリ
 
-| 表示、計画、分析 
+| 運用と修復 
 
 
 | Workload Factory が現在のログ グループを取得し、Workload Factory によって作成されたログ グループの保持が設定されていることを確認することを許可します。 | ログ:DescriptionLogGroups  a| 
@@ -1308,7 +1366,7 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 * ストレージ評価（最適化）
 * インベントリ
 
-| 表示、計画、分析 
+| 運用と修復 
 
 
 .2+| カスタマーSNSのトピックを一覧表示し、WLMDBバックエンドSNSおよびカスタマーSNS（選択されている場合）に公開します。 | SNS:リストトピック | 導入 | 表示、計画、分析 
@@ -1392,10 +1450,10 @@ NOTE: AWS GovCloud は AWS Cost Explorer をサポートしていないため、
 | ワークロードの処理をシミュレートして使用可能な権限を検証し、必要なAWSアカウントの権限と比較 | IAM：SimulatePrincipalPolicy | 導入 | 全て 
 
 
-| エラーログ分析に使用できる基礎モデルを取得する | Bedrock：GetFoundationModelAvailability | エラーログ分析 | 表示、計画、分析 
+| エラーログ分析に使用できる基礎モデルを取得する | Bedrock：GetFoundationModelAvailability | エラーログ分析 | 運用と修復 
 
 
-| エラーログ分析のために Amazon Bedrock で利用可能なインターフェースプロファイルを一覧表示する | Bedrock: ListInferenceProfiles | エラーログ分析 | 表示、計画、分析 
+| エラーログ分析のために Amazon Bedrock で利用可能なインターフェースプロファイルを一覧表示する | Bedrock: ListInferenceProfiles | エラーログ分析 | 運用と修復 
 |===
 . アクセス許可は、WLMDBで始まるリソースに制限されます。
 . IAM：AWSServiceNameによって制限される「IAM：CreateServiceLinkedRole」：ec2.amazonaws.com"*
@@ -1651,6 +1709,17 @@ VMware ワークロードでは、次の権限ポリシーから選択できま�
 == 変更ログ
 
 権限が追加および削除されると、以下のセクションにそれらの権限が表示されます。
+
+
+
+[[3-august-2026]]
+=== 2026年8月3日
+
+データベースのアクセス権限が更新され、機能へのアクセス性が向上し、不要なSSMへのアクセスが制限されました。
+
+表示、計画、および分析の権限は、AWS SSM ドキュメントに限定されます。これらの権限があれば、ホスト、インスタンス、データベースを表示できます。また、リソースの基本的なオンデマンドの Well-Architected 分析を実行することもできます。
+
+操作および修復権限を使用すると、包括的なWell-Architected評価を取得し、Well-Architected分析に基づいて推奨されるアクションを適用し、リソースに変更を加え、エラーログを分析できます。
 
 
 

@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: manage-genai-features.html 
+keywords: gen ai, generative ai, bedrock, ask me, custom dashboards, rules builder, cloudshell ai, ems analyzer, db log analyzer, latency analyzer, byom, bring your own model, administration 
+summary: Workload FactoryにおけるBedrockベースのAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppマネージドAWS Bedrockを使用できます。 
+---
+= AI機能の管理
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload FactoryにおけるAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppが管理するAWS Bedrockを使用することができます。
+
+
+
+[[about-ai-features]]
+== AI機能について
+
+Workload Factory には、Ask Me、カスタムダッシュボード、EMS、データベースログ、レイテンシのアナライザーなど、ユーザーエクスペリエンスを向上させる AI 搭載機能が多数含まれています。
+
+Workload Factoryの管理者であれば、AI設定ページでこれらの機能におけるAIの使用方法を制御できます。
+
+
+
+[[configuration-options]]
+== 構成オプション
+
+以下の設定オプションから選択してください：
+
+NetAppマネージド Bedrock （推奨）:: NetApp が管理する AWS Bedrock サービスを使用します。このオプションはほとんどのユーザーに推奨されます。
++
+--
+* お客様のデータはモデルのトレーニングには使用されません
+* 月間利用クレジットは組織全体で共有されます
+* AWSの追加設定は不要です。
+
+
+--
+GenAI機能オフ:: すべてのAI機能をオフにします。ユーザーは、Ask Me、アナライザー、カスタムダッシュボード、ルールビルダー、その他のAI搭載ツールを使用できなくなります。
+
+
+
+
+[[before-you-begin]]
+== 開始する前に
+
+* アカウント管理者がAI機能を設定することをお勧めします。
+
+
+
+
+[[configure-ai-features]]
+== AI機能の設定
+
+.手順
+. いずれかの方法でログインしてくださいlink:console-experiences.html["コンソールエクスペリエンス"^]。
+. メニューから「管理」を選択し、次に「AI設定」を選択します。
+. 「AI設定」ページで、希望する設定を選択してください：
++
+** *NetApp が管理する Bedrock （推奨）*：NetApp が管理する AWS Bedrock を使用します。
+** *Gen AI機能オフ*：すべてのAI機能をオフにします。
+
+
+. 「設定を保存」を選択します。
+
+
+.結果
+設定は保存され、Workload Factoryのすべての AI 機能に即座に適用されます。Trackerでは、誰が最後に設定を更新したか、またいつ更新したかを確認できます。
+
+AI機能がオフになっている場合、ユーザーがAI搭載機能を使おうとするとメッセージが表示されます。インターフェースは表示されたままで、その機能が利用できないことが明確に示されます。
+
+
+
+[[budget-controls-and-credit-limits]]
+== 予算管理と信用限度額
+
+デフォルトのNetApp管理構成を使用する場合、NetAppがAI機能の予算管理を制御します。
+
+
+
+[[monthly-credit-limits]]
+=== 月間クレジット限度額
+
+各アカウントには、NetApp が管理する Bedrock を使用する際に、各 AI 機能に対する月間支出制限があります。
+
+
+
+[[when-budget-is-reached]]
+=== 予算に達したとき
+
+アカウントが月間予算上限に達した場合、Workload Factory は次の措置をとります：
+
+* AI機能をオフにして、インターフェースの関連部分をグレー表示にする
+* このメッセージをツールチップとして表示します：「月間のAIクレジットが上限に達しました。NetAppサポートにお問い合わせください。」
+* 追跡目的で使用状況を記録する
+
+
+
+
+[[request-additional-credits]]
+=== 追加クレジットをリクエストする
+
+AIクレジットがさらに必要な場合は、NetAppの担当者にお問い合わせください。担当者がお客様のニーズに基づいてクレジット限度額を調整いたします。
+
+[TIP]
+====
+クレジット限度額について NetApp の担当者に問い合わせるには、製品内チャットを使用するか、link:get-help.html["ヘルプを表示します"] ページをご覧ください。
+
+====
+
+
+[[govcloud-considerations]]
+== GovCloud の考慮事項
+
+AWS GovCloud（US）でWorkload Factoryアカウントを作成する場合、AI機能はデフォルトでパブリックAWSリージョンのAWS Bedrockサービスを使用することに注意してください。
+
+セキュリティ要件によりパブリック AWS リージョンサービスへの接続が許可されていない場合は、AI 機能を無効にすることができます。
+
+link:sign-up-saas.html["GovCloud アカウントの作成について"]。
+
+
+
+[[impact-on-existing-sessions]]
+== 既存のセッションへの影響
+
+AIの設定を変更すると、アクティブなAIセッションはすべてソフト終了されます。現在のワークフローは完了できますが、新規リクエストには更新された設定が使用されます。
+
+終了時の動作は機能によって異なる場合があります。詳細については、各機能固有のドキュメントを参照してください。
+
+
+
+[[related-information]]
+== 関連情報
+
+* link:workload-factory-overview.html["Workload Factoryの機能について"]
+* link:learn-custom-dashboards.html["カスタムダッシュボードについて"]
+* link:add-credentials.html["AWSクレデンシャルを追加"]
+* link:permissions-reference.html["権限リファレンス"]
+

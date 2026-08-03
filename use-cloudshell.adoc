@@ -32,6 +32,9 @@ CloudShellには次の機能があります。
 
 
 
+NOTE: アカウント管理者がAI機能を無効にしている場合、AIが生成するエラー応答は利用できません。link:manage-genai-features.html["AI機能の管理について"]。
+
+
 
 [[cloudshell-commands]]
 == CloudShellコマンド

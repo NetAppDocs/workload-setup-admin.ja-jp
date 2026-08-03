@@ -53,6 +53,10 @@ image:screenshot-account-selection-govcloud.png["新しいアカウントでロ�
 +
 .. アカウント名を入力してください。
 .. 必要に応じて、アカウントをAWS GovCloud（US）アカウントにします。このアカウントタイプは、セットアップと運用にAWS GovCloud（US）のエンドポイントとリージョンのみを使用します。クレデンシャルとシークレットはGovCloud内に保持されます。この選択は永続的です。
++
+
+NOTE: Workload FactoryのAI機能は、パブリックAWSリージョンでホストされているAWS Bedrockサービスを利用しています。セキュリティポリシーでパブリックリージョンサービスへの接続が許可されていない場合は、管理設定でAI機能を無効にすることができます。link:manage-genai-features.html["AI機能の管理について"]。
+
 .. 必要に応じて、アカウントのジョブ概要を入力します。
 
 
