@@ -13,7 +13,12 @@
 
 操作および修復権限を使用すると、リソースの変更、エラーログの分析、リソースの包括的なウェルアーキテクテッド分析の取得、および構成上の問題の修正を行うことができます。
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["権限リファレンス"] === カスタムダッシュボード
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["権限リファレンス"]
+
+
+
+[[custom-dashboards]]
+=== カスタムダッシュボード
 
 
 

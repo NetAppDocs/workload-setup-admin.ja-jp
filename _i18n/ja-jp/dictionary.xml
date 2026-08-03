@@ -1515,7 +1515,6 @@
   <block id="e9e3af45119a834b75ee5ce8ad5fc96d" category="paragraph">データベースのアクセス権限が更新され、機能へのアクセス性が向上し、不要なSSMへのアクセスが制限されました。</block>
   <block id="6f70bfe68d48e1ab770cfb69bea59dfd" category="paragraph">表示、計画、および分析の権限は、AWS SSM ドキュメントに限定されます。これらの権限があれば、ホスト、インスタンス、データベースを表示できます。また、リソースの基本的なオンデマンドの Well-Architected 分析を実行することもできます。</block>
   <block id="e9ad7ba5991717b52c215bd25e788b28" category="paragraph">操作および修復権限を使用すると、リソースの変更、エラーログの分析、リソースの包括的なウェルアーキテクテッド分析の取得、および構成上の問題の修正を行うことができます。</block>
-  <block id="0c92fa03ad5e533f4ef42de9a2ae598f" category="paragraph"><block ref="167e20b67f84068555b3081057c696b8" category="inline-link-macro-rx"></block> === カスタムダッシュボード</block>
   <block id="d5eb0f9120b28b557f3e367589adf4bb" category="section-title">カスタムダッシュボードの通知</block>
   <block id="fb5e135dfdab99cdebbb946a22093655" category="paragraph">Workload Factoryは、カスタムダッシュボードの準備が完了したとき、または作成が失敗したときに通知するようになりました。</block>
   <block id="7a99102fbba6a5729480bc61967c8423" category="paragraph">カスタムダッシュボードを作成すると、それを直接表示するためのリンクが記載された通知が届きます。作成に失敗した場合は、カスタムダッシュボードのインベントリへのリンクを含む通知が表示され、再度お試しいただけます。</block>
@@ -1641,4 +1640,5 @@
   <block id="1cdbc8bcb26cc8d5e894a97b9e7f269f" category="section-title">2026年7月5日</block>
   <block id="8fb2a31345fc5c5e72c947d436b5077b" category="admonition">アカウント管理者は、AI機能をオンまたはオフに切り替えることができます。管理者がこれらの機能を無効にした場合、Ask Me AIアシスタントは利用できなくなります。<block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>。</block>
   <block id="959c1faca1dbb57f8dac1b5058bf9c58" category="paragraph"><block ref="959c1faca1dbb57f8dac1b5058bf9c58" category="inline-link-macro-rx"></block></block>
+  <block id="167e20b67f84068555b3081057c696b8" category="paragraph"><block ref="167e20b67f84068555b3081057c696b8" category="inline-link-macro-rx"></block></block>
 </blocks>
