@@ -1520,17 +1520,13 @@
   <block id="7a99102fbba6a5729480bc61967c8423" category="paragraph">カスタムダッシュボードを作成すると、それを直接表示するためのリンクが記載された通知が届きます。作成に失敗した場合は、カスタムダッシュボードのインベントリへのリンクを含む通知が表示され、再度お試しいただけます。</block>
   <block id="a9402b6e97b8b59ffa86012d5cfb7f9a" category="paragraph">これにより、ダッシュボードの準備が整ったタイミングが分かりやすくなり、確認や再作成も容易になります。</block>
   <block id="359ab637c5369e269d0e004308b6c089" category="inline-link-macro">カスタムダッシュボードの作成方法を説明します</block>
-  <block id="2b4fe8741ca59e9e85fecaff24736613" category="paragraph"><block ref="2b4fe8741ca59e9e85fecaff24736613" category="inline-link-macro-rx"></block></block>
   <block id="863d814c29385fa8ebfd13bc1c1c7e96" category="inline-link-macro">通知の設定について</block>
-  <block id="19fa6c73a4251f43a74dc700e68a79f1" category="paragraph"><block ref="19fa6c73a4251f43a74dc700e68a79f1" category="inline-link-macro-rx"></block></block>
   <block id="27a522e1e6e4d9921e08ab5e7ad99158" category="section-title">プライベートおよびパブリックのカスタムダッシュボード</block>
   <block id="add4e669fb22c004f4eef61607cc5df8" category="paragraph">カスタムダッシュボードに共有設定が追加されました。ダッシュボードは非公開にすることも、チームと共有することもできます。</block>
   <block id="1bdd40db25752f704baa9b254470fb9a" category="paragraph">新しいダッシュボードはデフォルトでは非公開設定になっており、あなた以外には表示されません。ダッシュボードはいつでも公開設定にして、Workload Factoryアカウント内のすべてのユーザーと共有できます。</block>
   <block id="26e05170ba3616166d4659e72d415450" category="paragraph">各ダッシュボードカードには「プライベート」または「パブリック」のラベルが表示されるため、どのダッシュボードが共有されているかをすぐに確認できます。</block>
   <block id="29f897a53b188561913c2393050ce43a" category="inline-link-macro">ダッシュボードの表示設定と共有について</block>
-  <block id="c5d5a7386c6c7c68f8d62de175cd235f" category="paragraph"><block ref="c5d5a7386c6c7c68f8d62de175cd235f" category="inline-link-macro-rx"></block></block>
   <block id="c0bb5d7518380c44f5710f0803f9b3f4" category="inline-link-macro">ダッシュボードの共有方法について説明します</block>
-  <block id="15bb464c4011a82a1976bc518af9f860" category="paragraph"><block ref="15bb464c4011a82a1976bc518af9f860" category="inline-link-macro-rx"></block></block>
   <block id="b6ea1239e82705b159df88578e6fb6f0" category="section-title">AI機能管理</block>
   <block id="1c7ba82e26fc30a97a625aaad623e4f4" category="paragraph">Workload Factoryの管理画面で以下の設定を行うことで、組織全体におけるAI機能へのアクセスを制御できます。</block>
   <block id="e585625dd2a0a8e71ca8d8a269834ba9" category="list-text">NetAppが管理するBedrockを使用します（推奨、デフォルトで有効、月単位のクレジット制限あり）</block>
@@ -1539,7 +1535,6 @@
   <block id="cd89624525aeeba4f9fce9dcfb6d9a91" category="paragraph">AI機能には、Ask Me、カスタムダッシュボード、ルールビルダー、およびEMS、データベースログ、ボリュームレイテンシ用のアナライザーが含まれます。</block>
   <block id="dc363e90d503e57b6cddc555e2f96d5f" category="paragraph">AI機能がオフになっている場合、ユーザーにはAIが利用できないというメッセージが表示されます。</block>
   <block id="48dc51848c127d267cdd7ab1bcd0fe5e" category="inline-link-macro">AI機能の管理について</block>
-  <block id="56d2e09cbb0a828478db20ff2d11774d" category="paragraph"><block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block></block>
   <block id="30c96c6f4cd1002d6f485ca940c9a6e7" category="cell">カスタムダッシュボードの作成に成功しました</block>
   <block id="0791611e19f18138ef88e9ec3b961a87" category="cell">カスタムダッシュボードが正常に作成され、表示できるようになりました。</block>
   <block id="8fef7542994100e60e95202e22600bf2" category="cell">カスタムダッシュボード</block>
@@ -1641,4 +1636,9 @@
   <block id="8fb2a31345fc5c5e72c947d436b5077b" category="admonition">アカウント管理者は、AI機能をオンまたはオフに切り替えることができます。管理者がこれらの機能を無効にした場合、Ask Me AIアシスタントは利用できなくなります。<block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>。</block>
   <block id="959c1faca1dbb57f8dac1b5058bf9c58" category="paragraph"><block ref="959c1faca1dbb57f8dac1b5058bf9c58" category="inline-link-macro-rx"></block></block>
   <block id="167e20b67f84068555b3081057c696b8" category="paragraph"><block ref="167e20b67f84068555b3081057c696b8" category="inline-link-macro-rx"></block></block>
+  <block id="0e23d2a91e2fd1a7eb141ceb8cd9ddcf" category="paragraph"><block ref="0e23d2a91e2fd1a7eb141ceb8cd9ddcf" category="inline-link-macro-rx"></block></block>
+  <block id="d972d2e4f90697cd9aea0ea06c6d65ea" category="paragraph"><block ref="d972d2e4f90697cd9aea0ea06c6d65ea" category="inline-link-macro-rx"></block></block>
+  <block id="5243974c66976ebd592df24b62b1b9bf" category="paragraph"><block ref="5243974c66976ebd592df24b62b1b9bf" category="inline-link-macro-rx"></block></block>
+  <block id="a8d7b4c293e04e8a879f9be70ed380ba" category="paragraph"><block ref="a8d7b4c293e04e8a879f9be70ed380ba" category="inline-link-macro-rx"></block></block>
+  <block id="8d20116cd01bc3ce31dae628497af0dc" category="paragraph"><block ref="8d20116cd01bc3ce31dae628497af0dc" category="inline-link-macro-rx"></block></block>
 </blocks>

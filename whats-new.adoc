@@ -46,9 +46,9 @@ Workload Factoryは、カスタムダッシュボードの準備が完了した�
 
 これにより、ダッシュボードの準備が整ったタイミングが分かりやすくなり、確認や再作成も容易になります。
 
-link:create-custom-dashboard.html["カスタムダッシュボードの作成方法を説明します"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["カスタムダッシュボードの作成方法を説明します"]
 
-link:configure-notifications.html["通知の設定について"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["通知の設定について"]
 
 
 
@@ -60,9 +60,9 @@ link:configure-notifications.html["通知の設定について"]
 
 各ダッシュボードカードには「プライベート」または「パブリック」のラベルが表示されるため、どのダッシュボードが共有されているかをすぐに確認できます。
 
-link:learn-custom-dashboards.html#dashboard-visibility-and-sharing["ダッシュボードの表示設定と共有について"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html#view-and-share-dashboards["ダッシュボードの表示設定と共有について"]
 
-link:manage-custom-dashboards.html#change-dashboard-visibility["ダッシュボードの共有方法について説明します"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html#change-dashboard-visibility["ダッシュボードの共有方法について説明します"]
 
 
 
@@ -81,7 +81,7 @@ AI機能には、Ask Me、カスタムダッシュボード、ルールビルダ
 
 AI機能がオフになっている場合、ユーザーにはAIが利用できないというメッセージが表示されます。
 
-link:manage-genai-features.html["AI機能の管理について"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["AI機能の管理について"]
 
 
 
