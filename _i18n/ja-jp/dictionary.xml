@@ -24,7 +24,6 @@
   <block id="05e2d97b3b23a80afeb67390bad5f97c" category="inline-image-macro">新しいロールに追加する権限を示すスクリーンショット。</block>
   <block id="bfc77a43a5b610654d7d0e7bbb9162a7" category="paragraph"><block ref="bfc77a43a5b610654d7d0e7bbb9162a7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0a8070d8176ef21fdf6bc0d6b6833c9" category="list-text">AWS管理コンソールで、*[Roles]&gt;[Create Role]*を選択します。</block>
-  <block id="e506de832b98c2693eb3f400ef0722c0" category="list-text">信頼されるエンティティのタイプ * で、 * AWS アカウント * を選択します。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">「 * 次へ * 」を選択します。</block>
   <block id="552a0f683211339f8f7517a1d4fc804d" category="list-text">[アクセス許可ポリシー]セクションで、以前に定義したすべてのポリシーを選択し、*[次へ]*を選択します。</block>
   <block id="eb940e2ee0ec63786b166a518db881df" category="list-text">ロールの名前を入力し、*[ロールの作成]*を選択します。</block>
@@ -633,7 +632,6 @@
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025年2月2日</block>
   <block id="bd901b05034bb9be1d918012998e8f7b" category="section-title">2025年1月5日</block>
   <block id="5ff4c3f483396c894c51f91d47106ecf" category="list-text">[クレデンシャル]ページで、*[クレデンシャルの追加]*を選択します。</block>
-  <block id="558847a01e0a9378a8c7b99a0e6af643" category="list-text">[クレデンシャルの追加]ページで*[手動で追加]*を選択し、次の手順に従って_Permissions configuration_の各セクションを完了します。</block>
   <block id="4b44bad00f91b8450a836bfa54b0306e" category="list-text">[CloudShell]ウィンドウで、CloudShellセッションのクレデンシャルとリージョンを選択し、矢印を選択して続行します。</block>
   <block id="a5fab0062142f5ef0615c361259b0b89" category="cell">Grantedロールは、FSx for ONTAPとその他のAWSサービス間の通信を提供します。</block>
   <block id="8832fb7d0699d4878c8449616cd47613" category="cell">IAM：CreateServiceLinkedRole</block>
@@ -823,9 +821,6 @@
   <block id="6c8ca72a28d9651706405d888093910e" category="list-text">ログイン<block ref="04c72ef1cb137ba02eafcfdeb6fc7765" category="inline-link-rx"></block>。</block>
   <block id="6191b3848b93c4178f95391680ab2108" category="list-text">メニューから*管理*を選択し、次に*資格情報*を選択します。</block>
   <block id="30551002ceb8abd5af0ee8907423b553" category="paragraph">このセクションでは、作成した権限とポリシーを含む、Workload Factory が引き受ける IAM ロールを設定します。</block>
-  <block id="f0497660975536e414a629b7d4f9f276" category="list-text">*別の AWS アカウント* を選択し、Workload Factory UI から FSx for ONTAPワークロード管理のアカウント ID をコピーして貼り付けます。</block>
-  <block id="f97e7ca54bb60a402c14107162345b08" category="list-text">*必須の外部 ID* を選択し、Workload Factory UI から外部 ID をコピーして貼り付けます。</block>
-  <block id="fcf4437915eed569a9fd7691faf38a66" category="list-text">Workload Factory の [認証情報の追加] ページに戻り、[*権限の設定*] の下の [*ロールの作成*] セクションを展開して、[_ロール ARN_] フィールドに ARN を貼り付けます。</block>
   <block id="a9c4ed0c041add98b3c1c27e6191e29e" category="paragraph">最後のステップは、Workload Factory で資格情報の名前を入力することです。</block>
   <block id="5976d02d7cdfb004e841934d0a6bf1b5" category="list-text">Workload Factory の [資格情報の追加] ページで、[*権限の構成*] の下の [*資格情報の名前*] を展開します。</block>
   <block id="21f73823dc240b09e9b0a0896496f95d" category="paragraph">使用する Workload Factory 機能を選択し、AWS アカウントで AWS CloudFormation スタックを起動することで、AWS CloudFormation スタックを使用して Workload Factory に AWS 認証情報を追加できます。  CloudFormation は、選択したワークロード機能に基づいて IAM ポリシーと IAM ロールを作成します。</block>
@@ -1509,8 +1504,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">ご自身の環境に適用されない構成の分析を無視することができます。これにより、不要なアラートや不正確な最適化結果を回避できます。</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">カスタムルールについて詳しくはこちらをご覧ください</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。<block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
   <block id="da0c92072a1db7fee3208bcad3ad822b" category="doc">データベースのIAMアクセス許可ポリシーを更新しました</block>
   <block id="e9e3af45119a834b75ee5ce8ad5fc96d" category="paragraph">データベースのアクセス権限が更新され、機能へのアクセス性が向上し、不要なSSMへのアクセスが制限されました。</block>
   <block id="6f70bfe68d48e1ab770cfb69bea59dfd" category="paragraph">表示、計画、および分析の権限は、AWS SSM ドキュメントに限定されます。これらの権限があれば、ホスト、インスタンス、データベースを表示できます。また、リソースの基本的なオンデマンドの Well-Architected 分析を実行することもできます。</block>
@@ -1641,4 +1634,10 @@
   <block id="5243974c66976ebd592df24b62b1b9bf" category="paragraph"><block ref="5243974c66976ebd592df24b62b1b9bf" category="inline-link-macro-rx"></block></block>
   <block id="a8d7b4c293e04e8a879f9be70ed380ba" category="paragraph"><block ref="a8d7b4c293e04e8a879f9be70ed380ba" category="inline-link-macro-rx"></block></block>
   <block id="8d20116cd01bc3ce31dae628497af0dc" category="paragraph"><block ref="8d20116cd01bc3ce31dae628497af0dc" category="inline-link-macro-rx"></block></block>
+  <block id="e0d1a02b10ec781984ac246a7d6226fd" category="list-text">「資格情報の追加」ページで、*手動で追加*を選択し、以下の手順に従って_アクセス許可の設定_の各セクションを完了してください。</block>
+  <block id="4cba6cec5bdba739fed7cc1ed3ac5396" category="list-text">Workload Factory の「資格情報の追加」ページから、「権限構成」の下にある「ロールの作成」を展開します。</block>
+  <block id="288d704e69ec643a96254456480c3998" category="list-text">ポリシーをコピーするには、*JSONコード*を選択してください。</block>
+  <block id="e7a1d840ae4199cc1f76836535606345" category="list-text">「信頼エンティティの種類」で、「カスタム信頼ポリシー」を選択します。</block>
+  <block id="a2908f77e830d0a907f60038a03cc446" category="list-text">テキストボックス内の現在の内容を、手順2でコピーしたJSONコードに置き換えてください。</block>
+  <block id="0afa7405bb80320955bff5c5dafcba00" category="list-text">Workload Factory の「資格情報の追加」ページに戻り、「ロール ARN」フィールドにロール ARN を貼り付けます。</block>
 </blocks>

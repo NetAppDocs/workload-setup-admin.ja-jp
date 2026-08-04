@@ -26,10 +26,6 @@ Workload Factory は、Amazon FSx for NetApp ONTAP ファイルシステムの�
 
 また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["カスタムルールについて詳しくはこちらをご覧ください"^]。
 
-また、組織の標準および NetApp のベストプラクティスに照らして環境を検証するために、平易な言葉でカスタムルールを作成することもできます。ドライランでルールをテストし、各環境で実行するようにスケジュールを設定します。
-
-link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["カスタムルールについて詳しくはこちらをご覧ください"^]。
-
 
 
 [[why-it-matters]]
