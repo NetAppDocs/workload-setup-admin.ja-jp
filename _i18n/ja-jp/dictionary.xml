@@ -1640,4 +1640,41 @@
   <block id="e7a1d840ae4199cc1f76836535606345" category="list-text">「信頼エンティティの種類」で、「カスタム信頼ポリシー」を選択します。</block>
   <block id="a2908f77e830d0a907f60038a03cc446" category="list-text">テキストボックス内の現在の内容を、手順2でコピーしたJSONコードに置き換えてください。</block>
   <block id="0afa7405bb80320955bff5c5dafcba00" category="list-text">Workload Factory の「資格情報の追加」ページに戻り、「ロール ARN」フィールドにロール ARN を貼り付けます。</block>
+  <block id="cfd98e00a6e308c04ab9f76a854b6989" category="doc">業務を追跡および監視する</block>
+  <block id="674b84367e7a585d7eb4cb69538ab5be" category="paragraph">FSx for ONTAP、クレデンシャル、リンク操作の実行を監視および追跡し、NetApp Workload Factory の Tracker でタスクの進捗状況を監視します。</block>
+  <block id="8dbebb7d8525e0c16443f866feb41a02" category="paragraph">Workload Factory は、監視機能である Tracker を提供しており、FSx for ONTAP、クレデンシャル、およびリンク操作の進捗状況とステータスを監視および追跡し、操作タスクとサブタスクの詳細を確認し、問題や障害を診断することができます。</block>
+  <block id="6092aff2fd96382c8039bf4b05f69f42" category="paragraph">Trackerでは、いくつかの操作が可能です。ジョブは、期間（過去24時間、7日間、14日間、または30日間）、ワークロード、ステータス、およびユーザーでフィルタリングしたり、検索機能を使用してジョブを検索したり、ジョブテーブルをCSVファイルとしてダウンロードしたりできます。Trackerはいつでも更新できます。また、失敗した操作をすぐに再試行したり、失敗した操作のパラメータを編集して再度操作を試行したりすることもできます。</block>
+  <block id="9233b1148f18eb744b69d4d3620c296c" category="paragraph">Trackerは、運用状況に応じて2段階の監視レベルをサポートしています。ファイルシステム展開などの各タスクには、タスクの説明、ステータス、開始時刻、タスクの実行時間、ユーザー、リージョン、プロキシリソース、タスクID、および関連するすべてのサブタスクが表示されます。APIレスポンスを確認することで、操作中に何が起こったのかを理解できます。</block>
+  <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">トラッカーのタスクレベルと例</block>
+  <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">レベル1（タスク）：ファイルシステムの展開状況を追跡します。</block>
+  <block id="5517abda6821fee1e969e9d59498b33e" category="list-text">レベル2（サブタスク）：ファイルシステム展開に関連するサブタスクを追跡します。</block>
+  <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">動作状況</block>
+  <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">Trackerにおける操作ステータスは、_進行中_、_成功_、_失敗_の3つです。</block>
+  <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">動作周波数</block>
+  <block id="a9853b6069302c4152781f48222c3541" category="list-text">稼働頻度は、ジョブの種類とジョブスケジュールに基づいて決定されます。</block>
+  <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">イベント保持</block>
+  <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">イベントはユーザーインターフェースに30日間保持されます。</block>
+  <block id="e80eb219e8472681a001172074028f46" category="paragraph">Tracker を使用して NetApp Console での操作を追跡および監視します。</block>
+  <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">いずれかの方法でログインしてください<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>。</block>
+  <block id="90f9c44ed80c8f4c833d62a795593434" category="list-text">メニュー <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> を選択し、次に「管理」を選択します。</block>
+  <block id="31793001124176cff5a1e8aea00621a1" category="list-text">管理メニューから*Tracker*を選択します。</block>
+  <block id="2ba65fb298b74a9b72d949d4fe3479b3" category="list-text">Trackerでは、フィルターまたは検索を使用してジョブ結果を絞り込むことができます。また、ジョブレポートをダウンロードすることもできます。</block>
+  <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">APIリクエストを表示する</block>
+  <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">TrackerのタスクのAPIリクエストをCodeboxで確認できます。</block>
+  <block id="968877018213bf42962084001c210472" category="list-text">Trackerでタスクを選択します。</block>
+  <block id="bd56fc255ce900fc195c9bc0d7ed20c0" category="list-text">アクションメニューを選択し、次に「APIリクエストの表示」を選択します。</block>
+  <block id="1448fba076a066622a9f93a25ab170a2" category="section-title">失敗した操作を再試行する</block>
+  <block id="89f1070b2ef1ba678a8cb4823fa74cb2" category="paragraph">Trackerで失敗した操作を再試行します。失敗した操作のエラーメッセージをコピーすることもできます。</block>
+  <block id="2d7556f00012ad460e93441b51cce6ea" category="admonition">失敗した操作に対しては、x回までしか再試行できません。</block>
+  <block id="b866b632b7f32ded2a0a0907100641bf" category="list-text">Trackerで、失敗した操作を選択します。</block>
+  <block id="9d506eb8fb5e05c2467a690e5e727cd8" category="list-text">アクションメニューを選択し、次に*再試行*を選択してください。</block>
+  <block id="121145d60db2324903b129ae74d6c0a9" category="paragraph">操作が再開されました。</block>
+  <block id="bde5076ae2a993de9042a7e1dd4dc445" category="section-title">失敗した操作を編集して再試行する</block>
+  <block id="2ae5a8ae85adca2aebf16aa81130c9c5" category="paragraph">失敗した操作のパラメータを編集し、Tracker の外で操作を再試行してください。</block>
+  <block id="0270fd4391a6b334aa157faf0a6b7304" category="list-text">アクションメニューを選択し、次に*編集して再試行*を選択します。</block>
+  <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">操作ページにリダイレクトされますので、そこでパラメータを編集して操作を再試行できます。</block>
+  <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">操作が再開されました。Tracker にアクセスして、操作のステータスを確認してください。</block>
+  <block id="ddfa0843a8d65e78d4c6e602bca78098" category="summary">Tracker を使用して、FSx for ONTAP の認証情報、リンク操作を追跡し、NetApp Workload Factory for Storage でジョブの進捗状況を監視します。</block>
+  <block id="367e536ee2f4e237a6e344129f6d1033" category="doc">NetApp Workload Factory の Tracker で操作を監視する</block>
+  <block id="00ae0cd12340f0b4bbba6b466e757a65" category="sidebar">運用の監視</block>
 </blocks>
