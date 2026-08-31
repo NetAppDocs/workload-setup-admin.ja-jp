@@ -1677,4 +1677,7 @@
   <block id="ddfa0843a8d65e78d4c6e602bca78098" category="summary">Tracker を使用して、FSx for ONTAP の認証情報、リンク操作を追跡し、NetApp Workload Factory for Storage でジョブの進捗状況を監視します。</block>
   <block id="367e536ee2f4e237a6e344129f6d1033" category="doc">NetApp Workload Factory の Tracker で操作を監視する</block>
   <block id="00ae0cd12340f0b4bbba6b466e757a65" category="sidebar">運用の監視</block>
+  <block id="8d8c52a0c2cdf249c1bf6acdbd825469" category="doc">認証情報とリンクに関する新しいオンボーディング体験</block>
+  <block id="4f9abf683fceb68d04e55eccea1aef30" category="paragraph">Workload Factoryは、認証情報とリンクのオンボーディング体験を改善し、より簡単に利用を開始できるようにします。アカウントを作成してログインしたら、任意のワークロードタイル（例：*Storage*）で「*Get started*」を選択すると、次のページでセットアップ手順がステップごとに案内されます。</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
 </blocks>
