@@ -4,7 +4,7 @@ permalink: manage-custom-dashboards.html
 keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog 
 summary: Workload Factory のダッシュボードカタログにアクセスして、カスタムダッシュボードの表示、更新、削除を行います。 
 ---
-= カスタムダッシュボードを管理する
+= NetApp Workload Factoryでカスタムダッシュボードを管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

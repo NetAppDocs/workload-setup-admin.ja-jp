@@ -4,7 +4,7 @@ permalink: codebox-automation.html
 keywords: codebox, automation 
 summary: 'Codebox は、開発者と DevOps がNetApp Workload Factory でサポートされているあらゆる操作を実行するために必要なコードを生成するのに役立つ Infrastructure as Code (IaC) の副操縦士です。' 
 ---
-= コードボックス自動化の詳細
+= NetApp Workload FactoryのCodebox自動化について説明します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

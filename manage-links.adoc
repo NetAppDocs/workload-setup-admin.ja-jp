@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: manage-links.html 
+keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
+summary: NetApp Workload Factory では、アカウントに関連付けられたリンクの表示、リンク認証のパスワードの更新、およびリンクの削除を行うことができます。 
+---
+= NetApp Workload Factory のリンクを管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Workload Factoryアカウントに関連付けられているリンクを管理します。FSx for ONTAPファイルシステムに関連付けられたリンクを表示したり、リンク認証に使用するパスワードを指定したり、Workload Factoryコンソールからリンクを削除したりできます。
+
+link:links-overview.html["リンクの詳細"] または link:create-link.html["リンクを作成して関連付ける"]。
+
+
+
+[[view-the-links-associated-with-your-account]]
+== アカウントに関連付けられたリンクを表示する
+
+現在お客様のアカウントに関連付けられているリンクを表示できます。
+
+.手順
+. いずれかの方法でログインしてくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+. ストレージメニューから*Administration*を選択し、次に*Links*を選択します。
++
+既存のリンクは「リンク」ページに表示されます。
+
+. リンクに関連付けられている FSx for ONTAP ファイルシステムを表示するには、「関連リソース」セクションの「表示」ボタンを選択してください。
++
+image:screenshot-view-link-details.png["特定のリンクを使用している FSx for ONTAP ファイルシステムを示すスクリーンショット。"]
+
+. リンクの Amazon Resource Name（ARN）が必要な場合は、ARNフィールドの横にある「コピー」アイコンを選択してください。
+
+
+
+
+[[edit-a-link]]
+== リンクを編集する
+
+Workload Factory のインターフェースからリンクを編集することはできません。リンクを変更する必要がある場合は、新しいリンクを作成し、そのリンクをファイルシステムに関連付ける必要があります。
+
+
+NOTE: AWS コンソールを使用して Lambda ネットワーク構成（VPC、サブネット、セキュリティグループなど）を編集できます。変更はリンク管理 UI に反映されますが、これらの変更により Lambda と ONTAP 間の接続の問題が発生する可能性があるため、推奨されません。
+
+
+
+[[authenticate-a-link]]
+== リンクを認証する
+
+Workload Factory 認証情報用の管理者ユーザーパスワード、または AWS Secrets Manager シークレット ARN を指定して、リンクを FSx for ONTAP ファイルシステムに接続します。
+
+コンソールエージェントを使用する場合、AWS Secrets Managerはサポートされていません。
+
+
+NOTE: リンクごとにサポートされる認証方法は1つのみです。例えば、AWS Secrets Manager を使用したリンク認証を選択した場合、後から認証方法を変更することはできません。
+
+.手順
+. いずれかの方法でログインしてくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+. メニュー image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。"] を選択し、次に*Storage*を選択します。
+. ストレージメニューから、* FSx for ONTAP *を選択します。
+. *FSx for ONTAP* で、リンクを関連付けるファイルシステムのアクションメニューを選択し、*管理* を選択します。
+. ファイルシステムの概要画面で、*リンクを認証する*を選択します。
+. 「認証リンク」ページで、認証モードを選択します。
++
+** NetApp Workload Factory：パスワードを2回入力してください。
+** AWS Secrets Manager：シークレット ARN を入力してください。
+
+
+. * 適用 * を選択します。
+
+
+.結果
+リンクは認証済みで、高度なONTAP操作を実行できます
+
+
+
+[[update-the-password-for-link-authentication]]
+== リンク認証のパスワードを更新する
+
+管理者パスワードが無効な場合は、リンクをFSx for ONTAPファイルシステムに接続するためにパスワードを更新してください。
+
+.手順
+. いずれかの方法でログインしてくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+. メニュー image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。"] を選択し、次に*Storage*を選択します。
+. ストレージメニューから、* FSx for ONTAP *を選択します。
+. *FSx for ONTAP* で、リンクを関連付けるファイルシステムのアクションメニューを選択し、*管理* を選択します。
+. ファイルシステムの概要画面で、*パスワードの更新*を選択します。
+. 認証リンクページで、新しいパスワードを2回入力してください。
+. * 適用 * を選択します。
+
+
+.結果
+パスワードが更新され、リンクがFSx for ONTAPファイルシステムに接続されました。
+
+
+
+[[remove-a-link]]
+== リンクを削除する
+
+環境内で不要になったリンクは削除できます。リンクが削除されると、そのリンクを使用していた FSx for ONTAP ファイルシステムやその他のリソースは、特定の機能を使用できなくなります。
+
+リンクは Workload Factory からのみ削除され、AWS 環境からは削除されないことに注意してください。Workload Factory でリンクを削除した後、AWS アカウントから Lambda 関数を削除する必要があります。
+
+.手順
+. いずれかの方法でログインしてくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+. メニュー image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。"] を選択し、次に*Storage*を選択します。
+. ストレージメニューから*Administration*を選択し、次に*Links*を選択します。
++
+既存のリンクは「リンク」ページに表示されます。
+
+. リンクページから、削除するリンクのアクションメニューを選択し、*削除*を選択します。
++
+image:screenshot-remove-link.png["Workload Factory からリンクを削除する方法を示すスクリーンショット。"]
+
+. よろしければ、もう一度 *Remove* を選択してください。
+
+
+AWSドキュメントを参照してlink:https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function["Lambda関数を削除する"]。

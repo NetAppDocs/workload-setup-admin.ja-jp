@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: sign-up-saas.html 
+permalink: sign-up-and-log-in.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
 summary: Workload Factory には、Web ベースのコンソールからアクセスできます。  Workload Factory を使い始めるときの最初のステップは、既存のNetAppサポート サイトの認証情報を使用してサインアップするか、 NetAppクラウド ログインを作成することです。 
 ---
-= NetApp Workload Factory にサインアップ
+= NetApp Workload Factoryにサインアップしてログインする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -77,3 +77,43 @@ NetApp Consoleのドキュメントを参照してください。 link:https://d
 
 .結果
 招待されたユーザーには、Workload Factory アカウントに参加するための手順が記載されたメールが届きます。
+
+
+
+[[log-in-to-netapp-workload-factory]]
+== NetAppワークロードファクトリーにログイン
+
+NetApp Workload Factory にサインアップすると、Web ベースのコンソールからいつでもログインして、ワークロードと FSx for ONTAPファイル システムの管理を開始できます。
+
+次のいずれかのオプションを使用して、Workload Factory の Web ベース コンソールにログインできます。
+
+* 既存のNetApp Support Site （NSS）のクレデンシャルを必要に応じて変更
+* Eメールアドレスとパスワードを使用したネットアップクラウドへのログイン
+
+
+.手順
+. ウェブブラウザを開いて、 https://console.workloads.netapp.com["ワークロードファクトリーコンソール"^] 。
+. [ログイン*]ページで、ログインに関連付けられている電子メールアドレスを入力します。
+. ログインに関連付けられている認証方法に応じて、クレデンシャルの入力を求められます。
++
+** ネットアップクラウドクレデンシャル：パスワードを入力します
+** フェデレーテッドユーザ：フェデレーテッドアイデンティティクレデンシャルを入力します
+** NetApp Support Site アカウント：NetApp Support Site クレデンシャルを入力します
+
+
+. [ログイン]*を選択します。
++
+過去に正常にログインしたことがある場合は、Workload Factory のホームページが表示され、デフォルトのアカウントを使用することになります。
+
++
+初めてログインする場合は、*アカウント*ページが表示されます。
+
++
+** 1つのアカウントのメンバーである場合は、*続行*を選択します。
+** 複数のアカウントのメンバーである場合は、アカウントを選択して*続行*を選択します。
+
+
+
+
+.結果
+これでログインし、Workload Factory を使用して FSx for ONTAPファイルシステムとワークロードを管理できるようになりました。

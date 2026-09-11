@@ -4,7 +4,7 @@ permalink: create-custom-dashboard.html
 keywords: create dashboard, custom dashboard, AI dashboard, dashboard creation, personalized dashboard 
 summary: AIガイドプロンプトを使用してカスタムダッシュボードを作成し、ワークロードや運用上の優先事項にとって最も重要な事項を監視できます。 
 ---
-= カスタムダッシュボードを作成する
+= NetApp Workload Factoryでカスタムダッシュボードを作成する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

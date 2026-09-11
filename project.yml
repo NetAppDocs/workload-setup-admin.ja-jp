@@ -30,7 +30,7 @@ sidebar:
         url: "/permissions-reference.html"
     - title: クイックスタート
       url: "/quick-start.html"
-    - title: ワークロードファクトリーにサインアップ
+    - title: Workload Factoryにサインアップしてログインする
       url: "/sign-up-saas.html"
     - title: AWSクレデンシャルを追加
       url: "/add-credentials.html"
@@ -38,8 +38,14 @@ sidebar:
       url: "/whats-next.html"
   - title: ワークロードファクトリーの管理
     entries:
-    - title: ワークロードファクトリーにログイン
-      url: "/log-in.html"
+    - title: リンク
+      entries:
+      - title: リンクについて
+        url: "/links-overview.html"
+      - title: リンクを使用してファイルシステムに接続する
+        url: "/create-link.html"
+      - title: リンクを管理する
+        url: "/manage-links.html"
     - title: サービスアカウントの管理
       url: "/manage-service-accounts.html"
     - title: 適切に設計されたワークロードを構築および運用する

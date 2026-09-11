@@ -1,0 +1,317 @@
+---
+sidebar: sidebar 
+permalink: create-link.html 
+keywords: connect, connection, link, lambda link, associate link, create link, authenticate link 
+summary: NetApp Workload Factory アカウントと1つ以上のFSx for ONTAPファイルシステム間の信頼関係と接続性を提供するリンクを作成および管理できます。 
+---
+= Lambda リンクを使用して FSx for ONTAP ファイルシステムに接続する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+高度な ONTAP 管理操作を実行するには、Workload Factory アカウントと 1 つ以上の FSx for ONTAP ファイルシステムの間に接続を設定します。これには、新規および既存の Lambda リンクの関連付けと、リンクの認証が含まれます。リンクの関連付けにより、Amazon FSx for ONTAP API では利用できない特定の機能を、FSx for ONTAP ファイルシステムから直接監視および管理できます。
+
+link:links-overview.html["リンクの詳細"]。
+
+.タスクの内容
+リンクはAWS Lambdaを使用して、イベントに応じてコードを実行し、そのコードに必要なコンピューティングリソースを自動的に管理します。お客様が作成するリンクはお客様のNetAppアカウントの一部であり、AWSアカウントに関連付けられています。
+
+FSx for ONTAP ファイルシステムを定義する際に、アカウントにリンクを作成できます。そのファイルシステムにリンクを使用でき、他の FSx for ONTAP ファイルシステムにも使用できます。後からファイルシステムへのリンクを関連付けることもできます。
+
+リンクには認証が必要です。Workload Factoryの認証情報サービスに保存されている認証情報、またはAWS Secrets Managerに保存されている認証情報を使用して、リンクを認証できます。リンクごとにサポートされる認証方法は1つのみです。例えば、AWS Secrets Manager を使用したリンク認証を選択した場合、後から認証方法を変更することはできません。
+
+
+NOTE: コンソールエージェントを使用する場合、AWS Secrets Managerはサポートされていません。
+
+
+
+[[associate-a-new-link]]
+== 新しいリンクを関連付ける
+
+新しいリンクを関連付けるには、リンクの作成と関連付けが必要です。
+
+このワークフローでリンクを作成するには、自動作成と手動作成の2つの方法があります。AWS GovCloud アカウントをお持ちの場合は、手動で新しいリンクを作成する必要があります。
+
+* 自動的に：Workload Factory を介して自動登録されたリンクを作成します。自動的に作成されたリンクには、Workload Factory 自動化用のトークンが必要であり、CloudFormation コードの有効期間は短期間です。最大6時間までしか使用できません。
+* 手動：CodeboxからCloudFormationまたはTerraformのいずれかを使用して、手動登録によるリンクを作成します。コードは保持されるため、操作を完了するまでの時間を十分に確保できます。これは、リンク作成の完了に必要な権限を最初に付与する必要があるセキュリティチームやDevOpsチームなど、別のチームと連携して作業する場合に便利です。
+
+
+.開始する前に
+* どのリンク作成オプションを使用するかを検討する必要があります。
+* Workload Factory に少なくとも 1 つの FSx for ONTAP ファイルシステムが必要です。FSx for ONTAP ファイルシステムを検出するには、FSx for ONTAP インスタンスへの権限を持つ AWS アカウントと、ストレージ管理の _view、planning、および analysis_ 権限を持つlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["Workload Factoryに認証情報を追加する"^]が必要です。
+* リンク接続のために、FSx for ONTAPファイルシステムに関連付けられたセキュリティグループで次のポートが開いている必要があります。
++
+** Workload Factory コンソールの場合：ポート 443（HTTPS）
+** CloudShell およびFSx for ONTAP緊急管理システム（EMS）イベント分析の場合：ポート22（SSH）
+
+
+* リンクは次のエンドポイントに接続できる必要があります：\https://api.workloads.netapp.com。Webベースのコンソールはこのエンドポイントに接続してWorkload Factory APIとやり取りし、FSx for ONTAPワークロードを管理および操作します。
+* CloudFormation スタックを使用してリンクを追加する場合、AWS アカウントで次の権限が必要です：
++
+[%collapsible]
+====
+[source, json]
+----
+[
+  "cloudformation:GetTemplateSummary",
+  "cloudformation:CreateStack",
+  "cloudformation:DescribeStacks",
+  "cloudformation:ListStacks",
+  "cloudformation:DescribeStackEvents",
+  "cloudformation:ListStackResources",
+  "ec2:DescribeSubnets",
+  "ec2:DescribeSecurityGroups",
+  "ec2:DescribeVpcs",
+  "iam:ListRoles",
+  "iam:GetRolePolicy",
+  "iam:GetRole",
+  "iam:DeleteRolePolicy",
+  "iam:CreateRole",
+  "iam:DetachRolePolicy",
+  "iam:PutRolePolicy",
+  "iam:DeleteRole",
+  "iam:AttachRolePolicy",
+  "lambda:InvokeFunction",
+  "lambda:GetFunction",
+  "lambda:CreateFunction",
+  "lambda:DeleteFunction",
+  "iam:PassRole",
+  "lambda:TagResource",
+  "ecr:BatchGetImage",
+  "ecr:GetDownloadUrlForLayer",
+  "lambda:AddPermission",
+  "lambda:RemovePermission",
+  "cloudformation:DeleteStack",
+  "kms:CreateGrant",
+  "kms:GenerateDataKey"
+]
+----
+====
+
+
+[role="tabbed-block"]
+====
+.自動的に作成
+--
+CloudFormationを使用して、Workload Factory内でリンクを自動的に作成および登録します。
+
+
+NOTE: AWS GovCloud アカウントでは、自動リンク作成はサポートされていません。
+
+.手順
+. いずれかの方法でログインしてくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+. メニュー image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。"] を選択し、次に「管理」を選択します。
+. 管理メニューから「リンク」を選択します。
+. リンクページで、「作成して関連付ける」を選択します。
+. 「リンクの関連付け」ダイアログで、リンクに関連付けるファイルシステムを選択し、*続行*を選択します。
+. 「新しいリンクを作成」を選択し、次に「続行」を選択します。
+. 「リンクを作成」ページで、*「自動的に作成」*を選択し、以下の情報を入力してください：
++
+.. *リンク名*：このリンクに使用する名前を入力してください。アカウント内で名前は一意である必要があります。
+.. *AWS Secrets Manager*：オプション。Workload Factory が AWS Secrets Manager から FSx for ONTAP のアクセス認証情報を取得できるようにします。
++
+リンクデプロイメントスタックは、Lambda権限ポリシーに以下のデフォルトのシークレットマネージャーARN正規表現を自動的に追加します： `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`
+
++
+デフォルトのアクセス許可に合わせてシークレットを作成するか、リンクポリシーに独自のアクセス許可を割り当てることができます。
+
++
+「VPC プライベートエンドポイントを AWS Secrets Manager に設定する」は、デフォルトでは無効になっています。このオプションを選択すると、シークレットはローカルに保存されるのではなく、VPC プライベートエンドポイントを使用して保存されます。
+
+.. *リンク権限*：リンク権限については、以下のオプションからいずれかを選択してください。
++
+*** *自動*：このオプションを選択すると、AWS CloudFormation コードが Lambda のアクセス許可ポリシーと実行ロールを自動的に作成します。
+*** *ユーザー指定の実行ロール*: このオプションを選択すると、指定した Lambda 実行ロールとその関連付けられたポリシーが Lambda リンクに割り当てられます。Lambda のアクセス許可ポリシーには、以下のアクセス許可が必要です。 `secretsmanager:GetSecretValue`のアクセス許可は、AWS Secrets Manager を有効にしている場合にのみ必要です。
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses",
+----
++
+テキストボックスにLambda実行ロールのARNを入力してください。
+
+
+
+.. *タグ*：必要に応じて、このリンクに関連付けるタグを追加してください。これにより、リソースをより簡単に分類できます。たとえば、このリンクが Amazon FSx for ONTAP ファイルシステムで使用されていることを示すタグを追加できます。
++
+Workload Factory は、FSx for ONTAP ファイルシステムに基づいて AWS アカウント、場所、およびセキュリティグループを自動的に取得します。
+
+
+
+. 「作成」を選択します。
++
+CloudFormationへのリダイレクトダイアログが表示され、AWS CloudFormationサービスからリンクを作成する方法が説明されます。
+
+. 「続行」を選択してAWS管理コンソールを開き、このFSx for ONTAPファイルシステムのAWSアカウントにログインします。
+. [Quick create stack]ページの[Capabilities]で、*[I acknowledge that AWS CloudFormation might create IAM resources]*を選択します。
++
+CloudFormation テンプレートは、起動時に Lambda に3つの権限を付与します。Workload Factory は、リンクを使用する際にこれらの権限を使用します。
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
+. 「スタックを作成」を選択し、次に「続行」を選択します。
++
+リンク作成状況はイベントページで確認できます。所要時間は5分以内です。
+
+. Workload Factory インターフェースに戻ると、リンクが FSx for ONTAP ファイルシステムに関連付けられていることがわかります。
+
+
+--
+.手動で作成
+--
+Codebox の 2 つの Infrastructure-as-Code（IaC）ツールを使用してリンクを作成できます：CloudFormation または Terraform。このオプションを使用すると、AWS CloudFormation からリンクの ARN を抽出し、ここで報告します。Workload Factory がリンクを手動で登録します。
+
+.手順
+. いずれかの方法でログインしてくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+. メニュー image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。"] を選択し、次に「管理」を選択します。
+. 管理メニューから「リンク」を選択します。
+. リンクページで、「作成して関連付ける」を選択します。
+. 「リンクの関連付け」ダイアログで、リンクに関連付けるファイルシステムを選択し、*続行*を選択します。
+. 「新しいリンクを作成」を選択し、次に「続行」を選択します。
+. リンク作成ページで「手動で作成」を選択し、CodeboxからCloudFormationまたはTerraformを選択します。
+. 「詳細情報と認証情報」欄に、以下の情報を入力してください。
++
+.. *リンク名*：このリンクに使用する名前を入力してください。アカウント内で名前は一意である必要があります。
+.. *AWS Secrets Manager*：GovCloud アカウントでは常に有効です。他のアカウントでは任意です。Workload Factory が AWS Secrets Manager から FSx for ONTAP のアクセス認証情報を取得できるようにします。
++
+デフォルトのアクセス許可に合わせてシークレットを作成するか、リンクポリシーに独自のアクセス許可を割り当てることができます。
+
++
+「VPC プライベートエンドポイントを AWS Secrets Manager に設定する」は、デフォルトでは無効になっています。このオプションを選択すると、シークレットはローカルに保存されるのではなく、VPC プライベートエンドポイントを使用して保存されます。
+
+.. *リンク権限*：リンク権限については、以下のオプションからいずれかを選択してください。
++
+*** *自動*：このオプションを選択すると、AWS CloudFormation コードが Lambda のアクセス許可ポリシーと実行ロールを自動的に作成します。
+*** *ユーザー指定*: このオプションを選択すると、指定した Lambda 実行ロールとその関連付けられたポリシーが Lambda リンクに割り当てられます。Lambda のアクセス許可ポリシーには、以下のアクセス許可が必要です。 `secretsmanager:GetSecretValue`のアクセス許可は、AWS Secrets Manager を使用する場合にのみ必要です。
++
+[source, json]
+----
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses"
+----
++
+テキストボックスにLambda実行ロールのARNを入力してください。
+
+
+
+.. *タグ*：必要に応じて、このリンクに関連付けるタグを追加してください。これにより、リソースをより簡単に分類できます。たとえば、このリンクが Amazon FSx for ONTAP ファイルシステムで使用されていることを示すタグを追加できます。
+.. *リンク登録*：リンクの登録方法については、CloudFormation または Terraform を選択して、手順に従ってください。
++
+CloudFormation テンプレートは、起動時に Lambda に3つの権限を付与します。Workload Factory は、リンクを使用する際にこれらの権限を使用します。
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
++
+... スタックの作成に成功したら、Workload Factory コンソールのテキストボックスに Lambda ARN を貼り付けてください。Workload Factory は、FSx for ONTAP ファイルシステムに基づいて AWS アカウント、場所、およびセキュリティグループを自動的に取得します。
+... 「作成」を選択します。
++
+リンク作成状況はイベントページで確認できます。所要時間は5分以内です。
+
+
+
+
+
+
+
+--
+====
+.結果
+Workload Factory は、リンクを FSx for ONTAP ファイルシステムに関連付けます。高度な ONTAP 操作を実行できます。
+
+
+
+[[associate-an-existing-link-with-an-fsx-for-ontap-file-system]]
+== 既存のリンクをFSx for ONTAPファイルシステムに関連付ける
+
+リンクを作成したら、1 つ以上の FSx for ONTAP ファイルシステムに関連付けます。
+
+.手順
+. いずれかの方法でログインしてくださいlink:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["コンソールエクスペリエンス"^]。
+. メニュー image:workloads-menu-icon.png["ハンバーガー メニュー アイコンは、storage、eda、ai、databases、vmware、administration などのワークロードに移動するために使用されます。"] を選択し、次に*Storage*を選択します。
+. ストレージメニューから、* FSx for ONTAP *を選択します。
+. *FSx for ONTAP* で、リンクを関連付けるファイルシステムのアクションメニューを選択し、*リンクを関連付ける* を選択します。
+. 「リンクを関連付ける」ページで、「既存のリンクを関連付ける」を選択し、リンクを選択して、「続行」を選択します。
+. 認証モードを選択します。
++
+** NetApp Workload Factory：パスワードを2回入力してください。
+** AWS Secrets Manager：シークレット ARN を入力してください。
++
+シークレット ARN に以下のキーと値のペアが含まれていることを確認してください。ただし、_filesystemID_ は省略可能です。
+
++
+*** filesystemID = FSx_filesystem_id (オプション)
+*** ユーザー = FSx_user
+*** password = user_password
++
+
+NOTE: AWS Secrets Manager での認証にはユーザーが必要です。これは、指定した _FSx_user_ または FSx for ONTAP ファイルシステム上に作成された別のユーザーのいずれかです。ユーザーを指定しない場合、デフォルトユーザーは `fsxadmin`です。
+
+
+
+
+
+. * 適用 * を選択します。
+
+
+.結果
+このリンクは、FSx for ONTAPファイルシステムに関連付けられています。高度なONTAP操作を実行できます。
+
+.関連情報
+link:links-overview.html#when-a-link-is-required["リンクの詳細"]。
+
+
+
+[[troubleshoot-issues-with-aws-secrets-manager-link-authentication]]
+== AWS Secrets Managerのリンク認証に関する問題のトラブルシューティング
+
+問題:: このリンクには、秘密情報を取得するための権限がありません。
++
+--
+*解決策*：リンクが有効になった後に権限を追加します。AWS コンソールにログインし、Lambda リンクを見つけて、添付されているアクセス許可ポリシーを編集します。
+
+--
+問題:: シークレットが見つかりません。
++
+--
+*解決策*：正しいシークレット ARN を指定してください。
+
+--
+問題:: シークレットの形式が正しくありません。
++
+--
+*解決策*：AWS Secrets Manager にアクセスしてフォーマットを編集してください。
+
+シークレットには、以下のキーと値のペアが含まれている必要があります：
+
+* filesystemID = FSx_filesystem_id
+* username = FSx_user
+* password = user_password
+
+
+--
+問題:: シークレットには、ファイルシステム認証のための有効な ONTAP 認証情報が含まれていません。
++
+--
+*解決策*：AWS Secrets Manager で ONTAP ファイルシステム用の FSx を認証できる資格情報を指定してください。
+
+--
+

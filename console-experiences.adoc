@@ -4,7 +4,7 @@ permalink: console-experiences.html
 keywords: console, consoles, access, saas, Workload Factory, NetApp Workload Factory, NetApp Console 
 summary: NetApp Workload Factory には、2 つの Web ベースのコンソールからアクセスできます。 
 ---
-= コンソールエクスペリエンス
+= NetApp Workload Factory のコンソールエクスペリエンス
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

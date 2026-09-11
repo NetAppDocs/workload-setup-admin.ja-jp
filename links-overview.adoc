@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: links-overview.html 
+keywords: links, accounts, lambda 
+summary: Workload Factory リンクは、Workload Factory アカウントと 1 つ以上の FSx for ONTAP ファイルシステムの間に信頼関係と接続を確立します。 
+---
+= NetApp Workload Factory のリンクについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Workload Factoryリンクは、Workload Factoryアカウントと1つ以上のFSx for ONTAPファイルシステムとの間に信頼関係と接続性を確立します。これにより、Amazon FSx for ONTAP APIからは利用できない、ONTAP REST API呼び出しから直接提供される特定のファイルシステム機能を監視および管理できるようになります。
+
+Workload Factory の使用を開始するためにリンクは必要ありませんが、場合によっては、Workload Factory のすべての機能とワークロード機能のロックを解除するためにリンクを作成する必要があります。
+
+
+
+[[why-links-are-beneficial]]
+== リンクが有益な理由
+
+リンクは、NetApp Workload Factory が Amazon FSx for ONTAP API ではネイティブに利用できない操作を実行できるようにするため有益です。リンクは高度な ONTAP 機能と自動化を有効にし、FSx for ONTAP ファイルシステムの管理を強化します。
+
+リンクを使用するメリットをいくつかご紹介します：
+
+* このリンクにより、NetApp Console が ONTAP コマンドを FSx for ONTAP ファイルシステムに直接送信できるようになり、AWS がネイティブに提供する機能を超える高度な ONTAP 機能を利用できます。
+* リンクはAWS Lambdaを活用して、イベントに応じてコードを実行します。このサーバーレス方式では、VPC内でインスタンスを実行する必要性がなくなります。
+
+
+
+
+[[how-links-work]]
+== リンクの仕組み
+
+リンクはAWS Lambdaを活用しています。Lambdaはイベントに応じてコードを実行し、そのコードに必要なコンピューティングリソースを自動的に管理します。お客様が作成するリンクはお客様のNetAppアカウントの一部であり、AWSアカウントに関連付けられています。
+
+リンクを作成した後、1つまたは複数のFSx for ONTAPファイルシステムに関連付けることができます。各ファイルシステムは、同じNetAppアカウント内の1つのリンクにのみ関連付けることができます。複数のNetAppアカウントをお持ちの場合、単一のファイルシステムを異なるNetAppアカウントの追加のリンクに関連付けることができます。
+
+Workload Factory のストレージワークロードからリンクを作成し、関連付けます。
+
+Workload Factoryの認証情報サービスに保存されている認証情報、またはAWS Secrets Managerに保存されている認証情報を使用して、リンクを認証できます。Workload Factoryは認証モードの変更をサポートしていません。
+
+GovCloudアカウントのリンク接続がサポートされています。Workload FactoryはGovCloud認証キーを使用し、GovCloud承認済みのメカニズムを通じて、ONTAP操作のためのFSxへの安全なエージェントレスアクセスを実現します。
+
+
+
+[[costs]]
+== 費用
+
+Lambda が実行する各トランザクションには料金が発生します。Lambda は 2 つのシステム間のプロキシとして機能するため、Lambda がファイルシステム上の ONTAP REST API にリクエストを送信するときと、Workload Factory に応答を返すときに料金が発生します。
+
+link:https://aws.amazon.com/lambda/pricing/["AWS Lambdaの使用に関連するコストについて詳しくはこちらをご覧ください。"^]
+
+
+
+[[when-a-link-is-required]]
+== リンクが必要な場合
+
+Workload Factoryは、一部の情報を表示したり、一部のタスクを実行したりするためにリンクを必要とします。リンクを必要とする操作を実行しようとした際に、FSx for ONTAPファイルシステムにリンクを関連付けていない場合、Workload Factoryは操作にリンクが必要であることを通知します。
+
+リンクが必要な機能は以下のとおりです：
+
+* 予防保全、信頼性、およびコストパフォーマンス最適化のための FSx for ONTAP ファイルシステム構成のウェルアーキテクチャ状態
+* ONTAP EMS イベントの監視とアラート
+* NetApp Autonomous Ransomware Protection（ARP/AI）
+* FSx for ONTAP ファイルシステム全体にわたる包括的な容量監視機能の強化
+* ボリュームとStorage VMのデータレプリケーション、管理、および監視
+* SMB/CIFS共有およびNFSエクスポートポリシーのプロビジョニングと管理
+* FSx for ONTAP ファイルシステム上の iSCSI ボリュームの管理
+* カスタム保護SLAのためのスナップショットポリシーの作成と管理
+* 自動容量管理のためのinode管理機能強化
+* 柔軟なスケーリングのためのボリュームの自動拡張
+* クローン作成と管理により、即座にその場でデータクローンを作成できます。
+* ONTAPバージョンなどのONTAPから直接取得した追加メトリクスの表示
+* ストレージVMとクラスタLIFの詳細（ロール、エンドポイント、ノード、IPアドレス、ステータスなど）の表示
+
+
+link:create-link.html["FSx for ONTAPファイルシステムへのリンクを接続する"]の方法を確認してください。

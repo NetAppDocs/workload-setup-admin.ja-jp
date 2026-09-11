@@ -4,7 +4,7 @@ permalink: learn-custom-dashboards.html
 keywords: custom dashboards, dashboards, personalized dashboards, AI dashboards, operational visibility, workload monitoring 
 summary: あらかじめ定義されたビューに縛られることなく、ワークロードと優先順位に合わせてカスタマイズされたAI搭載ダッシュボードを作成し、運用の可視性を向上させることができます。 
 ---
-= カスタムダッシュボードについて
+= NetApp Workload Factory のカスタムダッシュボードについて学ぶ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

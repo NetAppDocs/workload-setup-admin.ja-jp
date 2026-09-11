@@ -15,65 +15,6 @@ NetApp Workload Factory通知サービスを設定して、NetApp Consoleでア�
 
 
 
-[[notification-types-and-messages]]
-== 通知の種類とメッセージ
-
-Workload Factory は次のイベントの通知を送信します。
-
-[cols="6*"]
-|===
-| イベント | 製品説明 | 通知のタイプ | 重大度 | ワークロード | リソースタイプ 
-
-
-| アカウント内の一部のデータベースインスタンスは適切に設計されていません | アカウント内のすべての Microsoft SQL Server インスタンスは、well-architected の問題について分析されています。このイベントの説明には、適切に設計されたインスタンスと最適化されていないインスタンスの数が表示されます。  Workload Factory コンソールから、データベース インベントリ内の well-architected ステータスの調査結果と推奨事項を確認します。 | 優れた設計 | 推奨事項 | データベース | Microsoft SQL Serverインスタンス 
-
-
-| Microsoft SQL Server/PostgreSQL サーバーの展開に成功しました | Microsoft SQL Server または PostgreSQL ホストのデプロイに成功しました。詳細については、ジョブ監視を参照してください。 | 導入 | 成功 | データベース | FSx for ONTAP、DBホスト 
-
-
-| Microsoft SQL Server/PostgreSQL サーバーの展開に失敗しました | Microsoft SQL Server または PostgreSQL ホストのデプロイに失敗しました。詳細については、ジョブ監視を参照してください。 | 導入 | エラー | データベース | FSx for ONTAP、DBホスト 
-
-
-| レプリケーション関係の作成に失敗しました | SnapMirrorレプリケーション関係の作成に失敗しました。詳細については、Tracker をご覧ください。 | レプリケーション | 致命的 | 一般的な保管 | ONTAP向け FSx 
-
-
-| FSx for ONTAP の作成失敗 | FSx for ONTAPファイル システムの作成プロセスが失敗しました。詳細については、Tracker をご覧ください。 | FSx for ONTAPファイルシステムアクション | 致命的 | 一般的な保管 | ONTAP向け FSx 
-
-
-| 自動SSD容量またはinodeにより成功率が向上する | 最近の自動容量管理更新中に、FSx for ONTAPファイル システムによって SSD 容量またはボリューム inode のいずれかが正常に増加しました。詳細については、Tracker をご覧ください。 | 容量管理 | 成功 | 一般的な保管 | FSx for ONTAPファイル 
-
-
-| 自動SSD容量またはinodeの障害増加 | 最近の自動容量管理更新中に、FSx for ONTAPファイル システムは SSD 容量またはボリューム inode を増やすことができませんでした。詳細については、Tracker をご覧ください。 | 容量管理 | 致命的 | 一般的な保管 | ONTAPファイルシステム用の FSx 
-
-
-| FSx for ONTAP の問題が検出されました | すべての FSx for ONTAPファイル システムについて、well-architected の問題について分析されています。スキャンにより 1 つ以上の問題が検出されました。詳細については、Workload Factory コンソールのストレージ ダッシュボードの well-architected 分析を確認してください。 | 適切に設計された分析 | 推奨事項 | 一般的な保管 | ONTAPファイルシステム用の FSx 
-
-
-| FSx for ONTAPの自動容量管理イベント | FSx for ONTAPファイル システムの SSD パフォーマンス層が、警告しきい値の容量/パーセンテージ合計に達しました。 | 容量管理 | 警告 | 一般的な保管 | ONTAPファイルシステム用の FSx 
-
-
-| FSx for ONTAPの自動 inode 管理イベント | FSx for ONTAPボリュームの inode 数が、警告しきい値の数/パーセンテージの合計に達しました。 | 容量管理 | 警告 | 一般的な保管 | ONTAPファイルシステム用の FSx 
-
-
-| FSx for ONTAPファイルシステムで疑わしいボリュームアクティビティが検出されました | NetApp Autonomous Ransomware Protection with AI（ARP/AI）が、不審なボリュームアクティビティを検出しました。 | ランサムウェア対策 | 致命的 | 一般的な保管 | ONTAPファイルシステム用の FSx 
-
-
-| レイテンシしきい値超過が検出されました | FSx for ONTAP クラスターの 1 つ以上のボリュームがレイテンシしきい値を超えました。 | パフォーマンス監視 | 警告 | EDA | ONTAPファイルシステム用の FSx 
-
-
-| 月次コストレポート | お客様のアカウントの月間コスト概要。支出傾向、異常な変動、FSx for ONTAP ファイルシステムの最適な節約機会が表示されます。 | コストレポート | 推奨事項 | 一般的な保管 | ONTAPファイルシステム用の FSx 
-
-
-| レプリケーション遅延 | レプリケーションに予想以上に時間がかかっています。 | レプリケーション | 致命的 | 一般的な保管 | ONTAPファイルシステム用の FSx 
-
-
-| カスタムダッシュボードの作成に成功しました | カスタムダッシュボードが正常に作成され、表示できるようになりました。 | カスタムダッシュボード | 成功 | 一般的な保管 | Workload Factory アカウント 
-
-
-| カスタムダッシュボードの作成に失敗しました | Workload Factory は、お客様のカスタムダッシュボードを作成できませんでした。ダッシュボードをもう一度作成してみてください。 | カスタムダッシュボード | エラー | 一般的な保管 | Workload Factory アカウント 
-|===
-
-
 [[configure-workload-factory-notifications]]
 == ワークロードファクトリーの通知を構成する
 
@@ -251,3 +192,63 @@ Amazon SNS 通知は、次の基準でフィルタリングできます。
 NetApp Consoleの通知設定を使用して、コンソールで受信する通知を重大度レベル（Critical、Info、Warningなど）でフィルタリングできます。
 
 コンソールでの通知のフィルタリングの詳細については、 https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#filter-notifications["NetAppコンソールのドキュメント"^] 。
+
+
+
+[[notification-types-and-messages]]
+== 通知の種類とメッセージ
+
+Workload Factory は次のイベントの通知を送信します。
+
+[cols="6*"]
+|===
+| イベント | 製品説明 | 通知のタイプ | 重大度 | ワークロード | リソースタイプ 
+
+
+| アカウント内の一部のデータベースインスタンスは適切に設計されていません | アカウント内のすべての Microsoft SQL Server インスタンスは、well-architected の問題について分析されています。このイベントの説明には、適切に設計されたインスタンスと最適化されていないインスタンスの数が表示されます。  Workload Factory コンソールから、データベース インベントリ内の well-architected ステータスの調査結果と推奨事項を確認します。 | 優れた設計 | 推奨事項 | データベース | Microsoft SQL Serverインスタンス 
+
+
+| Microsoft SQL Server/PostgreSQL サーバーの展開に成功しました | Microsoft SQL Server または PostgreSQL ホストのデプロイに成功しました。詳細については、ジョブ監視を参照してください。 | 導入 | 成功 | データベース | FSx for ONTAP、DBホスト 
+
+
+| Microsoft SQL Server/PostgreSQL サーバーの展開に失敗しました | Microsoft SQL Server または PostgreSQL ホストのデプロイに失敗しました。詳細については、ジョブ監視を参照してください。 | 導入 | エラー | データベース | FSx for ONTAP、DBホスト 
+
+
+| レプリケーション関係の作成に失敗しました | SnapMirrorレプリケーション関係の作成に失敗しました。詳細については、Tracker をご覧ください。 | レプリケーション | 致命的 | 一般的な保管 | ONTAP向け FSx 
+
+
+| FSx for ONTAP の作成失敗 | FSx for ONTAPファイル システムの作成プロセスが失敗しました。詳細については、Tracker をご覧ください。 | FSx for ONTAPファイルシステムアクション | 致命的 | 一般的な保管 | ONTAP向け FSx 
+
+
+| 自動SSD容量またはinodeにより成功率が向上する | 最近の自動容量管理更新中に、FSx for ONTAPファイル システムによって SSD 容量またはボリューム inode のいずれかが正常に増加しました。詳細については、Tracker をご覧ください。 | 容量管理 | 成功 | 一般的な保管 | FSx for ONTAPファイル 
+
+
+| 自動SSD容量またはinodeの障害増加 | 最近の自動容量管理更新中に、FSx for ONTAPファイル システムは SSD 容量またはボリューム inode を増やすことができませんでした。詳細については、Tracker をご覧ください。 | 容量管理 | 致命的 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| FSx for ONTAP の問題が検出されました | すべての FSx for ONTAPファイル システムについて、well-architected の問題について分析されています。スキャンにより 1 つ以上の問題が検出されました。詳細については、Workload Factory コンソールのストレージ ダッシュボードの well-architected 分析を確認してください。 | 適切に設計された分析 | 推奨事項 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| FSx for ONTAPの自動容量管理イベント | FSx for ONTAPファイル システムの SSD パフォーマンス層が、警告しきい値の容量/パーセンテージ合計に達しました。 | 容量管理 | 警告 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| FSx for ONTAPの自動 inode 管理イベント | FSx for ONTAPボリュームの inode 数が、警告しきい値の数/パーセンテージの合計に達しました。 | 容量管理 | 警告 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| FSx for ONTAPファイルシステムで疑わしいボリュームアクティビティが検出されました | NetApp Autonomous Ransomware Protection with AI（ARP/AI）が、不審なボリュームアクティビティを検出しました。 | ランサムウェア対策 | 致命的 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| レイテンシしきい値超過が検出されました | FSx for ONTAP クラスターの 1 つ以上のボリュームがレイテンシしきい値を超えました。 | パフォーマンス監視 | 警告 | EDA | ONTAPファイルシステム用の FSx 
+
+
+| 月次コストレポート | お客様のアカウントの月間コスト概要。支出傾向、異常な変動、FSx for ONTAP ファイルシステムの最適な節約機会が表示されます。 | コストレポート | 推奨事項 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| レプリケーション遅延 | レプリケーションに予想以上に時間がかかっています。 | レプリケーション | 致命的 | 一般的な保管 | ONTAPファイルシステム用の FSx 
+
+
+| カスタムダッシュボードの作成に成功しました | カスタムダッシュボードが正常に作成され、表示できるようになりました。 | カスタムダッシュボード | 成功 | 一般的な保管 | Workload Factory アカウント 
+
+
+| カスタムダッシュボードの作成に失敗しました | Workload Factory は、お客様のカスタムダッシュボードを作成できませんでした。ダッシュボードをもう一度作成してみてください。 | カスタムダッシュボード | エラー | 一般的な保管 | Workload Factory アカウント 
+|===
