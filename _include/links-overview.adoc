@@ -67,4 +67,11 @@ Workload Factoryは、一部の情報を表示したり、一部のタスクを�
 * ストレージVMとクラスタLIFの詳細（ロール、エンドポイント、ノード、IPアドレス、ステータスなど）の表示
 
 
-link:create-link.html["FSx for ONTAPファイルシステムへのリンクを接続する"]の方法を確認してください。
+
+
+[[related-information]]
+== 関連情報
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["FSx for ONTAPファイルシステムへのリンクを接続する"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/manage-links.html["リンクを管理する"]
+
