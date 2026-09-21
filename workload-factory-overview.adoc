@@ -169,7 +169,7 @@ NetApp Workload Factory は次のツールで使用できます。
 * *CloudShell CLI*: Workload Factory には、単一のブラウザベースの CLI からアカウント全体の AWS およびNetApp環境を管理および操作するための CloudShell CLI が含まれています。Workload Factory コンソールの上部バーから CloudShell にアクセスします。
 * *REST API*: Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理します。
 * *CloudFormation*: AWS CloudFormation コードを使用して、Workload Factory コンソールで定義したアクションを実行し、AWS アカウントの CloudFormation スタックから AWS およびサードパーティのリソースをモデル化、プロビジョニング、管理します。
-* *Terraform NetApp Workload Factory プロバイダー*: Terraform を使用して、Workload Factory コンソールで生成されたインフラストラクチャ ワークフローを構築および管理します。
+* *NetApp Terraformプロバイダー*：Terraformを使用して、Workload Factoryコンソールで生成されたインフラストラクチャワークフローを構築および管理します。
 
 
 

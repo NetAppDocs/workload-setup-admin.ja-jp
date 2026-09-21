@@ -1022,7 +1022,6 @@
   <block id="65c95ed5c9f895be6dfa81e8583c86af" category="list-text">*CloudShell CLI*: Workload Factory には、単一のブラウザベースの CLI からアカウント全体の AWS およびNetApp環境を管理および操作するための CloudShell CLI が含まれています。Workload Factory コンソールの上部バーから CloudShell にアクセスします。</block>
   <block id="34904d30d825a389b588efb76a1ceb16" category="list-text">*REST API*: Workload Factory REST API を使用して、FSx for ONTAPファイルシステムやその他の AWS リソースをデプロイおよび管理します。</block>
   <block id="3995165ba76339d9d4d08edf5a17c07c" category="list-text">*CloudFormation*: AWS CloudFormation コードを使用して、Workload Factory コンソールで定義したアクションを実行し、AWS アカウントの CloudFormation スタックから AWS およびサードパーティのリソースをモデル化、プロビジョニング、管理します。</block>
-  <block id="a1b1209dad1b58c4e66fd68ee5bc0148" category="list-text">*Terraform NetApp Workload Factory プロバイダー*: Terraform を使用して、Workload Factory コンソールで生成されたインフラストラクチャ ワークフローを構築および管理します。</block>
   <block id="cfcd02bc3ad349605f667b1db0164fe0" category="paragraph">Workload Factory を使用すると、特定のワークロードに合わせて FSx for ONTAPファイル システムを最適化、自動化、および操作できます。各ワークロードは関連する REST API を公開します。これらのワークロードと API を組み合わせることで、FSx for ONTAPファイルシステムの管理に使用できる柔軟で拡張可能な開発プラットフォームが構成されます。</block>
   <block id="49dac47ef61c863ab22404394b6c84e7" category="paragraph">Workload Factory REST API を使用すると、いくつかの利点があります。</block>
   <block id="b5b61948785c8f81b44871382cf798d9" category="list-text">Workload Factory の認証は OAuth2 標準に基づいています。  NetApp はAuth0 サービスの実装に依存しています。</block>
@@ -1364,7 +1363,6 @@
   <block id="4ebed31793305164cd5e1b71336c2244" category="paragraph">追跡したい内容を平易な言葉で説明すれば、AIがあなたの要望に基づいてダッシュボードを作成します。例えば、災害復旧の状況、地域ごとの容量とコスト、ストレージ保護のコンプライアンス、その他の運用指標を追跡できます。</block>
   <block id="f2c8c03b6d33f0a06783ce6241b381a6" category="paragraph">カスタムダッシュボードは読み取り専用なので、ストレージやワークロードの設定を変更することはできません。Workload Factoryアカウントのユーザーであれば誰でもこれらのダッシュボードを表示および管理できるため、チーム間で情報を共有し、連携を維持することが容易になります。</block>
   <block id="7f7fdf6329959f984b3ff303ae5ac37f" category="inline-link-macro">カスタムダッシュボードの詳細</block>
-  <block id="b95d6b8ad9f73321f9cc2385811deedb" category="paragraph"><block ref="b95d6b8ad9f73321f9cc2385811deedb" category="inline-link-macro-rx"></block></block>
   <block id="b8aad264abc6ada71a68a9b5a701a58b" category="summary">AIガイドプロンプトを使用してカスタムダッシュボードを作成し、ワークロードや運用上の優先事項にとって最も重要な事項を監視できます。</block>
   <block id="dfc2a77d9b383cd28cba1a1e99f9a378" category="doc">カスタムダッシュボードを作成する</block>
   <block id="43d2bb31c641fd8b871b835572bc7441" category="paragraph">監視したい内容を平易な言葉で記述することで、カスタムダッシュボードを作成できます。AIがセットアップ手順を案内し、ダッシュボードがワークロードと優先順位に合うようにします。</block>
@@ -1854,4 +1852,6 @@
   <block id="bf7102668593cd82fd27a66594640387" category="inline-link-macro">FSx for ONTAPファイルシステムへのリンクを接続する</block>
   <block id="f54caf9bcfff2cb7aa30ba073518e7db" category="list-text"><block ref="f54caf9bcfff2cb7aa30ba073518e7db" category="inline-link-macro-rx"></block></block>
   <block id="364f26fd39f55f2137b4749b01da3565" category="list-text"><block ref="364f26fd39f55f2137b4749b01da3565" category="inline-link-macro-rx"></block></block>
+  <block id="dd6c12ecaee3143ccc7a7d85e16032ff" category="paragraph"><block ref="dd6c12ecaee3143ccc7a7d85e16032ff" category="inline-link-macro-rx"></block></block>
+  <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraformプロバイダー*：Terraformを使用して、Workload Factoryコンソールで生成されたインフラストラクチャワークフローを構築および管理します。</block>
 </blocks>
