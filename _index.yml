@@ -44,6 +44,12 @@ indexpage:
       url: https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html
     - title: ストレージワークロードのEMSイベントを表示および分析する
       url: https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html
+  - title: AIエージェント
+    links:
+    - title: AIエージェントについて学ぶ
+      url: "/learn-agent.html"
+    - title: AIエージェントの設定を管理する
+      url: "/manage-agent-settings.html"
   - title: カスタムダッシュボード
     links:
     - title: カスタムダッシュボードについて

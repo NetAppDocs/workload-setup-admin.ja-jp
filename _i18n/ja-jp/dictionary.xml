@@ -997,7 +997,6 @@
   <block id="a0f53b5544ae2841af96b6a2c93a0849" category="paragraph">Workload Factory プラットフォームは、次の主要な機能を提供します。</block>
   <block id="5999715bf3ed9ba4ec9a80b7687fe818" category="list-text">サービス アカウントを使用して、 NetApp Workload Factory の操作を安全かつ確実に自動化します。サービス アカウントは、ユーザー管理の制限なしに信頼性が高く長期的な自動化を提供し、API アクセスのみを提供するためより安全です。</block>
   <block id="e89477f461ecef2d895595553cc0cfbf" category="list-text">質問するAIアシスタント</block>
-  <block id="c0eadc4e4502d909eddd3b5b2d48b232" category="list-text">FSx for ONTAPファイルシステムの管理と操作について AI アシスタントに質問します。  Ask Me は、モデル コンテキスト プロトコル (MCP) を使用して、外部環境と安全にインターフェイスし、API ツールにクエリを実行して、特定のストレージ環境に合わせた応答を提供します。</block>
   <block id="f23d73684a524dc65f1c2ab55054ed6c" category="paragraph">Workload Factory を使用すると、クラウド ストレージを管理し、Amazon Web Services のワークロード機能を使用できます。</block>
   <block id="cc3487971ff751f7d4df80cbca84205b" category="paragraph">Amazon FSx for NetApp ONTAP for NetApp Workload Factoryは<block ref="eada645bedd6ca3d760173ba22baf6b0" category="inline-link-macro-rx"></block>適切に設計されたベストプラクティスを念頭に置いて作成されました。</block>
   <block id="6396fbe69c05e9a323cf53a0fbf0983d" category="paragraph">Workload Factory は無料でご利用いただけます。 Amazon Web Services (AWS) に支払うコストは、展開する予定のストレージおよびワークロード サービスによって異なります。これには、Amazon FSx for NetApp ONTAPファイルシステム、VMware Cloud on AWS インフラストラクチャ、AWS サービスなどのコストが含まれます。</block>
@@ -1304,7 +1303,6 @@
   <block id="cce7bd3a3721067273866ec7f3ec7b7c" category="list-text">*通知*：Workload Factory を設定して、NetApp Console のベルアイコンの下に表示される通知を送信します。</block>
   <block id="a58c54927d168d58046b4ad29f5254fa" category="list-text">*メール*：NetApp Consoleでメール通知を有効にすると、Amazon SNSの設定を必要とせずに、アカウントに関連付けられた任意のメールアドレスに通知を受信できます。</block>
   <block id="d7b2e59eb21ae19aa7b493f93fbcb35f" category="list-text">*Amazon SNS*：Amazon SNS トピックに通知を送信するように Workload Factory を設定します。</block>
-  <block id="e174fa0e05fb5c229301ef978773782d" category="list-text">*メール*：Amazon SNSの設定を必要とせずに、アカウントに関連付けられている任意のメールアドレスに通知を受信するには、Workload Factoryコンソールでメール通知を有効にします。</block>
   <block id="7184b61f2058f394c7d6b104dc166242" category="list-text">*Amazon SNS*：Workload Factory コンソールを使用して、Amazon SNS トピックに通知を送信するように Workload Factory を設定します。</block>
   <block id="150b7425bee731f53d950cb07997d3a9" category="admonition">NetApp Consoleで通知を設定すると、通知配信の所有権が移管され、Workload Factoryコンソールの通知オプションは無効になり、読み取り専用モードで表示されます。ツールチップには、通知はNetApp Consoleから管理されると記載されています。その後、通知はNetApp Consoleからのみ管理できます。</block>
   <block id="719c05c1c99e00fa5e0edb33bb8190f6" category="paragraph">以下の前提条件は、Amazon SNS通知を設定する場合にのみ適用されます。</block>
@@ -1312,8 +1310,6 @@
   <block id="3cffbdfd446e6b3ca39fc52d1b2a87ab" category="list-text">*NetApp Console通知*：*NetApp Console通知を有効にする*を選択して、Workload FactoryがNetApp Consoleで通知を送信するように設定します。</block>
   <block id="4941b94ab67ffcf8b95fddca7b5ce770" category="list-text">*Eメール通知*：*Eメール通知を有効にする*を選択すると、Workload Factoryがアカウントに関連付けられている任意のEメールアドレスに通知を送信するように設定されます。</block>
   <block id="0d7adbc19c316fab18fa015b723496bd" category="list-text">*Amazon SNS通知*：*SNS通知を有効にする*を選択し、Amazon SNSコンソールからAmazon SNSを設定するための手順に従ってください。</block>
-  <block id="458f208085c8b6ec69e163ddf2378427" category="list-text">以下の通知タイプのうち、1つ以上を有効にしてください：</block>
-  <block id="622901cf56fa55473d2f9550e6422faf" category="list-text">*メール通知*：*メール通知を有効にする*を選択してください。アカウントに関連付けられているメールアドレスはすべて読み取り専用モードで表示されます。</block>
   <block id="3bf17ee9de6360f01456d2fe35c8ff4c" category="paragraph">通知にフィルターを適用することで、不要な通知トラフィックを削減し、特定のユーザーに特定の種類の通知を配信することができます。Amazon SNS ポリシーを使用して SNS 通知を設定し、NetApp Console の通知設定を使用することでこれを実現できます。</block>
   <block id="8749fce6a42b5cc208c97e090bbdf52e" category="section-title">NetApp Console で通知をフィルタリング</block>
   <block id="067205dc8475e129dc9d47a407ae631d" category="paragraph">NetApp Consoleの通知設定を使用して、コンソールで受信する通知を重大度レベル（Critical、Info、Warningなど）でフィルタリングできます。</block>
@@ -1553,7 +1549,6 @@
   <block id="ebd4b28f0632a0dc47fff6d0e28857b1" category="doc">AI機能の管理</block>
   <block id="13bb649429b18adc1dadc0ed391c5bc2" category="paragraph">Workload FactoryにおけるAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppが管理するAWS Bedrockを使用することができます。</block>
   <block id="00e95115c994386ef85f1864db952bca" category="section-title">AI機能について</block>
-  <block id="5a41793d075495dfb423bb395a189adf" category="paragraph">Workload Factory には、Ask Me、カスタムダッシュボード、EMS、データベースログ、レイテンシのアナライザーなど、ユーザーエクスペリエンスを向上させる AI 搭載機能が多数含まれています。</block>
   <block id="46918c8c585299e7a785eed266de3f97" category="paragraph">Workload Factoryの管理者であれば、AI設定ページでこれらの機能におけるAIの使用方法を制御できます。</block>
   <block id="50f33d14f129e4548c1c270fd6725a78" category="section-title">構成オプション</block>
   <block id="5787d906b76d8323ff398ce17924ceda" category="paragraph">以下の設定オプションから選択してください：</block>
@@ -1563,7 +1558,6 @@
   <block id="9a0258efc499c889c5f1af73bbaf4364" category="list-text">月間利用クレジットは組織全体で共有されます</block>
   <block id="2c8b8060f9331f918beb8261403785ec" category="list-text">AWSの追加設定は不要です。</block>
   <block id="1ee78c04d8b078adcb0fca6be60af5a2" category="list-text">GenAI機能オフ</block>
-  <block id="8828805c938d7fc1a48fbf3585c37b14" category="list-text">すべてのAI機能をオフにします。ユーザーは、Ask Me、アナライザー、カスタムダッシュボード、ルールビルダー、その他のAI搭載ツールを使用できなくなります。</block>
   <block id="396640080b08108896efb48796063406" category="list-text">アカウント管理者がAI機能を設定することをお勧めします。</block>
   <block id="6b7af6c72f84f0f7380106617c11be78" category="section-title">AI機能の設定</block>
   <block id="3f0879fc8845a02f07ea71a0a584847e" category="list-text">メニューから「管理」を選択し、次に「AI設定」を選択します。</block>
@@ -1617,7 +1611,6 @@
   <block id="255efce8fcb0ce70d6ca799d3f7fcce4" category="admonition">アカウント管理者がAI機能を無効にしている場合、AIが生成するエラー応答は利用できません。<block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>。</block>
   <block id="91d90ea5487ed9ed44e834f42f272ccb" category="section-title">2026年8月3日</block>
   <block id="1cdbc8bcb26cc8d5e894a97b9e7f269f" category="section-title">2026年7月5日</block>
-  <block id="8fb2a31345fc5c5e72c947d436b5077b" category="admonition">アカウント管理者は、AI機能をオンまたはオフに切り替えることができます。管理者がこれらの機能を無効にした場合、Ask Me AIアシスタントは利用できなくなります。<block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>。</block>
   <block id="959c1faca1dbb57f8dac1b5058bf9c58" category="paragraph"><block ref="959c1faca1dbb57f8dac1b5058bf9c58" category="inline-link-macro-rx"></block></block>
   <block id="167e20b67f84068555b3081057c696b8" category="paragraph"><block ref="167e20b67f84068555b3081057c696b8" category="inline-link-macro-rx"></block></block>
   <block id="0e23d2a91e2fd1a7eb141ceb8cd9ddcf" category="paragraph"><block ref="0e23d2a91e2fd1a7eb141ceb8cd9ddcf" category="inline-link-macro-rx"></block></block>
@@ -1854,4 +1847,135 @@
   <block id="364f26fd39f55f2137b4749b01da3565" category="list-text"><block ref="364f26fd39f55f2137b4749b01da3565" category="inline-link-macro-rx"></block></block>
   <block id="dd6c12ecaee3143ccc7a7d85e16032ff" category="paragraph"><block ref="dd6c12ecaee3143ccc7a7d85e16032ff" category="inline-link-macro-rx"></block></block>
   <block id="06e2f75907573850abfa673fd6e8572a" category="list-text">*NetApp Terraformプロバイダー*：Terraformを使用して、Workload Factoryコンソールで生成されたインフラストラクチャワークフローを構築および管理します。</block>
+  <block id="f1b1a4bfd4b138d7b7f910daf038bf87" category="doc">Workload Factory向けAIエージェント</block>
+  <block id="4f92226af9b21739ad4453bb92ea1a12" category="paragraph">Workload Factory AIOpsはAIを活用して環境を分析し、改善策を提案します。承認すれば、設定した認証情報と権限を使用して操作を実行することもできます。AIエージェントは、お客様の環境を分析し、Workload FactoryとSlackにおけるリスクの発見、ワークロードの改善、および問題のトラブルシューティングを支援します。</block>
+  <block id="d2887c33a251e8530157941bab73941d" category="paragraph">「Ask Me」の新しい「エージェントを探す」セクションで、AIエージェントにアクセスできます。デフォルトでは、エージェントは読み取り専用モードで実行され、推奨事項と分析結果を提供します。</block>
+  <block id="13b9f07ec133fa8d4a2ca6cc3fdd50fd" category="paragraph">*エージェント設定*を使用して、エージェントの動作を制御します。以下の操作が可能です：</block>
+  <block id="51ac931b574bb48f344c39da84a32911" category="list-text">読み取り専用モードまたは読み書きモードを選択してください</block>
+  <block id="2eef1803f198e56db81b4062ea8cddf4" category="list-text">エージェントが使用できる認証情報を選択する</block>
+  <block id="46a4cbdaf48bb2fb183d7572e3a8f6b7" category="list-text">カスタム指示を追加する</block>
+  <block id="cbf940f0da0f9c2f02c84f568e2df3e3" category="list-text">詳細回答の表示方法を調整する</block>
+  <block id="72c9ca3fa9790aabd5a7a741dfe036e9" category="paragraph">これらの追加コントロールにより、可視性と監視機能が向上します。読み書きモードでは、エージェントはAWS、ONTAP、またはサポートされているAPIに変更を加える前にお客様の承認を得る必要があります。また、応答に表示される詳細情報のレベルを選択することもできます。これには、エージェントの推論に関する情報や、Slackの場合はエージェントが使用したツールのアクティビティに関する情報も含まれます。</block>
+  <block id="8b4711746b3adfa755ed575da3759c69" category="paragraph">エージェントは、複数アカウント環境にも対応しており、セットアップも簡単です。単一のエージェントで、複数の認証情報を使用して複数の AWS アカウントを安全に横断的に操作できます。</block>
+  <block id="ff2cb9e669640d8f287be7fc339c4d78" category="inline-link-macro">AIエージェントについて学ぶ</block>
+  <block id="fd0b6331664a65cf7a31ea72bbff0ad8" category="paragraph"><block ref="fd0b6331664a65cf7a31ea72bbff0ad8" category="inline-link-macro-rx"></block></block>
+  <block id="718a428bd3b2faadb3c143efe186c19c" category="inline-link-macro">エージェント設定の管理</block>
+  <block id="f96519dcd31d8fc6ae26fb065d41298c" category="paragraph"><block ref="f96519dcd31d8fc6ae26fb065d41298c" category="inline-link-macro-rx"></block></block>
+  <block id="3cfde347b20875f3299e4bc85cde4012" category="section-title">Ask Meでスケジュールされたタスク</block>
+  <block id="ed6bda88b37dd9ee0232de291a362174" category="paragraph">Ask Me チャットでプロンプトをカスタマイズして、スケジュールされたタスクを作成できるようになりました。スケジュールされたタスクを使用すると、Ask Me に定期的なチェックを実行させ、定義したスケジュールに基づいてチャットで更新情報を送信するよう指示できます。</block>
+  <block id="ff51f1512e81cb44e19946405c4c3751" category="paragraph">プロンプトの例：</block>
+  <block id="9c51276de03bc7f0cc89565810a9583c" category="list-text">すべての FSx for NetApp ONTAP ファイルシステムの健全性とライフサイクルステータスを 1 時間ごとに確認し、問題を早期に検出します。</block>
+  <block id="7c232a692347d9efae9eafb444b454ef" category="list-text">最新のインベントリを維持するために、アクセス可能なすべてのAWS FSxファイルシステムを1時間ごとに一覧表示します。</block>
+  <block id="21acc05c94ffdfe8d543fc22e8162a92" category="paragraph"><block ref="21acc05c94ffdfe8d543fc22e8162a92" category="inline-link-macro-rx"></block></block>
+  <block id="fcc3c37c09c2649e94509997e3e32ace" category="section-title">Ask Me での ONTAP サポート</block>
+  <block id="5887518ab4bafe0e2cd30ee6d85ca830" category="paragraph">Ask Me は FSx for ONTAP およびオンプレミス ONTAP システムをサポートするようになりました。同じチャットエクスペリエンスを使用して、ONTAP インフラストラクチャ全体にわたる回答とインサイトを取得できます。</block>
+  <block id="61ac51994f4e558eb3be753f892d08aa" category="section-title">通知の更新</block>
+  <block id="02796e8ea898eccf4fc1ec43b8c9a990" category="paragraph">NetApp Console の通知がデフォルトで有効になりました。NetApp Console のユーザーは、追加設定なしに Workload Factory の通知を自動的に受信します。</block>
+  <block id="21342e11f90d32dc68b1110fcbb8adc2" category="inline-link-macro">Workload Factory の通知</block>
+  <block id="a70bc5a52e36d1d7057060329e076649" category="paragraph"><block ref="a70bc5a52e36d1d7057060329e076649" category="inline-link-macro-rx"></block></block>
+  <block id="5c944601b7f8744b2a84a9a8ea43d363" category="section-title">リンク作成通知メール</block>
+  <block id="19206cde68f30f89cddf386749d22382" category="paragraph">Workload Factory は、認証情報の追加が成功した後、リンク関連付けを完了するように促すようになりました。認証情報によりリソースの検出が可能になりますが、高度な ONTAP 機能を利用するには、検出されたファイルシステムとのリンク関連付けが必要です。メール通知は毎週月曜日に届きます。リンク関連付けが完了すると、通知は停止します。</block>
+  <block id="9ea7b6eb4bee9afd3cbcdda4cee6e9ca" category="section-title">Lambdaリンクのバージョン通知とアップグレードガイダンス</block>
+  <block id="44268d176d67be14130038589d76e779" category="paragraph">Workload Factoryは、Lambdaリンクが最新の利用可能なイメージを使用していない場合に警告を表示するようになりました。リンクに対して自動アップグレードがサポートされていない場合、新しいバージョンが利用可能になったときに通知が表示されます。</block>
+  <block id="36be3d9219f21557e17dda1fb159e09d" category="paragraph">アップグレード手順は「リンク」ページからご覧いただけます。この手順書では、Lambda リンクイメージを手動で更新する方法と、利用可能な場合に自動アップグレードを有効にする方法について説明しています。リンクを最新の状態に保つことで、最新の機能を利用できるようになり、既知の問題が修正され、最新のセキュリティアップデートが適用されます。</block>
+  <block id="14bda382780d759b676db8bd277841a9" category="paragraph">自動アップグレードをサポートしていないリンクに対して新しいリンクバージョンが利用可能になった場合、FSx for ONTAP ダッシュボードにアラートが表示されます。</block>
+  <block id="0354b0d97d0b0a9757874cd60afce03c" category="list-text">*メール通知*：メール通知を受け取るには、<block ref="ee6417f6e84445088f5a293850cbcb2f" category="inline-link-macro-rx"></block>の通知設定で通知の受信者と重要度の設定を構成してください。</block>
+  <block id="2c8d2ace24ab724b2b9846dfbd1113fb" category="summary">Workload FactoryのAIエージェントがどのように環境を分析し、リスクやパフォーマンス改善策を特定し、お客様の承認を得てアクションを実行するのかを学びましょう。</block>
+  <block id="a4988f1624f7fc0b4eaabf35a45c6593" category="doc">NetApp Workload Factory のAIエージェントについて学ぶ</block>
+  <block id="44930f32325dbab8392ff7743e877c7e" category="paragraph">Workload Factory AIOpsはAIを活用して環境を分析し、改善策を提案します。承認すれば、設定した認証情報と権限を使用して操作を実行することもできます。</block>
+  <block id="9b96c88a6583aa0e9a0e03809f482d9e" category="admonition">アカウント管理者がAI機能を無効にしている場合、メッセージが表示され、エージェントを使用できなくなります。管理者に連絡するか、<block ref="51cc9b1bceb3cdf8e5a226d8fb6d37eb" category="inline-link-macro-rx"></block>。</block>
+  <block id="29e96b144158fa2cf3ed37b1696584a9" category="paragraph">Workload Factory アカウントに AWS 認証情報と、エージェントがアクセスするリソースに必要な IAM 権限が付与されていることを確認してください。読み取り/書き込みモードを有効にする場合は、それらの権限でサポートされている変更も許可する必要があります。</block>
+  <block id="3b8e3eff2b9d5a25eecc8e879fab9225" category="section-title">データ利用とプライバシー</block>
+  <block id="823764ac349552585c033c832c9a9119" category="paragraph">お客様のデータはAIモデルの学習には使用されません。エージェントは、お客様の認証情報を使用して標準のAWS APIを介してAWSリソースに安全にアクセスし、お客様の実際の環境に基づいて応答します。すべてのエージェント活動は、NetAppのプライバシーポリシーおよびAWSセキュリティ管理に従います。</block>
+  <block id="a9ad35f78cf699132ce97296208021d6" category="section-title">AIエージェントを使用する理由</block>
+  <block id="0dcc2bd50249549545f604062e32c8d1" category="paragraph">AIエージェントは、Workload Factoryでの作業効率向上を支援します。</block>
+  <block id="08b88087b00df48c7dcec290d2085d9d" category="list-text">お客様の環境に基づいた回答と推奨事項を入手できます。</block>
+  <block id="f41dc5b513f7a5678f949fafbb672e71" category="list-text">リスクと最適化の機会を特定します。</block>
+  <block id="45747fdf81b9f650b9ab26706866db24" category="list-text">問題のトラブルシューティングと承認されたアクションの実行を、単一のワークフローで行います。</block>
+  <block id="6fd44b1c4edd80ad7b595f1fcb4c7483" category="list-text">スケジュールされたチェックを実行し、チャット履歴で最新情報を受け取ることができます。</block>
+  <block id="e974804a88a47e4bcdb4ff1c718951bc" category="list-text">FSx for ONTAP とオンプレミス ONTAP 環境全体で作業します。</block>
+  <block id="4eeb2bca1dddd7a796d908c266d60075" category="section-title">AIエージェントにアクセスする</block>
+  <block id="e6478bab5c49062e219e1290c4442eed" category="list-text">「Ask Me」ホームページから</block>
+  <block id="b3c72178808d9fa6e9c876b76d5d1928" category="list-text">「Ask Me」ランディングページで、「Explore Agents」を選択してください。AIエージェントのサイドパネルが開き、エージェントの機能を紹介するウェルカムメッセージが表示されます。</block>
+  <block id="99b503a5e4373b0bc3054a025797d268" category="list-text">エージェントのリダイレクトリンクから</block>
+  <block id="54fd5f6787cd568e4b9880863150bb93" category="list-text">**「質問する」**機能やその他の機能を使用する際、より高度なサポートを受けるためにエージェントへリダイレクトされるリンクが表示される場合があります。</block>
+  <block id="98ff5af4adf0662fa0278d6e7332c116" category="section-title">AIエージェントの仕組み</block>
+  <block id="31fe269c620fcf2562efe2871e4398f8" category="section-title">エージェントが環境にアクセスする方法</block>
+  <block id="d6356702d2caa14ca196fe664fc1853e" category="inline-link-macro">エージェント設定</block>
+  <block id="dfee9e31025ca5f152cf22d64bfe765f" category="paragraph">エージェントは、現在の Workload Factory のスコープに含まれており、<block ref="503a0786471e5d22d87709a40b737283" category="inline-link-macro-rx"></block>で選択された認証情報によってサポートされている場合にのみリソースにアクセスできます。エージェントは、両方の制御が適用される場所でのみ動作できます。アクセスできるリソースは、AWS 認証情報に割り当てられた権限によっても異なります。デフォルトではすべての認証情報が選択されますが、設定済みの認証情報の一部に絞り込むこともできます。</block>
+  <block id="f19cfe1072c3d3c974b0cdafbcdde1ef" category="paragraph">現在のスコープには以下が含まれます：</block>
+  <block id="676cd33769e7c44db0294ca1bdc4a818" category="list-text">*AWSアカウント*：エージェントがアクセスできるAWSアカウント。</block>
+  <block id="8f7fd41f1486852019ec1e81297e4749" category="list-text">*認証情報*：エージェントが使用できる認証情報。</block>
+  <block id="db9be091d62e76416638fd7987fac0d3" category="list-text">*リージョン*：エージェントがアクセスできる AWS リージョン。</block>
+  <block id="9ea7586a1a950d81f272e8403a8f6cbe" category="paragraph">NetApp Workload Factoryのフィルタは、表示するAWSアカウントやリージョンなど、現在のページの範囲を設定します。エージェント設定では、エージェントがその範囲内で使用できる認証情報を制御します。リソースへのアクセスは、それらの認証情報に割り当てられたIAM権限にも依存します。</block>
+  <block id="28dec2f4988032196e5673d255d3c391" category="admonition">「エージェント設定」で認証情報を選択しても、追加のAWS権限は付与されません。エージェントが分析または管理するリソースにアクセスするために必要なIAM権限が、認証情報に付与されていることを確認してください。</block>
+  <block id="54a2d462b3304eb93c5cfe391a9e67bf" category="section-title">読み取り専用モード（デフォルト）</block>
+  <block id="dd8585af3d55da47f5760a15f3d8be48" category="paragraph">デフォルトでは、エージェントは読み取り専用モードで動作します。このモードでは、以下のことが可能です。</block>
+  <block id="1b539d90e247bf7cc195a2d8096208d6" category="list-text">お客様の環境に関する質問に回答します。</block>
+  <block id="0f896edbba7d346551c186acd1309a44" category="list-text">FSx for ONTAPのファイルシステム、データベース、ワークロードを分析します。</block>
+  <block id="6705aab6526bc219af2bdc50b636aa94" category="list-text">リスク、設定ミス、および最適化の機会を特定します。</block>
+  <block id="e863933d9a2c33d982a9403853ef5c8f" category="list-text">パフォーマンス、可用性、保護、およびコスト効率を向上させるための推奨事項を提示します。</block>
+  <block id="0da32bbd416014e9a050dd9753a5f97c" category="list-text">問題のトラブルシューティングを行い、修復手順を提案します。</block>
+  <block id="5c5d131e2fde1dde32d484bb16b397d5" category="paragraph">読み取り専用モードでは、リソースを変更することはできません。書き込みアクセスが必要な操作をリクエストした場合、エージェントは制限事項を説明し、エージェントの設定へのリンクを表示します。</block>
+  <block id="c43e0775dbe854488f7416962d78486c" category="section-title">読み書きモード（オプトイン）</block>
+  <block id="8403b77cf5ff251eac80eb3fa63780ad" category="paragraph"><block ref="503a0786471e5d22d87709a40b737283" category="inline-link-macro-rx"></block>で読み取り/書き込み機能を有効にすることができます。このモードでは、エージェントがサポートされている各操作について説明し、変更を行う前にお客様の承認を必要とします。</block>
+  <block id="601c01875f07f976aec59310ce582da5" category="paragraph">この承認プロセスは、Slack 統合および NetApp Console を含むすべてのエージェントエクスペリエンスに適用されます。</block>
+  <block id="dbe095e1cf28fb37bfc9bc65e6db07ec" category="section-title">AIエージェントにデータやアクティビティがない場合にユーザーが見るもの</block>
+  <block id="02a1c40d157b16f6b4bb75e05fed5d20" category="paragraph">エージェントがクレデンシャルを持っていなくても、一般的なガイダンスを提供することは可能です。ただし、お客様のリソースをレビューしたり、お客様の環境に特化したインサイトを提供したりすることはできません。</block>
+  <block id="40b5b336cde586af18464c8514adcf84" category="summary">動作モード、アクセス権限、カスタム指示、応答の詳細レベルなどの AI エージェント設定を行い、Workload Factory 環境でエージェントがどのように動作するかを制御します。</block>
+  <block id="c97e3b8fd990844d5f1d9fbc0c4a1a58" category="doc">NetApp Workload FactoryでAIエージェントの設定を管理する</block>
+  <block id="027abdce98c3533464664728631b1841" category="paragraph">Workload Factory環境におけるAIエージェントの動作方法を設定します。エージェントの動作方法を選択したり、使用できる認証情報を決定したり、カスタムプロンプトを追加したり、応答の詳細レベルを調整したりできます。</block>
+  <block id="9de8087bd8bdadfe4e3bb629bc47ce3b" category="list-text">アカウント管理者がエージェントの設定を行うことをお勧めします。</block>
+  <block id="127bc47c2c22a1c1b4353c48f309430d" category="list-text">読み書きモードを有効にする前に、エージェントに操作を実行させることによるセキュリティリスクを理解しておいてください。</block>
+  <block id="caa093b0b5c5edc3c1513d77992a765a" category="admonition">アカウント管理者がAI機能を無効にしている場合、AIエージェントは利用できません。<block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>。</block>
+  <block id="a7f61a64f2ed965b18a4239b5377a37f" category="section-title">アクセスエージェントの設定</block>
+  <block id="aa9106dd7dbce448bc6eb071ef2c9112" category="list-text">以下のいずれかの方法でエージェントの設定にアクセスしてください：</block>
+  <block id="d92f9415529b85cb7482af295b940c55" category="list-text">メニューから「管理」、「設定」、「エージェント」の順に選択します。</block>
+  <block id="4eff4baef0601b15c7b18727d2be80c1" category="list-text">エージェントチャット画面から、「エージェント設定」へのリンクを選択します。</block>
+  <block id="cc565804a9c219fe2f3854136c730f29" category="section-title">エージェントの動作モードを設定する</block>
+  <block id="44d28331c753ec749031ccccf1d70880" category="paragraph">エージェントを読み取り専用モードで動作させるか、読み書きモードで動作させるかを選択してください。</block>
+  <block id="c1754028c55cdf3e2e13a700bdd9f2ab" category="paragraph">エージェントの動作モードによって、エージェントが実行できるアクションが決まります。</block>
+  <block id="a84826751ef0f28a9bca5de4cfd244cb" category="list-text">エージェントはお客様のデータを閲覧・分析することはできますが、お客様のリソースを変更することはできません。エージェントは質問に回答したり、リスクを特定したり、推奨事項を提供したり、問題のトラブルシューティングを支援したりすることができます。</block>
+  <block id="7e6277284f05e2d4cf99020f4156281c" category="list-text">読み書きモード</block>
+  <block id="08805adb79ed6abfef5a9b183fdd826a" category="list-text">エージェントは、お客様が選択した認証情報を使用して、お客様に代わって操作を実行できます。操作を実行する前に、概要を提示してお客様の承認を待ちます。お客様の承認なしにはいかなる操作も実行しません。</block>
+  <block id="6092eef047a776cf1ae032fce2fe1ff0" category="list-text">「エージェント設定」ページで、「エージェントモード」セクションに移動します。</block>
+  <block id="ae1c7cee2bb050e0f57e3431296b4490" category="list-text">動作モードを選択してください。</block>
+  <block id="9be8b23c1b30a5412be369acebac3129" category="section-title">エージェントのアクセスに使用する認証情報を選択してください。</block>
+  <block id="bed4ed0551e8d0bd53e2940df4d0dd60" category="paragraph">AWS エージェントがクラウド環境にアクセスするために使用できる認証情報を選択してください。デフォルトではすべての認証情報が選択されていますが、設定済みの認証情報の一部のみを選択することも可能です。</block>
+  <block id="ad7a6d84190cb018bcb20040ba7aa840" category="paragraph">設定済みの認証情報の中から、なし、1つ、一部、またはすべてを選択できます。認証情報を選択しない場合、エージェントは一般的な質問には回答できますが、環境内のリソースを分析することはできません。</block>
+  <block id="04320da953584028ea1a9fef64f0a0ac" category="list-text">「エージェント設定」ページで、「認証情報」セクションに移動します。</block>
+  <block id="a685a78df1473e416ec4f5dd1d5e55ca" category="list-text">*認証情報名*ドロップダウンから、エージェントが使用できる認証情報を選択します。</block>
+  <block id="4df13cb466a3becbc8b94f5c683e4d88" category="paragraph">認証情報が設定されていない場合は、Workload Factory アカウントの認証情報を追加するオプションが表示されます。</block>
+  <block id="f2ab6dda5dcaf24c6ffbc9828ce53e7e" category="section-title">Slackとの連携</block>
+  <block id="a83e309e3bc8e3235a652fcff10e1a49" category="paragraph">エージェントをSlackに接続し、Slackワークスペース内で直接エージェントとやり取りすることができます。</block>
+  <block id="47d254476d408dfbd41fb01b874a3e59" category="paragraph">Slack連携の設定方法については、Slack連携のドキュメントを参照するか、エージェントについては担当のNetApp担当者にお問い合わせください。</block>
+  <block id="66e18fcdb18961698dac90fe1128ccaf" category="section-title">カスタムプロンプトを追加する</block>
+  <block id="944ca360f82b24c3e6cdba37ae9655ff" category="paragraph">エージェントがリクエストに対応する際に従うべき、独自のガイドライン、設定、またはルールを追加できます。</block>
+  <block id="2499325dea2f4195ca3a4812ba2de0a4" category="paragraph">カスタムプロンプトは、エージェントが組織のポリシー、言語、ワークフローに従って応答できるように、応答方法をガイドするのに役立ちます。これは、すべてのエージェントのインタラクションに適用されます。</block>
+  <block id="1d0aa8e6f1b6bf319e12bda616651aff" category="paragraph">カスタムプロンプトフィールドは、デフォルトでは空になっています。カスタムプロンプトはいつでも追加、変更、削除できます。</block>
+  <block id="e72865f9318e142476270f1893312be0" category="list-text">「エージェント設定」ページで、「カスタムプロンプト」セクションに移動します。</block>
+  <block id="7e9ec3a59392a9dc66594a6c8668926e" category="list-text">テキストフィールドに、エージェント向けの独自のガイドラインを入力してください。</block>
+  <block id="f1caaeb9dcd13d22145262ee4d9928c4" category="paragraph">例えば、命名規則、推奨される応答形式、エージェントが従うべき社内ポリシーなどを定義できます。</block>
+  <block id="f28546d1f8eb515bb452998faef01dd0" category="paragraph">エージェントは、お客様のリクエストに応答する際に、カスタムプロンプトと組み込み機能の両方を使用します。</block>
+  <block id="2f618527204802cdc7e0635d88da47f9" category="paragraph">カスタムプロンプトを変更または削除するには、このページに戻り、テキストボックスを編集して*適用*を選択してください。</block>
+  <block id="87856c473606410336b82bb7e93ec084" category="section-title">詳細表示オプションを設定する</block>
+  <block id="52b5a4685cfb3e3d513b7d409b3f610c" category="paragraph">エージェントが自身の推論やツール使用についてどの程度詳細に情報を共有するかを選択してください。</block>
+  <block id="fc1633b3da679875551048103029e4c3" category="paragraph">詳細表示オプションを使用すると、エージェントがどのようにして回答を導き出したか、また情報を収集するためにどのようなツールを使用したかについての詳細情報を確認できます。</block>
+  <block id="f1a4ff7ec8fc7f3d10af7f489e6dcfbd" category="list-text">冗長な推論</block>
+  <block id="23d5becf46b121e67317963fda10fb1d" category="list-text">有効化すると、エージェントはどのようにして回答に至り、意思決定を行ったかを説明します。これにより、エージェントがなぜ特定のアクションを推奨したり、特定の結論に至ったりするのかを理解するのに役立ちます。</block>
+  <block id="c4b6900e9ca5e303fc19fb9394ea3c86" category="list-text">詳細ツールの説明</block>
+  <block id="806c4a6030ee5638bad868ac296edc46" category="list-text">有効化すると、エージェントはデータ収集と分析に使用するツールとAPIを表示します。これにより、エージェントがお客様の環境とどのように連携するかを理解するのに役立ちます。</block>
+  <block id="ba309604a791da2fbf6b620fc085c387" category="paragraph">回答を簡潔にするため、どちらのオプションもデフォルトではオフになっています。透明性を高めたい場合や、エージェントの動作をトラブルシューティングしている場合は、これらの機能を有効にしてください。</block>
+  <block id="cd9b6d5e3d6f46f09890d134dcd76b6f" category="list-text">「エージェント設定」ページで、「詳細度レベル」セクションに移動します。</block>
+  <block id="5af9190832e86a39b32955d77e972b2e" category="list-text">有効にする詳細表示オプションを選択してください。</block>
+  <block id="17f306dd010c4f9182635b5f5e336fa1" category="paragraph">Workload Factoryには、Ask Me、AIエージェント、カスタムダッシュボード、ルールビルダー、EMS、データベースログ、レイテンシのアナライザーなど、ユーザーエクスペリエンスを向上させるAI搭載機能が多数含まれています。</block>
+  <block id="cbdbc1bacc2d0ff55d93219e225f857a" category="list-text">すべてのAI機能をオフにします。ユーザーは、Ask Me、AI エージェント、アナライザー、カスタムダッシュボード、ルールビルダー、その他の AI 搭載ツールを使用できなくなります。</block>
+  <block id="301497b54979bb49bba5249c4f44b4ad" category="section-title">2026年9月27日</block>
+  <block id="346e26a9cf03697a4cc5fa74d552d528" category="list-text">AIアシスタントに FSx for ONTAP およびオンプレミス ONTAP ファイルシステムの管理と実行に関する質問をしてください。Ask Me はお客様の環境に安全に接続し、API を使用してストレージ設定に基づいた回答を提供します。</block>
+  <block id="c04236280596e42d063458cddb934506" category="list-text">AIエージェント</block>
+  <block id="3189c2a21a0d40fdf4391d22fec8b33c" category="inline-link-macro">AIエージェントについて学ぶ</block>
+  <block id="b91ab34707ef60b3cb9e7b43383594ea" category="list-text">Workload Factory AIOpsはAIを活用して環境を分析し、改善策を提案します。承認すれば、設定した認証情報と権限を使用して操作を実行することもできます。AIエージェントは、接続されたアカウントを使用して、Ask Meがお客様に洞察を提供するのを支援します。「Ask Me」の「Explore Agents」セクションを開くと、迅速な回答を得たり、リスクや機会を特定したり、問題を解決したり、推奨事項を受け取ったりできます。デフォルトでは、エージェントは情報を閲覧することしかできません。読み書きモードでは、AWS、ONTAP、およびサポート対象のAPI全体にわたって、お客様が承認した後にのみアクションを実行できます。また、複数のAWSアカウントの認証情報を使用したり、カスタムプロンプトを追加したり、Slackでの推論やツールアクティビティなど、応答に含める詳細情報のレベルを選択したりすることもできます。<block ref="4688d09efacd50ccc7831795bcbb59e1" category="inline-link-macro-rx"></block>。</block>
+  <block id="4b448c1a229bebc97e97cee06ea0fced" category="admonition">アカウント管理者は、AI機能をオンまたはオフに切り替えることができます。管理者がこれらの機能を無効にした場合、Ask Me AIアシスタントおよびAIエージェントは利用できなくなります。<block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>。</block>
+  <block id="64f2f595f7dd037774e1dbd99cb2ab7b" category="sidebar">AIエージェントの設定を管理する</block>
+  <block id="737f86fc6a3bb3563670dac4c0b49585" category="sidebar">Workload Factory AIOps</block>
 </blocks>
