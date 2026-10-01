@@ -1864,8 +1864,6 @@
   <block id="ff51f1512e81cb44e19946405c4c3751" category="paragraph">プロンプトの例：</block>
   <block id="9c51276de03bc7f0cc89565810a9583c" category="list-text">すべての FSx for NetApp ONTAP ファイルシステムの健全性とライフサイクルステータスを 1 時間ごとに確認し、問題を早期に検出します。</block>
   <block id="7c232a692347d9efae9eafb444b454ef" category="list-text">最新のインベントリを維持するために、アクセス可能なすべてのAWS FSxファイルシステムを1時間ごとに一覧表示します。</block>
-  <block id="fcc3c37c09c2649e94509997e3e32ace" category="section-title">Ask Me での ONTAP サポート</block>
-  <block id="5887518ab4bafe0e2cd30ee6d85ca830" category="paragraph">Ask Me は FSx for ONTAP およびオンプレミス ONTAP システムをサポートするようになりました。同じチャットエクスペリエンスを使用して、ONTAP インフラストラクチャ全体にわたる回答とインサイトを取得できます。</block>
   <block id="61ac51994f4e558eb3be753f892d08aa" category="section-title">通知の更新</block>
   <block id="02796e8ea898eccf4fc1ec43b8c9a990" category="paragraph">NetApp Console の通知がデフォルトで有効になりました。NetApp Console のユーザーは、追加設定なしに Workload Factory の通知を自動的に受信します。</block>
   <block id="21342e11f90d32dc68b1110fcbb8adc2" category="inline-link-macro">Workload Factory の通知</block>
@@ -1889,7 +1887,6 @@
   <block id="f41dc5b513f7a5678f949fafbb672e71" category="list-text">リスクと最適化の機会を特定します。</block>
   <block id="45747fdf81b9f650b9ab26706866db24" category="list-text">問題のトラブルシューティングと承認されたアクションの実行を、単一のワークフローで行います。</block>
   <block id="6fd44b1c4edd80ad7b595f1fcb4c7483" category="list-text">スケジュールされたチェックを実行し、チャット履歴で最新情報を受け取ることができます。</block>
-  <block id="e974804a88a47e4bcdb4ff1c718951bc" category="list-text">FSx for ONTAP とオンプレミス ONTAP 環境全体で作業します。</block>
   <block id="4eeb2bca1dddd7a796d908c266d60075" category="section-title">AIエージェントにアクセスする</block>
   <block id="e6478bab5c49062e219e1290c4442eed" category="list-text">「Ask Me」ホームページから</block>
   <block id="b3c72178808d9fa6e9c876b76d5d1928" category="list-text">「Ask Me」ランディングページで、「Explore Agents」を選択してください。AIエージェントのサイドパネルが開き、エージェントの機能を紹介するウェルカムメッセージが表示されます。</block>
@@ -1966,7 +1963,6 @@
   <block id="5af9190832e86a39b32955d77e972b2e" category="list-text">有効にする詳細表示オプションを選択してください。</block>
   <block id="17f306dd010c4f9182635b5f5e336fa1" category="paragraph">Workload Factoryには、Ask Me、AIエージェント、カスタムダッシュボード、ルールビルダー、EMS、データベースログ、レイテンシのアナライザーなど、ユーザーエクスペリエンスを向上させるAI搭載機能が多数含まれています。</block>
   <block id="cbdbc1bacc2d0ff55d93219e225f857a" category="list-text">すべてのAI機能をオフにします。ユーザーは、Ask Me、AI エージェント、アナライザー、カスタムダッシュボード、ルールビルダー、その他の AI 搭載ツールを使用できなくなります。</block>
-  <block id="346e26a9cf03697a4cc5fa74d552d528" category="list-text">AIアシスタントに FSx for ONTAP およびオンプレミス ONTAP ファイルシステムの管理と実行に関する質問をしてください。Ask Me はお客様の環境に安全に接続し、API を使用してストレージ設定に基づいた回答を提供します。</block>
   <block id="c04236280596e42d063458cddb934506" category="list-text">AIエージェント</block>
   <block id="3189c2a21a0d40fdf4391d22fec8b33c" category="inline-link-macro">AIエージェントについて学ぶ</block>
   <block id="b91ab34707ef60b3cb9e7b43383594ea" category="list-text">Workload Factory AIOpsはAIを活用して環境を分析し、改善策を提案します。承認すれば、設定した認証情報と権限を使用して操作を実行することもできます。AIエージェントは、接続されたアカウントを使用して、Ask Meがお客様に洞察を提供するのを支援します。「Ask Me」の「Explore Agents」セクションを開くと、迅速な回答を得たり、リスクや機会を特定したり、問題を解決したり、推奨事項を受け取ったりできます。デフォルトでは、エージェントは情報を閲覧することしかできません。読み書きモードでは、AWS、ONTAP、およびサポート対象のAPI全体にわたって、お客様が承認した後にのみアクションを実行できます。また、複数のAWSアカウントの認証情報を使用したり、カスタムプロンプトを追加したり、Slackでの推論やツールアクティビティなど、応答に含める詳細情報のレベルを選択したりすることもできます。<block ref="4688d09efacd50ccc7831795bcbb59e1" category="inline-link-macro-rx"></block>。</block>
@@ -1977,4 +1973,8 @@
   <block id="92ef509d26c2f4b8f1eafc483dafc514" category="paragraph"><block ref="92ef509d26c2f4b8f1eafc483dafc514" category="inline-link-macro-rx"></block></block>
   <block id="ff60e6cb69fa35fc765fb6716dc86a1d" category="paragraph"><block ref="ff60e6cb69fa35fc765fb6716dc86a1d" category="inline-link-macro-rx"></block></block>
   <block id="5ff6cb415ca5edb6088a3bb92aadbf41" category="list-text">*メール通知*：メール通知を受け取るには、<block ref="7532dfde8c533672ea63a5b546224a97" category="inline-link-macro-rx"></block>の通知設定で通知の受信者と重要度の設定を構成してください。</block>
+  <block id="d757afa220ac7f97f408903182fddee2" category="section-title">Ask Meにおけるストレージサポート</block>
+  <block id="541644294bd888a59c4f26e19102bfb2" category="paragraph">Ask Me は FSx for ONTAP および Google Cloud NetApp Volumes をサポートするようになりました。サポートされているストレージ環境全体で、同じチャット機能を使用して回答や情報を得ることができます。</block>
+  <block id="54ba8fb885319acf274731794ecf9b35" category="list-text">FSx for ONTAP および Google Cloud NetApp Volumes 環境全体で作業します。</block>
+  <block id="3ddb8c8ba0ebed85a3c1d3ddf7cc424c" category="list-text">AIアシスタントに、FSx for ONTAPおよびGoogle Cloud NetApp Volumesの管理と実行に関する質問をしてください。Ask Meは、お客様の環境に安全に接続し、APIを使用してストレージ設定に基づいた回答を提供します。</block>
 </blocks>

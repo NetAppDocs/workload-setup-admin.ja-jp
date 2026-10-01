@@ -31,7 +31,7 @@ Lambda リンク接続:: Lambda リンク接続を使用して、Workload Factor
 EDAストレージ操作:: NetApp Workload Factory で電子設計自動化 （EDA） ストレージ操作を効率化するには、パフォーマンスを最適化し、IaC と統合してストレージパラメータを自動化し、運用上の健全性を確保します。
 コストを削減するためのコスト削減計算ツール:: Amazon Elastic Block Store（EBS）ストレージやElastic File System（EFS）ストレージ、Amazon FSx for Windowsファイルサーバを使用している現在の環境を分析し、Amazon FSx for NetApp ONTAPに移行することでどれだけのコストを削減できるかを確認できます。また、将来の導入を計画している場合に備えて、計算ツールを使用して「what if」シナリオを実行することもできます。
 自動化を促進するサービスアカウント:: サービス アカウントを使用して、 NetApp Workload Factory の操作を安全かつ確実に自動化します。サービス アカウントは、ユーザー管理の制限なしに信頼性が高く長期的な自動化を提供し、API アクセスのみを提供するためより安全です。
-質問するAIアシスタント:: AIアシスタントに FSx for ONTAP およびオンプレミス ONTAP ファイルシステムの管理と実行に関する質問をしてください。Ask Me はお客様の環境に安全に接続し、API を使用してストレージ設定に基づいた回答を提供します。
+質問するAIアシスタント:: AIアシスタントに、FSx for ONTAPおよびGoogle Cloud NetApp Volumesの管理と実行に関する質問をしてください。Ask Meは、お客様の環境に安全に接続し、APIを使用してストレージ設定に基づいた回答を提供します。
 +
 --
 プロンプトの例：
