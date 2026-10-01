@@ -77,7 +77,7 @@ IMPORTANT: NetApp Consoleで通知を設定すると、通知配信の所有権�
 . ログインlink:https://console.workloads.netapp.com["ワークロードファクトリーコンソール"^]。
 . Workload Factory コンソール メニューから、*ワークロード*、*管理*、*通知設定*の順に選択します。
 +
-** *メール通知*：メール通知を受け取るには、link:link:https://console.netapp.com["NetAppコンソール"^]の通知設定で通知の受信者と重要度の設定を構成してください。
+** *メール通知*：メール通知を受け取るには、link:https://console.netapp.com["NetAppコンソール"^]の通知設定で通知の受信者と重要度の設定を構成してください。
 ** *Amazon SNS通知*：*SNS通知を有効にする*を選択し、Amazon SNSコンソールからAmazon SNSを設定するための手順に従ってください。
 +
 テスト通知を送信して構成を確認した後、[適用] を選択します。

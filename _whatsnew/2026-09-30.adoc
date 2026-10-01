@@ -23,9 +23,9 @@ Workload Factory AIOpsはAIを活用して環境を分析し、改善策を提�
 
 エージェントは、複数アカウント環境にも対応しており、セットアップも簡単です。単一のエージェントで、複数の認証情報を使用して複数の AWS アカウントを安全に横断的に操作できます。
 
-link:learn-agent.html["AIエージェントについて学ぶ"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-agent.html["AIエージェントについて学ぶ"]
 
-link:manage-agent-settings.html["エージェント設定の管理"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-agent-settings.html["エージェント設定の管理"]
 
 
 
@@ -40,7 +40,7 @@ Ask Me チャットでプロンプトをカスタマイズして、スケジュ�
 * 最新のインベントリを維持するために、アクセス可能なすべてのAWS FSxファイルシステムを1時間ごとに一覧表示します。
 
 
-link:workload-factory-overview.html#features["Ask Meの詳細"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html#features["Ask Meの詳細"]
 
 
 
@@ -49,7 +49,7 @@ link:workload-factory-overview.html#features["Ask Meの詳細"]
 
 Ask Me は FSx for ONTAP およびオンプレミス ONTAP システムをサポートするようになりました。同じチャットエクスペリエンスを使用して、ONTAP インフラストラクチャ全体にわたる回答とインサイトを取得できます。
 
-link:workload-factory-overview.html#features["Ask Meの詳細"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html#features["Ask Meの詳細"]
 
 
 
