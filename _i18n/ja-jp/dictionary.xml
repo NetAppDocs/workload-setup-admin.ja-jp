@@ -1970,7 +1970,6 @@
   <block id="5af9190832e86a39b32955d77e972b2e" category="list-text">有効にする詳細表示オプションを選択してください。</block>
   <block id="17f306dd010c4f9182635b5f5e336fa1" category="paragraph">Workload Factoryには、Ask Me、AIエージェント、カスタムダッシュボード、ルールビルダー、EMS、データベースログ、レイテンシのアナライザーなど、ユーザーエクスペリエンスを向上させるAI搭載機能が多数含まれています。</block>
   <block id="cbdbc1bacc2d0ff55d93219e225f857a" category="list-text">すべてのAI機能をオフにします。ユーザーは、Ask Me、AI エージェント、アナライザー、カスタムダッシュボード、ルールビルダー、その他の AI 搭載ツールを使用できなくなります。</block>
-  <block id="301497b54979bb49bba5249c4f44b4ad" category="section-title">2026年9月27日</block>
   <block id="346e26a9cf03697a4cc5fa74d552d528" category="list-text">AIアシスタントに FSx for ONTAP およびオンプレミス ONTAP ファイルシステムの管理と実行に関する質問をしてください。Ask Me はお客様の環境に安全に接続し、API を使用してストレージ設定に基づいた回答を提供します。</block>
   <block id="c04236280596e42d063458cddb934506" category="list-text">AIエージェント</block>
   <block id="3189c2a21a0d40fdf4391d22fec8b33c" category="inline-link-macro">AIエージェントについて学ぶ</block>
@@ -1978,4 +1977,5 @@
   <block id="4b448c1a229bebc97e97cee06ea0fced" category="admonition">アカウント管理者は、AI機能をオンまたはオフに切り替えることができます。管理者がこれらの機能を無効にした場合、Ask Me AIアシスタントおよびAIエージェントは利用できなくなります。<block ref="56d2e09cbb0a828478db20ff2d11774d" category="inline-link-macro-rx"></block>。</block>
   <block id="64f2f595f7dd037774e1dbd99cb2ab7b" category="sidebar">AIエージェントの設定を管理する</block>
   <block id="737f86fc6a3bb3563670dac4c0b49585" category="sidebar">Workload Factory AIOps</block>
+  <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">2026年9月30日</block>
 </blocks>
