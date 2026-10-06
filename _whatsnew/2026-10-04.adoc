@@ -1,0 +1,28 @@
+= カスタムダッシュボードの更新
+:allow-uri-read: 
+
+
+
+
+[[custom-dashboard-updates]]
+=== カスタムダッシュボードの更新
+
+カスタムダッシュボードを使えば、作業管理がより簡単になります。
+
+カタログから、指標、グラフ、期間などを含むダッシュボードを直接編集できます。
+
+ダッシュボードを編集すると、Workload Factoryは以前のプロンプトとメッセージとともにチャットを再開します。その後、ダッシュボードを更新したり、変更を保存したり、以前のバージョンに戻したりできます。
+
+ダッシュボードを編集できるのは、ダッシュボードの作成者のみです。編集中は、保存するまで他のユーザーは変更内容を確認できません。
+
+ダッシュボードカタログに、カテゴリやステータスに基づいてダッシュボードをすばやく見つけるのに役立つフィルターが追加されました。
+
+管理者がAI機能を無効にした場合、または月間クレジット限度額に達した場合、ダッシュボードの作成と編集は無効になります。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html["カスタムダッシュボードについて"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["カスタムダッシュボードを作成する"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html["カスタムダッシュボードを管理する"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/troubleshoot-custom-dashboards.html["カスタムダッシュボードのトラブルシューティング"]

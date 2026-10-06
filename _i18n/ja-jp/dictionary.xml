@@ -1433,15 +1433,6 @@
   <block id="dffad8b6380340c5079727deb13bb3f2" category="list-text">ダッシュボードのリストを確認してください。</block>
   <block id="9e3f16aef1d22400bdae48c5cb77b00f" category="section-title">ダッシュボードのデータを更新する</block>
   <block id="4e424a1ad37782627141d4d50f79b586" category="paragraph">ダッシュボードを開くと、ダッシュボードのデータが読み込まれます。最新の情報を確認するには、更新してください。</block>
-  <block id="6835e72df37e141c78401ea8d4bfcf90" category="paragraph">ダッシュボードはワークロードからデータを再読み込みします。最終更新時刻は、データが更新された日時を示すように変更されます。</block>
-  <block id="74ee9feffcb1603b7eeb47c099c0e5a5" category="section-title">ダッシュボードを削除する</block>
-  <block id="e54360b7371199d6607f76cd1ae6ad17" category="paragraph">不要になったダッシュボードは削除してください。この操作は永続的なものであり、元に戻すことはできません。</block>
-  <block id="3325f3a5c13a73bb87ed2dabebb0b6a3" category="list-text">「カスタムダッシュボード」ページで、削除するダッシュボードを見つけます。</block>
-  <block id="0ce6306187e44bdf505a14f5d0676bb6" category="list-text">そのダッシュボードの *Actions* ドロップダウンメニューから *Delete* を選択します。</block>
-  <block id="b26a5fa549c938ffb56d20623c3f69c0" category="list-text">削除を確認します。</block>
-  <block id="22e8351c82677bcc78bd23d6fb170bc8" category="paragraph">ダッシュボードはWorkload Factoryアカウントから完全に削除され、すべてのユーザーがアクセスできなくなります。</block>
-  <block id="9537d9160ef701530bdd875698475957" category="inline-link-macro">追加のカスタムダッシュボードを作成する</block>
-  <block id="1258b44f1520a3cf10d648fb08dbf72e" category="list-text"><block ref="1258b44f1520a3cf10d648fb08dbf72e" category="inline-link-macro-rx"></block></block>
   <block id="0c5896a9e6c8d2cff1b4d007852b1732" category="paragraph">この情報を使用して、カスタムダッシュボードの作成時または使用時に発生する可能性のある一般的な問題を解決してください。</block>
   <block id="2e00365fe32c89b1fd1ad214f291ca85" category="section-title">ダッシュボードの作成に失敗しました</block>
   <block id="09a8c59ab236b488dde6ce993a012c63" category="paragraph">**問題：** ダッシュボードを作成する際に、「リクエストの理解とコードの生成に失敗しました」というエラーメッセージが表示されます。</block>
@@ -1977,4 +1968,28 @@
   <block id="541644294bd888a59c4f26e19102bfb2" category="paragraph">Ask Me は FSx for ONTAP および Google Cloud NetApp Volumes をサポートするようになりました。サポートされているストレージ環境全体で、同じチャット機能を使用して回答や情報を得ることができます。</block>
   <block id="54ba8fb885319acf274731794ecf9b35" category="list-text">FSx for ONTAP および Google Cloud NetApp Volumes 環境全体で作業します。</block>
   <block id="3ddb8c8ba0ebed85a3c1d3ddf7cc424c" category="list-text">AIアシスタントに、FSx for ONTAPおよびGoogle Cloud NetApp Volumesの管理と実行に関する質問をしてください。Ask Meは、お客様の環境に安全に接続し、APIを使用してストレージ設定に基づいた回答を提供します。</block>
+  <block id="77c39d029270c567ae2816d2c688ea3b" category="doc">カスタムダッシュボードの更新</block>
+  <block id="b4a3fedd52cfe46140994157b6fa12ec" category="paragraph">カスタムダッシュボードを使えば、作業管理がより簡単になります。</block>
+  <block id="5d95426dd9834d03b33e051ae7f9fb5c" category="paragraph">カタログから、指標、グラフ、期間などを含むダッシュボードを直接編集できます。</block>
+  <block id="e57137dc0ab44a9b0797700e3e8c851c" category="paragraph">ダッシュボードを編集すると、Workload Factoryは以前のプロンプトとメッセージとともにチャットを再開します。その後、ダッシュボードを更新したり、変更を保存したり、以前のバージョンに戻したりできます。</block>
+  <block id="8f44990f66d79c05eb2b8e612e7e18b5" category="paragraph">ダッシュボードを編集できるのは、ダッシュボードの作成者のみです。編集中は、保存するまで他のユーザーは変更内容を確認できません。</block>
+  <block id="14dd0ad1c8f18e92cbbc77ecf3a2645b" category="paragraph">ダッシュボードカタログに、カテゴリやステータスに基づいてダッシュボードをすばやく見つけるのに役立つフィルターが追加されました。</block>
+  <block id="fb1ecdb5253f537a735a53d5e9e2eba6" category="paragraph">管理者がAI機能を無効にした場合、または月間クレジット限度額に達した場合、ダッシュボードの作成と編集は無効になります。</block>
+  <block id="f736e966e4394f88a05cee94fdba57ff" category="paragraph"><block ref="f736e966e4394f88a05cee94fdba57ff" category="inline-link-macro-rx"></block></block>
+  <block id="e703f5c9737234e07b6d50b473d03d31" category="paragraph"><block ref="e703f5c9737234e07b6d50b473d03d31" category="inline-link-macro-rx"></block></block>
+  <block id="a6624b6c8238a8d2fecbcab00748683a" category="paragraph"><block ref="a6624b6c8238a8d2fecbcab00748683a" category="inline-link-macro-rx"></block></block>
+  <block id="6690aacdf8125a25e4539caa3239e86f" category="paragraph"><block ref="6690aacdf8125a25e4539caa3239e86f" category="inline-link-macro-rx"></block></block>
+  <block id="b2174789d5314bb12b464a8d03a18be6" category="list-text">ダッシュボードを編集して、指標、グラフ、期間など、表示内容を変更します</block>
+  <block id="0d4c6d4cadfc35e450177a6f124a12ce" category="admonition">アカウント管理者がAI機能を無効にしている場合、メッセージが表示され、ダッシュボードの作成や編集ができなくなります。管理者または<block ref="51cc9b1bceb3cdf8e5a226d8fb6d37eb" category="inline-link-macro-rx"></block>にお問い合わせください。</block>
+  <block id="3dacf374ca39e9d1e2ccd73b21e8d75a" category="paragraph">カタログからダッシュボードを編集し、ダッシュボード名、説明、カテゴリ、または監視リクエストを更新してから、改訂版を保存するかどうかを決定できます。</block>
+  <block id="09716803bbab78d4545cc7210ae61d90" category="paragraph">ダッシュボードはワークロードからデータを再読み込みします。</block>
+  <block id="d2258a9653c6a977efeeb955b27c66e9" category="section-title">ダッシュボードを編集する</block>
+  <block id="4e2f12e496523d85bae4a969657d45aa" category="paragraph">ダッシュボードを編集することで、表示する指標、グラフ、期間などを変更できます。</block>
+  <block id="b13bad0dcb6df4e403e8e2af9058dfe5" category="list-text">「カスタムダッシュボード」ページで、編集するダッシュボードを見つけます。</block>
+  <block id="d431f68c965a7131bbc2f48128983c25" category="list-text">そのダッシュボードの *Actions* メニューから *Edit dashboard* を選択します。</block>
+  <block id="63f40ecf20824ff6d561a306d3a25fd1" category="list-text">AIとの対話の中で、変更したい内容を説明してください。</block>
+  <block id="3184c7e78934ef4b37ea845f1d56789a" category="paragraph">このプロセスは、新しいダッシュボードを作成するのと似ています。ダッシュボードが追跡するワークロード、指標、または期間を変更できます。</block>
+  <block id="f66306510aaf399aef8bdf649739a15e" category="list-text">変更内容を確認し、**保存**を選択してください。</block>
+  <block id="89806ea6a9ed9b0bb6cb322f912aff65" category="paragraph">ダッシュボードは変更内容に合わせて更新されます。最終更新日も更新されます。</block>
+  <block id="6cd19393862a5a23e39bb63b43a86baa" category="section-title">2026年10月4日</block>
 </blocks>
