@@ -1527,7 +1527,6 @@
   <block id="93abc3800cadb3c84e6ebb4f337cb663" category="paragraph"><block ref="fe356bc0877a3688c38625a5a5fa7c4e" category="inline-link-macro-rx"></block>。</block>
   <block id="c7084515fd41cf4b219b3c9bc1bf874a" category="list-text">Workload Factoryアカウント以外でダッシュボードを共有することはできません。ダッシュボードの共有は、同一のWorkload Factoryアカウント内のユーザーに限定されます。</block>
   <block id="3ba405e1d72777e360f3b281ce3ba5b9" category="paragraph">ダッシュボードカタログからカスタムダッシュボードを管理できます。そこから、詳細の表示、ダッシュボードの共有、データの更新、不要になったダッシュボードの削除などを行うことができます。</block>
-  <block id="6ef261950960e68b5c274dbb2ad858c2" category="paragraph">ダッシュボードカタログから、カスタムダッシュボードを表示および管理できます。プライベートダッシュボードはあなただけが閲覧できますが、パブリックダッシュボードはあなたの Workload Factory アカウントのすべてのユーザーが閲覧できます。各ダッシュボードには、作成者名、作成日、公開設定（プライベートまたはパブリック）などの基本的な詳細情報が表示されます。</block>
   <block id="8471f69a4146258ee48a6b85bff6fa31" category="section-title">ダッシュボードの表示設定を変更する</block>
   <block id="434e902a308729311c26bf05cd3a3e42" category="paragraph">ダッシュボードを公開設定にして、チームと共有しましょう。共有を停止するには、非公開に設定してください。</block>
   <block id="bccfa88da47be219216832061b161e9d" category="list-text">*カスタムダッシュボード*ページで、更新するダッシュボードを見つけます。</block>
@@ -1536,9 +1535,7 @@
   <block id="d87198500f0d81b0ca147bc5b2a09622" category="list-text">*ダッシュボードの共有* - Workload Factoryアカウントのすべてのユーザーにダッシュボードを表示します。</block>
   <block id="939742a8d44add9f4ad62a0fc3824a6e" category="list-text">*プライベートダッシュボードに変更* - ダッシュボードを自分だけに表示します</block>
   <block id="7e3cce2609a225eafd019dfc30a9437a" category="paragraph">ダッシュボードは即座に更新されます。ダッシュボードカード上の表示状態ラベルには、現在のステータスが表示されます。</block>
-  <block id="f7b22a19823cae9bc6664fece0b96115" category="summary">Workload FactoryにおけるBedrockベースのAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppマネージドAWS Bedrockを使用できます。</block>
   <block id="ebd4b28f0632a0dc47fff6d0e28857b1" category="doc">AI機能の管理</block>
-  <block id="13bb649429b18adc1dadc0ed391c5bc2" category="paragraph">Workload FactoryにおけるAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppが管理するAWS Bedrockを使用することができます。</block>
   <block id="00e95115c994386ef85f1864db952bca" category="section-title">AI機能について</block>
   <block id="46918c8c585299e7a785eed266de3f97" category="paragraph">Workload Factoryの管理者であれば、AI設定ページでこれらの機能におけるAIの使用方法を制御できます。</block>
   <block id="50f33d14f129e4548c1c270fd6725a78" category="section-title">構成オプション</block>
@@ -1551,15 +1548,10 @@
   <block id="1ee78c04d8b078adcb0fca6be60af5a2" category="list-text">GenAI機能オフ</block>
   <block id="396640080b08108896efb48796063406" category="list-text">アカウント管理者がAI機能を設定することをお勧めします。</block>
   <block id="6b7af6c72f84f0f7380106617c11be78" category="section-title">AI機能の設定</block>
-  <block id="3f0879fc8845a02f07ea71a0a584847e" category="list-text">メニューから「管理」を選択し、次に「AI設定」を選択します。</block>
-  <block id="ef1f959eefc1f11cf2aec294261e066f" category="list-text">「AI設定」ページで、希望する設定を選択してください：</block>
   <block id="7530dc640ec2dd92a9e70b8484867369" category="list-text">*NetApp が管理する Bedrock （推奨）*：NetApp が管理する AWS Bedrock を使用します。</block>
-  <block id="053d266af64b45b2a2fbc0eeccc99297" category="list-text">*Gen AI機能オフ*：すべてのAI機能をオフにします。</block>
-  <block id="cbab3ffec133396f2f907f9faa5a4337" category="list-text">「設定を保存」を選択します。</block>
   <block id="1f19237677d2459e3c32c18ad28d89c4" category="paragraph">設定は保存され、Workload Factoryのすべての AI 機能に即座に適用されます。Trackerでは、誰が最後に設定を更新したか、またいつ更新したかを確認できます。</block>
   <block id="e8d0b42b043c438b67550c55202181fe" category="paragraph">AI機能がオフになっている場合、ユーザーがAI搭載機能を使おうとするとメッセージが表示されます。インターフェースは表示されたままで、その機能が利用できないことが明確に示されます。</block>
   <block id="c5a072ef0376df4bfe60ecf20f43c427" category="section-title">予算管理と信用限度額</block>
-  <block id="e622f31b01cf42245970bf4f82c9e127" category="paragraph">デフォルトのNetApp管理構成を使用する場合、NetAppがAI機能の予算管理を制御します。</block>
   <block id="583513a0baae6b087a0f3c846b3f742a" category="section-title">月間クレジット限度額</block>
   <block id="c9f9c41c2d00489aef5b70d1c80be3d1" category="paragraph">各アカウントには、NetApp が管理する Bedrock を使用する際に、各 AI 機能に対する月間支出制限があります。</block>
   <block id="dfc84788c4742cd3e802820d33f9aeca" category="section-title">予算に達したとき</block>
@@ -2001,4 +1993,26 @@
   <block id="9537d9160ef701530bdd875698475957" category="inline-link-macro">追加のカスタムダッシュボードを作成する</block>
   <block id="1258b44f1520a3cf10d648fb08dbf72e" category="list-text"><block ref="1258b44f1520a3cf10d648fb08dbf72e" category="inline-link-macro-rx"></block></block>
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">レイテンシーイベントの構成要素の内訳</block>
+  <block id="b680b1a7fd35564d77eb715d3c89f5cb" category="doc">AIツールには独自のAmazon Bedrockインスタンスを使用してください</block>
+  <block id="aefffefabafd2a723ba252259d49413b" category="paragraph">Workload FactoryのAI設定ページに、お客様が独自のAmazon Bedrockインスタンスを使用できる別のオプションが追加されました。</block>
+  <block id="59071a98cbd118cd70a7342fac20edee" category="paragraph">このオプションは、お客様管理のBedrock for AIツールで利用可能であり、すべてのWorkload Factory AIサービスでサポートされています。</block>
+  <block id="723b7f36410bdffd1d79fc26537b0350" category="paragraph">接続後、Workload Factoryは接続が成功したかどうかを通知します。</block>
+  <block id="4765f204e5de83ae87fec00c7c5b7589" category="paragraph">ダッシュボードカタログから、カスタムダッシュボードを表示および管理できます。プライベートダッシュボードはお客様のみ閲覧できますが、パブリックダッシュボードはWorkload Factoryアカウントのすべてのユーザーが閲覧できます。各ダッシュボードには、作成者名、作成日、公開設定（非公開または公開）などの基本的な詳細情報が表示されます。</block>
+  <block id="55c9e8516766e9331175c24a58463351" category="summary">Workload FactoryにおけるBedrockベースのAI機能へのアクセスを制御します。AI機能をオフにするか、NetApp管理型またはお客様管理型のBedrockを使用できます。</block>
+  <block id="fdb1959aef23285e43fe2cdcd4f28fee" category="paragraph">Workload FactoryにおけるAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppまたはお客様の組織が管理するAWS Bedrockを使用できます。</block>
+  <block id="6f5403c75b81b8b52cd43cae97fcf772" category="list-text">顧客管理型Bedrock</block>
+  <block id="c18ad30e2ef4050c256483f9a51ad2de" category="list-text">独自のAWS Bedrock設定を使用してください。</block>
+  <block id="edf60b9bc6b08bdb2aa52c67c9ff0924" category="list-text">最良の結果を得るには、NetAppはAmazon Bedrock構成でAnthropic Claude Sonnet 4.5または4.6を使用することを推奨します</block>
+  <block id="4580e55cbed2076f7b001c4793810627" category="list-text">顧客管理型の Bedrock を使用している場合は、Workload Factory の IAM ロールにリンクされている認証情報の AWS ポリシーを更新してください。</block>
+  <block id="42f8e0cc53973b95fb8c5ab1b1940d45" category="admonition">Workload Factory IAMロールにリンクされている認証情報に対して、必要な権限をAWSポリシーに追加します。</block>
+  <block id="d8180f5e900b1f6f9e24a34bcc5df784" category="list-text">メニューから、*管理* &gt; *設定* &gt; *AIツール* を選択します。</block>
+  <block id="e63e52d33b8423358a13ed6f555c8f70" category="list-text">「AIツール」ページで、ご希望の設定を選択してください：</block>
+  <block id="cd805e2fc37a5ef0e58d5bcce3784800" category="list-text">*顧客管理型Bedrock*：</block>
+  <block id="21311647ca0330ee847f5cb2e10ea926" category="list-text">Workload Factory IAMロールに関連付けられているAWS認証情報とリージョンを選択してください</block>
+  <block id="f531442bfdac6ffe5ebf928d9259db20" category="list-text">使用したい推論プロファイルを指定してください</block>
+  <block id="ca232c88bdf38a766c6b82ced2c60df3" category="list-text">「構成の検証」を選択します。</block>
+  <block id="5a79cccf92e71cd2b96cbbe67a02e898" category="paragraph">Workload Factoryは、接続が成功したか失敗したかを示す通知を表示します</block>
+  <block id="43d91f7086bfc8e0d64b9a83a049c1f0" category="list-text">*GenAI機能オフ*：すべてのAI機能をオフにします。</block>
+  <block id="94278b8c4b4aa1c1469e62f89ce7d460" category="paragraph">NetAppは、デフォルトのNetApp管理の構成を使用する場合にのみ、AI機能の予算管理を行います。</block>
+  <block id="f535eb1278ad100b4d323539a7942781" category="section-title">2026年10月14日</block>
 </blocks>

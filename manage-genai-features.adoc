@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-genai-features.html 
 keywords: gen ai, generative ai, bedrock, ask me, custom dashboards, rules builder, cloudshell ai, ems analyzer, db log analyzer, latency analyzer, byom, bring your own model, administration 
-summary: Workload FactoryにおけるBedrockベースのAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppマネージドAWS Bedrockを使用できます。 
+summary: Workload FactoryにおけるBedrockベースのAI機能へのアクセスを制御します。AI機能をオフにするか、NetApp管理型またはお客様管理型のBedrockを使用できます。 
 ---
 = NetApp Workload FactoryのAI機能の管理
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Workload FactoryにおけるBedrockベースのAI機能へのアクセ�
 
 
 [role="lead"]
-Workload FactoryにおけるAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppが管理するAWS Bedrockを使用することができます。
+Workload FactoryにおけるAI機能へのアクセスを制御します。AI機能をオフにするか、NetAppまたはお客様の組織が管理するAWS Bedrockを使用できます。
 
 
 
@@ -41,6 +41,13 @@ NetAppマネージド Bedrock （推奨）:: NetApp が管理する AWS Bedrock 
 
 
 --
+顧客管理型Bedrock:: 独自のAWS Bedrock設定を使用してください。
++
+--
+* 最良の結果を得るには、NetAppはAmazon Bedrock構成でAnthropic Claude Sonnet 4.5または4.6を使用することを推奨します
+
+
+--
 GenAI機能オフ:: すべてのAI機能をオフにします。ユーザーは、Ask Me、AI エージェント、アナライザー、カスタムダッシュボード、ルールビルダー、その他の AI 搭載ツールを使用できなくなります。
 
 
@@ -50,7 +57,11 @@ GenAI機能オフ:: すべてのAI機能をオフにします。ユーザーは�
 == 開始する前に
 
 * アカウント管理者がAI機能を設定することをお勧めします。
+* 顧客管理型の Bedrock を使用している場合は、Workload Factory の IAM ロールにリンクされている認証情報の AWS ポリシーを更新してください。
 
+
+
+NOTE: Workload Factory IAMロールにリンクされている認証情報に対して、必要な権限をAWSポリシーに追加します。
 
 
 
@@ -59,14 +70,24 @@ GenAI機能オフ:: すべてのAI機能をオフにします。ユーザーは�
 
 .手順
 . いずれかの方法でログインしてくださいlink:console-experiences.html["コンソールエクスペリエンス"^]。
-. メニューから「管理」を選択し、次に「AI設定」を選択します。
-. 「AI設定」ページで、希望する設定を選択してください：
+. メニューから、*管理* > *設定* > *AIツール* を選択します。
+. 「AIツール」ページで、ご希望の設定を選択してください：
 +
 ** *NetApp が管理する Bedrock （推奨）*：NetApp が管理する AWS Bedrock を使用します。
-** *Gen AI機能オフ*：すべてのAI機能をオフにします。
+** *顧客管理型Bedrock*：
++
+... Workload Factory IAMロールに関連付けられているAWS認証情報とリージョンを選択してください
+... 使用したい推論プロファイルを指定してください
+... 「構成の検証」を選択します。
++
+Workload Factoryは、接続が成功したか失敗したかを示す通知を表示します
 
 
-. 「設定を保存」を選択します。
+
+** *GenAI機能オフ*：すべてのAI機能をオフにします。
+
+
+. *変更を保存*を選択します。
 
 
 .結果
@@ -79,7 +100,7 @@ AI機能がオフになっている場合、ユーザーがAI搭載機能を使�
 [[budget-controls-and-credit-limits]]
 == 予算管理と信用限度額
 
-デフォルトのNetApp管理構成を使用する場合、NetAppがAI機能の予算管理を制御します。
+NetAppは、デフォルトのNetApp管理の構成を使用する場合にのみ、AI機能の予算管理を行います。
 
 
 

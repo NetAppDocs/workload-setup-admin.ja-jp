@@ -1,0 +1,16 @@
+= AIツールには独自のAmazon Bedrockインスタンスを使用してください
+:allow-uri-read: 
+
+
+
+
+[[use-your-own-amazon-bedrock-instance-for-ai-tools]]
+=== AIツールには独自のAmazon Bedrockインスタンスを使用してください
+
+Workload FactoryのAI設定ページに、お客様が独自のAmazon Bedrockインスタンスを使用できる別のオプションが追加されました。
+
+このオプションは、お客様管理のBedrock for AIツールで利用可能であり、すべてのWorkload Factory AIサービスでサポートされています。
+
+接続後、Workload Factoryは接続が成功したかどうかを通知します。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["AI機能の管理について"]
