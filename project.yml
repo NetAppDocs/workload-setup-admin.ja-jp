@@ -82,6 +82,8 @@ sidebar:
       url: "/use-cloudshell.html"
     - title: 認証情報を削除
       url: "/manage-credentials.html"
+  - title: FAQ
+    url: "/faq-workload-factory.html"
   - title: 知識とサポート
     entries:
     - title: サポートに登録します

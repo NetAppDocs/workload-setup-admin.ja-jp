@@ -1,0 +1,256 @@
+---
+sidebar: sidebar 
+permalink: faq-workload-factory.html 
+keywords: faq, frequently asked questions, frequently asked questions about workload factory, setup, administration, credentials, permissions, links, codebox, cloudshell, notifications, service accounts, ai features, custom dashboards, fsx for ontap 
+summary: Workload Factoryアカウント、認証情報、権限、Links、Codebox、CloudShell、通知、サービスアカウント、AI機能に関するよくある質問への回答をご確認ください。 
+---
+= NetApp Workload Factoryのセットアップと管理に関するよくある質問
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Workload Factoryの設定および管理を行う際、アカウント、認証情報、リンク、自動化ツールに関する概念、用語、動作、制約について、よくある疑問を持たれるかもしれません。
+
+
+
+[[overview-and-costs]]
+== 概要と費用
+
+.Workload Factoryとは何ですか？また、費用はいくらですか？
+Workload Factoryは、FSx for ONTAPファイルシステム上で実行されるデータベース、VMware移行、EDAプロジェクトなどのワークロードを最適化するためのライフサイクル管理プラットフォームです。Workload Factory自体は無料で利用できます。FSx for ONTAPファイルシステム、VMware Cloud on AWSインフラストラクチャ、その他のAWSサービスなど、導入したサービスに対してAWSに料金を支払います。
+
+link:workload-factory-overview.html["Workload Factoryについて学ぶ"]。
+
+.Workload FactoryはどのAWSリージョンで利用できますか？
+Workload Factory は、FSx for ONTAP がサポートされているすべての商用リージョンで動作しますが、中国リージョン、Secret Cloud、Top Secret Cloud ではサポートされていません。
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["サポートされているAWSリージョンを表示します。"^]
+
+
+
+[[accounts-and-sign-in]]
+== アカウントとサインイン
+
+.Workload FactoryコンソールとNetApp Consoleの違いは何ですか？
+どちらも、Workload FactoryにアクセスできるWebベースのコンソールです。NetApp Consoleは、FSx for ONTAPファイルシステムとワークロードを他のデータサービスと並行して1か所で管理できるハイブリッドなエクスペリエンスを提供します。Workload Factoryコンソールは、FSx for ONTAPで実行されるワークロードに特化した専用のエクスペリエンスです。
+
+link:console-experiences.html["どのコンソールを使用するか決定する"]。
+
+.登録するにはどうすればよいですか？また、最初のアカウントを作成するとどうなりますか？
+NetApp Support Site（NSS）の認証情報を使用してサインアップするか、NetAppクラウドログインを作成します。クラウドログインの場合は、ログインする前にメールアドレスを確認する必要があります。初回ログイン時にアカウントを作成してリソース、ワークロード、認証情報を管理し、Workload Factoryのすべての機能にアクセスできるアカウント管理者になります。すでにNetApp Consoleを使用している場合、Workload FactoryはNetAppアカウントを使用するため、すでにアカウントに所属していることになります。
+
+link:sign-up-and-log-in.html["サインアップしてログイン"]。
+
+.アカウントをAWS GovCloud (US) アカウントにすべきでしょうか？また、後で変更できますか？
+GovCloud（US）のエンドポイントとリージョンのみを使用し、認証情報とシークレットがGovCloud内に保持されるアカウントが必要な場合は、GovCloud（US）オプションを選択してください。この選択は永続的なものです。GovCloudアカウントは認証情報を追加し、リンクを手動で作成する必要があります。
+
+.Workload Factoryアカウントに他のユーザーを招待するにはどうすればよいですか？
+アカウントは、NetApp Consoleからのみ管理できます。アカウント管理者がそこにメンバーを追加すると、招待されたユーザーには参加手順が記載されたメールが送信されます。
+
+link:sign-up-and-log-in.html["他のユーザーをアカウントに招待する"]。
+
+
+
+[[credentials-and-permissions]]
+== 資格情報と権限
+
+.Workload Factoryを使用するには、AWSの認証情報を追加する必要がありますか？
+利用開始にあたって認証情報を追加するのは任意ですので、AWSアカウントにアクセスしなくてもWorkload Factoryをご利用いただけます。ただし、FSx for ONTAPファイルシステムを作成および管理したり、データベースなどのワークロードをデプロイおよび管理したりするには、Workload Factoryに認証情報が必要です。
+
+* link:quick-start.html["Workload Factory の利用開始"]。
+* link:add-credentials.html["クレデンシャルを追加"]。
+
+
+.Workload Factoryの認証情報はどのように機能しますか？
+認証情報はAWSのロール引き受けフローを使用します。各認証情報セットは、選択したワークロード機能と権限レベルに基づいた1つ以上のIAMポリシーと、Workload Factoryが引き受けるIAMロールで構成されます。後からいつでも機能を追加できます。
+
+link:add-credentials.html["クレデンシャルを追加"]。
+
+.認証情報は手動で追加しますか、それともCloudFormationを使用して追加しますか？
+手動方式では、CodeboxからポリシーのJSONをコピーして、AWSマネジメントコンソールでIAMポリシーとIAMロールを作成します。自動方式では、機能を選択すると、CloudFormationスタックがIAMポリシーとIAMロールを作成します。GovCloud（米国）ではCloudFormationがサポートされていないため、認証情報は手動で追加する必要があります。
+
+link:add-credentials.html["クレデンシャルを追加"]。
+
+.どのような権限レベルを選択できますか？また、どの権限を付与するかはどのように決定すればよいですか？
+アクセス許可ポリシーはワークロードごとにまとめられています。ストレージの選択肢は、*表示、計画、分析*、*運用と修復*、および*ファイルシステムの作成と削除*です。データベースワークロードでは、*表示、計画、分析*、*運用と修復*、および*データベースホストの作成*が提供されます。これらのポリシーを使用すると、ITポリシーに基づいて段階的に信頼を割り当てることができます。現在使用する予定の機能のみを選択してください。
+
+link:permissions-reference.html["権限リファレンス"]。
+
+.自動権限チェックは何をするものですか？また、有効にしておくべきでしょうか？
+*Enable automatic permissions check*を選択すると、権限ポリシーに `iam:SimulatePrincipalPolicy`が追加され、Workload Factoryが操作を完了する前に、必要なAWS権限があることを確認できるようになります。認証情報を追加した後で削除することもできますが、残しておくことをお勧めします。部分的に成功した操作に対するリソース作成を防ぎ、手動でのリソースクリーンアップの手間を省きます。
+
+link:add-credentials.html["資格情報を追加する際に、自動権限チェックを有効にする"]。
+
+.不要になった認証情報を削除できますか？
+クレデンシャルは、FSx for ONTAPファイルシステムに関連付けられていない場合にのみ削除できます。Workload Factoryコンソールで*Remove*を使用するか、NetApp Consoleで*Delete*を使用します。
+
+link:manage-credentials.html["認証情報を削除"]。
+
+
+
+[[links]]
+== リンク
+
+.リンクとは何ですか？また、リンクは必要ですか？
+リンクは、Workload Factoryアカウントと1つ以上のFSx for ONTAPファイルシステムとの間に信頼関係と接続性を確立します。リンクはAWS Lambdaを使用するため、Amazon FSx for ONTAP APIでは提供されていない機能を、ONTAP REST API呼び出しを通じて監視および管理できます。利用を開始するにあたってリンクは必要ありませんが、Workload Factoryのすべての機能を利用するにはリンクが必要です。
+
+link:links-overview.html["リンクについて詳しくはこちらをご覧ください"]。
+
+.どの機能にLinkが必要ですか？
+リンクが必要な機能は次のとおりです：
+
+* FSx for ONTAPの優れたアーキテクチャのステータス
+* ONTAP EMSイベント監視
+* AIによる自律型ランサムウェア対策（ARP/AI）
+* ボリュームとストレージVMのレプリケーション
+* SMB/CIFS共有およびNFSエクスポートポリシー
+* iSCSIボリューム管理
+* Snapshotポリシー
+* ボリュームの自動拡張とinode管理
+* クローン作成
+* 追加のONTAP指標とLIFの詳細
+
+
+リンクが必要な操作を実行しようとした際に、リンクが関連付けられていない場合、Workload Factoryはその旨を通知します。link:links-overview.html["リンクについて詳しくはこちらをご覧ください"]を参照してください。
+
+.リンクは追加費用が発生しますか？
+はい。LambdaトランザクションごとにAWS料金が発生します。Lambdaはプロキシとして機能するため、ファイルシステム上のONTAP REST APIにリクエストを送信する際と、Workload Factoryに応答を返す際のそれぞれで料金が発生します。
+
+link:links-overview.html["リンクについて詳しくはこちらをご覧ください"]。
+
+.ファイルシステムを複数のリンクに関連付けることはできますか？
+1つのリンクは、複数のFSx for ONTAPファイルシステムに関連付けることができます。各ファイルシステムは、同じNetAppアカウント内の1つのリンクにのみ関連付けることができます。複数のNetAppアカウントがある場合、ファイルシステムを別のアカウントの追加のリンクに関連付けることができます。link:links-overview.html["リンクについて詳しくはこちらをご覧ください"]を参照してください。
+
+.リンクは自動的に作成するべきですか、それとも手動で作成するべきですか？
+自動作成ではWorkload Factoryを介してリンクが登録されますが、Workload Factoryの自動化にはトークンが使用され、そのCloudFormationコードは最大6時間しか使用できません。手動作成ではCodeboxからCloudFormationまたはTerraformを使用し、コードは永続化されます。これは、セキュリティやDevOpsなどのチームが事前に権限を付与する必要がある場合に便利です。GovCloudアカウントはリンクを手動で作成する必要があります。
+
+link:create-link.html["リンクを作成する"]。
+
+.リンクを作成する前に、どのような準備が必要ですか？
+ファイルシステムのセキュリティグループで必要なポートが開いていること、リンクが `\https://api.workloads.netapp.com`にアクセスできること、およびCloudFormationスタックを作成するための十分なAWS権限が必要です。
+
+link:create-link.html["リンクを作成するための前提条件の完全なリストについては、こちらをご覧ください"]。
+
+.リンクの認証方法を変更したり、作成後のリンクを編集したりすることはできますか？
+いいえ。Linkは、Workload Factoryの認証情報またはAWS Secrets Managerのいずれか1つの認証方法のみをサポートしており、後から変更することはできません。
+
+インターフェース上でリンクを編集することはできません。変更するには、新しいリンクを作成し、それをファイルシステムに関連付けます。AWSのLambdaネットワーク構成を変更することは、接続の問題を引き起こす可能性があるため推奨されません。
+
+link:manage-links.html["リンクの管理"]。
+
+.リンクを削除するとどうなりますか？
+Linkを使用していたファイルシステムやその他のリソースは、Linkに依存する機能を使用できなくなります。LinkはWorkload Factoryからのみ削除され、AWSからは削除されないため、AWSアカウント内のLambda関数も削除する必要があります。
+
+link:manage-links.html["リンクを削除"]。
+
+
+
+[[codebox]]
+== Codebox
+
+.Codeboxとは何ですか？また、どのようなコード形式を生成しますか？
+Codeboxは、Workload Factoryがサポートするあらゆる操作を実行するためのコードを生成する、Infrastructure as Codeのコパイロットです。Workload Factory REST API、AWS CLI、AWS CloudFormation、およびTerraformをサポートしています。Codebox Viewerはウィザードの入力内容から生成されたコードを表示し、Automation Catalogは保存されたジョブを再利用可能なテンプレートとして保存します。
+
+link:codebox-automation.html["Codeboxの詳細"]。
+
+.Codeboxでコードを編集できますか？また、生成されたコードには有効期限がありますか？
+Codebox Viewerは読み取り専用です。コードをコピーしたり、Automation Catalogに保存したり、一部の形式でダウンロードしたりすることしかできません。ダウンロードしたコードを編集して、他のAWSアカウントに適合させることができます。セキュリティ上の理由から、CloudFormation YAMLコードは7日後に有効期限が切れます。
+
+link:use-codebox.html["Codeboxを使用する"]。
+
+
+
+[[cloudshell]]
+== CloudShell
+
+.CloudShellで何ができますか？また、その制限事項は何ですか？
+CloudShellは、提供されたAWSおよびONTAPの認証情報を使用して、Workload Factoryバックエンドを介してプロキシされるブラウザベースのシェルでAWS CLIおよびONTAP CLIコマンドを実行します。少なくとも1つのAWS認証情報が必要です。パイプ `|`、バックグラウンド `&`、リダイレクト `>`などのシェル演算子はサポートされておらず、これらを含むコマンドは失敗します。AWSコマンドは、選択した認証情報が選択したリージョンで権限を持っている場合にのみ成功します。
+
+link:use-cloudshell.html["CloudShellを使用"]。
+
+
+
+[[notifications]]
+== 通知
+
+.Workload Factoryはどこに通知を送信できますか？また、誰がそれを制御しますか？
+Workload Factoryは、NetApp Consoleアラートとして、アカウントに関連付けられたアドレスへの電子メールとして、またはAmazon SNSトピックに通知を送信できます。Consoleアラートは、ConsoleエージェントまたはLinkがデプロイされている場合に表示されます。NetApp Consoleで通知を設定すると、配信の所有権がConsoleに移行し、Workload Factoryコンソールの通知オプションは読み取り専用になります。
+
+link:configure-notifications.html["通知を設定する"]。
+
+.Amazon SNSを緊急アラートに使用する前に知っておくべきことは何ですか？
+Workload Factoryは標準SNSトピックタイプのみをサポートしており、通知が受信順にサブスクライバーに届くことを保証するものではありません。重要な通知や緊急通知の場合は、この点を考慮してください。デフォルトでは、サブスクライバーはそのトピックに関するすべての通知を受け取ります。そのため、SNSフィルタポリシー（リソースタイプ、ワークロード、優先度、または通知タイプ別）を使用して、必要な通知のみを受け取るようにしてください。
+
+link:configure-notifications.html["通知を設定する"]。
+
+
+
+[[service-accounts]]
+== サービスアカウント
+
+.サービスアカウントはいつ使用すべきですか？また、そのシークレットについて知っておくべきことは何ですか？
+APIのみを利用した自動化にはサービスアカウントを使用することで、スクリプトが個人のユーザーアカウントに依存しないようにできます。クライアントシークレットは一度しか表示されず、Workload Factoryはそれを保存しないため、サービスアカウントを作成する際にコピーまたはダウンロードしてください。クライアントIDとシークレットから生成されるアクセストークンは有効期限が短く、数時間しか有効ではありません。Workload Factoryコンソールでは、サービスアカウントの作成または削除のみが可能です。新しいシークレットを取得するには、サービスアカウントを削除して新しいアカウントを作成してください。
+
+link:manage-service-accounts.html["サービスアカウントの管理"]。
+
+
+
+[[well-architected-analysis]]
+== 適切に設計された分析
+
+.適切に設計された分析はどのように機能するのでしょうか？また、Linkは必要ですか？
+Workload Factoryは、FSx for ONTAPファイルシステムを毎日スキャンします。設定が最適化されているか否かを評価し、推奨事項を提示するとともに、一部の問題は自動的に修正できますが、その他の問題は手動での手順が必要です。環境に該当しないチェックは無視したり、平易な言葉でカスタムルールを作成したりできます。ファイルシステムを包括的に分析するには、Linkを作成して関連付ける必要があります。
+
+link:well-architected-workloads.html["優れたアーキテクチャ分析の詳細"]。
+
+
+
+[[tracker]]
+== トラッカー
+
+.Trackerとは何ですか？ジョブ履歴はどのくらいの期間保存されますか？失敗したジョブに対してはどのような対処法がありますか？
+TrackerはWorkload Factoryの監視ツールであり、ユーザーインターフェースにイベントを30日間保存します。期間、ワークロード、ステータス、ユーザーでフィルタリングし、ジョブテーブルをCSVファイルとしてダウンロードできます。操作が失敗した場合は、再試行するか、パラメータを編集して再試行することができます。操作が失敗した場合に許容される再試行回数には制限があります。
+
+link:monitor-operations.html["Trackerを使用して運用状況を監視する"]。
+
+
+
+[[ai-features]]
+== AIの機能
+
+.AI機能はどのように制御できますか？また、AI機能をオフにするとどうなりますか？
+AI設定ページでは、管理者はNetAppマネージドBedrock（推奨）を選択するか、すべてのAI機能をオフにするかを選択できます。NetAppマネージドBedrockは、モデルのトレーニングにお客様のデータを使用せず、追加のAWS設定も不要です。AI機能をオフにすると、Ask Me、AIエージェント、カスタムダッシュボード、ルールビルダー、アナライザー、およびCloudShellでのAIエラー応答が利用できなくなります。AI機能はパブリックAWSリージョンでAWS Bedrockを使用するため、GovCloudアカウントでは注意が必要です。
+
+link:manage-genai-features.html["AI機能の管理"]。
+
+.AIの利用に制限はありますか？
+はい。NetAppが管理するBedrockでは、各アカウントにAI機能ごとの月間支出上限が設定されています。上限に達すると、Workload FactoryはAI機能をオフにし、インターフェイスの関連部分をグレー表示にして、ツールチップを表示します。クレジットを追加するには、NetAppの担当者にお問い合わせください。
+
+.AIエージェントはAWSまたはONTAPリソースを変更できますか？
+デフォルトでは、エージェントは読み取り専用モードで実行され、リソースを変更することはできません。オプションの読み取り / 書き込みモードでは、エージェントが各アクションを要約し、選択した認証情報を使用して、お客様が承認した後にのみ実行します。エージェントは、現在のスコープ内のリソースと、エージェント設定で選択した認証情報にのみアクセスできます。認証情報を選択しても、追加のAWS権限は付与されません。
+
+* link:learn-agent.html["AIエージェントについて学ぶ"]。
+* link:manage-agent-settings.html["エージェント設定の管理"]。
+
+
+
+
+[[custom-dashboards]]
+== カスタムダッシュボード
+
+.カスタムダッシュボードを表示、編集、または削除できるのは誰ですか？
+新しいダッシュボードは作成者のみが閲覧できます。共有すると、ダッシュボードはお客様のWorkload Factoryアカウント内のすべてのユーザーに公開され、アカウント外のユーザーと共有することはできません。ダッシュボードを編集できるのは作成者のみですが、アカウント内のすべてのユーザーがダッシュボードを削除できます。削除は永久的な操作であり、すべてのユーザーからダッシュボードが削除されるため、チームと連携して行ってください。
+
+* link:learn-custom-dashboards.html["カスタムダッシュボードについて"]。
+* link:manage-custom-dashboards.html["カスタムダッシュボードを管理する"]。
+
+
+.カスタムダッシュボードを作成・使用するには、どのような準備が必要ですか？
+アカウント管理者はAI機能を有効にする必要があります。監視対象のサービスへの読み取りアクセス権限を持つAWS認証情報が必要です。FSx for ONTAPファイルシステムに接続するには、Linkが必要です。ダッシュボードは読み取り専用であり、ストレージやワークロードの設定を変更することはできません。
+
+link:learn-custom-dashboards.html["カスタムダッシュボードについて"]。
