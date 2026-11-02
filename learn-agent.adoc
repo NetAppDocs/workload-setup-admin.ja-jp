@@ -106,6 +106,15 @@ link:manage-agent-settings.html["エージェント設定"]で読み取り/書�
 
 
 
+[[audit-and-tracking-for-agent-actions]]
+=== エージェントの行動に関する監査と追跡
+
+読み書きモードでは、Trackerはエージェントの質問とユーザーの回答を含む各承認リクエストを記録します。Workload Factory APIを介して行われたリソースの変更は、その操作を実行するWorkload Factoryサービスがログに記録します。たとえば、Workload Factoryを通じて作成されたボリュームは、*Agent*ではなく*Storage*サービスタグの下に表示されます。
+
+link:manage-agent-settings.html#audit-and-tracking-for-agent-actions["エージェントのアクションの監査と追跡について学ぶ"]。
+
+
+
 [[what-users-see-when-ai-agents-have-no-data-or-activity]]
 == AIエージェントにデータやアクティビティがない場合にユーザーが見るもの
 

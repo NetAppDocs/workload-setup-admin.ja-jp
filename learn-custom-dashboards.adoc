@@ -69,6 +69,17 @@ link:manage-custom-dashboards.html#change-dashboard-visibility["ダッシュボ�
 
 
 
+[[check-if-the-data-is-up-to-date]]
+== データが最新かどうか確認してください
+
+ダッシュボードのデータが最後に更新された日時を確認したり、いつでも更新をリクエストしたりできます。ツールチップには、最終更新日時が表示されます。
+
+*データの更新* を選択して、新しいスキャンを開始します。スキャン中はボタンは使用できません。新しいデータが準備できると、ダッシュボードを更新するオプションを含むバナーが表示されます。
+
+link:manage-custom-dashboards.html#refresh-dashboard-data["ダッシュボードデータの更新方法を確認する"]。
+
+
+
 [[considerations-and-limitations]]
 == 考慮事項と制限事項
 

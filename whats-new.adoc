@@ -15,6 +15,62 @@ summary: クラウド プロバイダのクレデンシャル、Codeboxの機能
 
 
 
+[[01-november-2026]]
+== 2026年11月1日
+
+
+
+[[check-and-refresh-custom-dashboard-data]]
+=== カスタムダッシュボードのデータを確認して更新します
+
+カスタムダッシュボードの指標が最後に更新された日時を確認したり、手動で更新したりできるようになりました。「データの更新」にカーソルを合わせると、最終更新日時が表示されます。
+
+*データの更新*を選択して、新しいスキャンを開始してください。スキャンが開始されたことを示すバナーが表示され、スキャンが完了するまでボタンは無効になります。
+
+新しいデータが利用可能になったら、通知バナーの*今すぐ読み込む*を選択してダッシュボードを更新してください。
+
+「データの更新」と「今すぐ読み込む」の両方で、Tracker にデータ収集イベントが作成されます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html#refresh-dashboard-data["カスタムダッシュボードデータを更新する方法を確認する"]
+
+
+
+[[specify-regions-for-custom-dashboards]]
+=== カスタムダッシュボードのリージョンを指定します
+
+カスタムダッシュボードでは、リクエストに含まれていない地域を1つ以上選択するよう求められるようになりました。ダッシュボードのデータは、選択した地域に限定されます。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["カスタムダッシュボードの作成方法を学習します"]
+
+
+
+[[iam-policy-for-link-creation]]
+=== リンク作成のためのIAMポリシー
+
+リンクを作成するためのCloudFormationテンプレートとTerraformコードでは、インラインのLambda権限ではなく、IAMポリシーを使用するようになりました。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["リンクの作成方法を学ぶ"]
+
+
+
+[[audit-and-tracking-for-ai-agent-actions]]
+=== AIエージェントの動作に関する監査と追跡
+
+Trackerを使用すると、AIエージェントの設定変更を確認できるほか、読み書きモードで、エージェントの質問とユーザーの回答を含む各承認リクエストを確認できるようになりました。
+
+Workload Factory API を介して行われたリソースの変更は、その操作を実行する Workload Factory サービスがログに記録します。
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-agent.html#audit-and-tracking-for-agent-actions["エージェントのアクションの監査と追跡について学ぶ"]
+
+
+
+[[link-creation-improvements]]
+=== リンク作成の改善
+
+Workload Factoryは、リンク作成用のCodebox出力を更新し、インラインLambda権限をCloudFormationテンプレートおよびTerraform用のIAMポリシーに置き換えました。
+
+
+
 [[14-october-2026]]
 == 2026年10月14日
 
