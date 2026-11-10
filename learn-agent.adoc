@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: learn-agent.html 
-keywords: agent, ai agent, aiops, ask me, explore agent, ai assistant, environment-aware, read-only, read-write, agents settings 
+keywords: agent, ai agent, aiops, ask me, explore agent, ai assistant, environment-aware, read-only, read, write, agents settings 
 summary: Workload FactoryのAIエージェントがどのように環境を分析し、リスクやパフォーマンス改善策を特定し、お客様の承認を得てアクションを実行するのかを学びましょう。 
 ---
 = NetApp Workload Factory のAIエージェントについて学ぶ
@@ -11,7 +11,7 @@ summary: Workload FactoryのAIエージェントがどのように環境を分�
 
 
 [role="lead"]
-Workload Factory AIOpsはAIを活用して環境を分析し、改善策を提案します。承認すれば、設定した認証情報と権限を使用して操作を実行することもできます。
+Workload Factory AIOpsは、AIエージェントを使用して環境を分析し、リスクを特定し、改善策を提案します。承認すれば、エージェントはお客様が設定した認証情報と権限を使用して操作を実行することもできます。
 
 
 NOTE: アカウント管理者がAI機能を無効にしている場合、メッセージが表示され、エージェントを使用できなくなります。管理者に連絡するか、link:manage-genai-features.html["AI管理について学ぶ"]。
@@ -21,7 +21,7 @@ NOTE: アカウント管理者がAI機能を無効にしている場合、メッ
 [[before-you-begin]]
 == 開始する前に
 
-Workload Factory アカウントに AWS 認証情報と、エージェントがアクセスするリソースに必要な IAM 権限が付与されていることを確認してください。読み取り/書き込みモードを有効にする場合は、それらの権限でサポートされている変更も許可する必要があります。
+Workload FactoryアカウントにAWS認証情報と、エージェントがアクセスするリソースに必要なIAM権限が付与されていることを確認してください。読み取り / 書き込みモードを有効にする場合、これらの権限でサポートされている変更も許可する必要があります。
 
 link:add-credentials.html["AWS認証情報を追加し、IAM権限を設定する方法を説明します。"^]。
 
@@ -52,7 +52,7 @@ AIエージェントは、Workload Factoryでの作業効率向上を支援し�
 == AIエージェントにアクセスする
 
 「Ask Me」ホームページから:: 「Ask Me」ランディングページで、「Explore Agents」を選択してください。AIエージェントのサイドパネルが開き、エージェントの機能を紹介するウェルカムメッセージが表示されます。
-エージェントのリダイレクトリンクから:: **「質問する」**機能やその他の機能を使用する際、より高度なサポートを受けるためにエージェントへリダイレクトされるリンクが表示される場合があります。
+エージェントのリダイレクトリンクから:: **Ask Me**やその他の機能を使用すると、より高度なサポートを受けるために担当者へリダイレクトされるリンクが表示される場合があります。
 
 
 
@@ -65,7 +65,7 @@ AIエージェントは、Workload Factoryでの作業効率向上を支援し�
 [[how-agents-access-your-environment]]
 === エージェントが環境にアクセスする方法
 
-エージェントは、現在の Workload Factory のスコープに含まれており、link:manage-agent-settings.html["エージェント設定"]で選択された認証情報によってサポートされている場合にのみリソースにアクセスできます。エージェントは、両方の制御が適用される場所でのみ動作できます。アクセスできるリソースは、AWS 認証情報に割り当てられた権限によっても異なります。デフォルトではすべての認証情報が選択されますが、設定済みの認証情報の一部に絞り込むこともできます。
+エージェントは、リソースが現在のWorkload Factoryスコープに含まれており、link:manage-agent-settings.html["エージェント設定"] で選択された認証情報でサポートされている場合にのみ、リソースにアクセスできます。エージェントは、両方の制御が適用される場所でのみ動作できます。アクセスできるリソースは、AWS認証情報に割り当てられた権限によっても異なります。デフォルトではすべての認証情報が選択されますが、設定済みの認証情報の一部のみを選択するように制限することもできます。
 
 現在のスコープには以下が含まれます：
 
@@ -97,10 +97,10 @@ NOTE: 「エージェント設定」で認証情報を選択しても、追加�
 
 
 
-[[read-write-mode-opt-in]]
-=== 読み書きモード（オプトイン）
+[[readwrite-mode-opt-in]]
+=== 読み取り / 書き込みモード（オプトイン）
 
-link:manage-agent-settings.html["エージェント設定"]で読み取り/書き込み機能を有効にすることができます。このモードでは、エージェントがサポートされている各操作について説明し、変更を行う前にお客様の承認を必要とします。
+link:manage-agent-settings.html["エージェント設定"] で読み取り / 書き込み機能を有効にすることができます。このモードでは、エージェントはサポートされている各アクションを説明し、変更を行う前にお客様の承認を必要とします。
 
 この承認プロセスは、Slack 統合および NetApp Console を含むすべてのエージェントエクスペリエンスに適用されます。
 
@@ -109,9 +109,7 @@ link:manage-agent-settings.html["エージェント設定"]で読み取り/書�
 [[audit-and-tracking-for-agent-actions]]
 === エージェントの行動に関する監査と追跡
 
-読み書きモードでは、Trackerはエージェントの質問とユーザーの回答を含む各承認リクエストを記録します。Workload Factory APIを介して行われたリソースの変更は、その操作を実行するWorkload Factoryサービスがログに記録します。たとえば、Workload Factoryを通じて作成されたボリュームは、*Agent*ではなく*Storage*サービスタグの下に表示されます。
-
-link:manage-agent-settings.html#audit-and-tracking-for-agent-actions["エージェントのアクションの監査と追跡について学ぶ"]。
+読み取り / 書き込みモードでは、Trackerはエージェントの質問とユーザーの回答を含む、各承認リクエストを記録します。操作を実行するWorkload Factoryサービスは、Workload Factory APIを通じて行われたリソースの変更をログに記録します。たとえば、Workload Factoryを通じて作成されたボリュームは、*Agent*ではなく*Storage*サービスタグの下に表示されます。
 
 
 

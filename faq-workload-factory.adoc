@@ -231,7 +231,7 @@ link:manage-genai-features.html["AI機能の管理"]。
 .監査のために、エージェントの設定とアクションはどこに表示されますか？
 Trackerは、エージェント設定の変更を記録し、読み書きモードでは、エージェントの質問とユーザーの回答を含む各承認リクエストを記録します。Workload Factory APIを介して行われたリソースの変更は、その操作を実行するWorkload Factoryサービスがログに記録します。
 
-link:manage-agent-settings.html#audit-and-tracking-for-agent-actions["エージェントのアクションの監査と追跡について学ぶ"]。
+link:learn-agent.html["エージェントのアクションの監査と追跡について学ぶ"]。
 
 .AIの利用に制限はありますか？
 はい。NetAppが管理するBedrockでは、各アカウントにAI機能ごとの月間支出上限が設定されています。上限に達すると、Workload FactoryはAI機能をオフにし、インターフェイスの関連部分をグレー表示にして、ツールチップを表示します。クレジットを追加するには、NetAppの担当者にお問い合わせください。

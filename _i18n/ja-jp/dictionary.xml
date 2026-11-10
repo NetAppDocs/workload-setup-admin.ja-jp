@@ -1856,9 +1856,7 @@
   <block id="14bda382780d759b676db8bd277841a9" category="paragraph">自動アップグレードをサポートしていないリンクに対して新しいリンクバージョンが利用可能になった場合、FSx for ONTAP ダッシュボードにアラートが表示されます。</block>
   <block id="2c8d2ace24ab724b2b9846dfbd1113fb" category="summary">Workload FactoryのAIエージェントがどのように環境を分析し、リスクやパフォーマンス改善策を特定し、お客様の承認を得てアクションを実行するのかを学びましょう。</block>
   <block id="a4988f1624f7fc0b4eaabf35a45c6593" category="doc">NetApp Workload Factory のAIエージェントについて学ぶ</block>
-  <block id="44930f32325dbab8392ff7743e877c7e" category="paragraph">Workload Factory AIOpsはAIを活用して環境を分析し、改善策を提案します。承認すれば、設定した認証情報と権限を使用して操作を実行することもできます。</block>
   <block id="9b96c88a6583aa0e9a0e03809f482d9e" category="admonition">アカウント管理者がAI機能を無効にしている場合、メッセージが表示され、エージェントを使用できなくなります。管理者に連絡するか、<block ref="51cc9b1bceb3cdf8e5a226d8fb6d37eb" category="inline-link-macro-rx"></block>。</block>
-  <block id="29e96b144158fa2cf3ed37b1696584a9" category="paragraph">Workload Factory アカウントに AWS 認証情報と、エージェントがアクセスするリソースに必要な IAM 権限が付与されていることを確認してください。読み取り/書き込みモードを有効にする場合は、それらの権限でサポートされている変更も許可する必要があります。</block>
   <block id="3b8e3eff2b9d5a25eecc8e879fab9225" category="section-title">データ利用とプライバシー</block>
   <block id="823764ac349552585c033c832c9a9119" category="paragraph">お客様のデータはAIモデルの学習には使用されません。エージェントは、お客様の認証情報を使用して標準のAWS APIを介してAWSリソースに安全にアクセスし、お客様の実際の環境に基づいて応答します。すべてのエージェント活動は、NetAppのプライバシーポリシーおよびAWSセキュリティ管理に従います。</block>
   <block id="a9ad35f78cf699132ce97296208021d6" category="section-title">AIエージェントを使用する理由</block>
@@ -1869,13 +1867,10 @@
   <block id="6fd44b1c4edd80ad7b595f1fcb4c7483" category="list-text">スケジュールされたチェックを実行し、チャット履歴で最新情報を受け取ることができます。</block>
   <block id="4eeb2bca1dddd7a796d908c266d60075" category="section-title">AIエージェントにアクセスする</block>
   <block id="e6478bab5c49062e219e1290c4442eed" category="list-text">「Ask Me」ホームページから</block>
-  <block id="b3c72178808d9fa6e9c876b76d5d1928" category="list-text">「Ask Me」ランディングページで、「Explore Agents」を選択してください。AIエージェントのサイドパネルが開き、エージェントの機能を紹介するウェルカムメッセージが表示されます。</block>
   <block id="99b503a5e4373b0bc3054a025797d268" category="list-text">エージェントのリダイレクトリンクから</block>
-  <block id="54fd5f6787cd568e4b9880863150bb93" category="list-text">**「質問する」**機能やその他の機能を使用する際、より高度なサポートを受けるためにエージェントへリダイレクトされるリンクが表示される場合があります。</block>
   <block id="98ff5af4adf0662fa0278d6e7332c116" category="section-title">AIエージェントの仕組み</block>
   <block id="31fe269c620fcf2562efe2871e4398f8" category="section-title">エージェントが環境にアクセスする方法</block>
   <block id="d6356702d2caa14ca196fe664fc1853e" category="inline-link-macro">エージェント設定</block>
-  <block id="dfee9e31025ca5f152cf22d64bfe765f" category="paragraph">エージェントは、現在の Workload Factory のスコープに含まれており、<block ref="503a0786471e5d22d87709a40b737283" category="inline-link-macro-rx"></block>で選択された認証情報によってサポートされている場合にのみリソースにアクセスできます。エージェントは、両方の制御が適用される場所でのみ動作できます。アクセスできるリソースは、AWS 認証情報に割り当てられた権限によっても異なります。デフォルトではすべての認証情報が選択されますが、設定済みの認証情報の一部に絞り込むこともできます。</block>
   <block id="f19cfe1072c3d3c974b0cdafbcdde1ef" category="paragraph">現在のスコープには以下が含まれます：</block>
   <block id="676cd33769e7c44db0294ca1bdc4a818" category="list-text">*AWSアカウント*：エージェントがアクセスできるAWSアカウント。</block>
   <block id="8f7fd41f1486852019ec1e81297e4749" category="list-text">*認証情報*：エージェントが使用できる認証情報。</block>
@@ -1890,8 +1885,6 @@
   <block id="e863933d9a2c33d982a9403853ef5c8f" category="list-text">パフォーマンス、可用性、保護、およびコスト効率を向上させるための推奨事項を提示します。</block>
   <block id="0da32bbd416014e9a050dd9753a5f97c" category="list-text">問題のトラブルシューティングを行い、修復手順を提案します。</block>
   <block id="5c5d131e2fde1dde32d484bb16b397d5" category="paragraph">読み取り専用モードでは、リソースを変更することはできません。書き込みアクセスが必要な操作をリクエストした場合、エージェントは制限事項を説明し、エージェントの設定へのリンクを表示します。</block>
-  <block id="c43e0775dbe854488f7416962d78486c" category="section-title">読み書きモード（オプトイン）</block>
-  <block id="8403b77cf5ff251eac80eb3fa63780ad" category="paragraph"><block ref="503a0786471e5d22d87709a40b737283" category="inline-link-macro-rx"></block>で読み取り/書き込み機能を有効にすることができます。このモードでは、エージェントがサポートされている各操作について説明し、変更を行う前にお客様の承認を必要とします。</block>
   <block id="601c01875f07f976aec59310ce582da5" category="paragraph">この承認プロセスは、Slack 統合および NetApp Console を含むすべてのエージェントエクスペリエンスに適用されます。</block>
   <block id="dbe095e1cf28fb37bfc9bc65e6db07ec" category="section-title">AIエージェントにデータやアクティビティがない場合にユーザーが見るもの</block>
   <block id="02a1c40d157b16f6b4bb75e05fed5d20" category="paragraph">エージェントがクレデンシャルを持っていなくても、一般的なガイダンスを提供することは可能です。ただし、お客様のリソースをレビューしたり、お客様の環境に特化したインサイトを提供したりすることはできません。</block>
@@ -2169,9 +2162,7 @@
   <block id="a0029b147e3a4c22ba57efcbb020c23e" category="list-text">*最終更新*タイムスタンプを確認し、*データ更新*を選択して最新の指標をリクエストしてください</block>
   <block id="6d852ab3090e66a5f1f1a6d5675164cb" category="paragraph-title">監査のために、エージェントの設定とアクションはどこに表示されますか？</block>
   <block id="0f679622d131d4b9f3abef96c35743be" category="paragraph">Trackerは、エージェント設定の変更を記録し、読み書きモードでは、エージェントの質問とユーザーの回答を含む各承認リクエストを記録します。Workload Factory APIを介して行われたリソースの変更は、その操作を実行するWorkload Factoryサービスがログに記録します。</block>
-  <block id="4c1cd3a1bad23fecc0286da543614cd7" category="paragraph"><block ref="bc36590c397b325a073c2ae9b60e53fd" category="inline-link-macro-rx"></block>。</block>
   <block id="b70a9e9de689b4f17365d6060076d3b8" category="section-title">エージェントの行動に関する監査と追跡</block>
-  <block id="774a23889a059a060f089bac423f3b00" category="paragraph">読み書きモードでは、Trackerはエージェントの質問とユーザーの回答を含む各承認リクエストを記録します。Workload Factory APIを介して行われたリソースの変更は、その操作を実行するWorkload Factoryサービスがログに記録します。たとえば、Workload Factoryを通じて作成されたボリュームは、*Agent*ではなく*Storage*サービスタグの下に表示されます。</block>
   <block id="1c25d10ad7fe7b9def7bd90be9bb63ac" category="section-title">データが最新かどうか確認してください</block>
   <block id="40d839f036c0870ce0f44a810dc01fd9" category="paragraph">ダッシュボードのデータが最後に更新された日時を確認したり、いつでも更新をリクエストしたりできます。ツールチップには、最終更新日時が表示されます。</block>
   <block id="3943baa01d778cb77042aa99b8829491" category="paragraph">*データの更新* を選択して、新しいスキャンを開始します。スキャン中はボタンは使用できません。新しいデータが準備できると、ダッシュボードを更新するオプションを含むバナーが表示されます。</block>
@@ -2189,4 +2180,13 @@
   <block id="f5f7ef3c1692aa4447b9fb26ad98940c" category="list-text">バナーの「今すぐ読み込む」を選択すると、利用可能なデータがダッシュボードに読み込まれます。または、「データの更新」を選択して表示を更新してください。</block>
   <block id="abff96b75117f320254f372b6518244b" category="paragraph">ダッシュボードには、更新された指標が表示されます。</block>
   <block id="8b253c1d4259c21c8314fc85adcb31d6" category="section-title">2026年11月1日</block>
+  <block id="4780834933836e351b4c7c10d2b7421d" category="paragraph"><block ref="4610b98b2d531ad484f454316d243393" category="inline-link-macro-rx"></block>。</block>
+  <block id="ca57c3b08717a8e00b194598500db7a2" category="paragraph">Workload Factory AIOpsは、AIエージェントを使用して環境を分析し、リスクを特定し、改善策を提案します。承認すれば、エージェントはお客様が設定した認証情報と権限を使用して操作を実行することもできます。</block>
+  <block id="b78358ce9ebcde7e5d73719acc321aae" category="paragraph">Workload FactoryアカウントにAWS認証情報と、エージェントがアクセスするリソースに必要なIAM権限が付与されていることを確認してください。読み取り / 書き込みモードを有効にする場合、これらの権限でサポートされている変更も許可する必要があります。</block>
+  <block id="0ea09b17a33e26f5dee626af8a16d5e1" category="list-text">「Ask Me」ランディングページで、「Explore Agents」を選択してください。AIエージェントのサイドパネルが開き、エージェントの機能を紹介するウェルカムメッセージが表示されます。</block>
+  <block id="fda5768a6f47f136c2a35db55a5ac261" category="list-text">**Ask Me**やその他の機能を使用すると、より高度なサポートを受けるために担当者へリダイレクトされるリンクが表示される場合があります。</block>
+  <block id="6c6bddc94913852eb6a669f3be45250b" category="paragraph">エージェントは、リソースが現在のWorkload Factoryスコープに含まれており、<block ref="503a0786471e5d22d87709a40b737283" category="inline-link-macro-rx"></block> で選択された認証情報でサポートされている場合にのみ、リソースにアクセスできます。エージェントは、両方の制御が適用される場所でのみ動作できます。アクセスできるリソースは、AWS認証情報に割り当てられた権限によっても異なります。デフォルトではすべての認証情報が選択されますが、設定済みの認証情報の一部のみを選択するように制限することもできます。</block>
+  <block id="96cfa5d0ba0465e0823c0e513cf4c99e" category="section-title">読み取り / 書き込みモード（オプトイン）</block>
+  <block id="d5d99b2701dfd466ab6b6fd722283931" category="paragraph"><block ref="503a0786471e5d22d87709a40b737283" category="inline-link-macro-rx"></block> で読み取り / 書き込み機能を有効にすることができます。このモードでは、エージェントはサポートされている各アクションを説明し、変更を行う前にお客様の承認を必要とします。</block>
+  <block id="ab5a798de828a6dee38052f42293a03d" category="paragraph">読み取り / 書き込みモードでは、Trackerはエージェントの質問とユーザーの回答を含む、各承認リクエストを記録します。操作を実行するWorkload Factoryサービスは、Workload Factory APIを通じて行われたリソースの変更をログに記録します。たとえば、Workload Factoryを通じて作成されたボリュームは、*Agent*ではなく*Storage*サービスタグの下に表示されます。</block>
 </blocks>
